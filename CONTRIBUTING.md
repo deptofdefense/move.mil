@@ -8,7 +8,15 @@ There are several ways in which you can help improve this project:
 1. Review open [pull requests][pulls].
 1. Report a new [issue][issues]. _Only do this after you've made sure the behavior or problem you're observing isn't already documented in an open issue._
 
-## Getting started
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Making Changes](#making-changes)
+- [Building, Serving, and Testing](#building-serving-and-testing)
+- [Code Style](#code-style)
+- [Legalese](#legalese)
+
+## Getting Started
 
 move.mil is a static website built using [Jekyll](http://jekyllrb.com/), a popular static site generator written in [Ruby](https://www.ruby-lang.org/). Development dependencies are managed using the [Bundler](http://bundler.io/) gem.
 
@@ -26,7 +34,7 @@ After successfully installing Bundler, run the following command from the root o
 bundle install
 ```
 
-## Making changes
+## Making Changes
 
 1. Fork and clone the project's repo.
 1. Install development dependencies as outlined above.
@@ -36,6 +44,22 @@ bundle install
 1. Commit your changes: `git commit -am 'Add some new feature or fix some issue'`.
 1. Push the branch to your fork: `git push -u origin your-descriptive-branch-name`.
 1. Create a new pull request and we'll review your changes.
+
+## Building, Serving, and Testing
+
+There are a number of useful [Rake](https://github.com/ruby/rake) tasks that make working with the project easier. From the root of the project, run `bundle exec rake -T` for a list of available commands.
+
+```sh
+rake htmlproofer   # Test the site with html-proofer
+rake jekyll:build  # Build the site to `./public`
+rake jekyll:serve  # Serve the site at `http://localhost:4000`
+```
+
+The most useful of these tasks, `bundle exec rake jekyll:serve`, will build and serve the site from the `./public` folder, regenerating the site as changes are made to files in the `./src` folder. Changes may be previewed in a Web browser at [http://localhost:4000](http://localhost:4000). Depending on your local development environment, you may need to try `localhost:4000` or `127.0.0.1:4000`.
+
+The [html-proofer gem](https://github.com/gjtorikian/html-proofer) is used when invoking `bundle exec rake htmlproofer` and validates the HTML output by Jekyll. This Rake task _is not_ a substitute for testing your changes in one or more Web browsers.
+
+The default Rake task (invoked with `bundle exec rake`) will run in succession the `jekyll:build` and `htmlproofer` tasks.
 
 ## Code Style
 
