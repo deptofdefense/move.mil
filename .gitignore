@@ -38,6 +38,7 @@ Thumbs.db
 
 # Jekyll
 
+.asset-cache/
 .jekyll-metadata
 .sass-cache/
 public/
