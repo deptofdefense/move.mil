@@ -4,4 +4,8 @@ source 'https://rubygems.org' do
   gem 'jekyll', '~> 3.4', '>= 3.4.3'
   gem 'jekyll-assets', '~> 2.2', '>= 2.2.8'
   gem 'rake', '~> 12.0'
+
+  group :test do
+    gem 'html-proofer', '~> 3.6'
+  end
 end
