@@ -13,6 +13,7 @@ There are several ways in which you can help improve this project:
 - [Getting Started](#getting-started)
 - [Making Changes](#making-changes)
 - [Building, Serving, and Testing](#building-serving-and-testing)
+- [Working with Assets](#working-with-assets)
 - [Code Style](#code-style)
 - [Legalese](#legalese)
 
@@ -61,9 +62,15 @@ The [html-proofer gem](https://github.com/gjtorikian/html-proofer) is used when 
 
 The default Rake task (invoked with `bundle exec rake`) will run in succession the `jekyll:build` and `htmlproofer` tasks.
 
+## Working with Assets
+
+Images, JavaScript, and stylesheet compilation is handled by the [jekyll-assets gem](https://github.com/jekyll/jekyll-assets) which provides an [Asset Pipeline](http://guides.rubyonrails.org/asset_pipeline.html)-like environment for Jekyll projects. Assets are compiled automatically when invoking either the `jekyll:build` or `jekyll:serve` Rake tasks.
+
+Stylesheets are written using [the Sass extension language](http://sass-lang.com/) (in the SCSS syntax format). If you're familiar with [CSS syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax) then you already know the basics of SCSS syntax.
+
 ## Code Style
 
-Code formatting conventions are defined in the `.editorconfig` file which uses the [EditorConfig](http://editorconfig.org/) syntax. There are [plugins for a variety of editors](http://editorconfig.org/#download) that utilize the settings in the `.editorconfig` file. It is recommended that you install EditorConfig plugin for your editor of choice.
+Code formatting conventions are defined in the `.editorconfig` file which uses the [EditorConfig](http://editorconfig.org/) syntax. There are [plugins for a variety of editors](http://editorconfig.org/#download) that utilize the settings in the `.editorconfig` file. It is recommended that you install the EditorConfig plugin for your editor of choice.
 
 Your bug fix or feature addition won't be rejected if it runs afoul of any (or all) of these guidelines, but following the guidelines will definitely make everyone's lives a little easier.
 
