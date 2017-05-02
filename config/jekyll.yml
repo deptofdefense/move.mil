@@ -1,2 +1,5 @@
 source: ./src
 destination: ./public
+
+gems:
+  - jekyll-assets
