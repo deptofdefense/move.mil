@@ -42,7 +42,7 @@ bundle install
 1. Create a feature branch for the code changes you're looking to make: `git checkout -b your-descriptive-branch-name origin/master`.
 1. _Write some code!_
 1. Build the site and verify that your changes function as intended: `bundle exec rake jekyll:build`.
-1. Commit your changes: `git commit -am 'Add some new feature or fix some issue'`.
+1. Commit your changes: `git commit -am 'Add some new feature or fix some issue'`. _(See [this excellent article](https://chris.beams.io/posts/git-commit/) for tips on writing useful Git commit messages.)_
 1. Push the branch to your fork: `git push -u origin your-descriptive-branch-name`.
 1. Create a new pull request and we'll review your changes.
 
