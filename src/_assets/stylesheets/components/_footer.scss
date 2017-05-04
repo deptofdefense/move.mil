@@ -1,0 +1,25 @@
+.usa-footer-logo > a {
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.usa-footer-logo-heading span {
+  font-family: $font-sans;
+  font-size: $h5-font-size;
+  font-weight: $font-normal;
+}
+
+.usa-footer-contact-links h4 {
+  font-family: $font-sans;
+  font-size: $h5-font-size;
+  margin-bottom: 0;
+}
+
+.usa-footer-contact-heading {
+  font-family: $font-sans;
+  font-size: $h4-font-size;
+}
