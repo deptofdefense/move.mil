@@ -51,9 +51,10 @@ bundle install
 There are a number of useful [Rake](https://github.com/ruby/rake) tasks that make working with the project easier. From the root of the project, run `bundle exec rake -T` for a list of available commands.
 
 ```sh
-rake htmlproofer   # Test the site with html-proofer
-rake jekyll:build  # Build the site to `./public`
-rake jekyll:serve  # Serve the site at `http://localhost:4000`
+rake htmlproofer     # Test the site with html-proofer
+rake jekyll:build    # Build the site to `./public`
+rake jekyll:release  # Build the production-ready site to `./public`
+rake jekyll:serve    # Serve the site at `http://localhost:4000`
 ```
 
 The most useful of these tasks, `bundle exec rake jekyll:serve`, will build and serve the site from the `./public` folder, regenerating the site as changes are made to files in the `./src` folder. Changes may be previewed in a Web browser at [http://localhost:4000](http://localhost:4000). Depending on your local development environment, you may need to try `localhost:4000` or `127.0.0.1:4000`.
