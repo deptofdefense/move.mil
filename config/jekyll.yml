@@ -2,4 +2,14 @@ source: ./src
 destination: ./public
 
 gems:
+  - bourbon
   - jekyll-assets
+  - neat
+  - sass-globbing
+
+assets:
+  sources:
+    - _vendor/assets/fonts
+    - _vendor/assets/images
+    - _vendor/assets/javascripts
+    - _vendor/assets/stylesheets
