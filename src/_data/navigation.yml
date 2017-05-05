@@ -1,0 +1,40 @@
+- title: Moving Allowances
+  url: /moving-allowances
+
+  subnav:
+    - title: Determine Your Allowance
+      url: /moving-allowances/calculator
+
+    - title: Frequently Asked Questions
+      url: /moving-allowances/faqs
+
+- title: Schedule Your Move
+  url: /schedule-your-move
+
+- title: File and Manage Claims
+  url: /manage-claims
+
+- title: Service-Specific Information
+  url: /service-specific-information
+
+  subnav:
+    - title: Army
+      url: /service-specific-information/army
+
+    - title: Marines
+      url: /service-specific-information/marines
+
+    - title: Navy
+      url: /service-specific-information/navy
+
+    - title: Air Force
+      url: /service-specific-information/air-force
+
+    - title: Coast Guard
+      url: /service-specific-information/coast-guard
+
+- title: Helpful Resources
+  url: /resources
+
+- title: Important Forms and Documents
+  url: /forms-and-documents

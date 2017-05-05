@@ -44,12 +44,43 @@
     </div>
 
     <div class="usa-navbar">
-      <div class="usa-logo">
+      <button class="usa-menu-btn">Menu</button>
+
+      <div class="usa-logo" id="logo">
         <em class="usa-logo-text">
           <a href="/" aria-label="Home" rel="home" title="Home">Move.mil</a>
         </em>
       </div>
     </div>
+
+    <nav class="usa-nav" role="navigation">
+      <div class="usa-nav-inner">
+        <button class="usa-nav-close">
+          <img src="{% asset_path uswds/close.svg %}" alt="Close">
+        </button>
+
+        <ul class="usa-nav-primary usa-accordion">
+          <li>
+            <button aria-controls="nav-section-one" aria-expanded="false" class="usa-accordion-button usa-nav-link">
+              <span>For Service Members</span>
+            </button>
+
+            <ul class="usa-nav-submenu" id="nav-section-one">
+              {% for nav in site.data.navigation %}
+                <li>
+                  <a href="{{ nav.url }}">{{ nav.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+          <li>
+            <a href="http://www.move.mil/ppso/ppso_resources/dps_login_solution.cfm" class="usa-nav-link">
+              <span>For PPSO Offices</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <main id="main-content" role="main">
