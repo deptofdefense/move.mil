@@ -4,7 +4,23 @@ layout: application
 
 <div class="usa-grid usa-section usa-content usa-layout-docs">
   <aside class="usa-width-one-fourth usa-layout-docs-sidenav">
-    {% include sidenav.html %}
+    <ul class="usa-sidenav-list">
+      {% for nav in site.data.navigation %}
+        <li>
+          <a href="{{ nav.url }}"{% if page.url contains nav.url %} class="usa-current"{% endif %}>{{ nav.title }}</a>
+
+          {% if nav.subnav and page.url contains nav.url %}
+            <ul class="usa-sidenav-sub_list">
+              {% for subnav in nav.subnav %}
+                <li>
+                  <a href="{{ nav.url }}{{ subnav.url }}"{% if page.url contains subnav.url %} class="usa-current"{% endif %}>{{ subnav.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
   </aside>
 
   <div class="usa-width-three-fourths usa-layout-docs-main_content">
