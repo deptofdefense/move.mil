@@ -3,35 +3,35 @@
 
   subnav:
     - title: Determine Your Allowance
-      url: /moving-allowances/calculator
+      url: /determine-your-allowance
 
     - title: Frequently Asked Questions
-      url: /moving-allowances/faqs
+      url: /faqs
 
 - title: Schedule Your Move
   url: /schedule-your-move
 
 - title: File and Manage Claims
-  url: /manage-claims
+  url: /claims
 
 - title: Service-Specific Information
   url: /service-specific-information
 
   subnav:
     - title: Army
-      url: /service-specific-information/army
+      url: /army
 
     - title: Marines
-      url: /service-specific-information/marines
+      url: /marines
 
     - title: Navy
-      url: /service-specific-information/navy
+      url: /navy
 
     - title: Air Force
-      url: /service-specific-information/air-force
+      url: /air-force
 
     - title: Coast Guard
-      url: /service-specific-information/coast-guard
+      url: /coast-guard
 
 - title: Helpful Resources
   url: /resources
