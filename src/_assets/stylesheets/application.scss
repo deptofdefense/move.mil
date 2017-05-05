@@ -41,12 +41,12 @@ $asset-pipeline: true;
 // @import "uswds/components/graphic-list";
 @import "uswds/components/header";
 // @import "uswds/components/hero";
-// @import "uswds/components/layout";
+@import "uswds/components/layout";
 @import "uswds/components/media-block";
 @import "uswds/components/navigation";
 // @import "uswds/components/search";
-// @import "uswds/components/section";
-// @import "uswds/components/sidenav";
+@import "uswds/components/section";
+@import "uswds/components/sidenav";
 @import "uswds/components/skipnav";
 
 // Site -------------- //
