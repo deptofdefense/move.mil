@@ -76,12 +76,12 @@ Your bug fix or feature addition won't be rejected if it runs afoul of any (or a
 
 ## Legalese
 
-Before submitting a pull request to this repository for the first time, you'll need to sign a [Developer Certificate of Origin](https://developercertificate.org/) (DCO). To read and agree to the DCO, you'll add your name and email address to [CONTRIBUTORS.md][contributors]. At a high level, this tells us that you have the right to submit the work you're contributing in your pull request and says that you consent to us treating the contribution in a way consistent with the license associated with this software (as described in [LICENSE][license]) and its documentation ("Project").
+Before submitting a pull request to this repository for the first time, you'll need to sign a [Developer Certificate of Origin](https://developercertificate.org/) (DCO). To read and agree to the DCO, you'll add your name and email address to [CONTRIBUTORS.md][contributors]. At a high level, this tells us that you have the right to submit the work you're contributing in your pull request and says that you consent to us treating the contribution in a way consistent with the license associated with this software (as described in [LICENSE.md][license]) and its documentation ("Project").
 
 You may submit contributions anonymously or under a pseudonym if you'd like, but we need to be able to reach you at the email address you provide when agreeing to the DCO. Contributions you make to this public Department of Defense repository are completely voluntary. When you submit a pull request, you're offering your contribution without expectation of payment and you expressly waive any future pay claims against the U.S. Federal Government related to your contribution.
 
 [contributors]: https://github.com/deptofdefense/move.mil/blob/master/CONTRIBUTORS.md
 [gemfile]: https://github.com/deptofdefense/move.mil/blob/master/Gemfile
 [issues]: https://github.com/deptofdefense/move.mil/issues
-[license]: https://github.com/deptofdefense/move.mil/blob/master/LICENSE
+[license]: https://github.com/deptofdefense/move.mil/blob/master/LICENSE.md
 [pulls]: https://github.com/deptofdefense/move.mil/pulls
