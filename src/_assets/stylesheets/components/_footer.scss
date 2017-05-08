@@ -1,5 +1,10 @@
 .usa-footer .usa-footer-primary-link {
+  color: $color-primary;
   display: inline-block;
+
+  &:hover {
+    color: $color-primary-darker;
+  }
 }
 
 .usa-footer-logo > a {
