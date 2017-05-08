@@ -5,7 +5,6 @@ gems:
   - bourbon
   - jekyll-assets
   - neat
-  - sass-globbing
 
 assets:
   sources:
