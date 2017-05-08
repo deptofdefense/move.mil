@@ -46,10 +46,19 @@
     <div class="usa-navbar">
       <button class="usa-menu-btn">Menu</button>
 
-      <div class="usa-logo" id="logo">
-        <em class="usa-logo-text">
-          <a href="/" aria-label="Home" rel="home" title="Home">Move.mil</a>
-        </em>
+      <div class="usa-logo usa-media_block" id="logo">
+        <a href="http://www.ustranscom.mil" class="usa-media_block-img">
+          <img src="{% asset_path ustranscom-emblem.svg %}" alt="USTRANSCOM emblem">
+        </a>
+        <div class="usa-media_block-body">
+          <em class="usa-logo-text">
+            <a href="/" aria-label="Home" rel="home" title="Home">
+              Move.mil
+              <br>
+              <span>Official <abbr title="Department of Defense">DOD</abbr> Moving Portal</span>
+            </a>
+          </em>
+        </div>
       </div>
     </div>
 
@@ -75,7 +84,7 @@
           </li>
           <li>
             <a href="http://www.move.mil/ppso/ppso_resources/dps_login_solution.cfm" class="usa-nav-link">
-              <span>For PPSO Offices</span>
+              <span>For <abbr title="Personal Property Shipping Office">PPSO</abbr> Offices</span>
             </a>
           </li>
         </ul>
