@@ -26,10 +26,10 @@ $asset-pipeline: true;
 @import "uswds/elements/buttons";
 // @import "uswds/elements/embed";
 // @import "uswds/elements/figure";
-// @import "uswds/elements/inputs";
-// @import "uswds/elements/labels";
+@import "uswds/elements/inputs";
+@import "uswds/elements/labels";
 @import "uswds/elements/list";
-// @import "uswds/elements/table";
+@import "uswds/elements/table";
 @import "uswds/elements/typography";
 
 // Components -------------- //
@@ -37,7 +37,7 @@ $asset-pipeline: true;
 // @import "uswds/components/alerts";
 @import "uswds/components/banner";
 @import "uswds/components/footer";
-// @import "uswds/components/forms";
+@import "uswds/components/forms";
 // @import "uswds/components/graphic-list";
 @import "uswds/components/header";
 // @import "uswds/components/hero";
@@ -50,7 +50,9 @@ $asset-pipeline: true;
 @import "uswds/components/skipnav";
 
 // Site -------------- //
+@import "elements/table";
 @import "elements/typography";
 @import "components/footer";
 @import "components/header";
+@import "components/layout";
 @import "components/navigation";

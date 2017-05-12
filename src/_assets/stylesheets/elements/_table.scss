@@ -1,0 +1,28 @@
+table {
+  caption {
+    font-weight: $font-bold;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+
+  thead,
+  tbody {
+    font-size: $small-font-size;
+  }
+
+  tbody {
+    th,
+    td {
+      vertical-align: top;
+    }
+
+    th[colspan] {
+      font-size: $h4-font-size;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1em;
+    }
+  }
+}

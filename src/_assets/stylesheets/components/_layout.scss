@@ -1,0 +1,19 @@
+.usa-grid .usa-layout-docs-main_content {
+  margin-bottom: $site-margins;
+
+  @include media($large-screen) {
+    margin-bottom: 0;
+  }
+}
+
+.usa-layout-docs-main_content {
+  h1 {
+    font-size: $h2-font-size;
+  }
+
+  h6 {
+    font-size: $base-font-size;
+    font-weight: $font-bold;
+    text-transform: none;
+  }
+}
