@@ -46,7 +46,7 @@
         oconus: >
           <ul>
             <li>You can transport firearms as part of your total household goods shipment, assuming that it abides by all the laws of your new PDS country.</li>
-            <li>When returning to the United States, you must identify firearms on your individual customs forms and obtain an <abbr title="Bureau of Alcohol, Tobacco, Firearms, and Explosives">ATF</abbr> Form 6. You can access the <abbr title="Bureau of Alcohol, Tobacco, Firearms, and Explosives">ATF</abbr> Form 6 for military personnel <a href="#TODO">here</a> and civilians <a href="#TODO">here</a>. Allow up to 6 weeks for processing.</li>
+            <li>When returning to the United States, you must identify firearms on your individual customs forms and obtain an <abbr title="Bureau of Alcohol, Tobacco, Firearms, and Explosives">ATF</abbr> Form 6. You can access the <abbr title="Bureau of Alcohol, Tobacco, Firearms, and Explosives">ATF</abbr> Form 6 for military personnel <a href="https://www.atf.gov/firearms/docs/form/form-6-part-2-application-and-permit-importation-firearms-ammunition-and/download">here</a> and civilians <a href="https://www.atf.gov/firearms/docs/form/form-6-part-1-application-and-permit-importation-firearms-ammunition-and/download">here</a>. Allow up to 6 weeks for processing.</li>
           </ul>
 
           <h6>Shipment Instructions</h6>
@@ -99,13 +99,13 @@
       details:
         conus: >
           <ul>
-            <li>If you are moving from a <a href="#TODO">gypsy moth quarantined area</a> to a non-quarantine area, you must inspect your outdoor household items for the gypsy moth before you move.</li>
-            <li>If you find the Gypsy Moth on any of your belongings, you must treat it before your move. You can use the <a href="#TODO">USDA’s Gypsy Moth Guide</a> to help you know what to look for.</li>
+            <li>If you are moving from a gypsy moth quarantined area to a non-quarantine area, you must inspect your outdoor household items for the gypsy moth before you move.</li>
+            <li>If you find the Gypsy Moth on any of your belongings, you must treat it before your move. You can use the <a href="https://www.aphis.usda.gov/aphis/ourfocus/planthealth/plant-pest-and-disease-programs/pests-and-diseases/gypsy-moth">USDA’s Gypsy Moth Guide</a> to help you know what to look for.</li>
           </ul>
         oconus: >
           <ul>
-            <li>If you are moving from a <a href="#TODO">gypsy moth quarantined area</a> to a non-quarantine area, you must inspect your outdoor household items for the gypsy moth before you move.</li>
-            <li>If you find the Gypsy Moth on any of your belongings, you must treat it before your move. You can use the <a href="#TODO">USDA’s Gypsy Moth Guide</a> to help you know what to look for.</li>
+            <li>If you are moving from a gypsy moth quarantined area to a non-quarantine area, you must inspect your outdoor household items for the gypsy moth before you move.</li>
+            <li>If you find the Gypsy Moth on any of your belongings, you must treat it before your move. You can use the <a href="https://www.aphis.usda.gov/aphis/ourfocus/planthealth/plant-pest-and-disease-programs/pests-and-diseases/gypsy-moth">USDA’s Gypsy Moth Guide</a> to help you know what to look for.</li>
             <li>If travelling to an international PDS, make sure you check with your host base relating to any other agriculture-related procedures that might affect your shipment.</li>
           </ul>
 
