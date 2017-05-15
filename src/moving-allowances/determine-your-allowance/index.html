@@ -30,7 +30,7 @@ title: Determine Your Moving Allowance
   <button>View Results</button>
 </form>
 
-<section class="usa-section moving-allowances-section" id="moving-allowances">
+<section class="usa-section moving-allowances-section" id="moving-allowances" tabindex="-1">
   <h2>Your Moving Allowance</h2>
 
   <p>Moving allowances are generally based on the overall weight of your household goods. Any overages on your approved weight will be your financial responsibility, so work hard to make sure you stay within your weight allowance.</p>
@@ -84,14 +84,14 @@ title: Determine Your Moving Allowance
   {% endfor %}
 </section>
 
-<section class="usa-section">
+<section class="usa-section moving-allowances-tips-section">
   <h2>Useful Things to Know</h2>
 
   {% for category in site.data.moving_allowance_categories %}
     <h3>{{ category.title }}</h3>
 
     {% for subcategory in category.categories %}
-      <div id="{{ subcategory.id }}">
+      <div id="{{ subcategory.id }}" tabindex="-1">
         <h4>{{ subcategory.title }}</h4>
 
         {% if subcategory.details.conus or subcategory.details.oconus %}

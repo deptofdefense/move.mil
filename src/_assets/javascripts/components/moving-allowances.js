@@ -19,7 +19,7 @@
 
       showElement(this.$form);
 
-      hideElement(this.$container).attr('tabindex', -1);
+      hideElement(this.$container);
     }
   };
 
