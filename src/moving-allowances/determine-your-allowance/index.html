@@ -91,7 +91,7 @@ title: Determine Your Moving Allowance
     <h3>{{ category.title }}</h3>
 
     {% for subcategory in category.categories %}
-      <div id="{{ subcategory.id }}" tabindex="-1">
+      <div id="{{ subcategory.id }}">
         <h4>{{ subcategory.title }}</h4>
 
         {% if subcategory.details.conus or subcategory.details.oconus %}
