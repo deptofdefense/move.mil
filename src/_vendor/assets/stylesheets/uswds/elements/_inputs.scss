@@ -9,7 +9,7 @@ $input-padding-vertical: 1rem;
 $input-height-exact: (
   ($base-font-size * $input-line-height) +
   ($input-padding-vertical * 2) +
-  (strip-units($input-border-width) * 2 / $base-font-size)
+  (strip-units($input-border-width) * 2rem / $base-font-size)
 );
 
 // truncated to 1 decimal place
