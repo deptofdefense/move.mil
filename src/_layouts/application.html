@@ -166,7 +166,7 @@
       r.src=e;r.async=true;o.parentNode.insertBefore(r,o);if(typeof c==='function')r.onload=c;return r;
     }
 
-    if (document.querySelector && window.addEventListener) {
+    if (window.addEventListener && window.JSON && document.querySelector) {
       loadJS('{% asset_path application.js %}');
     }
   </script>
