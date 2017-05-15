@@ -50,9 +50,12 @@ $asset-pipeline: true;
 @import "uswds/components/skipnav";
 
 // Site -------------- //
+@import "elements/inputs";
 @import "elements/table";
 @import "elements/typography";
 @import "components/footer";
+@import "components/forms";
 @import "components/header";
 @import "components/layout";
 @import "components/navigation";
+@import "components/section";
