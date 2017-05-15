@@ -6,7 +6,31 @@ title: Determine Your Moving Allowance
 <p>Enter your rank, dependancy status, and move type to determine your moving allowance. If additional questions arise, your <a href="#TODO">Transportation Office (TO)</a> can provide further information and generally is the best place to get help related to your move.</p>
 <p class="usa-text-small"><b>Note:</b> This tool is based on the <a href="http://www.defensetravel.dod.mil/Docs/perdiem/JTR.pdf" class="usa-external_link">Joint Travel Regulation (JTR)</a> which is the entitlements authority for all service members. Any differences between this tool and the <a href="http://www.defensetravel.dod.mil/Docs/perdiem/JTR.pdf" class="usa-external_link">Joint Travel Regulation (JTR)</a> will be resolved by the JTR. Additionally, each branch of service may also have supplemental regulations to the JTR.</p>
 
-<section class="usa-section" id="moving-allowances">
+<form class="usa-form" id="moving-allowances-form" hidden>
+  <label for="pay-grade">1. Select your current <b>military pay grade</b>.</label>
+  <select id="pay-grade">
+    <option value=""></option>
+    {% for pay_grade in site.data.pay_grades %}
+      <option value="{{ pay_grade.rank }}">{{ pay_grade.rank }}</option>
+    {% endfor %}
+  </select>
+
+  <label for="dependency-status">2. Select your <b>dependency status</b>.</label>
+  <select id="dependency-status">
+    <option value=""></option>
+  </select>
+
+  <label for="move-type">3. Specify your <b>move type</b>.</label>
+  <select id="move-type">
+    <option value=""></option>
+    <option value="CONUS">Within the Continental United States (CONUS)</option>
+    <option value="OCONUS">Outside Continental United States (OCONUS)</option>
+  </select>
+
+  <button>View Results</button>
+</form>
+
+<section class="usa-section moving-allowances-section" id="moving-allowances">
   <h2>Your Moving Allowance</h2>
 
   <p>Moving allowances are generally based on the overall weight of your household goods. Any overages on your approved weight will be your financial responsibility, so work hard to make sure you stay within your weight allowance.</p>
