@@ -34,7 +34,7 @@ $asset-pipeline: true;
 
 // Components -------------- //
 @import "uswds/components/accordions";
-// @import "uswds/components/alerts";
+@import "uswds/components/alerts";
 @import "uswds/components/banner";
 @import "uswds/components/footer";
 @import "uswds/components/forms";

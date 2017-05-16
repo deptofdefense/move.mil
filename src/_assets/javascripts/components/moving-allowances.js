@@ -1,10 +1,6 @@
 (function(window, $) {
-  var hideElement = function($el) {
-    return $el.attr('hidden', true);
-  };
-
-  var showElement = function($el) {
-    return $el.removeAttr('hidden');
+  var toggleElement = function($el, showElement) {
+    return $el[showElement ? 'removeAttr' : 'attr']('hidden', true);
   };
 
   var MovingAllowances = window.MovingAllowances = function() {
@@ -13,13 +9,15 @@
     if (this.$form) {
       this.$payGradeInput = $('#pay-grade');
       this.$container = $('#moving-allowances');
+      this.$alert = this.$container.find('.usa-alert-info');
       this.$tables = this.$container.find('.moving-allowances-table');
 
       this.$form.on('submit', this.events.submit.bind(this));
 
-      showElement(this.$form);
+      toggleElement(this.$form, true);
+      toggleElement(this.$alert, true);
 
-      hideElement(this.$container);
+      this.hideTables();
     }
   };
 
@@ -30,24 +28,27 @@
 
         var payGradeInputValue = this.$payGradeInput.val();
 
+        this.hideTables();
+
         if (payGradeInputValue.length) {
-          showElement(this.$container);
+          var $table = this.$tables.filter(function() {
+            return $(this).data('payGrade') === payGradeInputValue;
+          });
 
-          this.$tables.each(function(index, element) {
-            var $table = $(element);
+          toggleElement(this.$alert, false);
+          toggleElement($table, true);
 
-            if ($table.data('payGrade') === payGradeInputValue) {
-              showElement($table);
-
-              this.$container.trigger('focus');
-            } else {
-              hideElement($table);
-            }
-          }.bind(this));
+          this.$container.trigger('focus');
         } else {
-          hideElement(this.$container);
+          toggleElement(this.$alert, true);
         }
       }
+    },
+
+    hideTables: function() {
+      this.$tables.each(function() {
+        toggleElement($(this), false);
+      });
     }
   };
 })(window, jQuery);
