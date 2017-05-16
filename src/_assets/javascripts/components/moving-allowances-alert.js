@@ -13,9 +13,9 @@
     events: {
       update: function(event, data) {
         if (data.payGrade || data.dependencyStatus || data.moveType) {
-          this.$el.toggle(false);
+          this.toggle(true);
         } else {
-          this.$el.toggle(true);
+          this.toggle(false);
         }
       }
     },
