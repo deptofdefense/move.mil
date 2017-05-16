@@ -1,4 +1,6 @@
 (function(window, $) {
+  var $window = $(window);
+
   var MovingAllowances = window.MovingAllowances = function($el) {
     this.$el = $el;
 
@@ -9,5 +11,17 @@
     this.$el.find('.moving-allowances-table').each(function() {
       new MovingAllowancesTable($(this));
     });
+
+    $window.on('update', this.events.update.bind(this));
+  };
+
+  MovingAllowances.prototype = {
+    events: {
+      update: function(event, data) {
+        if (data.payGrade || data.dependencyStatus || data.moveType) {
+          this.$el.trigger('focus');
+        }
+      }
+    }
   };
 })(window, jQuery);
