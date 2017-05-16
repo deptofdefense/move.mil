@@ -8,3 +8,20 @@
     }
   }
 }
+
+.faq-section {
+  h2 {
+    font-size: $h3-font-size;
+  }
+
+  dt {
+    font-size: $h3-font-size;
+    font-weight: $font-bold;
+  }
+
+  dd {
+    border-left: 4px solid $color-gray-lightest;
+    margin-left: 0;
+    padding-left: $site-margins;
+  }
+}
