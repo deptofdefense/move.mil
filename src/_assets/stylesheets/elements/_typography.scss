@@ -5,4 +5,19 @@ abbr[title] {
 .homepage-content-title {
   border-bottom: 0.25rem solid $color-black;
   padding-bottom: 0.5rem;
+
+.divider-heading {
+  border-top: 4px solid #112e51;
+
+  span {
+    background-color: #112e51;
+    color: #fff;
+    display: inline-block;
+    font-family: $font-serif;
+    font-size: $h6-font-size;
+    font-style: italic;
+    font-weight: bold;
+    padding: 0.5rem 3rem;
+    text-align: center;
+  }
 }

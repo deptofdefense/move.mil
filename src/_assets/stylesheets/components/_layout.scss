@@ -58,3 +58,20 @@
     margin-top: 1rem;
   }
 }
+
+.your-moving-toolkit {
+  margin-top: $site-margins;
+  padding: 0;
+
+  h3 {
+    font-family: $font-sans;
+    text-align: center;
+  }
+
+  span {
+    display: block;
+    font-size: $h5-font-size;
+    font-weight: $font-normal;
+    margin-top: 1rem;
+  }
+}

@@ -11,6 +11,16 @@
 - title: Schedule Your Move
   url: /schedule-your-move
 
+  subnav:
+    - title: Access DPS via ETA
+      url: /access-dps-via-eta
+
+    - title: Learn how to use DPS
+      url: /learn-how-to-use-dps
+
+    - title: Estimate Weight Allowance
+      url: /estimate-weight-allowance
+
 - title: File and Manage Claims
   url: /claims
 
