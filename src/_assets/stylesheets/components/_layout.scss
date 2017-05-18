@@ -20,15 +20,24 @@
 
 .homepage-hero {
   margin-bottom: $site-margins;
+  padding: 0;
+
+  @include media($nav-width) {
+    @include padding(null $site-margins);
+  }
 
   h2 {
-    @include padding(6rem null);
+    @include padding(6rem $site-margins-mobile);
     background-color: $color-primary;
     color: #fff;
     font-family: $font-sans;
-    font-size: $h1-font-size;
     font-weight: $font-normal;
     text-align: center;
+
+    @include media($nav-width) {
+      @include padding(6rem null);
+      font-size: $h1-font-size;
+    }
   }
 }
 
