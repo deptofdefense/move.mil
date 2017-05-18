@@ -18,6 +18,20 @@
   }
 }
 
+.homepage-hero {
+  margin-bottom: $site-margins;
+
+  h2 {
+    @include padding(6rem null);
+    background-color: $color-primary;
+    color: #fff;
+    font-family: $font-sans;
+    font-size: $h1-font-size;
+    font-weight: $font-normal;
+    text-align: center;
+  }
+}
+
 .conus-vs-oconus-moves {
   margin-top: $site-margins;
   padding: 0;

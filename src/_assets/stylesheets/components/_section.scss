@@ -1,3 +1,25 @@
+.dps-login-section {
+  @include padding($site-margins-mobile);
+  background-color: $color-gray-lightest;
+}
+
+.homepage-section {
+  @include padding($site-margins null);
+  border-bottom: 1px solid $color-gray-light;
+
+  h3 {
+    margin: 0;
+
+    & + p {
+      margin-top: 0.25rem;
+    }
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
 .moving-allowances-section {
   @include margin(0 -1.5rem);
   @include padding($site-margins $site-margins-mobile);
