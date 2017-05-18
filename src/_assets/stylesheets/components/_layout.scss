@@ -28,7 +28,8 @@
 
   h2 {
     @include padding(6rem $site-margins-mobile);
-    background-color: $color-primary;
+    background: $color-primary url(asset_path("homepage/hero.jpg")) no-repeat 50% 50%;
+    background-size: cover;
     color: #fff;
     font-family: $font-sans;
     font-weight: $font-normal;

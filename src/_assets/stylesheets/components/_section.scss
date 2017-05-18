@@ -7,6 +7,16 @@
   @include padding($site-margins null);
   border-bottom: 1px solid $color-gray-light;
 
+  img {
+    display: none;
+    margin-right: $site-margins;
+    width: 140px;
+
+    @include media($medium-screen) {
+      display: block;
+    }
+  }
+
   h3 {
     margin: 0;
 
