@@ -8,17 +8,19 @@ abbr[title] {
 }
 
 .divider-heading {
-  border-top: 4px solid #112e51;
+  border-top: 0.25rem solid $color-primary-darkest;
+  overflow: hidden;
 
   span {
-    background-color: #112e51;
-    color: #fff;
-    display: inline-block;
+    @include padding(0.5rem $site-margins 0.75rem);
+    background-color: $color-primary-darkest;
+    color: $color-white;
+    display: block;
+    float: left;
     font-family: $font-serif;
     font-size: $h6-font-size;
     font-style: italic;
     font-weight: bold;
-    padding: 0.5rem 3rem;
     text-align: center;
   }
 }
