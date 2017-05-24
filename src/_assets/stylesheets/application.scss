@@ -25,7 +25,7 @@ $asset-pipeline: true;
 // Styles basic HTML elements
 @import "uswds/elements/buttons";
 // @import "uswds/elements/embed";
-// @import "uswds/elements/figure";
+@import "uswds/elements/figure";
 @import "uswds/elements/inputs";
 @import "uswds/elements/labels";
 @import "uswds/elements/list";

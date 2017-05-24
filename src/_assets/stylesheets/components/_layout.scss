@@ -42,6 +42,33 @@
   }
 }
 
+.service-emblems-list {
+  @include margin($site-margins-mobile null);
+  overflow: hidden;
+
+  li {
+    @include padding($site-margins-mobile);
+    float: left;
+    width: 50%;
+
+    @include media($medium-screen) {
+      @include padding($site-margins-mobile $site-margins);
+      width: 20%;
+    }
+
+    a {
+      display: block;
+      font-weight: $font-bold;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
 .conus-vs-oconus-moves,
 .your-moving-toolkit {
   margin-top: $site-margins;

@@ -7,6 +7,10 @@
   @include padding($site-margins null);
   border-bottom: 1px solid $color-gray-light;
 
+  &:last-of-type {
+    border-bottom: none;
+  }
+
   img {
     display: none;
     margin-right: $site-margins;
@@ -23,10 +27,6 @@
     & + p {
       margin-top: 0.25rem;
     }
-  }
-
-  &:last-of-type {
-    border-bottom: none;
   }
 }
 
