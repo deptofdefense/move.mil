@@ -25,8 +25,8 @@ title: Determine Your Moving Allowance
   <label for="move-type">3. Specify your <b>move type</b>.</label>
   <select id="move-type">
     <option value=""></option>
-    <option value="CONUS">Within the Continental United States (CONUS)</option>
-    <option value="OCONUS">Outside of the Continental United States (OCONUS)</option>
+    <option value="conus">Within the Continental United States (CONUS)</option>
+    <option value="oconus">Outside of the Continental United States (OCONUS)</option>
   </select>
 
   <button>View Results</button>
@@ -64,7 +64,7 @@ title: Determine Your Moving Allowance
               <tr>
                 <th scope="row">{{ subcategory.title }}</th>
                 <td><b>{{ subcategory.allowance }}</b></td>
-                <td><a href="#{{ subcategory.id }}">View details</a></td>
+                <td><a href="#{{ subcategory.id }}" class="view-details">View details</a></td>
               </tr>
             {% elsif subcategory.allowance_key %}
               {% assign allowances_self = pay_grade.allowances[subcategory.allowance_key].self %}
@@ -74,7 +74,7 @@ title: Determine Your Moving Allowance
                 <tr data-allowance-type="self">
                   <th scope="row">{{ subcategory.title }}</th>
                   <td><b>{{ allowances_self }}</b></td>
-                  <td><a href="#{{ subcategory.id }}">View details</a></td>
+                  <td><a href="#{{ subcategory.id }}" class="view-details">View details</a></td>
                 </tr>
               {% endif %}
 
@@ -82,7 +82,7 @@ title: Determine Your Moving Allowance
                 <tr data-allowance-type="self-plus-dependents">
                   <th scope="row">{{ subcategory.title }} <i>(with dependents)</i></th>
                   <td><b>{{ allowances_self_plus_depedendents }}</b></td>
-                  <td><a href="#{{ subcategory.id }}">View details</a></td>
+                  <td><a href="#{{ subcategory.id }}" class="view-details">View details</a></td>
                 </tr>
               {% endif %}
             {% endif %}
@@ -100,7 +100,7 @@ title: Determine Your Moving Allowance
     <h3>{{ category.title }}</h3>
 
     {% for subcategory in category.categories %}
-      <div id="{{ subcategory.id }}">
+      <div class="moving-allowances-tips" id="{{ subcategory.id }}">
         <h4>{{ subcategory.title }}</h4>
 
         {% if subcategory.details.conus or subcategory.details.oconus %}
@@ -123,7 +123,7 @@ title: Determine Your Moving Allowance
           {{ subcategory.details }}
         {% endif %}
 
-        <a href="#moving-allowances">Return to Moving Allowances</a>
+        <a href="#moving-allowances" class="return-to-moving-allowances">Return to Moving Allowances</a>
       </div>
     {% endfor %}
   {% endfor %}
