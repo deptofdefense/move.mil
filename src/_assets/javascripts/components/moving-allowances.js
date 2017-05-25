@@ -13,6 +13,8 @@
     });
 
     $window.on('update', this.events.update.bind(this));
+
+    this.$el.addClass('moving-allowances-section-enhanced');
   };
 
   MovingAllowances.prototype = {

@@ -41,6 +41,12 @@
   }
 }
 
+@include media($moving-allowances-wide) {
+  .moving-allowances-section-enhanced + .moving-allowances-tips-section {
+    display: none;
+  }
+}
+
 .faq-section {
   h2 {
     font-size: $h3-font-size;
