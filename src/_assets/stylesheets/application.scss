@@ -9,6 +9,10 @@ $image-path: "uswds";
 // Set $asset-pipeline to true if you're using the Rails Asset Pipeline
 $asset-pipeline: true;
 
+// Site variables -------------- //
+
+$moving-allowances-wide: 950px;
+
 // Vendor -------------- //
 @import "bourbon";
 @import "neat";
