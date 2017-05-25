@@ -29,26 +29,26 @@ table {
 }
 
 .moving-allowances-table-enhanced {
-  &[data\-dependency\-status="false"] {
-    [data\-allowance\-type="self-plus-dependents"] {
+  &[data-dependency-status="false"] {
+    [data-allowance-type="self-plus-dependents"] {
       display: none;
     }
   }
 
-  &[data\-dependency\-status="true"] {
-    [data\-allowance\-type="self"] {
+  &[data-dependency-status="true"] {
+    [data-allowance-type="self"] {
       display: none;
     }
   }
 
-  &[data\-move\-type="conus"] {
+  &[data-move-type="conus"] {
     .oconus-details,
     .conus-details h5 {
       display: none;
     }
   }
 
-  &[data\-move\-type="oconus"] {
+  &[data-move-type="oconus"] {
     .conus-details,
     .oconus-details h5 {
       display: none;
