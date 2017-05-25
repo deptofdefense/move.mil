@@ -3,7 +3,9 @@
   categories:
     - title: Total Weight of Household Goods
       id: total-weight-of-household-goods
-      allowance_key: total_weight
+      allowance_keys:
+        - total_weight_self
+        - total_weight_self_plus_dependents
       details:
         <ul>
           <li>Excludes Pro-Gear (items used professionally for work).</li>
@@ -114,7 +116,8 @@
   categories:
     - title: Service Member Pro-Gear
       id: service-member-pro-gear
-      allowance_key: pro_gear
+      allowance_keys:
+        - pro_gear
       details: >
         <ul>
           <li>Professional equipment must be completely separated from the rest of your items so that they can be packed, marked, and weighed separately.</li>
@@ -136,7 +139,8 @@
 
     - title: Spouse Pro-Gear
       id: spouse-pro-gear
-      allowance_key: spouse_pro_gear
+      allowance_keys:
+        - pro_gear_spouse
       details: >
         <ul>
           <li>Professional equipment must be completely separated from your spouse’s pro-gear and from rest of your family’s items. All of your pro-gear will be packed, marked, and weighed separately.</li>

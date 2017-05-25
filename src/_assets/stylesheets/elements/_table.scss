@@ -30,13 +30,14 @@ table {
 
 .moving-allowances-table-enhanced {
   &[data-dependency-status="false"] {
-    [data-allowance-type="self-plus-dependents"] {
+    [data-allowance-key="total_weight_self_plus_dependents"],
+    [data-allowance-key="pro_gear_spouse"] {
       display: none;
     }
   }
 
   &[data-dependency-status="true"] {
-    [data-allowance-type="self"] {
+    [data-allowance-key="total_weight_self"] {
       display: none;
     }
   }

@@ -66,25 +66,18 @@ title: Determine Your Moving Allowance
                 <td><b>{{ subcategory.allowance }}</b></td>
                 <td><a href="#{{ subcategory.id }}" class="view-details">View details</a></td>
               </tr>
-            {% elsif subcategory.allowance_key %}
-              {% assign allowances_self = pay_grade.allowances[subcategory.allowance_key].self %}
-              {% assign allowances_self_plus_depedendents = pay_grade.allowances[subcategory.allowance_key].self_plus_dependents %}
+            {% elsif subcategory.allowance_keys %}
+              {% for allowance_key in subcategory.allowance_keys %}
+                {% assign allowance_value = pay_grade.allowances[allowance_key] %}
 
-              {% if allowances_self %}
-                <tr data-allowance-type="self">
-                  <th scope="row">{{ subcategory.title }}</th>
-                  <td><b>{{ allowances_self }}</b></td>
-                  <td><a href="#{{ subcategory.id }}" class="view-details">View details</a></td>
-                </tr>
-              {% endif %}
-
-              {% if allowances_self_plus_depedendents %}
-                <tr data-allowance-type="self-plus-dependents">
-                  <th scope="row">{{ subcategory.title }} <i>(with dependents)</i></th>
-                  <td><b>{{ allowances_self_plus_depedendents }}</b></td>
-                  <td><a href="#{{ subcategory.id }}" class="view-details">View details</a></td>
-                </tr>
-              {% endif %}
+                {% if allowance_value %}
+                  <tr data-allowance-key="{{ allowance_key }}">
+                    <th scope="row">{{ subcategory.title }}{% if allowance_key == 'total_weight_self_plus_dependents' %} <i>(with dependents)</i>{% endif %}</th>
+                    <td><b>{{ allowance_value }}</b></td>
+                    <td><a href="#{{ subcategory.id }}" class="view-details">View details</a></td>
+                  </tr>
+                {% endif %}
+              {% endfor %}
             {% endif %}
           {% endfor %}
         </tbody>
