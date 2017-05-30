@@ -21,8 +21,12 @@
     - title: Estimate Weight Allowance
       url: /estimate-weight-allowance
 
-- title: File and Manage Claims
+- title: Damage Claims
   url: /claims
+
+  subnav:
+    - title: Frequently Asked Questions
+      url: /faqs
 
 - title: Service-Specific Information
   url: /service-specific-information
