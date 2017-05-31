@@ -14,7 +14,7 @@
   img {
     display: none;
     margin-right: $site-margins;
-    width: 140px;
+    width: 14rem;
 
     @include media($medium-screen) {
       display: block;
