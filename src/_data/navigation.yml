@@ -12,9 +12,6 @@
   url: /schedule-your-move
 
   subnav:
-    - title: Access DPS via ETA
-      url: /access-dps-via-eta
-
     - title: Learn How to Use DPS
       url: /learn-how-to-use-dps
 
