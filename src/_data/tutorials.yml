@@ -1,0 +1,55 @@
+- title: Get Started with <abbr title="Defense Personal Property System">DPS</abbr> (First Time Users)
+  id: get-started
+  steps:
+    - image_path: tutorials/get-started-01.png
+      content: >
+        <p>Go to the Electronic Transportation Acquisition (ETA) site and click “New User Registration.”</p>
+    - image_path: tutorials/get-started-02.png
+      content: >
+        <p>Next, select “DPS” from the list of available applications, and click “Next.”</p>
+    - image_path: tutorials/get-started-03.png
+      content: >
+        <p>Fill out the General Information fields and choose your security questions. Then you’ll get an email with your username.</p>
+    - image_path: tutorials/get-started-04.png
+      content: >
+        <p>In the email, click the <abbr title="Electronic Transportation Acquisition">ETA</abbr> link to verify your username and security questions. When you do, you’ll get an email with your 6 digit validation code.</p>
+    - image_path: tutorials/get-started-05.png
+      content: >
+        <p>On the <abbr title="Electronic Transportation Acquisition">ETA</abbr> site where you verified your username, use the validation code to set your password.</p>
+    - image_path: tutorials/get-started-06.png
+      content: >
+        <p>Now that you have a username and password, you can access <abbr title="Defense Personal Property System">DPS</abbr>. Click “My Approved Applications” to find the <abbr title="Defense Personal Property System">DPS</abbr> link.</p>
+
+- title: Log In to <abbr title="Defense Personal Property System">DPS</abbr> (Returning Users)
+  id: log-in-to-dps
+  steps:
+    - image_path: tutorials/log-in-to-dps-01.png
+      content: >
+        <p>Access <abbr title="Defense Personal Property System">DPS</abbr> through the Electronic Transportation Acquisition (ETA) site using your username and password.</p>
+    - image_path: tutorials/log-in-to-dps-02.png
+      content: >
+        <p>If you need help logging in to <abbr title="Electronic Transportation Acquisition">ETA</abbr>, use the “Can’t Access your account?” link to retrieve your username and password.</p>
+
+- title: Schedule Your Move (Self-Counsel)
+  id: schedule-your-move
+  steps:
+    - content: >
+        <p>Scheduling your move is called “Self Counseling” in <abbr title="Defense Personal Property System">DPS</abbr>. Get started with your Orders and Contact information. It’s helpful to have your pick-up and delivery information, as well as information about your dependents and Power of Attorney if you have one.</p>
+    - content: >
+        <p>If applicable, have information about your Privately-Owned Vehicle, Motorcycle, or Firearm handy.</p>
+    - content: >
+        <p>Select the “Self Counsel” tab and begin your application!</p>
+    - content: >
+        <p>Fill out your Contact Information and check your progress in the Counseling Menu.</p>
+
+- title: File A Claim
+  id: file-a-claim
+  steps:
+    - content: >
+        <p>#TODO</p>
+
+- title: Review Your <abbr title="Transportation Service Provider">TSP</abbr> (Customer Satisfaction Survey)
+  id: review-your-tsp
+  steps:
+    - content: >
+        <p>#TODO</p>
