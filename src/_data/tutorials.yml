@@ -30,8 +30,8 @@
       content: >
         <p>If you need help logging in to <abbr title="Electronic Transportation Acquisition">ETA</abbr>, use the “Can’t Access your account?” link to retrieve your username and password.</p>
 
-- title: Schedule Your Move (Self-Counsel)
-  id: schedule-your-move
+- title: Schedule A Move (Self-Counsel)
+  id: schedule-a-move
   steps:
     - content: >
         <p>Scheduling your move is called “Self Counseling” in <abbr title="Defense Personal Property System">DPS</abbr>. Get started with your Orders and Contact information. It’s helpful to have your pick-up and delivery information, as well as information about your dependents and Power of Attorney if you have one.</p>
