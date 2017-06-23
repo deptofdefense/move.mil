@@ -17,6 +17,7 @@ $moving-allowances-wide: 950px;
 @import "bourbon";
 @import "neat";
 @import "normalize.css/normalize";
+@import "owl.carousel/owl.carousel";
 
 // Core -------------- //
 @import "uswds/core/variables";
@@ -58,6 +59,7 @@ $moving-allowances-wide: 950px;
 @import "elements/list";
 @import "elements/table";
 @import "elements/typography";
+@import "components/carousel";
 @import "components/footer";
 @import "components/forms";
 @import "components/header";
@@ -65,4 +67,3 @@ $moving-allowances-wide: 950px;
 @import "components/media-block";
 @import "components/navigation";
 @import "components/section";
-@import "components/slideshow";

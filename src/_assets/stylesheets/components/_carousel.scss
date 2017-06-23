@@ -1,0 +1,117 @@
+// .slideshow {
+//   ol {
+//     @include unstyled-list();
+//   }
+//
+//   li + li {
+//     margin-top: $site-margins;
+//   }
+// }
+
+.carousel {
+  position: relative;
+}
+
+.carousel-item-content {
+  margin: 0;
+  // padding: 0 1px; // avoid Owl Carousel-induced image border clipping
+  padding: 0 6rem;
+
+  img {
+    border: 1px solid $color-gray-light;
+    display: block;
+  }
+
+  p {
+    font-size: $h5-font-size;
+    margin: 1rem 0;
+  }
+}
+
+.owl-next,
+.owl-prev {
+  background-color: $color-white;
+  border-radius: 50%;
+  font-size: 0;
+  margin-top: -2rem;
+  padding: 1rem;
+  position: absolute;
+  top: 40%;
+
+  &:after {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+.owl-next {
+  right: 0;
+
+  &:after {
+    background-image: url(asset_path('#{$image-path}/angle-arrow-right-primary.png'));
+    background-image: url(asset_path('#{$image-path}/angle-arrow-right-primary.svg'));
+  }
+
+  &:focus,
+  &:hover {
+    &:after {
+      background-image: url(asset_path('#{$image-path}/angle-arrow-right-primary-hover.png'));
+      background-image: url(asset_path('#{$image-path}/angle-arrow-right-primary-hover.svg'));
+    }
+  }
+}
+
+.owl-prev {
+  left: 0;
+
+  &:after {
+    background-image: url(asset_path('#{$image-path}/angle-arrow-left-primary.png'));
+    background-image: url(asset_path('#{$image-path}/angle-arrow-left-primary.svg'));
+  }
+
+  &:focus,
+  &:hover {
+    &:after {
+      background-image: url(asset_path('#{$image-path}/angle-arrow-left-primary-hover.png'));
+      background-image: url(asset_path('#{$image-path}/angle-arrow-left-primary-hover.svg'));
+    }
+  }
+}
+
+.owl-dots {
+  counter-reset: dots;
+  font-size: $h5-font-size;
+  margin-top: $site-margins-mobile;
+
+  &:before {
+    content: "Jump to Step:";
+    display: inline-block;
+  }
+}
+
+.owl-dot {
+  color: $color-primary;
+  counter-increment: dot;
+  display: inline-block;
+  font-weight: $font-bold;
+  margin-left: 1.5rem;
+
+  &:focus,
+  &:hover {
+    color: $color-primary-darker;
+  }
+
+  &:before {
+    content: counter(dot);
+    display: inline-block;
+  }
+
+  &.active:before {
+    text-decoration: underline;
+  }
+}

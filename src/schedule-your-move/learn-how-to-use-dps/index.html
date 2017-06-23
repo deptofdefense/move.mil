@@ -13,21 +13,19 @@ title: Learn How to Use DPS
     <li>
       <button aria-controls="{{ tutorial.id }}" class="usa-accordion-button">{{ tutorial.title }}</button>
       <div class="usa-accordion-content" id="{{ tutorial.id }}">
-        <div class="slideshow">
-          <ol>
-            {% for step in tutorial.steps %}
-              <li>
-                <figure class="slideshow-content">
-                  {% if step.image_path %}
-                    <img src="{{ step.image_path | asset_path }}" alt="">
-                  {% endif %}
-                  <figcaption>
-                    {{ step.content }}
-                  </figcaption>
-                </figure>
-              </li>
-            {% endfor %}
-          </ol>
+        <div class="carousel owl-carousel">
+          {% for step in tutorial.steps %}
+            <div class="carousel-item">
+              <figure class="carousel-item-content">
+                {% if step.image_path %}
+                  <img src="{{ step.image_path | asset_path }}" alt="">
+                {% endif %}
+                <figcaption>
+                  {{ step.content }}
+                </figcaption>
+              </figure>
+            </div>
+          {% endfor %}
         </div>
       </div>
     </li>
