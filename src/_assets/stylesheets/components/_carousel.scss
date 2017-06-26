@@ -1,21 +1,14 @@
-// .slideshow {
-//   ol {
-//     @include unstyled-list();
-//   }
-//
-//   li + li {
-//     margin-top: $site-margins;
-//   }
-// }
-
 .carousel {
   position: relative;
 }
 
 .carousel-item-content {
   margin: 0;
-  // padding: 0 1px; // avoid Owl Carousel-induced image border clipping
-  padding: 0 6rem;
+  padding: 0 3rem;
+
+  @include media($nav-width) {
+    padding: 0 5rem;
+  }
 
   img {
     border: 1px solid $color-gray-light;
@@ -30,11 +23,8 @@
 
 .owl-next,
 .owl-prev {
-  background-color: $color-white;
-  border-radius: 50%;
   font-size: 0;
   margin-top: -2rem;
-  padding: 1rem;
   position: absolute;
   top: 40%;
 
@@ -44,8 +34,13 @@
     background-size: contain;
     content: "";
     display: inline-block;
-    height: 3rem;
-    width: 3rem;
+    height: 1.5rem;
+    width: 1.5rem;
+
+    @include media($nav-width) {
+      height: 3rem;
+      width: 3rem;
+    }
   }
 }
 
