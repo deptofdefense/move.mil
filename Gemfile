@@ -1,4 +1,4 @@
-ruby '2.3.3'
+ruby '2.4.1'
 
 source 'https://rubygems.org' do
   gem 'bourbon', '~> 4.3', '>= 4.3.4'
