@@ -31,27 +31,13 @@ This project uses Ruby version 2.4.1 which can be installed using a Ruby version
 gem install bundler
 ```
 
-After successfully installing Bundler, run the following command from the root of the project to install the dependencies specified in the [Gemfile][gemfile]:
+With your PostgreSQL server running, issue the following command from the root of the project:
 
 ```sh
-bundle install
+./bin/setup
 ```
 
-Next, create `config/database.yml` and `config/secrets.yml` and update their configuration to match your environment:
-
-```sh
-cp config/database.yml{.example,}
-cp config/secrets.yml{.example,}
-```
-
-You can run `bundle exec rake secret` to generate values for the `secret_key_base` keys in `config/secrets.yml`.
-
-With PostgreSQL running, create and migrate the application's databases:
-
-```sh
-bundle exec rake db:create
-bundle exec rake db:migrate
-```
+This setup script will install the dependencies specified in the [Gemfile][gemfile], create `config/database.yml` and `config/secrets.yml`, and create and migrate the application's databases. When the setup script has finished, update the `config/database.yml` and `config/secrets.yml` configuration files to match your environment. You can run `bundle exec rake secret` to generate values for the `secret_key_base` keys in `config/secrets.yml`.
 
 Start the application by running `bundle exec rails server` and opening [http://localhost:3000](http://localhost:3000) in your Web browser of choice.
 
