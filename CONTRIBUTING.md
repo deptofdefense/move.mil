@@ -37,9 +37,9 @@ With your PostgreSQL server running, issue the following command from the root o
 ./bin/setup
 ```
 
-This setup script will install the dependencies specified in the [Gemfile][gemfile], create `config/database.yml` and `config/secrets.yml`, and create and migrate the application's databases. When the setup script has finished, update the `config/database.yml` and `config/secrets.yml` configuration files to match your environment. You can run `bundle exec rake secret` to generate values for the `secret_key_base` keys in `config/secrets.yml`.
+This setup script will install the dependencies specified in the [Gemfile][gemfile], create `config/database.yml` and `config/secrets.yml`, and create and migrate the application's databases. When the setup script has finished, update the `config/database.yml` and `config/secrets.yml` configuration files to match your environment. You can run `bin/rails secret` to generate values for the `secret_key_base` keys in `config/secrets.yml`.
 
-Start the application by running `bundle exec rails server` and opening [http://localhost:3000](http://localhost:3000) in your Web browser of choice.
+Start the application by running `bin/rails server` and opening [http://localhost:3000](http://localhost:3000) in your Web browser of choice.
 
 ## Making Changes
 
@@ -47,8 +47,8 @@ Start the application by running `bundle exec rails server` and opening [http://
 1. Install development dependencies as outlined above.
 1. Create a feature branch for the code changes you're looking to make: `git checkout -b your-descriptive-branch-name origin/master`.
 1. _Write some code!_
-1. Run the application and verify that your changes function as intended: `bundle exec rails server`.
-1. If your changes would benefit from testing, add the necessary tests and verify everything passes by running `bundle exec rake spec`.
+1. Run the application and verify that your changes function as intended: `bin/rails server`.
+1. If your changes would benefit from testing, add the necessary tests and verify everything passes by running `bin/rake spec`.
 1. Commit your changes: `git commit -am 'Add some new feature or fix some issue'`. _(See [this excellent article](https://chris.beams.io/posts/git-commit/) for tips on writing useful Git commit messages.)_
 1. Push the branch to your fork: `git push -u origin your-descriptive-branch-name`.
 1. Create a new pull request and we'll review your changes.
