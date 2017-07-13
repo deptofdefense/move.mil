@@ -2,13 +2,13 @@
 
 This project uses a number of open source components whose licenses are noted below.
 
-- [HTMLProofer](https://github.com/gjtorikian/html-proofer), copyright 2013 [Garen Torikian](https://github.com/gjtorikian), under the [MIT License](https://github.com/gjtorikian/html-proofer/blob/master/LICENSE.txt).
-- [Jekyll](https://github.com/jekyll/jekyll), copyright 2008–2017 [Tom Preston-Werner](http://tom.preston-werner.com), et. al., under the [MIT License](https://github.com/jekyll/jekyll/blob/master/LICENSE).
-- [Jekyll Assets](https://github.com/jekyll/jekyll-assets), copyright 2012–2015 [Aleksey V Zapparov](http://ixti.net) and 2015–2016 [Jordon Bedwell](https://envygeeks.io), under the [MIT License](https://github.com/jekyll/jekyll-assets/blob/master/LICENSE).
-- [jQuery](http://jquery.com), copyright [JS Foundation](https://js.foundation) and other contributors, under the [MIT License](https://github.com/jquery/jquery/blob/master/LICENSE.txt).
-- [Owl Carousel 2](http://owlcarousel2.github.io/OwlCarousel2/), copyright 2014 Owl and 2016 [David Deutsch](https://github.com/daviddeutsch), under the [MIT License](https://github.com/OwlCarousel2/OwlCarousel2/blob/develop/LICENSE).
-- [Rake](https://github.com/ruby/rake), copyright [Jim Weirich](http://onestepback.org), under the [MIT License](https://github.com/ruby/rake/blob/master/MIT-LICENSE).
-- The [U.S. Web Design Standards](https://github.com/18F/web-design-standards) (version 1.1.0), a public domain work of the U.S. Federal Government, and the libraries and assets noted in [its license](https://github.com/18F/web-design-standards/blob/release-1.1.0/LICENSE.md).
+- [Byebug](https://github.com/deivid-rodriguez/byebug), copyright [David Rodríguez](https://github.com/deivid-rodriguez) under the [BSD 2-Clause License](https://github.com/deivid-rodriguez/byebug/blob/master/LICENSE).
+- [PostgreSQL](https://github.com/postgres/postgres), copyright 1996–2017 [The PostgreSQL Global Development Group](https://www.postgresql.org) under the [PostgreSQL License](https://www.postgresql.org/about/licence/).
+- [Puma](https://github.com/puma/puma), copyright 2014 [Evan Phoenix](https://github.com/evanphx) and contributors under the [BSD 3-Clause License](https://github.com/puma/puma/blob/master/LICENSE).
+- [Ruby on Rails](https://github.com/rails/rails), copyright 2005–2017 [David Heinemeier Hansson](https://github.com/dhh) under the [MIT License](https://github.com/rails/rails/blob/master/MIT-LICENSE).
+- [sass-rails](https://github.com/rails/sass-rails), copyright 2011–2016 [Christopher Eppstein](http://chriseppstein.github.io) under the [MIT License](https://github.com/rails/sass-rails/blob/master/MIT-LICENSE).
+- [Uglifier](https://github.com/lautis/uglifier), copyright 2011 [Ville Lautanala](https://github.com/lautis) under the [MIT License](https://github.com/lautis/uglifier/blob/master/LICENSE.txt).
+- [Web Console](https://github.com/rails/web-console), copyright 2014–2016 [Charlie Somerville](https://github.com/charliesome), [Genadi Samokovarov](https://github.com/gsamokovarov), [Guillermo Iguaran](https://github.com/guilleiguaran), and [Ryan Dao](https://github.com/ryandao) under the [MIT License](https://github.com/rails/web-console/blob/master/MIT-LICENSE).
 
 Works created by U.S. Federal employees as part of their jobs typically are not eligible for copyright in the United States. In places where the contributions of U.S. Federal employees are not eligible for copyright, this work is in the public domain. In places where it is eligible for copyright, such as some foreign jurisdictions, the remainder of this work is licensed under [the MIT License](https://opensource.org/licenses/MIT), the full text of which is included below.
 

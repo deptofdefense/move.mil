@@ -12,18 +12,20 @@ There are several ways in which you can help improve this project:
 
 - [Getting Started](#getting-started)
 - [Making Changes](#making-changes)
-- [Building, Serving, and Testing](#building-serving-and-testing)
-- [Working with Assets](#working-with-assets)
 - [Code Style](#code-style)
 - [Legalese](#legalese)
 
 ## Getting Started
 
-move.mil is a static website built using [Jekyll](http://jekyllrb.com/), a popular static site generator written in [Ruby](https://www.ruby-lang.org/). Development dependencies are managed using the [Bundler](http://bundler.io/) gem.
+move.mil is a [Ruby on Rails](http://rubyonrails.org) (version 5.1) application with a [PostgreSQL](https://www.postgresql.org) database (version 9.6.3). Development dependencies are managed using the [Bundler](http://bundler.io/) gem.
 
-This project uses Ruby version 2.3.3 which can be installed using a Ruby version manager like [rbenv](https://github.com/rbenv/rbenv) (macOS, Linux) or a package manager like [Chocolatey](https://chocolatey.org/) (Windows). The Jekyll documentation website has additional instructions for [using Ruby and Jekyll on Windows platforms](https://jekyllrb.com/docs/windows/).
+If you're using macOS, PostgreSQL is most easily installed using [the Homebrew package manager](https://brew.sh):
 
-Once you've installed Ruby 2.3.3 using the method most appropriate to your environment, install the Bundler gem:
+```sh
+brew install postgresql
+```
+
+This project uses Ruby version 2.4.1 which can be installed using a Ruby version manager like [rbenv](https://github.com/rbenv/rbenv). Once you've installed Ruby 2.4.1 using the method most appropriate to your environment, install the Bundler gem:
 
 ```sh
 gem install bundler
@@ -35,39 +37,35 @@ After successfully installing Bundler, run the following command from the root o
 bundle install
 ```
 
+Next, create `config/database.yml` and `config/secrets.yml` and update their configuration to match your environment:
+
+```sh
+cp config/database.yml{.example,}
+cp config/secrets.yml{.example,}
+```
+
+You can run `bundle exec rake secret` to generate values for the `secret_key_base` keys in `config/secrets.yml`.
+
+With PostgreSQL running, create and migrate the application's databases:
+
+```sh
+bundle exec rake db:create
+bundle exec rake db:migrate
+```
+
+Start the application by running `bundle exec rails server` and opening [http://localhost:3000](http://localhost:3000) in your Web browser of choice.
+
 ## Making Changes
 
 1. Fork and clone the project's repo.
 1. Install development dependencies as outlined above.
 1. Create a feature branch for the code changes you're looking to make: `git checkout -b your-descriptive-branch-name origin/master`.
 1. _Write some code!_
-1. Build the site and verify that your changes function as intended: `bundle exec rake jekyll:build`.
+1. Run the application and verify that your changes function as intended: `bundle exec rails server`.
+1. If your changes would benefit from testing, add the necessary tests and verify everything passes by running `bundle exec rake spec`.
 1. Commit your changes: `git commit -am 'Add some new feature or fix some issue'`. _(See [this excellent article](https://chris.beams.io/posts/git-commit/) for tips on writing useful Git commit messages.)_
 1. Push the branch to your fork: `git push -u origin your-descriptive-branch-name`.
 1. Create a new pull request and we'll review your changes.
-
-## Building, Serving, and Testing
-
-There are a number of useful [Rake](https://github.com/ruby/rake) tasks that make working with the project easier. From the root of the project, run `bundle exec rake -T` for a list of available commands.
-
-```sh
-rake htmlproofer     # Test the site with html-proofer
-rake jekyll:build    # Build the site to `./public`
-rake jekyll:release  # Build the production-ready site to `./public`
-rake jekyll:serve    # Serve the site at `http://localhost:4000`
-```
-
-The most useful of these tasks, `bundle exec rake jekyll:serve`, will build and serve the site from the `./public` folder, regenerating the site as changes are made to files in the `./src` folder. Changes may be previewed in a Web browser at [http://localhost:4000](http://localhost:4000). Depending on your local development environment, you may need to try `localhost:4000` or `127.0.0.1:4000`.
-
-The [html-proofer gem](https://github.com/gjtorikian/html-proofer) is used when invoking `bundle exec rake htmlproofer` and validates the HTML output by Jekyll. This Rake task _is not_ a substitute for testing your changes in one or more Web browsers.
-
-The default Rake task (invoked with `bundle exec rake`) will run in succession the `jekyll:build` and `htmlproofer` tasks.
-
-## Working with Assets
-
-Images, JavaScript, and stylesheet compilation is handled by the [jekyll-assets gem](https://github.com/jekyll/jekyll-assets) which provides an [Asset Pipeline](http://guides.rubyonrails.org/asset_pipeline.html)-like environment for Jekyll projects. Assets are compiled automatically when invoking either the `jekyll:build` or `jekyll:serve` Rake tasks.
-
-Stylesheets are written using [the Sass extension language](http://sass-lang.com/) (in the SCSS syntax format). If you're familiar with [CSS syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax) then you already know the basics of SCSS syntax.
 
 ## Code Style
 

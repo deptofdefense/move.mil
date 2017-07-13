@@ -4,8 +4,8 @@ Thanks for submitting a pull request! Below are a few things you can do to help 
 
 I have…
 
-- [ ] built and served the site locally (`bundle exec rake jekyll:serve`) and verified that my changes behave as expected.
-- [ ] run the test suite (`bundle exec rake`) and verified that all tests pass.
+- [ ] run the application locally (`bundle exec rails server`) and verified that my changes behave as expected.
+- [ ] run the test suite (`bundle exec rake spec`) and verified that all tests pass.
 - [ ] summarized below my changes and noted which issues (if any) this pull request fixes or addresses.
 - [ ] thoroughly outlined below the steps necessary to test my changes.
 - [ ] attached screenshots illustrating relevant behavior before and after my changes.
