@@ -22,4 +22,9 @@ source 'https://rubygems.org' do
   group :development do
     gem 'web-console', '~> 3.5', '>= 3.5.1'
   end
+
+  group :test do
+    gem 'simplecov', '~> 0.14.1', require: false
+    gem 'simplecov-console', '~> 0.4.2', require: false
+  end
 end
