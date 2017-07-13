@@ -1,13 +1,22 @@
 ruby '2.4.1'
 
-source 'https://rubygems.org' do
-  gem 'bourbon', '~> 4.3', '>= 4.3.4'
-  gem 'jekyll', '~> 3.4', '>= 3.4.3'
-  gem 'jekyll-assets', '~> 2.2', '>= 2.2.8'
-  gem 'neat', '~> 1.8'
-  gem 'rake', '~> 12.0'
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
+  "https://github.com/#{repo_name}.git"
+end
 
-  group :test do
-    gem 'html-proofer', '~> 3.6'
+source 'https://rubygems.org' do
+  gem 'pg', '~> 0.21.0'
+  gem 'puma', '~> 3.9', '>= 3.9.1'
+  gem 'rails', '~> 5.1', '>= 5.1.2'
+  gem 'sass-rails', '~> 5.0', '>= 5.0.6'
+  gem 'uglifier', '~> 3.2'
+
+  group :development, :test do
+    gem 'byebug', '~> 9.0', '>= 9.0.6'
+  end
+
+  group :development do
+    gem 'web-console', '~> 3.5', '>= 3.5.1'
   end
 end
