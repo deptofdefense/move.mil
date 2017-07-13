@@ -17,6 +17,5 @@
 
 .byebug_history
 
-/config/cable.yml
 /config/database.yml
 /config/secrets.yml
