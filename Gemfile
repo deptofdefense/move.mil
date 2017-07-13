@@ -14,6 +14,8 @@ source 'https://rubygems.org' do
 
   group :development, :test do
     gem 'byebug', '~> 9.0', '>= 9.0.6'
+    gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
+    gem 'rspec-rails', '~> 3.6'
   end
 
   group :development do
