@@ -25,7 +25,7 @@ If you're using macOS, PostgreSQL is most easily installed using [the Homebrew p
 brew install postgresql
 ```
 
-This project uses Ruby version 2.4.1 which can be installed using a Ruby version manager like [rbenv](https://github.com/rbenv/rbenv). Once you've installed Ruby 2.4.1 using the method most appropriate to your environment, install the Bundler gem:
+This project uses Ruby (version 2.4.1) which can be installed using a Ruby version manager like [rbenv](https://github.com/rbenv/rbenv). Once you've installed Ruby 2.4.1 using the method most appropriate to your environment, install the Bundler gem:
 
 ```sh
 gem install bundler
@@ -37,9 +37,16 @@ With your PostgreSQL server running, issue the following command from the root o
 ./bin/setup
 ```
 
-This setup script will install the dependencies specified in the [Gemfile][gemfile], create `config/database.yml` and `config/secrets.yml`, and create and migrate the application's databases. When the setup script has finished, update the `config/database.yml` and `config/secrets.yml` configuration files to match your environment. You can run `bin/rails secret` to generate values for the `secret_key_base` keys in `config/secrets.yml`.
+This setup script will install the dependencies specified in the [Gemfile][gemfile], create `config/database.yml` and `config/secrets.yml`, and create and migrate the application's databases.
 
-Start the application by running `bin/rails server` and opening [http://localhost:3000](http://localhost:3000) in your Web browser of choice.
+When the setup script has finished, update the following files to match your environment:
+
+- `config/database.yml`
+- `config/secrets.yml`
+
+**Note:** You can run `bin/rails secret` to generate values for the `secret_key_base` keys in `config/secrets.yml`.
+
+Lastly, start the application by running `bin/rails server` and opening [http://localhost:3000](http://localhost:3000) in your Web browser of choice.
 
 ## Making Changes
 
