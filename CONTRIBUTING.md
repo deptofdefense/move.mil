@@ -17,7 +17,7 @@ There are several ways in which you can help improve this project:
 
 ## Getting Started
 
-move.mil is a [Ruby on Rails](http://rubyonrails.org) (version 5.1) application with a [PostgreSQL](https://www.postgresql.org) database (version 9.6.3). Development dependencies are managed using the [Bundler](http://bundler.io/) gem.
+move.mil is a [Ruby on Rails](http://rubyonrails.org) (version 5.1.2) application with a [PostgreSQL](https://www.postgresql.org) database (version 9.6.3). Development dependencies are managed using the [Bundler](http://bundler.io/) gem.
 
 If you're using macOS, PostgreSQL is most easily installed using [the Homebrew package manager](https://brew.sh):
 
@@ -25,21 +25,28 @@ If you're using macOS, PostgreSQL is most easily installed using [the Homebrew p
 brew install postgresql
 ```
 
-This project uses Ruby (version 2.4.1) which can be installed using a Ruby version manager like [rbenv](https://github.com/rbenv/rbenv). Once you've installed Ruby 2.4.1 using the method most appropriate to your environment, install the Bundler gem:
+If you're using Homebrew, consider installing [Homebrew Services](https://github.com/Homebrew/homebrew-services) to easily start and stop PostgreSQL:
+
+```sh
+brew tap homebrew/services
+brew services run postgresql
+```
+
+This project uses Ruby (version 2.4.1) which can be installed using a Ruby version manager like [rbenv](https://github.com/rbenv/rbenv). Once you've installed Ruby 2.4.1, install the Bundler gem:
 
 ```sh
 gem install bundler
 ```
 
-With your PostgreSQL server running, issue the following command from the root of the project:
+With your PostgreSQL server started, run the following setup script from the root of the project:
 
 ```sh
-./bin/setup
+bin/setup
 ```
 
-This setup script will install the dependencies specified in the [Gemfile][gemfile], create `config/database.yml` and `config/secrets.yml`, and create and migrate the application's databases.
+This script will install the dependencies specified in the project's [Gemfile][gemfile], copy sample configuration files, and create and migrate the application's databases.
 
-When the setup script has finished, update the following files to match your environment:
+When the setup script has finished, review and update the following files to match your environment:
 
 - `config/database.yml`
 - `config/secrets.yml`
