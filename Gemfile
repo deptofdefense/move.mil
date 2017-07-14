@@ -17,7 +17,6 @@ source 'https://rubygems.org' do
     gem 'byebug', '~> 9.0', '>= 9.0.6'
     gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
     gem 'rspec-rails', '~> 3.6'
-    gem 'rubocop', '~> 0.49.1', require: false
   end
 
   group :development do
