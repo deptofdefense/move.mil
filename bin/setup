@@ -22,12 +22,8 @@ chdir APP_ROOT do
   # system('bin/yarn')
 
   puts "\n== Copying sample files =="
-  unless File.exist?('config/database.yml')
-    cp 'config/database.yml.sample', 'config/database.yml'
-  end
-
-  unless File.exist?('config/secrets.yml')
-    cp 'config/secrets.yml.sample', 'config/secrets.yml'
+  ['config/database.yml', 'config/secrets.yml'].each do |file_path|
+    cp "#{file_path}.sample", file_path unless File.exist?(file_path)
   end
 
   puts "\n== Preparing database =="
