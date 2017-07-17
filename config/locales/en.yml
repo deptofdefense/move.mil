@@ -30,5 +30,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  abbrs:
+    dod: Department of Defense
+    dps: Defense Personal Property System
+    eta: Electronic Transportation Acquisition
+    src: System Response Center
   site:
     name: Move.mil

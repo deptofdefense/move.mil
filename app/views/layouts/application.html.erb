@@ -63,7 +63,7 @@
             <%= link_to root_path, 'aria-label': 'Home', rel: 'home' do %>
               <%= t('site.name') %>
               <br>
-              <span>Official <abbr title="Department of Defense">DoD</abbr> Moving Portal</span>
+              <span>Official <%= abbr_tag 'dod' %> Moving Portal</span>
             <% end %>
           </em>
         </div>
@@ -111,8 +111,8 @@
 
         <div class="usa-footer-contact-links usa-width-one-half">
           <address>
-            <h3 class="usa-footer-contact-heading">24/7 <abbr title="System Response Center">SRC</abbr> Help Desk</h3>
-            <p class="usa-text-small">For help using <%= t('site.name') %> or <abbr title="Electronic Transportation Acquisition">ETA</abbr>.</p>
+            <h3 class="usa-footer-contact-heading">24/7 <%= abbr_tag 'src' %> Help Desk</h3>
+            <p class="usa-text-small">For help using <%= t('site.name') %> or <%= abbr_tag 'eta' %>.</p>
 
             <h4>Phone</h4>
             <p class="usa-text-small">
