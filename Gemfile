@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 source 'https://rubygems.org' do
+  gem 'high_voltage', '~> 3.0'
   gem 'pg', '~> 0.21.0'
   gem 'puma', '~> 3.9', '>= 3.9.1'
   gem 'rails', '~> 5.1', '>= 5.1.2'
