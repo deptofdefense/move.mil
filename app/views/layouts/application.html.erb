@@ -15,13 +15,122 @@
 </head>
 <body>
 
-  <header role="banner">
-    <h1><%= link_to t('site.name'), root_path, rel: 'home' %></h1>
+  <div id="top">
+    <%= link_to 'Skip to main content', '#main-content', class: 'usa-skipnav' %>
+  </div>
+
+  <header class="usa-header usa-header-extended" role="banner">
+    <div class="usa-banner">
+      <div class="usa-accordion">
+        <div class="usa-banner-header">
+          <div class="usa-grid usa-banner-inner">
+            <div class="beta-notice">
+              <p><b>This site is in beta.</b> To view the current production site, visit <%= link_to 'www.move.mil', 'https://www.move.mil' %>.</p>
+            </div>
+
+            <%# TODO <img src="{% asset_path uswds/favicons/favicon-57.png %}" alt="U.S. flag"> %>
+            <p>An official website of the United States government</p>
+            <button aria-controls="gov-banner" aria-expanded="false" class="usa-accordion-button usa-banner-button">
+              <span class="usa-banner-button-text">Here’s how you know</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="usa-banner-content usa-grid usa-accordion-content" id="gov-banner">
+          <div class="usa-banner-guidance-gov">
+            <%# TODO <img src="{% asset_path uswds/icon-dot-gov.svg %}" alt="Dot gov" class="usa-banner-icon usa-media_block-img"> %>
+            <div class="usa-media_block-body">
+              <p>
+                <strong>The .mil means it’s official.</strong>
+                <br>
+                Federal government websites always use a .gov or .mil domain. Before sharing sensitive information online, make sure you’re on a .gov or .mil site by inspecting your browser’s address (or “location”) bar.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="usa-navbar">
+      <button class="usa-menu-btn">Menu</button>
+
+      <div class="usa-logo usa-media_block" id="logo">
+        <%= link_to root_path, 'aria-label': 'Home', class: 'usa-media_block-img', rel: 'home' do %>
+          <%= image_tag 'emblems/ustranscom.svg', alt: 'United States Transportation Command emblem' %>
+        <% end %>
+        <div class="usa-media_block-body">
+          <em class="usa-logo-text">
+            <%= link_to root_path, 'aria-label': 'Home', rel: 'home' do %>
+              <%= t('site.name') %>
+              <br>
+              <span>Official <abbr title="Department of Defense">DoD</abbr> Moving Portal</span>
+            <% end %>
+          </em>
+        </div>
+      </div>
+    </div>
   </header>
+  <div class="usa-overlay"></div>
 
   <main id="main-content" role="main">
     <%= yield %>
   </main>
+
+  <footer class="usa-footer usa-footer-medium" role="contentinfo">
+    <div class="usa-grid usa-footer-return-to-top">
+      <a href="#top">Return to top</a>
+    </div>
+
+    <div class="usa-footer-primary-section">
+      <div class="usa-grid">
+        <nav class="usa-footer-nav">
+          <ul class="usa-unstyled-list">
+            <li class="usa-width-one-third usa-footer-primary-content">
+              <%= link_to 'Joint Travel Regulations (JTR) (PDF)', 'http://www.defensetravel.dod.mil/Docs/perdiem/JTR.pdf', class: 'usa-footer-primary-link' %>
+            </li>
+            <li class="usa-width-one-third usa-footer-primary-content">
+              <%# TODO link_to 'Helpful Resources', '', class: 'usa-footer-primary-link' %>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="usa-footer-secondary_section">
+      <div class="usa-grid">
+        <div class="usa-footer-logo usa-width-one-half">
+          <%= link_to 'http://www.ustranscom.mil' do %>
+            <%= image_tag 'emblems/ustranscom.svg', alt: 'United States Transportation Command emblem', class: 'usa-footer-logo-img' %>
+            <h3 class="usa-footer-logo-heading">
+              USTRANSCOM
+              <br>
+              <span>United States Transportation Command</span>
+            </h3>
+          <% end %>
+        </div>
+
+        <div class="usa-footer-contact-links usa-width-one-half">
+          <address>
+            <h3 class="usa-footer-contact-heading">24/7 <abbr title="System Response Center">SRC</abbr> Help Desk</h3>
+            <p class="usa-text-small">For help using <%= t('site.name') %> or <abbr title="Electronic Transportation Acquisition">ETA</abbr>.</p>
+
+            <h4>Phone</h4>
+            <p class="usa-text-small">
+              Toll-Free: <%= link_to '(800) 462-2176', 'tel:+18004622176' %>
+              <br>
+              Commercial: <%= link_to '(618) 589-9445', 'tel:+16185899445' %>
+            </p>
+
+            <h4>Email</h4>
+            <p class="usa-text-small"><%= mail_to 'usarmy.scott.sddc.mbx.g6-SRC-DPS-HD@mail.mil' %></p>
+          </address>
+
+          <h4>Submit a ticket online</h4>
+          <p class="usa-text-small"><%= link_to 'https://src.service-now.com/src/' %></p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <%- if Rails.env.production? -%>
     <!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
