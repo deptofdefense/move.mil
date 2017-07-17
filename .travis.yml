@@ -1,0 +1,20 @@
+dist: trusty
+addons:
+  postgresql: 9.6
+services:
+  - postgresql
+language: ruby
+cache: bundler
+rvm:
+  - 2.4.1
+before_install:
+  - gem update --system
+before_script:
+  - psql -c 'create database move_mil_test;' -U postgres
+  - cp config/database.yml{.sample,}
+  - cp config/secrets.yml{.sample,}
+notifications:
+  email: false
+  slack:
+    rooms:
+      - secure: i+KEoAifgXwoo9bJoDxk09o7wpNg1XLQB8KYrX+8qIZunzqkcTem5vjfvxEzJusRdkIZwhxY6HYCBr+tplE9CNZy6EQ2SepaJRhJSeZSLsazgGd0I13rUh01/39SQEy20RKC5vStAXFm0MZR2TgRBvRQLsl7Gp4JSmZysR/2X9BtkJftA6kPP9Fp0WMLOi25QHSQg1dddK9BJveqsrjTI32qnJGVQlC8aCNpXJn11e448aquDaaee/0EIPYcp49kvE0AjwIsYb/0r100i7T6r7pKE3Eozf/YbcDQdsbhEcytVGhGYCK+bzi1m5CskpI7UCYjxVT6arjkm9wmWdXSZ0/HEzXTwBB2FEs9+4L+KOG+YIgunhjWL6vm018zwWNtjvmpEOKlW/mQl8PQ9JyDSajr2FxgeYVA5WsgSIBh3WBjL/ke2WUoSXV3b0aC8XEP/LKcRF8w43pLJ6ijMNNm3XWTBxwGuTOqNwPzTUhRu9NxZfbBQcLkTiI+wyqid9M/NhW83mEhR1H7LOQs2I0n6N9RxhHFdeOPGHQDzhNf9qrl4WdcWyq2JHnqxBWIBGXcYmT/x3wQj83+q318rkhkWyu8tNwWa+E+wbxIzbzN8SOYNmJJUDrEJ4fJPcEyUBmmNsK7Qca2/AQi1FBYkuQ6q7u5Z+1/FMsUPcdXBeJr6f0=
