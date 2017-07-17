@@ -67,6 +67,16 @@ Lastly, start the application by running `bin/rails server` and opening [http://
 1. Push the branch to your fork: `git push -u origin your-descriptive-branch-name`.
 1. Create a new pull request and we'll review your changes.
 
+### Verifying Changes
+
+We use a number of tools to evaluate the quality and security of this project's code:
+
+- The test suite uses [RSpec](http://rspec.info) (`bin/rails`).
+- Static code analysis uses [RuboCop](https://github.com/bbatsov/rubocop) (`bin/rubocop`).
+- Static vulnerability scans use [Brakeman](http://brakemanscanner.org) (`bin/brakeman`).
+
+Before submitting a [pull request][pulls], use the above tools to verify your changes.
+
 ## Code Style
 
 Code formatting conventions are defined in the `.editorconfig` file which uses the [EditorConfig](http://editorconfig.org/) syntax. There are [plugins for a variety of editors](http://editorconfig.org/#download) that utilize the settings in the `.editorconfig` file. It is recommended that you install the EditorConfig plugin for your editor of choice.

@@ -5,6 +5,7 @@ Thanks for submitting a pull request! Below are a few things you can do to help 
 I have…
 
 - [ ] run the application locally (`bin/rails server`) and verified that my changes behave as expected.
+- [ ] run static code analysis (`bin/rubocop`) and vulnerability scan (`bin/brakeman`) against my changes.
 - [ ] run the test suite (`bin/rake spec`) and verified that all tests pass.
 - [ ] summarized below my changes and noted which issues (if any) this pull request fixes or addresses.
 - [ ] thoroughly outlined below the steps necessary to test my changes.
