@@ -1,14 +1,29 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>MoveMil</title>
-    <%= csrf_meta_tags %>
+<!doctype html>
+<html lang="<%= I18n.locale %>">
+<head>
+  <meta charset="utf-8">
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-  </head>
+  <title><%= t('site.name') %></title>
 
-  <body>
+  <meta name="apple-mobile-web-app-title" content="<%= t('site.name') %>">
+	<meta name="application-name" content="<%= t('site.name') %>">
+  <meta name="theme-color" content="#d6d7d9">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <header role="banner">
+    <h1><%= link_to t('site.name'), root_path, rel: 'home' %></h1>
+  </header>
+
+  <main id="main-content" role="main">
     <%= yield %>
-  </body>
+  </main>
+
+  <%- if Rails.env.production? -%>
+    <!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+    <%= javascript_include_tag 'https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOD', async: true, id: '_fed_an_ua_tag' %>
+  <%- end -%>
+
+</body>
 </html>
