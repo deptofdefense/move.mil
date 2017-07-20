@@ -12,6 +12,7 @@
 
   <%= tag.link href: asset_path('ustranscom-emblem-256x256.png'), rel: 'apple-shortcut-icon' %>
   <%= tag.link href: asset_path('ustranscom-emblem-256x256.png'), rel: 'shortcut icon' %>
+  <%= tag.link href: asset_path('application.css'), rel: 'stylesheet' %>
 </head>
 <body>
 
@@ -28,7 +29,7 @@
               <p><b>This site is in beta.</b> To view the current production site, visit <%= link_to 'www.move.mil', 'https://www.move.mil' %>.</p>
             </div>
 
-            <%# TODO <img src="{% asset_path uswds/favicons/favicon-57.png %}" alt="U.S. flag"> %>
+            <%= image_tag 'uswds/favicons/favicon-57.png', alt: 'U.S. flag' %>
             <p>An official website of the United States government</p>
             <button aria-controls="gov-banner" aria-expanded="false" class="usa-accordion-button usa-banner-button">
               <span class="usa-banner-button-text">Here’s how you know</span>
@@ -38,7 +39,7 @@
 
         <div class="usa-banner-content usa-grid usa-accordion-content" id="gov-banner">
           <div class="usa-banner-guidance-gov">
-            <%# TODO <img src="{% asset_path uswds/icon-dot-gov.svg %}" alt="Dot gov" class="usa-banner-icon usa-media_block-img"> %>
+            <%= image_tag 'uswds/icon-dot-gov.svg', alt: 'Dot gov', class: 'usa-banner-icon usa-media_block-img' %>
             <div class="usa-media_block-body">
               <p>
                 <strong>The .mil means it’s official.</strong>
@@ -131,6 +132,17 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    function loadJS(e,c) {
+      var d=document,r=d.createElement('script'),o=d.getElementsByTagName('script')[0];
+      r.src=e;r.async=true;o.parentNode.insertBefore(r,o);if(typeof c==='function')r.onload=c;return r;
+    }
+
+    if (window.addEventListener && window.JSON && document.querySelector) {
+      loadJS('<%= asset_path 'application.js' %>');
+    }
+  </script>
 
   <%- if Rails.env.production? -%>
     <!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
