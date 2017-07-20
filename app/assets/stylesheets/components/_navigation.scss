@@ -1,0 +1,35 @@
+.usa-navbar {
+  @include padding(1rem 0);
+  height: 6rem;
+
+  @include media($nav-width) {
+    @include padding(0 null);
+  }
+
+  .usa-media_block {
+    display: table;
+
+    @include media($nav-width) {
+      line-height: 1;
+    }
+
+    .usa-media_block-img {
+      display: none;
+      max-width: 14rem;
+      margin-right: 2rem;
+
+      @include media($nav-width) {
+        display: table-cell;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .usa-media_block-body {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}

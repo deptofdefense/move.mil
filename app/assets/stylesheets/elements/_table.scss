@@ -1,0 +1,76 @@
+table {
+  caption {
+    font-size: $h3-font-size;
+    font-weight: $font-bold;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+
+  thead,
+  tbody {
+    font-size: $small-font-size;
+  }
+
+  tbody {
+    th,
+    td {
+      vertical-align: top;
+    }
+
+    th[colspan] {
+      font-size: $h4-font-size;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1em;
+    }
+  }
+}
+
+.moving-allowances-table-enhanced {
+  &[data-dependency-status="false"] {
+    [data-allowance-key="total_weight_self_plus_dependents"],
+    [data-allowance-key="pro_gear_spouse"] {
+      display: none;
+    }
+  }
+
+  &[data-dependency-status="true"] {
+    [data-allowance-key="total_weight_self"] {
+      display: none;
+    }
+  }
+
+  &[data-move-type="conus"] {
+    .oconus-details,
+    .conus-details h5 {
+      display: none;
+    }
+  }
+
+  &[data-move-type="oconus"] {
+    .conus-details,
+    .oconus-details h5 {
+      display: none;
+    }
+  }
+
+  @include media($moving-allowances-wide) {
+    .view-details {
+      display: none;
+    }
+  }
+
+  .moving-allowances-tips {
+    display: none;
+
+    @include media($moving-allowances-wide) {
+      display: block;
+    }
+
+    > :first-child > :first-child {
+      margin-top: 0;
+    }
+  }
+}

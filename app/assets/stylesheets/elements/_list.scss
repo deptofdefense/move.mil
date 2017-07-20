@@ -1,0 +1,64 @@
+.claims-process-list {
+  @supports(counter-increment: item) {
+    > li {
+      counter-increment: item;
+      padding-left: 5.4rem;
+      position: relative;
+
+      &:before {
+        background-color: $color-primary;
+        border-radius: 50%;
+        color: $color-white;
+        content: counter(item);
+        display: inline-block;
+        font-size: 2.4rem;
+        font-weight: $font-bold;
+        height: 3.6rem;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 3.6rem;
+      }
+    }
+
+    h3 {
+      padding-top: 0.5rem;
+    }
+  }
+
+  h3 span {
+    display: block;
+    font-family: $font-sans;
+    font-size: $h5-font-size;
+    font-weight: $font-normal;
+  }
+}
+
+.service-emblems-list {
+  @include margin($site-margins-mobile null);
+  overflow: hidden;
+
+  li {
+    @include padding($site-margins-mobile);
+    float: left;
+    width: 50%;
+
+    @include media($medium-screen) {
+      width: 20%;
+    }
+
+    a {
+      display: block;
+      font-weight: $font-bold;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto 1.5rem auto;
+      max-width: 14rem;
+      width: 100%;
+    }
+  }
+}
