@@ -13,6 +13,7 @@ source 'https://rubygems.org' do
   gem 'sass', '~> 3.5', '>= 3.5.1'
   gem 'sass-rails', '~> 5.0', '>= 5.0.6'
   gem 'uglifier', '~> 3.2'
+  gem 'uswds-rails', '~> 0.1.0'
 
   group :development, :test do
     gem 'byebug', '~> 9.0', '>= 9.0.6'

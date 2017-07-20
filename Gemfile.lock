@@ -41,6 +41,9 @@ GEM
     ansi (1.5.0)
     arel (8.0.0)
     bindex (0.5.0)
+    bourbon (4.3.4)
+      sass (~> 3.4)
+      thor (~> 0.19)
     builder (3.2.3)
     byebug (9.0.6)
     concurrent-ruby (1.0.5)
@@ -65,9 +68,14 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.2.0)
     minitest (5.10.2)
+    neat (1.9.0)
+      sass (>= 3.3)
+      thor (~> 0.19)
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
+    normalize-scss (7.0.0)
+      sass (~> 3.3)
     pg (0.21.0)
     puma (3.9.1)
     rack (2.0.3)
@@ -155,6 +163,10 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
+    uswds-rails (0.1.0)
+      bourbon (~> 4.3, >= 4.3.4)
+      neat (~> 1.8)
+      normalize-scss (~> 7.0)
     web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -180,6 +192,7 @@ DEPENDENCIES
   simplecov (~> 0.14.1)!
   simplecov-console (~> 0.4.2)!
   uglifier (~> 3.2)!
+  uswds-rails (~> 0.1.0)!
   web-console (~> 3.5, >= 3.5.1)!
 
 RUBY VERSION
