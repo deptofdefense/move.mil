@@ -19,3 +19,5 @@
 
 /config/database.yml
 /config/secrets.yml
+
+/.vscode
