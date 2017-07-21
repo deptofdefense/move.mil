@@ -1,16 +1,2 @@
 @import "uswds/uswds";
-@import "variables";
-
-@import "elements/inputs";
-@import "elements/list";
-@import "elements/table";
-@import "elements/typography";
-
-@import "components/carousel";
-@import "components/footer";
-@import "components/forms";
-@import "components/header";
-@import "components/layout";
-@import "components/media-block";
-@import "components/navigation";
-@import "components/section";
+@import "components/**/*"

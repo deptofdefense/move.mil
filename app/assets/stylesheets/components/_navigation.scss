@@ -1,35 +1,27 @@
 .usa-navbar {
   @include padding(1rem 0);
+  border-bottom-color: $color-gray-cool-light;
   height: 6rem;
 
   @include media($nav-width) {
     @include padding(0 null);
   }
+}
 
-  .usa-media_block {
-    display: table;
+@include media($nav-width) {
+  .usa-header-extended .usa-nav {
+    border-top: 12px solid $color-primary-darkest;
+  }
 
-    @include media($nav-width) {
-      line-height: 1;
-    }
+  .usa-nav-secondary {
+    top: -7rem;
+  }
+}
 
-    .usa-media_block-img {
-      display: none;
-      max-width: 14rem;
-      margin-right: 2rem;
+.usa-nav-primary {
+  @include margin(2.5rem null);
 
-      @include media($nav-width) {
-        display: table-cell;
-      }
-
-      img {
-        width: 100%;
-      }
-    }
-
-    .usa-media_block-body {
-      display: table-cell;
-      vertical-align: middle;
-    }
+  @include media($nav-width) {
+    margin: 0;
   }
 }

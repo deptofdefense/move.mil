@@ -22,10 +22,25 @@
   font-weight: $font-normal;
 }
 
-.usa-footer-contact-links h4 {
-  font-family: $font-sans;
-  font-size: $h5-font-size;
-  margin-bottom: 0;
+.usa-footer-contact-links {
+  dl {
+    line-height: $base-line-height;
+  }
+
+  dt {
+    font-family: $font-sans;
+    font-size: $h5-font-size;
+    font-weight: $font-bold;
+    margin-bottom: 0;
+  }
+
+  dd {
+    margin: 0;
+  }
+
+  dd + dt {
+    margin-top: 1.5em;
+  }
 }
 
 .usa-footer-contact-heading {

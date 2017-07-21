@@ -7,32 +7,23 @@
   }
 }
 
-.usa-header-extended em {
-  font-family: $font-serif;
-  font-size: $h2-font-size;
-
-  @include media($nav-width) {
-    font-size: $title-font-size;
+@include media($nav-width) {
+  .usa-header {
+    border-bottom-color: $color-gray-cool-light;
   }
 }
 
-.usa-logo {
-  a {
-    display: inline-block;
-  }
-
-  br {
-    display: inline;
-  }
+.usa-header-extended em {
+  font-family: $font-serif;
+  font-size: $h2-font-size;
 }
 
 .usa-logo-text span {
   display: none;
   font-family: $font-sans;
-  font-size: $h2-font-size;
   font-weight: $font-normal;
 
   @include media($nav-width) {
-    display: block;
+    display: inline;
   }
 }
