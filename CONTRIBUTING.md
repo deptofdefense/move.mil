@@ -19,7 +19,7 @@ There are several ways in which you can help improve this project:
 
 move.mil is a [Ruby on Rails](http://rubyonrails.org) (version 5.1.2) application with a [PostgreSQL](https://www.postgresql.org) database (version 9.6.3). Development dependencies are managed using the [Bundler](http://bundler.io/) gem.
 
-If you're using macOS, PostgreSQL is most easily installed using [the Homebrew package manager](https://brew.sh):
+If you're using macOS, you can get the PostgreSQL server running very quickly with [Postgres.app](https://postgresapp.com/). If you prefer, you can also install it using [Homebrew](https://brew.sh):
 
 ```sh
 brew install postgresql
@@ -32,7 +32,13 @@ brew tap homebrew/services
 brew services run postgresql
 ```
 
-This project uses Ruby (version 2.4.1) which can be installed using a Ruby version manager like [rbenv](https://github.com/rbenv/rbenv). Once you've installed Ruby 2.4.1, install the Bundler gem:
+This project uses Ruby (version 2.4.1) which can be installed using a Ruby version manager like [rbenv](https://github.com/rbenv/rbenv).
+
+```sh
+rbenv install
+```
+
+Once you've installed Ruby 2.4.1, install the Bundler gem:
 
 ```sh
 gem install bundler
