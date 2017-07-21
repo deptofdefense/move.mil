@@ -17,9 +17,9 @@ There are several ways in which you can help improve this project:
 
 ## Getting Started
 
-move.mil is a [Ruby on Rails](http://rubyonrails.org) (version 5.1.2) application with a [PostgreSQL](https://www.postgresql.org) database (version 9.6.3). Development dependencies are managed using the [Bundler](http://bundler.io/) gem.
+move.mil is a [Ruby on Rails](http://rubyonrails.org) (version 5.1.2) application with a [PostgreSQL](https://www.postgresql.org) database (version 9.6.3). Development dependencies are managed using the [Bundler](http://bundler.io) gem.
 
-If you're using macOS, you can get the PostgreSQL server running very quickly with [Postgres.app](https://postgresapp.com/). If you prefer, you can also install it using [Homebrew](https://brew.sh):
+If you're using macOS, you can use [Postgres.app](https://postgresapp.com) to quickly get PostgreSQL installed and running. You may also install PostgreSQL using [Homebrew](https://brew.sh):
 
 ```sh
 brew install postgresql
@@ -35,7 +35,7 @@ brew services run postgresql
 This project uses Ruby (version 2.4.1) which can be installed using a Ruby version manager like [rbenv](https://github.com/rbenv/rbenv).
 
 ```sh
-rbenv install
+rbenv install 2.4.1
 ```
 
 Once you've installed Ruby 2.4.1, install the Bundler gem:
@@ -52,8 +52,7 @@ bin/setup
 
 This script will install the dependencies specified in the project's [Gemfile][gemfile], copy sample configuration files, and create and migrate the application's databases.
 
-If you are using Postgres.app, after running `bin/setup` once, the script will fail to connect to the database. However, it will create the `config/database.yml` file. Add `host: localhost` to the `default:` section, then
-run `bin/setup` again.
+**Note:** If you're using Postgres.app, `bin/setup` may initially fail owing to a database connection problem. If this happens, update `config/database.yml` to include `host: localhost` in the `default:` section and re-run `bin/setup`.
 
 When the setup script has finished, review and update the following files to match your environment:
 
@@ -88,13 +87,13 @@ Before submitting a [pull request][pulls], use the above tools to verify your ch
 
 ## Code Style
 
-Code formatting conventions are defined in the `.editorconfig` file which uses the [EditorConfig](http://editorconfig.org/) syntax. There are [plugins for a variety of editors](http://editorconfig.org/#download) that utilize the settings in the `.editorconfig` file. It is recommended that you install the EditorConfig plugin for your editor of choice.
+Code formatting conventions are defined in the `.editorconfig` file which uses the [EditorConfig](http://editorconfig.org) syntax. There are [plugins for a variety of editors](http://editorconfig.org/#download) that utilize the settings in the `.editorconfig` file. It is recommended that you install the EditorConfig plugin for your editor of choice.
 
 Your bug fix or feature addition won't be rejected if it runs afoul of any (or all) of these guidelines, but following the guidelines will definitely make everyone's lives a little easier.
 
 ## Legalese
 
-Before submitting a pull request to this repository for the first time, you'll need to sign a [Developer Certificate of Origin](https://developercertificate.org/) (DCO). To read and agree to the DCO, you'll add your name and email address to [CONTRIBUTORS.md][contributors]. At a high level, this tells us that you have the right to submit the work you're contributing in your pull request and says that you consent to us treating the contribution in a way consistent with the license associated with this software (as described in [LICENSE.md][license]) and its documentation ("Project").
+Before submitting a pull request to this repository for the first time, you'll need to sign a [Developer Certificate of Origin](https://developercertificate.org) (DCO). To read and agree to the DCO, you'll add your name and email address to [CONTRIBUTORS.md][contributors]. At a high level, this tells us that you have the right to submit the work you're contributing in your pull request and says that you consent to us treating the contribution in a way consistent with the license associated with this software (as described in [LICENSE.md][license]) and its documentation ("Project").
 
 You may submit contributions anonymously or under a pseudonym if you'd like, but we need to be able to reach you at the email address you provide when agreeing to the DCO. Contributions you make to this public Department of Defense repository are completely voluntary. When you submit a pull request, you're offering your contribution without expectation of payment and you expressly waive any future pay claims against the U.S. Federal Government related to your contribution.
 
