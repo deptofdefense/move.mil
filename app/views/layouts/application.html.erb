@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title><%= t('site.name') %></title>
+  <title><%= page_title %></title>
 
   <meta name="apple-mobile-web-app-title" content="<%= t('site.name') %>">
 	<meta name="application-name" content="<%= t('site.name') %>">
@@ -55,21 +55,58 @@
     <div class="usa-navbar">
       <button class="usa-menu-btn">Menu</button>
 
-      <div class="usa-logo usa-media_block" id="logo">
-        <%= link_to root_path, 'aria-label': 'Home', class: 'usa-media_block-img', rel: 'home' do %>
-          <%= image_tag 'emblems/ustranscom.svg', alt: 'United States Transportation Command emblem' %>
-        <% end %>
-        <div class="usa-media_block-body">
-          <em class="usa-logo-text">
-            <%= link_to root_path, 'aria-label': 'Home', rel: 'home' do %>
-              <%= t('site.name') %>
-              <br>
-              <span>Official <%= abbr_tag 'dod' %> Moving Portal</span>
-            <% end %>
-          </em>
-        </div>
+      <div class="usa-logo" id="logo">
+        <em class="usa-logo-text">
+          <%= link_to root_path, 'aria-label': 'Home', rel: 'home' do %>
+            <%= t('site.name') %>
+            <span>– <%= raw t('site.tagline', abbr: abbr_tag('dod')) %></span>
+          <% end %>
+        </em>
       </div>
     </div>
+
+    <nav class="usa-nav" role="navigation">
+      <div class="usa-nav-inner">
+        <button class="usa-nav-close">
+          <%= image_tag 'uswds/close.svg', alt: 'Close' %>
+        </button>
+
+        <ul class="usa-nav-primary">
+          <li>
+            <%= link_to page_path('moving-guide'), class: 'usa-nav-link' do %>
+              <span>Moving with the Military</span>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to page_path('entitlements'), class: 'usa-nav-link' do %>
+              <span>Entitlements</span>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to page_path('tutorials'), class: 'usa-nav-link' do %>
+              <span>Tutorials</span>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to page_path('service-specific-information'), class: 'usa-nav-link' do %>
+              <span>Service-Specific Information</span>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to page_path('resources'), class: 'usa-nav-link' do %>
+              <span>Tools &amp; Resources</span>
+            <% end %>
+          </li>
+        </ul>
+
+        <div class="usa-nav-secondary">
+          <ul class="usa-unstyled-list usa-nav-secondary-links">
+            <li><%= link_to 'Frequently Asked Questions', page_path('faqs') %></li>
+            <li><%= link_to 'Customer Service', page_path('customer-service') %></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
   <div class="usa-overlay"></div>
 
@@ -79,28 +116,13 @@
 
   <footer class="usa-footer usa-footer-medium" role="contentinfo">
     <div class="usa-grid usa-footer-return-to-top">
-      <a href="#top">Return to top</a>
-    </div>
-
-    <div class="usa-footer-primary-section">
-      <div class="usa-grid">
-        <nav class="usa-footer-nav">
-          <ul class="usa-unstyled-list">
-            <li class="usa-width-one-third usa-footer-primary-content">
-              <%= link_to 'Joint Travel Regulations (JTR) (PDF)', 'http://www.defensetravel.dod.mil/Docs/perdiem/JTR.pdf', class: 'usa-footer-primary-link' %>
-            </li>
-            <li class="usa-width-one-third usa-footer-primary-content">
-              <%# TODO link_to 'Helpful Resources', '', class: 'usa-footer-primary-link' %>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <%= link_to 'Return to top', '#top' %>
     </div>
 
     <div class="usa-footer-secondary_section">
       <div class="usa-grid">
         <div class="usa-footer-logo usa-width-one-half">
-          <%= link_to 'http://www.ustranscom.mil' do %>
+          <%= link_to 'https://www.ustranscom.mil' do %>
             <%= image_tag 'emblems/ustranscom.svg', alt: 'United States Transportation Command emblem', class: 'usa-footer-logo-img' %>
             <h3 class="usa-footer-logo-heading">
               USTRANSCOM
@@ -111,23 +133,20 @@
         </div>
 
         <div class="usa-footer-contact-links usa-width-one-half">
-          <address>
-            <h3 class="usa-footer-contact-heading">24/7 <%= abbr_tag 'src' %> Help Desk</h3>
-            <p class="usa-text-small">For help using <%= t('site.name') %> or <%= abbr_tag 'eta' %>.</p>
+          <h3 class="usa-footer-contact-heading">Technical Help Desk</h3>
+          <p class="usa-text-small">For help using Move.mil or <%= abbr_tag('eta') %>.</p>
 
-            <h4>Phone</h4>
-            <p class="usa-text-small">
-              Toll-Free: <%= link_to '(800) 462-2176', 'tel:+18004622176' %>
-              <br>
-              Commercial: <%= link_to '(618) 589-9445', 'tel:+16185899445' %>
-            </p>
+          <dl>
+            <dt>Phone</dt>
+            <dd class="usa-text-small">Toll-Free: <%= link_to '(800) 462-2176', 'tel:+18004622176' %></dd>
+            <dd class="usa-text-small">Commercial: <%= link_to '(618) 589-9445', 'tel:+16185899445' %></dd>
 
-            <h4>Email</h4>
-            <p class="usa-text-small"><%= mail_to 'usarmy.scott.sddc.mbx.g6-SRC-DPS-HD@mail.mil' %></p>
-          </address>
+            <dt>Email</dt>
+            <dd class="usa-text-small"><%= mail_to 'usarmy.scott.sddc.mbx.g6-SRC-DPS-HD@mail.mil' %></dd>
 
-          <h4>Submit a ticket online</h4>
-          <p class="usa-text-small"><%= link_to 'https://src.service-now.com/src/' %></p>
+            <dt><b>Submit a ticket online</b></dt>
+            <dd class="usa-text-small"><%= link_to 'https://src.service-now.com/src/' %></dd>
+          </dl>
         </div>
       </div>
     </div>

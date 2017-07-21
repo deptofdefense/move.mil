@@ -1,0 +1,49 @@
+<aside class="usa-width-one-fourth usa-layout-docs-sidenav">
+  <ul class="usa-sidenav-list">
+    <li>
+      <%= link_to 'Moving with the Military', page_path('moving-guide'), class: params[:id].include?('moving-guide') ? 'usa-current' : nil %>
+
+      <ul class="usa-sidenav-sub_list">
+        <li>
+          <%= link_to page_path('moving-guide/conus'), class: current_page?(id: 'moving-guide/conus') ? 'usa-current' : nil do %>
+            <i>What to expect…</i> <%= abbr_tag('conus') %> <%= abbr_tag('pcs') %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to page_path('moving-guide/oconus'), class: current_page?(id: 'moving-guide/oconus') ? 'usa-current' : nil do %>
+            <i>What to expect…</i> <%= abbr_tag('oconus') %> <%= abbr_tag('pcs') %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to page_path('moving-guide/tdy'), class: current_page?(id: 'moving-guide/tdy') ? 'usa-current' : nil do %>
+            <i>What to expect…</i> <%= abbr_tag('tdy') %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to page_path('moving-guide/retirees-separatees'), class: current_page?(id: 'moving-guide/retirees-separatees') ? 'usa-current' : nil do %>
+            <i>What to expect…</i> Retirees/Separatees
+          <% end %>
+        </li>
+        <li>
+          <%= link_to page_path('moving-guide/civilians'), class: current_page?(id: 'moving-guide/civilians') ? 'usa-current' : nil do %>
+            <i>What to expect…</i> Civilians
+          <% end %>
+        </li>
+        <li>
+          <%= link_to page_path('moving-guide/tips'), class: current_page?(id: 'moving-guide/tips') ? 'usa-current' : nil do %>
+            Tips
+          <% end %>
+        </li>
+        <li>
+          <%= link_to page_path('moving-guide/nightmare-moves'), class: current_page?(id: 'moving-guide/nightmare-moves') ? 'usa-current' : nil do %>
+            Nightmare Moves
+          <% end %>
+        </li>
+      </ul>
+    </li>
+    <li><%= link_to 'Entitlements', page_path('entitlements'), class: current_page?(id: 'entitlements') ? 'usa-current' : nil %></li>
+    <li><%= link_to 'Tutorials', page_path('tutorials'), class: current_page?(id: 'tutorials') ? 'usa-current' : nil %></li>
+    <li><%= link_to 'Service-Specific Information', page_path('service-specific-information'), class: current_page?(id: 'service-specific-information') ? 'usa-current' : nil %></li>
+    <li><%= link_to 'Tools Resources', page_path('resources'), class: current_page?(id: 'resources') ? 'usa-current' : nil %></li>
+  </ul>
+</aside>
