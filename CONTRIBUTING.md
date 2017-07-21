@@ -52,6 +52,9 @@ bin/setup
 
 This script will install the dependencies specified in the project's [Gemfile][gemfile], copy sample configuration files, and create and migrate the application's databases.
 
+If you are using Postgres.app, after running `bin/setup` once, the script will fail to connect to the database. However, it will create the `config/database.yml` file. Add `host: localhost` to the `default:` section, then
+run `bin/setup` again.
+
 When the setup script has finished, review and update the following files to match your environment:
 
 - `config/database.yml`
