@@ -31,9 +31,14 @@
 
 en:
   abbrs:
+    conus: Continental United States
     dod: Department of Defense
     dps: Defense Personal Property System
     eta: Electronic Transportation Acquisition
+    oconus: Outside the Continental United States
+    pcs: Permanent Change of Station
     src: System Response Center
+    tdy: Temporary Duty
   site:
     name: Move.mil
+    tagline: Official %{abbr} Moving Portal
