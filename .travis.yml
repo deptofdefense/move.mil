@@ -16,7 +16,7 @@ install:
 script:
   - ./bin/rake
   - BUNDLE_GEMFILE=Gemfile.tools bundle exec brakeman --exit-on-warn --quiet -f plain
-  - BUNDLE_GEMFILE=Gemfile.tools bundle exec rubocop
+  - BUNDLE_GEMFILE=Gemfile.tools bundle exec rubocop -c .rubocop.yml
 notifications:
   email: false
   slack:
