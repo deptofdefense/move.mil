@@ -40,10 +40,12 @@ GEM
       tzinfo (~> 1.1)
     ansi (1.5.0)
     arel (8.0.0)
+    ast (2.3.0)
     bindex (0.5.0)
     bourbon (4.3.4)
       sass (~> 3.4)
       thor (~> 0.19)
+    brakeman (3.7.0)
     builder (3.2.3)
     byebug (9.0.6)
     concurrent-ruby (1.0.5)
@@ -67,7 +69,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     mini_portile2 (2.2.0)
-    minitest (5.10.2)
+    minitest (5.10.3)
     neat (1.9.0)
       sass (>= 3.3)
       thor (~> 0.19)
@@ -76,7 +78,11 @@ GEM
       mini_portile2 (~> 2.2.0)
     normalize-scss (7.0.0)
       sass (~> 3.3)
+    parallel (1.11.2)
+    parser (2.4.0.0)
+      ast (~> 2.2)
     pg (0.21.0)
+    powerpack (0.1.1)
     puma (3.9.1)
     rack (2.0.3)
     rack-test (0.6.3)
@@ -108,6 +114,8 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+    rainbow (2.2.2)
+      rake
     rake (12.0.0)
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
@@ -129,6 +137,14 @@ GEM
       rspec-mocks (~> 3.6.0)
       rspec-support (~> 3.6.0)
     rspec-support (3.6.0)
+    rubocop (0.49.1)
+      parallel (~> 1.10)
+      parser (>= 2.3.3.1, < 3.0)
+      powerpack (~> 0.1)
+      rainbow (>= 1.99.1, < 3.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.0, >= 1.0.1)
+    ruby-progressbar (1.8.1)
     sass (3.5.1)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -158,11 +174,12 @@ GEM
       sprockets (>= 3.0.0)
     thor (0.19.4)
     thread_safe (0.3.6)
-    tilt (2.0.7)
+    tilt (2.0.8)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
+    unicode-display_width (1.3.0)
     uswds-rails (0.1.0)
       bourbon (~> 4.3, >= 4.3.4)
       neat (~> 1.8)
@@ -180,6 +197,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  brakeman (~> 3.7)!
   byebug (~> 9.0, >= 9.0.6)!
   high_voltage (~> 3.0)!
   pg (~> 0.21.0)!
@@ -187,6 +205,7 @@ DEPENDENCIES
   rails (~> 5.1, >= 5.1.2)!
   rails-controller-testing (~> 1.0, >= 1.0.2)!
   rspec-rails (~> 3.6)!
+  rubocop (~> 0.49.1)!
   sass (~> 3.5, >= 3.5.1)!
   sass-rails (~> 5.0, >= 5.0.6)!
   simplecov (~> 0.14.1)!
@@ -199,4 +218,4 @@ RUBY VERSION
    ruby 2.4.1p111
 
 BUNDLED WITH
-   1.15.2
+   1.15.3
