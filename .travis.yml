@@ -13,6 +13,9 @@ before_script:
   - psql -c 'create database move_mil_test;' -U postgres
   - cp config/database.yml{.sample,}
   - cp config/secrets.yml{.sample,}
+script:
+  - bundle exec rake
+  - brakeman --exit-on-warn --quiet -f plain
 notifications:
   email: false
   slack:
