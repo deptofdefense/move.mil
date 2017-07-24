@@ -9,10 +9,16 @@ rvm:
   - 2.4.1
 before_install:
   - gem update --system
+  - gem update bundler
 before_script:
   - psql -c 'create database move_mil_test;' -U postgres
   - cp config/database.yml{.sample,}
   - cp config/secrets.yml{.sample,}
+  - bundle exec rails db:setup
+script:
+  - bundle exec rake
+  - bundle exec rubocop
+  - bundle exec brakeman
 notifications:
   email: false
   slack:
