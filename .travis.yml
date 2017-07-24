@@ -10,15 +10,15 @@ rvm:
 before_install:
   - gem update --system
   - gem update bundler
-  - bundle install --deployment --jobs=3 --retry=3 --gemfile Gemfile.tools --path=${BUNDLE_PATH:-vendor/bundle}
+  - bundle install --gemfile Gemfile.tools
 before_script:
   - psql -c 'create database move_mil_test;' -U postgres
   - cp config/database.yml{.sample,}
   - cp config/secrets.yml{.sample,}
 script:
   - ./bin/rake
-  - ./bin/brakeman --exit-on-warn --quiet -f plain
-  - ./bin/rubocop
+  - brakeman --exit-on-warn --quiet -f plain
+  - rubocop
 notifications:
   email: false
   slack:
