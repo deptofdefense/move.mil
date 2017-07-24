@@ -9,6 +9,7 @@ rvm:
   - 2.4.1
 before_install:
   - gem update --system
+  - gem update bundler
   - bundle install --gemfile Gemfile.tools
 before_script:
   - psql -c 'create database move_mil_test;' -U postgres
