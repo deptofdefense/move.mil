@@ -10,7 +10,7 @@ rvm:
 before_install:
   - gem update --system
   - gem update bundler
-  - bundle install --gemfile Gemfile.tools
+  - bundle install --deployment --jobs=3 --retry=3 --gemfile Gemfile.tools --path=${BUNDLE_PATH:-vendor/bundle}
 before_script:
   - psql -c 'create database move_mil_test;' -U postgres
   - cp config/database.yml{.sample,}
