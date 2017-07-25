@@ -1,0 +1,7 @@
+.usa-grid > .usa-layout-docs-sidenav {
+  margin-top: $site-margins;
+
+  @include media($large-screen) {
+    margin-top: 0;
+  }
+}

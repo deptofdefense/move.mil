@@ -1,0 +1,10 @@
+table tbody {
+  th {
+    font-weight: $font-bold;
+    vertical-align: top;
+  }
+
+  td > :first-child {
+    margin-top: 0;
+  }
+}
