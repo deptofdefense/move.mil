@@ -17,6 +17,11 @@ gem 'sass-rails', '~> 5.0', '>= 5.0.6'
 gem 'uglifier', '~> 3.2'
 gem 'uswds-rails', '~> 1.3'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-jquery', '3.2.1'
+  gem 'rails-assets-owl-carousel2', '2.2.1'
+end
+
 group :development, :test do
   gem 'brakeman', '~> 3.7', require: false
   gem 'byebug', '~> 9.0', '>= 9.0.6'
