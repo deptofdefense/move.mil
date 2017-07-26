@@ -35,10 +35,14 @@ en:
     dod: Department of Defense
     dps: Defense Personal Property System
     eta: Electronic Transportation Acquisition
+    hhg: Household Goods
+    nts: Non-Temporary Storage
     oconus: Outside the Continental United States
     pcs: Permanent Change of Station
+    ppm: Personally-Procured Move
+    pov: Privately-Owned Vehicle
     src: System Response Center
-    tdy: Temporary Duty
+    tdy: Temporary Duty Yonder
   site:
     name: Move.mil
     tagline: Official %{abbr} Moving Portal
