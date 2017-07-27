@@ -3,6 +3,8 @@
 //= require 'owl-carousel2'
 
 (function(window, $) {
+  'use strict';
+
   $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 10,
