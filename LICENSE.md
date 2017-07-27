@@ -6,6 +6,7 @@ This project uses a number of open source components whose licenses are noted be
 |---------|-----------|---------|
 | [Brakeman](https://github.com/presidentbeef/brakeman) | © 2012 Twitter, Inc. | [MIT License](https://github.com/presidentbeef/brakeman/blob/master/MIT-LICENSE) |
 | [Byebug](https://github.com/deivid-rodriguez/byebug) | © [David Rodríguez](https://github.com/deivid-rodriguez) | [BSD 2-Clause License](https://github.com/deivid-rodriguez/byebug/blob/master/LICENSE) |
+| [factory_girl_rails](https://github.com/thoughtbot/factory_girl_rails) | © 2008–2013 [Joe Ferris](https://github.com/jferris) and [thoughtbot, inc.](https://thoughtbot.com) | [MIT License](https://github.com/thoughtbot/factory_girl_rails/blob/master/LICENSE) |
 | [High Voltage](https://github.com/thoughtbot/high_voltage) | © 2010–2015 [thoughtbot, inc.](https://thoughtbot.com) | [MIT License](https://github.com/thoughtbot/high_voltage/blob/master/MIT-LICENSE) |
 | [jQuery](http://jquery.com) | © [JS Foundation](https://js.foundation) and other contributors | [MIT License](https://github.com/jquery/jquery/blob/master/LICENSE.txt) |
 | [Owl Carousel 2](http://owlcarousel2.github.io/OwlCarousel2/) | © 2014 Owl and 2016 [David Deutsch](https://github.com/daviddeutsch) | [MIT License](https://github.com/OwlCarousel2/OwlCarousel2/blob/develop/LICENSE) |
