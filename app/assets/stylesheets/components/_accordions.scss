@@ -1,8 +1,9 @@
-.usa-accordion-button {
-  background-image: asset-url('minus_blue.png');
-  background-image: asset-url('minus_blue.svg');
+.faq-accordion-button {
+  background-image: asset-url('minus-blue.png');
+  background-image: asset-url('minus-blue.svg');
 }
-.usa-accordion-button[aria-expanded=false] {
-  background-image: asset-url('plus_blue.png');
-  background-image: asset-url('plus_blue.svg');
+
+.faq-accordion-button[aria-expanded=false] {
+  background-image: asset-url('plus-blue.png');
+  background-image: asset-url('plus-blue.svg');
 }
