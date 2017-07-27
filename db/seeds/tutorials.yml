@@ -1,0 +1,87 @@
+- title: Get Started with <abbr title="Defense Personal Property System">DPS</abbr> (First Time Users)
+  tutorial_steps:
+    - image_path: tutorials/get-started-01.png
+      content: >
+        <p>Go to the Electronic Transportation Acquisition (ETA) site and click “New User Registration.”</p>
+    - image_path: tutorials/get-started-02.png
+      content: >
+        <p>Next, select “DPS” from the list of available applications, and click “Next.”</p>
+    - image_path: tutorials/get-started-03.png
+      content: >
+        <p>Fill out the General Information fields and choose your security questions. Then you’ll get an email with your username.</p>
+    - image_path: tutorials/get-started-04.png
+      content: >
+        <p>In the email, click the <abbr title="Electronic Transportation Acquisition">ETA</abbr> link to verify your username and security questions. When you do, you’ll get an email with your 6 digit validation code.</p>
+    - image_path: tutorials/get-started-05.png
+      content: >
+        <p>On the <abbr title="Electronic Transportation Acquisition">ETA</abbr> site where you verified your username, use the validation code to set your password.</p>
+    - image_path: tutorials/get-started-06.png
+      content: >
+        <p>Now that you have a username and password, you can access <abbr title="Defense Personal Property System">DPS</abbr>. Click “My Approved Applications” to find the <abbr title="Defense Personal Property System">DPS</abbr> link.</p>
+
+- title: Log In to <abbr title="Defense Personal Property System">DPS</abbr> (Returning Users)
+  tutorial_steps:
+    - image_path: tutorials/log-in-to-dps-01.png
+      content: >
+        <p>Access <abbr title="Defense Personal Property System">DPS</abbr> through the Electronic Transportation Acquisition (ETA) site using your username and password.</p>
+    - image_path: tutorials/log-in-to-dps-02.png
+      content: >
+        <p>If you need help logging in to <abbr title="Electronic Transportation Acquisition">ETA</abbr>, use the “Can’t Access your account?” link to retrieve your username and password.</p>
+
+- title: Schedule A Move (Self-Counsel)
+  tutorial_steps:
+    - image_path: tutorials/schedule-a-move-01.png
+      content: >
+        <p>Scheduling your move is called “Self Counseling” in DPS. Get started with your Orders and Contact information. It’s helpful to have your pick up and delivery information, as well as information about your dependents and Power of Attorney if you have one. Select “Self Counsel” and begin your application!</p>
+    - image_path: tutorials/schedule-a-move-02.png
+      content: >
+        <p>Fill out your Contact Information and check your progress in the Counseling Menu. This information is saved in DPS so you don't have to fill it out each time you schedule a move.</p>
+    - image_path: tutorials/schedule-a-move-03.png
+      content: >
+        <p>Enter your Orders information in this next section, including your Order Number, and duty station addresses.</p>
+    - image_path: tutorials/schedule-a-move-04.png
+      content: >
+        <p>Specify your authorized Order Type, and upload a copy of your Order document.</p>
+    - image_path: tutorials/schedule-a-move-05.png
+      content: >
+        <p>Next, enter your Tour Type and duration.</p>
+    - image_path: tutorials/schedule-a-move-06.png
+      content: >
+        <p>Finally, in the Additional Information section, you’ll specify if you need to ship a POV, motorcycle, etc.</p>
+    - image_path: tutorials/schedule-a-move-07.png
+      content: >
+        <p>The Order Summary allows you to review and certify the information you entered is accurate.</p>
+    - image_path: tutorials/schedule-a-move-08.png
+      content: >
+        <p>Create your shipment based on your orders by first selecting the type.</p>
+    - image_path: tutorials/schedule-a-move-09.png
+      content: >
+        <p>If you chose Household Goods (HHG) for example, you’ll get definitions and helpful information about that type of shipment.</p>
+    - image_path: tutorials/schedule-a-move-10.png
+      content: >
+        <p>Set your desired moving dates and enter the pick-up and drop off addresses.</p>
+    - image_path: tutorials/schedule-a-move-11.png
+      content: >
+        <p>Next, define shipment weight, and let us know if you have special items like a jacuzzi or piano. There’s also a separate section for firearms.</p>
+    - image_path: tutorials/schedule-a-move-12.png
+      content: >
+        <p>If you have a preference, here’s where you can let us know your favorite (or least favorite) Transportation Service Provider (TSP).</p>
+    - image_path: tutorials/schedule-a-move-13.png
+      content: >
+        <p>Now it’s time to go over moving day responsibilities for you and your TSP.</p>
+    - image_path: tutorials/schedule-a-move-14.png
+      content: >
+        <p>A summary of your shipment is then provided.</p>
+    - image_path: tutorials/schedule-a-move-15.png
+      content: >
+        <p>Here you'll choose a Personal Property Office for counseling, before clicking Submit!</p>
+
+- title: File A Claim
+  tutorial_steps:
+    - content: >
+        <p>#TODO</p>
+
+- title: Review Your <abbr title="Transportation Service Provider">TSP</abbr> (Customer Satisfaction Survey)
+  tutorial_steps:
+    - content: >
+        <p>#TODO</p>
