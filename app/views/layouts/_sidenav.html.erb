@@ -1,7 +1,7 @@
 <aside class="usa-width-one-fourth usa-layout-docs-sidenav">
   <ul class="usa-sidenav-list">
     <li>
-      <%= link_to 'Moving with the Military', page_path('moving-guide'), class: params[:id].include?('moving-guide') ? 'usa-current' : nil %>
+      <%= link_to 'Moving with the Military', page_path('moving-guide'), class: params[:id].try(:include?, 'moving-guide') ? 'usa-current' : nil %>
 
       <%- if params[:id].try(:include?, 'moving-guide') -%>
         <ul class="usa-sidenav-sub_list">
@@ -44,7 +44,7 @@
       <%- end -%>
     </li>
     <li><%= link_to 'Entitlements', page_path('entitlements'), class: current_page?(id: 'entitlements') ? 'usa-current' : nil %></li>
-    <li><%= link_to 'Tutorials', page_path('tutorials'), class: current_page?(id: 'tutorials') ? 'usa-current' : nil %></li>
+    <li><%= link_to 'Tutorials', tutorials_path, class: current_page?(tutorials_path) ? 'usa-current' : nil %></li>
     <li><%= link_to 'Service-Specific Information', page_path('service-specific-information'), class: current_page?(id: 'service-specific-information') ? 'usa-current' : nil %></li>
     <li><%= link_to 'Tools & Resources', page_path('resources'), class: current_page?(id: 'resources') ? 'usa-current' : nil %></li>
   </ul>
