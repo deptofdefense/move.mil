@@ -1,5 +1,5 @@
 RSpec.describe TutorialsController, type: :request do
-  describe "GET #index" do
+  describe 'GET #index' do
     it 'returns HTTP success status code' do
       get '/tutorials'
 
