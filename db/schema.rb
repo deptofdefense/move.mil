@@ -10,9 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20170726171741) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "tutorial_steps", force: :cascade do |t|
+    t.bigint "tutorial_id"
+    t.text "content", null: false
+    t.text "image_path"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tutorial_id"], name: "index_tutorial_steps_on_tutorial_id"
+  end
+
+  create_table "tutorials", force: :cascade do |t|
+    t.text "title", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "tutorial_steps", "tutorials"
 end
