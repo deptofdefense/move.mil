@@ -15,3 +15,8 @@ tutorials.each do |tutorial|
     record.tutorial_steps.where(content: step['content']).first_or_create(step)
   end
 end
+
+faqs = YAML::load_file(Rails.root.join('db', 'seeds', 'faqs.yml'))
+faqs.each do |faq|
+  record = Faq.where(question: faq['question']).first_or_create(faq)
+end
