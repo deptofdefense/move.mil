@@ -13,6 +13,10 @@
   <%= tag.link href: asset_path('ustranscom-emblem-256x256.png'), rel: 'apple-shortcut-icon' %>
   <%= tag.link href: asset_path('ustranscom-emblem-256x256.png'), rel: 'shortcut icon' %>
   <%= tag.link href: asset_path('application.css'), rel: 'stylesheet' %>
+
+  <!--[if lt IE 9]>
+	  <%= javascript_include_tag 'html5shiv' %>
+  <![endif]-->
 </head>
 <body>
 
