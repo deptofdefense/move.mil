@@ -23,6 +23,7 @@
 
 .tabsList li.current a {
   background: $color-primary;
+  box-shadow: none;
   color: $color-white;
   font-weight: bold;
 }
