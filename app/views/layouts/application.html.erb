@@ -13,6 +13,10 @@
   <%= tag.link href: asset_path('ustranscom-emblem-256x256.png'), rel: 'apple-shortcut-icon' %>
   <%= tag.link href: asset_path('ustranscom-emblem-256x256.png'), rel: 'shortcut icon' %>
   <%= tag.link href: asset_path('application.css'), rel: 'stylesheet' %>
+
+  <!--[if lt IE 9]>
+	  <%= javascript_include_tag 'html5shiv' %>
+  <![endif]-->
 </head>
 <body>
 
@@ -83,7 +87,7 @@
             <% end %>
           </li>
           <li>
-            <%= link_to page_path('tutorials'), class: 'usa-nav-link' do %>
+            <%= link_to tutorials_path, class: 'usa-nav-link' do %>
               <span>Tutorials</span>
             <% end %>
           </li>
@@ -101,7 +105,7 @@
 
         <div class="usa-nav-secondary">
           <ul class="usa-unstyled-list usa-nav-secondary-links">
-            <li><%= link_to 'Frequently Asked Questions', page_path('faqs') %></li>
+            <li><%= link_to 'Frequently Asked Questions', faqs_path %></li>
             <li><%= link_to 'Customer Service', page_path('customer-service') %></li>
           </ul>
         </div>
