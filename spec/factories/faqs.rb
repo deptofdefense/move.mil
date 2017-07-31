@@ -3,7 +3,7 @@ FactoryGirl.define do
 
   factory :faq do
     question
-    answer "Answer"
-    tags ["tag1", "tag2", "tag3"]
+    answer 'Answer'
+    tags %w[tag1 tag2 tag3]
   end
 end
