@@ -16,18 +16,19 @@
       </ul>
       <div class="usa-grid-full" id="army">
         <div class="usa-width-two-thirds">
-          <article class="svc-spec-frame">
-            <header>
-              New Process For Claims Filing<br>
-              <time>Effective July 5th, 2017</time>
-            </header>
-            <section>
-              <p>WASHINGTON -- The Army has created a new office at Fort Knox, Kentucky, to process Soldiers' claims for personal property losses resulting from government service. The Center for Personnel Claims Support will be fully operational on July 5, and will process all claims of Soldiers and employees in the continental United States, Alaska, Hawaii and Puerto Rico.</p>
-              <p>The claims are known as personnel claims, and include claims for loss or damage to household goods and privately owned vehicles during permanent change of station shipment, or while stored at government expense.</p>
-              <p>Visit <a class="usa-external_link" href="http://www.JAGCNet.army.mil/Pclaims">http://www.JAGCNet.army.mil/Pclaims</a> to find more information on how to file a claim. The site also includes the trifold titled "The A,B,C's of Claims." Those who want to file a claim can also call 1-502-626-3000 or DSN 536-3000 with questions, or contact the Center for Personnel Claims Support by email at <a href="mailto:usarmy.knox.hqda-otjag.mbx.cpcs@mail.mil">usarmy.knox.hqda-otjag.mbx.cpcs@mail.mil</a>.</p>
-              <p>Read the <a class="usa-external_link" href="https://www.army.mil/article/189685/army_creates_new_office_for_personnel_claims">full article</a>.</p>
-            </section>
-          </article>
+          <%- @posts_army.each do |post| -%>
+            <article class="svc-spec-frame">
+              <header>
+                <%= post.title %>
+                <% unless post.effective.nil? %>
+                  <br><time>Effective <%= post.effective.strftime("%B #{post.effective.day.ordinalize}, %Y") %></time>
+                <% end %>
+              </header>
+              <section>
+                <%= post.content.html_safe %>
+              </section>
+            </article>
+          <%- end -%>
         </div>
         <div class="usa-width-one-third">
           <h4>Helpful Links</h4>
@@ -55,23 +56,19 @@
       </div>
       <div class="usa-grid-full" id="air-force">
         <div class="usa-width-two-thirds">
-          <article class="svc-spec-frame">
-            <header>
-              PPA-HQ: How can we help?<br>
-              <time>Effective July 5th, 2017</time>
-            </header>
-            <section>
-              <p>Do you need to contact PPA, HQ? Do you have a question or concern regarding personal property or POVs? Call us. Email us. We stand ready to assist.</p>
-              <p>
-                Customer Service: (210) 652-3357 or DSN: 487-3357<br>
-                <a href="mailto:ppahq.ppec.customerservice@us.af.mil">ppahq.ppec.customerservice@us.af.mil</a>
-              </p>
-              <p>
-                Extensions: (210) 652-3312 or DSN: 487-3312<br>
-                <a href="mailto:hqppa.ecaf-ext@us.af.mil">hqppa.ecaf-ext@us.af.mil</a>
-              </p>
-            </section>
-          </article>
+          <%- @posts_air_force.each do |post| -%>
+            <article class="svc-spec-frame">
+              <header>
+                <%= post.title %>
+                <% unless post.effective.nil? %>
+                  <br><time>Effective <%= post.effective.strftime("%B #{post.effective.day.ordinalize}, %Y") %></time>
+                <% end %>
+              </header>
+              <section>
+                <%= post.content.html_safe %>
+              </section>
+            </article>
+          <%- end -%>
         </div>
         <div class="usa-width-one-third">
           <h4>Helpful Links</h4>
@@ -166,14 +163,19 @@
       </div>
       <div class="usa-grid-full" id="navy">
         <div class="usa-width-two-thirds">
-          <article class="svc-spec-frame">
-            <header>
-              Visit NAVSUP for everything you need to know about the moving process.
-            </header>
-            <section>
-              <p><a class="usa-external_link" href="https://www.navsup.navy.mil/public/navsup/household/">https://www.navsup.navy.mil/public/navsup/household/</a></p>
-            </section>
-          </article>
+          <%- @posts_navy.each do |post| -%>
+            <article class="svc-spec-frame">
+              <header>
+                <%= post.title %>
+                <% unless post.effective.nil? %>
+                  <br><time>Effective <%= post.effective.strftime("%B #{post.effective.day.ordinalize}, %Y") %></time>
+                <% end %>
+              </header>
+              <section>
+                <%= post.content.html_safe %>
+              </section>
+            </article>
+          <%- end -%>
         </div>
         <div class="usa-width-one-third">
           <h4>Helpful Links</h4>
