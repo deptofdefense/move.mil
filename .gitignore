@@ -4,6 +4,10 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+# dotenv
+# TODO Comment out this rule if environment variables can be committed
+.env
+
 # Ignore bundler config.
 /.bundle
 
@@ -16,8 +20,5 @@
 /yarn-error.log
 
 .byebug_history
-
-/config/database.yml
-/config/secrets.yml
 
 /.vscode

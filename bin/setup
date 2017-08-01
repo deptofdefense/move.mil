@@ -21,9 +21,14 @@ chdir APP_ROOT do
   # Install JavaScript dependencies if using Yarn
   # system('bin/yarn')
 
-  puts "\n== Copying sample files =="
-  ['config/database.yml', 'config/secrets.yml'].each do |file_path|
-    cp "#{file_path}.sample", file_path unless File.exist?(file_path)
+  # puts "\n== Copying sample files =="
+  # unless File.exist?('config/database.yml')
+  #   cp 'config/database.yml.sample', 'config/database.yml'
+  # end
+
+  puts "\n== Creating development environment configuration variables =="
+  unless File.exist?('.env')
+    system! 'echo "export SECRET_KEY_BASE=$(bin/rails secret)" >> .env'
   end
 
   puts "\n== Preparing database =="
