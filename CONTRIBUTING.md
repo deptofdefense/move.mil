@@ -50,16 +50,7 @@ With your PostgreSQL server started, run the following setup script from the roo
 bin/setup
 ```
 
-This script will install the dependencies specified in the project's [Gemfile][gemfile], copy sample configuration files, and create and migrate the application's databases.
-
-**Note:** If you're using Postgres.app, `bin/setup` may initially fail owing to a database connection problem. If this happens, update `config/database.yml` to include `host: localhost` in the `default:` section and re-run `bin/setup`.
-
-When the setup script has finished, review and update the following files to match your environment:
-
-- `config/database.yml`
-- `config/secrets.yml`
-
-**Note:** You can run `bin/rails secret` to generate values for the `secret_key_base` keys in `config/secrets.yml`.
+This script will install the dependencies specified in the project's [Gemfile][gemfile], set development environment configuration variables, and create and migrate the application's databases.
 
 Lastly, start the application by running `bin/rails server` and opening [http://localhost:3000](http://localhost:3000) in your Web browser of choice.
 
