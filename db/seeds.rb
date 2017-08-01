@@ -20,3 +20,8 @@ faqs = YAML::load_file(Rails.root.join('db', 'seeds', 'faqs.yml'))
 faqs.each do |faq|
   record = Faq.where(question: faq['question']).first_or_create(faq)
 end
+
+service_specific_posts = YAML::load_file(Rails.root.join('db', 'seeds', 'service_specific_posts.yml'))
+service_specific_posts.each do |post|
+  record = ServiceSpecificPost.where(title: post['title']).first_or_create(post)
+end
