@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  sequence :title { |n| "Test Tutorial Title #{n}" }
+  sequence(:title) { |n| "Test Tutorial Title #{n}" }
 
   factory :tutorial do
     title
