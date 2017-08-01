@@ -1,15 +1,13 @@
 .svc-spec-frame {
   border: 2px solid $color-primary-darkest;
-  -moz-border-radius: 0.5em;
-  -webkit-border-radius: 0.5em;
   border-radius: 0.5em;
   margin-bottom: 2em;
 
   header {
     background: $color-primary-darkest;
     color: $color-white;
-    padding: 0.5em;
     font-size: $lead-font-size;
+    padding: 0.5em;
   }
 
   time {
@@ -24,22 +22,20 @@
 }
 
 .svc-spec-links {
-  margin: 0 0;
-
-  thead {
-    tr {
-      background-color: transparent;
-    }
-  }
+  font-size: $small-font-size;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  table-layout: fixed;
+  width: 100%;
 
   th {
-    min-width: 8rem;
+    font-weight: normal;
+    width: 5em;
   }
 
-  th,
-  td {
-    font-weight: normal;
-    padding: 0;
+  th, td {
     border: 0;
+    padding: 0;
+    word-wrap: break-word;
   }
 }
