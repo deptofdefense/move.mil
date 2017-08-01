@@ -26,6 +26,7 @@ end
 group :development, :test do
   gem 'brakeman', '~> 3.7', require: false
   gem 'byebug', '~> 9.0', '>= 9.0.6'
+  gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
   gem 'rspec-rails', '~> 3.6'
   gem 'rubocop', '~> 0.49.1', require: false
