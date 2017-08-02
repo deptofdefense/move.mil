@@ -3,8 +3,8 @@ FactoryGirl.define do
 
   factory :service_specific_post do
     title
-    effective 20170801
-    content "Some content"
+    effective_at Date.new(2017, 8, 1)
     branch 'army'
+    content 'Some content'
   end
 end
