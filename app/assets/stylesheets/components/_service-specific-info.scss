@@ -23,7 +23,13 @@
 
 .svc-spec-links {
   font-size: $small-font-size;
-  
+
+  & + & {
+    border-top: 1px solid $color-gray;
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+
   header {
     font-weight: bold;
   }
