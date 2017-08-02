@@ -25,9 +25,9 @@ ActiveRecord::Schema.define(version: 20170801135107) do
 
   create_table "service_specific_posts", force: :cascade do |t|
     t.text "title"
-    t.date "effective"
+    t.date "effective_at"
+    t.text "branch"
     t.text "content"
-    t.string "branch"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
