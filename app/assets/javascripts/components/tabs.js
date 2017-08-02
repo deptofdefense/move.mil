@@ -70,22 +70,30 @@ $(function() {
     // Set keydown events on tabList item for navigating tabs
     $(tabsList).delegate("a", "keydown",
         function (e) {
-            var tab = $(this);
+            var tabParent = $(this).parent();
+            var a = null;
             switch (e.which) {
-                case 37: case 38:
-                    if (tab.parent().prev().length!=0) {
-                        tab.parent().prev().find("> a").click();
+                case 37:
+                case 38:
+                    if (tabParent.prev().length !== 0) {
+                        a = tabParent.prev().find("> a");
                     } else {
-                        $(tabsList).find("li:last > a").click();
+                        a = $(tabsList).find("li:last > a");
                     }
                     break;
-                case 39: case 40:
-                    if (tab.parent().next().length!=0) {
-                        tab.parent().next().find("> a").click();
+                case 39:
+                case 40:
+                    if (tabParent.next().length !== 0) {
+                        a = tabParent.next().find("> a");
                     } else {
-                        $(tabsList).find("li:first > a").click();
+                        a = $(tabsList).find("li:first > a");
                     }
                     break;
+            }
+            if (a !== null) {
+              a.click();
+              // prevent native browser behavior (like scrolling up/down)
+              return false;
             }
         }
     );
