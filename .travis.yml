@@ -11,11 +11,24 @@ before_install:
   - gem update --system
   - gem update bundler
 before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
   - psql -c 'create database move_mil_test;' -U postgres
 script:
   - bundle exec rake
   - bundle exec rubocop
   - bundle exec brakeman
+after_success:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  region: us-east-1
+  app: move.mil
+  env: staging
+  bucket_name: elasticbeanstalk-us-east-1-321940898149
 notifications:
   email: false
   slack:
