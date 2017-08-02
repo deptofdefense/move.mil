@@ -23,10 +23,17 @@
 
 .svc-spec-links {
   font-size: $small-font-size;
-  margin-bottom: 2rem;
-  margin-top: 0;
-  table-layout: fixed;
-  width: 100%;
+  
+  header {
+    font-weight: bold;
+  }
+
+  table {
+    margin-bottom: 2rem;
+    margin-top: 0;
+    table-layout: fixed;
+    width: 100%;
+  }
 
   th {
     font-weight: normal;
