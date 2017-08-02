@@ -8,13 +8,11 @@ engines:
     enabled: true
     config:
       languages:
-      - ruby
-      - javascript
+        - ruby
+        - javascript
   eslint:
     enabled: true
   fixme:
-    enabled: true
-  rubocop:
     enabled: true
 ratings:
   paths:
