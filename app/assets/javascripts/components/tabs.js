@@ -4,6 +4,7 @@
     for his analysis, examples and conclusions. Thanks, Jason!
 */
 $(function() {
+    'use strict';
     var tabs = $("#tabs");
 
     // For each individual tab DIV, set class and aria role attributes, and hide it
