@@ -71,29 +71,26 @@ $(function() {
     $(tabsList).delegate("a", "keydown",
         function (e) {
             var tabParent = $(this).parent();
-            var a = null;
             switch (e.which) {
-                case 37:
-                case 38:
-                    if (tabParent.prev().length !== 0) {
-                        a = tabParent.prev().find("> a");
-                    } else {
-                        a = $(tabsList).find("li:last > a");
-                    }
-                    break;
-                case 39:
-                case 40:
-                    if (tabParent.next().length !== 0) {
-                        a = tabParent.next().find("> a");
-                    } else {
-                        a = $(tabsList).find("li:first > a");
-                    }
-                    break;
-            }
-            if (a !== null) {
-              a.click();
-              // prevent native browser behavior (like scrolling up/down)
-              return false;
+              case 37:
+              case 38:
+                if (tabParent.prev().length !== 0) {
+                  tabParent.prev().find("> a").click();
+                } else {
+                  $(tabsList).find("li:last > a").click();
+                }
+                // prevent native browser behavior (like scrolling up/down)
+                return false;
+
+              case 39:
+              case 40:
+                if (tabParent.next().length !== 0) {
+                  tabParent.next().find("> a").click();
+                } else {
+                  $(tabsList).find("li:first > a").click();
+                }
+                // prevent native browser behavior (like scrolling up/down)
+                return false;
             }
         }
     );
