@@ -1,0 +1,26 @@
+---
+engines:
+  brakeman:
+    enabled: true
+  bundler-audit:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - ruby
+      - javascript
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+  rubocop:
+    enabled: true
+ratings:
+  paths:
+    - "**.erb"
+    - "**.rb"
+    - "**.js"
+exclude_paths:
+  - "spec/**/*"
+  - "vendor/**/*"
