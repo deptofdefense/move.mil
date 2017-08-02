@@ -1,0 +1,27 @@
+.service-emblems-list {
+  @include margin($site-margins-mobile null);
+  overflow: hidden;
+
+  li {
+    @include padding($site-margins-mobile);
+    float: left;
+    width: 50%;
+
+    @include media($medium-screen) {
+      width: 20%;
+    }
+
+    a {
+      display: block;
+      font-weight: $font-bold;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto 1.5rem auto;
+      max-width: 14rem;
+      width: 100%;
+    }
+  }
+}
