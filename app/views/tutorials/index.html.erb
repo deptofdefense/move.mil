@@ -6,14 +6,19 @@
   <div class="usa-width-three-fourths usa-layout-docs-main_content">
     <h1><%= @page_title %></h1>
 
-    <p>Defense Personal Property System (DPS) is an online application where service members and <%= abbr_tag('dod') %> civilians can schedule their household goods move (also known as “self-counseling”) and submit any loss or damage claims directly to their Transportation Service Provider (TSP).</p>
-    <p><b>Use the tutorials below for help navigating <%= abbr_tag('dps') %>.</b> If you get stuck or have any questions, you can visit your <%= link_to 'local transportation office', '#TODO' %> or call the 24-hour <%= abbr_tag('src') %> Help Desk at <%= link_to '1 (800) 462-2176', 'tel:+18004622176' %>.</p>
+    <p>Below you will find basic information and instructions for <%= abbr_tag('dps') %> and Move.mil. If you get stuck or have any questions, you can visit your <%= link_to 'local transportation office', '#TODO' %> or call the 24-hour <%= abbr_tag('src') %> Help Desk at <%= link_to '1 (800) 462-2176', 'tel:+18004622176' %>.</p>
+
+    <ul>
+      <%- @tutorials.each do |tutorial| -%>
+        <li><%= link_to raw(tutorial.title), "#tutorial-#{tutorial.id}" %></li>
+      <%- end -%>
+    </ul>
 
     <h2>How do I…</h2>
 
     <ul class="usa-accordion-bordered">
       <%- @tutorials.each do |tutorial| -%>
-        <li>
+        <li id="tutorial-<%= tutorial.id %>">
           <button aria-controls="<%= tutorial.id %>" class="usa-accordion-button"><%= raw tutorial.title %></button>
           <div class="usa-accordion-content" id="<%= tutorial.id %>">
             <div class="carousel owl-carousel">
