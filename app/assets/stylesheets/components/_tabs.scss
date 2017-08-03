@@ -6,24 +6,33 @@
   margin: 0;
   padding: 0;
   width: 100%;
-}
+  
+  li {
+    display: table-cell;
+    text-align: center;
+    vertical-align: bottom;
 
-.tabsList li {
-  display: table-cell;
-  text-align: center;
-}
+    a {
+      border-radius: 0.5rem 0.5rem 0 0;
+      color: $color-primary;
+      display: block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
 
-.tabsList li a {
-  border-radius: 0.5rem 0.5rem 0 0;
-  color: $color-primary;
-  display: block;
-  padding: 0.5rem 0 0.5rem 0;
-  text-decoration: none;
-}
+      span {
+        display: none;
 
-.tabsList li.current a {
-  background: $color-primary;
-  box-shadow: none;
-  color: $color-white;
-  font-weight: bold;
+        @include media(44rem) {
+          display: inline;
+        }
+      }
+    }
+ 
+    &.current a {
+      background: $color-primary;
+      box-shadow: none;
+      color: $color-white;
+      font-weight: bold;
+    }
+  }
 }
