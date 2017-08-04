@@ -8,6 +8,7 @@ end
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
+gem 'friendly_id', '~> 5.2', '>= 5.2.1'
 gem 'high_voltage', '~> 3.0'
 gem 'pg', '~> 0.21.0'
 gem 'puma', '~> 3.9', '>= 3.9.1'
