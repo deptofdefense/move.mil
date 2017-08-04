@@ -1,0 +1,9 @@
+.postit {
+  @include padding(0.3rem 0.75rem);
+  background-color: $color-gold;
+  border-radius: $border-radius;
+  color: $color-base;
+  display: inline-block;
+  font-size: $small-font-size;
+  font-weight: 600;
+}

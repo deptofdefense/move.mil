@@ -1,0 +1,120 @@
+<%- @page_title = 'Customer Service' -%>
+
+<div class="usa-grid usa-section usa-layout-docs">
+  <%= render 'layouts/sidenav' %>
+
+  <div class="usa-width-three-fourths usa-layout-docs-main_content">
+    <h1><%= @page_title %></h1>
+
+    <div class="usa-grid-full customer-service-section" id="local-ppo">
+      <div class="usa-width-one-fourth">
+        <%= image_tag("pppo.png") %>
+        <h4>Local Personal Property Office</h4>
+        <p class="postit">Best Primary POC</p>
+      </div>
+      <div class="usa-width-three-fourths">
+        <p>
+          Hours and contact info vary.<br>
+          <a href="#TODO">Find your local personal property office.</a>
+        </p>
+        <p>Contact for:</p>
+        <ul class="two-column-list">
+          <li>General Questions</li>
+          <li>Scheduling</li>
+          <li>Storage Needs</li>
+          <li>Special Circumstances</li>
+          <li>Entitlements Questions</li>
+          <li>Transporter / Moving Day Issues</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="usa-grid-full customer-service-section" id="tech-help">
+      <div class="usa-width-one-fourth">
+        <%= image_tag("tech-help.png") %>
+        <h4>Technical Help Desk</h4>
+        <p>
+          Hours:<br>
+          Open 24/7
+        </p>
+      </div>
+      <div class="usa-width-three-fourths">
+        <p>Contact for:</p>
+        <ul>
+        	<li>Website Navigation Help</li>
+          <li>Account Issues</li>
+          <li>Technical Help</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="usa-grid-full customer-service-section" id="svc-help">
+      <div class="usa-width-one-fourth">
+        <%= image_tag("svc-help.png") %>
+        <h4>Service Branch Help Desks</h4>
+      </div>
+      <div class="usa-width-three-fourths">
+        <p>Contact for:</p>
+        <ul class="two-column-list">
+          <li>Entitlements Questions</li>
+          <li>Special Circumstances</li>
+          <li>Exceptions of Policy</li>
+          <li>Reimbursements</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="usa-grid-full customer-service-section" id="accounting">
+      <div class="usa-width-one-fourth">
+        <%= image_tag("accounting.png") %>
+        <h4>Accounting &amp; Finance Office</h4>
+      </div>
+      <div class="usa-width-three-fourths">
+        <p>
+          Hours and contact info vary.<br>
+          Find your local finance office on <a class="usa-external_link" href="http://militaryinstallations.dod.mil">MilitaryInstallations.dod.mil</a>.
+        </p>
+        <p>Contact for:</p>
+        <ul>
+          <li>Reimbursement</li>
+          <li>Personally Procured Move (PPM) Payment</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="usa-grid-full customer-service-section" id="claims">
+      <div class="usa-width-one-fourth">
+        <%= image_tag("claims.png") %>
+        <h4>Claims</h4>
+      </div>
+      <div class="usa-width-three-fourths">
+        <p>
+          If something becomes lost or damaged during your move, you can work with your transporter directly (through DPS - the online moving hub) or with your service’s claims office.
+        </p>
+        <p>
+          Your service’s claims office can help you negotiate a higher claims price, or provide partial compensation after the 9-month filing window with your transportor expires.
+        </p>
+        <p>Contact for:</p>
+        <ul>
+        	<li>Lost or Damaged Goods</li>
+          <li>Claims Negotiations with Transporter</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="usa-grid-full customer-service-section" id="retirement-separation">
+      <div class="usa-width-one-fourth">
+        <%= image_tag("retirement-separation.png") %>
+        <h4>Retirement / Separation Extensions</h4>
+      </div>
+      <div class="usa-width-three-fourths">
+        <p>Contact for:</p>
+        <ul>
+          <li>Retiree/Separatee Questions</li>
+          <li>Retiree/Separatee Move Extentions</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
