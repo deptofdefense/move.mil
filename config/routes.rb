@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :faqs, only: :index
-  resources :tutorials, only: :index
+  resources :tutorials, only: [:index, :show]
 
   get '/service-specific-information', to: 'service_specific_information#index', as: 'service_specific_information'
 
