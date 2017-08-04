@@ -1,0 +1,20 @@
+<%- @page_title = "#{@tutorial.title} — Tutorials" -%>
+
+<div class="usa-grid usa-section usa-layout-docs">
+  <%= render 'shared/sidenav' %>
+
+  <div class="usa-width-three-fourths usa-layout-docs-main_content">
+    <h1><%= @tutorial.title %></h1>
+
+    <div class="single-page-tutorial">
+      <%- @tutorial.tutorial_steps.each do |step| -%>
+        <figure>
+          <%= image_tag step.image_path, alt: '' if step.image_path? %>
+          <figcaption>
+            <%= raw step.content %>
+          </figcaption>
+        </figure>
+      <%- end -%>
+    </div>
+  </div>
+</div>

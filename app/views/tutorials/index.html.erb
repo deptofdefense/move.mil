@@ -21,6 +21,10 @@
         <li id="tutorial-<%= tutorial.id %>">
           <button aria-controls="<%= tutorial.id %>" class="usa-accordion-button"><%= raw tutorial.title %></button>
           <div class="usa-accordion-content" id="<%= tutorial.id %>">
+            <div class="carousel-item-single-page">
+              <%= link_to 'View All in Single Page', tutorial_path(tutorial) %>
+            </div>
+
             <div class="carousel owl-carousel">
               <%- tutorial.tutorial_steps.each do |step| -%>
                 <div class="carousel-item">
