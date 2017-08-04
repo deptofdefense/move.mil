@@ -1,0 +1,47 @@
+.dps-login-section {
+  @include padding($site-margins-mobile);
+  background-color: $color-gray-lightest;
+
+  .usa-layout-docs-sidenav & {
+    @include margin($site-margins null);
+    @include padding($site-margins 0);
+    background-color: transparent;
+    border-top: 0.25rem solid $color-primary-darkest;
+  }
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  .usa-button {
+    display: block;
+    margin: 0;
+  }
+}
+
+.homepage-section {
+  @include padding($site-margins null);
+  border-bottom: 1px solid $color-gray-light;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  img {
+    display: none;
+    margin-right: $site-margins;
+    width: 14rem;
+
+    @include media($medium-screen) {
+      display: block;
+    }
+  }
+
+  h3 {
+    margin: 0;
+
+    & + p {
+      margin-top: 0.25rem;
+    }
+  }
+}

@@ -1,3 +1,26 @@
 abbr[title] {
   text-decoration: none;
 }
+
+.homepage-content-title {
+  border-bottom: 0.25rem solid $color-black;
+  padding-bottom: 0.5rem;
+}
+
+.divider-heading {
+  border-top: 0.25rem solid $color-primary-darkest;
+  overflow: hidden;
+
+  span {
+    @include padding(0.5rem $site-margins 0.75rem);
+    background-color: $color-primary-darkest;
+    color: $color-white;
+    display: block;
+    float: left;
+    font-family: $font-serif;
+    font-size: $h6-font-size;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+  }
+}

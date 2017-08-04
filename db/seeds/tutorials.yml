@@ -1,87 +1,161 @@
-- title: Get Started with <abbr title="Defense Personal Property System">DPS</abbr> (First Time Users)
+- title: Log In to DPS (New User)
   tutorial_steps:
-    - image_path: tutorials/get-started-01.png
+    - image_path: tutorials/new-user-registration-01.png
       content: >
-        <p>Go to the Electronic Transportation Acquisition (ETA) site and click “New User Registration.”</p>
-    - image_path: tutorials/get-started-02.png
+        <p>Go to <a href="https://eta.sddc.army.mil/ETASSOPortal/default.aspx">Electronic Transportation Acquisition (ETA)</a> and click “New User Registration.”</p>
+    - image_path: tutorials/new-user-registration-02.png
       content: >
-        <p>Next, select “DPS” from the list of available applications, and click “Next.”</p>
-    - image_path: tutorials/get-started-03.png
+        <p>Next, select “DPS” from the list of available applications. Find it in the alphabetical list, and click (plus circle icon) to add it to the Selected Applications list. Then click NEXT.</p>
+        <p><b>Note:</b> DPS stands for Defense Personal Property System. It’s just one of many sites housed within the ETA system (Electronic Transportation Acquisition), which is why you have to go through ETA to access it.</p>
+    - image_path: tutorials/new-user-registration-03.png
       content: >
-        <p>Fill out the General Information fields and choose your security questions. Then you’ll get an email with your username.</p>
-    - image_path: tutorials/get-started-04.png
+        <p>Choose the Application Role that best describes your situation. For example, if you’re active duty, you probably fall into the category: “DOD Customer/Service Member.”</p>
+        <p><b>Note:</b> There are a lot of roles in this list! That’s because it takes the coordination of a lot of people to get the moves done!</p>
+    - image_path: tutorials/new-user-registration-04.png
       content: >
-        <p>In the email, click the <abbr title="Electronic Transportation Acquisition">ETA</abbr> link to verify your username and security questions. When you do, you’ll get an email with your 6 digit validation code.</p>
-    - image_path: tutorials/get-started-05.png
+        <p>Fill out the Customer Registration fields and choose your security questions. Then you’ll get an email with your username.</p>
+        <p><b>Pro Tip:</b> For the Emergency Contact fields, choose someone who will be traveling or moving with you. That way, they can be a point of contact for the trip, and access important information.</p>
+        <p>Also, attaching a Certificate is optional, but doing so allows you to login with your Common Access Card (CAC).</p>
+    - image_path: tutorials/new-user-registration-05.png
       content: >
-        <p>On the <abbr title="Electronic Transportation Acquisition">ETA</abbr> site where you verified your username, use the validation code to set your password.</p>
-    - image_path: tutorials/get-started-06.png
+        <p>In the email, click the ETA link to verify your username and security questions. When you do, you’ll get an email with your 6 digit access key.</p>
+    - image_path: tutorials/new-user-registration-06.png
       content: >
-        <p>Now that you have a username and password, you can access <abbr title="Defense Personal Property System">DPS</abbr>. Click “My Approved Applications” to find the <abbr title="Defense Personal Property System">DPS</abbr> link.</p>
+        <p>On the ETA site where you verified your username, enter your validation code to set your password.</p>
+    - image_path: tutorials/new-user-registration-07.png
+      content: >
+        <p>Now you can choose your password. Make sure it’s one that you can remember, but is not a password you use for other websites or accounts.</p>
+    - image_path: tutorials/new-user-registration-08.png
+      content: >
+        <p>With your username and password, you can access DPS! On the ETA homepage, log in and then click “My Approved Applications” to find the DPS link.</p>
 
-- title: Log In to <abbr title="Defense Personal Property System">DPS</abbr> (Returning Users)
+- title: Log In to DPS (Returning User)
   tutorial_steps:
-    - image_path: tutorials/log-in-to-dps-01.png
+    - image_path: tutorials/returning-user-login-01.png
       content: >
-        <p>Access <abbr title="Defense Personal Property System">DPS</abbr> through the Electronic Transportation Acquisition (ETA) site using your username and password.</p>
-    - image_path: tutorials/log-in-to-dps-02.png
+        <p>On <a href="https://eta.sddc.army.mil/ETASSOPortal/default.aspx">ETA</a>, select “Login,” then enter your username and password.</p>
+        <p><b>Note:</b> You have to access DPS through the Electronic Transportation Acquisition (ETA) site, because DPS is just one of many sites housed in ETA.</p>
+    - image_path: tutorials/returning-user-login-02.png
       content: >
-        <p>If you need help logging in to <abbr title="Electronic Transportation Acquisition">ETA</abbr>, use the “Can’t Access your account?” link to retrieve your username and password.</p>
+        <p>If you need help logging in to ETA, there are several options. Use any of these links: <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/CustomerForgotID.aspx">Forgot Username?</a> <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/SecurityQuestionPasswordChange.aspx">Forgot Password?</a> <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/AccountAccessHelp.aspx">Can’t access your account?</a></p>
+        <p><b>Tip:</b> If your email address has changed, <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/ContactCustomerSupport.aspx">contact your administrator</a> first! ETA will automatically send emails to the address on file.</p>
+    - image_path: tutorials/returning-user-login-03.png
+      content: >
+        <p>If you <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/CustomerForgotID.aspx">forgot your username</a>, ETA can send it to you in an email! Enter your email address here and an email will be sent to you automatically.</p>
+        <p><b>Tip:</b> If your email address has changed since you created your account, <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/ContactCustomerSupport.aspx">contact your system administrator</a> first!</p>
+    - image_path: tutorials/returning-user-login-04.png
+      content: >
+        <p>To <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/SecurityQuestionPasswordChange.aspx">reset your password</a>, follow the prompts to enter your username, and answer two of your security questions.</p>
+        <p>Then the system will email you a validation code which you’ll enter next.</p>
+        <p><b>Tip:</b> The validation code will automatically be sent to the email address you used to register for ETA. <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/ContactCustomerSupport.aspx">Contact your system administrator</a> if it’s changed.</p>
 
-- title: Schedule A Move (Self-Counsel)
+- title: Schedule a Move
   tutorial_steps:
     - image_path: tutorials/schedule-a-move-01.png
       content: >
-        <p>Scheduling your move is called “Self Counseling” in DPS. Get started with your Orders and Contact information. It’s helpful to have your pick up and delivery information, as well as information about your dependents and Power of Attorney if you have one. Select “Self Counsel” and begin your application!</p>
+        <p>Scheduling your move is called “Self Counseling” in DPS. First, log into ETA, and choose DPS from your list of approved applications.</p>
     - image_path: tutorials/schedule-a-move-02.png
       content: >
-        <p>Fill out your Contact Information and check your progress in the Counseling Menu. This information is saved in DPS so you don't have to fill it out each time you schedule a move.</p>
+        <p>On the DPS homepage, select “Self Counsel” to begin your application! <b>Pro Tip:</b> You should have a copy of your Orders, pick-up and delivery information, as well as information about your dependents and Power of Attorney if you need one.</p>
     - image_path: tutorials/schedule-a-move-03.png
       content: >
-        <p>Enter your Orders information in this next section, including your Order Number, and duty station addresses.</p>
+        <p>Scroll down to find the Customer Information page. During this process, if you find a blank screen, don’t worry - just scroll down to find the information you’re looking for.</p>
     - image_path: tutorials/schedule-a-move-04.png
       content: >
-        <p>Specify your authorized Order Type, and upload a copy of your Order document.</p>
+        <p>You’ll find an over view of the Counseling Process, but to get to the first step, you’ll need to click on the Customer Information button on Counseling Menu on the left side of the page.</p>
     - image_path: tutorials/schedule-a-move-05.png
       content: >
-        <p>Next, enter your Tour Type and duration.</p>
+        <p>Fill out your Customer Information Permanent Contact Address. You can check your progress in the Counseling Menu on the left side of the page.</p>
+        <p><b>Pro Tip:</b> The “Permanent Contact Address” is the place where you’re living right now. This information is saved in DPS so you don’t have to fill it out each time you schedule a move.</p>
+        <p>CONUS stands for Continental United States</p>
+        <p>OCONUS stands for Outside Continental United States</p>
     - image_path: tutorials/schedule-a-move-06.png
       content: >
-        <p>Finally, in the Additional Information section, you’ll specify if you need to ship a POV, motorcycle, etc.</p>
+        <p>Enter an Emergency Contact who will be traveling or moving with you. This person will have access to shipment status, and information.</p>
+        <p><b>Pro Tip:</b> A Letter of Authorization is</p>
     - image_path: tutorials/schedule-a-move-07.png
       content: >
-        <p>The Order Summary allows you to review and certify the information you entered is accurate.</p>
+        <p>Here, indicate your rank, and whether or not you’re allowed PBP&E. This information allows DPS to calculate your shipment weight allowance, if it wasn’t part of your orders.</p>
+        <p><b>Pro Tip:</b> PBP&E is the “pro gear” or professional equipment you might need to ship - there’s an extra separate allowance for you, and your spouse.</p>
+        <p>A “Hard Copy” of your orders means that you received orders your can upload into DPS as a PDF, Word Doc, Text File, etc.</p>
     - image_path: tutorials/schedule-a-move-08.png
       content: >
-        <p>Create your shipment based on your orders by first selecting the type.</p>
+        <p>Next, enter the address you are leaving, and your new address.</p>
     - image_path: tutorials/schedule-a-move-09.png
       content: >
-        <p>If you chose Household Goods (HHG) for example, you’ll get definitions and helpful information about that type of shipment.</p>
+        <p>Specify your authorized Order Type, and upload a copy of your Order document.</p>
     - image_path: tutorials/schedule-a-move-10.png
       content: >
-        <p>Set your desired moving dates and enter the pick-up and drop off addresses.</p>
+        <p>Next, enter your new Duty Station and indicate whether or not you’re moving with dependents (including a spouse).</p>
     - image_path: tutorials/schedule-a-move-11.png
       content: >
-        <p>Next, define shipment weight, and let us know if you have special items like a jacuzzi or piano. There’s also a separate section for firearms.</p>
+        <p>Finally, in the Additional Information section, you’ll specify if you need to ship a POV, motorcycle, etc.</p>
+        <p><b>Pro Tip:</b> A POV is your Personally Owned Vehicle, and in this context, a Mobile Home is an RV.</p>
     - image_path: tutorials/schedule-a-move-12.png
       content: >
-        <p>If you have a preference, here’s where you can let us know your favorite (or least favorite) Transportation Service Provider (TSP).</p>
+        <p>The Order Summary allows you to review and certify the information you entered is accurate.</p>
+        <p><b>Pro Tip:</b> Your weight allowance is listed here in the second paragraph!</p>
     - image_path: tutorials/schedule-a-move-13.png
       content: >
-        <p>Now it’s time to go over moving day responsibilities for you and your TSP.</p>
+        <p>Create your shipment based on your orders by first selecting the type.</p>
+        <p><b>Pro Tip:</b> Can’t find your type? Check out the category “Various” to see miscellaneous move types.</p>
     - image_path: tutorials/schedule-a-move-14.png
       content: >
-        <p>A summary of your shipment is then provided.</p>
+        <p>If you chose Household Goods (HHG) for example, you’ll get definitions and helpful information about that type of shipment.</p>
     - image_path: tutorials/schedule-a-move-15.png
       content: >
-        <p>Here you'll choose a Personal Property Office for counseling, before clicking Submit!</p>
+        <p>Set your desired moving dates and enter the pick-up and drop off addresses.</p>
+    - image_path: tutorials/schedule-a-move-16.png
+      content: >
+        <p>Next, define shipment weight, and let us know if you have special items like a jacuzzi or piano. There’s also a separate section for firearms on the next page.</p>
+    - image_path: tutorials/schedule-a-move-17.png
+      content: >
+        <p>Here, indicate if you are shipping any firearms.</p>
+    - image_path: tutorials/schedule-a-move-18.png
+      content: >
+        <p>If you have a preference, here’s where you can let us know your favorite (or least favorite) Transportation Service Provider (TSP).</p>
+    - image_path: tutorials/schedule-a-move-19.png
+      content: >
+        <p>Now it’s time to go over moving day responsibilities for you and your TSP.</p>
+    - image_path: tutorials/schedule-a-move-20.png
+      content: >
+        <p>A summary of your shipment is then provided.</p>
+    - image_path: tutorials/schedule-a-move-21.png
+      content: >
+        <p>Here you’ll choose a Personal Property Office for counseling, who you will contact after submitting your shipment on DPS. They’ll need the forms generated on the next page.</p>
+    - image_path: tutorials/schedule-a-move-22.png
+      content: >
+        <p>On this Submit Page, review and print your forms DD1299 and DD1797, then press submit!</p>
 
-- title: File A Claim
+- title: File a Claim
   tutorial_steps:
-    - content: >
-        <p>#TODO</p>
+    - image_path: tutorials/file-a-claim-01.png
+      content: >
+        <p>To file a claim, go to the Claims tab on the DPS homepage. You’ll need to file a Loss/Damage Report with your TSP (Transportation Company), as well a File a Claim through DPS.</p>
+        <p>Click "Start my Loss and Damage Report."</p>
+        <p><b>Pro Tip:</b> To the best of your ability, notify your TSP of the loss or damage within 75 days. Extensions are granted on a case by case basis.</p>
+    - image_path: tutorials/file-a-claim-02.png
+      content: >
+        <p>Here, there’s a lot of information to enter. Each piece helps the TSP understand what happened, and how to help you.</p>
+        <p><b>Pro Tip:</b> Be as detailed as possible, including item descriptions, photographs of damage, purchase history, etc.</p>
+    - image_path: tutorials/file-a-claim-03.png
+      content: >
+        <p>Next, you’ll need to File a Claim with DPS. This helps keep a record of your experience with DPS, and not just with your Transportation Provider.</p>
+        <p>Enter your contact information, and the claim details again.</p>
+        <p>Upload a copy of any reports, or documents you might have received from the Transportation Company.</p>
+    - image_path: tutorials/file-a-claim-04.png
+      content: >
+        <p>You can view your current and past Claims Reports here.</p>
+    - image_path: tutorials/file-a-claim-05.png
+      content: >
+        <p>There is also a Shipments Summary, which includes any claims and reports filed.</p>
 
-- title: Review Your <abbr title="Transportation Service Provider">TSP</abbr> (Customer Satisfaction Survey)
+- title: Rate your Transporter (CSS Survey)
   tutorial_steps:
-    - content: >
-        <p>#TODO</p>
+    - image_path: tutorials/rate-your-transporter-01.png
+      content: >
+        <p>In DPS, you can write a review of your moving company (transporter) for each shipment.</p>
+        <p>Click on the shipment you'd like to rate.</p>
+    - image_path: tutorials/rate-your-transporter-02.png
+      content: >
+        <p>The DPS Customer Sarisfaction Survey allows you to rate your experience on topics ranging from packing, to delivery.</p>
