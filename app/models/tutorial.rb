@@ -1,5 +1,9 @@
 class Tutorial < ApplicationRecord
-  validates :title, presence: true
+  include FriendlyId
+
+  friendly_id :title
 
   has_many :tutorial_steps
+
+  validates :title, presence: true
 end
