@@ -8,7 +8,12 @@
 
 .usa-layout-docs-main_content {
   h1 {
-    font-size: $h2-font-size;
+    border-bottom: 2px solid $color-primary-darker;
+    color: $color-primary;
+    font-family: $font-sans;
+    font-size: 3.8rem;
+    font-weight: 600;
+    padding-bottom: 2.8rem;
   }
 
   h6 {
