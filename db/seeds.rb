@@ -25,3 +25,8 @@ service_specific_posts = YAML::load_file(Rails.root.join('db', 'seeds', 'service
 service_specific_posts.each do |post|
   record = ServiceSpecificPost.where(title: post['title']).first_or_create(post)
 end
+
+branch_of_service_contacts = YAML::load_file(Rails.root.join('db', 'seeds', 'branch_of_service_contacts.yml'))
+branch_of_service_contacts.each do |contact|
+  record = BranchOfServiceContact.where(branch: contact['branch']).first_or_create(contact)
+end

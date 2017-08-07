@@ -1,0 +1,40 @@
+.customer-service-section {
+
+  padding: 2rem 6rem 2rem 0;
+
+  & + & {
+    border-top: 1px solid $color-gray;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+
+  li {
+    margin-bottom: 0;
+    margin-left: 2rem;
+  }
+
+  table {
+    margin-bottom: 2rem;
+    margin-top: 0;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  th {
+    font-weight: normal;
+    width: 7em;
+  }
+
+  th, td {
+    border: 0;
+    padding: 0;
+    word-wrap: break-word;
+  }
+
+}
+
+.two-column-list {
+  columns: 2;
+}

@@ -1,5 +1,8 @@
 <%- @page_title = 'Customer Service' -%>
 
+<!-- Don't automatically turn FAX numbers into links -->
+<meta name = "format-detection" content = "telephone=no">
+
 <div class="usa-grid usa-section usa-layout-docs">
   <%= render 'shared/sidenav' %>
 
@@ -17,7 +20,7 @@
           Hours and contact info vary.<br>
           <a href="#TODO">Find your local personal property office.</a>
         </p>
-        <p>Contact for:</p>
+        Contact for:
         <ul class="two-column-list">
           <li>General Questions</li>
           <li>Scheduling</li>
@@ -39,7 +42,26 @@
         </p>
       </div>
       <div class="usa-width-three-fourths">
-        <p>Contact for:</p>
+        <table>
+          <tbody>
+            <tr>
+              <th scope="row">Phone</th>
+              <td>
+                Toll-Free <a href="tel:+18004622176">(800)-462-2176</a><br>
+                Commercial <a href="tel:+16185899445">(618)-589-9445</a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Email</th>
+              <td><a href="mailto:usarmy.scott.sddc.mbx.g6-SRC-DPS-HD@mail.mil">usarmy.scott.sddc.mbx.g6-SRC-DPS-HD@mail.mil</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Online Ticket</th>
+              <td><a class="usa-external_link" href="https://src.service-now.com/src">https://src.service-now.com/src</a></td>
+            </tr>
+          </tbody>
+        </table>
+        Contact for:
         <ul>
         	<li>Website Navigation Help</li>
           <li>Account Issues</li>
@@ -54,7 +76,67 @@
         <h4>Service Branch Help Desks</h4>
       </div>
       <div class="usa-width-three-fourths">
-        <p>Contact for:</p>
+        <%- @contacts.each do |contact| -%>
+          <% if contact.custsvc_org %>
+            <%= contact.custsvc_org %>
+            <table>
+              <tbody>
+                <% if contact.custsvc_dsn %>
+                  <tr>
+                    <th scope="row">Phone</th>
+                    <td>DSN <%= contact.custsvc_dsn %></td>
+                  </tr>
+                <% end %>
+                <% if contact.custsvc_tel_comm %>
+                  <tr>
+                    <% if contact.custsvc_dsn %>
+                      <td></td>
+                    <% else %>
+                      <th scope="row">Phone</th>
+                    <% end %>
+                    <td>Commercial <%= link_to contact.custsvc_tel_comm, "tel:" + contact.custsvc_tel_comm %></td>
+                  </tr>
+                <% end %>
+                <% if contact.custsvc_tel_tollfree %>
+                  <tr>
+                    <% if contact.custsvc_dsn || contact.custsvc_tel_comm %>
+                      <td></td>
+                    <% else %>
+                      <th scope="row">Phone</th>
+                    <% end %>
+                    <td>Toll-Free <%= link_to contact.custsvc_tel_tollfree, "tel:" + contact.custsvc_tel_tollfree %></td>
+                  </tr>
+                <% end %>
+                <% if contact.custsvc_email %>
+                  <tr>
+                    <th scope="row">Email</th>
+                    <td><%= link_to contact.custsvc_email.sub(',', '<br').html_safe, "mailto:" + contact.custsvc_email %></td>
+                  </tr>
+                <% end %>
+                <% if contact.custsvc_hours %>
+                  <tr>
+                    <th scope="row">Hours</th>
+                    <td><%= contact.custsvc_hours %></td>
+                  </tr>
+                <% end %>
+                <% if contact.custsvc_url %>
+                  <tr>
+                    <th scope="row">Online</th>
+                    <td><%= link_to contact.custsvc_url, contact.custsvc_url, class: "usa-external_link" %></td>
+                  </tr>
+                <% end %>
+                <% if contact.custsvc_facebook_url %>
+                  <tr>
+                    <td></td>
+                    <td><%= link_to image_tag("FB-FindUsonFacebook-online-512.png", :alt => "Find Us On Facebook", :width => "98"), contact.custsvc_facebook_url %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          <% end %>
+        <%- end -%>
+
+        Contact for:
         <ul class="two-column-list">
           <li>Entitlements Questions</li>
           <li>Special Circumstances</li>
@@ -74,7 +156,7 @@
           Hours and contact info vary.<br>
           Find your local finance office on <a class="usa-external_link" href="http://militaryinstallations.dod.mil">MilitaryInstallations.dod.mil</a>.
         </p>
-        <p>Contact for:</p>
+        Contact for:
         <ul>
           <li>Reimbursement</li>
           <li>Personally Procured Move (PPM) Payment</li>
@@ -92,9 +174,73 @@
           If something becomes lost or damaged during your move, you can work with your transporter directly (through DPS - the online moving hub) or with your service’s claims office.
         </p>
         <p>
-          Your service’s claims office can help you negotiate a higher claims price, or provide partial compensation after the 9-month filing window with your transportor expires.
+          Your service’s claims office can help you negotiate a higher claims price, or provide partial compensation after the 9-month filing window with your transporter expires.
         </p>
-        <p>Contact for:</p>
+        <table>
+          <tbody>
+            <%- @contacts.each do |contact| -%>
+              <tr>
+                <th scope="row"><%= contact.branch %></th>
+                <td>
+                  <table>
+                    <tbody>
+                      <% if contact.claims_dsn %>
+                        <tr>
+                          <th scope="row">DSN:</th>
+                          <td><%= contact.claims_dsn %></td>
+                        </tr>
+                      <% end %>
+                      <% if contact.claims_tel_comm %>
+                        <tr>
+                          <th scope="row">Comm:</th>
+                          <td><%= link_to contact.claims_tel_comm, "tel:" + contact.claims_tel_comm %></td>
+                        </tr>
+                      <% end %>
+                      <% if contact.claims_tel_tollfree %>
+                        <tr>
+                          <th scope="row">Toll-Free:</th>
+                          <td><%= link_to contact.claims_tel_tollfree, "tel:" + contact.claims_tel_tollfree %></td>
+                        </tr>
+                      <% end %>
+                      <% if contact.claims_email %>
+                        <tr>
+                          <th scope="row">Email:</th>
+                          <td><%= link_to contact.claims_email.sub(',', '<br>').html_safe, "mailto:" + contact.claims_email %></td>
+                        </tr>
+                      <% end %>
+                      <% if contact.claims_fax_dsn %>
+                        <tr>
+                          <th scope="row">DSN Fax:</th>
+                          <td><%= contact.claims_fax_dsn %></td>
+                        </tr>
+                      <% end %>
+                      <% if contact.claims_fax_comm %>
+                        <tr>
+                          <th scope="row">Comm Fax:</th>
+                          <td><%= contact.claims_fax_comm %></td>
+                        </tr>
+                      <% end %>
+                      <% if contact.claims_fax_tollfree %>
+                        <tr>
+                          <th scope="row">Toll-Free Fax:</th>
+                          <td><%= contact.claims_fax_tollfree %></td>
+                        </tr>
+                      <% end %>
+                      <% if contact.claims_post %>
+                        <tr>
+                          <th scope="row">Address:</th>
+                          <td><%= simple_format(contact.claims_post) %></td>
+                        </tr>
+                      <% end %>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            <%- end -%>
+          </tbody>
+        </table>
+
+        Contact for:
         <ul>
         	<li>Lost or Damaged Goods</li>
           <li>Claims Negotiations with Transporter</li>
@@ -108,7 +254,73 @@
         <h4>Retirement / Separation Extensions</h4>
       </div>
       <div class="usa-width-three-fourths">
-        <p>Contact for:</p>
+        <table>
+          <tbody>
+            <%- @contacts.each do |contact| -%>
+              <% if contact.retiree_dsn || contact.retiree_tel_comm || contact.retiree_tel_tollfree || contact.retiree_email || contact.retiree_fax_dsn || contact.retiree_fax_comm || contact.retiree_fax_tollfree || contact.retiree_post %>
+                <tr>
+                  <th scope="row"><%= contact.branch %></th>
+                  <td>
+                    <table>
+                      <tbody>
+                        <% if contact.retiree_dsn %>
+                          <tr>
+                            <th scope="row">DSN:</th>
+                            <td><%= contact.retiree_dsn %></td>
+                          </tr>
+                        <% end %>
+                        <% if contact.retiree_tel_comm %>
+                          <tr>
+                            <th scope="row">Comm:</th>
+                            <td><%= link_to contact.retiree_tel_comm, "tel:" + contact.retiree_tel_comm %></td>
+                          </tr>
+                        <% end %>
+                        <% if contact.retiree_tel_tollfree %>
+                          <tr>
+                            <th scope="row">Toll-Free:</th>
+                            <td><%= link_to contact.retiree_tel_tollfree, "tel:" + contact.retiree_tel_tollfree %></td>
+                          </tr>
+                        <% end %>
+                        <% if contact.retiree_email %>
+                          <tr>
+                            <th scope="row">Email:</th>
+                            <td><%= link_to contact.retiree_email.sub(',', '<br>').html_safe, "mailto:" + contact.retiree_email %></td>
+                          </tr>
+                        <% end %>
+                        <% if contact.retiree_fax_dsn %>
+                          <tr>
+                            <th scope="row">DSN Fax:</th>
+                            <td><%= contact.retiree_fax_dsn %></td>
+                          </tr>
+                        <% end %>
+                        <% if contact.retiree_fax_comm %>
+                          <tr>
+                            <th scope="row">Comm Fax:</th>
+                            <td><%= contact.retiree_fax_comm %></td>
+                          </tr>
+                        <% end %>
+                        <% if contact.retiree_fax_tollfree %>
+                          <tr>
+                            <th scope="row">Toll-Free Fax:</th>
+                            <td><%= contact.retiree_fax_tollfree %></td>
+                          </tr>
+                        <% end %>
+                        <% if contact.retiree_post %>
+                          <tr>
+                            <th scope="row">Address:</th>
+                            <td><%= simple_format(contact.retiree_post) %></td>
+                          </tr>
+                        <% end %>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              <% end %>
+            <%- end -%>
+          </tbody>
+        </table>
+
+        Contact for:
         <ul>
           <li>Retiree/Separatee Questions</li>
           <li>Retiree/Separatee Move Extentions</li>
