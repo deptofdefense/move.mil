@@ -19,6 +19,10 @@ RSpec.describe TutorialsController, type: :request do
       assert_template 'show'
     end
 
+    it 'highlights the Tutorials navigation item' do
+      assert_select '.usa-sidenav-list .usa-current', text: 'Tutorials'
+    end
+
     it 'displays the tutorial' do
       assert_select '.usa-layout-docs-main_content h1', text: 'Test Tutorial Title'
 
