@@ -8,7 +8,7 @@
 
     <div class="usa-grid-full customer-service-section" id="local-ppo">
       <div class="usa-width-one-fourth">
-        <%= image_tag 'pppo.png', alt: 'P P P O' %>
+        <%= image_tag 'pppo.svg', width: '42px', alt: 'P P P O' %>
         <h4>Local Personal Property Office</h4>
         <p class="postit">Best Primary POC</p>
       </div>
@@ -31,7 +31,7 @@
 
     <div class="usa-grid-full customer-service-section" id="tech-help">
       <div class="usa-width-one-fourth">
-        <%= image_tag 'tech-help.png', alt: 'Technical Help' %>
+        <%= image_tag 'tech-help.svg', width: '42px', alt: 'Technical Help' %>
         <h4>Technical Help Desk</h4>
         <p>
           Hours:<br>
@@ -69,13 +69,13 @@
 
     <div class="usa-grid-full customer-service-section" id="svc-help">
       <div class="usa-width-one-fourth">
-        <%= image_tag 'svc-help.png', alt: 'Service Branch Help' %>
+        <%= image_tag 'svc-help.svg', width: '42px', alt: 'Service Branch Help' %>
         <h4>Service Branch Help Desks</h4>
       </div>
       <div class="usa-width-three-fourths">
         <%- @contacts.each do |contact| -%>
           <% if contact.custsvc_org %>
-            <%= contact.custsvc_org %>
+            <h5><%= contact.custsvc_org %></h5>
             <table>
               <tbody>
                 <% if contact.custsvc_dsn %>
@@ -145,7 +145,7 @@
 
     <div class="usa-grid-full customer-service-section" id="accounting">
       <div class="usa-width-one-fourth">
-        <%= image_tag 'accounting.png', alt: 'Accounting' %>
+        <%= image_tag 'accounting.svg', width: '42px', alt: 'Accounting' %>
         <h4>Accounting &amp; Finance Office</h4>
       </div>
       <div class="usa-width-three-fourths">
@@ -163,7 +163,7 @@
 
     <div class="usa-grid-full customer-service-section" id="claims">
       <div class="usa-width-one-fourth">
-        <%= image_tag 'claims.png', alt: 'Claims' %>
+        <%= image_tag 'claims.svg', width: '42px', alt: 'Claims' %>
         <h4>Claims</h4>
       </div>
       <div class="usa-width-three-fourths">
@@ -247,7 +247,7 @@
 
     <div class="usa-grid-full customer-service-section" id="retirement-separation">
       <div class="usa-width-one-fourth">
-        <%= image_tag 'retirement-separation.png', alt: 'Retirement and Separation' %>
+        <%= image_tag 'retirement-separation.svg', width: '42px', alt: 'Retirement and Separation' %>
         <h4>Retirement / Separation Extensions</h4>
       </div>
       <div class="usa-width-three-fourths">
