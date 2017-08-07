@@ -1,5 +1,4 @@
 .customer-service-section {
-
   padding: 2rem 6rem 2rem 0;
 
   & + & {
@@ -27,12 +26,12 @@
     width: 7em;
   }
 
-  th, td {
+  th,
+  td {
     border: 0;
     padding: 0;
     word-wrap: break-word;
   }
-
 }
 
 .two-column-list {

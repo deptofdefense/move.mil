@@ -1,8 +1,5 @@
 <%- @page_title = 'Customer Service' -%>
 
-<!-- Don't automatically turn FAX numbers into links -->
-<meta name = "format-detection" content = "telephone=no">
-
 <div class="usa-grid usa-section usa-layout-docs">
   <%= render 'shared/sidenav' %>
 
@@ -11,7 +8,7 @@
 
     <div class="usa-grid-full customer-service-section" id="local-ppo">
       <div class="usa-width-one-fourth">
-        <%= image_tag("pppo.png") %>
+        <%= image_tag 'pppo.png', alt: 'P P P O' %>
         <h4>Local Personal Property Office</h4>
         <p class="postit">Best Primary POC</p>
       </div>
@@ -34,7 +31,7 @@
 
     <div class="usa-grid-full customer-service-section" id="tech-help">
       <div class="usa-width-one-fourth">
-        <%= image_tag("tech-help.png") %>
+        <%= image_tag 'tech-help.png', alt: 'Technical Help' %>
         <h4>Technical Help Desk</h4>
         <p>
           Hours:<br>
@@ -47,23 +44,23 @@
             <tr>
               <th scope="row">Phone</th>
               <td>
-                Toll-Free <a href="tel:+18004622176">(800)-462-2176</a><br>
-                Commercial <a href="tel:+16185899445">(618)-589-9445</a>
+                Toll-Free <%= link_to '+1 (800) 462-2176', 'tel:+18004622176' %><br>
+                Commercial <%= link_to '+1 (618) 589-9445', 'tel:+16185899445' %>
               </td>
             </tr>
             <tr>
               <th scope="row">Email</th>
-              <td><a href="mailto:usarmy.scott.sddc.mbx.g6-SRC-DPS-HD@mail.mil">usarmy.scott.sddc.mbx.g6-SRC-DPS-HD@mail.mil</a></td>
+              <td><%= mail_to "usarmy.scott.sddc.mbx.g6-SRC-DPS-HD@mail.mil" %></td>
             </tr>
             <tr>
               <th scope="row">Online Ticket</th>
-              <td><a class="usa-external_link" href="https://src.service-now.com/src">https://src.service-now.com/src</a></td>
+              <td><%= link_to "https://src.service-now.com/src", "https://src.service-now.com/src", class: "usa-external_link" %></td>
             </tr>
           </tbody>
         </table>
         Contact for:
         <ul>
-        	<li>Website Navigation Help</li>
+          <li>Website Navigation Help</li>
           <li>Account Issues</li>
           <li>Technical Help</li>
         </ul>
@@ -72,7 +69,7 @@
 
     <div class="usa-grid-full customer-service-section" id="svc-help">
       <div class="usa-width-one-fourth">
-        <%= image_tag("svc-help.png") %>
+        <%= image_tag 'svc-help.png', alt: 'Service Branch Help' %>
         <h4>Service Branch Help Desks</h4>
       </div>
       <div class="usa-width-three-fourths">
@@ -94,7 +91,7 @@
                     <% else %>
                       <th scope="row">Phone</th>
                     <% end %>
-                    <td>Commercial <%= link_to contact.custsvc_tel_comm, "tel:" + contact.custsvc_tel_comm %></td>
+                    <td>Commercial <%= link_to contact.custsvc_tel_comm, "tel:#{contact.custsvc_tel_comm}" %></td>
                   </tr>
                 <% end %>
                 <% if contact.custsvc_tel_tollfree %>
@@ -104,13 +101,13 @@
                     <% else %>
                       <th scope="row">Phone</th>
                     <% end %>
-                    <td>Toll-Free <%= link_to contact.custsvc_tel_tollfree, "tel:" + contact.custsvc_tel_tollfree %></td>
+                    <td>Toll-Free <%= link_to contact.custsvc_tel_tollfree, "tel:#{contact.custsvc_tel_tollfree}" %></td>
                   </tr>
                 <% end %>
                 <% if contact.custsvc_email %>
                   <tr>
                     <th scope="row">Email</th>
-                    <td><%= link_to contact.custsvc_email.sub(',', '<br').html_safe, "mailto:" + contact.custsvc_email %></td>
+                    <td><%= link_to contact.custsvc_email.sub(',', '<br').html_safe, "mailto:#{contact.custsvc_email}" %></td>
                   </tr>
                 <% end %>
                 <% if contact.custsvc_hours %>
@@ -148,13 +145,13 @@
 
     <div class="usa-grid-full customer-service-section" id="accounting">
       <div class="usa-width-one-fourth">
-        <%= image_tag("accounting.png") %>
+        <%= image_tag 'accounting.png', alt: 'Accounting' %>
         <h4>Accounting &amp; Finance Office</h4>
       </div>
       <div class="usa-width-three-fourths">
         <p>
           Hours and contact info vary.<br>
-          Find your local finance office on <a class="usa-external_link" href="http://militaryinstallations.dod.mil">MilitaryInstallations.dod.mil</a>.
+          Find your local finance office on <%= link_to 'MilitaryInstallations.dod.mil', 'http://militaryinstallations.dod.mil', class: 'usa-external_link' %>.
         </p>
         Contact for:
         <ul>
@@ -166,7 +163,7 @@
 
     <div class="usa-grid-full customer-service-section" id="claims">
       <div class="usa-width-one-fourth">
-        <%= image_tag("claims.png") %>
+        <%= image_tag 'claims.png', alt: 'Claims' %>
         <h4>Claims</h4>
       </div>
       <div class="usa-width-three-fourths">
@@ -193,19 +190,19 @@
                       <% if contact.claims_tel_comm %>
                         <tr>
                           <th scope="row">Comm:</th>
-                          <td><%= link_to contact.claims_tel_comm, "tel:" + contact.claims_tel_comm %></td>
+                          <td><%= link_to contact.claims_tel_comm, "tel:#{contact.claims_tel_comm}" %></td>
                         </tr>
                       <% end %>
                       <% if contact.claims_tel_tollfree %>
                         <tr>
                           <th scope="row">Toll-Free:</th>
-                          <td><%= link_to contact.claims_tel_tollfree, "tel:" + contact.claims_tel_tollfree %></td>
+                          <td><%= link_to contact.claims_tel_tollfree, "tel:#{contact.claims_tel_tollfree}" %></td>
                         </tr>
                       <% end %>
                       <% if contact.claims_email %>
                         <tr>
                           <th scope="row">Email:</th>
-                          <td><%= link_to contact.claims_email.sub(',', '<br>').html_safe, "mailto:" + contact.claims_email %></td>
+                          <td><%= link_to contact.claims_email.sub(',', '<br>').html_safe, "mailto:#{contact.claims_email}" %></td>
                         </tr>
                       <% end %>
                       <% if contact.claims_fax_dsn %>
@@ -250,14 +247,14 @@
 
     <div class="usa-grid-full customer-service-section" id="retirement-separation">
       <div class="usa-width-one-fourth">
-        <%= image_tag("retirement-separation.png") %>
+        <%= image_tag 'retirement-separation.png', alt: 'Retirement and Separation' %>
         <h4>Retirement / Separation Extensions</h4>
       </div>
       <div class="usa-width-three-fourths">
         <table>
           <tbody>
             <%- @contacts.each do |contact| -%>
-              <% if contact.retiree_dsn || contact.retiree_tel_comm || contact.retiree_tel_tollfree || contact.retiree_email || contact.retiree_fax_dsn || contact.retiree_fax_comm || contact.retiree_fax_tollfree || contact.retiree_post %>
+              <% if contact.retiree_contact_info? %>
                 <tr>
                   <th scope="row"><%= contact.branch %></th>
                   <td>
@@ -272,19 +269,19 @@
                         <% if contact.retiree_tel_comm %>
                           <tr>
                             <th scope="row">Comm:</th>
-                            <td><%= link_to contact.retiree_tel_comm, "tel:" + contact.retiree_tel_comm %></td>
+                            <td><%= link_to contact.retiree_tel_comm, "tel:#{contact.retiree_tel_comm}" %></td>
                           </tr>
                         <% end %>
                         <% if contact.retiree_tel_tollfree %>
                           <tr>
                             <th scope="row">Toll-Free:</th>
-                            <td><%= link_to contact.retiree_tel_tollfree, "tel:" + contact.retiree_tel_tollfree %></td>
+                            <td><%= link_to contact.retiree_tel_tollfree, "tel:#{contact.retiree_tel_tollfree}" %></td>
                           </tr>
                         <% end %>
                         <% if contact.retiree_email %>
                           <tr>
                             <th scope="row">Email:</th>
-                            <td><%= link_to contact.retiree_email.sub(',', '<br>').html_safe, "mailto:" + contact.retiree_email %></td>
+                            <td><%= link_to contact.retiree_email.sub(',', '<br>').html_safe, "mailto:#{contact.retiree_email}" %></td>
                           </tr>
                         <% end %>
                         <% if contact.retiree_fax_dsn %>

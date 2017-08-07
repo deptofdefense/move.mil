@@ -3,6 +3,8 @@ class CustomerServiceController < ApplicationController
     contacts
   end
 
+  private
+  
   def contacts
     @contacts ||= BranchOfServiceContact.all
   end
