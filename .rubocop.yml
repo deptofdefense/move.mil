@@ -19,3 +19,6 @@ Style/Documentation:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Style/SymbolArray:
+  Enabled: false

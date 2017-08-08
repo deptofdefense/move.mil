@@ -1,15 +1,17 @@
 RSpec.describe FaqsController, type: :request do
   describe 'GET #index' do
-    it 'returns HTTP success status code' do
-      get '/faqs'
+    context 'when navigating to the page' do
+      before do
+        get '/faqs'
+      end
 
-      expect(response).to have_http_status(:success)
-    end
+      it 'returns HTTP success status code' do
+        expect(response).to have_http_status(:success)
+      end
 
-    it 'renders the index template' do
-      get '/faqs'
-
-      assert_template 'index'
+      it 'renders the index template' do
+        assert_template 'index'
+      end
     end
 
     context 'when faqs exist' do

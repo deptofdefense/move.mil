@@ -2,6 +2,21 @@
   position: relative;
 }
 
+.carousel-item-single-page {
+  margin-bottom: 1.5rem;
+  text-align: right;
+
+  a {
+    font-size: $h5-font-size;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .carousel-item-content {
   margin: 0;
   padding: 0 3rem;

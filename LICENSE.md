@@ -7,6 +7,7 @@ This project uses a number of open source components whose licenses are noted be
 | [Brakeman](https://github.com/presidentbeef/brakeman) | © 2012 Twitter, Inc. | [MIT License](https://github.com/presidentbeef/brakeman/blob/master/MIT-LICENSE) |
 | [Byebug](https://github.com/deivid-rodriguez/byebug) | © [David Rodríguez](https://github.com/deivid-rodriguez) | [BSD 2-Clause License](https://github.com/deivid-rodriguez/byebug/blob/master/LICENSE) |
 | [factory_girl_rails](https://github.com/thoughtbot/factory_girl_rails) | © 2008–2013 [Joe Ferris](https://github.com/jferris) and [thoughtbot, inc.](https://thoughtbot.com) | [MIT License](https://github.com/thoughtbot/factory_girl_rails/blob/master/LICENSE) |
+| [FriendlyId](https://github.com/norman/friendly_id) | © 2008–2016 [Norman Clarke](https://github.com/norman) and contributors | [MIT License](https://github.com/norman/friendly_id/blob/master/MIT-LICENSE) |
 | [High Voltage](https://github.com/thoughtbot/high_voltage) | © 2010–2015 [thoughtbot, inc.](https://thoughtbot.com) | [MIT License](https://github.com/thoughtbot/high_voltage/blob/master/MIT-LICENSE) |
 | [html5shiv](https://github.com/afarkas/html5shiv) | © 2014 [Alexander Farkas](https://github.com/aFarkas) | [MIT License](https://github.com/aFarkas/html5shiv/blob/master/MIT%20and%20GPL2%20licenses.md)
 | [jQuery](http://jquery.com) | © [JS Foundation](https://js.foundation) and other contributors | [MIT License](https://github.com/jquery/jquery/blob/master/LICENSE.txt) |

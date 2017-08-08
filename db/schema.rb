@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 20170804181703) do
     t.text "title", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "slug", null: false
   end
 
   add_foreign_key "tutorial_steps", "tutorials"

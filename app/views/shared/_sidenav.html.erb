@@ -44,8 +44,8 @@
       <%- end -%>
     </li>
     <li><%= link_to 'Entitlements', page_path('entitlements'), class: current_page?(id: 'entitlements') ? 'usa-current' : nil %></li>
-    <li><%= link_to 'Tutorials', tutorials_path, class: current_page?(tutorials_path) ? 'usa-current' : nil %></li>
-    <li><%= link_to 'Service-Specific Information', page_path('service-specific-information'), class: current_page?(id: 'service-specific-information') ? 'usa-current' : nil %></li>
+    <li><%= link_to 'Tutorials', tutorials_path, class: controller_name == 'tutorials' ? 'usa-current' : nil %></li>
+    <li><%= link_to 'Service-Specific Information', service_specific_information_path, class: controller_name == 'service_specific_information' ? 'usa-current' : nil %></li>
     <li><%= link_to 'Tools & Resources', page_path('resources'), class: current_page?(id: 'resources') ? 'usa-current' : nil %></li>
   </ul>
 </aside>

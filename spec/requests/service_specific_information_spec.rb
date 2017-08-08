@@ -1,15 +1,21 @@
 RSpec.describe ServiceSpecificInformationController, type: :request do
   describe 'GET #index' do
-    it 'returns HTTP success status code' do
-      get '/service-specific-information'
+    context 'when navigating to the page' do
+      before do
+        get '/service-specific-information'
+      end
 
-      expect(response).to have_http_status(:success)
-    end
+      it 'returns HTTP success status code' do
+        expect(response).to have_http_status(:success)
+      end
 
-    it 'renders the index template' do
-      get '/service-specific-information'
+      it 'renders the index template' do
+        assert_template 'index'
+      end
 
-      assert_template 'index'
+      it 'highlights the Service-Specific Information navigation item' do
+        assert_select '.usa-sidenav-list .usa-current', text: 'Service-Specific Information'
+      end
     end
 
     context 'when service specific posts exist' do
