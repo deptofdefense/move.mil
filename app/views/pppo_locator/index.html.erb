@@ -1,0 +1,14 @@
+<%- @page_title = 'Personal Property Office Locator' -%>
+
+<div class="usa-grid usa-section usa-layout-docs">
+  <%= render 'shared/sidenav' %>
+
+  <div class="usa-width-three-fourths usa-layout-docs-main_content">
+    <h1><%= @page_title %></h1>
+
+    <div id="mapid"
+      data-marker-icon-path="<%= asset_path 'leaflet/dist/images/marker-icon.png' %>"
+      data-marker-icon-2x-path="<%= asset_path 'leaflet/dist/images/marker-icon-2x.png' %>"
+      data-marker-shadow-path="<%= asset_path 'leaflet/dist/images/marker-shadow.png' %>"></div>
+  </div>
+</div>

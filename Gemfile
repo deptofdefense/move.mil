@@ -22,6 +22,7 @@ gem 'uswds-rails', '~> 1.3'
 source 'https://rails-assets.org' do
   gem 'rails-assets-html5shiv', '3.7.3'
   gem 'rails-assets-jquery', '3.2.1'
+  gem 'rails-assets-leaflet', '1.2.0'
   gem 'rails-assets-owl-carousel2', '2.2.1'
 end
 
