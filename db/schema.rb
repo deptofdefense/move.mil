@@ -89,5 +89,13 @@ ActiveRecord::Schema.define(version: 20170814134530) do
     t.text "slug", null: false
   end
 
+  create_table "zip_code_tabulation_areas", force: :cascade do |t|
+    t.text "zipcode"
+    t.float "lat"
+    t.float "lon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "tutorial_steps", "tutorials"
 end

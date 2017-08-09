@@ -1,0 +1,2 @@
+class ZipCodeTabulationArea < ApplicationRecord
+end

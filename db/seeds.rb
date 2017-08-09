@@ -39,3 +39,13 @@ entitlements = YAML::load_file(Rails.root.join('db', 'seeds', 'entitlements.yml'
 entitlements.each do |entitlement|
   Entitlement.where(rank: entitlement['rank']).first_or_create(entitlement)
 end
+
+require 'csv'
+
+CSV.foreach(Rails.root.join('db', 'seeds', '2016_Gaz_zcta_national.txt'), headers: true, col_sep: "\t") do |zipcode|
+  z = ZipCodeTabulationArea.new
+  z.zipcode = zipcode['GEOID']
+  z.lat = zipcode['INTPTLAT']
+  z.lon = zipcode['INTPTLONG']
+  z.save
+end
