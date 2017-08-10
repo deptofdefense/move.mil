@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'csv'
+
 tutorials = YAML::load_file(Rails.root.join('db', 'seeds', 'tutorials.yml'))
 
 tutorials.each do |tutorial|
@@ -39,8 +41,6 @@ entitlements = YAML::load_file(Rails.root.join('db', 'seeds', 'entitlements.yml'
 entitlements.each do |entitlement|
   Entitlement.where(rank: entitlement['rank']).first_or_create(entitlement)
 end
-
-require 'csv'
 
 CSV.foreach(Rails.root.join('db', 'seeds', '2016_Gaz_zcta_national.txt'), headers: true, col_sep: "\t") do |zipcode|
   z = ZipCodeTabulationArea.new
