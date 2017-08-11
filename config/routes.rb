@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :entitlements, only: :index
   resources :faqs, only: :index
   resources :tutorials, only: [:index, :show]
 

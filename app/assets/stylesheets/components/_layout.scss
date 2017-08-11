@@ -8,12 +8,23 @@
 
 .usa-layout-docs-main_content {
   h1 {
-    border-bottom: 2px solid $color-primary-darker;
-    color: $color-primary;
+    border-bottom: 0.25rem solid $color-primary-darker;
+    color: $color-primary-darker;
     font-family: $font-sans;
-    font-size: 3.8rem;
-    font-weight: 600;
-    padding-bottom: 2.8rem;
+    font-size: $h1-font-size;
+    padding-bottom: $site-margins;
+  }
+
+  h2 {
+    border-bottom: 0.125rem solid $color-primary-darker;
+    color: $color-primary-darker;
+    font-size: $h3-font-size;
+    margin-top: $site-margins;
+    padding-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-family: $font-sans;
   }
 
   h6 {
