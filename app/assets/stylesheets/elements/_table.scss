@@ -10,6 +10,30 @@ table tbody {
 }
 
 .entitlements-table {
+  td {
+    vertical-align: top;
+
+    + td {
+      text-align: right;
+      width: 33%;
+
+      @include media($nav-width) {
+        width: 25%;
+      }
+    }
+  }
+
+  b {
+    display: block;
+    font-size: $h3-font-size;
+  }
+
+  i {
+    font-size: $h6-font-size;
+  }
+}
+
+.special-items-table {
   th i {
     display: block;
     font-size: $h5-font-size;
