@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170804181703) do
+ActiveRecord::Schema.define(version: 20170814134530) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,17 @@ ActiveRecord::Schema.define(version: 20170804181703) do
     t.text "retiree_fax_tollfree"
     t.text "retiree_email"
     t.text "retiree_post"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "entitlements", force: :cascade do |t|
+    t.string "rank", null: false
+    t.integer "total_weight_self", null: false
+    t.integer "total_weight_self_plus_dependents"
+    t.integer "pro_gear_weight"
+    t.integer "pro_gear_weight_spouse"
+    t.text "slug"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

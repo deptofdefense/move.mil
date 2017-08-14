@@ -1,0 +1,122 @@
+- rank: Service Academy Cadets/Midshipmen
+  total_weight_self: 350
+
+- rank: Aviation Cadets
+  total_weight_self: 7000
+  total_weight_self_plus_dependents: 8000
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
+
+- rank: E-1
+  total_weight_self: 5000
+  total_weight_self_plus_dependents: 8000
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
+
+- rank: E-2
+  total_weight_self: 5000
+  total_weight_self_plus_dependents: 8000
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
+
+- rank: E-3
+  total_weight_self: 5000
+  total_weight_self_plus_dependents: 8000
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
+
+- rank: E-4
+  total_weight_self: 7000
+  total_weight_self_plus_dependents: 8000
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
+
+- rank: E-5
+  total_weight_self: 7000
+  total_weight_self_plus_dependents: 9000
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
+
+- rank: E-6
+  total_weight_self: 8000
+  total_weight_self_plus_dependents: 11000
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
+
+- rank: E-7
+  total_weight_self: 11000
+  total_weight_self_plus_dependents: 13000
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
+
+- rank: E-8
+  total_weight_self: 12000
+  total_weight_self_plus_dependents: 14000
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
+
+- rank: E-9
+  total_weight_self: 13000
+  total_weight_self_plus_dependents: 15000
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
+
+- rank: O-1/W-1/Service Academy Graduates
+  total_weight_self: 10000
+  total_weight_self_plus_dependents: 12000
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
+
+- rank: O-2/W-2
+  total_weight_self: 12500
+  total_weight_self_plus_dependents: 13500
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
+
+- rank: O-3/W-3
+  total_weight_self: 13000
+  total_weight_self_plus_dependents: 14500
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
+
+- rank: O-4/W-4
+  total_weight_self: 14000
+  total_weight_self_plus_dependents: 17500
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
+
+- rank: O-5/W-5
+  total_weight_self: 16000
+  total_weight_self_plus_dependents: 17500
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
+
+- rank: O-6
+  total_weight_self: 18000
+  total_weight_self_plus_dependents: 18000
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
+
+- rank: O-7
+  total_weight_self: 18000
+  total_weight_self_plus_dependents: 18000
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
+
+- rank: O-8
+  total_weight_self: 18000
+  total_weight_self_plus_dependents: 18000
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
+
+- rank: O-9
+  total_weight_self: 18000
+  total_weight_self_plus_dependents: 18000
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
+
+- rank: O-10
+  total_weight_self: 18000
+  total_weight_self_plus_dependents: 18000
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
