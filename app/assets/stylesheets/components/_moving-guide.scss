@@ -3,12 +3,11 @@
     padding-top: 2rem;
 
     img {
-      display: none;
-      margin-right: 2em;
-      width: 6em;
+      width: 3em;
 
       @include media($medium-screen) {
-        display: block;
+        margin-right: 2em;
+        width: 6em
       }
     }
 
