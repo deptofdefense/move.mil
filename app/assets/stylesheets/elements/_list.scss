@@ -27,7 +27,9 @@
 }
 
 .two-column-list {
-  columns: 2;
+  @include media($medium-screen) {
+    columns: 2;
+  }
 
   li {
     margin-bottom: 0;
