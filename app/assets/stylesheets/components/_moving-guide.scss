@@ -33,12 +33,12 @@
     font-weight: $font-normal;
     overflow: auto;
     padding: 0.7rem 1.5rem 0.7rem 1.5rem;
-    width: 1.75rem;
 
     @include media($medium-screen) {
       display: table-cell;
       padding: 1.5rem;
       text-align: center;
+      width: 1.75rem;
     }
 
     img {
