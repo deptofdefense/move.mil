@@ -10,6 +10,7 @@ source 'https://rails-assets.org'
 
 gem 'active_link_to', '~> 1.0', '>= 1.0.5'
 gem 'friendly_id', '~> 5.2', '>= 5.2.1'
+gem 'geokit-rails', '~> 2.3.0'
 gem 'high_voltage', '~> 3.0'
 gem 'pg', '~> 0.21.0'
 gem 'puma', '~> 3.10'
