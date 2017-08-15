@@ -33,6 +33,7 @@
     font-weight: $font-normal;
     overflow: auto;
     padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+    width: 1.75rem;
 
     @include media($medium-screen) {
       display: table-cell;
@@ -49,8 +50,8 @@
       @include media($medium-screen) {
         float: none;
         height: 75px;
-        margin: 0 1.6rem;
-        width: 75px;
+        margin: 0;
+        width: 100%;
       }
     }
   }
