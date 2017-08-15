@@ -1,0 +1,44 @@
+.moving-guide {
+  .location-section {
+    padding-top: 2rem;
+
+    img {
+      display: none;
+      margin-right: 2em;
+      width: 6em;
+
+      @include media($medium-screen) {
+        display: block;
+      }
+    }
+
+    h3 {
+      margin: 0;
+
+      & + p {
+        margin-top: 0.25rem;
+      }
+    }
+  }
+
+  dt {
+    img {
+      margin-right: 0.7rem;
+      vertical-align: middle;
+    }
+  }
+
+  h2 {
+    border-bottom: 1px solid $color-gray;
+    color: $color-primary;
+    font-size: 2rem;
+  }
+
+  th {
+    text-align: center;
+
+    img {
+      margin: 2rem 2rem 1rem 2rem;
+    }
+  }
+}

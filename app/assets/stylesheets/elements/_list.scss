@@ -25,3 +25,12 @@
     }
   }
 }
+
+.two-column-list {
+  columns: 2;
+
+  li {
+    margin-bottom: 0;
+    margin-left: 2rem;
+  }
+}

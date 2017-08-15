@@ -1,6 +1,6 @@
 .customer-service-section {
   padding: 2rem 0;
-  
+
   & + & {
     border-top: 1px solid $color-gray;
     padding-top: 3rem;
@@ -33,7 +33,7 @@
       span {
         display: block;
       }
-      
+
       span {
         margin-top: 1.7rem;
         padding-left: 0;
@@ -75,8 +75,4 @@
     padding: 0;
     word-wrap: break-word;
   }
-}
-
-.two-column-list {
-  columns: 2;
 }
