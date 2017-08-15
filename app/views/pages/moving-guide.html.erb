@@ -48,18 +48,14 @@
     <p>Once you have figured out the type of move (<%= abbr_tag('pcs') %> or <%= abbr_tag('tdy') %>) and your move location (<%= abbr_tag('conus') %> or <%= abbr_tag('oconus') %>), you will have some choices to make regarding how your belongings are shipped to your new destination. Remember, you can split up your total allowable weight into multiple shipments. For example, most service members doing a <%= abbr_tag('pcs') %> <%= abbr_tag('conus') %> move will have both a <%= abbr_tag('ppm') %> (“do it yourself”) shipment of their prized, valuable possessions and an <%= abbr_tag('hhg') %> (“Household Goods") shipment using a government-furnished moving company for the bulk of their belongings.</p>
     <p>If you have any questions, your local personal property office is the place to go for help figuring out how to break up your weight into various shipments.</p>
 
+    <h3>Move Types</h3>
+
     <table>
-      <thead>
-        <tr>
-          <th scope="col">Move Type</th>
-          <th scope="col">Description</th>
-        </tr>
-      </thead>
       <tbody>
         <tr>
-          <th scope="row"><%= image_tag 'ppm.svg', width: '75px', alt: 'P P M', role: 'presentation' %>Personally-Procured Move (PPM)</th>
+          <th scope="row"><%= image_tag 'ppm.svg', alt: 'P P M', role: 'presentation' %><strong>Personally Procured Move</strong> (PPM)</th>
           <td>
-            <p>Think of a personally-procured move (PPM) as a “Do-It-Yourself” move within the military. You will be responsible, for either packing/unpacking and transporting your belongings to your new location yourself or hiring help outside of the government to assist.</p>
+            <p>Think of a personally procured move (PPM) as a “Do-It-Yourself” move within the military. You will be responsible, for either packing/unpacking and transporting your belongings to your new location yourself or hiring help outside of the government to assist.</p>
             <p>The government will pay you 95% of their cost to hire a moving company on your behalf. If you can move your belongings yourself for less money, you get to keep the difference.</p>
             <p><%= abbr_tag('ppm') %>s are especially recommended for any irreplaceable valuables you own (i.e. family heirlooms, photos, important documents, etc.) or for necessities you will need immediately at your new location while waiting for your transporter to arrive.</p>
 
@@ -93,7 +89,7 @@
           </td>
         </tr>
         <tr>
-          <th scope="row"><%= image_tag 'hhg.svg', width: '75px', alt: 'Household Goods', role: 'presentation' %>Household Goods Moves (HHG)</th>
+          <th scope="row"><%= image_tag 'hhg.svg', alt: 'Household Goods', role: 'presentation' %><strong>Household Goods Moves</strong> (HHG)</th>
           <td>
             <p>A Household Goods “HHG” move is a move completed by a government-furnished moving company, also called a Transportation Service Provider (TSP). During a HHG move, your transporter is responsible for packing all of your belongings and transporting them to your new location. If anything becomes lost or broken during your move, you can work with your transporter  to recieve financial compensation for your items.</p>
 
@@ -127,7 +123,7 @@
           </td>
         </tr>
         <tr>
-          <th scope="row"><%= image_tag 'unaccompanied_baggage.svg', width: '75px', alt: 'Unaccompanied Baggage', role: 'presentation' %>Unaccompanied Baggage (UG)</th>
+          <th scope="row"><%= image_tag 'unaccompanied_baggage.svg', width: '75px', alt: 'Unaccompanied Baggage', role: 'presentation' %><strong>Unaccompanied Baggage</strong> (UG)</th>
           <td>
             <p>Unaccompanied baggage (UG) is an option for shipments where a small subset of your total weight allowance is expedited to your new location, typically while you wait for the rest of your belongings to arrive at a later date.</p>
 
@@ -161,7 +157,7 @@
           </td>
         </tr>
         <tr>
-          <th scope="row"><%= image_tag 'pov.svg', width: '75px', alt: 'Personal Vehicle', role: 'presentation' %>Privately-Owned Vehicle (POV) Shipment</th>
+          <th scope="row"><%= image_tag 'pov.svg', alt: 'Personal Vehicle', role: 'presentation' %><strong>Privately-Owned Vehicle</strong> (POV) Shipment</th>
           <td>
             <p>In general, if you are traveling overseas (<%= abbr_tag('oconus') %>), the government will pay to ship one <%= abbr_tag('pov') %> to your new location, but you will need to arrange for it to be dropped off at the designated drop-off center before departing. (Note: There may be some overseas bases, such as in Japan, where it is not possible to have a car.)</p>
             <p>If you are travelling within the 48 contiguous states, the government requires you to drive your car to your new location or to pay for shipment at your own expense. The government will reimburse you for the mileage as well as any toll expenses you encounter along the way, so be sure to save reciepts/tickets.</p>
@@ -197,7 +193,7 @@
           </td>
         </tr>
         <tr>
-          <th scope="row"><%= image_tag 'nontemp_storage.svg', width: '75px', alt: 'N T S', role: 'presentation' %>Non-Temporary Storage (NTS)</th>
+          <th scope="row"><%= image_tag 'nontemp_storage.svg', alt: 'N T S', role: 'presentation' %><strong>Non-Temporary Storage</strong> (NTS)</th>
           <td>
             <p>Non-temporary storage (NTS) is long-term storage of your belongings used generally in lieu of shipping your items to your new duty station. Expect the storage location to be located near the origin (pickup) location where items may remain for the duration of your tour. When you return and have established a new address, you can request retrieval and shipment of your stored belongings.</p>
 

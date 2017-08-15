@@ -27,17 +27,39 @@
     }
   }
 
-  h2 {
-    border-bottom: 1px solid $color-gray;
-    color: $color-primary;
-    font-size: 2rem;
-  }
-
   th {
-    text-align: center;
+    display: block;
+    font-size: $lead-font-size;
+    font-weight: $font-normal;
+    overflow: auto;
+    padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+
+    @include media($medium-screen) {
+      display: table-cell;
+      padding: 1.5rem;
+      text-align: center;
+    }
 
     img {
-      margin: 2rem 2rem 1rem 2rem;
+      float: left;
+      height: 42px;
+      margin: 0 1.6rem 0 0;
+      width: 42px;
+
+      @include media($medium-screen) {
+        float: none;
+        height: 75px;
+        margin: 0 1.6rem;
+        width: 75px;
+      }
+    }
+  }
+
+  td {
+    display: block;
+
+    @include media($medium-screen) {
+      display: table-cell;
     }
   }
 }
