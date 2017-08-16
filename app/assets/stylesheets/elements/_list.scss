@@ -25,3 +25,14 @@
     }
   }
 }
+
+.two-column-list {
+  @include media($medium-screen) {
+    columns: 2;
+  }
+
+  li {
+    margin-bottom: 0;
+    margin-left: 2rem;
+  }
+}

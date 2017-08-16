@@ -1,0 +1,66 @@
+.moving-guide {
+  .location-section {
+    padding-top: 2rem;
+
+    img {
+      width: 3em;
+
+      @include media($medium-screen) {
+        margin-right: 2em;
+        width: 6em
+      }
+    }
+
+    h3 {
+      margin: 0;
+
+      & + p {
+        margin-top: 0.25rem;
+      }
+    }
+  }
+
+  dt {
+    img {
+      margin-right: 0.7rem;
+      vertical-align: middle;
+    }
+  }
+
+  th {
+    display: block;
+    font-size: $lead-font-size;
+    font-weight: $font-normal;
+    overflow: auto;
+    padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+
+    @include media($medium-screen) {
+      display: table-cell;
+      padding: 1.5rem;
+      text-align: center;
+      width: 1.75rem;
+    }
+
+    img {
+      float: left;
+      height: 42px;
+      margin: 0 1.6rem 0 0;
+      width: 42px;
+
+      @include media($medium-screen) {
+        float: none;
+        height: 75px;
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  td {
+    display: block;
+
+    @include media($medium-screen) {
+      display: table-cell;
+    }
+  }
+}
