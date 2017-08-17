@@ -88,24 +88,18 @@
     }
   });
 
-  var $anchor_current;
-  var stripped_url = document.location.toString().split("#");
-  if (stripped_url.length > 1) {
+  var $currentAnchor;
+  if (location.hash.length) {
     // Does an anchor with the correct id exist with this anchor value?
-    $anchor_current = $('[id="tab-' + stripped_url[1] + '"]:first');
+    $currentAnchor = $('a#tab-' + location.hash.replace('#', ''));
   }
 
-  if ($anchor_current && $anchor_current.length == 1) {
-    // Show the tabPanel specified by the anchor
-    $anchor_current.trigger('click');
-  } else {
-    // Show the first tabPanel
-    $tabs.find('.tabPanel:first').attr('aria-hidden', 'false').show();
-
-    // Set state for the first tabsList li
-    $tabsList.find('li:first').addClass('current').find(' > a').attr({
-      'aria-selected': true,
-      tabindex: 0
-    });
+  if (!$currentAnchor || $currentAnchor.length != 1) {
+    // Find the anchor for the first tab
+    $currentAnchor = $tabsList.find('li:first a');
   }
+
+  // Show the selected tabPanel
+  $currentAnchor.trigger('click');
+
 })(window, jQuery);
