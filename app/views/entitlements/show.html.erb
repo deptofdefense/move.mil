@@ -10,71 +10,7 @@
 
     <p>Moving allowances are generally based on the overall weight of your household goods. Any overages on your approved weight will be your financial responsibility, so work hard to make sure you stay within your weight allowance.</p>
 
-    <table class="entitlements-table">
-      <tbody>
-        <tr>
-          <td>
-            <h3>Total Weight of Household Goods</h3>
-
-            <ul>
-              <li>Excludes Pro-Gear (items used professionally for work) and your <%= abbr_tag('pov') %> vehicles (Primary Vehicles)</li>
-              <li>Using a <%= link_to 'weight estimation tool', '#TODO' %> can help you prepare for your move</li>
-            </ul>
-          </td>
-          <td>
-            <b><%= number_with_delimiter @entitlement.total_weight_self %> lbs.</b>
-          </td>
-        </tr>
-        <%- if @entitlement.total_weight_self_plus_dependents? -%>
-          <tr>
-            <td>
-              <h3>Total Weight of Household Goods (with dependents)</h3>
-
-              <ul>
-                <li>Excludes Pro-Gear (items used professionally for work) and your <%= abbr_tag('pov') %> vehicles (Primary Vehicles)</li>
-                <li>Using a <%= link_to 'weight estimation tool', '#TODO' %> can help you prepare for your move</li>
-              </ul>
-            </td>
-            <td>
-              <b><%= number_with_delimiter @entitlement.total_weight_self_plus_dependents %> lbs.</b>
-            </td>
-          </tr>
-        <%- end -%>
-        <%- if @entitlement.pro_gear_weight? -%>
-          <tr>
-            <td>
-              <h3>Service Member Pro-Gear (Work-related equipment &amp; gear)</h3>
-
-              <ul>
-                <li>Professional equipment must be completely separated the rest of your items so that they can be packed, marked, and weighed separately.</li>
-                <li><%= link_to 'What is considered pro-gear?', '#TODO' %></li>
-              </ul>
-            </td>
-            <td>
-              <b>+ <%= number_with_delimiter @entitlement.pro_gear_weight %> lbs.</b>
-              <i>(not included in total weight of household goods)</i>
-            </td>
-          </tr>
-        <%- end -%>
-        <%- if @entitlement.pro_gear_weight_spouse? -%>
-          <tr>
-            <td>
-              <h3>Spouse Pro-Gear (Work-related equipment &amp; gear)</h3>
-
-              <ul>
-                <li>Professional equipment must be completely separated from your spouses pro-gear and from rest of your family’s items. All of your pro-gear will be packed, marked, and weighed separately.</li>
-                <li>Spouses have the same limitations as the service member regarding what can be considered “Pro-Gear.” See the service member pro-gear section above for more details.</li>
-              </ul>
-            </td>
-            <td>
-              <b>+ <%= number_with_delimiter @entitlement.pro_gear_weight_spouse %> lbs.</b>
-              <i>(not included in total weight of household goods)</i>
-            </td>
-          </tr>
-        <%- end -%>
-      </tbody>
-    </table>
-
+    <%= render 'entitlements_table', entitlement: @entitlement %>
     <%= render 'special_item_information' %>
   </div>
 </div>

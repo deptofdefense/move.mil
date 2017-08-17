@@ -14,7 +14,39 @@
     <p>As questions arise, your Transportation Office (TO) can provide further information and generally is the best place to get help related to your move.</p>
 
     <%- if @entitlements.any? -%>
-      <ul>
+      <div id="entitlements-search" hidden>
+        <p>Enter your rank, dependency status, and move type to determine your moving allowance.</p>
+
+        <%= form_with model: Entitlement, url: search_entitlements_path, class: 'usa-form' do |form| %>
+          <%= form.label :rank, raw('1. Select your current <b>military pay grade</b>.') %>
+          <%= form.select :rank, options_from_collection_for_select(@entitlements, :rank, :rank), { include_blank: true }, { id: :entitlement_rank, required: true } %>
+
+          <%= form.label :dependency_status, raw('2. Select your <b>dependency status</b>.') %>
+          <%= form.select :dependency_status, [['Yes, I have dependents moving with me', true], ['No, I do not have dependents moving with me', false]], { include_blank: true }, { id: :entitlement_dependency_status, required: true } %>
+
+          <%= form.label :move_type, raw('3. Specify your <b>move type</b>.') %>
+          <%= form.select :move_type, [['Within the Continental United States (CONUS)', 'conus'], ['Outside of the Continental United States (OCONUS)', 'oconus']], { include_blank: true }, { id: :entitlement_move_type, required: true } %>
+
+          <button>View Results</button>
+        <% end %>
+
+        <section class="usa-section moving-allowances-section" id="entitlements-search-results-container" tabindex="-1">
+          <h2>Your Moving Allowance</h2>
+
+          <p>Moving allowances are generally based on the overall weight of your household goods. Any overages on your approved weight will be your financial responsibility, so work hard to make sure you stay within your weight allowance.</p>
+
+          <div id="entitlements-search-results" hidden></div>
+
+          <div class="usa-alert usa-alert-info" id="entitlements-search-alert">
+            <div class="usa-alert-body">
+              <h3 class="usa-alert-heading">Information Needed</h3>
+              <p class="usa-alert-text">Your moving allowances will appear here after providing your rank, dependency status, and move type in <a href="#moving-allowances-form">the form above</a>.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <ul id="entitlements-rank-list">
         <%- @entitlements.each do |entitlement| -%>
           <li><%= link_to entitlement.rank, entitlement_path(entitlement) %></li>
         <%- end -%>
