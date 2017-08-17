@@ -20,7 +20,7 @@ class EntitlementSearch
   end
 
   def valid?
-    search_params.permitted? && !dependency_status.blank? && !move_type.blank? && !rank.blank?
+    search_params.permitted? && dependency_status.present? && move_type.present? && rank.present?
   end
 
   private
