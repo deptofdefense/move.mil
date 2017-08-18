@@ -15,8 +15,8 @@ class EntitlementSearch
     search_params[:rank]
   end
 
-  def results
-    Entitlement.where(rank: rank)
+  def result
+    Entitlement.find_by(rank: rank)
   end
 
   def valid?

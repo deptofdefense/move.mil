@@ -31,19 +31,31 @@ RSpec.describe EntitlementsController, type: :request do
     end
 
     context 'when sending valid params' do
-      before do
-        post '/entitlements/search', params: { entitlement: { dependency_status: true, move_type: 'conus', rank: entitlement.rank } }, xhr: true
+      context 'and no results found' do
+        before do
+          post '/entitlements/search', params: { entitlement: { dependency_status: true, move_type: 'conus', rank: 'foo' } }, xhr: true
+        end
+
+        it 'returns HTTP not found status code' do
+          expect(response).to have_http_status(:not_found)
+        end
       end
 
-      it 'renders the entitlements table partial' do
-        assert_template partial: '_entitlements_table'
-      end
+      context 'and results found' do
+        before do
+          post '/entitlements/search', params: { entitlement: { dependency_status: true, move_type: 'conus', rank: entitlement.rank } }, xhr: true
+        end
 
-      it 'displays a summary of the requested search params' do
-        assert_select '.usa-unstyled-list' do
-          assert_select 'li:first-child b', text: 'E-1'
-          assert_select 'li:nth-child(2) b', text: 'Yes, I have dependents (spouse/children) that are authorized to move'
-          assert_select 'li:last-child b', text: 'CONUS'
+        it 'renders the entitlements table partial' do
+          assert_template partial: '_entitlements_table'
+        end
+
+        it 'displays a summary of the requested search params' do
+          assert_select '.usa-unstyled-list' do
+            assert_select 'li:first-child b', text: 'E-1'
+            assert_select 'li:nth-child(2) b', text: 'Yes, I have dependents (spouse/children) that are authorized to move'
+            assert_select 'li:last-child b', text: 'CONUS'
+          end
         end
       end
     end

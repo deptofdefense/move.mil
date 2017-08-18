@@ -17,14 +17,21 @@
 
         $.ajax({
           data: this.$form.serialize(),
+          error: this.handleAjaxError.bind(this),
           method: this.$form.attr('method'),
-          success: this.handleSearchResults.bind(this),
+          success: this.handleAjaxSuccess.bind(this),
           url: this.$form.attr('action')
         });
       }
     },
 
-    handleSearchResults: function(markup) {
+    handleAjaxError: function() {
+      this.$results.empty().attr('hidden', true);
+      this.$alert.removeAttr('hidden');
+      this.$resultsContainer.trigger('focus');
+    },
+
+    handleAjaxSuccess: function(markup) {
       this.$alert.attr('hidden', true);
       this.$results.html(markup).removeAttr('hidden');
       this.$resultsContainer.trigger('focus');
