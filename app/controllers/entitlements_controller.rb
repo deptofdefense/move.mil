@@ -1,11 +1,7 @@
 class EntitlementsController < ApplicationController
   def index
-    entitlements
-  end
-
-  def search
-    return redirect_to action: 'index' unless request.xhr? && entitlement_search.valid?
-    return render plain: '', status: :not_found unless entitlement_search.result
+    return entitlements unless request.xhr?
+    return render plain: '', status: :not_found unless entitlement_search.valid? && entitlement_search.result
 
     render partial: 'entitlements/entitlements_table', locals: { entitlement: entitlement_search.result }
   end

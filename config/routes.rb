@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  resources :entitlements, only: [:index, :show] do
-    post :search, on: :collection
-  end
-
+  resources :entitlements, only: [:index, :show]
   resources :tutorials, only: [:index, :show]
 
   get '/customer-service', to: 'customer_service#index', as: 'customer_service'

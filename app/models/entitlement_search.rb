@@ -26,6 +26,6 @@ class EntitlementSearch
   private
 
   def search_params
-    @search_params ||= @params.require(:entitlement).permit(:dependency_status, :move_type, :rank)
+    @search_params ||= @params.permit(:dependency_status, :move_type, :rank)
   end
 end
