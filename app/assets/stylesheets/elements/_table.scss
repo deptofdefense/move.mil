@@ -34,10 +34,42 @@ table tbody {
 }
 
 .special-items-table {
-  th i {
-    display: block;
-    font-size: $h5-font-size;
-    font-weight: $font-normal;
+  @media screen and (max-width: $medium-screen) {
+    td,
+    th {
+      border-top: none;
+      display: block;
+    }
+
+    th {
+      align-items: center;
+      display: flex;
+    }
+
+    tr:first-child th {
+      border-top: 1px solid $color-gray;
+    }
+
+    img {
+      margin-right: $site-margins-mobile;
+    }
+  }
+
+  th {
+    @include media($medium-screen) {
+      text-align: center;
+
+      img {
+        display: block;
+        margin: 0 auto 1rem auto;
+      }
+    }
+
+    i {
+      display: block;
+      font-size: $h5-font-size;
+      font-weight: $font-normal;
+    }
   }
 
   td h3 {
