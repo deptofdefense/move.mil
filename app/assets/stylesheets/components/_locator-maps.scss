@@ -1,3 +1,115 @@
 #mapid {
   height: 360px;
 }
+
+.locator-section {
+  padding-top: 2rem;
+
+  img {
+    width: 3em;
+
+    @include media($medium-screen) {
+      margin-right: 2em;
+      width: 6em
+    }
+  }
+
+  h3 {
+    margin: 0;
+
+    & + p {
+      margin-top: 0.25rem;
+    }
+  }
+}
+
+.usa-media_block {
+  margin: 2rem 0;
+}
+
+.location-search-section {
+  border-top: solid 1px $color-gray-medium;
+  padding: 2.5rem 0;
+}
+
+.location-search-mine {
+  display: inline-block;
+}
+
+.location-search-zipcode {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.location-search-result {
+  border: solid 1px #aaa7a7;
+  box-shadow: 0 4px 5px 0 rgba(131, 131, 131, 0.31);
+  margin-top: 2.7rem;
+
+  header {
+    font-size: 1.8rem;
+    padding: 0.5rem 0.8rem;
+
+    img {
+      margin-right: 0.4rem;
+      vertical-align: middle;
+    }
+  }
+
+  section {
+    display: table;
+    font-size: 1.5rem;
+    padding: 1.2rem;
+  }
+
+  .postit {
+    margin-bottom: 0.4rem;
+  }
+}
+
+.location-search-result-address {
+  display: inline-block;
+  margin-right: 1.1rem;
+  vertical-align: top;
+}
+
+.location-search-result-contact {
+  display: inline-block;
+}
+
+.location-search-result-info {
+  display: table-cell;
+  padding-right: 1.2rem;
+  width: 66.666666667%;
+}
+
+.location-search-result-hours {
+  border-left: solid 1px $color-black;
+  display: table-cell;
+  padding-left: 1.2rem;
+  vertical-align: top;
+  width: 33.333333333%;
+
+  table {
+    margin: 0;
+  }
+
+  td {
+    border: 0;
+    padding: 0;
+  }
+}
+
+.jppso-contact {
+  background: $color-cool-blue-lightest;
+  margin-top: 2.5rem;
+  padding: 1rem;
+}
+
+.pppo-result {
+  background: $color-cool-blue-lightest;
+}
+
+.weightscale-result {
+  background: #f7eede;
+}

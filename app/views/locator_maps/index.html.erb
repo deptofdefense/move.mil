@@ -1,4 +1,4 @@
-<%- @page_title = 'Personal Property Office Locator' -%>
+<%- @page_title = 'Locator Maps' -%>
 
 <div class="usa-grid usa-section usa-layout-docs">
   <%= render 'shared/sidenav' %>
@@ -6,9 +6,147 @@
   <div class="usa-width-three-fourths usa-layout-docs-main_content">
     <h1><%= @page_title %></h1>
 
+    <h2>Find local Transportation Offices (PPPO) and Truck Weight Scales.</h2>
+
+    <div class="location-search-types">
+      <div class="usa-media_block">
+        <%= image_tag 'locator/texticon_pppo.svg', alt: 'Transportation Offices', class: 'usa-media_block-img' %>
+        <div class="usa-media_block-body">
+          <strong>Transportation Offices</strong> are your customer service “store-front” of the moving process. In addition to providing information sessions about the moving process, they can also help with scheduling, changing delivery dates, and answering any other questions that come up during your move.
+        </div>
+      </div>
+
+      <div class="usa-media_block">
+        <%= image_tag 'locator/texticon_scales.svg', alt: 'Weight Scales', class: 'usa-media_block-img' %>
+        <div class="usa-media_block-body">
+          <strong>Truck Weight Scales</strong> are privately owned locations where you can take your vehicles to be weighed to receive required Personally Procured (PPM) “Do-It-Yourself” move weight tickets.
+        </div>
+      </div>
+    </div>
+
+    <div class="location-search-section">
+      <div class="location-search-mine">
+        <button onclick="getLocation()">Search My Location</button>or
+      </div>
+
+      <form class="usa-search usa-search-big location-search-zipcode">
+        <div role="search">
+          <label class="usa-sr-only" for="search-field-zip">Search by city, ZIP code, or installation</label>
+          <input id="search-field-zip" type="search" name="search" placeholder="Search by city, ZIP code, or installation">
+          <button type="submit">
+            <span class="usa-search-submit-text">Search</span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="usa-alert usa-alert-error" role="alert">
+      <div class="usa-alert-body">
+        <h3 class="usa-alert-heading">Location Error</h3>
+        <p class="usa-alert-text" id="location-error-body">Could not get your location.</p>
+      </div>
+    </div>
+
     <div id="mapid"
       data-marker-icon-path="<%= asset_path 'leaflet/dist/images/marker-icon.png' %>"
       data-marker-icon-2x-path="<%= asset_path 'leaflet/dist/images/marker-icon-2x.png' %>"
       data-marker-shadow-path="<%= asset_path 'leaflet/dist/images/marker-shadow.png' %>"></div>
+
+    <article class="location-search-result">
+      <header class="pppo-result">
+        <%= image_tag 'locator/texticon_pppo.svg', alt: 'Transportation Offices' %>
+        <strong>Meyer-Henderson Hall Distrbution Management Office</strong> <em>(1.2 miles away)</em>
+      </header>
+      <section>
+        <div class="location-search-result-info">
+          <div class="location-search-result-address">
+            <strong>Location:</strong><br>
+            Henderson Hall HQMC<br>
+            155 South Gate Rd, Bldg 29, Rm 302<br>
+            Arlington, VA 22214
+          </div>
+          <div class="location-search-result-contact">
+            <strong>Phone:</strong><br>
+            (703) - 614-7190/7191<br>
+            <br>
+            <strong>Email:</strong><br>
+            <%= mail_to "M_HNHL_HQBN_DMO@usmc.mil" %>
+          </div>
+          <div class="jppso-contact">
+            <strong>Regional Processing Office:</strong><br>
+            Ft. Belvoir Joint Personal Property Office<br>
+            Customer Service Line: <a href="tel:1-(800)-762-7186">1-(800)-762-7186</a><br>
+            *Open M-F 0800 - 1630<br>
+            Email: <%= mail_to "usarmy.belvoir.imcom.mbx.jppsowa@mail.mil" %>
+          </div>
+        </div>
+        <div class="location-search-result-hours">
+          <strong>Hours:</strong>
+          <table>
+            <tbody>
+              <tr>
+                <td>Monday-Friday</td>
+                <td>0730 - 1630</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>Closed</td>
+              </tr>
+              <tr>
+                <td>Federal Holidays</td>
+                <td>Closed</td>
+              </tr>
+            </tbody>
+          </table><br>
+          <strong>Services Offered:</strong><br>
+          <span class="postit">Walk-In Help</span><br>
+          <span class="postit">Moving Process Briefings</span>
+        </div>
+      </section>
+    </article>
+
+    <article class="location-search-result">
+      <header class="weightscale-result">
+        <%= image_tag 'locator/texticon_scales.svg', alt: 'Weight Scales' %>
+        <strong>Penske Weight Scale</strong> <em>(1.2 miles away)</em>
+      </header>
+      <section>
+        <div class="location-search-result-info">
+          <div class="location-search-result-address">
+            <strong>Location:</strong><br>
+            Henderson Hall HQMC<br>
+            155 South Gate Rd, Bldg 29, Rm 302<br>
+            Arlington, VA 22214
+          </div>
+          <div class="location-search-result-contact">
+            <strong>Phone:</strong><br>
+            (703) - 614-7190/7191<br>
+            <br>
+            <strong>Website:</strong><br>
+            <%= link_to "penske.com" %>
+          </div>
+        </div>
+        <div class="location-search-result-hours">
+          <strong>Hours:</strong>
+          <table>
+            <tbody>
+              <tr>
+                <td>Monday-Friday</td>
+                <td>0730 - 1630</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>Closed</td>
+              </tr>
+              <tr>
+                <td>Federal Holidays</td>
+                <td>Closed</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </article>
+
   </div>
 </div>
