@@ -1,21 +1,96 @@
 <h2>Special Item Information</h2>
 
-<ul>
-  <li><%= link_to 'Pets & Live Animals (including  birds, fish, reptiles, etc.)', '#pets-live-animals' %></li>
-  <li><%= link_to 'Firearms', '#firearms' %></li>
-  <li><%= link_to 'Alcohol', '#alcohol' %></li>
-  <li><%= link_to 'Consumable Items', '#consumable-items' %></li>
-  <li><%= link_to 'Household Appliances', '#household-appliances' %></li>
-  <li><%= link_to 'Flat-Panel TVs & Monitors', '#televisions-and-monitors' %></li>
-  <li><%= link_to 'Lawn Furniture', '#lawn-furniture' %></li>
-  <li><%= link_to raw("#{abbr_tag('pov')} (Primvary vehicles)"), '#privatey-owned-vehicle' %></li>
-  <li><%= link_to 'Motorcycles & Dirtbikes', '#motorcycles-and-dirtbikes' %></li>
-  <li><%= link_to raw("Spare #{abbr_tag('pov')} Parts"), '#spare-parts' %></li>
-  <li><%= link_to 'Utility Trailer', '#utility-trailer' %></li>
-  <li><%= link_to 'Misc. Sporting Vehicles, Equipment, and Single Occupant Ultra Vehicles (including Mopeds, Hang Gliders, Golf Carts, Snowmobiles, etc.)', '#miscellaneous-vehicles' %></li>
-  <li><%= link_to 'Boat or Personal Watercraft (Not primary residence)', '#boats-non-primary' %></li>
-  <li><%= link_to 'Mobile Home', '#mobile-home' %></li>
-  <li><%= link_to 'Boat or Personal Watercraft (Primary residence)', '#boats-primary' %></li>
+<ul class="special-items-navigation">
+  <li>
+    <%= link_to '#pets-live-animals' do %>
+      <%= image_tag 'icons/pets-blue.svg', alt: '', role: 'presentation' %>
+      Pets &amp; Live Animals <i>(including  birds, fish, reptiles, etc.)</i>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to '#firearms' do %>
+      <%= image_tag 'icons/firearm-blue.svg', alt: '', role: 'presentation' %>
+      Firearms
+    <% end %>
+  </li>
+  <li>
+    <%= link_to '#alcohol' do %>
+      <%= image_tag 'icons/alcohol-blue.svg', alt: '', role: 'presentation' %>
+      Alcohol
+    <% end %>
+  </li>
+  <li>
+    <%= link_to '#consumable-items' do %>
+      <%= image_tag 'icons/food-blue.svg', alt: '', role: 'presentation' %>
+      Consumable Items
+    <% end %>
+  </li>
+  <li>
+    <%= link_to '#household-appliances' do %>
+      <%= image_tag 'icons/household-appliances-blue.svg', alt: '', role: 'presentation' %>
+      Household Appliances
+    <% end %>
+  </li>
+  <li>
+    <%= link_to '#televisions-and-monitors' do %>
+      <%= image_tag 'icons/television-blue.svg', alt: '', role: 'presentation' %>
+      Flat-Panel TVs &amp; Monitors
+    <% end %>
+  </li>
+  <li>
+    <%= link_to '#lawn-furniture' do %>
+      <%= image_tag 'icons/lawn-furniture-blue.svg', alt: '', role: 'presentation' %>
+      Lawn Furniture
+    <% end %>
+  </li>
+  <li>
+    <%= link_to '#privately-owned-vehicle' do %>
+      <%= image_tag 'icons/pov-blue.svg', alt: '', role: 'presentation' %>
+      <%= abbr_tag('pov') %> (Primary vehicles)
+    <% end %>
+  </li>
+  <li>
+    <%= link_to '#motorcycles-and-dirtbikes' do %>
+      <%= image_tag 'icons/motorcycle-blue.svg', alt: '', role: 'presentation' %>
+      Motorcycles &amp; Dirtbikes
+    <% end %>
+  </li>
+  <li>
+    <%= link_to '#spare-parts' do %>
+      <%= image_tag 'icons/spare-parts-blue.svg', alt: '', role: 'presentation' %>
+      Spare <%= abbr_tag('pov') %> Parts
+    <% end %>
+  </li>
+  <li>
+    <%= link_to '#utility-trailer' do %>
+      <%= image_tag 'icons/trailer-blue.svg', alt: '', role: 'presentation' %>
+      Utility Trailer
+    <% end %>
+  </li>
+  <li class="double-wide">
+    <%= link_to '#miscellaneous-vehicles' do %>
+      <%= image_tag 'icons/sporting-vehicles-blue.svg', alt: '', role: 'presentation' %>
+      Misc. Sporting Vehicles, Equipment, and Single Occupant Ultra Vehicles <i>(including Mopeds, Hang Gliders, Golf Carts, Snowmobiles, etc.)</i>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to '#boats-non-primary' do %>
+      <%= image_tag 'icons/boat-blue.svg', alt: '', role: 'presentation' %>
+      Boat or Personal Watercraft (Not primary residence)
+    <% end %>
+  </li>
+  <li>
+    <%= link_to '#mobile-home' do %>
+      <%= image_tag 'icons/mobile-home-blue.svg', alt: '', role: 'presentation' %>
+      Mobile Home
+    <% end %>
+  </li>
+  <li>
+    <%= link_to '#boats-primary' do %>
+      <%= image_tag 'icons/boat-blue.svg', alt: '', role: 'presentation' %>
+      Boat or Personal Watercraft (Primary residence)
+    <% end %>
+  </li>
 </ul>
 
 <table class="special-items-table">
