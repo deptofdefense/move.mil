@@ -7,14 +7,10 @@ class EntitlementsController < ApplicationController
   end
 
   def show
-    entitlement
+    @entitlement = Entitlement.find(params[:id])
   end
 
   private
-
-  def entitlement
-    @entitlement ||= Entitlement.find(params[:id])
-  end
 
   def entitlement_search
     @entitlement_search ||= EntitlementSearch.new(params)
