@@ -4,6 +4,7 @@ This project uses a number of open source components whose licenses are noted be
 
 | Project | Copyright | License |
 |---------|-----------|---------|
+| [active_link_to](https://github.com/comfy/active_link_to) | © 2009–2017 [Oleg Khabarov](https://github.com/GBH) | [MIT License](https://github.com/comfy/active_link_to/blob/master/LICENSE) |
 | [Brakeman](https://github.com/presidentbeef/brakeman) | © 2012 Twitter, Inc. | [MIT License](https://github.com/presidentbeef/brakeman/blob/master/MIT-LICENSE) |
 | [Byebug](https://github.com/deivid-rodriguez/byebug) | © [David Rodríguez](https://github.com/deivid-rodriguez) | [BSD 2-Clause License](https://github.com/deivid-rodriguez/byebug/blob/master/LICENSE) |
 | [factory_girl_rails](https://github.com/thoughtbot/factory_girl_rails) | © 2008–2013 [Joe Ferris](https://github.com/jferris) and [thoughtbot, inc.](https://thoughtbot.com) | [MIT License](https://github.com/thoughtbot/factory_girl_rails/blob/master/LICENSE) |
