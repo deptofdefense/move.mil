@@ -1,51 +1,23 @@
 <aside class="usa-width-one-fourth usa-layout-docs-sidenav">
   <ul class="usa-sidenav-list">
     <li>
-      <%= link_to 'Moving with the Military', page_path('moving-guide'), class: params[:id].try(:include?, 'moving-guide') ? 'usa-current' : nil %>
+      <%= active_link_to 'Moving with the Military', page_path('moving-guide'), class_active: 'usa-current' %>
 
-      <%- if params[:id].try(:include?, 'moving-guide') -%>
+      <%- if is_active_link?(page_path('moving-guide')) -%>
         <ul class="usa-sidenav-sub_list">
-          <li>
-            <%= link_to page_path('moving-guide/conus'), class: current_page?(id: 'moving-guide/conus') ? 'usa-current' : nil do %>
-              <i>What to expect…</i> <%= abbr_tag('conus') %> <%= abbr_tag('pcs') %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to page_path('moving-guide/oconus'), class: current_page?(id: 'moving-guide/oconus') ? 'usa-current' : nil do %>
-              <i>What to expect…</i> <%= abbr_tag('oconus') %> <%= abbr_tag('pcs') %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to page_path('moving-guide/tdy'), class: current_page?(id: 'moving-guide/tdy') ? 'usa-current' : nil do %>
-              <i>What to expect…</i> <%= abbr_tag('tdy') %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to page_path('moving-guide/retirees-separatees'), class: current_page?(id: 'moving-guide/retirees-separatees') ? 'usa-current' : nil do %>
-              <i>What to expect…</i> Retirees/Separatees
-            <% end %>
-          </li>
-          <li>
-            <%= link_to page_path('moving-guide/civilians'), class: current_page?(id: 'moving-guide/civilians') ? 'usa-current' : nil do %>
-              <i>What to expect…</i> Civilians
-            <% end %>
-          </li>
-          <li>
-            <%= link_to page_path('moving-guide/tips'), class: current_page?(id: 'moving-guide/tips') ? 'usa-current' : nil do %>
-              Tips
-            <% end %>
-          </li>
-          <li>
-            <%= link_to page_path('moving-guide/nightmare-moves'), class: current_page?(id: 'moving-guide/nightmare-moves') ? 'usa-current' : nil do %>
-              Nightmare Moves
-            <% end %>
-          </li>
+          <li><%= active_link_to raw("<i>What to expect…</i> #{abbr_tag('conus')} #{abbr_tag('pcs')}"), page_path('moving-guide/conus'), class_active: 'usa-current' %></li>
+          <li><%= active_link_to raw("<i>What to expect…</i> #{abbr_tag('oconus')} #{abbr_tag('pcs')}"), page_path('moving-guide/oconus'), class_active: 'usa-current' %></li>
+          <li><%= active_link_to raw("<i>What to expect…</i> #{abbr_tag('tdy')}"), page_path('moving-guide/tdy'), class_active: 'usa-current' %></li>
+          <li><%= active_link_to raw('<i>What to expect…</i> Retirees/Separatees'), page_path('moving-guide/retirees-separatees'), class_active: 'usa-current' %></li>
+          <li><%= active_link_to raw('<i>What to expect…</i> Civilians'), page_path('moving-guide/civilians'), class_active: 'usa-current' %></li>
+          <li><%= active_link_to 'Tips', page_path('moving-guide/tips'), class_active: 'usa-current' %></li>
+          <li><%= active_link_to 'Nightmare Moves', page_path('moving-guide/nightmare-moves'), class_active: 'usa-current' %></li>
         </ul>
       <%- end -%>
     </li>
-    <li><%= link_to 'Entitlements', page_path('entitlements'), class: current_page?(id: 'entitlements') ? 'usa-current' : nil %></li>
-    <li><%= link_to 'Tutorials', tutorials_path, class: controller_name == 'tutorials' ? 'usa-current' : nil %></li>
-    <li><%= link_to 'Service-Specific Information', service_specific_information_path, class: controller_name == 'service_specific_information' ? 'usa-current' : nil %></li>
-    <li><%= link_to 'Tools & Resources', page_path('resources'), class: current_page?(id: 'resources') ? 'usa-current' : nil %></li>
+    <li><%= active_link_to 'Entitlements', page_path('entitlements'), class_active: 'usa-current' %></li>
+    <li><%= active_link_to 'Tutorials', tutorials_path, class_active: 'usa-current' %></li>
+    <li><%= active_link_to 'Service-Specific Information', service_specific_information_path, class_active: 'usa-current' %></li>
+    <li><%= active_link_to 'Tools & Resources', page_path('resources'), class_active: 'usa-current' %></li>
   </ul>
 </aside>
