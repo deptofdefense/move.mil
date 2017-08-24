@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170814134530) do
+ActiveRecord::Schema.define(version: 20170822203956) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,16 @@ ActiveRecord::Schema.define(version: 20170814134530) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "emails", force: :cascade do |t|
+    t.string "office_type"
+    t.bigint "office_id"
+    t.text "name"
+    t.text "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["office_type", "office_id"], name: "index_emails_on_office_type_and_office_id"
+  end
+
   create_table "entitlements", force: :cascade do |t|
     t.string "rank", null: false
     t.integer "total_weight_self", null: false
@@ -64,6 +74,33 @@ ActiveRecord::Schema.define(version: 20170814134530) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "phones", force: :cascade do |t|
+    t.string "office_type"
+    t.bigint "office_id"
+    t.text "name"
+    t.text "tel"
+    t.text "fax"
+    t.text "tel_dsn"
+    t.text "fax_dsn"
+    t.text "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["office_type", "office_id"], name: "index_phones_on_office_type_and_office_id"
+  end
+
+  create_table "ppsos", force: :cascade do |t|
+    t.text "name"
+    t.text "address"
+    t.text "city"
+    t.text "state"
+    t.text "postal_code"
+    t.text "country"
+    t.float "latitude"
+    t.float "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "service_specific_posts", force: :cascade do |t|
     t.text "title"
     t.date "effective_at"
@@ -71,6 +108,21 @@ ActiveRecord::Schema.define(version: 20170814134530) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "transportation_offices", force: :cascade do |t|
+    t.bigint "ppso_id"
+    t.text "name"
+    t.text "address"
+    t.text "city"
+    t.text "state"
+    t.text "postal_code"
+    t.text "country"
+    t.float "latitude"
+    t.float "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ppso_id"], name: "index_transportation_offices_on_ppso_id"
   end
 
   create_table "tutorial_steps", force: :cascade do |t|
@@ -97,5 +149,6 @@ ActiveRecord::Schema.define(version: 20170814134530) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "transportation_offices", "ppsos"
   add_foreign_key "tutorial_steps", "tutorials"
 end

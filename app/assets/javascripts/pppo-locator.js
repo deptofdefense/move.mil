@@ -9,7 +9,8 @@ var mymap;
   if (!$mapid.length)
     return;
 
-  mymap = L.map('mapid').setView([51.505, -0.09], 12);
+  // start centered on CONUS
+  mymap = L.map('mapid').setView([38.0, -97.0], 4);
 
   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
@@ -22,9 +23,11 @@ var mymap;
       shadowUrl: $mapid.data('markerShadowPath')
   });
 
+  /*
   L.marker([51.5, -0.09], {icon: myIcon}).addTo(mymap)
     .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
     .openPopup();
+    */
 
   if (!navigator.geolocation) {
     // Geolocation API not supported by this browser
