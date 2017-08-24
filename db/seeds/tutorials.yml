@@ -54,25 +54,25 @@
     - image_path: tutorials/schedule-a-move-01.png
       content: >
         <p>Scheduling your move is called “Self Counseling” in DPS. First, log into ETA, and choose DPS from your list of approved applications.</p>
+        <p><b>Pro Tip:</b> Turn off your pop-up blocker, otherwise the DPS window won’t be able to open.</p>
     - image_path: tutorials/schedule-a-move-02.png
       content: >
-        <p>On the DPS homepage, select “Self Counsel” to begin your application! <b>Pro Tip:</b> You should have a copy of your Orders, pick-up and delivery information, as well as information about your dependents and Power of Attorney if you need one.</p>
+        <p>On the DPS homepage, select “Self Counsel” to begin your application. <b>Pro Tip:</b> You should have a copy of your Orders, pick-up and delivery information, as well as information about your dependents and Power of Attorney if you need one.</p>
     - image_path: tutorials/schedule-a-move-03.png
       content: >
         <p>Scroll down to find the Customer Information page. During this process, if you find a blank screen, don’t worry - just scroll down to find the information you’re looking for.</p>
     - image_path: tutorials/schedule-a-move-04.png
       content: >
-        <p>You’ll find an over view of the Counseling Process, but to get to the first step, you’ll need to click on the Customer Information button on Counseling Menu on the left side of the page.</p>
+        <p>You’ll find an overview of the Counseling Process, but to get to the first step, you’ll need to click on the Customer Information button in the Counseling Menu on the left side of the page. <b>Pro Tip:</b> If you’ve moved before, DPS will save your information so that it’s pre-poulated here, and you won’t have to fill it out again.</p>
     - image_path: tutorials/schedule-a-move-05.png
       content: >
-        <p>Fill out your Customer Information Permanent Contact Address. You can check your progress in the Counseling Menu on the left side of the page.</p>
-        <p><b>Pro Tip:</b> The “Permanent Contact Address” is the place where you’re living right now. This information is saved in DPS so you don’t have to fill it out each time you schedule a move.</p>
+        <p>Fill out your Customer Information and Permanent Contact Address. The “Permanent Contact Address” is the place where you’re living right now. This information is saved in DPS so you don’t have to fill it out each time you schedule a move.</p>
+        <p><b>Pro Tip:</b> You can check your progress in the Counseling Menu on the left side of the page.</p>
         <p>CONUS stands for Continental United States</p>
         <p>OCONUS stands for Outside Continental United States</p>
     - image_path: tutorials/schedule-a-move-06.png
       content: >
-        <p>Enter an Emergency Contact who will be traveling or moving with you. This person will have access to shipment status, and information.</p>
-        <p><b>Pro Tip:</b> A Letter of Authorization is</p>
+        <p>Enter an Emergency Contact who will be traveling or moving with you. This person will have access to shipment status, and information. <b>Pro Tip:</b> A Letter of Authorization allows you to give another person permission to act on your behalf. Only the service member who has official orders can write this letter of authorization.</p>
     - image_path: tutorials/schedule-a-move-07.png
       content: >
         <p>Here, indicate your rank, and whether or not you’re allowed PBP&E. This information allows DPS to calculate your shipment weight allowance, if it wasn’t part of your orders.</p>
@@ -83,7 +83,7 @@
         <p>Next, enter the address you are leaving, and your new address.</p>
     - image_path: tutorials/schedule-a-move-09.png
       content: >
-        <p>Specify your authorized Order Type, and upload a copy of your Order document.</p>
+        <p>Specify your authorized Order Type, and upload a copy of your Order document. Create your shipment based on your orders by first selecting the type. <b>Pro Tip:</b> Can’t find your type? Check out the category "Various" to see miscellaneous move types.</p>
     - image_path: tutorials/schedule-a-move-10.png
       content: >
         <p>Next, enter your new Duty Station and indicate whether or not you’re moving with dependents (including a spouse).</p>
@@ -94,14 +94,14 @@
     - image_path: tutorials/schedule-a-move-12.png
       content: >
         <p>The Order Summary allows you to review and certify the information you entered is accurate.</p>
-        <p><b>Pro Tip:</b> Your weight allowance is listed here in the second paragraph!</p>
+        <p><b>Pro Tip:</b> Your weight allowance is listed here in the second paragraph.</p>
     - image_path: tutorials/schedule-a-move-13.png
       content: >
-        <p>Create your shipment based on your orders by first selecting the type.</p>
-        <p><b>Pro Tip:</b> Can’t find your type? Check out the category “Various” to see miscellaneous move types.</p>
+        <p>Now that you’ve entered your Orders information, you must “Create New Shipment” specific for those orders. Select the type of shipment you want to create, like “HHG,” and specify whether or not it will be a Personally Procured Move (PPM).</p>
+        <p><b>Pro Tip:</b> You can create more than one type of shipment per Order. For example, you can schedule an HHG shipment for the majority of your belongings, and an additional PPM shipment for the ones you’ll move yourself in your car.</p>
     - image_path: tutorials/schedule-a-move-14.png
       content: >
-        <p>If you chose Household Goods (HHG) for example, you’ll get definitions and helpful information about that type of shipment.</p>
+        <p>Then you’ll get some helpful information about a Household Goods (HHG) move. Later on, there will be PPM specific information.</p>
     - image_path: tutorials/schedule-a-move-15.png
       content: >
         <p>Set your desired moving dates and enter the pick-up and drop off addresses.</p>
@@ -122,7 +122,7 @@
         <p>A summary of your shipment is then provided.</p>
     - image_path: tutorials/schedule-a-move-21.png
       content: >
-        <p>Here you’ll choose a Personal Property Office for counseling, who you will contact after submitting your shipment on DPS. They’ll need the forms generated on the next page.</p>
+        <p>Here you’ll choose a Personal Property Office for counseling, who you’ll be in contact with after submitting your shipment through DPS. They’ll need the forms generated on the next page.</p>
     - image_path: tutorials/schedule-a-move-22.png
       content: >
         <p>On this Submit Page, review and print your forms DD1299 and DD1797, then press submit!</p>
@@ -155,7 +155,7 @@
     - image_path: tutorials/rate-your-transporter-01.png
       content: >
         <p>In DPS, you can write a review of your moving company (transporter) for each shipment.</p>
-        <p>Click on the shipment you'd like to rate.</p>
+        <p>Click on the shipment you’d like to rate.</p>
     - image_path: tutorials/rate-your-transporter-02.png
       content: >
         <p>The DPS Customer Sarisfaction Survey allows you to rate your experience on topics ranging from packing, to delivery.</p>
