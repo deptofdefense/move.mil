@@ -8,6 +8,7 @@
 
 require 'csv'
 require 'nokogiri'
+require 'tempfile'
 
 puts 'Loading tutorials...'
 tutorials = YAML::load_file(Rails.root.join('db', 'seeds', 'tutorials.yml'))
@@ -54,6 +55,8 @@ CSV.foreach(Rails.root.join('db', 'seeds', '2016_Gaz_zcta_national.txt'), header
   z.lon = zipcode['INTPTLONG']
   z.save
 end
+
+to_addresses_lines = []
 
 puts 'Loading TO and PPSO contact info...'
 transportation_offices = Nokogiri::XML(File.open(Rails.root.join('db', 'seeds', 'To_Cntct_Info_201708110930.xml')))
@@ -117,6 +120,11 @@ transportation_offices.xpath('//G_CNSL_ORG_ID').each do |node|
   transportation_office = TransportationOffice.create(
     ppso: ppso, name: name, address: address, city: city, state: state, postal_code: postal_code, country: country)
 
+  # Save the address, column delimited, for census.gov to read and provide lat / lon later
+  # Unique ID, Street address, City, State, ZIP
+  address_single_line = address.gsub($/,',')
+  to_addresses_lines.push('#{transportation_office.id},"#{address_single_line}","#{city}","#{state}","#{postal_code}"')
+
   node.css('G_CNSL_EMAIL').each do |email|
     email_name = email.at('EMAIL_TYPE').text.strip
     email_address = email.at('EMAIL_ADDRESS').text.strip
@@ -156,3 +164,29 @@ transportation_offices.xpath('//G_CNSL_ORG_ID').each do |node|
 end
 
 # Aggregate addresses and ask census.gov for the lat / lon
+
+puts 'Requesting lat / lon from census.gov for PPSO and TO addresses...'
+
+benchmark = 'Public_AR_Census2010'
+url = 'https://geocoding.geo.census.gov/geocoder/locations/addressbatch'
+to_addresses_joined = to_addresses_lines.join($/)
+f = Tempfile.new('foo')
+locations_csv = ''
+begin
+  f.write(to_addresses_joined)
+  f.flush
+  locations_csv = %x(curl --form addressFile=@#{f.path} --form benchmark=#{benchmark} #{url})
+  CSV.foreach(locations_csv) do |location|
+    if (location[2] != 'Match')
+      continue
+    end
+    latlng = location[5].split(',')
+    office = TransportationOffice.find_by(id: location[0])
+    office.latitude = latlng[0]
+    office.longitude = latlng[1]
+    office.save
+  end
+ensure
+  f.close
+  f.unlink   # deletes the temp file
+end
