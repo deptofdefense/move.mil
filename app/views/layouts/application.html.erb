@@ -77,11 +77,22 @@
           <%= image_tag 'uswds/close.svg', alt: 'Close' %>
         </button>
 
-        <ul class="usa-nav-primary">
+        <ul class="usa-nav-primary usa-accordion">
           <li>
-            <%= link_to page_path('moving-guide'), class: 'usa-nav-link' do %>
+            <button aria-controls="nav-moving-with-the-military" aria-expanded="false" class="usa-accordion-button usa-nav-link">
               <span>Moving with the Military</span>
-            <% end %>
+            </button>
+
+            <ul class="usa-nav-submenu" id="nav-moving-with-the-military">
+              <li><%= link_to 'Overview', page_path('moving-guide') %></li>
+              <li><%= link_to raw("<i>What to expect…</i> #{abbr_tag('conus')} #{abbr_tag('pcs')}"), page_path('moving-guide/conus') %></li>
+              <li><%= link_to raw("<i>What to expect…</i> #{abbr_tag('oconus')} #{abbr_tag('pcs')}"), page_path('moving-guide/oconus') %></li>
+              <li><%= link_to raw("<i>What to expect…</i> #{abbr_tag('tdy')}"), page_path('moving-guide/tdy') %></li>
+              <li><%= link_to raw('<i>What to expect…</i> Retirees/Separatees'), page_path('moving-guide/retirees-separatees') %></li>
+              <li><%= link_to raw('<i>What to expect…</i> Civilians'), page_path('moving-guide/civilians') %></li>
+              <li><%= link_to 'Tips', page_path('moving-guide/tips') %></li>
+              <li><%= link_to 'Nightmare Moves', page_path('moving-guide/nightmare-moves') %></li>
+            </ul>
           </li>
           <li>
             <%= link_to page_path('entitlements'), class: 'usa-nav-link' do %>
