@@ -177,29 +177,104 @@ transportation_offices.xpath('//G_CNSL_ORG_ID').each do |node|
 end
 
 # Aggregate addresses and ask census.gov for the lat / lon
-
-puts 'Requesting lat / lon from census.gov for PPSO and TO addresses...'
-STDOUT.flush
-benchmark = 'Public_AR_Census2010'
-url = 'https://geocoding.geo.census.gov/geocoder/locations/addressbatch'
-to_addresses_joined = to_addresses_lines.join($/)
-f = Tempfile.new(['addresses','.csv'])
-locations_csv = ''
-begin
-  f.write(to_addresses_joined)
-  f.flush
-  locations_csv = %x(curl --form addressFile=@#{f.path} --form benchmark=#{benchmark} #{url})
-  CSV.parse(locations_csv) do |location|
-    puts location
-    if (location[2] != 'Match')
-      next
+def census_batch_lookup(csv_lines)
+  benchmark = 'Public_AR_Census2010'
+  url = 'https://geocoding.geo.census.gov/geocoder/locations/addressbatch'
+  to_addresses_joined = csv_lines.join($/)
+  f = Tempfile.new(['addresses','.csv'])
+  locations_csv = ''
+  begin
+    f.write(to_addresses_joined)
+    f.flush
+    locations_csv = %x(curl --form addressFile=@#{f.path} --form benchmark=#{benchmark} #{url})
+    matches = 0
+    CSV.parse(locations_csv) do |location|
+      if (location[2] != 'Match')
+        next
+      end
+      lnglat = location[5].split(',')
+      office = TransportationOffice.find_by(id: location[0])
+      office.lng = lnglat[0]
+      office.lat = lnglat[1]
+      office.save
+      matches += 1
     end
-    lnglat = location[5].split(',')
-    office = TransportationOffice.find_by(id: location[0])
-    office.lng = lnglat[0]
-    office.lat = lnglat[1]
-    office.save
+    puts "#{matches} locations matched"
+  ensure
+    f.close! # closes and deletes the temp file
   end
-ensure
-  f.close! # closes and deletes the temp file
 end
+
+puts
+puts 'Requesting lat / lng from census.gov for TO addresses...'
+STDOUT.flush
+census_batch_lookup(to_addresses_lines)
+
+# For offices that still don't have coordinates, try the census again, using only the 1st line of the address
+puts
+puts 'Requesting lat / lng from census.gov for unmatched TO addresses using only the first line...'
+STDOUT.flush
+to_addresses_lines = []
+TransportationOffice.where(lat: nil).each do |office|
+  address_lines = office.address.split($/)
+  if (address_lines.length < 2)
+    next
+  end
+  address_first_line = address_lines[0]
+  to_addresses_lines.push("#{office.id},\"#{address_first_line}\",\"#{office.city}\",\"#{office.state}\",\"#{office.postal_code}\"")
+end
+census_batch_lookup(to_addresses_lines)
+
+# For offices that still don't have coordinates, try the census again, using only the 2nd line of the address
+puts
+puts 'Requesting lat / lng from census.gov for unmatched TO addresses using only the second line...'
+STDOUT.flush
+to_addresses_lines = []
+TransportationOffice.where(lat: nil).each do |office|
+  address_lines = office.address.split($/)
+  if (address_lines.length < 2)
+    next
+  end
+
+  address_second_line = address_lines[1]
+  to_addresses_lines.push("#{office.id},\"#{address_second_line}\",\"#{office.city}\",\"#{office.state}\",\"#{office.postal_code}\"")
+end
+census_batch_lookup(to_addresses_lines)
+
+# For offices that still don't have coordinates, try MultiGeocoder on the name
+puts
+puts 'Requesting lat / lng from MultiGeocoder for unmatched TOs using the name field'
+STDOUT.flush
+matches = 0
+TransportationOffice.where(lat: nil).each do |office|
+  location = Geokit::Geocoders::MultiGeocoder.geocode(office.name)
+  if (!location.success)
+    next
+  end
+
+  office.lat = location.lat
+  office.lng = location.lng
+  office.save
+  matches += 1
+end
+puts "#{matches} locations matched"
+
+puts
+puts 'Requesting lat / lng from MultiGeocoder for unmatched TOs using the city and state'
+STDOUT.flush
+matches = 0
+TransportationOffice.where(lat: nil).where.not(city: nil, state: nil).each do |office|
+  location = Geokit::Geocoders::MultiGeocoder.geocode("#{office.city}, #{office.state}")
+  if (!location.success)
+    next
+  end
+
+  office.lat = location.lat
+  office.lng = location.lng
+  office.save
+  matches += 1
+end
+puts "#{matches} locations matched"
+
+unmatched = TransportationOffice.where(lat: nil).length
+puts "#{unmatched} locations without coordinates remain"
