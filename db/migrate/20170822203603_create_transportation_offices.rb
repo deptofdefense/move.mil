@@ -8,8 +8,8 @@ class CreateTransportationOffices < ActiveRecord::Migration[5.1]
       t.text :state
       t.text :postal_code
       t.text :country
-      t.float :latitude
-      t.float :longitude
+      t.float :lat
+      t.float :lng
 
       t.timestamps
     end

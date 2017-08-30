@@ -42,6 +42,7 @@ branch_of_service_contacts.each do |contact|
   BranchOfServiceContact.where(branch: contact['branch']).first_or_create(contact)
 end
 
+puts 'Loading entitlements...'
 entitlements = YAML::load_file(Rails.root.join('db', 'seeds', 'entitlements.yml'))
 
 entitlements.each do |entitlement|
@@ -49,20 +50,26 @@ entitlements.each do |entitlement|
 end
 
 puts 'Loading ZIP codes...'
+STDOUT.flush
 CSV.foreach(Rails.root.join('db', 'seeds', '2016_Gaz_zcta_national.txt'), headers: true, col_sep: "\t") do |zipcode|
   z = ZipCodeTabulationArea.find_or_create_by(zipcode: zipcode['GEOID'])
   z.lat = zipcode['INTPTLAT']
-  z.lon = zipcode['INTPTLONG']
+  z.lng = zipcode['INTPTLONG']
   z.save
 end
 
 to_addresses_lines = []
 
 puts 'Loading TO and PPSO contact info...'
+STDOUT.flush
 transportation_offices = Nokogiri::XML(File.open(Rails.root.join('db', 'seeds', 'To_Cntct_Info_201708110930.xml')))
 transportation_offices.xpath('//G_CNSL_ORG_ID').each do |node|
   name = node.at('CNSL_NAME').text.strip
-  address = node.at('CNSL_ADDR1').text.strip + $/ + node.at('CNSL_ADDR2').text.strip
+  address = node.at('CNSL_ADDR1').text.strip
+  address2 = node.at('CNSL_ADDR2').text.strip
+  unless address2.empty?
+    address += $/ + address2
+  end
   city = node.at('CNSL_CITY').text.strip
   state = node.at('CNSL_STATE').text.strip
   postal_code = node.at('CNSL_ZIP').text.strip
@@ -70,7 +77,13 @@ transportation_offices.xpath('//G_CNSL_ORG_ID').each do |node|
 
   # Does this TO's PPSO already exist?
   ppso = Ppso.where(name: node.at('PPSO_NAME').text.strip).first_or_create do |ppso|
-    ppso.address = node.at('PPSO_ADDR1').text.strip + $/ + node.at('PPSO_ADDR2').text.strip
+    ppso_addr1 = node.at('PPSO_ADDR1').text.strip
+    ppso_addr2 = node.at('CNSL_ADDR2').text.strip
+    if ppso_addr2.empty?
+      ppso.address = ppso_addr1
+    else
+      ppso.address = ppso_addr1 + $/ + ppso_addr2
+    end
     ppso.city = node.at('PPSO_CITY').text.strip
     ppso.state = node.at('PPSO_STATE').text.strip
     ppso.country = node.at('PPSO_COUNTRY').text.strip
@@ -123,7 +136,7 @@ transportation_offices.xpath('//G_CNSL_ORG_ID').each do |node|
   # Save the address, column delimited, for census.gov to read and provide lat / lon later
   # Unique ID, Street address, City, State, ZIP
   address_single_line = address.gsub($/,',')
-  to_addresses_lines.push('#{transportation_office.id},"#{address_single_line}","#{city}","#{state}","#{postal_code}"')
+  to_addresses_lines.push("#{transportation_office.id},\"#{address_single_line}\",\"#{city}\",\"#{state}\",\"#{postal_code}\"")
 
   node.css('G_CNSL_EMAIL').each do |email|
     email_name = email.at('EMAIL_TYPE').text.strip
@@ -166,27 +179,27 @@ end
 # Aggregate addresses and ask census.gov for the lat / lon
 
 puts 'Requesting lat / lon from census.gov for PPSO and TO addresses...'
-
+STDOUT.flush
 benchmark = 'Public_AR_Census2010'
 url = 'https://geocoding.geo.census.gov/geocoder/locations/addressbatch'
 to_addresses_joined = to_addresses_lines.join($/)
-f = Tempfile.new('foo')
+f = Tempfile.new(['addresses','.csv'])
 locations_csv = ''
 begin
   f.write(to_addresses_joined)
   f.flush
   locations_csv = %x(curl --form addressFile=@#{f.path} --form benchmark=#{benchmark} #{url})
-  CSV.foreach(locations_csv) do |location|
+  CSV.parse(locations_csv) do |location|
+    puts location
     if (location[2] != 'Match')
-      continue
+      next
     end
-    latlng = location[5].split(',')
+    lnglat = location[5].split(',')
     office = TransportationOffice.find_by(id: location[0])
-    office.latitude = latlng[0]
-    office.longitude = latlng[1]
+    office.lng = lnglat[0]
+    office.lat = lnglat[1]
     office.save
   end
 ensure
-  f.close
-  f.unlink   # deletes the temp file
+  f.close! # closes and deletes the temp file
 end

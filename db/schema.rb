@@ -95,8 +95,8 @@ ActiveRecord::Schema.define(version: 20170822203956) do
     t.text "state"
     t.text "postal_code"
     t.text "country"
-    t.float "latitude"
-    t.float "longitude"
+    t.float "lat"
+    t.float "lng"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -118,8 +118,8 @@ ActiveRecord::Schema.define(version: 20170822203956) do
     t.text "state"
     t.text "postal_code"
     t.text "country"
-    t.float "latitude"
-    t.float "longitude"
+    t.float "lat"
+    t.float "lng"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["ppso_id"], name: "index_transportation_offices_on_ppso_id"
@@ -144,7 +144,7 @@ ActiveRecord::Schema.define(version: 20170822203956) do
   create_table "zip_code_tabulation_areas", force: :cascade do |t|
     t.text "zipcode"
     t.float "lat"
-    t.float "lon"
+    t.float "lng"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
