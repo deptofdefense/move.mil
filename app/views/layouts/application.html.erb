@@ -59,7 +59,7 @@
     </div>
 
     <div class="usa-navbar">
-      <button class="usa-menu-btn">Menu</button>
+      <%= raw('<button class="usa-menu-btn">Menu</button>') if current_page?(root_path) %>
 
       <div class="usa-logo" id="logo">
         <em class="usa-logo-text">
