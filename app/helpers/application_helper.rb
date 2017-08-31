@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module ApplicationHelper
   def abbr_tag(i18n_key, options = {})
     tag_options = {
