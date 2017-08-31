@@ -8,11 +8,11 @@ end
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
-gem 'active_link_to', '~> 1.0'
+gem 'active_link_to', '~> 1.0', '>= 1.0.5'
 gem 'friendly_id', '~> 5.2', '>= 5.2.1'
 gem 'high_voltage', '~> 3.0'
 gem 'pg', '~> 0.21.0'
-gem 'puma', '~> 3.9', '>= 3.9.1'
+gem 'puma', '~> 3.10'
 gem 'rails', '~> 5.1', '>= 5.1.3'
 gem 'sass', '~> 3.5', '>= 3.5.1'
 gem 'sass-rails', '~> 5.0', '>= 5.0.6'
@@ -27,7 +27,7 @@ end
 
 group :development, :test do
   gem 'brakeman', '~> 3.7', require: false
-  gem 'byebug', '~> 9.0', '>= 9.0.6'
+  gem 'byebug', '~> 9.1'
   gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
   gem 'rspec-rails', '~> 3.6'
