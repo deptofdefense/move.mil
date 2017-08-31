@@ -5,7 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # dotenv
-# TODO Comment out this rule if environment variables can be committed
+# Comment out this rule if environment variables can be committed
 .env
 
 # Ignore bundler config.
