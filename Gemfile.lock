@@ -1,12 +1,3 @@
-GIT
-  remote: https://github.com/jgarber623/uswds-rails.git
-  revision: 709c7bb785da094235881dff705d2f2b6323b7c6
-  specs:
-    uswds-rails (1.3.1)
-      bourbon (= 4.2.7)
-      neat (= 1.8)
-      rails-assets-normalize-css (= 3.0.3)
-
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -210,6 +201,10 @@ GEM
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.3.0)
+    uswds-rails (1.3.1)
+      bourbon (= 4.2.7)
+      neat (= 1.8)
+      rails-assets-normalize-css (= 3.0.3)
     web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -244,7 +239,7 @@ DEPENDENCIES
   simplecov (~> 0.15.0)
   simplecov-console (~> 0.4.2)
   uglifier (~> 3.2)
-  uswds-rails!
+  uswds-rails (~> 1.3)
   web-console (~> 3.5, >= 3.5.1)
 
 RUBY VERSION

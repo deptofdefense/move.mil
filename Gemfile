@@ -17,7 +17,7 @@ gem 'rails', '~> 5.1', '>= 5.1.3'
 gem 'sass', '~> 3.5', '>= 3.5.1'
 gem 'sass-rails', '~> 5.0', '>= 5.0.6'
 gem 'uglifier', '~> 3.2'
-gem 'uswds-rails', github: 'jgarber623/uswds-rails'
+gem 'uswds-rails', '~> 1.3'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-html5shiv', '3.7.3'
