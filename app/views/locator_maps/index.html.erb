@@ -25,22 +25,21 @@
     </div>
 
     <div class="location-search-section">
-      <div class="location-search-mine">
-        <button onclick="getLocation()">Search My Location</button>or
+      <div id="location-search-mine" class="location-search-mine">
+        <button id="button-search-mine" onclick="getLocation(this)">Search My Location</button>or
       </div>
 
-      <form class="usa-search usa-search-big location-search-zipcode">
+      <%= form_with class: 'usa-search usa-search-big location-search-zipcode', method: 'get' do |form| %>
         <div role="search">
-          <label class="usa-sr-only" for="search-field-zip">Search by city, ZIP code, or installation</label>
-          <input id="search-field-zip" type="search" name="search" placeholder="Search by city, ZIP code, or installation">
-          <button type="submit">
-            <span class="usa-search-submit-text">Search</span>
-          </button>
+          <%= form.label :zipcode, "Search by ZIP code", class: 'usa-sr-only' %>
+          <%= form.text_field :zipcode, type: 'search', placeholder: 'Search by ZIP code' %>
+          <%= form.submit "Search" %>
         </div>
-      </form>
+      <% end %>
+
     </div>
 
-    <div class="usa-alert usa-alert-error" role="alert">
+    <div id="location-error" class="usa-alert usa-alert-error" role="alert" hidden>
       <div class="usa-alert-body">
         <h3 class="usa-alert-heading">Location Error</h3>
         <p class="usa-alert-text" id="location-error-body">Could not get your location.</p>
@@ -48,12 +47,44 @@
     </div>
 
     <div id="mapid"
-      data-marker-icon-path="<%= asset_path 'leaflet/dist/images/marker-icon.png' %>"
-      data-marker-icon-2x-path="<%= asset_path 'leaflet/dist/images/marker-icon-2x.png' %>"
-      data-marker-shadow-path="<%= asset_path 'leaflet/dist/images/marker-shadow.png' %>"></div>
+      data-origin-lat="<%= @origin[0] %>"
+      data-origin-lng="<%= @origin[1] %>"
+      data-marker-icon-path="<%= asset_path 'locator/map_pppo.svg' %>"
+      data-marker-icon-2x-path="<%= asset_path 'locator/map_pppo.svg' %>"
+      data-marker-shadow-path="<%= asset_path 'leaflet/dist/images/marker-shadow.png' %>"
+      data-spinner-path="<%= asset_path 'locator/ajax-loader.gif' %>">
+    </div>
 
-    <%= render 'locator_maps/offices' %>
-    <%= render 'locator_maps/scales' %>
-
+    <%- if @offices %>
+      <div id="pppo-search-results">
+        <%- @offices.each do |office| -%>
+          <%= render 'locator_maps/offices', office: office %>
+        <%- end %>
+        <%- if @offset + 5 < TransportationOffice.count %>
+          <%- if params[:zipcode].present? %>
+            <%= link_to 'Next 5 results', locator_maps_path(offset: @offset + 5, zipcode: params[:zipcode], anchor: 'mapid') %>
+          <%- elsif params[:coords].present? %>
+            <%= link_to 'Next 5 results', locator_maps_path(offset: @offset + 5, coords: params[:coords], anchor: 'mapid') %>
+          <%- end %>
+        <%- end %>
+      </div>
+    <%- end -%>
   </div>
 </div>
+
+<script>
+  // simplest way to get the marker information over to the JS side
+
+  var markers = [];
+  var coordinates = [];
+  var locations = [];
+
+  <%- @offices.each do |office| %>
+    locations.push({
+      'id': <%= office.id %>,
+      'name': '<%= office.name %>',
+      'lat': <%= office.lat %>,
+      'lng': <%= office.lng %>
+    });
+  <%- end %>
+</script>

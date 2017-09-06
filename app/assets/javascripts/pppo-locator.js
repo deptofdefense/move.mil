@@ -1,4 +1,6 @@
 var mymap;
+var myLocationMarker;
+var spinner;
 
 (function(window, $) {
   'use strict';
@@ -9,45 +11,112 @@ var mymap;
   if (!$mapid.length)
     return;
 
-  // start centered on CONUS
-  mymap = L.map('mapid').setView([38.0, -97.0], 4);
+  var lat = $mapid.data('originLat');
+  var lng = $mapid.data('originLng');
+
+  mymap = L.map('mapid').setView([lat, lng], 4);
 
   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
     maxZoom: 18
   }).addTo(mymap);
 
+  L.Control.Spinner = L.Control.extend({
+    onAdd: function(map) {
+        var img = L.DomUtil.create('img');
+
+        img.src = $mapid.data('spinnerPath');
+        img.style.width = '200px';
+
+        return img;
+    },
+
+    onRemove: function(map) {
+        // Nothing to do here
+    }
+  });
+
+  L.control.spinner = function(opts) {
+    return new L.Control.Spinner(opts);
+  }
+
+  spinner = L.control.spinner({ position: 'bottomleft' });
+
   var myIcon = L.icon({
       iconUrl: $mapid.data('markerIconPath'),
       iconRetinaUrl: $mapid.data('markerIcon2xPath'),
-      shadowUrl: $mapid.data('markerShadowPath')
+      iconAnchor: [17, 48],
+      popupAnchor: [0, -48],
+      shadowUrl: $mapid.data('markerShadowPath'),
+      shadowAnchor: [13, 41]
   });
 
-  /*
-  L.marker([51.5, -0.09], {icon: myIcon}).addTo(mymap)
-    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-    .openPopup();
-    */
+  // remove existing markers
+  for (var marker of markers) {
+    marker.remove();
+  }
+  markers = [];
 
-  if (!navigator.geolocation) {
+  // place current markers with links to the corresponding results, and store them for later possible removal
+  for (var loc of locations) {
+    var marker = L.marker([loc['lat'], loc['lng']], {icon: myIcon, title: loc['name'], riseOnHover: true}).addTo(mymap);
+    var anchor = '#' + loc['id'];
+    marker.bindPopup('<a href="' + anchor + '">' + loc["name"] + '</a>');
+    markers.push(marker);
+    coordinates.push([loc['lat'], loc['lng']]);
+  }
+
+  // zoom the map so that all markers are visible
+  if (coordinates.length > 0)
+    mymap.flyToBounds(coordinates, { padding: [20, 20]});
+
+  // put the pulsing dot at the origin if the search is by coordinates and not by zip code
+  if (location.search.indexOf('coords=') >= 0)
+    setMyLocationMarker(lat, lng);
+
+  if (navigator.geolocation) {
     // Geolocation API not supported by this browser
-    $('#my-location-search-section').hide();
+    $('#location-search-mine').removeAttr('hidden');
   }
 
 })(window, jQuery);
 
-function getLocation() {
-  navigator.geolocation.getCurrentPosition(showPosition, getLocationError);
+function enableLocationSearch() {
+  $('#button-search-mine').removeClass('usa-button-disabled');
+  spinner.remove();
+}
+
+function setMyLocationMarker(lat, lng) {
+  var pulseIcon = L.divIcon({className: 'pulse-dot'});
+  myLocationMarker = L.marker([lat, lng], {icon: pulseIcon}).addTo(mymap);
+}
+
+function getLocation(button) {
+  $('#location-error').attr('hidden', '');
+  if (myLocationMarker != null)
+    myLocationMarker.remove();
+  button.className = 'usa-button-disabled';
+  spinner.addTo(mymap);
+
+  var options = {
+    enableHighAccuracy: false,
+    timeout: 5000,
+    maximumAge: 0
+  };
+  navigator.geolocation.getCurrentPosition(showPosition, getLocationError, options);
 }
 
 function showPosition(position) {
+  enableLocationSearch();
   var lat = position.coords.latitude;
-  var lon = position.coords.longitude;
+  var lng = position.coords.longitude;
 
   // center the map on the location and zoom to something reasonable, re-zoom later when the search results arrive
-  mymap.setView([lat, lon], 12);
+  mymap.setView([lat, lng], 13);
+  setMyLocationMarker(lat, lng);
 
   // search for nearest offices / weigh stations
+  location.href = location.pathname + '?coords=' + lat + ',' + lng + '#mapid';
 }
 
 function getLocationError(error) {
@@ -79,5 +148,7 @@ function getLocationError(error) {
     break;
   }
 
-  $('#location-error-text').text(message);
+  $('#location-error-body').text(message);
+  $('#location-error').removeAttr('hidden');
+  enableLocationSearch();
 }

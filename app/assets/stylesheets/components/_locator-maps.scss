@@ -113,3 +113,31 @@
 .weightscale-result {
   background: #f7eede;
 }
+
+.pulse-dot {
+  background: $color-primary-alt;
+  border: 2px solid $color-primary-alt-darkest;
+  border-radius: 100%;
+  height: 12px;
+  position: relative;
+  width: 12px;
+}
+
+.pulse-dot:after {
+  content: "";
+  animation: blip1 2s infinite;
+  background-color: $color-primary-alt;
+  border-radius: 100%;
+  height: 12px;
+  margin-left: -2px;
+  margin-top: -2px;
+  position: absolute;
+  width: 12px;
+}
+
+@keyframes blip1 {
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
