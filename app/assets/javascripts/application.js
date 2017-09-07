@@ -3,7 +3,6 @@
 //= require 'leaflet'
 //= require 'owl-carousel2'
 //= require_tree ./components
-//= require 'pppo-locator'
 
 (function($) {
   'use strict';
