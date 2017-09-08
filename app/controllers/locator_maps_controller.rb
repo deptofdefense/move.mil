@@ -9,14 +9,10 @@ class LocatorMapsController < ApplicationController
     end
 
     if params[:zipcode].present?
-      if params[:zipcode].match('\d{5}') != nil
-        search_zipcode
-      end
+      search_zipcode if params[:zipcode].match('\d{5}') != nil
     elsif params[:coords].present?
       coords = params[:coords].split(',')
-      if coords.length == 2
-        search_coords(coords)
-      end
+      search_coords(coords) if coords.length == 2
     end
   end
 
@@ -27,9 +23,7 @@ class LocatorMapsController < ApplicationController
 
   def search_zipcode
     zipcode = ZipCodeTabulationArea.find_by(zipcode: params[:zipcode])
-    if zipcode == nil
-      return
-    end
+    return if zipcode == nil
     search_coords([zipcode.lat, zipcode.lng])
   end
 end
