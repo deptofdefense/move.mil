@@ -59,7 +59,10 @@ var spinner;
 
   // place current markers with links to the corresponding results, and store them for later possible removal
   for (var loc of locations) {
-    var marker = L.marker([loc['lat'], loc['lng']], {icon: myIcon, title: loc['name'], riseOnHover: true}).addTo(mymap);
+    var marker = L.marker(
+      [loc.lat, loc.lng],
+      {icon: myIcon, title: loc['name'], riseOnHover: true}
+    ).addTo(mymap);
     var anchor = '#' + loc['id'];
     marker.bindPopup('<div class="map-marker-bubble"><span>' + loc["name"] + '</span><a href="' + anchor + '">View Details</a></div>');
     markers.push(marker);
