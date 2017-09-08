@@ -61,7 +61,7 @@ var spinner;
   for (var loc of locations) {
     var marker = L.marker([loc['lat'], loc['lng']], {icon: myIcon, title: loc['name'], riseOnHover: true}).addTo(mymap);
     var anchor = '#' + loc['id'];
-    marker.bindPopup('<a href="' + anchor + '">' + loc["name"] + '</a>');
+    marker.bindPopup('<div class="map-marker-bubble"><span>' + loc["name"] + '</span><a href="' + anchor + '">View Details</a></div>');
     markers.push(marker);
     coordinates.push([loc['lat'], loc['lng']]);
   }

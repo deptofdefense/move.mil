@@ -141,3 +141,17 @@
     opacity: 0;
   }
 }
+
+.map-marker-bubble {
+  text-align: center;
+  width: 13rem;
+
+  span {
+    display: block;
+    font-weight: $font-bold;
+    margin-bottom: 0.3rem;
+    max-height: 3rem;
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+}
