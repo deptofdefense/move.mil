@@ -1,105 +1,116 @@
-/*
-    We used the thorough analysis and scripting of Jason Kiss for these ARIA tabs.
-    See Accessible ARIA Tabs: http://www.accessibleculture.org/articles/2010/08/aria-tabs/
-    for his analysis, examples and conclusions. Thanks, Jason!
-*/
 (function(window, $) {
   'use strict';
-  var $tabs = $('#tabs');
 
-  // For each individual tab DIV, set class and aria role attributes, and hide it
-  $tabs.find('> div').attr({
-    role: 'tabpanel',
-    'aria-hidden': true
-  }).addClass('tabPanel').hide();
+  var AriaTabs = window.AriaTabs = function(options) {
+    this.$container = options.$container;
+    this.$list = options.$list;
+    this.$controls = this.$list.find('a');
+    this.$panels = options.$panels;
 
-  // Get the list of tab links
-  var $tabsList = $tabs.find('ul:first').attr({
-    class: 'tabsList',
-    role: 'tablist'
-  });
+    var $activeControl = $('#tab-' + location.hash.split('#')[1]);
 
-  // For each item in the tabs list...
-  $tabsList.find('li > a').each(function(idx) {
-    var $anchor = $(this);
+    this.setup();
+    this.deactivate();
+    this.activate($activeControl.length ? $activeControl : this.$controls.first());
+  };
 
-    // Create a unique id using the link's href
-    var tabId = 'tab-' + $anchor.attr('href').slice(1);
+  AriaTabs.prototype = {
+    events: {
+      click: function(event) {
+        event.preventDefault();
+      },
 
-    // Assign tab id, aria and tabindex attributes to the tab control, but do not remove the href
-    $anchor.attr({
-      id: tabId,
-      role: 'tab',
-      'aria-selected': false,
-      tabindex: -1
-    }).parent().attr('role', 'presentation');
+      focus: function(event) {
+        this.deactivate();
+        this.activate($(event.currentTarget));
+      },
 
-    // Assign aria attribute to the relevant tab panel
-    $tabs.find('.tabPanel').eq(idx).attr('aria-labelledby', tabId);
+      keydown: function(event) {
+        if (event.which !== 37 && event.which !== 39) {
+          return true;
+        }
 
-    // Set the click event for each tab link
-    $anchor.on('click', function(e) {
-      // Prevent default click event
-      e.preventDefault();
+        event.preventDefault();
 
-      // Change state of previously selected tabList item
-      $tabsList.find('> li.current').removeClass('current').find('> a').attr({
+        var $activeControl = $(event.currentTarget),
+            $activeControlParent = $activeControl.parent(),
+            $newActiveControl;
+
+        if (event.which === 37) {
+          var $prev = $activeControlParent.prev();
+
+          $newActiveControl = $prev.length ? $prev.find('a') : this.$controls.last();
+        } else if (event.which === 39) {
+          var $next = $activeControlParent.next();
+
+          $newActiveControl = $next.length ? $next.find('a') : this.$controls.first();
+        }
+
+        $newActiveControl.trigger('focus');
+      }
+    },
+
+    activate: function($control) {
+      $control.attr({
+        'aria-selected': true,
+        tabindex: 0
+      });
+
+      $('#' + $control.attr('aria-controls')).removeAttr('aria-hidden').removeAttr('hidden');
+    },
+
+    deactivate: function() {
+      this.$controls.attr({
         'aria-selected': false,
         tabindex: -1
       });
 
-      // Hide previously selected tabPanel
-      $tabs.find('.tabPanel:visible').attr('aria-hidden', 'true').hide();
+      this.$panels.attr({
+        'aria-hidden': true,
+        hidden: true
+      });
+    },
 
-      // Show newly selected tabPanel
-      $tabs.find('.tabPanel').eq($anchor.parent().index()).attr('aria-hidden', 'false').show();
+    setup: function() {
+      this.$list.attr('role', 'tablist');
+      this.$list.find('li').attr('role', 'presentation');
 
-      // Set state of newly selected tab list item
-      $anchor.attr({
-        'aria-selected': true,
-        tabindex: 0
-      }).parent().addClass('current');
+      this.$controls.each(function() {
+        var $control = $(this);
 
-      $anchor.trigger('focus');
+        $control.attr({
+          'aria-controls': $control.attr('href').split('#')[1],
+          role: 'tab',
+          tabindex: -1
+        });
+      });
+
+      this.$controls.on({
+        click: this.events.click.bind(this),
+        focus: this.events.focus.bind(this),
+        keydown: this.events.keydown.bind(this)
+      });
+
+      this.$panels.each(function() {
+        var $panel = $(this);
+
+        $panel.attr({
+          'aria-labelledby': 'tab-' + $panel.attr('id'),
+          role: 'tabpanel'
+        });
+      });
+
+      this.$container.addClass('js-tabs');
+    }
+  };
+
+  var $container = $('.tabs');
+
+  if ($container.length) {
+    new AriaTabs({
+      $container: $container,
+      $list: $container.find('.tabs-list'),
+      $panels: $container.find('.tabs-panel')
     });
-  });
-
-  // Set keydown events on tabList item for navigating tabs
-  $tabsList.on('keydown', 'a', function(event) {
-    // cache references to elements we'll be using in this event handler
-    var $clickedTab = $(this).parent(),
-        $nextTab = $clickedTab.next(),
-        $prevTab = $clickedTab.prev(),
-        $newActiveTab;
-
-    if (event.which === 37 || event.which === 38) {
-      // cache a reference to the tab that will be highlighted as a result of this user action
-      // use a ternary operator to assign $newActiveTab by evaluating $prevTab's length which might be zero (falsey)
-      $newActiveTab = $prevTab.length ? $prevTab.find('a') : $tabsList.find('li:last a');
-    } else if (event.which === 39 || event.which === 40) {
-      $newActiveTab = $nextTab.length ? $nextTab.find('a') : $tabsList.find('li:first a');
-    }
-
-    if ($newActiveTab && $newActiveTab.length) {
-      // `.trigger('click')` is more direct than `.click()` (which internally calls `.trigger('click')`…)
-      $newActiveTab.trigger('click');
-      // prevent native browser behavior (in particular, scrolling up and down)
-      return false;
-    }
-  });
-
-  var $currentAnchor;
-  if (location.hash.length) {
-    // Does an anchor with the correct id exist with this anchor value?
-    $currentAnchor = $('a#tab-' + location.hash.replace('#', ''));
   }
-
-  if (!$currentAnchor || $currentAnchor.length != 1) {
-    // Find the anchor for the first tab
-    $currentAnchor = $tabsList.find('li:first a');
-  }
-
-  // Show the selected tabPanel
-  $currentAnchor.trigger('click');
-
 })(window, jQuery);

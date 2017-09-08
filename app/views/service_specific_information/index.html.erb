@@ -5,16 +5,19 @@
 
   <div class="usa-width-three-fourths usa-layout-docs-main_content">
     <h1><%= @page_title %></h1>
+
     <p>Select your branch of service for additional move-related information and resources.</p>
-    <div id="tabs">
-      <ul>
+
+    <div class="tabs" id="tabs">
+      <ul class="tabs-list">
         <li><a href="#army" id="tab-army"><span>U.S. </span>Army</a></li>
         <li><a href="#air-force" id="tab-air-force"><span>U.S. </span>Air Force</a></li>
         <li><a href="#navy" id="tab-navy"><span>U.S. </span>Navy</a></li>
         <li><a href="#marines" id="tab-marine-corps"><span>U.S. </span>Marine Corps</a></li>
         <li><a href="#coast-guard" id="tab-coast-guard"><span>U.S. </span>Coast Guard</a></li>
       </ul>
-      <div class="usa-grid-full" id="army">
+
+      <div class="usa-grid-full tabs-panel" id="army">
         <%= image_tag("Service-Army.png") %><br>
         <div class="usa-width-two-thirds">
           <%- @posts_army.each do |post| -%>
@@ -67,7 +70,8 @@
           </article>
         </div>
       </div>
-      <div class="usa-grid-full" id="air-force">
+
+      <div class="usa-grid-full tabs-panel" id="air-force">
         <%= image_tag("Service-AirForce.png") %><br>
         <div class="usa-width-two-thirds">
           <%- @posts_air_force.each do |post| -%>
@@ -194,7 +198,8 @@
           </article>
         </div>
       </div>
-      <div class="usa-grid-full" id="navy">
+
+      <div class="usa-grid-full tabs-panel" id="navy">
         <div class="usa-width-two-thirds">
           <%- @posts_navy.each do |post| -%>
             <article class="svc-spec-frame">
@@ -283,7 +288,8 @@
           </article>
         </div>
       </div>
-      <div class="usa-grid-full" id="marines">
+
+      <div class="usa-grid-full tabs-panel" id="marines">
         <%= image_tag("Service-Marines.png") %><br>
         <div class="usa-width-two-thirds">
           <%- @posts_marine_corps.each do |post| -%>
@@ -393,7 +399,8 @@
           </article>
         </div>
       </div>
-      <div class="usa-grid-full" id="coast-guard">
+
+      <div class="usa-grid-full tabs-panel" id="coast-guard">
         <%= image_tag("Service-CoastGuard.png") %><br>
         <div class="usa-width-two-thirds">
           <%- @posts_coast_guard.each do |post| -%>

@@ -1,12 +1,11 @@
-
-.tabsList {
+.js-tabs .tabs-list {
   border-bottom: 0.25rem solid $color-primary;
   display: table;
   list-style: none;
   margin: 0;
   padding: 0;
   width: 100%;
-  
+
   li {
     display: table-cell;
     text-align: center;
@@ -19,6 +18,12 @@
       padding: 0.5rem 1rem;
       text-decoration: none;
 
+      &[aria-selected="true"] {
+        background: $color-primary;
+        color: $color-white;
+        font-weight: bold;
+      }
+
       span {
         display: none;
 
@@ -27,12 +32,15 @@
         }
       }
     }
- 
-    &.current a {
-      background: $color-primary;
-      box-shadow: none;
-      color: $color-white;
-      font-weight: bold;
-    }
+  }
+}
+
+.tabs-panel {
+  & + & {
+    margin-top: $site-margins;
+  }
+
+  .js-tabs & {
+    margin-top: 0;
   }
 }
