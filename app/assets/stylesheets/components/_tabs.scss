@@ -1,9 +1,7 @@
 .js-tabs .tabs-list {
+  @include unstyled-list;
   border-bottom: 0.25rem solid $color-primary;
   display: table;
-  list-style: none;
-  margin: 0;
-  padding: 0;
   width: 100%;
 
   li {
@@ -13,15 +11,14 @@
 
     a {
       border-radius: 0.5rem 0.5rem 0 0;
-      color: $color-primary;
       display: block;
+      line-height: 1.3;
       padding: 0.5rem 1rem;
       text-decoration: none;
 
       &[aria-selected="true"] {
         background: $color-primary;
         color: $color-white;
-        font-weight: bold;
       }
 
       span {
