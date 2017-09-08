@@ -60,7 +60,7 @@
         <%- @offices.each do |office| -%>
           <%= render 'locator_maps/offices', office: office %>
         <%- end %>
-        <%- if @offset + 5 < TransportationOffice.count %>
+        <%- if @offices.count > 0 && @offset + 5 < TransportationOffice.count %>
           <%- if params[:zipcode].present? %>
             <%= link_to 'Next 5 results', locator_maps_path(offset: @offset + 5, zipcode: params[:zipcode], anchor: 'mapid') %>
           <%- elsif params[:coords].present? %>
