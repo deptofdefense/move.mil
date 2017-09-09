@@ -26,20 +26,19 @@
 
     <div class="location-search-section">
       <div id="location-search-mine" class="location-search-mine">
-        <button id="button-search-mine" onclick="getLocation(this)">Search My Location</button>or
+        <button id="button-search-mine" onclick="getLocation(this)">Search My Location</button> or
       </div>
 
       <%= form_with class: 'usa-search usa-search-big location-search-zipcode', method: 'get' do |form| %>
         <div role="search">
-          <%= form.label :zipcode, "Search by ZIP code", class: 'usa-sr-only' %>
+          <%= form.label :zipcode, 'Search by ZIP code', class: 'usa-sr-only' %>
           <%= form.text_field :zipcode, type: 'search', placeholder: 'Search by ZIP code' %>
-          <%= form.submit "Search" %>
+          <%= form.submit 'Search' %>
         </div>
       <% end %>
-
     </div>
 
-    <div id="location-error" class="usa-alert usa-alert-error" role="alert" hidden>
+    <div class="usa-alert usa-alert-error" id="location-error" role="alert" hidden>
       <div class="usa-alert-body">
         <h3 class="usa-alert-heading">Location Error</h3>
         <p class="usa-alert-text" id="location-error-body">Could not get your location.</p>
@@ -60,6 +59,7 @@
         <%- @offices.each do |office| -%>
           <%= render 'locator_maps/offices', office: office %>
         <%- end %>
+
         <%- if @offices.count > 0 && @offset + 5 < TransportationOffice.count %>
           <%- if params[:zipcode].present? %>
             <%= link_to 'Next 5 results', locator_maps_path(offset: @offset + 5, zipcode: params[:zipcode], anchor: 'mapid') %>
@@ -73,18 +73,8 @@
 </div>
 
 <script>
-  // simplest way to get the marker information over to the JS side
+  var markers = [],
+      coordinates = [];
 
-  var markers = [];
-  var coordinates = [];
-  var locations = [];
-
-  <%- @offices.each do |office| %>
-    locations.push({
-      'id': <%= office.id %>,
-      'name': '<%= office.name %>',
-      'lat': <%= office.lat %>,
-      'lng': <%= office.lng %>
-    });
-  <%- end %>
+  var locations = <%= raw @offices.collect { |office| { id: office.id, name: office.name, lat: office.lat, lng: office.lng } }.to_json %>;
 </script>

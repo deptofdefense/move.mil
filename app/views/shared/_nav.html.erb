@@ -37,9 +37,14 @@
         <% end %>
       </li>
       <li>
-        <%= link_to page_path('resources'), class: 'usa-nav-link' do %>
+        <button aria-controls="nav-resources" aria-expanded="false" class="usa-accordion-button usa-nav-link">
           <span>Tools &amp; Resources</span>
-        <% end %>
+        </button>
+
+        <ul class="usa-nav-submenu" id="nav-resources">
+          <li><%= link_to 'Overview', page_path('resources') %></li>
+          <li><%= link_to 'Locator Maps', locator_maps_path %></li>
+        </ul>
       </li>
     </ul>
 
