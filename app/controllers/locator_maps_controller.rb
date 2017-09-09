@@ -1,4 +1,6 @@
 class LocatorMapsController < ApplicationController
+  # TODO: Refactor this controller
+  # rubocop:disable Metrics/AbcSize
   def index
     # center the map by default on the rough middle of CONUS
     @origin = [38.0, -97.0]
@@ -13,6 +15,7 @@ class LocatorMapsController < ApplicationController
     coords = params[:coords].tr(' ', '').split(',')
     search_coords(coords) if coords.length == 2
   end
+  # rubocop:enable Metrics/AbcSize
 
   private
 
