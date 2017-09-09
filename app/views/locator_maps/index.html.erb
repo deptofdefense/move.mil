@@ -54,7 +54,7 @@
       data-spinner-path="<%= asset_path 'locator/ajax-loader.gif' %>">
     </div>
 
-    <%- if @offices %>
+    <%- if @offices.any? %>
       <div id="pppo-search-results">
         <%= render partial: 'locator_maps/office', collection: @offices %>
 
