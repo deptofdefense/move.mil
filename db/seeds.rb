@@ -51,7 +51,7 @@ end
 
 puts 'Loading ZIP codes...'
 CSV.foreach(Rails.root.join('db', 'seeds', 'zip_code_tabulation_areas.csv'), headers: true) do |row|
-  ZipCodeTabulationArea.first_or_create(zipcode: row[0], lat: row[1], lng: row[2])
+  ZipCodeTabulationArea.create(zipcode: row[0], lat: row[1], lng: row[1])
 end
 
 to_addresses_lines = []
