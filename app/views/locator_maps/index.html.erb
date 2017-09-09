@@ -33,7 +33,7 @@
         <div role="search">
           <%= form.label :zipcode, 'Search by ZIP code', class: 'usa-sr-only' %>
           <%= form.text_field :zipcode, type: 'search', placeholder: 'Search by ZIP code' %>
-          <%= form.submit 'Search' %>
+          <button type="submit">Search</button>
         </div>
       <% end %>
     </div>
@@ -56,9 +56,7 @@
 
     <%- if @offices %>
       <div id="pppo-search-results">
-        <%- @offices.each do |office| -%>
-          <%= render 'locator_maps/offices', office: office %>
-        <%- end %>
+        <%= render partial: 'locator_maps/office', collection: @offices %>
 
         <%- if @offices.count > 0 && @offset + 5 < TransportationOffice.count %>
           <%- if params[:zipcode].present? %>
