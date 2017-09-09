@@ -50,17 +50,13 @@ entitlements.each do |entitlement|
 end
 
 puts 'Loading ZIP codes...'
-STDOUT.flush
-CSV.foreach(Rails.root.join('db', 'seeds', '2016_Gaz_zcta_national.txt'), headers: true, col_sep: "\t") do |zipcode|
-  z = ZipCodeTabulationArea.find_or_create_by(zipcode: zipcode['GEOID'])
-  z.lat = zipcode['INTPTLAT']
-  z.lng = zipcode['INTPTLONG']
-  z.save
+CSV.foreach(Rails.root.join('db', 'seeds', 'zip_code_tabulation_areas.csv'), headers: true) do |row|
+  ZipCodeTabulationArea.first_or_create(zipcode: row[0], lat: row[1], lng: row[2])
 end
 
 to_addresses_lines = []
 
-puts 'Loading TO and PPSO contact info...'
+puts 'Loading Transportation Office and PPSO contact info...'
 STDOUT.flush
 transportation_offices = Nokogiri::XML(File.open(Rails.root.join('db', 'seeds', 'To_Cntct_Info_201708110930.xml')))
 transportation_offices.xpath('//G_CNSL_ORG_ID').each do |node|
