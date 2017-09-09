@@ -4,15 +4,20 @@ class LocatorMapsController < ApplicationController
     @origin = [38.0, -97.0]
     @offices = []
 
-    @offset = params[:offset].present? ? params[:offset].to_i : 0
-    @offset = 0 if @offset.negative?
+    offset
 
-    if params[:zipcode].present?
-      search_zipcode unless params[:zipcode].match('\d{5}').nil?
-    elsif params[:coords].present?
-      coords = params[:coords].split(',')
-      search_coords(coords) if coords.length == 2
-    end
+    return unless params[:zipcode].present? || params[:coords].present?
+    return search_zipcode unless params[:zipcode].match(/\d{5}/).nil?
+    return if params[:coords].blank?
+
+    coords = params[:coords].tr(' ', '').split(',')
+    search_coords(coords) if coords.length == 2
+  end
+
+  private
+
+  def offset
+    @offset ||= params[:offset].present? && params[:offset].to_i.positive? ? params[:offset].to_i : 0
   end
 
   def search_coords(coords)
@@ -21,10 +26,10 @@ class LocatorMapsController < ApplicationController
   end
 
   def search_zipcode
-    zipcode = ZipCodeTabulationArea.find_by(zipcode: params[:zipcode])
+    search_coords([zipcode.lat, zipcode.lng]) unless zipcode.nil?
+  end
 
-    return if zipcode.nil?
-
-    search_coords([zipcode.lat, zipcode.lng])
+  def zipcode
+    @zipcode ||= ZipCodeTabulationArea.find_by(zipcode: params[:zipcode])
   end
 end
