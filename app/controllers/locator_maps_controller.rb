@@ -3,13 +3,12 @@ class LocatorMapsController < ApplicationController
     # center the map by default on the rough middle of CONUS
     @origin = [38.0, -97.0]
     @offices = []
+
     @offset = params[:offset].present? ? params[:offset].to_i : 0
-    if @offset < 0
-      @offset = 0
-    end
+    @offset = 0 if @offset.negative?
 
     if params[:zipcode].present?
-      search_zipcode if params[:zipcode].match('\d{5}') != nil
+      search_zipcode unless params[:zipcode].match('\d{5}').nil?
     elsif params[:coords].present?
       coords = params[:coords].split(',')
       search_coords(coords) if coords.length == 2
@@ -23,7 +22,9 @@ class LocatorMapsController < ApplicationController
 
   def search_zipcode
     zipcode = ZipCodeTabulationArea.find_by(zipcode: params[:zipcode])
-    return if zipcode == nil
+
+    return if zipcode.nil?
+
     search_coords([zipcode.lat, zipcode.lng])
   end
 end
