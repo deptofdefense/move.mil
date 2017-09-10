@@ -53,13 +53,13 @@ var spinner;
   });
 
   // remove existing markers
-  for (var marker of markers) {
+  for (var marker in markers) {
     marker.remove();
   }
   markers = [];
 
   // place current markers with links to the corresponding results, and store them for later possible removal
-  for (var loc of locations) {
+  for (var loc in locations) {
     var marker = L.marker([loc.lat, loc.lng], {
       icon: myIcon,
       title: loc.name,
