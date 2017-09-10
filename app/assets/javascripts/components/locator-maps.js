@@ -8,8 +8,9 @@ var spinner;
   var $mapid = $('#mapid');
 
   // Only run the following on pages which have a map
-  if (!$mapid.length)
-    return;
+  if (!$mapid.length) {
+    return false;
+  }
 
   var lat = $mapid.data('originLat');
   var lng = $mapid.data('originLng');
@@ -38,7 +39,7 @@ var spinner;
 
   L.control.spinner = function(opts) {
     return new L.Control.Spinner(opts);
-  }
+  };
 
   spinner = L.control.spinner({ position: 'bottomleft' });
 
@@ -59,23 +60,28 @@ var spinner;
 
   // place current markers with links to the corresponding results, and store them for later possible removal
   for (var loc of locations) {
-    var marker = L.marker(
-      [loc.lat, loc.lng],
-      {icon: myIcon, title: loc['name'], riseOnHover: true}
-    ).addTo(mymap);
-    var anchor = '#' + loc['id'];
-    marker.bindPopup('<div class="map-marker-bubble"><span>' + loc["name"] + '</span><a href="' + anchor + '">View Details</a></div>');
+    var marker = L.marker([loc.lat, loc.lng], {
+      icon: myIcon,
+      title: loc.name,
+      riseOnHover: true
+    }).addTo(mymap);
+
+    marker.bindPopup('<div class="map-marker-bubble"><span>' + loc.name + '</span><a href="#' + loc.id + '">View Details</a></div>');
     markers.push(marker);
-    coordinates.push([loc['lat'], loc['lng']]);
+    coordinates.push([loc.lat, loc.lng]);
   }
 
   // zoom the map so that all markers are visible
-  if (coordinates.length > 0)
-    mymap.flyToBounds(coordinates, { padding: [20, 20]});
+  if (coordinates.length > 0) {
+    mymap.flyToBounds(coordinates, {
+      padding: [20, 20]
+    });
+  }
 
   // put the pulsing dot at the origin if the search is by coordinates and not by zip code
-  if (location.search.indexOf('coords=') >= 0)
+  if (location.search.indexOf('coords=') >= 0) {
     setMyLocationMarker(lat, lng);
+  }
 
   if (navigator.geolocation) {
     // Geolocation API not supported by this browser
@@ -85,19 +91,32 @@ var spinner;
 })(window, jQuery);
 
 function enableLocationSearch() {
+  'use strict';
+
   $('#button-search-mine').removeClass('usa-button-disabled');
   spinner.remove();
 }
 
 function setMyLocationMarker(lat, lng) {
-  var pulseIcon = L.divIcon({className: 'pulse-dot'});
-  myLocationMarker = L.marker([lat, lng], {icon: pulseIcon}).addTo(mymap);
+  'use strict';
+
+  var pulseIcon = L.divIcon({
+    className: 'pulse-dot'
+  });
+
+  myLocationMarker = L.marker([lat, lng], {
+    icon: pulseIcon
+  }).addTo(mymap);
 }
 
 function getLocation(button) {
+  'use strict';
+
   $('#location-error').attr('hidden', '');
-  if (myLocationMarker != null)
+  if (myLocationMarker !== null) {
     myLocationMarker.remove();
+  }
+
   button.className = 'usa-button-disabled';
   spinner.addTo(mymap);
 
@@ -106,10 +125,13 @@ function getLocation(button) {
     timeout: 5000,
     maximumAge: 0
   };
+
   navigator.geolocation.getCurrentPosition(showPosition, getLocationError, options);
 }
 
 function showPosition(position) {
+  'use strict';
+
   enableLocationSearch();
   var lat = position.coords.latitude;
   var lng = position.coords.longitude;
@@ -123,6 +145,8 @@ function showPosition(position) {
 }
 
 function getLocationError(error) {
+  'use strict';
+
   var message;
 
   switch(error.code) {
@@ -133,7 +157,7 @@ function getLocationError(error) {
      * between these two possibilities, look at the error message. Kinda brittle, but
      * it's what Google themselves recommend.
      */
-    if (error.message.indexOf('Only secure origins are allowed') == 0) {
+    if (error.message.indexOf('Only secure origins are allowed') === 0) {
       message = 'Cannot get your location without an HTTPS connection.';
     } else {
       message = 'Permission denied; please allow this site to get your location and try again.';
@@ -145,7 +169,6 @@ function getLocationError(error) {
   case error.TIMEOUT:
     message = 'The request to get the current location timed out.';
     break;
-  case error.UNKNOWN_ERROR:
   default:
     message = 'An unknown error occurred.';
     break;
