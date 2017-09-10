@@ -54,12 +54,14 @@ var spinner;
 
   // remove existing markers
   for (var marker in markers) {
-    marker.remove();
+    markers[marker].remove();
   }
   markers = [];
 
   // place current markers with links to the corresponding results, and store them for later possible removal
-  for (var loc in locations) {
+  for (var l in locations) {
+    var loc = locations[l];
+
     var marker = L.marker([loc.lat, loc.lng], {
       icon: myIcon,
       title: loc.name,
