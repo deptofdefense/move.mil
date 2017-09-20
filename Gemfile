@@ -9,12 +9,12 @@ source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
 gem 'active_link_to', '~> 1.0', '>= 1.0.5'
-gem 'friendly_id', '~> 5.2', '>= 5.2.1'
+gem 'friendly_id', '~> 5.2', '>= 5.2.2'
 gem 'geokit-rails', '~> 2.3.0'
 gem 'high_voltage', '~> 3.0'
 gem 'pg', '~> 0.21.0'
 gem 'puma', '~> 3.10'
-gem 'rails', '~> 5.1', '>= 5.1.3'
+gem 'rails', '~> 5.1', '>= 5.1.4'
 gem 'sass', '~> 3.5', '>= 3.5.1'
 gem 'sass-rails', '~> 5.0', '>= 5.0.6'
 gem 'uglifier', '~> 3.2'
@@ -33,7 +33,7 @@ group :development, :test do
   gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
   gem 'rspec-rails', '~> 3.6'
-  gem 'rubocop', '~> 0.49.1', require: false
+  gem 'rubocop', '~> 0.50.0', require: false
 end
 
 group :development do
@@ -42,6 +42,6 @@ end
 
 group :test do
   gem 'factory_girl_rails', '~> 4.8'
-  gem 'simplecov', '~> 0.15.0', require: false
+  gem 'simplecov', '~> 0.15.1', require: false
   gem 'simplecov-console', '~> 0.4.2', require: false
 end
