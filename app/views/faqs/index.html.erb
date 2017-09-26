@@ -6,67 +6,62 @@
   <div class="usa-width-three-fourths usa-layout-docs-main_content">
     <h1><%= @page_title %></h1>
 
-    <%# TODO Hide the checkboxes when the screen is too narrow %>
-    <div class="usa-grid-full" id="faq-filters">
+    <p>Moves are complex elephants, so let’s break this process down into something digestible. When in doubt, give <%= link_to 'your local personal property office', locator_maps_path %> a call.  They are a wealth of knowledge and have the most up-to-date information to help you!</p>
 
-      <fieldset class="usa-width-one-third usa-fieldset-inputs usa-sans">
-        <ul class="usa-unstyled-list">
-          <li>
-            <input id="claims-checkbox" type="checkbox" value="claims">
-            <label for="claims-checkbox">Claims</label>
-          </li>
-          <li>
-            <input id="entitlements-checkbox" type="checkbox" value="entitlements">
-            <label for="entitlements-checkbox">Entitlements</label>
-          </li>
-          <li>
-            <input id="hhg-checkbox" type="checkbox" value="hhg">
-            <label for="hhg-checkbox">Household Goods (HHG)</label>
-          </li>
-        </ul>
-      </fieldset>
+    <ul>
+      <li><a href="#before-you-move">Before You Move</a></li>
+      <li><a href="#moving-day">Moving Day!</a></li>
+      <li><a href="#travel-tips">Tips As You Travel</a></li>
+      <li><a href="#delivery">Destination Delivery</a></li>
+      <li><a href="#after-the-move">After The Move: Vouchers, Claims and Surveys</a></li>
+    </ul>
 
-      <fieldset class="usa-width-one-third usa-fieldset-inputs usa-sans">
-        <ul class="usa-unstyled-list">
-          <li>
-            <input id="nts-checkbox" type="checkbox" value="nts">
-            <label for="nts-checkbox">Long-term Storage (NTS)</label>
-          </li>
-          <li>
-            <input id="tsp-checkbox" type="checkbox" value="tsp">
-            <label for="tsp-checkbox">Movers (TSPs)</label>
-          </li>
-          <li>
-            <input id="moving-day-checkbox" type="checkbox" value="moving-day">
-            <label for="moving-day-checkbox">Moving Day</label>
-          </li>
-        </ul>
-      </fieldset>
+    <h2 id="before-you-move">Before You Move</h2>
+    <ul class="usa-accordion-bordered">
+      <%- @faqs_before_you_move.each do |faq| -%>
+        <li class="faq-accordion">
+          <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
+          <div class="usa-accordion-content" id="<%= faq.id %>"><%= faq.answer.html_safe %></div>
+        </li>
+      <%- end -%>
+    </ul>
 
-      <fieldset class="usa-width-one-third usa-fieldset-inputs usa-sans">
-        <ul class="usa-unstyled-list">
-          <li>
-            <input id="scheduling-checkbox" type="checkbox" value="scheduling">
-            <label for="scheduling-checkbox">Scheduling</label>
-          </li>
-          <li>
-            <input id="delivery-checkbox" type="checkbox" value="delivery">
-            <label for="delivery-checkbox">Shipment Delivery</label>
-          </li>
-          <li>
-            <input id="techhelp-checkbox" type="checkbox" value="techhelp">
-            <label for="techhelp-checkbox">Technical Help</label>
-          </li>
-        </ul>
-      </fieldset>
+    <h2 id="moving-day">Moving Day!</h2>
+    <ul class="usa-accordion-bordered">
+      <%- @faqs_moving_day.each do |faq| -%>
+        <li class="faq-accordion">
+          <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
+          <div class="usa-accordion-content" id="<%= faq.id %>"><%= faq.answer.html_safe %></div>
+        </li>
+      <%- end -%>
+    </ul>
 
-    </div>
+    <h2 id="travel-tips">Tips As You Travel</h2>
+    <ul class="usa-accordion-bordered">
+      <%- @faqs_travel_tips.each do |faq| -%>
+        <li class="faq-accordion">
+          <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
+          <div class="usa-accordion-content" id="<%= faq.id %>"><%= faq.answer.html_safe %></div>
+        </li>
+      <%- end -%>
+    </ul>
 
-    <ul class="usa-accordion-bordered" id="faq-accordions">
-      <%- @faqs.each do |faq| -%>
-        <li class="faq-accordion" data-categories="<%= faq.tags.join(',') %>">
-          <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= raw faq.question %></button>
-          <div class="usa-accordion-content" id="<%= faq.id %>"><%= raw faq.answer %></div>
+    <h2 id="delivery">Destination Delivery</h2>
+    <ul class="usa-accordion-bordered">
+      <%- @faqs_delivery.each do |faq| -%>
+        <li class="faq-accordion">
+          <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
+          <div class="usa-accordion-content" id="<%= faq.id %>"><%= faq.answer.html_safe %></div>
+        </li>
+      <%- end -%>
+    </ul>
+
+    <h2 id="after-the-move">After The Move: Vouchers, Claims and Surveys</h2>
+    <ul class="usa-accordion-bordered">
+      <%- @faqs_after_the_move.each do |faq| -%>
+        <li class="faq-accordion">
+          <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
+          <div class="usa-accordion-content" id="<%= faq.id %>"><%= faq.answer.html_safe %></div>
         </li>
       <%- end -%>
     </ul>

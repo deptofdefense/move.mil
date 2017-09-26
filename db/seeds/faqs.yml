@@ -1,97 +1,190 @@
-- question: How long do I have to file a claim?
-  answer: TODO
-  tags:
-    - claims
-
-- question: Can I change my pick-up date after the pre-move survey has been done?
-  answer: TODO
-  tags:
-    - scheduling
+- question: Why are orders so important?
+  answer: There is nothing more constant than change within the military. While you can certainly start some prep work, you will need orders to schedule a move in the system.  Your only other option is a Letter-In-Lieu of Orders, which basically states that you are taking responsibility for the costs of your move if your PCS is cancelled or your destination changes before you receive your official orders.
+  category: before-you-move
 
 - question: How do I schedule my move online?
-  answer: TODO
-  tags:
-    - scheduling
+  answer: "If you have not moved recently, you will need to register for an account with <abbr title=\"Electronic Transportation Acquisition\">ETA</abbr>. Follow the instructions in the <a href=\"/tutorials\">\"Log in to DPS (New User)\" tutorial</a> to register. After that, follow the instructions in the \"Schedule a Move\" tutorial. Make sure you have a digital copy of your orders ready, and be prepared to answer questions about your weight estimate, delivery address, and any special items that need to be moved. Pro-Tip: Instead of using your work e-mail address in the customer information section, use your personal e-mail address so you can stay up to speed on your move at all times."
+  category: before-you-move
 
-- question: How do I file a claim online?
-  answer: TODO
-  tags:
-    - claims
+- question: Do I need to have a delivery address right now?
+  answer: No, you don’t need to know your final delivery address to schedule a move, but you will need to enter a location to continue through scheduling a move. The safest bet is to add your destination (city, state, etc.) in the system and then you can go back and update the final delivery address once you settle on a location.
+  category: before-you-move
 
-- question: How do I add or change a delivery address on a shipment?
-  answer: TODO
-  tags:
-    - delivery
-    - techhelp
+- question: Can I change my pick-up date after the pre-move survey is done?
+  answer: You will need to contact <a href="/resources/locator-maps">your local personal property office</a> if you want to make a change to your pick-up date. There are many factors that go into receiving approval for this type of change (TSP availability, peak season, etc.) to a move.
+  category: before-you-move
 
-- question: How long will it take to get my stuff from storage once I request it?
-  answer: TODO
-  tags:
-    - hhg
-    - nts
+- question: What am I allowed to move and how much?
+  answer: A list of items you are allowed to move can be found <a href="/entitlements">here</a>. Typically, you are allowed to bring the majority of your household goods but there are restrictions on certain items that include hazardous materials (most cleaning supplies, paint, gasoline, etc.) as well as perishables (frozen food, produce, etc.) that will not be able to travel with you.  Additionally, some of your items, such as a lawn mower, will need all the fuel removed before the movers will pack it up. To find how much weight you are allowed, head over to the weight estimator (link).
+  category: before-you-move
 
-- question: I have a problem with my TSP &mdash; whom do I call?
-  answer: TODO
-  tags:
-    - tsp
+- question: What are some tips to get ready for the big day?
+  answer: Check out <a href="/moving-guide/tips">this list</a> of some of the top tips received from members and spouses as you prepare for your move!
+  category: before-you-move
 
-- question: What happens if I cannot be at my house for a pickup or delivery?
-  answer: TODO
-  tags:
-    - scheduling
-    - moving-day
-    - delivery
+- question: Is there a special process to move unique items? (Gun safes, boats, playgrounds, sheds, etc.)
+  answer: Yes! As you navigate through the online move scheduling system, you will be prompted with questions about these types of special items. Be sure to include as much information as possible and make sure during the pre-move survey you point out these items to the representative.
+  category: before-you-move
 
-- question: How do I get approval to move an unconvential item?
-  answer: TODO
-  tags:
-    - entitlements
-    - hhg
+- question: What is a PPM (DITY) move compared to a Household Goods (HHG) move? Can I do one or both?
+  answer: |
+    <p>A Personally Procured Move (also known as a Do-It Yourself Move) is when the member decides to personally move their household items instead of using a government provided mover. This is only for a CONUS move! You still need to book this type of move in the system as it will help calculate your estimated incentive payment. Keep in mind, if your move costs go above this amount the government is not obligated to reimburse you for those expenses. A HHG move is when the government schedules a mover to pack/unpack and ship all of your items.</p>
+    <p>You can do both a Partial PPM and a HHG type move.  Typically, this occurs when a member uses their personal vehicle to ship household items as they move from one duty station to the next.  This type of move will require full/empty weight tickets of the vehicle. <a href="/resources/locator-maps">Click here</a> to find some weight scales close to you!</p>
+    <p>It’s best to contact your local property office before you do a full or partial PPM to make sure you understand all your entitlements.</p>
+  category: before-you-move
 
-- question: What am I allowed to move?
-  answer: TODO
-  tags:
-    - entitlements
-    - hhg
+- question: What happens if there is an accident during my PPM move?
+  answer: If you get into an accident during your move, the government provides up to $50,000 of insurance on your lost property ONLY if you are found not at fault. Make sure you have a police report saying that you were not at fault. The insurance doesn’t cover any damage to the vehicle - only to your household goods.
+  category: before-you-move
 
-- question: What are some things I should do before the packers arrive?
-  answer: TODO
-  tags:
-    - moving-day
+- question: Can I move property from multiple locations?
+  answer: Yes, however, your transportation office will do a cost comparison of the cost to move your property from each location compared to your entitlement and you will receive the lesser of the two costs.
+  category: before-you-move
 
-- question: What are some tips for packing or moving day?
-  answer: TODO
-  tags:
-    - moving-day
+- question: Can I use a self-storage container (i.e. PODS, U-Pack, PackRat) for my PPM move?
+  answer: Yes, but you need to make sure you tell the delivering company to weigh the pod empty before drop-off.
+  category: before-you-move
 
-- question: When will my household goods (HHG) arrive at their destination?
-  answer: TODO
-  tags:
-    - delivery
-    - hhg
+- question: I am retiring or separating from the service. Are there special circumstances for my situation?
+  answer: Yes! Since the entitlements and rules that govern these types of moves are a bit more complex, you must talk with <a href="/resources/locator-maps">your local property office</a> to get this setup. This will ensure it’s a smooth move and you know what to expect.
+  category: before-you-move
 
-- question: What happens if I go over my weight limit?
-  answer: TODO
-  tags:
-    - hhg
+- question: What is my storage allotment?
+  answer: |
+    <table>
+      <tbody>
+        <tr>
+          <th></th>
+          <th>Origin</th>
+          <th>Destination</th>
+        </tr>
+        <tr>
+          <th scope="row">Origin</th>
+          <td>90 days</td>
+          <td>90 days</td>
+        </tr>
+        <tr>
+          <th scope="row">Separatee</th>
+          <td>180 days</td>
+          <td>90 days</td>
+        </tr>
+        <tr>
+          <th scope="row">Retiree</th>
+          <td>365 days</td>
+          <td>90 days</td>
+        </tr>
+      </tbody>
+    </table>
+  category: before-you-move
 
-- question: My TSP told me my shipment is overweight; what are my options?
-  answer: TODO
-  tags:
-    - hhg
-    - tsp
+- question: What should we expect to happen during packing?
+  answer: The packers should arrive with plenty of boxes, tape and packing material to get everything loaded up in boxes. The pre-move survey is critical to make sure the packers show up with everything they need to properly pack your items. If there are multiple packers it can be hard to watch everything they pack, so if there are items you don’t want them to move, put them in your vehicle or a separate room/closet and let the packers know.
+  category: moving-day
 
-- question: What should I do if I can't get DPS to work in my web browser?
-  answer: TODO
-  tags:
-    - techhelp
+- question: What are some tips to help make sure everything goes smooth?
+  answer: Check out <a href="/moving-guide/tips#during-the-move">this list</a> of some of the top tips received from members and spouses for moving day!
+  category: moving-day
 
-- question: How do I log into DPS using ETA?
-  answer: TODO
-  tags:
-    - techhelp
+- question: If there’s a problem, who should I call first?
+  answer: If there’s a problem on site, you can try talking with the movers’ supervisor/lead who is on site, but you can always call your local property office or quality control inspector to help intervene.
+  category: moving-day
 
-- question: What is peak season, and when is it?
-  answer: TODO
-  tags:
-    - scheduling
+- question: When should I (or someone I appoint) be available on move day?
+  answer: You will need to be available from 8:00AM to 5:00PM during your schedule pack and move dates.
+  category: moving-day
+
+- question: What if I can’t be there on move day?
+  answer: If you or your spouse cannot be present on move day, you will need to appoint someone else via a Power of Attorney to sign off on anything on your behalf. This is for your benefit and the moving company's!
+  category: moving-day
+
+- question: Whose responsibility is it to take everything off the walls?
+  answer: Anything that is on the walls to include pictures, curtains, TVs, clocks, etc. will need to be removed by the member. The movers will not remove anything from the walls. It’s also recommended that after you take down that picture or clock to tape the hardware to the back of the item which will make setting it up easier at the destination.
+  category: moving-day
+
+- question: What is the “parts box”?
+  answer: The parts box is where the movers store hardware to re-assemble any furniture when they arrive at the destination.  As a pro-tip, you may want to take that box with you as you travel to your new destination if possible.  There have been limited incidents where the parts box has gone missing, which makes setting up beds, couches, cribs, etc. very difficult without all the proper hardware.
+  category: moving-day
+
+- question: How many days do we have to get to our next location?
+  answer: On your copy of your orders, it will tell you how many travel days you are authorized to get to your next duty location.  Additionally, you can take additional leave enroute if you choose, but this will increase the chances of your HHG’s going into storage.
+  category: travel-tips
+
+- question: Which receipts should we save as we travel?
+  answer: If you are conducting a Personally Procured Move, you’ll want to hang out to any toll receipts, weight ticket receipts, moving equipment and packing materials.
+  category: travel-tips
+
+- question: What happens if the “truck” gets to the destination before we do?
+  answer: If the moving company arrives prior to you arriving to your destination, they will most likely put your HHG’s into storage. The movers need to get your items off the truck and head to the next scheduled move so unless you plan to arrive maybe a day or so after their arrival your items will most likely go into the warehouse until you are ready to accept your shipment.
+  category: travel-tips
+
+- question: Who do we call if we run into problems while our shipment is enroute?
+  answer: If you run into shipment issues while enroute to your next duty station, you can either call the <a href="/resources/locator-maps">local personal property office</a> from where you just left OR you can call your <a href="/resources/locator-maps">personal property office at your destination</a> to get some help quickly.
+  category: travel-tips
+
+- question: What are the movers' responsibilities when they arrive?
+  answer: |
+    <p>Before you start moving into the house, ask the movers to accompany you on a survey of the residence. This way you can point out and agree upon pre-existing property damage (if any). This includes stained carpet, damaged walls and more. Once this has been noted, the movers can start to unpack the truck. The movers should also put down mats/plastic to protect the flooring near high traffic areas.</p>
+    <p>The movers are required to reassemble any furniture that was disassembled at the start of the move and unpack any/all boxes you request.  This is often called a “full-unpack”.  Most members decide not to ask the movers for a full unpack as they prefer to put items away on their own.   Additionally, they will place items at spots you designate once… so you cannot tell the movers to put your bed on the 3rd floor and change your mind a few hours later and request it be put in the basement.</p>
+  category: delivery
+
+- question: Are there some tips I can use to help when we arrive?
+  answer: Check out <a href="/moving-guide/tips#at-your-destination">this list</a> of some of the top tips received from members and spouses at your destination!
+  category: delivery
+
+- question: What do we do if we notice damage to any of our items?
+  answer: If you notice damage, it’s recommended that you write down the inventory tag, take photos and write down some notes about the damage. This will be very helpful when you go to file your claims online.
+  category: delivery
+
+- question: Who do we notify if they damage the home?
+  answer: If you notice damage to your home by the movers, take a photo of the damage and reach out to the local property office’s quality control office to speak with an inspector if possible. You should also notify the lead/supervisor of the move team.
+  category: delivery
+
+- question: My stuff got put in storage… how long until it arrives?
+  answer: Using the online move system, you will need to request the delivery of your items that are in storage. This can take a few days or if it’s the peak season for the Transportation Service Provider it can take a few weeks. As soon as you know your dates, get with your local property office to get this scheduled in the event they are booked up for a few weeks.
+  category: delivery
+
+- question: What if I can’t be there on delivery day?
+  answer: If you or your spouse cannot be present on delivery day, you will need to appoint someone else via a Power of Attorney to sign off on anything on your behalf. This is for your benefit and the moving company!
+  category: delivery
+
+- question: What is the importance of submitting a travel voucher?
+  answer: Simply put… you want to get paid for your move! There are entitlements you are authorized that you will want to receive which may also help offset some of the costs of moving… this includes mileage expenses and dislocation allowance. This will help when you need to go to the local store and purchase some of those household items you couldn’t ship with you.
+  category: after-the-move
+
+- question: Is there a separate process for filing PPM (DITY) paperwork?
+  answer: You will need to “close-out” your Personally Procured Move in the online system. If possible, visit or call your local property office (insert link) as they will need copies of your weight tickets (insert link), vehicle registration, moving receipts and a few other documents to ensure you are properly reimbursed.
+  category: after-the-move
+
+- question: What is the difference between a loss/damage report and a claim?
+  answer: |
+    <p>This one can get tricky, so make sure you know the difference between the two and the overall process.</p>
+    <p>A <strong>Loss/Damage Report</strong> is your way to notify the household goods carrier (Transportation Service Provider - TSP) that some of your items are missing or were damaged during the delivery process. <strong>This must be done within 75 days of your delivery date.</strong> If the items cannot be found or they cannot fix the damage, you must file a claim to be reimbursed!</p>
+    <p>A Claim is submitted when you are requesting to be reimbursed for the loss or damage to an item.</p>
+  category: after-the-move
+
+- question: How do I file a Loss/Damage Report?
+  answer: You have a couple of methods to submit this type of report. You can use the same online system you used to book your move to file this report. It’s located under the Claims tab.  You may also submit your “Notification of Loss/Damage after Delivery” form to the TSP by mail or FAX or by attaching the form to an email and sending it to the TSP. The form should have been given to you by the TSP at the time of delivery. As with anything this important, make sure you request a delivery receipt! <strong>Reminder - you have 75 days from the date of delivery to accomplish this task!</strong>
+  category: after-the-move
+
+- question: The TSP was unable to find my items or they were badly damaged and I am requesting reimbursement. How do I now file a claim and how much time do I have?
+  answer: |
+    <p>In order to file a claim, you will need to use the online system you used to book your move to kick start this process. It’s located under the Claims Tab.</p>
+    <p>If you did not submit a Loss/Damage Report, you will need to file your claim <strong>within 75 days of delivery.</strong></p>
+    <p>If you submitted a Loss/Damage Report within the 75 day window, you will have <strong>up to 9 months</strong> to file a claim for the Full Replacement Value of the item you are claiming.  If the claim is filed more than 9 months from the delivery date, you will only be eligible for depreciated value up to two years from delivery.</p>
+  category: after-the-move
+
+- question: What are some of the items that will be needed for the claim?
+  answer: When filing a claim, it’s recommended that you have before/after pictures of the item that you are claiming. Additionally, any receipts, quotes for repair and any other documentation that show what the value of the item was at the time of purchase is very helpful. The repair quotes are also useful to the claims team when determining how much you will get back. One final tip – make sure when you sign off on the inventory sheet prior to your items being loaded up on the truck that the remarks the movers indicated for each item are correct… your brand new/undamaged dining room table should not have a remark that says it’s full of scratches, etc.
+  category: after-the-move
+
+- question: The transportation provider and I cannot agree on a claim amount… who do I contact for help?
+  answer: If you and the transportation provider go back and forth and you cannot come to an agreement on the offer they are providing you then you’ll need to contact your <a href="/customer-service#claims">Military Claims Office</a>. They will help advocate on your behalf, but be prepared to re-submit all your documentation through their system.
+  category: after-the-move
+
+- question: What happens if our shipment went over our weight limit?
+  answer: If you receive notification from the property office that you went over the weight limit and have to reimburse the government, the two things you should do first is double check to ensure all professional gear (both the member and spouse) was removed from the total weight and then you can request a re-weight of the items. They should also be removing “packing material” from the total as well… this includes all the boxes and paper needed to pack your HHGs. If after all this you are still overweight, expect to pay back the overage amount.
+  category: after-the-move
+
+- question: What type of surveys can I be expected to fill out?
+  answer: At the end of your move, it’s highly recommended that you take time to fill out the customer satisfaction survey at the end. This provides the property offices with direct feedback on your moving company. Be honest and leave comments – if they were a great mover we want to make sure they get the chance to work with members and their families in the future. If they were not so great… we want to make sure they don’t get any future opportunities to mess things up.
+  category: after-the-move

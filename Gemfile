@@ -37,6 +37,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'database_cleaner'
   gem 'web-console', '~> 3.5', '>= 3.5.1'
 end
 

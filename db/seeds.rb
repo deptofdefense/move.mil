@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'csv'
+require 'database_cleaner'
 require 'nokogiri'
 require 'tempfile'
 
@@ -20,6 +21,9 @@ tutorials.each do |tutorial|
     record.tutorial_steps.where(content: step['content']).first_or_create(step)
   end
 end
+
+DatabaseCleaner.strategy = :truncation, {:only => %w[faqs]}
+DatabaseCleaner.clean
 
 puts 'Loading FAQs...'
 faqs = YAML::load_file(Rails.root.join('db', 'seeds', 'faqs.yml'))
