@@ -45,16 +45,6 @@ ActiveRecord::Schema.define(version: 20170926190702) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "emails", force: :cascade do |t|
-    t.string "office_type"
-    t.bigint "office_id"
-    t.text "name"
-    t.text "address"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["office_type", "office_id"], name: "index_emails_on_office_type_and_office_id"
-  end
-
   create_table "entitlements", force: :cascade do |t|
     t.string "rank", null: false
     t.integer "total_weight_self", null: false
@@ -74,31 +64,27 @@ ActiveRecord::Schema.define(version: 20170926190702) do
     t.text "category"
   end
 
-  create_table "phones", force: :cascade do |t|
-    t.string "office_type"
-    t.bigint "office_id"
-    t.text "name"
-    t.text "tel"
-    t.text "fax"
-    t.text "tel_dsn"
-    t.text "fax_dsn"
-    t.text "notes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["office_type", "office_id"], name: "index_phones_on_office_type_and_office_id"
-  end
-
-  create_table "ppsos", force: :cascade do |t|
-    t.text "name"
-    t.text "address"
-    t.text "city"
-    t.text "state"
+  create_table "offices", force: :cascade do |t|
+    t.text "type"
+    t.bigint "shipping_office_id"
+    t.text "name", null: false
+    t.text "street_address"
+    t.text "extended_address"
+    t.text "locality"
+    t.text "region"
+    t.text "region_code"
     t.text "postal_code"
-    t.text "country"
-    t.float "lat"
-    t.float "lng"
+    t.text "country_name"
+    t.text "country_code"
+    t.float "latitude"
+    t.float "longitude"
+    t.json "email_addresses", default: []
+    t.json "phone_numbers", default: []
+    t.json "urls", default: []
+    t.text "services", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["shipping_office_id"], name: "index_offices_on_shipping_office_id"
   end
 
   create_table "service_specific_posts", force: :cascade do |t|
@@ -108,21 +94,6 @@ ActiveRecord::Schema.define(version: 20170926190702) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "transportation_offices", force: :cascade do |t|
-    t.bigint "ppso_id"
-    t.text "name"
-    t.text "address"
-    t.text "city"
-    t.text "state"
-    t.text "postal_code"
-    t.text "country"
-    t.float "lat"
-    t.float "lng"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["ppso_id"], name: "index_transportation_offices_on_ppso_id"
   end
 
   create_table "tutorial_steps", force: :cascade do |t|
@@ -147,6 +118,5 @@ ActiveRecord::Schema.define(version: 20170926190702) do
     t.float "lng", null: false
   end
 
-  add_foreign_key "transportation_offices", "ppsos"
   add_foreign_key "tutorial_steps", "tutorials"
 end
