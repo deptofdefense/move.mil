@@ -1,7 +1,3 @@
-class TransportationOffice < ApplicationRecord
-  acts_as_mappable
-
-  belongs_to :ppso
-  has_many :phones, as: :office, dependent: :destroy
-  has_many :emails, as: :office, dependent: :destroy
+class TransportationOffice < Office
+  belongs_to :shipping_office, class_name: 'Office', optional: true
 end
