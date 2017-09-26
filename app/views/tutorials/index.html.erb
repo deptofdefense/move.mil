@@ -6,7 +6,7 @@
   <div class="usa-width-three-fourths usa-layout-docs-main_content">
     <h1><%= @page_title %></h1>
 
-    <p>Below you will find basic information and instructions for <%= abbr_tag('dps') %> and Move.mil. If you get stuck or have any questions, you can visit your <%= link_to 'local transportation office', locator_maps_path %> or call the 24-hour <%= abbr_tag('src') %> Help Desk at <%= link_to '1 (800) 462-2176', 'tel:+18004622176' %>.</p>
+    <p>Below you will find basic information and instructions for <%= abbr_tag('dps') %> and Move.mil. If you get stuck or have any questions, you can visit your <%= link_to 'local transportation office', offices_path %> or call the 24-hour <%= abbr_tag('src') %> Help Desk at <%= link_to '1 (800) 462-2176', 'tel:+18004622176' %>.</p>
 
     <ul>
       <%- @tutorials.each do |tutorial| -%>

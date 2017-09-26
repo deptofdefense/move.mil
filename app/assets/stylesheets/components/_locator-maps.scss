@@ -1,142 +1,21 @@
-#mapid {
-  height: 400px;
-}
-
-.location-search-types {
-  .usa-media_block {
-    @include margin($site-margins null);
-  }
-
-  p {
-    margin: 0;
-  }
-}
-
-.location-search-section {
-  border-top: solid 1px $color-gray-medium;
-  padding: 2.5rem 0;
-}
-
-.location-search-mine {
-  display: inline-block;
-}
-
-.location-search-zipcode {
-  display: inline-block;
-  margin-left: 0.5rem;
-}
-
 .location-search-result {
-  border: solid 1px #aaa7a7;
-  box-shadow: 0 4px 5px 0 rgba(131, 131, 131, 0.31);
-  margin-top: 2.7rem;
-
-  header {
-    font-size: 1.8rem;
-    padding: 0.5rem 0.8rem;
-
-    img {
-      margin-right: 0.4rem;
-      vertical-align: middle;
-    }
-  }
-
-  section {
-    display: table;
-    font-size: 1.5rem;
-    padding: 1.2rem;
-  }
-
-  .postit {
-    margin-bottom: 0.4rem;
-  }
+  border: 1px solid $color-gray-light;
+  box-shadow: 0 0.25rem 0.25rem 0 rgba($color-gray, 0.25);
+  margin-top: $site-margins;
 }
 
-.location-search-result-address {
-  display: inline-block;
-  margin-right: 1.1rem;
-  vertical-align: top;
+.location-search-result-header {
+  background-color: $color-cool-blue-lightest;
+  padding: $site-margins-mobile;
 }
 
-.location-search-result-contact {
-  display: inline-block;
+.location-search-result-body {
+  font-size: $h5-font-size;
+  padding: $site-margins-mobile;
 }
 
-.location-search-result-info {
-  display: table-cell;
-  padding-right: 1.2rem;
-  width: 66.666666667%;
-}
-
-.location-search-result-hours {
-  border-left: solid 1px $color-black;
-  display: table-cell;
-  padding-left: 1.2rem;
-  vertical-align: top;
-  width: 33.333333333%;
-
-  table {
-    margin: 0;
-  }
-
-  td {
-    border: 0;
-    padding: 0;
-  }
-}
-
-.jppso-contact {
+.shipping-office-contact {
   background: $color-cool-blue-lightest;
   margin-top: 2.5rem;
-  padding: 1rem;
-}
-
-.pppo-result {
-  background: $color-cool-blue-lightest;
-}
-
-.weightscale-result {
-  background: #f7eede;
-}
-
-.pulse-dot {
-  background: $color-primary-alt;
-  border: 2px solid $color-primary-alt-darkest;
-  border-radius: 100%;
-  height: 12px;
-  position: relative;
-  width: 12px;
-
-  &:after {
-    content: "";
-    animation: blip1 2s infinite;
-    background-color: $color-primary-alt;
-    border-radius: 100%;
-    height: 12px;
-    margin-left: -2px;
-    margin-top: -2px;
-    position: absolute;
-    width: 12px;
-  }
-}
-
-@keyframes blip1 {
-  to {
-    transform: scale(2.5);
-    opacity: 0;
-  }
-}
-
-.map-marker-bubble {
-  text-align: center;
-  width: 13rem;
-
-  span {
-    display: block;
-    font-weight: $font-bold;
-    margin-bottom: 0.3rem;
-    max-height: 3rem;
-    overflow: hidden;
-    word-wrap: break-word;
-  }
+  padding: $site-margins-mobile;
 }
