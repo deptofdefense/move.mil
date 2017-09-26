@@ -4,6 +4,6 @@ FactoryGirl.define do
   factory :faq do
     question
     answer 'Answer'
-    tags %w[tag1 tag2 tag3]
+    category 'before-you-move'
   end
 end
