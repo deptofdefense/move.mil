@@ -1,9 +1,9 @@
 class CreateZipCodeTabulationAreas < ActiveRecord::Migration[5.1]
   def change
     create_table :zip_code_tabulation_areas do |t|
-      t.text :zipcode, null: false
-      t.float :lat, null: false
-      t.float :lng, null: false
+      t.text :zip_code, null: false
+      t.float :latitude, null: false
+      t.float :longitude, null: false
     end
   end
 end
