@@ -1,0 +1,12 @@
+.pagination {
+  @include margin($site-margins null);
+  text-align: center;
+
+  a,
+  em,
+  span {
+    display: inline-block;
+    font-style: normal;
+    padding: 0.5rem 0.75rem;
+  }
+}
