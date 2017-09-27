@@ -6,6 +6,7 @@ AllCops:
 Metrics/BlockLength:
   Exclude:
     - '**/Gemfile'
+    - 'lib/**/*.rake'
     - 'spec/**/*.rb'
 
 Metrics/LineLength:
