@@ -8,74 +8,26 @@
 
     <p>Find local Transportation Offices (PPPO) and Truck Weight Scales.</p>
 
-    <%- if @transportation_offices.any? -%>
+    <%- if @error_message -%>
+      <div class="usa-alert usa-alert-error" role="alert">
+        <div class="usa-alert-body">
+          <p class="usa-alert-text"><%= @error_message %></p>
+        </div>
+      </div>
+    <%- end -%>
+
+    <%= form_with url: offices_path, class: 'usa-form', method: 'get' do |form| %>
+      <%= form.label :postal_code, 'Search by ZIP Code', class: 'usa-input-required' %>
+      <%= form.number_field :postal_code, aria: { required: true }, id: 'postal_code', pattern: '^\d{5}$', placeholder: 'Search by ZIP Code', require: true, value: params[:postal_code] %>
+
+      <button>Search</button>
+    <% end %>
+
+    <%- if @transportation_offices -%>
+      <p>Displaying results near <b><%= @zip_code.zip_code %></b>.</p>
+
       <div id="pppo-search-results">
-        <%- @transportation_offices.each do |office| -%>
-          <div class="location-search-result" id="<%= office.id %>">
-            <div class="location-search-result-header">
-              <b><%= office.name %></b>
-            </div>
-
-            <div class="location-search-result-body">
-              <div class="location-search-result-info">
-                <div class="location-search-result-address">
-                  <strong>Location:</strong><br>
-                  <%= office.street_address %><br>
-                  <%= raw("#{office.extended_address}<br>") if office.extended_address? %>
-                  <%= office.locality %>, <%= office.region %> <%= office.postal_code %><br>
-                  <%= office.country_name %>
-                </div>
-
-                <%- if office.phone_numbers.any? || office.email_addresses.any? -%>
-                  <div class="location-search-result-contact">
-                    <%- if office.phone_numbers.any? -%>
-                      <br>
-                      <b>Phone:</b><br>
-                      <%- office.phone_numbers.each do |phone_number| -%>
-                        <%= "#{phone_number['note']}: " if phone_number['note'] %>
-                        <%= phone_number['phone_number'] %> (<%= phone_number['phone_type'] %>)<%= ' (DSN)' if phone_number['dsn'] %><br>
-                      <%- end -%>
-                    <%- end -%>
-
-                    <%- if office.email_addresses.any? -%>
-                      <br>
-                      <b>Email:</b><br>
-                      <%- office.email_addresses.each do |email_address| -%>
-                        <%= "#{email_address['note']}: " if email_address['note'] %>
-                        <%= mail_to email_address['email_address'] %><br>
-                      <%- end -%>
-                    <%- end -%>
-                  </div>
-                <%- end -%>
-
-                <%- if office.shipping_office -%>
-                  <div class="shipping-office-contact">
-                    <b>Regional Processing Office</b><br>
-                    <%= office.shipping_office.name %><br>
-
-                    <%- if office.shipping_office.email_addresses.any? -%>
-                      <br>
-                      <b>Phone:</b><br>
-                      <%- office.shipping_office.phone_numbers.each do |phone_number| -%>
-                        <%= "#{phone_number['note']}: " if phone_number['note'] %>
-                        <%= phone_number['phone_number'] %> (<%= phone_number['phone_type'] %>)<%= ' (DSN)' if phone_number['dsn'] %><br>
-                      <%- end -%>
-                    <%- end -%>
-
-                    <%- if office.shipping_office.email_addresses.any? -%>
-                      <br>
-                      <b>Email:</b><br>
-                      <%- office.shipping_office.email_addresses.each do |email_address| -%>
-                        <%= "#{email_address['note']}: " if email_address['note'] %>
-                        <%= mail_to email_address['email_address'] %><br>
-                      <%- end -%>
-                    <%- end -%>
-                  </div>
-                <%- end -%>
-              </div>
-            </div>
-          </div>
-        <%- end -%>
+        <%= render partial: 'transportation_office', collection: @transportation_offices, as: 'office' %>
       </div>
 
       <%= will_paginate @transportation_offices %>
