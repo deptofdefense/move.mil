@@ -8,7 +8,9 @@
       <div class="location-search-result-address">
         <strong>Location:</strong><br>
         <%= office.street_address %><br>
-        <%= raw("#{office.extended_address}<br>") if office.extended_address? %>
+        <%- if office.extended_address? -%>
+          <%= office.extended_address %><br>
+        <%- end -%>
         <%= office.locality %>, <%= office.region %> <%= office.postal_code %><br>
         <%= office.country_name %>
       </div>
