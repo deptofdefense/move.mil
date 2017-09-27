@@ -49,7 +49,7 @@ end
 
 puts 'Loading ZIP codes...'
 CSV.foreach(Rails.root.join('db', 'seeds', 'zip_code_tabulation_areas.csv'), headers: true) do |row|
-  ZipCodeTabulationArea.create(zipcode: row[0], lat: row[1], lng: row[2])
+  ZipCodeTabulationArea.create(zip_code: row[0], latitude: row[1], longitude: row[2])
 end
 
 puts 'Loading shipping offices...'

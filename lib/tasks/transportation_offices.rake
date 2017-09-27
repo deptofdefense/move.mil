@@ -3,7 +3,7 @@ namespace :convert do
   task :transportation_offices do
     puts 'Converting transportation office data from XML to JSON...'
 
-    doc =  Nokogiri::XML(File.read(Rails.root.join('db', 'seeds', 'To_Cntct_Info_201708110930.xml')))
+    doc = Nokogiri::XML(File.read(Rails.root.join('db', 'seeds', 'To_Cntct_Info_201708110930.xml')))
     output_file_path = Rails.root.join('db', 'seeds', 'transportation_offices.json')
     transportation_offices = []
 
@@ -40,7 +40,7 @@ namespace :convert do
           dsn: dsn
         }
 
-        obj['note'] = note if note.length > 0
+        obj['note'] = note if note.length.positive?
 
         phone_numbers << obj
       end
@@ -48,10 +48,10 @@ namespace :convert do
       transportation_offices << {
         name: name,
         street_address: street_address,
-        extended_address: extended_address.length > 0 ? extended_address : nil,
-        locality: locality.length > 0 ? locality : nil,
-        region: region.length > 0 ? region : nil,
-        region_code: region_code.length > 0 ? region_code : nil,
+        extended_address: extended_address.length.positive? ? extended_address : nil,
+        locality: locality.length.positive? ? locality : nil,
+        region: region.length.positive? ? region : nil,
+        region_code: region_code.length.positive? ? region_code : nil,
         postal_code: postal_code,
         country_name: country_name,
         country_code: country_code,

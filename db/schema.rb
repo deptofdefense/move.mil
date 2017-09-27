@@ -113,9 +113,9 @@ ActiveRecord::Schema.define(version: 20170926190702) do
   end
 
   create_table "zip_code_tabulation_areas", force: :cascade do |t|
-    t.text "zipcode", null: false
-    t.float "lat", null: false
-    t.float "lng", null: false
+    t.text "zip_code", null: false
+    t.float "latitude", null: false
+    t.float "longitude", null: false
   end
 
   add_foreign_key "tutorial_steps", "tutorials"
