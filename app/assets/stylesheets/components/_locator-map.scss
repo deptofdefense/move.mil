@@ -1,0 +1,15 @@
+.locator-map {
+  @include margin($site-margins null);
+  background-color: $color-gray-lightest;
+  height: 40rem;
+}
+
+.map-marker-bubble {
+  max-width: 24rem;
+  text-align: center;
+
+  b {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+}

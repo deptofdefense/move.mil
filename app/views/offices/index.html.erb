@@ -24,9 +24,19 @@
     <% end %>
 
     <%- if @transportation_offices -%>
+      <%= tag.div class: 'locator-map', id: 'locator-map',
+            data: {
+              latitude: @zip_code.latitude,
+              longitude: @zip_code.longitude,
+              'marker-icon-path': asset_path('locator/map_pppo.svg'),
+              'marker-icon-2x-path': asset_path('locator/map_pppo.svg'),
+              'marker-shadow-path': asset_path('leaflet/dist/images/marker-shadow.png')
+            }
+      %>
+
       <p>Displaying results near <b><%= @zip_code.zip_code %></b>.</p>
 
-      <div id="pppo-search-results">
+      <div id="search-results">
         <%= render partial: 'transportation_office', collection: @transportation_offices %>
       </div>
 

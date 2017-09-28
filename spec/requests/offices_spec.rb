@@ -31,9 +31,15 @@ RSpec.describe OfficesController, type: :request do
         let!(:zip_code_tabulation_area) { create(:zip_code_tabulation_area) }
         let!(:transportation_offices) { create_list(:transportation_office, 20) }
 
-        it 'displays a paginated list of transportation offices' do
+        before do
           get '/resources/locator-maps', params: { postal_code: '20010' }
+        end
 
+        it 'displays a map' do
+          assert_select '#locator-map'
+        end
+
+        it 'displays a paginated list of transportation offices' do
           assert_select '.transportation-office', count: 10
           assert_select '.pagination'
         end
