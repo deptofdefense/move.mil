@@ -1,3 +1,17 @@
+.location-search-types {
+  @include margin($site-margins null);
+  border: solid $color-gray-light;
+  border-width: 1px 0;
+
+  .usa-media_block {
+    @include margin($site-margins null);
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
 .locator-map {
   @include margin($site-margins null);
   background-color: $color-gray-lightest;

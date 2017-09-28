@@ -3,3 +3,25 @@
     max-width: 42rem;
   }
 }
+
+.zip-code-search-form {
+  input,
+  button {
+    display: inline-block;
+  }
+
+  input {
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+
+    @include media($small-screen) {
+      width: 12rem;
+    }
+  }
+
+  button {
+    height: 4.4rem;
+    margin: 0;
+  }
+}

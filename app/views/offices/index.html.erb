@@ -6,7 +6,7 @@
   <div class="usa-width-three-fourths usa-layout-docs-main_content">
     <h1><%= @page_title %></h1>
 
-    <p>Find local Transportation Offices (PPPO) and Truck Weight Scales.</p>
+    <p>Use the search form below to find local Transportation Offices (<%= abbr_tag('pppo') %>s) and Truck Weight Scales.</p>
 
     <%- if @error_message -%>
       <div class="usa-alert usa-alert-error" role="alert">
@@ -16,14 +16,30 @@
       </div>
     <%- end -%>
 
-    <%= form_with url: offices_path, class: 'usa-form', method: 'get' do |form| %>
-      <%= form.label :postal_code, 'Search by ZIP Code', class: 'usa-input-required' %>
-      <%= form.number_field :postal_code, aria: { required: true }, id: 'postal_code', pattern: '^\d{5}$', placeholder: 'Search by ZIP Code', require: true, value: params[:postal_code] %>
+    <%= form_with url: offices_path, class: 'usa-form zip-code-search-form', method: 'get' do |form| %>
+      <%= form.label :postal_code, 'Search by ZIP Code', class: 'usa-input-required usa-sr-only' %>
+      <%= form.number_field :postal_code, aria: { required: true }, id: 'postal_code', pattern: '^\d{5}$', placeholder: 'e.g. 20500', require: true, value: params[:postal_code] %>
 
-      <button>Search</button>
+      <button>Search by ZIP Code</button>
     <% end %>
 
     <%- if @transportation_offices -%>
+      <div class="location-search-types">
+        <div class="usa-media_block">
+          <%= image_tag 'locator/texticon_pppo.svg', alt: 'A blue icon of a Transportation Office', class: 'usa-media_block-img' %>
+          <div class="usa-media_block-body">
+            <p><b>Transportation Offices</b> are your customer service “store front” of the moving process. In addition to providing information sessions about the moving process, they can also help with scheduling, changing delivery dates, and answering any other questions that come up during your move.</p>
+          </div>
+        </div>
+
+        <div class="usa-media_block">
+          <%= image_tag 'locator/texticon_scales.svg', alt: 'An orange icon of a truck on a weight scale', class: 'usa-media_block-img' %>
+          <div class="usa-media_block-body">
+            <p><b>Truck Weight Scales</b> are privately owned locations where you can take your vehicles to be weighed to receive required <%= abbr_tag('ppm') %> “Do-It-Yourself” move weight tickets.</p>
+          </div>
+        </div>
+      </div>
+
       <%= tag.div class: 'locator-map', id: 'locator-map',
             data: {
               latitude: @zip_code.latitude,
