@@ -8,63 +8,27 @@
 
     <p>Moves are complex elephants, so let’s break this process down into something digestible. When in doubt, give <%= link_to 'your local personal property office', locator_maps_path %> a call.  They are a wealth of knowledge and have the most up-to-date information to help you!</p>
 
-    <ul>
-      <li><a href="#before-you-move">Before You Move</a></li>
-      <li><a href="#moving-day">Moving Day!</a></li>
-      <li><a href="#travel-tips">Tips As You Travel</a></li>
-      <li><a href="#delivery">Destination Delivery</a></li>
-      <li><a href="#after-the-move">After The Move: Vouchers, Claims and Surveys</a></li>
-    </ul>
+    <%- if @faq_sections -%>
+      <ul>
+        <%- @faq_sections.each do |faq_section| -%>
+          <li><%= link_to faq_section[:title], "##{faq_section[:slug]}" %></li>
+        <%- end -%>
+      </ul>
 
-    <h2 id="before-you-move">Before You Move</h2>
-    <ul class="usa-accordion-bordered">
-      <%- @faqs['before-you-move']&.each do |faq| -%>
-        <li class="faq-accordion">
-          <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
-          <div class="usa-accordion-content" id="<%= faq.id %>"><%= raw faq.answer %></div>
-        </li>
+      <%- @faq_sections.each do |faq_section| -%>
+        <h2 id="<%= faq_section[:slug] %>"><%= faq_section[:title] %></h2>
+
+        <%- if faq_section[:faqs] -%>
+          <ul class="usa-accordion-bordered">
+            <%- faq_section[:faqs].each do |faq| -%>
+              <li class="faq-accordion">
+                <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
+                <div class="usa-accordion-content" id="<%= faq.id %>"><%= raw faq.answer %></div>
+              </li>
+            <%- end -%>
+          </ul>
+        <%- end -%>
       <%- end -%>
-    </ul>
-
-    <h2 id="moving-day">Moving Day!</h2>
-    <ul class="usa-accordion-bordered">
-      <%- @faqs['moving-day']&.each do |faq| -%>
-        <li class="faq-accordion">
-          <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
-          <div class="usa-accordion-content" id="<%= faq.id %>"><%= raw faq.answer %></div>
-        </li>
-      <%- end -%>
-    </ul>
-
-    <h2 id="travel-tips">Tips As You Travel</h2>
-    <ul class="usa-accordion-bordered">
-      <%- @faqs['travel-tips']&.each do |faq| -%>
-        <li class="faq-accordion">
-          <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
-          <div class="usa-accordion-content" id="<%= faq.id %>"><%= raw faq.answer %></div>
-        </li>
-      <%- end -%>
-    </ul>
-
-    <h2 id="delivery">Destination Delivery</h2>
-    <ul class="usa-accordion-bordered">
-      <%- @faqs['delivery']&.each do |faq| -%>
-        <li class="faq-accordion">
-          <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
-          <div class="usa-accordion-content" id="<%= faq.id %>"><%= raw faq.answer %></div>
-        </li>
-      <%- end -%>
-    </ul>
-
-    <h2 id="after-the-move">After The Move: Vouchers, Claims and Surveys</h2>
-    <ul class="usa-accordion-bordered">
-      <%- @faqs['after-the-move']&.each do |faq| -%>
-        <li class="faq-accordion">
-          <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
-          <div class="usa-accordion-content" id="<%= faq.id %>"><%= raw faq.answer %></div>
-        </li>
-      <%- end -%>
-    </ul>
-
+    <%- end -%>
   </div>
 </div>
