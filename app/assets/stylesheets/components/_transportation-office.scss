@@ -1,21 +1,15 @@
-.location-search-result {
+.transportation-office {
   border: 1px solid $color-gray-light;
   box-shadow: 0 0.25rem 0.25rem 0 rgba($color-gray, 0.25);
   margin-top: $site-margins;
 }
 
-.location-search-result-header {
+.transportation-office-header {
   background-color: $color-cool-blue-lightest;
   padding: $site-margins-mobile;
 }
 
-.location-search-result-body {
+.transportation-office-body {
   font-size: $h5-font-size;
-  padding: $site-margins-mobile;
-}
-
-.shipping-office-contact {
-  background: $color-cool-blue-lightest;
-  margin-top: 2.5rem;
   padding: $site-margins-mobile;
 }

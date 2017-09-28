@@ -1,0 +1,26 @@
+<div class="shipping-office">
+  <div class="shipping-office-header">
+    <b>Regional Processing Office</b><br>
+    <%= shipping_office.name %>
+  </div>
+
+  <div class="shipping-office-body">
+    <%- if shipping_office.email_addresses.any? -%>
+      <br>
+      <b>Phone:</b><br>
+      <%- shipping_office.phone_numbers.each do |phone_number| -%>
+        <%= "#{phone_number['note']}: " if phone_number['note'] %>
+        <%= phone_number['phone_number'] %> (<%= phone_number['phone_type'] %>)<%= ' (DSN)' if phone_number['dsn'] %><br>
+      <%- end -%>
+    <%- end -%>
+
+    <%- if shipping_office.email_addresses.any? -%>
+      <br>
+      <b>Email:</b><br>
+      <%- shipping_office.email_addresses.each do |email_address| -%>
+        <%= "#{email_address['note']}: " if email_address['note'] %>
+        <%= mail_to email_address['email_address'] %><br>
+      <%- end -%>
+    <%- end -%>
+  </div>
+</div>

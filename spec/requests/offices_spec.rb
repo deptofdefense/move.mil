@@ -34,7 +34,7 @@ RSpec.describe OfficesController, type: :request do
         it 'displays a paginated list of transportation offices' do
           get '/resources/locator-maps', params: { postal_code: '20010' }
 
-          assert_select '.location-search-result', count: 10
+          assert_select '.transportation-office', count: 10
           assert_select '.pagination'
         end
       end
