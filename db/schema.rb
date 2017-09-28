@@ -142,11 +142,9 @@ ActiveRecord::Schema.define(version: 20170926190702) do
   end
 
   create_table "zip_code_tabulation_areas", force: :cascade do |t|
-    t.text "zipcode"
-    t.float "lat"
-    t.float "lng"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text "zipcode", null: false
+    t.float "lat", null: false
+    t.float "lng", null: false
   end
 
   add_foreign_key "transportation_offices", "ppsos"
