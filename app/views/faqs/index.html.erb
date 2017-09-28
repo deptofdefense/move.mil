@@ -21,7 +21,7 @@
       <%- @faqs['before-you-move']&.each do |faq| -%>
         <li class="faq-accordion">
           <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
-          <div class="usa-accordion-content" id="<%= faq.id %>"><%= faq.answer.html_safe %></div>
+          <div class="usa-accordion-content" id="<%= faq.id %>"><%= raw faq.answer %></div>
         </li>
       <%- end -%>
     </ul>
@@ -31,7 +31,7 @@
       <%- @faqs['moving-day']&.each do |faq| -%>
         <li class="faq-accordion">
           <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
-          <div class="usa-accordion-content" id="<%= faq.id %>"><%= faq.answer.html_safe %></div>
+          <div class="usa-accordion-content" id="<%= faq.id %>"><%= raw faq.answer %></div>
         </li>
       <%- end -%>
     </ul>
@@ -41,7 +41,7 @@
       <%- @faqs['travel-tips']&.each do |faq| -%>
         <li class="faq-accordion">
           <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
-          <div class="usa-accordion-content" id="<%= faq.id %>"><%= faq.answer.html_safe %></div>
+          <div class="usa-accordion-content" id="<%= faq.id %>"><%= raw faq.answer %></div>
         </li>
       <%- end -%>
     </ul>
@@ -51,7 +51,7 @@
       <%- @faqs['delivery']&.each do |faq| -%>
         <li class="faq-accordion">
           <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
-          <div class="usa-accordion-content" id="<%= faq.id %>"><%= faq.answer.html_safe %></div>
+          <div class="usa-accordion-content" id="<%= faq.id %>"><%= raw faq.answer %></div>
         </li>
       <%- end -%>
     </ul>
@@ -61,7 +61,7 @@
       <%- @faqs['after-the-move']&.each do |faq| -%>
         <li class="faq-accordion">
           <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
-          <div class="usa-accordion-content" id="<%= faq.id %>"><%= faq.answer.html_safe %></div>
+          <div class="usa-accordion-content" id="<%= faq.id %>"><%= raw faq.answer %></div>
         </li>
       <%- end -%>
     </ul>
