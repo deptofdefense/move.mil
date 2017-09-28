@@ -3,7 +3,7 @@ class OfficesController < ApplicationController
     return unless params[:postal_code]
     return error_message unless zip_code_search.valid? && zip_code
 
-    @transportation_offices = TransportationOffice.includes(:shipping_office).by_distance(origin: [zip_code.latitude, zip_code.longitude]).paginate(page: params[:page])
+    @transportation_offices = TransportationOffice.by_distance_with_shipping_office(latitude: zip_code.latitude, longitude: zip_code.longitude).paginate(page: params[:page])
   end
 
   private
