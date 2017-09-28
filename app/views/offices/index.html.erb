@@ -34,7 +34,7 @@
             }
       %>
 
-      <p>Displaying results near <b><%= @zip_code.zip_code %></b>.</p>
+      <p>Displaying results near <b><%= @zip_code.zip_code %></b><%= " (page #{@transportation_offices.current_page} of #{@transportation_offices.total_pages})" if @transportation_offices.total_pages.positive? %>.</p>
 
       <div id="search-results">
         <%= render partial: 'transportation_office', collection: @transportation_offices %>
