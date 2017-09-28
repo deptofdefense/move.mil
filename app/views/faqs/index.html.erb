@@ -18,7 +18,7 @@
 
     <h2 id="before-you-move">Before You Move</h2>
     <ul class="usa-accordion-bordered">
-      <%- @faqs['before-you-move'].each do |faq| -%>
+      <%- @faqs['before-you-move']&.each do |faq| -%>
         <li class="faq-accordion">
           <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
           <div class="usa-accordion-content" id="<%= faq.id %>"><%= faq.answer.html_safe %></div>
@@ -28,7 +28,7 @@
 
     <h2 id="moving-day">Moving Day!</h2>
     <ul class="usa-accordion-bordered">
-      <%- @faqs['moving-day'].each do |faq| -%>
+      <%- @faqs['moving-day']&.each do |faq| -%>
         <li class="faq-accordion">
           <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
           <div class="usa-accordion-content" id="<%= faq.id %>"><%= faq.answer.html_safe %></div>
@@ -38,7 +38,7 @@
 
     <h2 id="travel-tips">Tips As You Travel</h2>
     <ul class="usa-accordion-bordered">
-      <%- @faqs['travel-tips'].each do |faq| -%>
+      <%- @faqs['travel-tips']&.each do |faq| -%>
         <li class="faq-accordion">
           <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
           <div class="usa-accordion-content" id="<%= faq.id %>"><%= faq.answer.html_safe %></div>
@@ -48,7 +48,7 @@
 
     <h2 id="delivery">Destination Delivery</h2>
     <ul class="usa-accordion-bordered">
-      <%- @faqs['delivery'].each do |faq| -%>
+      <%- @faqs['delivery']&.each do |faq| -%>
         <li class="faq-accordion">
           <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
           <div class="usa-accordion-content" id="<%= faq.id %>"><%= faq.answer.html_safe %></div>
@@ -58,7 +58,7 @@
 
     <h2 id="after-the-move">After The Move: Vouchers, Claims and Surveys</h2>
     <ul class="usa-accordion-bordered">
-      <%- @faqs['after-the-move'].each do |faq| -%>
+      <%- @faqs['after-the-move']&.each do |faq| -%>
         <li class="faq-accordion">
           <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
           <div class="usa-accordion-content" id="<%= faq.id %>"><%= faq.answer.html_safe %></div>
