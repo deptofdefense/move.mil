@@ -5,6 +5,8 @@
 }
 
 .zip-code-search-form {
+  @include margin($site-margins null);
+
   input,
   button {
     display: inline-block;
@@ -16,7 +18,7 @@
     appearance: textfield;
 
     @include media($small-screen) {
-      width: 12rem;
+      width: 15rem;
     }
   }
 

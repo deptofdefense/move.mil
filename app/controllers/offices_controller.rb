@@ -1,19 +1,21 @@
 class OfficesController < ApplicationController
   def index
-    return unless params[:postal_code]
-    return error_message unless zip_code_search.valid? && zip_code
+    return unless search
+    return @error_message = search.error_message unless search.valid?
 
-    @transportation_offices = TransportationOffice.by_distance_with_shipping_office(latitude: zip_code.latitude, longitude: zip_code.longitude).paginate(page: params[:page])
+    @result = search.result
+    @transportation_offices = TransportationOffice.by_distance_with_shipping_office(latitude: @result[:latitude], longitude: @result[:longitude]).paginate(page: params[:page])
   end
 
   private
 
-  def error_message
-    @error_message ||= 'There was a problem locating that ZIP Code. Mind trying your search again?'
+  def search
+    return coordinates_search if params[:coordinates].present?
+    return zip_code_search if params[:postal_code].present?
   end
 
-  def zip_code
-    @zip_code ||= zip_code_search.result
+  def coordinates_search
+    @coordinates_search ||= CoordinatesSearch.new(params)
   end
 
   def zip_code_search
