@@ -4,6 +4,7 @@
 
   .usa-button {
     width: 100%;
-    @include margin(2rem null);
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
   }
 }
