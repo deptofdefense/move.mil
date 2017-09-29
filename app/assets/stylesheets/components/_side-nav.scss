@@ -1,0 +1,9 @@
+.sidenav-footer {
+  margin-top: 4rem;
+  border-top: solid 2px #112e51;
+
+  .usa-button {
+    width: 100%;
+    @include margin(2rem null);
+  }
+}
