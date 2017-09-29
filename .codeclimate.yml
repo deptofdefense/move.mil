@@ -18,5 +18,6 @@ ratings:
     - "**.rb"
     - "**.js"
 exclude_paths:
+  - "lib/tasks/*.rake"
   - "spec/**/*"
   - "vendor/**/*"
