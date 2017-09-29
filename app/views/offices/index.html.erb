@@ -8,20 +8,33 @@
 
     <p>Use the search form below to find local Transportation Offices (<%= abbr_tag('pppo') %>s) and Truck Weight Scales.</p>
 
-    <%- if @error_message -%>
-      <div class="usa-alert usa-alert-error" role="alert">
-        <div class="usa-alert-body">
-          <p class="usa-alert-text"><%= @error_message %></p>
+    <div id="geolocation-notice" hidden>
+      <p>You may also search for Transportation Offices and Truck Weight Scales using your device’s geolocation features. To use these features, you will be prompted to allow access to your location. We use the information provided by your device for the purposes of finding nearby Transportation Offices and Truck Weight Scales but <b>we do not store your location</b>.</p>
+    </div>
+
+    <div id="error-container">
+      <%- if @error_message -%>
+        <div class="usa-alert usa-alert-error" role="alert">
+          <div class="usa-alert-body">
+            <p class="usa-alert-text"><%= @error_message %></p>
+          </div>
         </div>
-      </div>
-    <%- end -%>
+      <%- end -%>
+    </div>
 
-    <%= form_with url: offices_path, class: 'usa-form zip-code-search-form', method: 'get' do |form| %>
-      <%= form.label :postal_code, 'Search by ZIP Code', class: 'usa-input-required usa-sr-only' %>
-      <%= form.number_field :postal_code, aria: { required: true }, id: 'postal_code', pattern: '^\d{5}$', placeholder: 'e.g. 20500', require: true, value: params[:postal_code] %>
+    <div class="search-forms-container">
+      <%= form_with url: offices_path, class: 'usa-form zip-code-search-form', id: 'search-code-zip-form', method: 'get' do |form| %>
+        <%= form.label :postal_code, 'Search by ZIP Code', class: 'usa-input-required usa-sr-only' %>
+        <%= form.number_field :postal_code, aria: { required: true }, id: 'postal_code', pattern: '^\d{5}$', placeholder: 'e.g. 20500', require: true, value: params[:postal_code] %>
 
-      <button>Search by ZIP Code</button>
-    <% end %>
+        <button>Search by ZIP Code</button>
+      <% end %>
+
+      <%= form_with url: offices_path, class: 'usa-form coordinates-search-form', html: { hidden: true }, id: 'coordinates-search-form', method: 'get' do |form| %>
+        <%= form.hidden_field :coordinates, id: 'coordinates' %>
+        <button>Search by Your Location</button>
+      <% end %>
+    </div>
 
     <%- if @transportation_offices -%>
       <div class="location-search-types">

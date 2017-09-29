@@ -4,26 +4,50 @@
   }
 }
 
-.zip-code-search-form {
+.search-forms-container {
+  @include clearfix;
   @include margin($site-margins null);
 
-  input,
-  button {
-    display: inline-block;
-  }
-
-  input {
-    -moz-appearance: textfield;
-    -webkit-appearance: textfield;
-    appearance: textfield;
-
-    @include media($small-screen) {
-      width: 15rem;
+  @include media(42rem) {
+    form {
+      float: left;
     }
   }
 
   button {
     height: 4.4rem;
     margin: 0;
+  }
+}
+
+.zip-code-search-form {
+  @include clearfix;
+
+  input {
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+    margin: 0 0 $site-margins-mobile;
+
+    @include media($small-screen) {
+      float: left;
+      margin: 0;
+      width: 15rem;
+    }
+  }
+
+  @include media($small-screen) {
+    button {
+      border-radius: 0 $border-radius $border-radius 0;
+      float: left;
+    }
+  }
+}
+
+.coordinates-search-form {
+  margin-top: $site-margins-mobile;
+
+  @include media(42rem) {
+    margin: 0 0 0 $site-margins-mobile;
   }
 }

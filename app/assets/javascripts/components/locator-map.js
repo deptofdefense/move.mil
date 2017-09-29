@@ -28,7 +28,11 @@
     this.$container = options.$container;
     this.$offices = options.$offices;
 
-    this.map = L.map(this.$container.attr('id'));
+    this.map = L.map(this.$container.attr('id'), {
+      maxZoom: 18,
+      scrollWheelZoom: false
+    });
+
     this.markers = [];
 
     this.markerIcon = L.icon({
@@ -78,8 +82,7 @@
       this.map.setView([this.$container.data('latitude'), this.$container.data('longitude')], 8);
 
       L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: 'Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Map imagery © <a href="https://www.mapbox.com">Mapbox</a>.',
-        maxZoom: 18
+        attribution: 'Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Map imagery © <a href="https://www.mapbox.com">Mapbox</a>.'
       }).addTo(this.map);
 
       this.$offices.each(function(index, element) {
