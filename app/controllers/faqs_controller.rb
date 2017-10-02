@@ -6,7 +6,7 @@ class FaqsController < ApplicationController
       {
         slug: section.parameterize,
         title: section,
-        faqs: grouped_faqs[section]
+        faqs: grouped_faqs[section.parameterize]
       }
     end
   end
@@ -18,6 +18,6 @@ class FaqsController < ApplicationController
   end
 
   def ordered_faq_sections
-    ['Before You Move', 'Moving Day!']
+    ['Before You Move', 'Moving Day!', 'Travel Tips', 'Delivery', 'After The Move']
   end
 end
