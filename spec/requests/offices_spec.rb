@@ -49,7 +49,7 @@ RSpec.describe OfficesController, type: :request do
     context 'when performing a coordinates search' do
       context 'when sending invalid or incomplete params' do
         it 'displays an error message' do
-          get '/resources/locator-maps', params: { coordinates: 'foo' }
+          get '/resources/locator-maps', params: { coordinates: '-100,181' }
 
           assert_select '.usa-alert-error .usa-alert-text', text: 'There was a problem performing that search. Mind trying again?'
         end
