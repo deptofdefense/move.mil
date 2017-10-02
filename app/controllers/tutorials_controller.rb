@@ -1,19 +1,9 @@
 class TutorialsController < ApplicationController
   def index
-    tutorials
+    @tutorials = Tutorial.includes(:tutorial_steps).all
   end
 
   def show
-    tutorial
-  end
-
-  private
-
-  def tutorial
-    @tutorial ||= Tutorial.find(params[:id])
-  end
-
-  def tutorials
-    @tutorials ||= Tutorial.all
+    @tutorial = Tutorial.includes(:tutorial_steps).find(params[:id])
   end
 end
