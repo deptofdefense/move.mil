@@ -4,6 +4,6 @@ FactoryGirl.define do
   factory :faq do
     question
     answer 'Answer'
-    category 'Before You Move'
+    category 'before-you-move'
   end
 end
