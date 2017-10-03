@@ -10,7 +10,7 @@
           <span>Moving with the Military</span>
         </button>
 
-        <ul class="usa-nav-submenu" id="nav-moving-with-the-military">
+        <ul class="usa-nav-submenu" id="nav-moving-with-the-military" aria-hidden="true">
           <li><%= link_to 'Overview', page_path('moving-guide') %></li>
           <li><%= link_to raw("<i>What to expect…</i> #{abbr_tag('conus')} #{abbr_tag('pcs')}"), page_path('moving-guide/conus') %></li>
           <li><%= link_to raw("<i>What to expect…</i> #{abbr_tag('oconus')} #{abbr_tag('pcs')}"), page_path('moving-guide/oconus') %></li>
@@ -41,7 +41,7 @@
           <span>Tools &amp; Resources</span>
         </button>
 
-        <ul class="usa-nav-submenu" id="nav-resources">
+        <ul class="usa-nav-submenu" id="nav-resources" aria-hidden="true">
           <li><%= link_to 'Overview', page_path('resources') %></li>
           <li><%= link_to 'Locator Maps', offices_path %></li>
         </ul>
