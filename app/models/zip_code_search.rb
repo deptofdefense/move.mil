@@ -7,13 +7,16 @@ class ZipCodeSearch
     'There was a problem locating that ZIP Code. Mind trying your search again?'
   end
 
+  def query
+    search_params[:postal_code]
+  end
+
   def result
     zip_code_tabulation_area = ZipCodeTabulationArea.find_by(zip_code: search_params[:postal_code])
 
     {
       latitude: zip_code_tabulation_area.latitude,
-      longitude: zip_code_tabulation_area.longitude,
-      zip_code: zip_code_tabulation_area.zip_code
+      longitude: zip_code_tabulation_area.longitude
     }
   end
 

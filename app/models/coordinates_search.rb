@@ -7,6 +7,10 @@ class CoordinatesSearch
     'There was a problem performing that search. Mind trying again?'
   end
 
+  def query
+    search_params[:coordinates]
+  end
+
   def result
     coordinates_parts = search_params[:coordinates].split(',')
 

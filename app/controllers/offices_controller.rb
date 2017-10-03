@@ -3,15 +3,18 @@ class OfficesController < ApplicationController
     return unless search
     return @error_message = search.error_message unless search.valid?
 
-    @result = search.result
-    @transportation_offices = TransportationOffice.by_distance_with_shipping_office(latitude: @result[:latitude], longitude: @result[:longitude]).paginate(page: params[:page])
+    @transportation_offices = TransportationOffice.by_distance_with_shipping_office(search.result).paginate(page: params[:page])
   end
 
   private
 
   def search
-    return coordinates_search if params[:coordinates].present?
-    return zip_code_search if params[:postal_code].present?
+    @search ||=
+      if params[:coordinates].present?
+        coordinates_search
+      elsif params[:postal_code].present?
+        zip_code_search
+      end
   end
 
   def coordinates_search

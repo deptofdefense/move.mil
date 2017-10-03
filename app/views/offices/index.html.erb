@@ -55,15 +55,15 @@
 
       <%= tag.div class: 'locator-map', id: 'locator-map',
             data: {
-              latitude: @result[:latitude],
-              longitude: @result[:longitude],
+              latitude: @search.result[:latitude],
+              longitude: @search.result[:longitude],
               'marker-icon-path': asset_path('locator/map_pppo.svg'),
               'marker-icon-2x-path': asset_path('locator/map_pppo.svg'),
               'marker-shadow-path': asset_path('leaflet/dist/images/marker-shadow.png')
             }
       %>
 
-      <p>Displaying results near <b><%= @result[:zip_code] || "#{@result[:latitude]}, #{@result[:longitude]}" %></b><%= " (page #{@transportation_offices.current_page} of #{@transportation_offices.total_pages})" if @transportation_offices.total_pages.positive? %>.</p>
+      <p>Displaying results near <b><%= @search.query %></b><%= " (page #{@transportation_offices.current_page} of #{@transportation_offices.total_pages})" if @transportation_offices.total_pages.positive? %>.</p>
 
       <div id="search-results">
         <%= render partial: 'transportation_office', collection: @transportation_offices %>
