@@ -10,21 +10,33 @@
 @include media($nav-width) {
   .usa-header {
     border-bottom-color: $color-gray-cool-light;
+
+    .usa-logo {
+      margin-bottom: 2rem;
+    }
   }
 }
 
-.usa-header-extended em {
-  font-family: $font-serif;
-  font-size: $h2-font-size;
+.usa-header-extended {
+  em {
+    font-family: $font-sans;
+    font-size: $h1-font-size;
+  }
+
+  .usa-logo-text {
+    color: $color-primary-darkest;
+  }
 }
 
 .usa-logo-text span {
   display: none;
-  font-family: $font-sans;
+  font-family: $font-serif;
+  font-size: $h3-font-size;
   font-weight: $font-normal;
 
   @include media($nav-width) {
-    display: inline;
+    display: block;
+    margin-top: 1rem;
   }
 }
 
