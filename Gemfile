@@ -9,7 +9,7 @@ source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
 gem 'active_link_to', '~> 1.0', '>= 1.0.5'
-gem 'friendly_id', '~> 5.2', '>= 5.2.2'
+gem 'friendly_id', '~> 5.2', '>= 5.2.3'
 gem 'geokit-rails', '~> 2.3.0'
 gem 'high_voltage', '~> 3.0'
 gem 'pg', '~> 0.21.0'
@@ -28,7 +28,7 @@ source 'https://rails-assets.org' do
 end
 
 group :development, :test do
-  gem 'brakeman', '~> 3.7', require: false
+  gem 'brakeman', '~> 4.0', '>= 4.0.1', require: false
   gem 'byebug', '~> 9.1'
   gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
