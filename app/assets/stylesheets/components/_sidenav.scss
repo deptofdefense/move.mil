@@ -8,3 +8,11 @@
     width: 100%;
   }
 }
+
+.usa-layout-docs-sidenav {
+  display: none;
+
+  @include media($large-screen) {
+    display: block;
+  }
+}
