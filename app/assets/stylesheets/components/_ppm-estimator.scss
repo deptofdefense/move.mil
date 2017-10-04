@@ -1,0 +1,36 @@
+.ppm-form {
+  padding-left: 5rem;
+
+  fieldset {
+    margin-top: 2.8rem;
+    position: relative;
+  }
+
+  legend {
+    font-size: 15px;
+    margin-bottom: 1rem;
+
+    span {
+      font-size: 24px;
+      left: -3.5rem;
+      position: absolute;
+      top: -0.6rem;
+    }
+  }
+
+  label {
+    display: unset;
+    font-size: $small-font-size;
+    margin-right: 2rem;
+  }
+
+  input, select {
+    font-size: $small-font-size;
+    height: unset;
+  }
+
+}
+
+.ppm-grid {
+  padding-left: 0;
+}

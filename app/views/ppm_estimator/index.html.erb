@@ -1,0 +1,79 @@
+<%- @page_title = 'Personally Procured Move (PPM) Estimator' -%>
+
+<div class="usa-grid usa-section usa-layout-docs">
+  <%= render 'shared/sidenav' %>
+
+  <div class="usa-width-three-fourths usa-layout-docs-main_content">
+    <h1><%= @page_title %></h1>
+
+    <p>For your upcoming move, get an estimate for how much the government will pay <strong>you</strong> if you choose to "do it yourself." You can use this money to cover the cost of hiring packers and movers, renting moving trucks, and so on. If you spend less to move than the government will reimburse you to move yourself, you get to pocket the difference!</p>
+
+    <%= form_with url: ppm_estimator_path, class: 'ppm-form', method: 'get' do |form| %>
+      <fieldset>
+        <legend><span>1</span>What is your rank and branch of service?</legend>
+        <div class="usa-grid ppm-grid">
+          <div class="usa-width-one-half">
+            <%= form.label :rank, 'Rank' %>
+            <%= form.select :rank, [['Service Academy Cadets/Midshipmen', 'midshipmen'], ['Aviation Cadets', 'cadets'], 'E-1', 'E-2', 'E-3', 'E-4', 'E-5', 'E-6', 'E-7', 'E-8', 'E-9', ['O-1/W-1/Service Academy Graduates', 'O-1'], ['O-2/W-2', 'O-2'], ['O-3/W-3', 'O-3'], ['O-4/W-4', 'O-4'], ['O-5/W-5', 'O-5'], 'O-6', 'O-7', 'O-8', 'O-9', 'O-10'], { prompt: 'Select Rank' }, { id: :rank, required: true } %>
+          </div>
+
+          <div class="usa-width-one-half">
+            <%= form.label :branch, 'Branch of Service' %>
+            <%= form.select :branch, [['Air Force', 'air-force'], ['Army', 'army'], ['Coast Guard', 'coast-guard'], ['Marine Corps', 'marines'], ['Navy', 'navy']], { include_blank: true }, { id: :branch, required: true } %>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span>2</span>Where are you moving from and to?</legend>
+        <div class="usa-grid ppm-grid">
+          <div class="usa-width-one-half">
+            <%= form.label :start, 'Start Location (ZIP Code)' %>
+            <%= form.text_field :start, { id: :start, required: true } %>
+          </div>
+
+          <div class="usa-width-one-half">
+            <%= form.label :end, 'Destination ZIP Code' %>
+            <%= form.text_field :end, { id: :end, required: true } %>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span>3</span>When do you want to move?</legend>
+        <%= form.label :date, 'Moving Date' %>
+        <%= form.date_field :date, { id: :date, required: true } %>
+      </fieldset>
+
+      <fieldset>
+        <legend><span>4</span>How much, in pounds, do you expect to move?</legend>
+        <div>
+          The government will only reimburse for the actual weight transported
+          up to your weight allowance.
+          <a href="#TODO">Need help estimating your total household weight?</a>
+        </div>
+        <%= form.label :weight, 'Estimated Household Goods Weight' %>
+        <%= form.text_field :weight, { id: :weight, required: true } %>
+      </fieldset>
+
+      <fieldset>
+        <legend><span>5</span>Do you plan to pack your household goods yourself?</legend>
+        <div>
+          The government will pay you the amount equal to the government cost
+          to have your belongings professionally packed. The payment can be
+          used to cover the packing materials or to hire any help you may need
+          to pack your house. Any left over money, you can keep — no reciepts
+          needed!
+          <a href="#TODO">How do I make sure the government pays me my packing entitlement?</a>
+        </div>
+        <%= form.radio_button :selfpack, 'yes', checked: true %>
+        <%= form.label :selfpack_yes, 'Yes' %>
+        <%= form.radio_button :selfpack, 'no' %>
+        <%= form.label :selfpack_no, 'No' %>
+      </fieldset>
+
+      <button>Calculate My Estimate</button>
+    <% end %>
+
+  </div>
+</div>
