@@ -18,21 +18,9 @@
       </ul>
 
       <div class="usa-grid-full tabs-panel" id="army">
-        <%= image_tag("Service-Army.png") %><br>
+        <%= image_tag 'Service-Army.png', alt: '', role: 'presentation' %><br>
         <div class="usa-width-two-thirds">
-          <%- @posts_army.each do |post| -%>
-            <article class="svc-spec-frame">
-              <header>
-                <%= post.title %>
-                <% unless post.effective_at.nil? %>
-                  <br><time>Effective <%= post.effective_at.strftime("%B #{post.effective_at.day.ordinalize}, %Y") %></time>
-                <% end %>
-              </header>
-              <section>
-                <%= post.content.html_safe %>
-              </section>
-            </article>
-          <%- end -%>
+          <%= render partial: 'post', collection: @posts_army %>
         </div>
         <div class="usa-width-one-third">
           <h4>Helpful Links</h4>
@@ -72,21 +60,9 @@
       </div>
 
       <div class="usa-grid-full tabs-panel" id="air-force">
-        <%= image_tag("Service-AirForce.png") %><br>
+        <%= image_tag 'Service-AirForce.png', alt: '', role: 'presentation' %><br>
         <div class="usa-width-two-thirds">
-          <%- @posts_air_force.each do |post| -%>
-            <article class="svc-spec-frame">
-              <header>
-                <%= post.title %>
-                <% unless post.effective_at.nil? %>
-                  <br><time>Effective <%= post.effective_at.strftime("%B #{post.effective_at.day.ordinalize}, %Y") %></time>
-                <% end %>
-              </header>
-              <section>
-                <%= post.content.html_safe %>
-              </section>
-            </article>
-          <%- end -%>
+          <%= render partial: 'post', collection: @posts_air_force %>
         </div>
         <div class="usa-width-one-third">
           <h4>Helpful Links</h4>
@@ -201,19 +177,7 @@
 
       <div class="usa-grid-full tabs-panel" id="navy">
         <div class="usa-width-two-thirds">
-          <%- @posts_navy.each do |post| -%>
-            <article class="svc-spec-frame">
-              <header>
-                <%= post.title %>
-                <% unless post.effective_at.nil? %>
-                  <br><time>Effective <%= post.effective_at.strftime("%B #{post.effective_at.day.ordinalize}, %Y") %></time>
-                <% end %>
-              </header>
-              <section>
-                <%= post.content.html_safe %>
-              </section>
-            </article>
-          <%- end -%>
+          <%= render partial: 'post', collection: @posts_navy %>
         </div>
         <div class="usa-width-one-third">
           <h4>Helpful Links</h4>
@@ -290,21 +254,9 @@
       </div>
 
       <div class="usa-grid-full tabs-panel" id="marines">
-        <%= image_tag("Service-Marines.png") %><br>
+        <%= image_tag 'Service-Marines.png', alt: '', role: 'presentation' %><br>
         <div class="usa-width-two-thirds">
-          <%- @posts_marine_corps.each do |post| -%>
-            <article class="svc-spec-frame">
-              <header>
-                <%= post.title %>
-                <% unless post.effective_at.nil? %>
-                  <br><time>Effective <%= post.effective_at.strftime("%B #{post.effective_at.day.ordinalize}, %Y") %></time>
-                <% end %>
-              </header>
-              <section>
-                <%= post.content.html_safe %>
-              </section>
-            </article>
-          <%- end -%>
+          <%= render partial: 'post', collection: @posts_marine_corps %>
         </div>
         <div class="usa-width-one-third">
           <h4>Helpful Links</h4>
@@ -401,21 +353,9 @@
       </div>
 
       <div class="usa-grid-full tabs-panel" id="coast-guard">
-        <%= image_tag("Service-CoastGuard.png") %><br>
+        <%= image_tag 'Service-CoastGuard.png', alt: '', role: 'presentation' %><br>
         <div class="usa-width-two-thirds">
-          <%- @posts_coast_guard.each do |post| -%>
-            <article class="svc-spec-frame">
-              <header>
-                <%= post.title %>
-                <% unless post.effective_at.nil? %>
-                  <br><time>Effective <%= post.effective_at.strftime("%B #{post.effective_at.day.ordinalize}, %Y") %></time>
-                <% end %>
-              </header>
-              <section>
-                <%= post.content.html_safe %>
-              </section>
-            </article>
-          <%- end -%>
+          <%= render partial: 'post', collection: @posts_coast_guard %>
         </div>
         <div class="usa-width-one-third">
           <h4>Helpful Links</h4>

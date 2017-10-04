@@ -1,0 +1,11 @@
+<article class="svc-spec-frame">
+  <header>
+    <%= post.title %>
+    <%- unless post.effective_at.nil? -%>
+      <br><time>Effective <%= post.effective_at.strftime("%B #{post.effective_at.day.ordinalize}, %Y") %></time>
+    <%- end -%>
+  </header>
+  <section>
+    <%= post.content.html_safe %>
+  </section>
+</article>
