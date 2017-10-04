@@ -25,7 +25,7 @@
     <div class="search-forms-container">
       <%= form_with url: offices_path, class: 'usa-form zip-code-search-form', id: 'search-code-zip-form', method: 'get' do |form| %>
         <%= form.label :postal_code, 'Search by ZIP Code', class: 'usa-input-required usa-sr-only' %>
-        <%= form.number_field :postal_code, aria: { required: true }, id: 'postal_code', pattern: '^\d{5}$', placeholder: 'e.g. 20500', require: true, value: params[:postal_code] %>
+        <%= form.number_field :postal_code, aria: { required: true }, id: 'postal_code', pattern: '^\d{5}$', placeholder: 'e.g. 20500', required: true, value: params[:postal_code] %>
 
         <button>Search by ZIP Code</button>
       <% end %>
