@@ -18,10 +18,16 @@
       </ul>
 
       <div class="usa-grid-full tabs-panel" id="army">
-        <%= image_tag 'Service-Army.png', alt: '', role: 'presentation' %><br>
-        <div class="usa-width-two-thirds">
-          <%= render partial: 'post', collection: @posts_army %>
-        </div>
+        <%= image_tag("Service-Army.png") %><br>
+
+        <%- if @army_posts -%>
+          <div class="usa-width-two-thirds">
+            <%- @army_posts.each do |post| -%>
+              <%= render partial: 'post', object: post %>
+            <%- end -%>
+          </div>
+        <%- end -%>
+
         <div class="usa-width-one-third">
           <h4>Helpful Links</h4>
           <article class="svc-spec-links">
@@ -60,10 +66,16 @@
       </div>
 
       <div class="usa-grid-full tabs-panel" id="air-force">
-        <%= image_tag 'Service-AirForce.png', alt: '', role: 'presentation' %><br>
-        <div class="usa-width-two-thirds">
-          <%= render partial: 'post', collection: @posts_air_force %>
-        </div>
+        <%= image_tag("Service-AirForce.png") %><br>
+
+        <%- if @air_force_posts -%>
+          <div class="usa-width-two-thirds">
+            <%- @air_force_posts.each do |post| -%>
+              <%= render partial: 'post', object: post %>
+            <%- end -%>
+          </div>
+        <%- end -%>
+
         <div class="usa-width-one-third">
           <h4>Helpful Links</h4>
           <article class="svc-spec-links">
@@ -176,9 +188,14 @@
       </div>
 
       <div class="usa-grid-full tabs-panel" id="navy">
-        <div class="usa-width-two-thirds">
-          <%= render partial: 'post', collection: @posts_navy %>
-        </div>
+        <%- if @navy_posts -%>
+          <div class="usa-width-two-thirds">
+            <%- @navy_posts.each do |post| -%>
+              <%= render partial: 'post', object: post %>
+            <%- end -%>
+          </div>
+        <%- end -%>
+
         <div class="usa-width-one-third">
           <h4>Helpful Links</h4>
           <article class="svc-spec-links">
@@ -254,10 +271,16 @@
       </div>
 
       <div class="usa-grid-full tabs-panel" id="marines">
-        <%= image_tag 'Service-Marines.png', alt: '', role: 'presentation' %><br>
-        <div class="usa-width-two-thirds">
-          <%= render partial: 'post', collection: @posts_marine_corps %>
-        </div>
+        <%= image_tag("Service-Marines.png") %><br>
+
+        <%- if @marine_corps_posts -%>
+          <div class="usa-width-two-thirds">
+            <%- @marine_corps_posts.each do |post| -%>
+              <%= render partial: 'post', object: post %>
+            <%- end -%>
+          </div>
+        <%- end -%>
+
         <div class="usa-width-one-third">
           <h4>Helpful Links</h4>
           <article class="svc-spec-links">
@@ -353,10 +376,16 @@
       </div>
 
       <div class="usa-grid-full tabs-panel" id="coast-guard">
-        <%= image_tag 'Service-CoastGuard.png', alt: '', role: 'presentation' %><br>
-        <div class="usa-width-two-thirds">
-          <%= render partial: 'post', collection: @posts_coast_guard %>
-        </div>
+        <%= image_tag("Service-CoastGuard.png") %><br>
+
+        <%- if @coast_guard_posts -%>
+          <div class="usa-width-two-thirds">
+            <%- @coast_guard_posts.each do |post| -%>
+              <%= render partial: 'post', object: post %>
+            <%- end -%>
+          </div>
+        <%- end -%>
+
         <div class="usa-width-one-third">
           <h4>Helpful Links</h4>
           <article class="svc-spec-links">
