@@ -79,7 +79,10 @@
     },
 
     setup: function() {
-      this.map.setView([this.$container.data('latitude'), this.$container.data('longitude')], 8);
+      var latitude = this.$container.data('latitude'),
+          longitude = this.$container.data('longitude');
+
+      this.map.setView([latitude, longitude], 8);
 
       L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: 'Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Map imagery © <a href="https://www.mapbox.com">Mapbox</a>.'
@@ -97,6 +100,14 @@
           longitude: $office.data('longitude')
         }));
       }.bind(this));
+
+      if (location.search.indexOf('coordinates=') !== -1) {
+        L.marker([latitude, longitude], {
+          icon: L.divIcon({
+            className: 'map-marker-pulse'
+          })
+        }).addTo(this.map);
+      }
     }
   };
 
