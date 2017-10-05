@@ -64,6 +64,14 @@ ActiveRecord::Schema.define(version: 20171011211344) do
     t.text "category"
   end
 
+  create_table "household_goods", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "weight", null: false
+    t.string "category", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "installations", force: :cascade do |t|
     t.text "name", null: false
     t.text "street_address"
