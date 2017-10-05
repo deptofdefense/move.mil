@@ -1,13 +1,17 @@
 .ppm-form {
   padding-left: 5rem;
 
+  button {
+    margin-top: 3.4rem;
+  }
+
   fieldset {
     margin-top: 2.8rem;
     position: relative;
   }
 
   legend {
-    font-size: 15px;
+    font-size: $base-font-size;
     margin-bottom: 1rem;
 
     span {
@@ -27,6 +31,10 @@
   input, select {
     font-size: $small-font-size;
     height: unset;
+  }
+
+  p {
+    margin-top: 0;
   }
 
 }
