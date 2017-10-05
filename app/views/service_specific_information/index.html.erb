@@ -13,12 +13,12 @@
         <li><a href="#army" id="tab-army"><span>U.S. </span>Army</a></li>
         <li><a href="#air-force" id="tab-air-force"><span>U.S. </span>Air Force</a></li>
         <li><a href="#navy" id="tab-navy"><span>U.S. </span>Navy</a></li>
-        <li><a href="#marines" id="tab-marine-corps"><span>U.S. </span>Marine Corps</a></li>
+        <li><a href="#marines" id="tab-marines"><span>U.S. </span>Marine Corps</a></li>
         <li><a href="#coast-guard" id="tab-coast-guard"><span>U.S. </span>Coast Guard</a></li>
       </ul>
 
       <div class="usa-grid-full tabs-panel" id="army">
-        <%= image_tag("Service-Army.png") %><br>
+        <%= image_tag "Service-Army.png", class: 'svc-spec-banner' %><br>
         <div class="usa-width-two-thirds">
           <%- @posts_army.each do |post| -%>
             <article class="svc-spec-frame">
@@ -72,7 +72,7 @@
       </div>
 
       <div class="usa-grid-full tabs-panel" id="air-force">
-        <%= image_tag("Service-AirForce.png") %><br>
+        <%= image_tag "Service-AirForce.png", class: "svc-spec-banner" %><br>
         <div class="usa-width-two-thirds">
           <%- @posts_air_force.each do |post| -%>
             <article class="svc-spec-frame">
@@ -200,6 +200,7 @@
       </div>
 
       <div class="usa-grid-full tabs-panel" id="navy">
+        <%= image_tag "Service-Navy.png", class: "svc-spec-banner" %><br>
         <div class="usa-width-two-thirds">
           <%- @posts_navy.each do |post| -%>
             <article class="svc-spec-frame">
@@ -290,7 +291,7 @@
       </div>
 
       <div class="usa-grid-full tabs-panel" id="marines">
-        <%= image_tag("Service-Marines.png") %><br>
+        <%= image_tag "Service-Marines.png", class: "svc-spec-banner" %><br>
         <div class="usa-width-two-thirds">
           <%- @posts_marine_corps.each do |post| -%>
             <article class="svc-spec-frame">
@@ -401,7 +402,7 @@
       </div>
 
       <div class="usa-grid-full tabs-panel" id="coast-guard">
-        <%= image_tag("Service-CoastGuard.png") %><br>
+        <%= image_tag "Service-CoastGuard.png", class: "svc-spec-banner" %><br>
         <div class="usa-width-two-thirds">
           <%- @posts_coast_guard.each do |post| -%>
             <article class="svc-spec-frame">
