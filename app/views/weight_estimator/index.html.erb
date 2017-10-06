@@ -1,0 +1,21 @@
+<%- @page_title = 'Weight Estimator' -%>
+
+<div class="usa-grid usa-section usa-layout-docs">
+  <%= render 'shared/sidenav' %>
+
+  <div class="usa-width-three-fourths usa-layout-docs-main_content">
+    <h1><%= @page_title %></h1>
+
+    <%- if @household_goods_by_category -%>
+      <ul class="usa-accordion-bordered">
+        <%- @household_goods_by_category.each do |category, household_goods| -%>
+          <li>
+            <button class="usa-accordion-button" aria-controls="<%= category %>"><%= category %></button>
+            <div class="usa-accordion-content" id="<%= category %>">
+            </div>
+          </li>
+        <%- end -%>
+      </ul>
+    <%- end -%>
+  </div>
+</div>
