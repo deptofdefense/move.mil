@@ -24,4 +24,12 @@ RSpec.describe HouseholdGood, type: :model do
     HouseholdGood.create(name: 'Chair', weight: 10, category: 'Dining Room')
     expect(HouseholdGood.new(name: 'Chair', weight: 10, category: 'Dining Room')).to_not be_valid
   end
+
+  it 'is expected key' do
+    expect(HouseholdGood.new(name: ' Table (Coffee/End) ', weight: 10, category: 'Living Room').key).to eq('table_coffee_end')
+  end
+
+  it 'is expected weight key' do
+    expect(HouseholdGood.new(name: ' Sofa (2 Cushion) ', weight: 10, category: 'Living Room').weight_key).to eq('sofa_2_cushion_weight')
+  end
 end
