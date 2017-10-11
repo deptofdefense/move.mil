@@ -17,6 +17,7 @@
 
       <%- @faq_sections.each do |faq_section| -%>
         <h2 id="<%= faq_section[:slug] %>"><%= faq_section[:title] %></h2>
+
         <%- if faq_section[:faqs] -%>
           <ul class="usa-accordion-bordered">
             <%- faq_section[:faqs].each do |faq| -%>
