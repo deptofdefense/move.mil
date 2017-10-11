@@ -5,21 +5,27 @@
 
   <div class="usa-width-three-fourths usa-layout-docs-main_content">
     <h1><%= @page_title %></h1>
-
+    Use this tool to estimate the weight of your stuff.
     <%- if @household_goods_by_category -%>
-      <ul class="usa-accordion-bordered">
-        <%- @household_goods_by_category.each do |category, household_goods| -%>
-          <li>
-            <button class="usa-accordion-button" aria-controls="<%= category %>"><%= category %></button>
-            <div class="usa-accordion-content" id="<%= category %>">
-              <%- @half = household_goods.length / 2 -%>
-              <%= render partial: 'household_goods', object: household_goods.first(household_goods.length - @half) %>
-              <%= render partial: 'household_goods', object: household_goods.last(@half) %>
-            </div>
-          </li>
-        <%- end -%>
-      </ul>
+      <div id="weight-estimator-form" class="weight-estimator-form">
+        <ul class="usa-accordion-bordered">
+          <%- @household_goods_by_category.each do |category, household_goods| -%>
+            <li>
+              <button class="usa-accordion-button" aria-controls="<%= category %>"><%= category %></button>
+              <div class="usa-accordion-content" id="<%= category %>">
+                <%- @half = household_goods.length / 2 -%>
+                <%= render partial: 'household_goods', object: household_goods.first(household_goods.length - @half) %>
+                <%= render partial: 'household_goods', object: household_goods.last(@half) %>
+              </div>
+            </li>
+          <%- end -%>
+        </ul>
+        <button id="calcuate-button">Calculate My Estimate</button>
+        <span id="weight-result"></span>
+      </div>
     <%- end -%>
-    <button>Calculate My Estimate</button>
+    <div class="weight-estimator-footer">
+      Note: This is only an estimate of the weight of your stuff.
+    </div>
   </div>
 </div>

@@ -1,0 +1,23 @@
+<div class="usa-width-one-half">
+  <table class="usa-table-borderless hhg-table">
+    <thead>
+      <tr>
+        <th scope="col">Item</th>
+        <th scope="col">Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%- household_goods.each do |household_good| -%>
+        <tr>
+          <td>
+            <label for="<%= household_good.key %>" class="hhg-label"><%= household_good.name %></label>
+          </td>
+          <td>
+            <input class="hhg-quantity-input" id="<%= household_good.key %>" name="<%= household_good.key %>" type="text" pattern="\d+">
+            <input class="hhg-weight" type="hidden" id="<%= household_good.weight_key %>" value=<%= household_good.weight %>>
+          </td>
+        </tr>
+      <%- end -%>
+    </tbody>
+  </table>
+</div>
