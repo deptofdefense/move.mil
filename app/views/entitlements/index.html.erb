@@ -17,7 +17,7 @@
       <div id="entitlements-search" hidden>
         <p>Enter your rank, dependency status, and move type to determine your moving allowance.</p>
 
-        <%= form_with url: entitlements_path, class: 'usa-form', method: 'get' do |form| %>
+        <%= form_with url: entitlements_path, class: 'usa-form', method: 'get', skip_enforcing_utf8: true do |form| %>
           <%= form.label :rank, raw('1. Select your current <b>military pay grade</b>.') %>
           <%= form.select :rank, options_from_collection_for_select(@entitlements, :rank, :rank), { include_blank: true }, { id: :rank, required: true } %>
 
