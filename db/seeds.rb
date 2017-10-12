@@ -67,3 +67,10 @@ transportation_offices.each do |office|
 
   TransportationOffice.create(office.except('shipping_office_name').merge(shipping_office_id: shipping_office_id))
 end
+
+puts 'Loading installations...'
+installations = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'installations.json')))
+
+installations.each do |installation|
+  Installation.create(installation.reject { |key| ['service_name', 'service_code'].include?(key) })
+end
