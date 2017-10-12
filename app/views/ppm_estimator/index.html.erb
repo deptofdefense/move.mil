@@ -6,12 +6,16 @@
   <div class="usa-width-three-fourths usa-layout-docs-main_content">
     <h1><%= @page_title %></h1>
 
-    <p>
+    <h4>
       For your upcoming move, get an estimate for how much the government will
-      pay <strong>you</strong> if you choose to "do it yourself." You can use
-      this money to cover the cost of hiring packers and movers, renting moving
-      trucks, and so on. If you spend less to move than the government will
-      reimburse you to move yourself, you get to pocket the difference!
+      pay <strong>you</strong> if you choose to "do it yourself."
+    </h4>
+
+    <p>
+      You can use this money to cover the cost of hiring packers and movers,
+      renting moving trucks, and so on. If you spend less to move than the
+      government will reimburse you to move yourself, you get to pocket the
+      difference!
     </p>
 
     <%= form_with url: ppm_estimator_path, class: 'ppm-form', method: 'get' do |form| %>
@@ -80,6 +84,40 @@
 
       <button>Calculate My Estimate</button>
     <% end %>
+
+    <div class="ppm-estimate-table-title">
+      Your Government Reimbursement Cost Estimate:<a href="#TODO">Edit Details</a>
+    </div>
+    <div class="ppm-estimate-table">
+      Estimated Transportation Reimbursement<br>
+      <span class="ppm-estimate-amount">$800 - $850</span>
+      <span class="ppm-estimate-detail">21043, Howard County, MD to 62269, St. Clair County, IL</span><br>
+      <span class="ppm-estimate-detail">
+        Departing 7/28/2017 (Peak Season)<br>
+        6700 lbs
+      </span>
+    </div>
+    <div class="ppm-estimate-table">
+      Estimated Packing Reimbursement<br>
+      <span class="ppm-estimate-detail">6700 lbs</span>
+      <span class="ppm-estimate-amount">$800 - $850</span>
+    </div>
+    <div class="ppm-estimate-table-total">
+      <span class="ppm-estimate-detail-total">Total Estimated Government Reimbursement</span>
+      <span class="ppm-estimate-amount-total">$3100 - $3850</span>
+    </div>
+
+    <button>Schedule My PPM Move</button>
+    <button class="usa-button-outline">Start a New Estimate</button>
+
+    <div class="ppm-footer">
+      <strong>Note:</strong> This tool only provides an estimate of what you
+      might recieve if you decide to do a personally procured move.
+      <strong>Your actual reimbursement rate will be calculated based off the
+      daily rates available when you schedule your move in DPS.</strong> Rates
+      vary based on transporter availability, selected move date (Peak vs.
+      Non-Peak Season), distance traveled, and the actual weight of the shipment.
+    </div>
 
   </div>
 </div>

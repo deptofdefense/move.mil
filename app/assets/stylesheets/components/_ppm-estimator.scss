@@ -15,7 +15,7 @@
     margin-bottom: 1rem;
 
     span {
-      font-size: 24px;
+      font-size: 2.4rem;
       left: -3.5rem;
       position: absolute;
       top: -0.6rem;
@@ -41,4 +41,58 @@
 
 .ppm-grid {
   padding-left: 0;
+}
+
+.ppm-footer {
+  border-top: 0.125rem solid #4a4a4a;
+  margin-top: 3.4rem;
+  padding-top: 1.7rem;
+}
+
+.ppm-estimate-table-title {
+  font-size: 2.4rem;
+  font-weight: $font-bold;
+  margin-bottom: 1.1rem;
+
+  a {
+      float: right;
+      font-size: $base-font-size;
+  }
+}
+
+.ppm-estimate-table {
+  background: $color-gray-lightest;
+  border: 0.125rem solid #4a4a4a;
+  padding: 1.6rem 0.9rem 1.6rem 1.4rem;
+}
+
+.ppm-estimate-detail {
+  font-size: 2rem;
+  font-weight: $font-bold;
+}
+
+.ppm-estimate-amount {
+  float: right;
+  font-size: 2rem;
+  font-weight: $font-bold;
+}
+
+.ppm-estimate-table-total {
+  border: 0.125rem solid #4a4a4a;
+  padding: 1.6rem 0.9rem 1.6rem 1.2rem;
+}
+
+.ppm-estimate-detail-total {
+  display: inline-block;
+  font-size: $lead-font-size;
+  text-align: left;
+  width: 59%;
+}
+
+.ppm-estimate-amount-total {
+  display: inline-block;
+  font-size: 3.6rem;
+  font-weight: $font-bold;
+  text-align: right;
+  width: 40%;
 }
