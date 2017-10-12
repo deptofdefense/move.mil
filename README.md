@@ -4,6 +4,7 @@
 [![Code Climate GPA](https://codeclimate.com/github/deptofdefense/move.mil/badges/gpa.svg)](https://codeclimate.com/github/deptofdefense/move.mil)
 [![Code Climate Test Coverage](https://codeclimate.com/github/deptofdefense/move.mil/badges/coverage.svg)](https://codeclimate.com/github/deptofdefense/move.mil/coverage)
 [![Code Climate Issues](https://img.shields.io/codeclimate/issues/github/deptofdefense/move.mil.svg)](https://codeclimate.com/github/deptofdefense/move.mil/issues)
+[![Known Vulnerabilities](https://snyk.io/test/github/deptofdefense/move.mil/badge.svg)](https://snyk.io/test/github/ddeptofdefense/move.mil)
 
 This repository contains the source code for the beta version of the [move.mil](http://www.move.mil/) website, the official portal to the Defense Personal Property System (DPS). DPS is an online system managed by the U.S. [Department of Defense](https://www.defense.gov/) (DoD) [Transportation Command](http://www.ustranscom.mil/) (USTRANSCOM) and is used by service members and their families to manage household goods moves.
 
