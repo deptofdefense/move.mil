@@ -6,4 +6,8 @@ ignore:
     - '* > rails@5.1.4':
         reason: None given
         expires: '2017-11-11T16:33:41.063Z'
+  SNYK-RUBY-NOKOGIRI-20299:
+    - '* > active_link_to@1.0.5':
+        reason: None given
+        expires: '2017-11-12T15:45:49.650Z'
 patch: {}
