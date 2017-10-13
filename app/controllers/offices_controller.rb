@@ -13,7 +13,7 @@ class OfficesController < ApplicationController
   end
 
   def coordinates_search
-    CoordinatesSearch.new(params) if params[:coordinates].present?
+    CoordinatesSearch.new(params) if params[:latitude].present? && params[:longitude].present?
   end
 
   def zip_code_search

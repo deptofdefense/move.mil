@@ -6,7 +6,8 @@
 
   var CoordinatesSearchForm = function(options) {
     this.$container = options.$container;
-    this.$input = options.$input;
+    this.$latitudeInput = options.$latitudeInput;
+    this.$longitudeInput = options.$longitudeInput;
     this.$button = options.$button;
     this.$errorContainer = options.$errorContainer;
     this.$noticeContainer = options.$noticeContainer;
@@ -38,7 +39,9 @@
         var coords = position.coords;
 
         if (coords) {
-          this.$input.val([coords.latitude, coords.longitude].join(','));
+          this.$latitudeInput.val(coords.latitude);
+          this.$longitudeInput.val(coords.longitude);
+
           this.$container.trigger('submit');
         }
       }
@@ -56,7 +59,8 @@
   if ($container.length) {
     new CoordinatesSearchForm({
       $container: $container,
-      $input: $('#coordinates'),
+      $latitudeInput: $('#latitude'),
+      $longitudeInput: $('#longitude'),
       $button: $container.find('button'),
       $errorContainer: $('#error-container'),
       $noticeContainer: $('#geolocation-notice')

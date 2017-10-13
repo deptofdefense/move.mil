@@ -22,15 +22,17 @@
   </div>
 
   <div class="search-forms-container">
-    <%= form_with url: offices_path, class: 'usa-form zip-code-search-form', id: 'search-code-zip-form', method: 'get', skip_enforcing_utf8: true do |form| %>
+    <%= form_with url: offices_path, class: 'usa-form zip-code-search-form', id: 'search-code-zip-form' do |form| %>
       <%= form.label :postal_code, 'Search by ZIP Code', class: 'usa-input-required usa-sr-only' %>
-      <%= form.number_field :postal_code, aria: { required: true }, id: 'postal_code', pattern: '^\d{5}$', placeholder: 'e.g. 20500', required: true, value: params[:postal_code] %>
+      <%= form.text_field :postal_code, aria: { required: true }, id: 'postal_code', pattern: '^\d{5}$', placeholder: 'e.g. 20500', required: true %>
 
       <button>Search by ZIP Code</button>
     <% end %>
 
-    <%= form_with url: offices_path, class: 'usa-form coordinates-search-form', html: { hidden: true }, id: 'coordinates-search-form', method: 'get', skip_enforcing_utf8: true do |form| %>
-      <%= form.hidden_field :coordinates, id: 'coordinates' %>
+    <%= form_with url: offices_path, class: 'usa-form coordinates-search-form', html: { hidden: true }, id: 'coordinates-search-form' do |form| %>
+      <%= form.hidden_field :latitude, id: 'latitude' %>
+      <%= form.hidden_field :longitude, id: 'longitude' %>
+
       <button>Search by Your Location</button>
     <% end %>
   </div>

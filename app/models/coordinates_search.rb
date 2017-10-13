@@ -1,4 +1,7 @@
 class CoordinatesSearch
+  LATITUDE_REGEXP = /^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?)$/
+  LONGITUDE_REGEXP = /^[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$/
+
   def initialize(params)
     @params = params
   end
@@ -8,25 +11,23 @@ class CoordinatesSearch
   end
 
   def query
-    search_params[:coordinates]
+    search_params.values.join(', ')
   end
 
   def result
-    coordinates_parts = search_params[:coordinates].split(',')
-
     {
-      latitude: coordinates_parts.first,
-      longitude: coordinates_parts.last
+      latitude: search_params[:latitude],
+      longitude: search_params[:longitude]
     }
   end
 
   def valid?
-    search_params.permitted? && /^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$/.match?(search_params[:coordinates])
+    search_params.permitted? && LATITUDE_REGEXP.match?(search_params[:latitude]) && LONGITUDE_REGEXP.match?(search_params[:longitude])
   end
 
   private
 
   def search_params
-    @search_params ||= @params.permit(:coordinates)
+    @search_params ||= @params.permit(:latitude, :longitude)
   end
 end
