@@ -226,7 +226,11 @@
 
         <h4>For <%= abbr_tag('oconus') %>:</h4>
 
-        <%# TODO Add POV OCONUS content %>
+        <ul>
+          <li>Only 1 vehicle (owned or leased) for personal use may be shipped at government expense.</li>
+          <li>The vehicle cannot exceed 20 measurement tons (MT). To calculate your <%= abbr_tag('pov') %>’s measurement tonnage, multiply its length by its width by its height (in inches), divide by 1728 (this gives you the cubic feet of your <%= abbr_tag('pov') %>), and then divide by 40 to obtain your <%= abbr_tag('pov') %>’s measurement tonnage (<code>((L × W × H) / 1728) / 40</code>).</li>
+          <li>If you have a unique situation or if you want to make your own arrangements to ship an additional vehicle, please consult with <%= link_to 'your local transportation office', offices_path %>.</li>
+        </ul>
       </td>
     </tr>
     <tr id="motorcycles-and-dirtbikes">
