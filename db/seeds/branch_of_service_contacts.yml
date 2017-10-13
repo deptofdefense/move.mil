@@ -10,7 +10,7 @@
   custsvc_facebook_url: https://www.facebook.com/PPAHQ1
   claims_dsn: 986-8044
   claims_tel_comm: (937) 656-8044
-  claims_tel_tollfree: 1 (877) 754-1212
+  claims_tel_tollfree: +1 (877) 754-1212
   claims_email: fcsc.ja@us.af.mil
   claims_fax_dsn: 986-8307
   claims_fax_comm: (937) 656-8307
@@ -26,12 +26,12 @@
 
 - branch: Navy
   custsvc_org: Navy Customer Service
-  custsvc_tel_comm: 1 (855) 444-6683
+  custsvc_tel_comm: +1 (855) 444-6683
   custsvc_email: householdgoods@navy.mil
   custsvc_facebook_url: https://www.facebook.com/NAVYHHG
   claims_dsn: 564-3310
   claims_tel_comm: (757) 440-6315
-  claims_tel_tollfree: 1 (888) 897-8217
+  claims_tel_tollfree: +1 (888) 897-8217
   claims_email: NorfolkClaims@navy.mil
   retiree_email: nxag_n130c1@navy.mil,david.maly@navy.mil
 
