@@ -1,5 +1,10 @@
 .weight-estimator-form {
   margin-top: 2rem;
+
+  .weight-result {
+    font-size: $h3-font-size;
+    font-weight: $font-bold;
+  }
 }
 
 .weight-estimator-footer {
@@ -11,10 +16,7 @@
 .hhg-table {
   td {
     border: none;
-    padding-bottom: 0;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 1rem;
+    padding: 1rem 1.5rem 0 1.5rem;
   }
 
   .hhg-label {

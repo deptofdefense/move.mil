@@ -5,7 +5,7 @@
 
   <div class="usa-width-three-fourths usa-layout-docs-main_content">
     <h1><%= @page_title %></h1>
-    Use this tool to estimate the weight of your stuff.
+    <p>Use this tool to estimate the weight of your stuff.</p>
     <%- if @household_goods_by_category -%>
       <div id="weight-estimator-form" class="weight-estimator-form">
         <ul class="usa-accordion-bordered">
@@ -21,11 +21,11 @@
           <%- end -%>
         </ul>
         <button id="calcuate-button">Calculate My Estimate</button>
-        <span id="weight-result"></span>
+        <span id="weight-result" class="weight-result"></span>
       </div>
     <%- end -%>
     <div class="weight-estimator-footer">
-      Note: This is only an estimate of the weight of your stuff.
+      <p>Note: This is only an estimate of the weight of your stuff.</p>
     </div>
   </div>
 </div>

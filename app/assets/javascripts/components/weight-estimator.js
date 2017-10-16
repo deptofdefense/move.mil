@@ -4,8 +4,8 @@
   var CoordinatesSearchForm = function(options) {
     this.$container = options.$container;
     this.$button = options.$button;
-    this.$quantity_inputs = options.$quantity_inputs;
-    this.$weight_result = options.$weight_result;
+    this.$quantityInputs = options.$quantityInputs;
+    this.$weightResult = options.$weightResult;
 
     this.setup();
   };
@@ -13,15 +13,18 @@
   CoordinatesSearchForm.prototype = {
     events: {
       click: function(event) {
-        var $sum = 0;
         event.preventDefault();
-        this.$quantity_inputs.each(function() {
-          if (this.value > 0) {
-            var $weight = $('#' + this.id + '_weight');
-            $sum += this.value * $weight.attr('value');
+
+        var sum = 0;
+        this.$quantityInputs.each(function() {
+          var $input = $(this);
+          if ($input.val() > 0) {
+            var $weightInput = $('#' + this.id + '_weight');
+            sum += $input.val() * $weightInput.val();
           }
         });
-        this.$weight_result.html($sum + " lbs");
+
+        this.$weightResult.html(sum + " lbs");
       }
     },
 
@@ -35,9 +38,9 @@
   if ($container.length) {
     new CoordinatesSearchForm({
       $container: $container,
-      $button: $container.find('#calcuate-button'),
-      $quantity_inputs: $container.find('.hhg-quantity-input'),
-      $weight_result: $container.find('#weight-result')
+      $button: $('#calcuate-button'),
+      $quantityInputs: $container.find('.hhg-quantity-input'),
+      $weightResult: $('#weight-result')
     });
   }
 })(window, jQuery);

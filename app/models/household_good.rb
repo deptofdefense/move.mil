@@ -3,10 +3,10 @@ class HouseholdGood < ApplicationRecord
   validates :name, presence: true, uniqueness: { scope: :category }
 
   def key
-    @key ||= name.gsub(/[^0-9a-z]/i, ' ').strip.gsub(/\s+/, '_').downcase
+    @key ||= name.parameterize
   end
 
   def weight_key
-    @weight_key ||= key + '_weight'
+    @weight_key ||= "#{key}_weight"
   end
 end
