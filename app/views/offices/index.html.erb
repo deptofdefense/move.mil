@@ -23,10 +23,10 @@
 
   <div class="search-forms-container">
     <%= form_with url: offices_path, class: 'usa-form zip-code-search-form', id: 'search-code-zip-form' do |form| %>
-      <%= form.label :postal_code, 'Search by ZIP Code', class: 'usa-input-required usa-sr-only' %>
-      <%= form.text_field :postal_code, aria: { required: true }, id: 'postal_code', pattern: '^\d{5}$', placeholder: 'e.g. 20500', required: true %>
+      <%= form.label :query, 'Search by ZIP Code or Installation', class: 'usa-input-required usa-sr-only' %>
+      <%= form.text_field :query, aria: { required: true }, id: 'query', placeholder: 'e.g. 20500, Fort Belvoir', required: true %>
 
-      <button>Search by ZIP Code</button>
+      <button>Search</button>
     <% end %>
 
     <%= form_with url: offices_path, class: 'usa-form coordinates-search-form', html: { hidden: true }, id: 'coordinates-search-form' do |form| %>

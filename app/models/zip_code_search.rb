@@ -8,7 +8,7 @@ class ZipCodeSearch
   end
 
   def query
-    search_params[:postal_code].rjust(5, '0')
+    search_params[:query].rjust(5, '0')
   end
 
   def result
@@ -19,16 +19,16 @@ class ZipCodeSearch
   end
 
   def valid?
-    search_params.permitted? && /^\d{5}$/.match?(search_params[:postal_code]) && zip_code_tabulation_area
+    search_params.permitted? && /^\d{5}$/.match?(search_params[:query]) && zip_code_tabulation_area
   end
 
   private
 
   def search_params
-    @search_params ||= @params.permit(:postal_code)
+    @search_params ||= @params.permit(:query)
   end
 
   def zip_code_tabulation_area
-    @zip_code_tabulation_area ||= ZipCodeTabulationArea.find_by(zip_code: search_params[:postal_code])
+    @zip_code_tabulation_area ||= ZipCodeTabulationArea.find_by(zip_code: search_params[:query])
   end
 end
