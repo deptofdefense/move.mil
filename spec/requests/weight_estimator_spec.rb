@@ -25,8 +25,8 @@ RSpec.describe WeightEstimatorController, type: :request do
       it 'displays a list of household good categories' do
         get '/resources/weight-estimator'
 
-        assert_select '.usa-accordion-bordered' do
-          assert_select 'li:nth-child(1)' do
+        assert_select '#weight-estimator-form' do
+          assert_select '.usa-accordion-bordered:nth-child(1)' do
             assert_select '.usa-accordion-button', text: 'Bedroom'
             assert_select '.usa-accordion-content' do
               assert_select '.hhg-quantity-input', count: 4
@@ -34,7 +34,7 @@ RSpec.describe WeightEstimatorController, type: :request do
             end
           end
 
-          assert_select 'li:nth-child(2)' do
+          assert_select '.usa-accordion-bordered:nth-child(2)' do
             assert_select '.usa-accordion-button', text: 'Living Room'
             assert_select '.usa-accordion-content' do
               assert_select '.hhg-quantity-input', count: 2
