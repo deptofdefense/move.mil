@@ -9,15 +9,19 @@ class OfficesController < ApplicationController
 
   private
 
-  def search
-    @search ||= coordinates_search || zip_code_search || nil
-  end
-
   def coordinates_search
     CoordinatesSearch.new(params) if params[:latitude].present? && params[:longitude].present?
   end
 
+  def installation_search
+    InstallationSearch.new(params) if params[:query].present?
+  end
+
+  def search
+    @search ||= coordinates_search || zip_code_search || installation_search || nil
+  end
+
   def zip_code_search
-    ZipCodeSearch.new(params) if params[:postal_code].present?
+    ZipCodeSearch.new(params) if params[:query].present? && /^\d{5}$/.match?(params[:query])
   end
 end

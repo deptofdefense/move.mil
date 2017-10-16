@@ -33,28 +33,8 @@ RSpec.describe OfficesController, type: :request do
   end
 
   describe 'POST #index' do
-    context 'when performing a ZIP code search' do
-      context 'when sending invalid or incomplete params' do
-        it 'displays an error message' do
-          post '/resources/locator-maps', params: { postal_code: 'foo' }
-
-          assert_select '.usa-alert-error .usa-alert-text', text: 'There was a problem locating that ZIP Code. Mind trying your search again?'
-        end
-      end
-
-      context 'when sending valid params' do
-        let!(:zip_code_tabulation_area) { create(:zip_code_tabulation_area) }
-
-        it 'redirects to a search results page' do
-          post '/resources/locator-maps', params: { postal_code: '20010' }
-
-          expect(response).to redirect_to('/resources/locator-maps/38.933366,-77.0303119999999')
-        end
-      end
-    end
-
     context 'when performing a coordinates search' do
-      context 'when sending invalid or incomplete params' do
+      context 'when sending invalid params' do
         it 'displays an error message' do
           post '/resources/locator-maps', params: { latitude: '-100', longitude: '181' }
 
@@ -65,6 +45,46 @@ RSpec.describe OfficesController, type: :request do
       context 'when sending valid params' do
         it 'redirects to a search results page' do
           post '/resources/locator-maps', params: { latitude: '38.933366', longitude: '-77.0303119999999' }
+
+          expect(response).to redirect_to('/resources/locator-maps/38.933366,-77.0303119999999')
+        end
+      end
+    end
+
+    context 'when performing an installation search' do
+      context 'when no search results found' do
+        it 'displays an error message' do
+          post '/resources/locator-maps', params: { query: 'foo' }
+
+          assert_select '.usa-alert-error .usa-alert-text', text: 'There was a problem locating that installation. Mind trying your search again?'
+        end
+      end
+
+      context 'when search results found' do
+        let!(:installation) { create(:installation) }
+
+        it 'redirects to a search results page' do
+          post '/resources/locator-maps', params: { query: 'installation' }
+
+          expect(response).to redirect_to('/resources/locator-maps/38.6921631,-77.1374000999999')
+        end
+      end
+    end
+
+    context 'when performing a ZIP code search' do
+      context 'when no search results found' do
+        it 'displays an error message' do
+          post '/resources/locator-maps', params: { query: '00000' }
+
+          assert_select '.usa-alert-error .usa-alert-text', text: 'There was a problem locating that ZIP Code. Mind trying your search again?'
+        end
+      end
+
+      context 'when search results found' do
+        let!(:zip_code_tabulation_area) { create(:zip_code_tabulation_area) }
+
+        it 'redirects to a search results page' do
+          post '/resources/locator-maps', params: { query: '20010' }
 
           expect(response).to redirect_to('/resources/locator-maps/38.933366,-77.0303119999999')
         end
