@@ -39,10 +39,9 @@
         var coords = position.coords;
 
         if (coords) {
-          this.$latitudeInput.val(coords.latitude);
-          this.$longitudeInput.val(coords.longitude);
+          this.$button.removeAttr('disabled');
 
-          this.$container.trigger('submit');
+          location.href = this.$container.attr('action') + '/' + coords.latitude + ',' + coords.longitude;
         }
       }
     },

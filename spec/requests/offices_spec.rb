@@ -13,6 +13,23 @@ RSpec.describe OfficesController, type: :request do
         assert_template 'index'
       end
     end
+
+    context 'when navigating to the page with coordinates' do
+      let!(:transportation_offices) { create_list(:transportation_office, 20) }
+
+      before do
+        get '/resources/locator-maps/38.933366,-77.0303119999999'
+      end
+
+      it 'displays a map' do
+        assert_select '#locator-map'
+      end
+
+      it 'displays a paginated list of transportation offices' do
+        assert_select '.transportation-office', count: 10
+        assert_select '.pagination'
+      end
+    end
   end
 
   describe 'POST #index' do
@@ -27,19 +44,11 @@ RSpec.describe OfficesController, type: :request do
 
       context 'when sending valid params' do
         let!(:zip_code_tabulation_area) { create(:zip_code_tabulation_area) }
-        let!(:transportation_offices) { create_list(:transportation_office, 20) }
 
-        before do
+        it 'redirects to a search results page' do
           post '/resources/locator-maps', params: { postal_code: '20010' }
-        end
 
-        it 'displays a map' do
-          assert_select '#locator-map'
-        end
-
-        it 'displays a paginated list of transportation offices' do
-          assert_select '.transportation-office', count: 10
-          assert_select '.pagination'
+          expect(response).to redirect_to('/resources/locator-maps/38.933366,-77.0303119999999')
         end
       end
     end
@@ -54,19 +63,10 @@ RSpec.describe OfficesController, type: :request do
       end
 
       context 'when sending valid params' do
-        let!(:transportation_offices) { create_list(:transportation_office, 20) }
-
-        before do
+        it 'redirects to a search results page' do
           post '/resources/locator-maps', params: { latitude: '38.933366', longitude: '-77.0303119999999' }
-        end
 
-        it 'displays a map' do
-          assert_select '#locator-map'
-        end
-
-        it 'displays a paginated list of transportation offices' do
-          assert_select '.transportation-office', count: 10
-          assert_select '.pagination'
+          expect(response).to redirect_to('/resources/locator-maps/38.933366,-77.0303119999999')
         end
       end
     end
