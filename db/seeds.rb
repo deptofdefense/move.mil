@@ -88,3 +88,12 @@ hhg_weights.each do |category|
     hhg_category.household_goods.where(name: hhg['name']).first_or_create(name: hhg['name'], weight: hhg['weight'])
   end
 end
+
+puts 'Loading ZIP code rate areas, service areas, regions, and basepoint cities...'
+CSV.foreach(Rails.root.join('db', 'seeds', 'zip3.csv'), headers: true) do |row|
+  Zip3.create(zip3: row['zip3'], basepoint_city: row['basepoint_city'], state: row['state'], service_area: row['service_area'], rate_area: row['rate_area'], region: row['region'], mileage_t: row['mileage_t'], mileage_i: row['mileage_i'])
+end
+
+CSV.foreach(Rails.root.join('db', 'seeds', 'zip5_rate_areas.csv'), headers: true) do |row|
+  Zip5RateArea.create(zip5: row['zip5'], rate_area: row['rate_area'])
+end

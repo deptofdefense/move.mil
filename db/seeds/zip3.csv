@@ -1,0 +1,1008 @@
+zip3,basepoint_city,state,service_area,rate_area,region,mileage_t,mileage_i
+10,South Hadley,MA,384,14,9,D,887
+11,Springfield,MA,388,14,9,D,890
+12,Pittsfield,MA,388,14,9,C,738
+13,Greenfield,MA,384,14,9,B,377
+14,Fitchburg,MA,384,14,9,B,312
+15,Worcester,MA,384,14,9,D,1075
+16,Worcester,MA,384,14,9,D,1075
+17,Wayland,MA,384,14,9,D,1031
+18,Shawsheen Village,MA,384,14,9,D,861
+19,Topsfield,MA,384,14,9,D,962
+20,Dedham,MA,384,14,9,A,231
+21,Boston,MA,385,14,9,A,99
+22,Boston,MA,385,14,9,A,99
+23,Elmwood,MA,384,14,9,B,281
+24,Brockton,MA,384,14,9,A,110
+25,Buzzards Bay,MA,684,14,9,A,129
+26,West Yarmouth,MA,684,14,9,D,1045
+27,Fall River,MA,384,14,9,B,300
+28,West Warwick,RI,684,15,9,D,1044
+29,Providence,RI,684,15,9,C,767
+30,Manchester,NH,384,12,9,C,557
+31,Manchester,NH,384,12,9,C,557
+32,Ashland,NH,384,12,9,A,41
+33,Concord,NH,372,12,9,A,200
+34,Keene,NH,384,12,9,B,472
+35,Groveton,NH,508,12,9,B,382
+36,Alstead,NH,372,12,9,A,19
+37,Lebanon,NH,372,12,9,B,519
+38,Sanbornville,NH,384,12,9,D,832
+39,South Berwick,ME,372,11,9,D,885
+40,Standish,ME,372,11,9,D,921
+41,Portland,ME,372,11,9,C,753
+42,Bryant Pond,ME,372,11,9,A,119
+43,Augta,ME,364,11,9,A,47
+44,Milo,ME,368,11,9,C,593
+45,Wiscasset,ME,364,11,9,D,1067
+46,Harrington,ME,368,11,9,B,393
+47,Presque Isle,ME,376,11,9,C,761
+48,Rockland,ME,364,11,9,D,803
+49,Solon,ME,368,11,9,D,880
+50,Sharon,VT,804,13,9,D,859
+51,Chester,VT,804,13,9,A,169
+52,Arlington,VT,804,13,9,A,37
+53,Townshend,VT,804,13,9,D,966
+54,Essex Junction,VT,808,13,9,B,289
+55,Shawsheen Village,MA,384,14,9,D,861
+56,Montpelier,VT,808,13,9,C,620
+57,Rutland,VT,804,13,9,D,809
+58,West Burke,VT,804,13,9,D,1039
+59,Colebrook,NH,508,12,9,A,192
+60,North Bloomfield,CT,160,16,9,C,676
+61,Hartford,CT,160,16,9,B,396
+62,Phoenixville,CT,160,16,9,C,731
+63,Norwich,CT,544,16,9,C,684
+64,Wallingford,CT,160,16,9,D,1019
+65,New Haven,CT,160,16,9,C,654
+66,Bridgeport,CT,544,16,9,A,107
+67,Woodville,CT,160,16,9,D,1072
+68,Georgetown,CT,544,16,9,B,351
+69,Stamford,CT,544,16,9,D,920
+70,Newark,NJ,544,19,9,C,662
+71,Newark,NJ,544,19,9,C,662
+72,Elizabeth,NJ,544,19,9,B,274
+73,Jersey City,NJ,544,19,9,B,451
+74,Oakland,NJ,544,19,9,C,685
+75,Paterson,NJ,544,19,9,C,718
+76,Param,NJ,544,19,9,C,712
+77,Eatontown,NJ,544,19,9,B,265
+78,Netcong,NJ,544,19,9,C,649
+79,Madisonville,NJ,544,19,9,C,553
+80,West Berlin,NJ,672,19,9,D,1038
+81,Camden,NJ,672,19,9,A,135
+82,Seaville,NJ,672,19,9,D,850
+83,Millville,NJ,672,19,9,C,592
+84,Atlantic City,NJ,512,19,9,A,45
+85,Trenton,NJ,544,19,9,D,971
+86,Trenton,NJ,544,19,9,D,971
+87,Beachwood,NJ,544,19,9,A,67
+88,Somerville,NJ,544,19,9,D,882
+89,New Brunswick,NJ,544,19,9,C,651
+100,Long Island City,NY,545,17,9,C,539
+101,Long Island City,NY,545,17,9,C,539
+102,Long Island City,NY,545,17,9,C,539
+103,Travis,NY,544,17,9,D,969
+104,Bronx Park,NY,545,17,9,A,114
+105,Mt Kisco,NY,544,17,9,C,632
+106,White Plains,NY,544,17,9,D,1051
+107,Yonkers,NY,544,17,9,D,1083
+108,New Rochelle,NY,544,17,9,C,661
+109,Chester,NY,544,17,9,A,167
+110,Kew Gardens,NY,545,17,9,B,477
+111,Long Island City,NY,545,17,9,C,539
+112,Long Island City,NY,545,17,9,C,539
+113,Flhing,NY,545,17,9,B,317
+114,Kew Gardens,NY,545,17,9,B,477
+115,Hempstead,NY,544,17,9,B,405
+116,Valley Stream,NY,544,17,9,D,995
+117,Farmingdale,NY,544,17,9,B,304
+118,Hicksville,NY,544,17,9,B,407
+119,Riverhead,NY,544,17,9,C,793
+120,Schenectady,NY,536,17,9,D,845
+121,Schenectady,NY,536,17,9,D,845
+122,Albany,NY,536,17,9,A,8
+123,Schenectady,NY,536,17,9,D,845
+124,Phoenicia,NY,536,17,9,C,729
+125,South Millbrook,NY,544,17,9,D,888
+126,Poughkeepsie,NY,544,17,9,C,758
+127,Monticello,NY,544,17,9,C,618
+128,Warrensburg,NY,556,17,9,D,1021
+129,Loon Lake Junction,NY,548,17,9,C,541
+130,Syrace,NY,552,17,9,D,944
+131,Syrace,NY,552,17,9,D,944
+132,Syrace,NY,552,17,9,D,944
+133,Poland,NY,556,17,9,C,742
+134,Poland,NY,556,17,9,C,742
+135,Utica,NY,556,17,9,D,987
+136,Gouverneur,NY,548,17,9,B,362
+137,Bainbridge,NY,680,17,9,A,53
+138,Bainbridge,NY,680,17,9,A,53
+139,Binghamton,NY,680,17,9,A,85
+140,Alden,NY,540,17,9,A,11
+141,Alden,NY,540,17,9,A,11
+142,Buffalo,NY,540,17,9,A,123
+143,Niagara Falls,NY,540,17,9,C,667
+144,Manchester,NY,540,17,9,C,558
+145,Manchester,NY,540,17,9,C,558
+146,Rochester,NY,540,17,9,D,800
+147,Little Valley,NY,668,17,9,B,533
+148,Watkins Glen,NY,552,17,9,D,1026
+149,Elmira,NY,680,17,9,B,280
+150,Gringo,PA,676,20,9,B,381
+151,Pittsburgh,PA,676,20,9,C,737
+152,Pittsburgh,PA,676,20,9,C,737
+153,Ruff Creek,PA,676,20,9,D,807
+154,Uniontown,PA,676,20,9,D,985
+155,Berlin,PA,676,20,9,A,81
+156,Greensburg,PA,676,20,9,B,379
+157,Home,PA,676,20,9,B,411
+158,St Marys,PA,668,20,9,D,915
+159,Johnstown,PA,676,20,9,B,455
+160,Butler,PA,676,20,9,A,128
+161,Leesburg,PA,676,20,9,B,521
+162,Rimersburg,PA,676,20,9,C,789
+163,East Hickory,PA,668,20,9,B,262
+164,Edinboro,PA,668,20,9,B,268
+165,Erie,PA,668,20,9,B,287
+166,Altoona,PA,664,20,9,A,20
+167,Ormsby,PA,668,20,9,C,699
+168,Unionville,PA,664,20,9,D,986
+169,Wellsboro,PA,680,20,9,D,1036
+170,Newport,PA,672,20,9,C,665
+171,Harrisburg,PA,672,20,9,B,394
+172,Chambersburg,PA,672,20,9,A,155
+173,Abbottstown,PA,672,20,9,A,1
+174,York,PA,672,20,9,D,1084
+175,Lancaster,PA,672,20,9,B,508
+176,Lancaster,PA,672,20,9,B,508
+177,Larrys Creek,PA,680,20,9,B,513
+178,Northumberland,PA,680,20,9,C,681
+179,Pottsville,PA,680,20,9,C,757
+180,Northampton,PA,672,20,9,C,680
+181,Northampton,PA,672,20,9,C,680
+182,Hazleton,PA,680,20,9,B,402
+183,Canadensis,PA,672,20,9,A,140
+184,Honesdale,PA,680,20,9,B,415
+185,Scranton,PA,680,20,9,D,847
+186,Dallas,PA,680,20,9,A,221
+187,Wilkes Barre,PA,680,20,9,D,1057
+188,Lawton,PA,680,20,9,B,518
+189,Doylestown,PA,672,20,9,A,250
+190,Philadelphia,PA,673,20,9,C,728
+191,Philadelphia,PA,673,20,9,C,728
+192,Philadelphia,PA,673,20,9,C,728
+193,Downingtown,PA,672,20,9,A,249
+194,Fairview Village,PA,672,20,9,B,299
+195,Reading,PA,672,20,9,C,779
+196,Reading,PA,672,20,9,C,779
+197,Glasgow,DE,164,22,10,B,355
+198,Wilmington,DE,164,22,10,D,1062
+199,Harrington,DE,164,22,10,B,392
+200,Washington,DC,169,24,10,D,1022
+201,Gainesville,VA,168,25,10,B,341
+202,Washington,DC,169,24,10,D,1022
+203,Washington,DC,169,24,10,D,1022
+204,Washington,DC,169,24,10,D,1022
+205,Washington,DC,169,24,10,D,1022
+206,New Market,MD,168,23,10,C,658
+207,Beltsville,MD,380,23,10,A,76
+208,Beltsville,MD,380,23,10,A,76
+209,Beltsville,MD,380,23,10,A,76
+210,Baltimore,MD,381,23,10,A,56
+211,Baltimore,MD,381,23,10,A,56
+212,Baltimore,MD,381,23,10,A,56
+213,Baltimore,MD,381,23,10,A,56
+214,Annapolis,MD,380,23,10,A,28
+215,Cumberland,MD,828,23,10,A,218
+216,Easton,MD,164,23,10,B,264
+217,Cavetown,MD,380,23,10,A,152
+218,Salisbury,MD,164,23,10,D,817
+219,Bay View,MD,380,23,10,A,65
+220,Gainesville,VA,168,25,10,B,341
+221,Gainesville,VA,168,25,10,B,341
+222,Arlington,VA,169,25,10,A,36
+223,Alexandria,VA,169,25,10,A,12
+224,Bowling Green,VA,820,25,10,A,101
+225,Bowling Green,VA,820,25,10,A,101
+226,Front Royal,VA,168,25,10,B,337
+227,Culpeper,VA,168,25,10,A,217
+228,Harrisonburg,VA,168,25,10,B,395
+229,Charlottesville,VA,812,25,10,A,162
+230,Richmond,VA,820,25,10,C,786
+231,Richmond,VA,820,25,10,C,786
+232,Richmond,VA,820,25,10,C,786
+233,Norfolk,VA,816,25,10,C,672
+234,Norfolk,VA,816,25,10,C,672
+235,Norfolk,VA,816,25,10,C,672
+236,Newport News,VA,816,25,10,C,664
+237,Portsmouth,VA,816,25,10,C,755
+238,Homeville,VA,820,25,10,B,412
+239,Victoria,VA,820,25,10,D,1006
+240,Roanoke,VA,824,25,10,D,797
+241,Roanoke,VA,824,25,10,C,797
+242,Norton,VA,716,25,10,C,682
+243,Wytheville,VA,824,25,10,D,1078
+244,Goshen,VA,812,25,10,B,361
+245,Rtburg,VA,824,25,10,D,808
+246,Tazewell,VA,824,25,10,D,949
+247,Princeton,WV,824,27,10,C,766
+248,Welch,WV,860,27,10,D,1034
+249,Mill Point,WV,852,27,10,C,591
+250,Charleston,WV,852,27,10,A,160
+251,Charleston,WV,852,27,10,A,160
+252,Charleston,WV,852,27,10,A,160
+253,Charleston,WV,852,27,10,A,160
+254,Martinsburg,WV,828,27,10,C,567
+255,West Hamlin,WV,860,27,10,D,1040
+256,Mt Gay,WV,860,27,10,C,630
+257,Huntington,WV,860,27,10,B,423
+258,Beckley,WV,852,27,10,A,71
+259,Beckley,WV,852,27,10,A,71
+260,Wheeling,WV,676,27,10,D,1050
+261,Elizabeth,WV,624,27,10,B,275
+262,Huttonsville,WV,856,27,10,B,426
+263,Clarksburg,WV,856,27,10,A,179
+264,Clarksburg,WV,856,27,10,A,179
+265,Morgantown,WV,856,27,10,C,628
+266,Sutton,WV,852,27,10,D,940
+267,Keyser,WV,828,27,10,B,478
+268,Petersburg,WV,828,27,10,C,727
+270,Yadkinville,NC,584,40,12,D,1079
+271,Winston Salem,NC,584,40,12,D,1066
+272,Ramseur,NC,584,40,12,C,774
+273,Ramseur,NC,584,40,12,C,774
+274,Greensboro,NC,584,40,12,B,378
+275,Wake Forest,NC,580,40,12,D,1017
+276,Raleigh,NC,580,40,12,C,773
+277,Durham,NC,580,40,12,B,260
+278,Bethel,NC,572,40,12,A,82
+279,Edenton,NC,572,40,12,B,267
+280,Charlotte,NC,564,40,12,A,161
+281,Charlotte,NC,564,40,12,A,161
+282,Charlotte,NC,564,40,12,A,161
+283,Fayetteville,NC,568,40,12,B,309
+284,Atkinson,NC,576,40,12,A,43
+285,New Bern,NC,576,40,12,C,650
+286,Wilkesboro,NC,564,40,12,D,1058
+287,Waynesville,NC,560,40,12,D,1032
+288,Asheville,NC,560,40,12,A,40
+289,Murphy,NC,720,40,12,C,637
+290,Columbia,SC,696,44,12,A,196
+291,Columbia,SC,696,44,12,A,196
+292,Columbia,SC,696,44,12,A,196
+293,Enoree,SC,688,44,12,B,286
+294,Moncks Corner,SC,692,44,12,C,611
+295,Marion,SC,696,44,12,C,565
+296,Anderson,SC,688,44,12,A,27
+297,Chester,SC,564,44,12,A,168
+298,Aiken,SC,208,44,12,A,4
+299,Ridgeland,SC,692,44,12,C,787
+300,Atlanta,GA,205,45,12,A,44
+301,Cass,GA,204,45,12,A,150
+302,Senoia,GA,204,45,12,D,857
+303,Atlanta,GA,205,45,12,A,44
+304,Metter,GA,216,45,12,C,584
+305,Cleveland,GA,204,45,12,A,185
+306,Lexington,GA,204,45,12,B,524
+307,Dalton,GA,720,45,12,A,223
+308,Harlem,GA,208,45,12,B,391
+309,Augta,GA,208,45,12,A,46
+310,McIntyre,GA,212,45,12,C,573
+311,Atlanta,GA,205,45,12,A,44
+312,Macon,GA,212,45,12,C,551
+313,Hinesville,GA,216,45,12,B,409
+314,Savannah,GA,216,45,12,D,843
+315,Bristol,GA,176,45,12,A,109
+316,Lakeland,GA,192,45,12,B,506
+317,Albany,GA,200,45,12,A,7
+318,Buena Vista,GA,212,45,12,A,122
+319,Columb,GA,212,45,12,A,198
+320,Macclenny,FL,176,49,13,C,549
+321,Crescent City,FL,184,ZIP,13,A,214
+322,Jacksonville,FL,176,49,13,B,444
+323,Tallahassee,FL,192,49,13,D,947
+324,Chipley,FL,188,49,13,A,174
+325,Milton,FL,188,49,13,C,594
+326,Archer,FL,176,49,13,A,33
+327,Sanford,FL,184,ZIP,13,D,833
+328,Orlando,FL,185,4964400,13,C,698
+329,Melbourne,FL,184,4964400,13,C,580
+330,Miami,FL,181,4964400,13,C,585
+331,Miami,FL,181,4964400,13,C,585
+332,Miami,FL,181,4964400,13,C,585
+333,Fort Lauderdale,FL,181,4964400,13,B,325
+334,Jupiter,FL,180,4964400,13,B,462
+335,Tampa,FL,197,4964400,13,D,948
+336,Tampa,FL,197,4964400,13,D,948
+337,St Petersburg,FL,196,4964400,13,D,917
+338,Frostproof,FL,196,4964400,13,B,338
+339,Ft Myers,FL,172,4964400,13,B,339
+341,Ft Myers,FL,172,4964400,13,B,339
+342,Sarasota,FL,196,4964400,13,D,837
+344,Dunnellon,FL,176,ZIP,13,B,258
+346,Port Richey,FL,196,4964400,13,C,749
+347,Kissimmee,FL,184,4964400,13,B,486
+349,Fort Pierce,FL,180,4964400,13,B,328
+350,Leeds,AL,4,47,11,B,520
+351,Leeds,AL,4,47,11,B,520
+352,Birmingham,AL,4,47,11,A,86
+354,Tcaloosa,AL,4,47,11,D,981
+355,Carbon Hill,AL,4,47,11,A,145
+356,Town Creek,AL,12,47,11,D,965
+357,Paint Rock,AL,12,47,11,C,707
+358,Huntsville,AL,12,47,11,B,424
+359,Collinsville,AL,4,47,11,A,194
+360,Pine Level,AL,20,47,11,C,734
+361,Montgomery,AL,20,47,11,C,615
+362,Chulafinee,AL,4,47,11,A,175
+363,Ozark,AL,8,47,11,C,706
+364,Evergreen,AL,16,47,11,B,296
+365,Mt Vernon,AL,16,47,11,C,635
+366,Mobile,AL,16,47,11,C,607
+367,Uniontown,AL,20,47,11,D,984
+368,Opelika,AL,212,47,11,C,695
+369,Butler,AL,436,47,11,A,126
+370,Nashville,TN,732,42,11,C,644
+371,Nashville,TN,732,42,11,C,644
+372,Nashville,TN,732,42,11,C,644
+373,Dunlap,TN,720,42,11,A,257
+374,Chattanooga,TN,720,42,11,A,166
+375,Memphis,TN,728,42,11,C,581
+376,Johnson City,TN,716,42,11,B,453
+377,Knoxville,TN,724,42,11,B,489
+378,Knoxville,TN,724,42,11,B,489
+379,Knoxville,TN,724,42,11,B,489
+380,Ripley,TN,728,42,11,C,792
+381,Memphis,TN,728,42,11,C,581
+382,Martin,TN,728,42,11,C,566
+383,Lexington,TN,728,42,11,B,526
+384,Lawrenceburg,TN,732,42,11,B,517
+385,Cookeville,TN,732,42,11,A,201
+386,Senatobia,MS,440,48,11,D,856
+387,Indianola,MS,424,48,11,B,429
+388,Baldwyn,MS,440,48,11,A,55
+389,Grenada,MS,440,48,11,B,380
+390,Canton,MS,432,48,11,A,142
+391,Canton,MS,432,48,11,A,142
+392,Jackson,MS,432,48,11,B,442
+393,Meridian,MS,436,48,11,C,582
+394,Hattiesburg,MS,428,48,11,B,397
+395,Saucier,MS,428,48,11,D,840
+396,McComb,MS,432,48,11,C,572
+397,Starkville,MS,440,48,11,D,923
+398,Albany,GA,200,45,12,A,7
+399,Atlanta,GA,205,45,12,A,44
+400,Shelbyville,KY,332,28,11,D,862
+401,Radcliff,KY,332,28,11,C,771
+402,Louisville,KY,332,28,11,C,544
+403,Mt Sterling,KY,328,28,11,C,634
+404,Berea,KY,328,28,11,A,80
+405,Lexington,KY,328,28,11,B,525
+406,Frankfort,KY,332,28,11,B,332
+407,Corbin,KY,340,28,11,A,203
+408,Harlan,KY,340,28,11,B,390
+409,Manchester,KY,340,28,11,C,556
+410,Falmouth,KY,608,28,11,B,301
+411,Grayson,KY,860,28,11,B,372
+412,Paintsville,KY,860,28,11,C,708
+413,Jackson,KY,340,28,11,B,439
+414,West Liberty,KY,860,28,11,D,1042
+415,Pikeville,KY,860,28,11,C,732
+416,Prestonsburg,KY,860,28,11,C,762
+417,Hazard,KY,340,28,11,B,401
+418,Isom,KY,860,28,11,B,437
+420,Benton,KY,336,28,11,A,79
+421,Glasgow,KY,324,28,11,B,356
+422,Elkton,KY,324,28,11,B,277
+423,Livermore,KY,272,28,11,B,534
+424,Sebree,KY,272,28,11,D,851
+425,Somerset,KY,340,28,11,D,881
+426,Monticello,KY,340,28,11,C,617
+427,Rowletts,KY,332,28,11,D,806
+430,Worthington,OH,616,34,8,D,1076
+431,South Bloomfield,OH,616,34,8,D,886
+432,Columb,OH,616,34,8,A,199
+433,La Rue,OH,616,34,8,B,496
+434,Woodville,OH,628,34,8,D,1073
+435,Napoleon,OH,628,34,8,C,642
+436,Toledo,OH,628,34,8,D,959
+437,Cumberland,OH,616,34,8,A,219
+438,West Lafayette,OH,612,34,8,D,1041
+439,Cadiz,OH,676,34,8,A,130
+440,Moreland Hills,OH,612,34,8,C,627
+441,Cleveland,OH,612,34,8,A,186
+442,Akron,OH,612,34,8,A,6
+443,Akron,OH,612,34,8,A,6
+444,Youngstown,OH,612,34,8,D,1086
+445,Youngstown,OH,612,34,8,D,1086
+446,Navarre,OH,612,34,8,C,646
+447,Canton,OH,612,34,8,A,143
+448,New Haven,OH,628,34,8,C,655
+449,Mansfield,OH,612,34,8,C,561
+450,Hamilton,OH,608,34,8,B,385
+451,Fayetteville,OH,608,34,8,B,310
+452,Cincinnati,OH,608,34,8,A,177
+453,West Milton,OH,620,34,8,D,1043
+454,Dayton,OH,620,34,8,A,230
+455,Springfield,OH,620,34,8,D,892
+456,Jackson,OH,860,34,8,B,438
+457,Barlow,OH,624,34,8,A,57
+458,Columb Grove,OH,628,34,8,A,197
+459,Cincinnati,OH,608,34,8,A,177
+460,Noblesville,IN,280,36,8,C,671
+461,Franklin,IN,280,36,8,B,333
+462,Indianapolis,IN,280,36,8,B,428
+463,Valparaiso,IN,252,36,8,D,996
+464,Gary,IN,252,36,8,B,348
+465,Nappanee,IN,268,36,8,C,643
+466,South Bend,IN,268,36,8,D,884
+467,New Haven,IN,276,36,8,C,656
+468,Ft Wayne,IN,276,36,8,B,340
+469,Peru,IN,284,36,8,C,724
+470,Versailles,IN,608,36,8,D,1004
+471,Palmyra,IN,332,36,8,C,710
+472,North Vernon,IN,280,36,8,C,679
+473,Modoc,IN,280,36,8,C,609
+474,Oolitic,IN,288,36,8,C,694
+475,Jasper,IN,272,36,8,B,448
+476,Boonville,IN,272,36,8,A,98
+477,Evansville,IN,272,36,8,B,295
+478,Riley,IN,288,36,8,C,788
+479,Pine Village,IN,284,36,8,C,736
+480,New Haven,MI,400,30,7,C,657
+481,Ypsilanti,MI,400,30,7,D,1087
+482,Detroit,MI,401,30,7,A,244
+483,Pontiac,MI,400,30,7,C,745
+484,Flint,MI,400,30,7,B,315
+485,Flint,MI,400,30,7,B,315
+486,Standish,MI,400,30,7,D,922
+487,Standish,MI,400,30,7,D,922
+488,St Johns,MI,400,30,7,D,906
+489,Lansing,MI,400,30,7,B,511
+490,Kalamazoo,MI,404,30,7,B,463
+491,Niles,MI,268,30,7,C,670
+492,Jackson,MI,400,30,7,B,440
+493,Grand Rapids,MI,404,30,7,B,369
+494,Mkegon,MI,404,30,7,C,638
+495,Grand Rapids,MI,404,30,7,B,369
+496,Manton,MI,396,30,7,C,562
+497,Mackinaw City,MI,396,30,7,C,550
+498,Trenary,MI,408,30,7,D,970
+499,Bruce Crossing,MI,408,30,7,A,117
+500,Des Moines,IA,296,53,7,A,240
+501,Des Moines,IA,296,53,7,A,240
+502,Des Moines,IA,296,53,7,A,240
+503,Des Moines,IA,296,53,7,A,240
+504,Clear Lake,IA,304,53,7,A,183
+505,Pocahontas,IA,304,53,7,C,741
+506,Waverly,IA,304,53,7,D,1030
+507,Waterloo,IA,304,53,7,D,1024
+508,Corning,IA,488,53,7,A,206
+509,Des Moines,IA,296,53,7,A,240
+510,Correctionville,IA,300,53,7,A,209
+511,Sioux City,IA,300,53,7,D,873
+512,George,IA,712,53,7,B,350
+513,Milford,IA,300,53,7,C,590
+514,Westside,IA,300,53,7,D,1047
+515,Avoca,IA,488,53,7,A,50
+516,Shenandoah,IA,488,53,7,D,863
+520,Farley,IA,304,53,7,B,303
+521,Calmar,IA,304,53,7,A,133
+522,Cedar Rapids,IA,292,53,7,A,154
+523,Cedar Rapids,IA,292,53,7,A,154
+524,Cedar Rapids,IA,292,53,7,A,154
+525,Ottumwa,IA,296,53,7,C,704
+526,Mt Pleasant,IA,292,53,7,C,633
+527,Tipton,IA,292,53,7,D,958
+528,Davenport,IA,292,53,7,A,227
+530,West Bend,WI,872,32,7,D,1037
+531,Mukwonago,WI,872,32,7,C,636
+532,Milwaukee,WI,872,32,7,C,596
+533,Milwaukee,WI,872,32,7,C,596
+534,Racine,WI,872,32,7,C,770
+535,Mt Horeb,WI,868,32,7,C,631
+536,Madison,WI,868,32,7,C,552
+537,Madison,WI,868,32,7,C,552
+538,Lancaster,WI,868,32,7,B,509
+539,Portage,WI,868,32,7,C,751
+540,New Richmond,WI,416,32,7,C,660
+541,Waaukee,WI,876,32,7,D,1028
+542,Algoma,WI,876,32,7,A,13
+543,Green Bay,WI,876,32,7,B,376
+544,Waau,WI,876,32,7,D,1027
+545,Woodruff,WI,876,32,7,D,1069
+546,Tomah,WI,868,32,7,D,960
+547,Eau Claire,WI,864,32,7,B,266
+548,Hayward,WI,412,32,7,B,400
+549,Wautoma,WI,876,32,7,D,1029
+550,Stillwater,MN,416,50,7,D,929
+551,St Paul,MN,417,50,7,D,916
+553,Montrose,MN,416,50,7,C,623
+554,Minneapolis,MN,417,50,7,C,599
+555,Montrose,MN,416,50,7,C,623
+556,Schroeder,MN,412,50,7,D,846
+557,Hibbing,MN,412,50,7,B,406
+558,Duluth,MN,412,50,7,A,254
+559,Chatfield,MN,420,50,7,A,164
+560,Mankato,MN,420,50,7,C,560
+561,Slayton,MN,712,50,7,D,877
+562,Appleton,MN,712,50,7,A,30
+563,Sauk Centre,MN,416,50,7,D,841
+564,Pine River,MN,412,50,7,C,735
+565,Detroit Lakes,MN,596,50,7,A,243
+566,Blackduck,MN,412,50,7,A,90
+567,Karlstad,MN,600,50,7,B,470
+570,Sioux Falls,SD,712,52,4,D,874
+571,Sioux Falls,SD,712,52,4,D,874
+572,Watertown,SD,700,52,4,D,1025
+573,Mitchell,SD,712,52,4,C,604
+574,Ipswich,SD,700,52,4,B,435
+575,Midland,SD,704,52,4,C,588
+576,Isabel,SD,708,52,4,B,436
+577,Rapid City,SD,708,52,4,C,775
+580,Leonard,ND,596,51,4,B,522
+581,Fargo,ND,596,51,4,B,302
+582,Grand Forks,ND,600,51,4,B,367
+583,Churchs Ferry,ND,600,51,4,A,176
+584,Jamestown,ND,588,51,4,B,446
+585,Bismarck,ND,588,51,4,A,87
+586,Dickinson,ND,592,51,4,A,246
+587,Minot,ND,604,51,4,C,600
+588,Williston,ND,604,51,4,D,1061
+590,Billings,MT,460,70,4,A,84
+591,Billings,MT,460,70,4,A,84
+592,Wolf Point,MT,468,70,4,D,1068
+593,Miles City,MT,460,70,4,C,589
+594,Great Falls,MT,472,70,4,B,374
+595,Havre,MT,472,70,4,B,398
+596,Helena,MT,472,70,4,B,404
+597,Twin Bridges,MT,464,70,4,D,982
+598,Missoula,MT,476,70,4,C,603
+599,Kalispell,MT,476,70,4,B,464
+600,Volo,IL,252,38,8,D,1012
+601,Ingalton,IL,252,38,8,B,431
+602,Chicago,IL,253,38,8,A,171
+603,Chicago,IL,253,38,8,A,171
+604,Joliet,IL,252,38,8,B,456
+605,Aurora,IL,252,38,8,A,48
+606,Chicago,IL,253,38,8,A,171
+607,Chicago,IL,253,38,8,A,171
+608,Chicago,IL,253,38,8,A,171
+609,Gilman,IL,248,38,8,B,352
+610,Forreston,IL,252,38,8,B,321
+611,Rockford,IL,252,38,8,D,802
+612,Barstow,IL,260,38,8,A,62
+613,La Salle,IL,252,38,8,B,497
+614,Galesburg,IL,260,38,8,B,342
+615,Peoria,IL,260,38,8,C,722
+616,Peoria,IL,260,38,8,C,722
+617,Bloomington,IL,248,38,8,A,93
+618,Ogden,IL,248,38,8,C,687
+619,Arcola,IL,288,38,8,A,34
+620,Jerseyville,IL,456,38,8,B,452
+622,Fayetteville,IL,456,38,8,B,308
+623,Camp Point,IL,264,38,8,A,136
+624,Newton,IL,288,38,8,C,666
+625,Latham,IL,264,38,8,B,515
+626,Jacksonville,IL,264,38,8,B,445
+627,Jerome,IL,264,38,8,B,450
+628,Fairfield,IL,256,38,8,B,298
+629,Vienna,IL,252,38,8,D,1009
+630,Eureka,MO,456,56,5,B,293
+631,St Louis,MO,457,56,5,D,911
+633,Troy,MO,456,56,5,D,974
+634,New Court Village,MO,444,56,5,C,652
+635,Kirksville,MO,444,56,5,B,485
+636,Arcadia,MO,456,56,5,A,31
+637,Jackson,MO,456,56,5,B,441
+638,Portageville,MO,456,56,5,C,752
+639,Williamsville,MO,456,56,5,D,1060
+640,Grain Valley,MO,448,56,5,B,364
+641,Kansas City,MO,448,56,5,B,468
+644,Savannah,MO,448,56,5,D,844
+645,St Joseph,MO,448,56,5,D,909
+646,Chillicothe,MO,448,56,5,A,172
+647,Butler,MO,452,56,5,A,127
+648,Neosho,MO,452,56,5,C,648
+649,Kansas City,MO,448,56,5,B,468
+650,Jefferson City,MO,444,56,5,B,449
+651,Jefferson City,MO,444,56,5,B,449
+652,Moberly,MO,444,56,5,C,606
+653,Sedalia,MO,448,56,5,D,852
+654,Licking,MO,444,56,5,B,527
+655,Licking,MO,444,56,5,B,527
+656,Springfield,MO,452,56,5,D,891
+657,Springfield,MO,452,56,5,D,891
+658,Springfield,MO,452,56,5,D,891
+660,Lawrence,KS,448,58,5,B,516
+661,Kansas City,KS,448,58,5,B,467
+662,Kansas City,KS,448,58,5,B,467
+664,St Marys,KS,316,58,5,D,913
+665,St Marys,KS,316,58,5,D,913
+666,Topeka,KS,316,58,5,D,961
+667,Chanute,KS,320,58,5,A,158
+668,Strong City,KS,320,58,5,D,936
+669,Belleville,KS,316,58,5,A,72
+670,Viola,KS,320,58,5,D,1011
+671,Viola,KS,320,58,5,D,1011
+672,Wichita,KS,320,58,5,D,1055
+673,Independence,KS,320,58,5,B,427
+674,Salina,KS,320,58,5,D,815
+675,Great Bend,KS,320,58,5,B,373
+676,Stockton,KS,312,58,5,D,932
+677,Colby,KS,312,58,5,A,190
+678,Garden City,KS,308,58,5,B,347
+679,Hugoton,KS,308,58,5,B,421
+680,Blair,NE,488,55,5,A,92
+681,Omaha,NE,488,55,5,C,693
+683,Wilber,NE,488,55,5,D,1056
+684,Wilber,NE,488,55,5,D,1056
+685,Lincoln,NE,488,55,5,B,529
+686,Genoa,NE,488,55,5,B,349
+687,Plainview,NE,300,55,5,C,739
+688,Loup City,NE,480,55,5,C,545
+689,Minden,NE,480,55,5,C,598
+690,Palisade,NE,484,55,5,C,709
+691,Tryon,NE,484,55,5,D,977
+692,Valentine,NE,484,55,5,D,993
+693,Alliance,NE,492,55,5,A,16
+700,New Orleans,LA,357,64,6,C,659
+701,New Orleans,LA,357,64,6,C,659
+703,Thibodaux,LA,356,64,6,D,954
+704,Folsom,LA,356,64,6,B,318
+705,Crowley,LA,348,64,6,A,216
+706,Ragley,LA,356,64,6,C,772
+707,Baton Rouge,LA,356,64,6,A,64
+708,Baton Rouge,LA,356,64,6,A,64
+710,Ringgold,LA,360,64,6,C,791
+711,Shreveport,LA,360,64,6,D,869
+712,Rayville,LA,352,64,6,C,778
+713,Jonesville,LA,344,64,6,B,458
+714,Natchez,LA,344,64,6,C,645
+716,Monticello,AR,424,60,6,C,616
+717,Camden,AR,352,60,6,A,134
+718,Hope,AR,360,60,6,B,416
+719,Glenwood,AR,48,60,6,B,357
+720,Searcy,AR,48,60,6,D,848
+721,Searcy,AR,48,60,6,D,848
+722,Little Rock,AR,48,60,6,B,532
+723,Forrest City,AR,44,60,6,B,320
+724,Hoxie,AR,44,60,6,B,419
+725,Brockwell,AR,48,60,6,A,112
+726,Jasper,AR,48,60,6,B,447
+727,Fayetteville,AR,40,60,6,B,307
+728,Clarksville,AR,48,60,6,A,181
+729,Charleston,AR,40,60,6,A,159
+730,Minco,OK,636,62,6,C,597
+731,Oklahoma City,OK,636,62,6,C,690
+733,Atin,TX,744,68,6,A,49
+734,Ardmore,OK,636,62,6,A,35
+735,Snyder,OK,636,62,6,D,879
+736,Hammon,OK,636,62,6,B,387
+737,Enid,OK,632,62,6,B,285
+738,Woodward,OK,632,62,6,D,1074
+739,Guymon,OK,308,62,6,B,383
+740,Hominy,OK,640,62,6,B,413
+741,Tulsa,OK,640,62,6,D,980
+743,Vinita,OK,640,62,6,D,1010
+744,Mkogee,OK,640,62,6,C,639
+745,Clayton,OK,40,62,6,A,182
+746,Ponca City,OK,632,62,6,C,743
+747,Hugo,OK,636,62,6,B,420
+748,Seminole,OK,636,62,6,D,855
+749,Poteau,OK,640,62,6,C,756
+750,McKinney,TX,752,66,6,C,574
+751,Kaufman,TX,752,66,6,B,471
+752,Dallas,TX,753,66,6,A,222
+753,Dallas,TX,753,66,6,A,222
+754,Cooper,TX,752,66,6,A,202
+755,Maud,TX,784,66,6,C,570
+756,Longview,TX,764,66,6,C,540
+757,Tyler,TX,784,ZIP,6,D,983
+758,Crockett,TX,764,ZIP,6,A,215
+759,San Augtine,TX,764,ZIP,6,D,822
+760,Weatherford,TX,752,66,6,D,1033
+761,Fort Worth,TX,752,66,6,B,331
+762,St Jo,TX,752,66,6,D,904
+763,Archer City,TX,788,66,6,A,32
+764,Eastland,TX,752,66,6,B,263
+765,Temple,TX,744,ZIP,6,D,951
+766,Waco,TX,744,ZIP,6,D,1014
+767,Waco,TX,744,66,6,D,1014
+768,Brady,TX,776,ZIP,6,A,103
+769,Barnhart,TX,776,ZIP,6,A,58
+770,Hoton,TX,765,68,6,B,418
+771,Hoton,TX,765,68,6,B,418
+772,Hoton,TX,765,68,6,B,418
+773,Shepherd,TX,764,68,6,D,864
+774,East Bernard,TX,764,68,6,B,261
+775,Baytown,TX,764,68,6,A,66
+776,Beaumont,TX,764,68,6,A,70
+777,Beaumont,TX,764,68,6,A,70
+778,Bryan,TX,744,68,6,A,118
+779,Victoria,TX,748,68,6,D,1007
+780,Jourdanton,TX,780,68,6,B,460
+781,Stockdale,TX,780,68,6,D,930
+782,San Antonio,TX,781,68,6,D,821
+783,Alice,TX,748,68,6,A,15
+784,Corp Christi,TX,748,68,6,A,208
+785,McAllen,TX,768,68,6,C,571
+786,Atin,TX,744,ZIP,6,A,49
+787,Atin,TX,744,68,6,A,49
+788,Uvalde,TX,756,ZIP,6,D,988
+789,La Grange,TX,744,68,6,B,493
+790,Amarillo,TX,740,66,6,A,21
+791,Amarillo,TX,740,66,6,A,21
+792,Matador,TX,752,66,6,C,568
+793,Brownfield,TX,772,66,6,A,116
+794,Lubbock,TX,772,66,6,C,547
+795,Roby,TX,736,66,6,D,799
+796,Abilene,TX,736,66,6,A,2
+797,Monahans,TX,776,66,6,C,610
+798,Van Horn,TX,760,66,6,D,997
+799,El Paso,TX,760,66,6,B,272
+800,Denver,CO,145,74,5,A,239
+801,Franktown,CO,144,74,5,B,334
+802,Denver,CO,145,74,5,A,239
+803,Boulder,CO,144,74,5,A,100
+804,Kremmling,CO,144,74,5,B,491
+805,Fort Collins,CO,144,74,5,B,322
+806,Greeley,CO,144,74,5,B,375
+807,Sterling,CO,144,74,5,D,928
+808,Limon,CO,140,74,5,B,528
+809,Colorado Springs,CO,140,74,5,A,195
+810,La Junta,CO,140,74,5,B,494
+811,Del Norte,CO,152,74,5,A,234
+812,Salida,CO,156,74,5,D,814
+813,Cortez,CO,152,74,5,A,210
+814,Montrose,CO,152,74,5,C,622
+815,Grand Junction,CO,152,74,5,B,368
+816,Meeker,CO,148,74,5,C,579
+820,Laramie,WY,880,72,4,B,512
+821,Lake Junction,WY,884,72,4,B,505
+822,Lk,WY,880,72,4,C,548
+823,Rawlins,WY,888,72,4,C,777
+824,Emblem,WY,884,72,4,B,283
+825,Riverton,WY,888,72,4,C,795
+826,Casper,WY,880,72,4,A,149
+827,Moorcroft,WY,708,72,4,C,624
+828,Buffalo,WY,884,72,4,A,124
+829,Rock Springs,WY,888,72,4,D,801
+830,Jackson,WY,884,72,4,B,443
+831,Daniel,WY,888,72,4,A,224
+832,Blackfoot,ID,240,83,1,A,91
+833,Shoshone,ID,244,83,1,D,867
+834,St Anthony,ID,240,83,1,D,896
+835,Kamiah,ID,844,83,1,B,465
+836,Boise,ID,236,83,1,A,94
+837,Boise,ID,236,83,1,A,94
+838,Coeur D Alene,ID,844,83,1,A,189
+840,Salt Lake City,UT,800,76,3,D,819
+841,Salt Lake City,UT,800,76,3,D,819
+842,Salt Lake City,UT,800,76,3,D,819
+843,Elwood,UT,800,76,3,B,282
+844,Ogden,UT,800,76,3,C,688
+845,Moab,UT,796,76,3,C,605
+846,Delta,UT,796,76,3,A,237
+847,Cedar City,UT,792,76,3,A,153
+850,Phoenix,AZ,28,79,3,C,730
+851,Phoenix,AZ,28,79,3,C,730
+852,Florence,AZ,28,79,3,B,316
+853,Buckeye,AZ,36,79,3,A,120
+855,Globe,AZ,28,79,3,B,358
+856,Benson,AZ,32,79,3,A,78
+857,Tucson,AZ,32,79,3,D,978
+859,Show Low,AZ,24,79,3,D,868
+860,Flagstaff,AZ,24,79,3,B,313
+863,Prescott,AZ,24,79,3,C,760
+864,Kingman,AZ,500,79,3,B,481
+865,Ganado,AZ,24,79,3,B,344
+870,Albuquerque,NM,516,77,3,A,10
+871,Albuquerque,NM,516,77,3,A,10
+872,Albuquerque,NM,516,77,3,A,10
+873,Gallup,NM,528,77,3,B,343
+874,Farmington,NM,528,77,3,B,305
+875,Ojo Caliente,NM,516,77,3,C,689
+877,Wagon Mound,NM,516,77,3,D,1015
+878,Datil,NM,516,77,3,A,225
+879,Truth or Consequen,NM,532,77,3,D,976
+880,Deming,NM,532,77,3,A,238
+881,Elida,NM,524,77,3,B,273
+882,Maljamar,NM,520,77,3,C,555
+883,Hondo,NM,532,77,3,B,414
+884,Tucumcari,NM,516,77,3,D,979
+885,El Paso,TX,760,66,6,B,272
+889,Las Vegas,NV,500,86,2,B,514
+890,Las Vegas,NV,500,86,2,B,514
+891,Las Vegas,NV,500,86,2,B,514
+893,Eureka,NV,496,86,2,B,294
+894,Lovelock,NV,504,86,2,C,546
+895,Reno,NV,504,86,2,C,784
+896,Reno,NV,504,86,2,C,784
+897,Carson City,NV,504,86,2,A,148
+898,Elko,NV,496,86,2,B,276
+900,Los Angeles,CA,57,88,2,C,542
+901,Los Angeles,CA,57,88,2,C,542
+902,Beverly Hills,CA,56,88,2,A,83
+903,Inglewood,CA,56,88,2,B,433
+904,Santa Monica,CA,56,88,2,D,836
+905,Torrance,CA,56,88,2,D,964
+906,Norwalk,CA,56,88,2,C,683
+907,Lakewood,CA,56,88,2,B,507
+908,Signal Hill,CA,56,88,2,D,871
+909,Los Angeles,CA,57,88,2,C,542
+910,Pasadena,CA,56,88,2,C,716
+911,Pasadena,CA,56,88,2,C,716
+912,Pasadena,CA,56,88,2,C,716
+913,San Fernando,CA,56,88,2,D,825
+914,Sherman Oaks,CA,56,88,2,D,866
+915,Burbank,CA,56,88,2,A,125
+916,Burbank,CA,56,88,2,A,125
+917,W Covina,CA,56,88,2,D,1013
+918,Alhambra,CA,56,88,2,A,14
+919,Dulzura,CA,76,88,2,A,255
+920,San Pasqual,CA,76,88,2,D,830
+921,San Diego,CA,77,88,2,D,824
+922,Indio,CA,72,88,2,B,430
+923,Barstow,CA,72,88,2,A,61
+924,San Bernardino,CA,72,88,2,D,823
+925,Riverside,CA,72,88,2,C,794
+926,Santa Ana,CA,56,88,2,D,834
+927,Santa Ana,CA,56,88,2,D,834
+928,Anaheim,CA,56,88,2,A,25
+930,Ventura,CA,56,88,2,D,1001
+931,Santa Barbara,CA,56,88,2,D,835
+932,Delano,CA,56,ZIP,2,A,235
+933,Bakersfield,CA,56,88,2,A,54
+934,San Luis Obispo,CA,56,88,2,D,828
+935,Olancha,CA,56,ZIP,2,C,691
+936,Fresno,CA,52,87,2,B,336
+937,Fresno,CA,52,87,2,B,336
+938,Fresno,CA,52,87,2,B,336
+939,Salinas,CA,60,87,2,D,816
+940,Belmont,CA,80,87,2,A,74
+941,San Francisco,CA,81,87,2,D,826
+942,Sacramento,CA,68,87,2,D,812
+943,Palo Alto,CA,80,87,2,C,711
+944,San Mateo,CA,80,87,2,D,829
+945,Walnut Creek,CA,80,87,2,D,1020
+946,Oakland,CA,80,87,2,C,686
+947,Oakland,CA,80,87,2,C,686
+948,Richmond,CA,80,87,2,C,785
+949,San Rafael,CA,80,87,2,D,831
+950,Gilroy,CA,80,87,2,B,353
+951,San Jose,CA,81,87,2,D,827
+952,Stockton,CA,68,87,2,D,931
+953,Modesto,CA,68,87,2,C,608
+954,Hopland,CA,80,87,2,B,417
+955,Eureka,CA,64,87,2,B,292
+956,Sacramento,CA,68,87,2,D,812
+957,Gold Run,CA,68,87,2,B,360
+958,Sacramento,CA,68,87,2,D,812
+959,Oroville,CA,84,87,2,C,701
+960,Redding,CA,64,87,2,C,781
+961,Johnstonville,CA,68,87,2,B,454
+970,Portland,OR,660,85,1,C,754
+971,Forest Grove,OR,660,85,1,B,319
+972,Portland,OR,660,85,1,C,754
+973,Albany,OR,660,85,1,A,9
+974,Roseburg,OR,648,85,1,D,804
+975,Medford,OR,652,85,1,C,577
+976,Valley Falls,OR,652,85,1,D,994
+977,Bend,OR,644,85,1,A,77
+978,North Powder,OR,656,85,1,C,677
+979,Vale,OR,236,85,1,D,992
+980,North Bend,WA,840,84,1,C,675
+981,Seattle,WA,841,84,1,D,849
+982,Sedro Woolley,WA,832,84,1,D,853
+983,Tacoma,WA,840,84,1,D,946
+984,Tacoma,WA,840,84,1,D,946
+985,Elma,WA,840,84,1,B,279
+986,Washougal,WA,660,84,1,D,1023
+988,Brewster,WA,848,84,1,A,106
+989,Yakima,WA,848,84,1,D,1080
+990,Spokane,WA,844,84,1,D,889
+991,Davenport,WA,844,84,1,A,228
+992,Spokane,WA,844,84,1,D,889
+993,Pasco,WA,836,84,1,C,717
+994,Clarkston,WA,836,84,1,A,180
+995,Anchorage,AK,22,ZIP,14,D,26
+996,Kodiak,AK,22,ZIP,14,D,490
+996,Anchorage,AK,22,ZIP,14,D,26
+997,Cordova,AK,22,8190100,14,D,204
+997,Fairbanks,AK,22,8190100,14,D,297
+998,Juneau,AK,22,8030400,14,D,461
+998,Petersburg,AK,22,8030400,14,D,726
+998,Sitka,AK,22,8030400,14,D,876
+999,Ketchikan,AK,22,8030400,14,D,476
+999,Wrangell,AK,22,8030400,14,D,1077
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,

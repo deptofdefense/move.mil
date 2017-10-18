@@ -164,6 +164,26 @@ ActiveRecord::Schema.define(version: 20171215164151) do
     t.text "slug", null: false
   end
 
+  create_table "zip3s", force: :cascade do |t|
+    t.integer "zip3"
+    t.text "basepoint_city"
+    t.text "state"
+    t.integer "service_area"
+    t.text "rate_area"
+    t.integer "region"
+    t.text "mileage_t"
+    t.integer "mileage_i"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "zip5_rate_areas", force: :cascade do |t|
+    t.integer "zip5"
+    t.text "rate_area"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "zip_code_tabulation_areas", force: :cascade do |t|
     t.text "zip_code", null: false
     t.float "latitude", null: false

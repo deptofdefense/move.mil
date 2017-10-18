@@ -27,10 +27,10 @@
 
       <fieldset>
         <legend><span></span>Are you moving with dependents?</legend>
-        <%= form.radio_button :dependents, 'yes', id: :dependents_yes %>
-        <%= form.label :dependents, 'Yes, I am moving with dependents', :value => 'yes' %>
-        <%= form.radio_button :dependents, 'no', id: :dependents_no %>
-        <%= form.label :dependents, 'No, I am not moving with dependents', :value => 'no' %>
+        <%= form.radio_button :dependents, 'yes', { id: :dependents_yes, required: true } %>
+        <%= form.label :dependents, raw('<strong>Yes</strong>, I am moving with dependents'), :value => 'yes' %>
+        <%= form.radio_button :dependents, 'no', { id: :dependents_no, required: true } %>
+        <%= form.label :dependents, raw('<strong>No</strong>, I am not moving with dependents'), :value => 'no' %>
       </fieldset>
 
       <fieldset>
@@ -90,9 +90,9 @@
           needed!
           <a href="#TODO">How do I make sure the government pays me my packing entitlement?</a>
         </p>
-        <%= form.radio_button :selfpack, 'yes', id: :selfpack_yes, checked: true %>
+        <%= form.radio_button :selfpack, 'yes', { id: :selfpack_yes, required: true }  %>
         <%= form.label :selfpack, 'Yes', :value => 'yes' %>
-        <%= form.radio_button :selfpack, 'no', id: :selfpack_no %>
+        <%= form.radio_button :selfpack, 'no', { id: :selfpack_no, required: true } %>
         <%= form.label :selfpack, 'No', :value => 'no' %>
       </fieldset>
 
