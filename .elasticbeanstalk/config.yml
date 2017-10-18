@@ -1,0 +1,16 @@
+branch-defaults:
+  master:
+    environment: staging
+global:
+  application_name: move.mil
+  branch: null
+  default_ec2_keyname: move-mil-deployer
+  default_platform: Ruby 2.3 (Puma)
+  default_region: us-east-1
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: null
+  repository: null
+  sc: git
+  workspace_type: Application
