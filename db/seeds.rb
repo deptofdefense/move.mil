@@ -78,8 +78,10 @@ end
 puts 'Loading household goods weights...'
 hhg_weights = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'hhg_weights.json')))
 
-hhg_weights.each do |category, hhgs|
-  hhgs.each do |name, weight|
-    HouseholdGood.where(name: name, category: category).first_or_create(name: name, weight: weight, category: category)
+hhg_weights.each do |category|
+  hhg_category = HouseholdGoodCategory.where(name: category['name']).first_or_create(name: category['name'], icon: category['icon'])
+
+  category['household_goods'].each do |hhg|
+    hhg_category.household_goods.where(name: hhg['name']).first_or_create(name: hhg['name'], weight: hhg['weight'])
   end
 end

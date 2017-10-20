@@ -1,6 +1,8 @@
 class HouseholdGood < ApplicationRecord
-  validates :weight, :category, presence: true
-  validates :name, presence: true, uniqueness: { scope: :category }
+  validates :weight, presence: true
+  validates :name, presence: true, uniqueness: { scope: :household_good_category }
+
+  belongs_to :household_good_category
 
   def key
     @key ||= name.parameterize
