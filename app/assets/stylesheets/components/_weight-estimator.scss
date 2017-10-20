@@ -1,16 +1,21 @@
-.weight-estimator-form {
+.hhg-category-list {
   margin-top: 2rem;
-
-  .weight-result {
-    font-size: $h3-font-size;
-    font-weight: $font-bold;
-  }
 }
 
-.weight-estimator-footer {
-  border-top: solid 1px $color-black;
-  padding-top: 2rem;
-  margin-top: 2.5rem;
+.hhg-category-header {
+  @include media($large-screen) {
+    text-align: center;
+  }
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.hhg-category {
+  & + & {
+    border-top: solid 1px $color-gray;
+  }
+
+  padding: 2rem 0;
 }
 
 .hhg-table {
@@ -28,4 +33,15 @@
     height: 3.5rem;
     width: 5rem;
   }
+}
+
+.weight-result {
+  font-size: $h3-font-size;
+  font-weight: $font-bold;
+}
+
+.weight-estimator-footer {
+  border-top: solid 1px $color-black;
+  padding-top: 2rem;
+  margin-top: 2.5rem;
 }
