@@ -34,8 +34,8 @@ group :development, :test do
   gem 'byebug', '~> 9.1'
   gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
-  gem 'rspec-rails', '~> 3.6'
-  gem 'rubocop', '~> 0.50.0', require: false
+  gem 'rspec-rails', '~> 3.7', '>= 3.7.1'
+  gem 'rubocop', '~> 0.51.0', require: false
 end
 
 group :development do
