@@ -26,24 +26,52 @@
     border-top: solid 1px $color-gray;
   }
 
-  padding: 2rem 0;
-}
-
-.hhg-table {
-  td {
-    border: none;
-    padding: 1rem 1.5rem 0 1.5rem;
-  }
-
-  .hhg-label {
+  label {
     margin-top: 0;
   }
 
-  .hhg-quantity-input {
-    float: right;
-    height: 3.5rem;
-    width: 5rem;
+  table {
+    td {
+      border: none;
+      padding: 1rem 1.5rem 0 1.5rem;
+    }
   }
+
+  padding: 2rem 0;
+}
+
+.hhg-quantity-input,
+.hhg-weight-input,
+.category-estimate-input {
+  float: right;
+  height: 3.5rem;
+  width: 5rem;
+}
+
+.category-estimate-input {
+  float: right;
+  height: 3.5rem;
+  width: 8rem;
+}
+
+.hhg-category .hhg-category-section-two {
+  button {
+    margin-top: 0.7rem;
+  }
+
+  .category-estimate-label {
+    font-weight: bold;
+  }
+
+  .category-estimate-table {
+    margin-top: 0;
+  }
+
+  .hhg-misc-input {
+    height: 3.5rem;
+  }
+
+  margin-top: 1.5rem;
 }
 
 .weight-result {

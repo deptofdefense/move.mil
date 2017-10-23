@@ -33,7 +33,7 @@
     }
   };
 
-  var $container = $('#weight-estimator-form');
+  var $container = $('#weight-estimator');
 
   if ($container.length) {
     new CoordinatesSearchForm({

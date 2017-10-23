@@ -10,7 +10,7 @@
       <%- household_goods.each do |household_good| -%>
         <tr>
           <td>
-            <label for="<%= household_good.key %>" class="hhg-label"><%= household_good.name %></label>
+            <label for="<%= household_good.key %>"><%= household_good.name %></label>
           </td>
           <td>
             <input class="hhg-quantity-input" id="<%= household_good.key %>" name="<%= household_good.key %>" type="text" pattern="\d+">

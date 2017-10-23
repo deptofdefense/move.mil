@@ -3,7 +3,7 @@
 <div class="usa-grid usa-section usa-layout-docs">
   <%= render 'shared/sidenav' %>
 
-  <div class="usa-width-three-fourths usa-layout-docs-main_content">
+  <div class="usa-width-three-fourths usa-layout-docs-main_content" id="weight-estimator">
     <h1><%= @page_title %></h1>
     <p>Get to know how much your personal belongings weigh with the Weight Estimator Tool. Enter the number of items you have for each type, then click “Calculate My Estimate” at the bottom to see how much all your belongings might weigh. Next, start thinking about your weight entitlement, and prepare for your move.</p>
     <%- if @household_good_categories -%>
@@ -15,10 +15,53 @@
               <span><%= category.name %></span>
             </div>
             <div class="usa-width-three-fourths">
-              <div class="usa-grid-full">
+              <div class="usa-grid-full hhg-category-section-one">
                 <%- @half = category.household_goods.length / 2 -%>
                 <%= render partial: 'household_goods', object: category.household_goods.first(category.household_goods.length - @half) %>
                 <%= render partial: 'household_goods', object: category.household_goods.last(@half) %>
+              </div>
+              <div class="usa-grid-full hhg-category-section-two">
+                <div class="usa-width-one-half">
+                  <table class="usa-table-borderless hhg-misc-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Misc. Item</th>
+                        <th scope="col">Weight</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <%- for i in 0..2 -%>
+                        <tr>
+                          <td><input class="hhg-misc-input" type="text"></td>
+                          <td><input class="hhg-weight-input" name="<%= category.key %>" type="text" pattern="\d+"></td>
+                        </tr>
+                      <%- end -%>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="usa-width-one-half">
+                  <button class="category-calculate-button">Calculate</button>
+                  <table class="usa-table-borderless category-estimate-table">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <label for="<%= category.subtotal_key %>" class="category-estimate-label"><%= category.name %></label>
+                        </td>
+                        <td>
+                          <input name="<%= category.subtotal_key%>" class="category-estimate-input" disabled>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="<%= category.total_key %>" class="category-estimate-label">Total Estimate</label>
+                        </td>
+                        <td>
+                          <input name="<%= category.total_key %>" class="category-estimate-input" disabled>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
