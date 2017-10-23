@@ -3,11 +3,22 @@
 }
 
 .hhg-category-header {
-  @include media($large-screen) {
-    text-align: center;
+  img {
+    margin: 0 1rem 1.5rem 0;
+    vertical-align: middle;
   }
+
   font-size: 1.8rem;
   font-weight: bold;
+
+  @include media($large-screen) {
+    img {
+      display: block;
+      margin: 0 auto 1rem auto;
+    }
+
+    text-align: center;
+  }
 }
 
 .hhg-category {

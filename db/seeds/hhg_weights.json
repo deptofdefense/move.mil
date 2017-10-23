@@ -801,7 +801,7 @@
   },
   {
     "name": "Appliances",
-    "icon": "icons/household-appliances.svg",
+    "icon": "icons/appliances.png",
     "household_goods": [
       {
         "name": "Freezer (16 CU or More)",

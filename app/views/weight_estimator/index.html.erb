@@ -11,7 +11,7 @@
         <%- @household_good_categories.each do |category| -%>
           <div class="usa-grid-full hhg-category">
             <div class="usa-width-one-fourth hhg-category-header">
-              <%= image_tag <%= category.icon %>, width: '42px', role: 'presentation' %>
+              <%= image_tag category.icon, width: '50px', role: 'presentation' %>
               <span><%= category.name %></span>
             </div>
             <div class="usa-width-three-fourths">
