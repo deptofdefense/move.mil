@@ -33,30 +33,30 @@
                       <%- for i in 0..2 -%>
                         <tr>
                           <td><input class="hhg-misc-input" type="text"></td>
-                          <td><input class="hhg-weight-input" name="<%= category.key %>" type="text" pattern="\d+"></td>
+                          <td><input class="hhg-weight-input" type="text" pattern="\d+"></td>
                         </tr>
                       <%- end -%>
                     </tbody>
                   </table>
                 </div>
                 <div class="usa-width-one-half">
-                  <button class="category-calculate-button">Calculate</button>
+                  <button id="<%= category.key %>" class="category-calculate-button">Calculate</button>
                   <table class="usa-table-borderless category-estimate-table">
                     <tbody>
                       <tr>
                         <td>
-                          <label for="<%= category.subtotal_key %>" class="category-estimate-label"><%= category.name %></label>
+                          <label for="<%= category.key + '_subtotal' %>" class="category-estimate-label"><%= category.name %></label>
                         </td>
                         <td>
-                          <input name="<%= category.subtotal_key%>" class="category-estimate-input" disabled>
+                          <input id="<%= category.key + '_subtotal' %>" name="<%= category.key + '_subtotal' %>" class="category-estimate-input" disabled>
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <label for="<%= category.total_key %>" class="category-estimate-label">Total Estimate</label>
+                          <label for="<%= category.key + '_total' %>" class="category-estimate-label">Total Estimate</label>
                         </td>
                         <td>
-                          <input name="<%= category.total_key %>" class="category-estimate-input" disabled>
+                          <input id="<%= category.key + '_total' %>" name="<%= category.key + '_total' %>" class="category-estimate-input" disabled>
                         </td>
                       </tr>
                     </tbody>
