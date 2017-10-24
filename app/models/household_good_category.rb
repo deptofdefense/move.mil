@@ -7,12 +7,4 @@ class HouseholdGoodCategory < ApplicationRecord
   def key
     @key ||= name.parameterize
   end
-
-  def subtotal_key
-    @total_key ||= "#{key}_subtotal"
-  end
-
-  def total_key
-    @total_key ||= "#{key}_total"
-  end
 end

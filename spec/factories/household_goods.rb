@@ -1,9 +1,7 @@
 FactoryGirl.define do
-  sequence(:name) { |n| "Item #{n}" }
-
   factory :household_good do
-    name
+    sequence(:name) { |n| "Item #{n}" }
     weight 10
-    category 'Living Room'
+    household_good_category
   end
 end
