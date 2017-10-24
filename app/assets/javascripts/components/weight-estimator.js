@@ -52,7 +52,7 @@
           $subtotalInput.val(subtotal);
           $totalInput.val(total);
         } else {
-          this.$weightResult.html(total + " lbs");
+          this.$weightResult.html('Estimated grand total: ' + total + ' lbs');
         }
       }
     },

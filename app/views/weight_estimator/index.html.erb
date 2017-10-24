@@ -25,15 +25,15 @@
                   <table class="usa-table-borderless hhg-misc-table">
                     <thead>
                       <tr>
-                        <th scope="col">Misc. Item</th>
+                        <th scope="col">Miscellaneous</th>
                         <th scope="col">Weight</th>
                       </tr>
                     </thead>
                     <tbody>
                       <%- for i in 0..2 -%>
                         <tr>
-                          <td><input class="hhg-misc-input" type="text"></td>
-                          <td><input class="hhg-weight-input" type="text" pattern="\d+"></td>
+                          <td><input class="hhg-misc-input" type="text" placeholder="Item Description"></td>
+                          <td><input class="hhg-weight-input" type="text" pattern="\d+" placeholder="lbs"></td>
                         </tr>
                       <%- end -%>
                     </tbody>
@@ -44,20 +44,12 @@
                   <table class="usa-table-borderless category-estimate-table">
                     <tbody>
                       <tr>
-                        <td>
-                          <label for="<%= category.key + '_subtotal' %>" class="category-estimate-label"><%= category.name %></label>
-                        </td>
-                        <td>
-                          <input id="<%= category.key + '_subtotal' %>" name="<%= category.key + '_subtotal' %>" class="category-estimate-input" disabled>
-                        </td>
+                        <td><label for="<%= category.key + '_subtotal' %>" class="category-estimate-label"><%= category.name %></label></td>
+                        <td><input id="<%= category.key + '_subtotal' %>" name="<%= category.key + '_subtotal' %>" class="category-estimate-input" disabled></td>
                       </tr>
                       <tr>
-                        <td>
-                          <label for="<%= category.key + '_total' %>" class="category-estimate-label">Total Estimate</label>
-                        </td>
-                        <td>
-                          <input id="<%= category.key + '_total' %>" name="<%= category.key + '_total' %>" class="category-estimate-input" disabled>
-                        </td>
+                        <td><label for="<%= category.key + '_total' %>" class="category-estimate-label">Total Estimate</label></td>
+                        <td><input id="<%= category.key + '_total' %>" name="<%= category.key + '_total' %>" class="category-estimate-input" disabled></td>
                       </tr>
                     </tbody>
                   </table>
@@ -68,10 +60,10 @@
         <%- end -%>
       </div>
       <button id="calcuate-button">Calculate My Estimate</button>
-      <span id="weight-result" class="weight-result"></span>
+      <div id="weight-result" class="weight-result"></div>
     <%- end -%>
     <div class="weight-estimator-footer">
-      <p>Note: This is only an estimate of the weight of your stuff.</p>
+      <p>Note: This is an estimate only. It is designed to assist you in estimating the total weight of your shipment. However, you are ultimately responsible for the actual weight of the household goods you ship. The weights used here are based on industry standards and your actual weights may vary depending on brand, size, etc. Please use proper judgment when making your estimates.</p>
     </div>
   </div>
 </div>

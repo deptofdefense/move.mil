@@ -40,6 +40,10 @@
   padding: 2rem 0;
 }
 
+.hhg-category th:last-child {
+  text-align: right;
+}
+
 .hhg-quantity-input,
 .hhg-weight-input,
 .category-estimate-input {
@@ -71,7 +75,7 @@
     height: 3.5rem;
   }
 
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .weight-result {
@@ -81,6 +85,5 @@
 
 .weight-estimator-footer {
   border-top: solid 1px $color-black;
-  padding-top: 2rem;
   margin-top: 2.5rem;
 }
