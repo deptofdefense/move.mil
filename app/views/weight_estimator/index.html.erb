@@ -16,9 +16,10 @@
             </div>
             <div class="usa-width-three-fourths">
               <div class="usa-grid-full hhg-category-section-one">
-                <%- @half = category.household_goods.length / 2 -%>
-                <%= render partial: 'household_goods', object: category.household_goods.first(category.household_goods.length - @half) %>
-                <%= render partial: 'household_goods', object: category.household_goods.last(@half) %>
+                <%- @household_goods = category.household_goods.order(:name) -%>
+                <%- @half = @household_goods.length / 2 -%>
+                <%= render partial: 'household_goods', object: @household_goods.first(category.household_goods.length - @half) %>
+                <%= render partial: 'household_goods', object: @household_goods.last(@half) %>
               </div>
               <div class="usa-grid-full hhg-category-section-two">
                 <div class="usa-width-one-half">
@@ -48,7 +49,7 @@
                         <td><input id="<%= category.key + '_subtotal' %>" name="<%= category.key + '_subtotal' %>" class="category-estimate-input" disabled></td>
                       </tr>
                       <tr>
-                        <td><label for="<%= category.key + '_total' %>" class="category-estimate-label">Total Estimate</label></td>
+                        <td><label for="<%= category.key + '_total' %>" class="category-estimate-label">Total Shipment Estimate</label></td>
                         <td><input id="<%= category.key + '_total' %>" name="<%= category.key + '_total' %>" class="category-estimate-input" disabled></td>
                       </tr>
                     </tbody>
