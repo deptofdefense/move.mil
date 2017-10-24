@@ -1,0 +1,934 @@
+[
+  {
+    "name": "Bedrooms",
+    "icon": "icons/bedroom.png",
+    "household_goods": [
+      {
+        "name": "Chaise Lounge",
+        "weight": 175
+      },
+      {
+        "name": "Dresser (Double)",
+        "weight": 350
+      },
+      {
+        "name": "Night Table",
+        "weight": 35
+      },
+      {
+        "name": "Valet",
+        "weight": 21
+      },
+      {
+        "name": "Bed (Trundle)",
+        "weight": 350
+      },
+      {
+        "name": "Bed (Bunk Set (2))",
+        "weight": 490
+      },
+      {
+        "name": "Wardrobe (Small)",
+        "weight": 140
+      },
+      {
+        "name": "Bed (Single)",
+        "weight": 280
+      },
+      {
+        "name": "Rug (Small/Pad)",
+        "weight": 21
+      },
+      {
+        "name": "Cedar Chest",
+        "weight": 105
+      },
+      {
+        "name": "Rug (Large/Pad)",
+        "weight": 70
+      },
+      {
+        "name": "Bed (Rollaway)",
+        "weight": 140
+      },
+      {
+        "name": "Bookshelves (Sect)",
+        "weight": 35
+      },
+      {
+        "name": "Bed (Hideaway)",
+        "weight": 280
+      },
+      {
+        "name": "Bed (Double/Full)",
+        "weight": 420
+      },
+      {
+        "name": "Bed (King)",
+        "weight": 490
+      },
+      {
+        "name": "Dresser (Bench)",
+        "weight": 21
+      },
+      {
+        "name": "Bureau (Dresser)",
+        "weight": 210
+      },
+      {
+        "name": "Drawers",
+        "weight": 175
+      },
+      {
+        "name": "Chest (Boudoir)",
+        "weight": 70
+      },
+      {
+        "name": "Water Bed",
+        "weight": 420
+      },
+      {
+        "name": "Daybed",
+        "weight": 210
+      },
+      {
+        "name": "Vanity Dresser",
+        "weight": 140
+      },
+      {
+        "name": "Bed (Queen)",
+        "weight": 450
+      },
+      {
+        "name": "Armoire",
+        "weight": 210
+      },
+      {
+        "name": "Desk (Small)",
+        "weight": 154
+      },
+      {
+        "name": "Wardrobe (Large)",
+        "weight": 280
+      },
+      {
+        "name": "Lamp (Floor/Pole)",
+        "weight": 21
+      }
+    ]
+  },
+  {
+    "name": "Miscellaneous",
+    "icon": "icons/misc.png",
+    "household_goods": [
+      {
+        "name": "Ping Pong Table",
+        "weight": 140
+      },
+      {
+        "name": "Dog House",
+        "weight": 70
+      },
+      {
+        "name": "Rowing Machine",
+        "weight": 70
+      },
+      {
+        "name": "Weight Bench",
+        "weight": 105
+      },
+      {
+        "name": "Vacuum Cleaner",
+        "weight": 35
+      },
+      {
+        "name": "Scooter",
+        "weight": 35
+      },
+      {
+        "name": "Work Mate",
+        "weight": 70
+      },
+      {
+        "name": "Waste Paper Basket",
+        "weight": 14
+      },
+      {
+        "name": "Cot (Folding)",
+        "weight": 70
+      },
+      {
+        "name": "Sewing Machine",
+        "weight": 70
+      },
+      {
+        "name": "Wardrobe Cartons/Clothes",
+        "weight": 45
+      },
+      {
+        "name": "Treadmill",
+        "weight": 50
+      },
+      {
+        "name": "Plant Stand",
+        "weight": 70
+      },
+      {
+        "name": "Floor Polisher",
+        "weight": 21
+      },
+      {
+        "name": "Tool Chest",
+        "weight": 70
+      },
+      {
+        "name": "Typewriter",
+        "weight": 56
+      },
+      {
+        "name": "Pool Table",
+        "weight": 280
+      },
+      {
+        "name": "Computer and Accessories",
+        "weight": 35
+      },
+      {
+        "name": "Metal Shelves/Section",
+        "weight": 35
+      },
+      {
+        "name": "Fan",
+        "weight": 35
+      },
+      {
+        "name": "Car Carrier",
+        "weight": 70
+      },
+      {
+        "name": "Table (Utility)",
+        "weight": 35
+      },
+      {
+        "name": "Bird Cage/Stand",
+        "weight": 35
+      },
+      {
+        "name": "Step Ladder",
+        "weight": 35
+      },
+      {
+        "name": "Exercise Bike",
+        "weight": 105
+      },
+      {
+        "name": "Tricycle",
+        "weight": 35
+      },
+      {
+        "name": "Chair (Folding)",
+        "weight": 7
+      },
+      {
+        "name": "Hall Tree",
+        "weight": 14
+      },
+      {
+        "name": "Motor (Electric)",
+        "weight": 7
+      },
+      {
+        "name": "Barbell Set (Small)",
+        "weight": 35
+      },
+      {
+        "name": "Clothes Hamper",
+        "weight": 35
+      },
+      {
+        "name": "Printer/Keyboard",
+        "weight": 5
+      },
+      {
+        "name": "Cabinet (File)",
+        "weight": 140
+      },
+      {
+        "name": "Tackle Box",
+        "weight": 7
+      },
+      {
+        "name": "Movie Screen",
+        "weight": 7
+      },
+      {
+        "name": "Suitcase",
+        "weight": 35
+      },
+      {
+        "name": "Golf Bag",
+        "weight": 14
+      },
+      {
+        "name": "Footlocker/Trunk",
+        "weight": 35
+      },
+      {
+        "name": "Wagon (Child's)",
+        "weight": 35
+      },
+      {
+        "name": "Basket (Clothes)",
+        "weight": 35
+      },
+      {
+        "name": "Bicycle",
+        "weight": 35
+      },
+      {
+        "name": "Bowling Ball/Bag",
+        "weight": 14
+      },
+      {
+        "name": "Sleeping Bag",
+        "weight": 7
+      },
+      {
+        "name": "Skis/Poles",
+        "weight": 21
+      },
+      {
+        "name": "Sled",
+        "weight": 14
+      },
+      {
+        "name": "Movie/Slide Projector",
+        "weight": 7
+      },
+      {
+        "name": "Card Table",
+        "weight": 7
+      },
+      {
+        "name": "Desk (Office)",
+        "weight": 210
+      },
+      {
+        "name": "Moped",
+        "weight": 105
+      },
+      {
+        "name": "Heater (Gas/Electric)",
+        "weight": 35
+      },
+      {
+        "name": "Work Bench",
+        "weight": 140
+      },
+      {
+        "name": "Ash/Trash Can",
+        "weight": 49
+      },
+      {
+        "name": "Power Tools",
+        "weight": 140
+      }
+    ]
+  },
+  {
+    "name": "Outdoor Furniture & Equipment",
+    "icon": "icons/patio.png",
+    "household_goods": [
+      {
+        "name": "Outdoor Swings",
+        "weight": 105
+      },
+      {
+        "name": "Leaf Sweeper",
+        "weight": 35
+      },
+      {
+        "name": "Lawn Mower (Power)",
+        "weight": 105
+      },
+      {
+        "name": "Lawn Mower (Hand)",
+        "weight": 35
+      },
+      {
+        "name": "Umbrella",
+        "weight": 35
+      },
+      {
+        "name": "Roller (Lawn)",
+        "weight": 105
+      },
+      {
+        "name": "Lawn Edger",
+        "weight": 35
+      },
+      {
+        "name": "Table (Picnic)",
+        "weight": 70
+      },
+      {
+        "name": "BBQ/Port Grill",
+        "weight": 70
+      },
+      {
+        "name": "Saw Horse",
+        "weight": 35
+      },
+      {
+        "name": "Spreader",
+        "weight": 7
+      },
+      {
+        "name": "Camp Stove",
+        "weight": 14
+      },
+      {
+        "name": "Snow Blower",
+        "weight": 105
+      },
+      {
+        "name": "Sand Box",
+        "weight": 70
+      },
+      {
+        "name": "Garden Hose/Tools",
+        "weight": 70
+      },
+      {
+        "name": "Bird Bath",
+        "weight": 35
+      },
+      {
+        "name": "Ladder (Extension)",
+        "weight": 70
+      },
+      {
+        "name": "Wheelbarrow",
+        "weight": 56
+      },
+      {
+        "name": "Lawn Mower (Riding)",
+        "weight": 245
+      },
+      {
+        "name": "Picnic Bench",
+        "weight": 35
+      },
+      {
+        "name": "Glider/Settee",
+        "weight": 140
+      },
+      {
+        "name": "Outdoor Gym",
+        "weight": 140
+      },
+      {
+        "name": "Chair (Outdoor)",
+        "weight": 70
+      },
+      {
+        "name": "TV Antenna",
+        "weight": 35
+      },
+      {
+        "name": "Hand truck/Dolly",
+        "weight": 14
+      },
+      {
+        "name": "Clothes Dry Rack",
+        "weight": 35
+      },
+      {
+        "name": "Settee",
+        "weight": 140
+      },
+      {
+        "name": "Rocker (Swing)",
+        "weight": 105
+      },
+      {
+        "name": "Outdoor Slide",
+        "weight": 70
+      },
+      {
+        "name": "Child's Pool",
+        "weight": 84
+      },
+      {
+        "name": "Picnic Table",
+        "weight": 140
+      }
+    ]
+  },
+  {
+    "name": "Nursery",
+    "icon": "icons/nursery.png",
+    "household_goods": [
+      {
+        "name": "Crib (Baby)",
+        "weight": 70
+      },
+      {
+        "name": "Bassinet",
+        "weight": 35
+      },
+      {
+        "name": "Doll House (Small)",
+        "weight": 14
+      },
+      {
+        "name": "Play House",
+        "weight": 70
+      },
+      {
+        "name": "Car Seat",
+        "weight": 14
+      },
+      {
+        "name": "Rug (Small/Pad)",
+        "weight": 21
+      },
+      {
+        "name": "Bed (Youth)",
+        "weight": 70
+      },
+      {
+        "name": "Rug (Large/Pad)",
+        "weight": 70
+      },
+      {
+        "name": "Chest",
+        "weight": 91
+      },
+      {
+        "name": "Baby Carriage",
+        "weight": 70
+      },
+      {
+        "name": "Chest (Toy)",
+        "weight": 35
+      },
+      {
+        "name": "Basket (Plastic)",
+        "weight": 21
+      },
+      {
+        "name": "Chair (Child's)",
+        "weight": 21
+      },
+      {
+        "name": "Table (Child's)",
+        "weight": 35
+      },
+      {
+        "name": "Play Pen",
+        "weight": 70
+      },
+      {
+        "name": "Stroller",
+        "weight": 35
+      },
+      {
+        "name": "Changing Table",
+        "weight": 70
+      }
+    ]
+  },
+  {
+    "name": "Dining Room",
+    "icon": "icons/dining_room.png",
+    "household_goods": [
+      {
+        "name": "Cabinet (Corner)",
+        "weight": 140
+      },
+      {
+        "name": "Table (Dining)",
+        "weight": 210
+      },
+      {
+        "name": "Rug (Small/Pad)",
+        "weight": 21
+      },
+      {
+        "name": "Buffet",
+        "weight": 210
+      },
+      {
+        "name": "Bench",
+        "weight": 70
+      },
+      {
+        "name": "Rug (Large/Pad)",
+        "weight": 70
+      },
+      {
+        "name": "Cabinet (China)",
+        "weight": 175
+      },
+      {
+        "name": "Chair (Dining)",
+        "weight": 35
+      },
+      {
+        "name": "Tea Cart",
+        "weight": 70
+      },
+      {
+        "name": "Server",
+        "weight": 105
+      },
+      {
+        "name": "Cabinet (Curio)",
+        "weight": 105
+      },
+      {
+        "name": "Hutch (Bottom)",
+        "weight": 140
+      },
+      {
+        "name": "Hutch (Top)",
+        "weight": 210
+      }
+    ]
+  },
+  {
+    "name": "Living/Family Rooms",
+    "icon": "icons/living_room.png",
+    "household_goods": [
+      {
+        "name": "Chair (Occas)",
+        "weight": 105
+      },
+      {
+        "name": "Sofa (2 Cushion)",
+        "weight": 245
+      },
+      {
+        "name": "TV Table Model",
+        "weight": 70
+      },
+      {
+        "name": "Chair (Straight)",
+        "weight": 35
+      },
+      {
+        "name": "Clock (Grandfather)",
+        "weight": 140
+      },
+      {
+        "name": "Video Game Set",
+        "weight": 35
+      },
+      {
+        "name": "Wine Rack",
+        "weight": 35
+      },
+      {
+        "name": "TV Combination",
+        "weight": 175
+      },
+      {
+        "name": "TV Stand",
+        "weight": 35
+      },
+      {
+        "name": "Piano (Spinet )",
+        "weight": 420
+      },
+      {
+        "name": "Mirror Cartons/Pictures",
+        "weight": 25
+      },
+      {
+        "name": "Book Case (Small)",
+        "weight": 70
+      },
+      {
+        "name": "Chair (Rocker)",
+        "weight": 84
+      },
+      {
+        "name": "Sofa (Section Per)",
+        "weight": 210
+      },
+      {
+        "name": "TV Console",
+        "weight": 105
+      },
+      {
+        "name": "Organ (Small)",
+        "weight": 140
+      },
+      {
+        "name": "Record Player",
+        "weight": 14
+      },
+      {
+        "name": "Speaker (Stereo)",
+        "weight": 35
+      },
+      {
+        "name": "CD Player",
+        "weight": 35
+      },
+      {
+        "name": "Rug (Small/Pad)",
+        "weight": 21
+      },
+      {
+        "name": "Magazine Rack",
+        "weight": 14
+      },
+      {
+        "name": "Rug (Large/Pad)",
+        "weight": 70
+      },
+      {
+        "name": "Sofa (4 Cushion)",
+        "weight": 420
+      },
+      {
+        "name": "Organ (Medium)",
+        "weight": 420
+      },
+      {
+        "name": "Fish Tank",
+        "weight": 105
+      },
+      {
+        "name": "Studio (Hidebed)",
+        "weight": 350
+      },
+      {
+        "name": "Desk (Small)",
+        "weight": 154
+      },
+      {
+        "name": "Piano (Baby Grand)",
+        "weight": 490
+      },
+      {
+        "name": "Footstool",
+        "weight": 14
+      },
+      {
+        "name": "Radio (Table)",
+        "weight": 14
+      },
+      {
+        "name": "VCR",
+        "weight": 35
+      },
+      {
+        "name": "Telephone Stand",
+        "weight": 35
+      },
+      {
+        "name": "Fireplace Equipment",
+        "weight": 35
+      },
+      {
+        "name": "Table (Coffee/End)",
+        "weight": 35
+      },
+      {
+        "name": "Desk (Secretary)",
+        "weight": 245
+      },
+      {
+        "name": "Bench (Piano)",
+        "weight": 35
+      },
+      {
+        "name": "Sofa (3 Cushion)",
+        "weight": 315
+      },
+      {
+        "name": "Chair (Arm)",
+        "weight": 70
+      },
+      {
+        "name": "Bookshelves (Sect)",
+        "weight": 35
+      },
+      {
+        "name": "Chair (Overstuffed)",
+        "weight": 175
+      },
+      {
+        "name": "Bar Portable",
+        "weight": 105
+      },
+      {
+        "name": "TV Tray Set",
+        "weight": 21
+      },
+      {
+        "name": "Piano (Parlor Grand)",
+        "weight": 560
+      },
+      {
+        "name": "Books",
+        "weight": 45
+      },
+      {
+        "name": "Home Computer",
+        "weight": 30
+      },
+      {
+        "name": "Table (Dropleaf)",
+        "weight": 84
+      },
+      {
+        "name": "Book Case/Wall Unit",
+        "weight": 140
+      },
+      {
+        "name": "TV Big Screen",
+        "weight": 100
+      },
+      {
+        "name": "Lamp (Floor/Pole)",
+        "weight": 21
+      }
+    ]
+  },
+  {
+    "name": "Appliances",
+    "icon": "icons/appliances.png",
+    "household_goods": [
+      {
+        "name": "Freezer (16 CU or More)",
+        "weight": 420
+      },
+      {
+        "name": "Dishwasher",
+        "weight": 140
+      },
+      {
+        "name": "AC (Window)",
+        "weight": 140
+      },
+      {
+        "name": "Washing Machine",
+        "weight": 175
+      },
+      {
+        "name": "Vacuum Cleaner",
+        "weight": 35
+      },
+      {
+        "name": "Humidifier",
+        "weight": 35
+      },
+      {
+        "name": "Microwave",
+        "weight": 70
+      },
+      {
+        "name": "Range",
+        "weight": 210
+      },
+      {
+        "name": "Dryer",
+        "weight": 175
+      },
+      {
+        "name": "Freezer (15 CU or Less)",
+        "weight": 315
+      },
+      {
+        "name": "Ironer/Mangle",
+        "weight": 84
+      },
+      {
+        "name": "Trash Compactor",
+        "weight": 140
+      },
+      {
+        "name": "Mini-Refrigerator",
+        "weight": 70
+      },
+      {
+        "name": "Dehumidifier",
+        "weight": 70
+      },
+      {
+        "name": "Refrigerator (10 CU or Less)",
+        "weight": 315
+      },
+      {
+        "name": "Refrigerator (11 CU or More)",
+        "weight": 420
+      }
+    ]
+  },
+  {
+    "name": "Kitchen",
+    "icon": "icons/kitchen.png",
+    "household_goods": [
+      {
+        "name": "Chair (High)",
+        "weight": 35
+      },
+      {
+        "name": "Metal Cart",
+        "weight": 35
+      },
+      {
+        "name": "Dish Set",
+        "weight": 70
+      },
+      {
+        "name": "Dish Pack",
+        "weight": 70
+      },
+      {
+        "name": "Roaster",
+        "weight": 35
+      },
+      {
+        "name": "Kitchen Cabinet",
+        "weight": 210
+      },
+      {
+        "name": "Stool",
+        "weight": 21
+      },
+      {
+        "name": "Bulletin Board",
+        "weight": 7
+      },
+      {
+        "name": "Breakfast Set (Chairs)",
+        "weight": 35
+      },
+      {
+        "name": "Serving Cart",
+        "weight": 105
+      },
+      {
+        "name": "Utility Cabinet",
+        "weight": 70
+      },
+      {
+        "name": "Ironing Board",
+        "weight": 21
+      },
+      {
+        "name": "Microwave Cart",
+        "weight": 70
+      },
+      {
+        "name": "Breakfast Set (Table)",
+        "weight": 70
+      }
+    ]
+  }
+]

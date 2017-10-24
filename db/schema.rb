@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171011211344) do
+ActiveRecord::Schema.define(version: 20171020203400) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,23 @@ ActiveRecord::Schema.define(version: 20171011211344) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "category"
+  end
+
+  create_table "household_good_categories", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "icon", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_household_good_categories_on_name", unique: true
+  end
+
+  create_table "household_goods", force: :cascade do |t|
+    t.string "name"
+    t.integer "weight"
+    t.bigint "household_good_category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["household_good_category_id"], name: "index_household_goods_on_household_good_category_id"
   end
 
   create_table "installations", force: :cascade do |t|
@@ -137,5 +154,6 @@ ActiveRecord::Schema.define(version: 20171011211344) do
     t.float "longitude", null: false
   end
 
+  add_foreign_key "household_goods", "household_good_categories"
   add_foreign_key "tutorial_steps", "tutorials"
 end
