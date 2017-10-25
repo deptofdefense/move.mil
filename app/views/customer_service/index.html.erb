@@ -1,189 +1,270 @@
 <%- @page_title = 'Customer Service' -%>
 
-<div class="usa-grid usa-section usa-layout-docs">
-  <%= render 'shared/sidenav' %>
+<div class="usa-section main-section">
+  <h1><%= @page_title %></h1>
 
-  <div class="usa-width-three-fourths usa-layout-docs-main_content">
-    <h1><%= @page_title %></h1>
-
-    <div class="usa-grid-full customer-service-section" id="local-ppo">
-      <div class="usa-width-one-fourth">
-        <h4>
-          <%= image_tag 'pppo.svg', width: '42px', alt: 'P P P O', role: 'presentation' %>
-          <span>Local Personal Property Office</span>
-        </h4>
-        <p class="postit">Best Primary POC</p>
-      </div>
-      <div class="usa-width-three-fourths">
-        <p>
-          Hours and contact info vary.<br>
-          <%= link_to 'Find your local personal property office.', offices_path %>
-        </p>
-        Contact for:
-        <ul class="two-column-list">
-          <li>General Questions</li>
-          <li>Scheduling</li>
-          <li>Storage Needs</li>
-          <li>Special Circumstances</li>
-          <li>Entitlements Questions</li>
-          <li>Transporter / Moving Day Issues</li>
-        </ul>
-      </div>
+  <div class="usa-grid-full customer-service-section" id="local-ppo">
+    <div class="usa-width-one-fourth">
+      <h4>
+        <%= image_tag 'pppo.svg', width: '42px', alt: 'P P P O', role: 'presentation' %>
+        <span>Local Personal Property Office</span>
+      </h4>
+      <p class="postit">Best Primary POC</p>
     </div>
-
-    <div class="usa-grid-full customer-service-section" id="tech-help">
-      <div class="usa-width-one-fourth">
-        <h4>
-          <%= image_tag 'tech-help.svg', width: '42px', alt: 'Technical Help', role: 'presentation' %>
-          <span>Technical Help Desk</span>
-        </h4>
-        <p>
-          Hours:<br>
-          Open 24/7
-        </p>
-      </div>
-      <div class="usa-width-three-fourths">
-        <table>
-          <tbody>
-            <tr>
-              <th scope="row">Phone</th>
-              <td>
-                Toll-Free <%= link_to '+1 (800) 462-2176', 'tel:+18004622176' %><br>
-                Commercial <%= link_to '+1 (618) 589-9445', 'tel:+16185899445' %>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">Email</th>
-              <td><%= mail_to 'usarmy.scott.sddc.mbx.g6-SRC-DPS-HD@mail.mil' %></td>
-            </tr>
-            <tr>
-              <th scope="row">Online Ticket</th>
-              <td><%= link_to "https://src.service-now.com/src", "https://src.service-now.com/src", class: "usa-external_link" %></td>
-            </tr>
-          </tbody>
-        </table>
-        Contact for:
-        <ul>
-          <li>Website Navigation Help</li>
-          <li>Account Issues</li>
-          <li>Technical Help</li>
-        </ul>
-      </div>
+    <div class="usa-width-three-fourths">
+      <p>
+        Hours and contact info vary.<br>
+        <%= link_to 'Find your local personal property office.', offices_path %>
+      </p>
+      Contact for:
+      <ul class="two-column-list">
+        <li>General Questions</li>
+        <li>Scheduling</li>
+        <li>Storage Needs</li>
+        <li>Special Circumstances</li>
+        <li>Entitlements Questions</li>
+        <li>Transporter / Moving Day Issues</li>
+      </ul>
     </div>
+  </div>
 
-    <div class="usa-grid-full customer-service-section" id="svc-help">
-      <div class="usa-width-one-fourth">
-        <h4>
-          <%= image_tag 'svc-help.svg', width: '42px', alt: 'Service Branch Help', role: 'presentation' %>
-          <span>Service Branch Help Desks</span>
-        </h4>
-      </div>
-      <div class="usa-width-three-fourths">
-        <%- @contacts.each do |contact| -%>
-          <% if contact.custsvc_org %>
-            <h5><%= contact.custsvc_org %></h5>
+  <div class="usa-grid-full customer-service-section" id="tech-help">
+    <div class="usa-width-one-fourth">
+      <h4>
+        <%= image_tag 'tech-help.svg', width: '42px', alt: 'Technical Help', role: 'presentation' %>
+        <span>Technical Help Desk</span>
+      </h4>
+      <p>
+        Hours:<br>
+        Open 24/7
+      </p>
+    </div>
+    <div class="usa-width-three-fourths">
+      <table>
+        <tbody>
+          <tr>
+            <th scope="row">Phone</th>
+            <td>
+              Toll-Free <%= link_to '+1 (800) 462-2176', 'tel:+18004622176' %><br>
+              Commercial <%= link_to '+1 (618) 589-9445', 'tel:+16185899445' %>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Email</th>
+            <td><%= mail_to 'usarmy.scott.sddc.mbx.g6-SRC-DPS-HD@mail.mil' %></td>
+          </tr>
+          <tr>
+            <th scope="row">Online Ticket</th>
+            <td><%= link_to "https://src.service-now.com/src", "https://src.service-now.com/src", class: "usa-external_link" %></td>
+          </tr>
+        </tbody>
+      </table>
+      Contact for:
+      <ul>
+        <li>Website Navigation Help</li>
+        <li>Account Issues</li>
+        <li>Technical Help</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="usa-grid-full customer-service-section" id="svc-help">
+    <div class="usa-width-one-fourth">
+      <h4>
+        <%= image_tag 'svc-help.svg', width: '42px', alt: 'Service Branch Help', role: 'presentation' %>
+        <span>Service Branch Help Desks</span>
+      </h4>
+    </div>
+    <div class="usa-width-three-fourths">
+      <%- @contacts.each do |contact| -%>
+        <% if contact.custsvc_org %>
+          <h5><%= contact.custsvc_org %></h5>
+          <table>
+            <tbody>
+              <% if contact.custsvc_dsn %>
+                <tr>
+                  <th scope="row">Phone</th>
+                  <td>DSN <%= contact.custsvc_dsn %></td>
+                </tr>
+              <% end %>
+              <% if contact.custsvc_tel_comm %>
+                <tr>
+                  <% if contact.custsvc_dsn %>
+                    <td></td>
+                  <% else %>
+                    <th scope="row">Phone</th>
+                  <% end %>
+                  <td>Commercial <%= link_to contact.custsvc_tel_comm, "tel:#{contact.custsvc_tel_comm}" %></td>
+                </tr>
+              <% end %>
+              <% if contact.custsvc_tel_tollfree %>
+                <tr>
+                  <% if contact.custsvc_dsn || contact.custsvc_tel_comm %>
+                    <td></td>
+                  <% else %>
+                    <th scope="row">Phone</th>
+                  <% end %>
+                  <td>Toll-Free <%= link_to contact.custsvc_tel_tollfree, "tel:#{contact.custsvc_tel_tollfree}" %></td>
+                </tr>
+              <% end %>
+              <% if contact.custsvc_email %>
+                <tr>
+                  <th scope="row">Email</th>
+                  <td><%= link_to contact.custsvc_email.sub(',', '<br').html_safe, "mailto:#{contact.custsvc_email}" %></td>
+                </tr>
+              <% end %>
+              <% if contact.custsvc_hours %>
+                <tr>
+                  <th scope="row">Hours</th>
+                  <td><%= contact.custsvc_hours %></td>
+                </tr>
+              <% end %>
+              <% if contact.custsvc_url %>
+                <tr>
+                  <th scope="row">Online</th>
+                  <td><%= link_to contact.custsvc_url, contact.custsvc_url, class: "usa-external_link" %></td>
+                </tr>
+              <% end %>
+              <% if contact.custsvc_facebook_url %>
+                <tr>
+                  <td></td>
+                  <td><%= link_to image_tag("find-us-on-facebook-512.png", alt: "Find Us On Facebook", width: "98"), contact.custsvc_facebook_url %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        <% end %>
+      <%- end -%>
+
+      Contact for:
+      <ul class="two-column-list">
+        <li>Entitlements Questions</li>
+        <li>Special Circumstances</li>
+        <li>Exceptions of Policy</li>
+        <li>Reimbursements</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="usa-grid-full customer-service-section" id="accounting">
+    <div class="usa-width-one-fourth">
+      <h4>
+        <%= image_tag 'accounting.svg', width: '42px', alt: 'Accounting', role: 'presentation' %>
+        <span>Accounting &amp; Finance Office</span>
+      </h4>
+    </div>
+    <div class="usa-width-three-fourths">
+      <p>
+        Hours and contact info vary.<br>
+        Find your local finance office on <%= link_to 'MilitaryInstallations.dod.mil', 'http://militaryinstallations.dod.mil', class: 'usa-external_link' %>.
+      </p>
+      Contact for:
+      <ul>
+        <li>Reimbursement</li>
+        <li>Personally Procured Move (PPM) Payment</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="usa-grid-full customer-service-section" id="claims">
+    <div class="usa-width-one-fourth">
+      <h4>
+        <%= image_tag 'claims.svg', width: '42px', alt: 'Claims', role: 'presentation' %>
+        <span>Claims</span>
+      </h4>
+    </div>
+    <div class="usa-width-three-fourths">
+      <p>
+        If something becomes lost or damaged during your move, you can work with your transporter directly (through DPS - the online moving hub) or with your service’s claims office.
+      </p>
+      <p>
+        Your service’s claims office can help you negotiate a higher claims price, or provide partial compensation after the 9-month filing window with your transporter expires.
+      </p>
+      <%- @contacts.each do |contact| -%>
+        <div class="usa-grid-full">
+          <div class="usa-width-one-fourth">
+            <h5><%= contact.branch %></h5>
+          </div>
+          <div class="usa-width-three-fourths">
             <table>
               <tbody>
-                <% if contact.custsvc_dsn %>
+                <% if contact.claims_dsn %>
                   <tr>
-                    <th scope="row">Phone</th>
-                    <td>DSN <%= contact.custsvc_dsn %></td>
+                    <th scope="row">DSN:</th>
+                    <td><%= contact.claims_dsn %></td>
                   </tr>
                 <% end %>
-                <% if contact.custsvc_tel_comm %>
+                <% if contact.claims_tel_comm %>
                   <tr>
-                    <% if contact.custsvc_dsn %>
-                      <td></td>
-                    <% else %>
-                      <th scope="row">Phone</th>
-                    <% end %>
-                    <td>Commercial <%= link_to contact.custsvc_tel_comm, "tel:#{contact.custsvc_tel_comm}" %></td>
+                    <th scope="row">Comm:</th>
+                    <td><%= link_to contact.claims_tel_comm, "tel:#{contact.claims_tel_comm}" %></td>
                   </tr>
                 <% end %>
-                <% if contact.custsvc_tel_tollfree %>
+                <% if contact.claims_tel_tollfree %>
                   <tr>
-                    <% if contact.custsvc_dsn || contact.custsvc_tel_comm %>
-                      <td></td>
-                    <% else %>
-                      <th scope="row">Phone</th>
-                    <% end %>
-                    <td>Toll-Free <%= link_to contact.custsvc_tel_tollfree, "tel:#{contact.custsvc_tel_tollfree}" %></td>
+                    <th scope="row">Toll-Free:</th>
+                    <td><%= link_to contact.claims_tel_tollfree, "tel:#{contact.claims_tel_tollfree}" %></td>
                   </tr>
                 <% end %>
-                <% if contact.custsvc_email %>
+                <% if contact.claims_email %>
                   <tr>
-                    <th scope="row">Email</th>
-                    <td><%= link_to contact.custsvc_email.sub(',', '<br').html_safe, "mailto:#{contact.custsvc_email}" %></td>
+                    <th scope="row">Email:</th>
+                    <td><%= link_to contact.claims_email.sub(',', '<br>').html_safe, "mailto:#{contact.claims_email}" %></td>
                   </tr>
                 <% end %>
-                <% if contact.custsvc_hours %>
+                <% if contact.claims_fax_dsn %>
                   <tr>
-                    <th scope="row">Hours</th>
-                    <td><%= contact.custsvc_hours %></td>
+                    <th scope="row">DSN Fax:</th>
+                    <td><%= contact.claims_fax_dsn %></td>
                   </tr>
                 <% end %>
-                <% if contact.custsvc_url %>
+                <% if contact.claims_fax_comm %>
                   <tr>
-                    <th scope="row">Online</th>
-                    <td><%= link_to contact.custsvc_url, contact.custsvc_url, class: "usa-external_link" %></td>
+                    <th scope="row">Comm Fax:</th>
+                    <td><%= contact.claims_fax_comm %></td>
                   </tr>
                 <% end %>
-                <% if contact.custsvc_facebook_url %>
+                <% if contact.claims_fax_tollfree %>
+                  <tr>
+                    <th scope="row">Toll-Free Fax:</th>
+                    <td><%= contact.claims_fax_tollfree %></td>
+                  </tr>
+                <% end %>
+                <% if contact.claims_post %>
+                  <tr>
+                    <th scope="row">Address:</th>
+                    <td><%= simple_format(contact.claims_post) %></td>
+                  </tr>
+                <% else %>
                   <tr>
                     <td></td>
-                    <td><%= link_to image_tag("find-us-on-facebook-512.png", alt: "Find Us On Facebook", width: "98"), contact.custsvc_facebook_url %></td>
+                    <td><p></p></td>
                   </tr>
                 <% end %>
               </tbody>
             </table>
-          <% end %>
-        <%- end -%>
+          </div>
+        </div>
+      <%- end -%>
 
-        Contact for:
-        <ul class="two-column-list">
-          <li>Entitlements Questions</li>
-          <li>Special Circumstances</li>
-          <li>Exceptions of Policy</li>
-          <li>Reimbursements</li>
-        </ul>
-      </div>
+      Contact for:
+      <ul>
+      	<li>Lost or Damaged Goods</li>
+        <li>Claims Negotiations with Transporter</li>
+      </ul>
     </div>
+  </div>
 
-    <div class="usa-grid-full customer-service-section" id="accounting">
-      <div class="usa-width-one-fourth">
-        <h4>
-          <%= image_tag 'accounting.svg', width: '42px', alt: 'Accounting', role: 'presentation' %>
-          <span>Accounting &amp; Finance Office</span>
-        </h4>
-      </div>
-      <div class="usa-width-three-fourths">
-        <p>
-          Hours and contact info vary.<br>
-          Find your local finance office on <%= link_to 'MilitaryInstallations.dod.mil', 'http://militaryinstallations.dod.mil', class: 'usa-external_link' %>.
-        </p>
-        Contact for:
-        <ul>
-          <li>Reimbursement</li>
-          <li>Personally Procured Move (PPM) Payment</li>
-        </ul>
-      </div>
+  <div class="usa-grid-full customer-service-section" id="retirement-separation">
+    <div class="usa-width-one-fourth">
+      <h4>
+        <%= image_tag 'retirement-separation.svg', width: '42px', alt: 'Retirement and Separation', role: 'presentation' %>
+        <span>Retirement / Separation Extensions</span>
+      </h4>
     </div>
-
-    <div class="usa-grid-full customer-service-section" id="claims">
-      <div class="usa-width-one-fourth">
-        <h4>
-          <%= image_tag 'claims.svg', width: '42px', alt: 'Claims', role: 'presentation' %>
-          <span>Claims</span>
-        </h4>
-      </div>
-      <div class="usa-width-three-fourths">
-        <p>
-          If something becomes lost or damaged during your move, you can work with your transporter directly (through DPS - the online moving hub) or with your service’s claims office.
-        </p>
-        <p>
-          Your service’s claims office can help you negotiate a higher claims price, or provide partial compensation after the 9-month filing window with your transporter expires.
-        </p>
-        <%- @contacts.each do |contact| -%>
+    <div class="usa-width-three-fourths">
+      <%- @contacts.each do |contact| -%>
+        <% if contact.retiree_contact_info? %>
           <div class="usa-grid-full">
             <div class="usa-width-one-fourth">
               <h5><%= contact.branch %></h5>
@@ -191,52 +272,52 @@
             <div class="usa-width-three-fourths">
               <table>
                 <tbody>
-                  <% if contact.claims_dsn %>
+                  <% if contact.retiree_dsn %>
                     <tr>
                       <th scope="row">DSN:</th>
-                      <td><%= contact.claims_dsn %></td>
+                      <td><%= contact.retiree_dsn %></td>
                     </tr>
                   <% end %>
-                  <% if contact.claims_tel_comm %>
+                  <% if contact.retiree_tel_comm %>
                     <tr>
                       <th scope="row">Comm:</th>
-                      <td><%= link_to contact.claims_tel_comm, "tel:#{contact.claims_tel_comm}" %></td>
+                      <td><%= link_to contact.retiree_tel_comm, "tel:#{contact.retiree_tel_comm}" %></td>
                     </tr>
                   <% end %>
-                  <% if contact.claims_tel_tollfree %>
+                  <% if contact.retiree_tel_tollfree %>
                     <tr>
                       <th scope="row">Toll-Free:</th>
-                      <td><%= link_to contact.claims_tel_tollfree, "tel:#{contact.claims_tel_tollfree}" %></td>
+                      <td><%= link_to contact.retiree_tel_tollfree, "tel:#{contact.retiree_tel_tollfree}" %></td>
                     </tr>
                   <% end %>
-                  <% if contact.claims_email %>
+                  <% if contact.retiree_email %>
                     <tr>
                       <th scope="row">Email:</th>
-                      <td><%= link_to contact.claims_email.sub(',', '<br>').html_safe, "mailto:#{contact.claims_email}" %></td>
+                      <td><%= link_to contact.retiree_email.sub(',', '<br>').html_safe, "mailto:#{contact.retiree_email}" %></td>
                     </tr>
                   <% end %>
-                  <% if contact.claims_fax_dsn %>
+                  <% if contact.retiree_fax_dsn %>
                     <tr>
                       <th scope="row">DSN Fax:</th>
-                      <td><%= contact.claims_fax_dsn %></td>
+                      <td><%= contact.retiree_fax_dsn %></td>
                     </tr>
                   <% end %>
-                  <% if contact.claims_fax_comm %>
+                  <% if contact.retiree_fax_comm %>
                     <tr>
                       <th scope="row">Comm Fax:</th>
-                      <td><%= contact.claims_fax_comm %></td>
+                      <td><%= contact.retiree_fax_comm %></td>
                     </tr>
                   <% end %>
-                  <% if contact.claims_fax_tollfree %>
+                  <% if contact.retiree_fax_tollfree %>
                     <tr>
                       <th scope="row">Toll-Free Fax:</th>
-                      <td><%= contact.claims_fax_tollfree %></td>
+                      <td><%= contact.retiree_fax_tollfree %></td>
                     </tr>
                   <% end %>
-                  <% if contact.claims_post %>
+                  <% if contact.retiree_post %>
                     <tr>
                       <th scope="row">Address:</th>
-                      <td><%= simple_format(contact.claims_post) %></td>
+                      <td><%= simple_format(contact.retiree_post) %></td>
                     </tr>
                   <% else %>
                     <tr>
@@ -248,100 +329,15 @@
               </table>
             </div>
           </div>
-        <%- end -%>
+        <% end %>
+      <%- end -%>
 
-        Contact for:
-        <ul>
-        	<li>Lost or Damaged Goods</li>
-          <li>Claims Negotiations with Transporter</li>
-        </ul>
-      </div>
+      Contact for:
+      <ul>
+        <li>Retiree/Separatee Questions</li>
+        <li>Retiree/Separatee Move Extentions</li>
+      </ul>
     </div>
-
-    <div class="usa-grid-full customer-service-section" id="retirement-separation">
-      <div class="usa-width-one-fourth">
-        <h4>
-          <%= image_tag 'retirement-separation.svg', width: '42px', alt: 'Retirement and Separation', role: 'presentation' %>
-          <span>Retirement / Separation Extensions</span>
-        </h4>
-      </div>
-      <div class="usa-width-three-fourths">
-        <%- @contacts.each do |contact| -%>
-          <% if contact.retiree_contact_info? %>
-            <div class="usa-grid-full">
-              <div class="usa-width-one-fourth">
-                <h5><%= contact.branch %></h5>
-              </div>
-              <div class="usa-width-three-fourths">
-                <table>
-                  <tbody>
-                    <% if contact.retiree_dsn %>
-                      <tr>
-                        <th scope="row">DSN:</th>
-                        <td><%= contact.retiree_dsn %></td>
-                      </tr>
-                    <% end %>
-                    <% if contact.retiree_tel_comm %>
-                      <tr>
-                        <th scope="row">Comm:</th>
-                        <td><%= link_to contact.retiree_tel_comm, "tel:#{contact.retiree_tel_comm}" %></td>
-                      </tr>
-                    <% end %>
-                    <% if contact.retiree_tel_tollfree %>
-                      <tr>
-                        <th scope="row">Toll-Free:</th>
-                        <td><%= link_to contact.retiree_tel_tollfree, "tel:#{contact.retiree_tel_tollfree}" %></td>
-                      </tr>
-                    <% end %>
-                    <% if contact.retiree_email %>
-                      <tr>
-                        <th scope="row">Email:</th>
-                        <td><%= link_to contact.retiree_email.sub(',', '<br>').html_safe, "mailto:#{contact.retiree_email}" %></td>
-                      </tr>
-                    <% end %>
-                    <% if contact.retiree_fax_dsn %>
-                      <tr>
-                        <th scope="row">DSN Fax:</th>
-                        <td><%= contact.retiree_fax_dsn %></td>
-                      </tr>
-                    <% end %>
-                    <% if contact.retiree_fax_comm %>
-                      <tr>
-                        <th scope="row">Comm Fax:</th>
-                        <td><%= contact.retiree_fax_comm %></td>
-                      </tr>
-                    <% end %>
-                    <% if contact.retiree_fax_tollfree %>
-                      <tr>
-                        <th scope="row">Toll-Free Fax:</th>
-                        <td><%= contact.retiree_fax_tollfree %></td>
-                      </tr>
-                    <% end %>
-                    <% if contact.retiree_post %>
-                      <tr>
-                        <th scope="row">Address:</th>
-                        <td><%= simple_format(contact.retiree_post) %></td>
-                      </tr>
-                    <% else %>
-                      <tr>
-                        <td></td>
-                        <td><p></p></td>
-                      </tr>
-                    <% end %>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          <% end %>
-        <%- end -%>
-
-        Contact for:
-        <ul>
-          <li>Retiree/Separatee Questions</li>
-          <li>Retiree/Separatee Move Extentions</li>
-        </ul>
-      </div>
-    </div>
-
   </div>
+
 </div>

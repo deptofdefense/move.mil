@@ -1,34 +1,30 @@
 <%- @page_title = 'Frequently Asked Questions' -%>
 
-<div class="usa-grid usa-section usa-layout-docs">
-  <%= render 'shared/sidenav' %>
+<div class="usa-section main-section">
+  <h1><%= @page_title %></h1>
 
-  <div class="usa-width-three-fourths usa-layout-docs-main_content">
-    <h1><%= @page_title %></h1>
+  <p>Moves are complex elephants, so let’s break this process down into something digestible. When in doubt, give <%= link_to 'your local personal property office', offices_path %> a call.  They are a wealth of knowledge and have the most up-to-date information to help you!</p>
 
-    <p>Moves are complex elephants, so let’s break this process down into something digestible. When in doubt, give <%= link_to 'your local personal property office', offices_path %> a call.  They are a wealth of knowledge and have the most up-to-date information to help you!</p>
-
-    <%- if @faq_sections -%>
-      <ul>
-        <%- @faq_sections.each do |faq_section| -%>
-          <li><%= link_to faq_section[:title], "##{faq_section[:slug]}" %></li>
-        <%- end -%>
-      </ul>
-
+  <%- if @faq_sections -%>
+    <ul>
       <%- @faq_sections.each do |faq_section| -%>
-        <h2 id="<%= faq_section[:slug] %>"><%= faq_section[:title] %></h2>
+        <li><%= link_to faq_section[:title], "##{faq_section[:slug]}" %></li>
+      <%- end -%>
+    </ul>
 
-        <%- if faq_section[:faqs] -%>
-          <ul class="usa-accordion-bordered">
-            <%- faq_section[:faqs].each do |faq| -%>
-              <li class="faq-accordion">
-                <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
-                <div class="usa-accordion-content" id="<%= faq.id %>"><%= raw faq.answer %></div>
-              </li>
-            <%- end -%>
-          </ul>
-        <%- end -%>
+    <%- @faq_sections.each do |faq_section| -%>
+      <h2 id="<%= faq_section[:slug] %>"><%= faq_section[:title] %></h2>
+
+      <%- if faq_section[:faqs] -%>
+        <ul class="usa-accordion-bordered">
+          <%- faq_section[:faqs].each do |faq| -%>
+            <li class="faq-accordion">
+              <button class="usa-accordion-button faq-accordion-button" aria-controls="<%= faq.id %>"><%= faq.question %></button>
+              <div class="usa-accordion-content" id="<%= faq.id %>"><%= raw faq.answer %></div>
+            </li>
+          <%- end -%>
+        </ul>
       <%- end -%>
     <%- end -%>
-  </div>
+  <%- end -%>
 </div>

@@ -1,58 +1,54 @@
 <%- @page_title = 'Entitlements' -%>
 
-<div class="usa-grid usa-section usa-layout-docs">
-  <%= render 'shared/sidenav' %>
+<div class="usa-section main-section">
+  <h1><%= @page_title %></h1>
 
-  <div class="usa-width-three-fourths usa-layout-docs-main_content">
-    <h1><%= @page_title %></h1>
+  <p>Below you will find basic information and instructions regarding what you can ship.</p>
 
-    <p>Below you will find basic information and instructions regarding what you can ship.</p>
+  <h2>What am I allowed to bring?</h2>
 
-    <h2>What am I allowed to bring?</h2>
+  <p>Moving allowances, also known as entitlements, with the U.S. Military are largely determined based on the service member’s or civilian’s rank and dependency status. Additionally, special circumstances like an <%= abbr_tag('oconus') %> move (moving overseas), retirement move, or separation move may have extra entitlements and/or limitations than the standard Permanent Change of Station (PCS) move within the continental United States. The Joint Travel Regulation (JTR) is the authority of entitlements for all service members, although each branch of the services may also have supplemental regulations to the <%= abbr_tag('jtr') %>.</p>
+  <p>As questions arise, your Transportation Office (TO) can provide further information and generally is the best place to get help related to your move.</p>
 
-    <p>Moving allowances, also known as entitlements, with the U.S. Military are largely determined based on the service member’s or civilian’s rank and dependency status. Additionally, special circumstances like an <%= abbr_tag('oconus') %> move (moving overseas), retirement move, or separation move may have extra entitlements and/or limitations than the standard Permanent Change of Station (PCS) move within the continental United States. The Joint Travel Regulation (JTR) is the authority of entitlements for all service members, although each branch of the services may also have supplemental regulations to the <%= abbr_tag('jtr') %>.</p>
-    <p>As questions arise, your Transportation Office (TO) can provide further information and generally is the best place to get help related to your move.</p>
+  <%- if @entitlements.any? -%>
+    <div id="entitlements-search" hidden>
+      <p>Enter your rank, dependency status, and move type to determine your moving allowance.</p>
 
-    <%- if @entitlements.any? -%>
-      <div id="entitlements-search" hidden>
-        <p>Enter your rank, dependency status, and move type to determine your moving allowance.</p>
+      <%= form_with url: entitlements_path, class: 'usa-form', method: 'get', skip_enforcing_utf8: true do |form| %>
+        <%= form.label :rank, raw('1. Select your current <b>military pay grade</b>.') %>
+        <%= form.select :rank, options_from_collection_for_select(@entitlements, :rank, :rank), { include_blank: true }, { id: :rank, required: true } %>
 
-        <%= form_with url: entitlements_path, class: 'usa-form', method: 'get', skip_enforcing_utf8: true do |form| %>
-          <%= form.label :rank, raw('1. Select your current <b>military pay grade</b>.') %>
-          <%= form.select :rank, options_from_collection_for_select(@entitlements, :rank, :rank), { include_blank: true }, { id: :rank, required: true } %>
+        <%= form.label :dependency_status, raw('2. Select your <b>dependency status</b>.') %>
+        <%= form.select :dependency_status, [['Yes, I have dependents', true], ['No, I do not have dependents', false]], { include_blank: true }, { id: :dependency_status, required: true } %>
 
-          <%= form.label :dependency_status, raw('2. Select your <b>dependency status</b>.') %>
-          <%= form.select :dependency_status, [['Yes, I have dependents', true], ['No, I do not have dependents', false]], { include_blank: true }, { id: :dependency_status, required: true } %>
+        <%= form.label :move_type, raw('3. Specify your <b>move type</b>.') %>
+        <%= form.select :move_type, [['Within the Continental United States (CONUS)', 'conus'], ['Outside of the Continental United States (OCONUS)', 'oconus']], { include_blank: true }, { id: :move_type, required: true } %>
 
-          <%= form.label :move_type, raw('3. Specify your <b>move type</b>.') %>
-          <%= form.select :move_type, [['Within the Continental United States (CONUS)', 'conus'], ['Outside of the Continental United States (OCONUS)', 'oconus']], { include_blank: true }, { id: :move_type, required: true } %>
+        <button>View Results</button>
+      <% end %>
 
-          <button>View Results</button>
-        <% end %>
+      <section class="usa-section moving-allowances-section" id="entitlements-search-results-container" tabindex="-1">
+        <h2>Your Moving Allowance</h2>
 
-        <section class="usa-section moving-allowances-section" id="entitlements-search-results-container" tabindex="-1">
-          <h2>Your Moving Allowance</h2>
+        <p>Moving allowances are generally based on the overall weight of your household goods. Any overages on your approved weight will be your financial responsibility, so work hard to make sure you stay within your weight allowance.</p>
 
-          <p>Moving allowances are generally based on the overall weight of your household goods. Any overages on your approved weight will be your financial responsibility, so work hard to make sure you stay within your weight allowance.</p>
+        <div id="entitlements-search-results" hidden></div>
 
-          <div id="entitlements-search-results" hidden></div>
-
-          <div class="usa-alert usa-alert-info" id="entitlements-search-alert">
-            <div class="usa-alert-body">
-              <h3 class="usa-alert-heading">Information Needed</h3>
-              <p class="usa-alert-text">Your moving allowances will appear here after providing your rank, dependency status, and move type in <%= link_to 'the form above', '#moving-allowances-form' %>.</p>
-            </div>
+        <div class="usa-alert usa-alert-info" id="entitlements-search-alert">
+          <div class="usa-alert-body">
+            <h3 class="usa-alert-heading">Information Needed</h3>
+            <p class="usa-alert-text">Your moving allowances will appear here after providing your rank, dependency status, and move type in <%= link_to 'the form above', '#moving-allowances-form' %>.</p>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+    </div>
 
-      <ul id="entitlements-rank-list">
-        <%- @entitlements.each do |entitlement| -%>
-          <li><%= link_to entitlement.rank, entitlement_path(entitlement) %></li>
-        <%- end -%>
-      </ul>
-    <%- end -%>
+    <ul id="entitlements-rank-list">
+      <%- @entitlements.each do |entitlement| -%>
+        <li><%= link_to entitlement.rank, entitlement_path(entitlement) %></li>
+      <%- end -%>
+    </ul>
+  <%- end -%>
 
-    <%= render 'special_item_information' %>
-  </div>
+  <%= render 'special_item_information' %>
 </div>
