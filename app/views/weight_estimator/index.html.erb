@@ -11,52 +11,44 @@
             <%= image_tag category.icon, width: '50px', role: 'presentation' %>
             <span><%= category.name %></span>
           </div>
-          <div class="usa-width-three-fourths">
-            <div class="usa-grid-full hhg-category-section-one">
-              <%- @household_goods = category.household_goods.order(:name) -%>
-              <%- @half = @household_goods.length / 2 -%>
-              <%= render partial: 'household_goods', object: @household_goods.first(category.household_goods.length - @half) %>
-              <%= render partial: 'household_goods', object: @household_goods.last(@half) %>
+          <div class="usa-grid-full hhg-category-section-two">
+            <div class="usa-width-one-half">
+              <table class="usa-table-borderless hhg-misc-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Miscellaneous</th>
+                    <th scope="col">Weight</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <%- for i in 0..2 -%>
+                    <tr>
+                      <td><input class="hhg-misc-input" type="text" placeholder="Item Description"></td>
+                      <td><input class="hhg-weight-input" type="text" pattern="\d+" placeholder="lbs"></td>
+                    </tr>
+                  <%- end -%>
+                </tbody>
+              </table>
             </div>
-            <div class="usa-grid-full hhg-category-section-two">
-              <div class="usa-width-one-half">
-                <table class="usa-table-borderless hhg-misc-table">
-                  <thead>
-                    <tr>
-                      <th scope="col">Miscellaneous</th>
-                      <th scope="col">Weight</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <%- for i in 0..2 -%>
-                      <tr>
-                        <td><input class="hhg-misc-input" type="text" placeholder="Item Description"></td>
-                        <td><input class="hhg-weight-input" type="text" pattern="\d+" placeholder="lbs"></td>
-                      </tr>
-                    <%- end -%>
-                  </tbody>
-                </table>
-              </div>
-              <div class="usa-width-one-half">
-                <button id="<%= category.key %>" class="category-calculate-button">Calculate</button>
-                <table class="usa-table-borderless category-estimate-table">
-                  <tbody>
-                    <tr>
-                      <td><label for="<%= category.key + '_subtotal' %>" class="category-estimate-label"><%= category.name %></label></td>
-                      <td><input id="<%= category.key + '_subtotal' %>" name="<%= category.key + '_subtotal' %>" class="category-estimate-input" disabled></td>
-                    </tr>
-                    <tr>
-                      <td><label for="<%= category.key + '_total' %>" class="category-estimate-label">Total Shipment Estimate</label></td>
-                      <td><input id="<%= category.key + '_total' %>" name="<%= category.key + '_total' %>" class="category-estimate-input" disabled></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            <div class="usa-width-one-half">
+              <button id="<%= category.key %>" class="category-calculate-button">Calculate</button>
+              <table class="usa-table-borderless category-estimate-table">
+                <tbody>
+                  <tr>
+                    <td><label for="<%= category.key + '_subtotal' %>" class="category-estimate-label"><%= category.name %></label></td>
+                    <td><input id="<%= category.key + '_subtotal' %>" name="<%= category.key + '_subtotal' %>" class="category-estimate-input" disabled></td>
+                  </tr>
+                  <tr>
+                    <td><label for="<%= category.key + '_total' %>" class="category-estimate-label">Total Shipment Estimate</label></td>
+                    <td><input id="<%= category.key + '_total' %>" name="<%= category.key + '_total' %>" class="category-estimate-input" disabled></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
-      <%- end -%>
-    </div>
+      </div>
+    <%- end -%>
     <button id="calcuate-button">Calculate My Estimate</button>
     <div id="weight-result" class="weight-result"></div>
   <%- end -%>
