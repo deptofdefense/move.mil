@@ -182,10 +182,6 @@
         "weight": 70
       },
       {
-        "name": "Typewriter",
-        "weight": 56
-      },
-      {
         "name": "Pool Table",
         "weight": 280
       },
@@ -228,10 +224,6 @@
       {
         "name": "Chair (Folding)",
         "weight": 7
-      },
-      {
-        "name": "Hall Tree",
-        "weight": 14
       },
       {
         "name": "Motor (Electric)",
@@ -424,10 +416,6 @@
         "weight": 140
       },
       {
-        "name": "Outdoor Gym",
-        "weight": 140
-      },
-      {
         "name": "Chair (Outdoor)",
         "weight": 70
       },
@@ -610,10 +598,6 @@
         "weight": 245
       },
       {
-        "name": "TV Table Model",
-        "weight": 70
-      },
-      {
         "name": "Chair (Straight)",
         "weight": 35
       },
@@ -628,10 +612,6 @@
       {
         "name": "Wine Rack",
         "weight": 35
-      },
-      {
-        "name": "TV Combination",
-        "weight": 175
       },
       {
         "name": "TV Stand",
@@ -662,19 +642,11 @@
         "weight": 105
       },
       {
-        "name": "Organ (Small)",
-        "weight": 140
-      },
-      {
         "name": "Record Player",
         "weight": 14
       },
       {
         "name": "Speaker (Stereo)",
-        "weight": 35
-      },
-      {
-        "name": "CD Player",
         "weight": 35
       },
       {
@@ -691,10 +663,6 @@
       },
       {
         "name": "Sofa (4 Cushion)",
-        "weight": 420
-      },
-      {
-        "name": "Organ (Medium)",
         "weight": 420
       },
       {
@@ -720,14 +688,6 @@
       {
         "name": "Radio (Table)",
         "weight": 14
-      },
-      {
-        "name": "VCR",
-        "weight": 35
-      },
-      {
-        "name": "Telephone Stand",
-        "weight": 35
       },
       {
         "name": "Fireplace Equipment",
@@ -762,7 +722,7 @@
         "weight": 175
       },
       {
-        "name": "Bar Portable",
+        "name": "Bar Cart",
         "weight": 105
       },
       {
@@ -796,6 +756,10 @@
       {
         "name": "Lamp (Floor/Pole)",
         "weight": 21
+      },
+      {
+        "name": "Wall Art",
+        "weight": 15
       }
     ]
   },
@@ -844,14 +808,6 @@
         "weight": 315
       },
       {
-        "name": "Ironer/Mangle",
-        "weight": 84
-      },
-      {
-        "name": "Trash Compactor",
-        "weight": 140
-      },
-      {
         "name": "Mini-Refrigerator",
         "weight": 70
       },
@@ -883,10 +839,6 @@
       },
       {
         "name": "Dish Set",
-        "weight": 70
-      },
-      {
-        "name": "Dish Pack",
         "weight": 70
       },
       {
@@ -928,6 +880,22 @@
       {
         "name": "Breakfast Set (Table)",
         "weight": 70
+      },
+      {
+        "name": "Pots and Pans",
+        "weight": 35
+      },
+      {
+        "name": "Silverware",
+        "weight": 35
+      },
+      {
+        "name": "Serving Dishes",
+        "weight": 5
+      },
+      {
+        "name": "Stand Mixer",
+        "weight": 20
       }
     ]
   }
