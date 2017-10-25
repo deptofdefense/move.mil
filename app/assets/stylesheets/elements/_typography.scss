@@ -1,21 +1,3 @@
 abbr[title] {
   text-decoration: none;
 }
-
-.divider-heading {
-  border-top: 0.25rem solid $color-primary-darkest;
-  overflow: hidden;
-
-  span {
-    @include padding(0.5rem $site-margins 0.75rem);
-    background-color: $color-primary-darkest;
-    color: $color-white;
-    display: block;
-    float: left;
-    font-family: $font-serif;
-    font-size: $h6-font-size;
-    font-style: italic;
-    font-weight: bold;
-    text-align: center;
-  }
-}

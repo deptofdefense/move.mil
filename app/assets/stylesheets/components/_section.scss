@@ -1,9 +1,8 @@
 .homepage-section {
   @include padding($site-margins null);
-  border-bottom: 1px solid $color-gray-light;
 
-  &:last-of-type {
-    border-bottom: none;
+  & + & {
+    border-top: 2px dotted $color-gray-cool-light;
   }
 
   img {
@@ -38,6 +37,17 @@
   }
 
   background-color: $color-gray-cool-light;
+}
+
+.homepage-service-section {
+  border-top: 0.25rem solid $color-primary-darkest;
+  h3 {
+    color: $color-primary-darkest;
+    margin-bottom: 0;
+  }
+  p {
+    margin: 0;
+  }
 }
 
 .moving-allowances-section {
