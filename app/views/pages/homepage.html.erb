@@ -6,58 +6,54 @@
 <div class="usa-grid homepage-content">
   <div class="usa-width-two-thirds">
     <div class="homepage-section usa-media_block">
-      <%= image_tag 'homepage/plan-your-move.jpg', alt: '', class: 'usa-media_block-img' %>
+      <%= image_tag 'homepage/plan-your-move.svg', alt: '', class: 'usa-media_block-img' %>
       <div class="usa-media_block-body">
-        <h3>Plan Your Move</h3>
-        <p>It’s never too early to get started. Learn what you are allowed to bring and plan ahead.</p>
-
+        <div class="homepage-section-header">Plan Your Move</div>
         <ul>
-          <li><%= link_to 'Learn about Moving Allowances (Entitlements)', page_path('entitlements') %></li>
-          <li><%= link_to 'Service-Specific Information', service_specific_information_path %></li>
-          <li><%= link_to 'Research your new base', '#TODO' %></li>
-          <li><%= link_to 'Contact a Transportation Counselor (optional)', '#TODO' %></li>
+          <li>Research your new base on <%= link_to 'militaryinstallations.dod.mil', 'http://www.militaryinstallations.dod.mil/MOS/f?p=MI:ENTRY:0' %></li>
+          <li><%= link_to 'Learn what options there are for transporting your household goods', page_path('moving-guide') %></li>
+          <li>Visit <%= link_to 'Military One Source', 'https://www.militaryonesource.mil/web/mos/moving-housing' %> to learn more about coping with relocation and housing issues</li>
+          <li>Attend an info session (briefing) at your <%= link_to 'local personal property office', offices_path %></li>
         </ul>
       </div>
     </div>
 
     <div class="homepage-section usa-media_block">
-      <%= image_tag 'homepage/schedule-your-move.jpg', alt: '', class: 'usa-media_block-img' %>
+      <%= image_tag 'homepage/schedule-your-move.svg', alt: '', class: 'usa-media_block-img' %>
       <div class="usa-media_block-body">
-        <h3>Schedule Your Move</h3>
+        <div class="homepage-section-header">Schedule Your Move</div>
         <p>Use Defense Personal Property System (DPS) to schedule your move with a transportation company.</p>
 
         <ul>
-          <li><%= link_to 'Plan how you want to move', '#TODO' %></li>
-          <li><%= link_to raw("Get access to #{abbr_tag('dps')} by creating an #{abbr_tag('eta')} Log In"), 'https://www.move.mil/dod/first_time_users/browser_compatibility.cfm' %></li>
-          <li><%= link_to raw("Learn how to use #{abbr_tag('dps')} to schedule your move"), tutorials_path %></li>
-          <li><%= link_to 'Estimate your moving weight', weight_estimator_path %></li>
+          <li><%= link_to raw("Sign In to #{abbr_tag('dps')}"), 'https://eta.sddc.army.mil/ETASSOPortal/SSO/PortalLogin.aspx?ReturnUrl=%2fETASSOPortal%2fSSO%2fAppLogin.aspx%3fLoginType%3dportal%26SSOAppID%3dDPS&LoginType=portal&SSOAppID=DPS' %>  to schedule your move online</li>
+          <li>Visit your <%= link_to 'local personal property office', offices_path %> to get help scheduling your move</li>
+          <li><%= link_to 'Follow online tutorials for help logging in or using DPS', tutorials_path %></li>
         </ul>
       </div>
     </div>
 
     <div class="homepage-section usa-media_block">
-      <%= image_tag 'homepage/get-ready.jpg', alt: '', class: 'usa-media_block-img' %>
+      <%= image_tag 'homepage/get-ready.svg', alt: '', class: 'usa-media_block-img' %>
       <div class="usa-media_block-body">
-        <h3>Get Ready for Moving Day</h3>
-        <p>Get your house ready to be packed and moved before your moving company shows up at your door!</p>
-
+        <div class="homepage-section-header">Get Ready for Moving Day</div>
         <ul>
-          <li><%= link_to 'Learn what to prepare ahead of time', '#TODO' %></li>
-          <li><%= link_to 'Review what to do if anything goes wrong', '#TODO' %></li>
+          <li><%= link_to 'Create your own high-value inventory', '#TODO' %></li>
+          <li>Contact your <%= link_to 'local personal property office', offices_path %> if anything goes wrong with your transportation provider the day of your move</li>
+          <li>Review <%= link_to 'Moving Tips', page_path('moving-guide/tips') %> so that you have a successful move</li>
         </ul>
       </div>
     </div>
 
     <div class="homepage-section usa-media_block">
-      <%= image_tag 'homepage/after-you-arrive.jpg', alt: '', class: 'usa-media_block-img' %>
+      <%= image_tag 'homepage/settling-in.svg', alt: '', class: 'usa-media_block-img' %>
       <div class="usa-media_block-body">
-        <h3>After You Arrive</h3>
+        <div class="homepage-section-header">Settling In</div>
         <p>As you’re unpacking you might notice that some items got lost or broken in transit. Not only should you file claims to recieve compensation for your damaged items, make sure you review your transporter so that other family’s benefit from your experience.</p>
 
         <ul>
-          <li><%= link_to 'What happens if something arrives lost or broken?', '#TODO' %></li>
-          <li><%= link_to raw("How to file a loss or damage claim in #{abbr_tag('dps')}"), '#TODO' %></li>
-          <li><%= link_to raw("Review your transporter in #{abbr_tag('dps')}"), '#TODO' %></li>
+          <li><%= link_to 'What happens if something is lost or broken?', '#TODO' %></li>
+          <li><%= link_to raw("Learn how to file a loss or damage claim in #{abbr_tag('dps')}"), page_path('tutorials', anchor: 'tutorial-4') %></li>
+          <li><%= link_to raw("Learn how to review your transporter in #{abbr_tag('dps')} (Customer Satisfaction Survey)"), page_path('tutorials', anchor: 'tutorial-5') %></li>
         </ul>
       </div>
     </div>

@@ -9,15 +9,17 @@
   img {
     display: none;
     margin-right: $site-margins;
-    width: 14rem;
+    width: 9rem;
 
     @include media($medium-screen) {
       display: block;
     }
   }
 
-  h3 {
-    margin: 0;
+  .homepage-section-header {
+    color: $color-primary-darker;
+    font-size: 3.5rem;
+    font-weight: 600;
 
     & + p {
       margin-top: 0.25rem;

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="83px" height="87px" viewBox="0 0 83 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>Index_Plan_Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 74.5246941 63.871285 74.5246941 63.871285 0 0 0"></polygon>
+    </defs>
+    <g id="Move.mil-Index" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Index_Desktop" transform="translate(-117.000000, -753.000000)">
+            <g id="Plan-your-Move" transform="translate(-761.000000, 536.000000)"></g>
+            <g id="Main-Content" transform="translate(124.000000, 758.000000)">
+                <g id="Plan-Your-Move" transform="translate(1.000000, 0.000000)">
+                    <g id="noun_1236058">
+                        <polygon id="Fill-1" fill="#205493" points="3.22880245 33.1894668 8.14576049 33.1894668 8.14576049 24.9945367 3.22880245 24.9945367"></polygon>
+                        <g id="Group-8">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-3"></g>
+                            <polygon id="Fill-2" fill="#205493" mask="url(#mask-2)" points="3.22880245 49.5793269 8.14576049 49.5793269 8.14576049 41.3843969 3.22880245 41.3843969"></polygon>
+                            <polyline id="Fill-4" fill="#205493" mask="url(#mask-2)" points="63.871285 0 3.22880245 0 3.22880245 16.7996066 8.15395542 16.7996066 8.15395542 4.91695804 58.9543269 4.91695804 58.9543269 69.6569056 8.15395542 69.6569056 8.15395542 57.774257 3.22880245 57.774257 3.22880245 74.5738636 63.871285 74.5738636 63.871285 0"></polyline>
+                            <polygon id="Fill-5" fill="#205493" mask="url(#mask-2)" points="0 23.4047203 11.2680288 23.4047203 11.2680288 18.4877622 0 18.4877622"></polygon>
+                            <polygon id="Fill-6" fill="#205493" mask="url(#mask-2)" points="0 39.7945804 11.2680288 39.7945804 11.2680288 34.8776224 0 34.8776224"></polygon>
+                            <polygon id="Fill-7" fill="#205493" mask="url(#mask-2)" points="0 56.1844406 11.2680288 56.1844406 11.2680288 51.2674825 0 51.2674825"></polygon>
+                        </g>
+                        <path d="M21.7329545,34.6235795 L48.5713505,34.6235795 L48.5713505,23.1506774 L21.7329545,23.1506774 L21.7329545,34.6235795 Z M16.8159965,39.5405376 L53.4883086,39.5405376 L53.4883086,18.2337194 L16.8159965,18.2337194 L16.8159965,39.5405376 Z" id="Fill-9" fill="#205493"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
