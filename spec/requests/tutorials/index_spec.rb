@@ -12,10 +12,6 @@ RSpec.describe TutorialsController, type: :request do
       it 'renders the index template' do
         assert_template 'index'
       end
-
-      it 'highlights the Tutorials navigation item' do
-        assert_select '.usa-sidenav-list .usa-current', text: 'Tutorials'
-      end
     end
 
     context 'when tutorials exist' do

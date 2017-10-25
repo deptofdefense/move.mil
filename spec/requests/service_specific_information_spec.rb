@@ -12,10 +12,6 @@ RSpec.describe ServiceSpecificInformationController, type: :request do
       it 'renders the index template' do
         assert_template 'index'
       end
-
-      it 'highlights the Service-Specific Information navigation item' do
-        assert_select '.usa-sidenav-list .usa-current', text: 'Service-Specific Information'
-      end
     end
 
     context 'when service specific posts exist' do
