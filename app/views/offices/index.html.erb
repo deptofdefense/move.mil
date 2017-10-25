@@ -1,75 +1,71 @@
 <%- @page_title = 'Locator Maps' -%>
 
-<div class="usa-grid usa-section usa-layout-docs">
-  <%= render 'shared/sidenav' %>
+<div class="usa-section main-section">
+  <h1><%= @page_title %></h1>
 
-  <div class="usa-width-three-fourths usa-layout-docs-main_content">
-    <h1><%= @page_title %></h1>
+  <p>Use the search form below to find local Transportation Offices (<%= abbr_tag('pppo') %>s) and Truck Weight Scales.</p>
 
-    <p>Use the search form below to find local Transportation Offices (<%= abbr_tag('pppo') %>s) and Truck Weight Scales.</p>
+  <div id="geolocation-notice" hidden>
+    <p>You can also search for Transportation Offices and Truck Weight Scales that are closest to your current location. To enable this feature, you will be prompted to allow move.mil access to your location. Your location is only used to find the nearest Transportation Offices and Truck Weight Scales and <b>move.mil will not store or remember your location</b>.</p>
+  </div>
 
-    <div id="geolocation-notice" hidden>
-      <p>You can also search for Transportation Offices and Truck Weight Scales that are closest to your current location. To enable this feature, you will be prompted to allow move.mil access to your location. Your location is only used to find the nearest Transportation Offices and Truck Weight Scales and <b>move.mil will not store or remember your location</b>.</p>
-    </div>
-
-    <div id="error-container">
-      <%- if @error_message -%>
-        <div class="usa-alert usa-alert-error" role="alert">
-          <div class="usa-alert-body">
-            <p class="usa-alert-text"><%= @error_message %></p>
-          </div>
-        </div>
-      <%- end -%>
-    </div>
-
-    <div class="search-forms-container">
-      <%= form_with url: offices_path, class: 'usa-form zip-code-search-form', id: 'search-code-zip-form', method: 'get', skip_enforcing_utf8: true do |form| %>
-        <%= form.label :postal_code, 'Search by ZIP Code', class: 'usa-input-required usa-sr-only' %>
-        <%= form.number_field :postal_code, aria: { required: true }, id: 'postal_code', pattern: '^\d{5}$', placeholder: 'e.g. 20500', required: true, value: params[:postal_code] %>
-
-        <button>Search by ZIP Code</button>
-      <% end %>
-
-      <%= form_with url: offices_path, class: 'usa-form coordinates-search-form', html: { hidden: true }, id: 'coordinates-search-form', method: 'get', skip_enforcing_utf8: true do |form| %>
-        <%= form.hidden_field :coordinates, id: 'coordinates' %>
-        <button>Search by Your Location</button>
-      <% end %>
-    </div>
-
-    <%- if @transportation_offices -%>
-      <div class="location-search-types">
-        <div class="usa-media_block">
-          <%= image_tag 'locator/texticon_pppo.svg', alt: 'A blue icon of a Transportation Office', class: 'usa-media_block-img' %>
-          <div class="usa-media_block-body">
-            <p><b>Transportation Offices</b> are your customer service “store front” of the moving process. In addition to providing information sessions about the moving process, they can also help with scheduling, changing delivery dates, and answering any other questions that come up during your move.</p>
-          </div>
-        </div>
-
-        <div class="usa-media_block">
-          <%= image_tag 'locator/texticon_scales.svg', alt: 'An orange icon of a truck on a weight scale', class: 'usa-media_block-img' %>
-          <div class="usa-media_block-body">
-            <p><b>Truck Weight Scales</b> are privately owned locations where you can take your vehicles to be weighed to receive required <%= abbr_tag('ppm') %> “Do-It-Yourself” move weight tickets.</p>
-          </div>
+  <div id="error-container">
+    <%- if @error_message -%>
+      <div class="usa-alert usa-alert-error" role="alert">
+        <div class="usa-alert-body">
+          <p class="usa-alert-text"><%= @error_message %></p>
         </div>
       </div>
-
-      <%= tag.div class: 'locator-map', id: 'locator-map',
-            data: {
-              latitude: @search.result[:latitude],
-              longitude: @search.result[:longitude],
-              'marker-icon-path': asset_path('locator/map_pppo.svg'),
-              'marker-icon-2x-path': asset_path('locator/map_pppo.svg'),
-              'marker-shadow-path': asset_path('leaflet/dist/images/marker-shadow.png')
-            }
-      %>
-
-      <p>Displaying results near <b><%= @search.query %></b><%= " (page #{@transportation_offices.current_page} of #{@transportation_offices.total_pages})" if @transportation_offices.total_pages.positive? %>.</p>
-
-      <div id="search-results">
-        <%= render partial: 'transportation_office', collection: @transportation_offices %>
-      </div>
-
-      <%= will_paginate @transportation_offices %>
     <%- end -%>
   </div>
+
+  <div class="search-forms-container">
+    <%= form_with url: offices_path, class: 'usa-form zip-code-search-form', id: 'search-code-zip-form', method: 'get', skip_enforcing_utf8: true do |form| %>
+      <%= form.label :postal_code, 'Search by ZIP Code', class: 'usa-input-required usa-sr-only' %>
+      <%= form.number_field :postal_code, aria: { required: true }, id: 'postal_code', pattern: '^\d{5}$', placeholder: 'e.g. 20500', required: true, value: params[:postal_code] %>
+
+      <button>Search by ZIP Code</button>
+    <% end %>
+
+    <%= form_with url: offices_path, class: 'usa-form coordinates-search-form', html: { hidden: true }, id: 'coordinates-search-form', method: 'get', skip_enforcing_utf8: true do |form| %>
+      <%= form.hidden_field :coordinates, id: 'coordinates' %>
+      <button>Search by Your Location</button>
+    <% end %>
+  </div>
+
+  <%- if @transportation_offices -%>
+    <div class="location-search-types">
+      <div class="usa-media_block">
+        <%= image_tag 'locator/texticon_pppo.svg', alt: 'A blue icon of a Transportation Office', class: 'usa-media_block-img' %>
+        <div class="usa-media_block-body">
+          <p><b>Transportation Offices</b> are your customer service “store front” of the moving process. In addition to providing information sessions about the moving process, they can also help with scheduling, changing delivery dates, and answering any other questions that come up during your move.</p>
+        </div>
+      </div>
+
+      <div class="usa-media_block">
+        <%= image_tag 'locator/texticon_scales.svg', alt: 'An orange icon of a truck on a weight scale', class: 'usa-media_block-img' %>
+        <div class="usa-media_block-body">
+          <p><b>Truck Weight Scales</b> are privately owned locations where you can take your vehicles to be weighed to receive required <%= abbr_tag('ppm') %> “Do-It-Yourself” move weight tickets.</p>
+        </div>
+      </div>
+    </div>
+
+    <%= tag.div class: 'locator-map', id: 'locator-map',
+          data: {
+            latitude: @search.result[:latitude],
+            longitude: @search.result[:longitude],
+            'marker-icon-path': asset_path('locator/map_pppo.svg'),
+            'marker-icon-2x-path': asset_path('locator/map_pppo.svg'),
+            'marker-shadow-path': asset_path('leaflet/dist/images/marker-shadow.png')
+          }
+    %>
+
+    <p>Displaying results near <b><%= @search.query %></b><%= " (page #{@transportation_offices.current_page} of #{@transportation_offices.total_pages})" if @transportation_offices.total_pages.positive? %>.</p>
+
+    <div id="search-results">
+      <%= render partial: 'transportation_office', collection: @transportation_offices %>
+    </div>
+
+    <%= will_paginate @transportation_offices %>
+  <%- end -%>
 </div>

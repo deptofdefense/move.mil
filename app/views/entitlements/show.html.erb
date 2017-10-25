@@ -1,16 +1,12 @@
 <%- @page_title = "#{@entitlement.rank} Entitlements" -%>
 
-<div class="usa-grid usa-section usa-layout-docs">
-  <%= render 'shared/sidenav' %>
+<div class="usa-section main-section">
+  <h1><%= @page_title %></h1>
 
-  <div class="usa-width-three-fourths usa-layout-docs-main_content">
-    <h1><%= @page_title %></h1>
+  <h2>Your Moving Allowance</h2>
 
-    <h2>Your Moving Allowance</h2>
+  <p>Moving allowances are generally based on the overall weight of your household goods. Any overages on your approved weight will be your financial responsibility, so work hard to make sure you stay within your weight allowance.</p>
 
-    <p>Moving allowances are generally based on the overall weight of your household goods. Any overages on your approved weight will be your financial responsibility, so work hard to make sure you stay within your weight allowance.</p>
-
-    <%= render 'entitlements_table', entitlement: @entitlement %>
-    <%= render 'special_item_information' %>
-  </div>
+  <%= render 'entitlements_table', entitlement: @entitlement %>
+  <%= render 'special_item_information' %>
 </div>
