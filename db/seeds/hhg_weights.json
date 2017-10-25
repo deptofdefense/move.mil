@@ -1,7 +1,7 @@
 [
   {
     "name": "Bedrooms",
-    "icon": "icons/bedroom.png",
+    "icon": "icons/bedroom.svg",
     "household_goods": [
       {
         "name": "Chaise Lounge",
@@ -119,7 +119,7 @@
   },
   {
     "name": "Miscellaneous",
-    "icon": "icons/misc.png",
+    "icon": "icons/misc.svg",
     "household_goods": [
       {
         "name": "Ping Pong Table",
@@ -329,7 +329,7 @@
   },
   {
     "name": "Outdoor Furniture & Equipment",
-    "icon": "icons/patio.png",
+    "icon": "icons/patio.svg",
     "household_goods": [
       {
         "name": "Outdoor Swings",
@@ -455,7 +455,7 @@
   },
   {
     "name": "Nursery",
-    "icon": "icons/nursery.png",
+    "icon": "icons/nursery.svg",
     "household_goods": [
       {
         "name": "Crib (Baby)",
@@ -529,7 +529,7 @@
   },
   {
     "name": "Dining Room",
-    "icon": "icons/dining_room.png",
+    "icon": "icons/dining_room.svg",
     "household_goods": [
       {
         "name": "Cabinet (Corner)",
@@ -587,7 +587,7 @@
   },
   {
     "name": "Living/Family Rooms",
-    "icon": "icons/living_room.png",
+    "icon": "icons/living_room.svg",
     "household_goods": [
       {
         "name": "Chair (Occas)",
@@ -765,7 +765,7 @@
   },
   {
     "name": "Appliances",
-    "icon": "icons/appliances.png",
+    "icon": "icons/appliances.svg",
     "household_goods": [
       {
         "name": "Freezer (16 CU or More)",
@@ -827,7 +827,7 @@
   },
   {
     "name": "Kitchen",
-    "icon": "icons/kitchen.png",
+    "icon": "icons/kitchen.svg",
     "household_goods": [
       {
         "name": "Chair (High)",
