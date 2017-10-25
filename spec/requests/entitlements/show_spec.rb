@@ -14,10 +14,6 @@ RSpec.describe EntitlementsController, type: :request do
       assert_template 'show'
     end
 
-    it 'highlights the Entitlements navigation item' do
-      assert_select '.usa-sidenav-list .usa-current', text: 'Entitlements'
-    end
-
     it 'displays the entitlement' do
       assert_select '.entitlements-table tr:first-child td + td', text: '5,000 lbs.'
     end
