@@ -56,3 +56,9 @@
     }
   }
 }
+
+@include media($medium-screen) {
+  .usa-section {
+    padding-top: 3rem;
+  }
+}

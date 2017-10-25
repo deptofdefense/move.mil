@@ -59,7 +59,7 @@
     </div>
 
     <div class="usa-navbar">
-      <%= raw('<button class="usa-menu-btn">Menu</button>') if current_page?(root_path) %>
+      <%= raw('<button class="usa-menu-btn">Menu</button>') %>
 
       <div class="usa-logo" id="logo">
         <em class="usa-logo-text">
@@ -70,8 +70,8 @@
         </em>
       </div>
     </div>
-
-    <%= render 'shared/nav' if current_page?(root_path) %>
+    <div class="navbar-border"></div>
+    <%= render 'shared/nav' %>
   </header>
   <div class="usa-overlay"></div>
 
