@@ -43,26 +43,12 @@
   }
 }
 
-.homepage-hero {
-  margin-bottom: $site-margins;
-  padding: 0;
+.usa-hero {
+  background-image: url(asset_path("homepage/desktop-hero.svg"));
+  background-position: left center;
+  height: 173px;
 
   @include media($nav-width) {
-    @include padding(null $site-margins);
-  }
-
-  h2 {
-    @include padding(6rem $site-margins-mobile);
-    background: $color-primary url(asset_path("homepage/hero.jpg")) no-repeat 50% 50%;
-    background-size: cover;
-    color: #fff;
-    font-family: $font-sans;
-    font-weight: $font-normal;
-    text-align: center;
-
-    @include media($nav-width) {
-      @include padding(6rem null);
-      font-size: $h1-font-size;
-    }
+    height: 374px;
   }
 }
