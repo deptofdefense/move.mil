@@ -1,5 +1,9 @@
 .homepage-section {
-  @include padding($site-margins null);
+  @include padding($site-margins-mobile null);
+
+  @include media($medium-screen) {
+    @include padding($site-margins null);
+  }
 
   & + & {
     border-top: 2px dotted $color-gray-cool-light;

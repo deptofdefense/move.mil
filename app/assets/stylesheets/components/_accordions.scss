@@ -7,3 +7,30 @@
   background-image: asset-url('plus-blue.png');
   background-image: asset-url('plus-blue.svg');
 }
+
+.helpful-links-accordion {
+  margin-top: 1rem;
+
+  .usa-accordion-button {
+    background-color: $color-gray-cool-light;
+    background-image: asset-url('uswds/angle-arrow-up-primary-hover.png');
+    background-image: asset-url('uswds/angle-arrow-up-primary-hover.svg');
+    color: $color-primary-darker;
+    font-family: $font-serif;
+    font-size: $h4-font-size;
+
+    &:hover {
+      background-color: $color-cool-blue-lighter;
+      color: $color-primary-darker;
+    }
+  }
+
+  .usa-accordion-button[aria-expanded=false] {
+    background-image: asset-url('uswds/angle-arrow-down-primary-hover.png');
+    background-image: asset-url('uswds/angle-arrow-down-primary-hover.svg');
+  }
+
+  .usa-accordion-content {
+    background-color: $color-gray-cool-light;
+  }
+}

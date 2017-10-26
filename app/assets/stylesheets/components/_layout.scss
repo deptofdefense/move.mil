@@ -58,15 +58,19 @@
 }
 
 .homepage-content {
-  margin-top: 3rem;
-
   .helpful-links-section {
     display: none;
   }
 
   @include media($medium-screen) {
+    margin-top: 3rem;
+
     .helpful-links-section {
       display: block;
+    }
+
+    .helpful-links-accordion {
+      display: none;
     }
   }
 }
