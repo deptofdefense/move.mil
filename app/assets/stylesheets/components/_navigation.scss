@@ -1,6 +1,6 @@
 .usa-navbar {
-  @include padding(1rem 0);
-  height: 6rem;
+  @include padding(2rem 0);
+  height: 10.5rem;
 
   @include media($nav-width) {
     @include padding(0 null);
@@ -31,5 +31,9 @@
 }
 
 .navbar-border {
-  border-top: 12px solid $color-primary-darkest;
+  border-top: 5px solid $color-primary-darkest;
+
+  @include media($nav-width) {
+    border-top: 12px solid $color-primary-darkest;
+  }
 }

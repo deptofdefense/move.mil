@@ -5,68 +5,68 @@
 
 <div class="usa-grid homepage-content">
   <div class="usa-width-two-thirds">
-    <div class="homepage-section usa-media_block">
-      <%= image_tag 'homepage/plan-your-move.svg', alt: '', class: 'usa-media_block-img' %>
-      <div class="usa-media_block-body">
-        <div class="homepage-section-header">Plan Your Move</div>
-        <ul>
-          <li>Research your new base on <%= link_to 'militaryinstallations.dod.mil', 'http://www.militaryinstallations.dod.mil/MOS/f?p=MI:ENTRY:0' %></li>
-          <li><%= link_to 'Learn what options there are for transporting your household goods', page_path('moving-guide') %></li>
-          <li>Visit <%= link_to 'Military One Source', 'https://www.militaryonesource.mil/web/mos/moving-housing' %> to learn more about coping with relocation and housing issues</li>
-          <li>Attend an info session (briefing) at your <%= link_to 'local personal property office', offices_path %></li>
-        </ul>
+    <div class="homepage-section" id="plan-your-move">
+      <div class="usa-media_block">
+        <%= image_tag 'homepage/plan-your-move.svg', alt: '', class: 'usa-media_block-img' %>
+        <div class="usa-media_block-body">
+          <div class="homepage-section-header">Plan Your Move</div>
+        </div>
       </div>
+      <ul>
+        <li>Research your new base on <%= link_to 'militaryinstallations.dod.mil', 'http://www.militaryinstallations.dod.mil/MOS/f?p=MI:ENTRY:0' %></li>
+        <li><%= link_to 'Learn what options there are for transporting your household goods', page_path('moving-guide') %></li>
+        <li>Visit <%= link_to 'Military One Source', 'https://www.militaryonesource.mil/web/mos/moving-housing' %> to learn more about coping with relocation and housing issues</li>
+        <li>Attend an info session (briefing) at your <%= link_to 'local personal property office', offices_path %></li>
+      </ul>
     </div>
 
-    <div class="homepage-section usa-media_block">
-      <%= image_tag 'homepage/schedule-your-move.svg', alt: '', class: 'usa-media_block-img' %>
-      <div class="usa-media_block-body">
-        <div class="homepage-section-header">Schedule Your Move</div>
-        <p>Use Defense Personal Property System (DPS) to schedule your move with a transportation company.</p>
-
-        <ul>
-          <li><%= link_to raw("Sign In to #{abbr_tag('dps')}"), 'https://eta.sddc.army.mil/ETASSOPortal/SSO/PortalLogin.aspx?ReturnUrl=%2fETASSOPortal%2fSSO%2fAppLogin.aspx%3fLoginType%3dportal%26SSOAppID%3dDPS&LoginType=portal&SSOAppID=DPS' %>  to schedule your move online</li>
-          <li>Visit your <%= link_to 'local personal property office', offices_path %> to get help scheduling your move</li>
-          <li><%= link_to 'Follow online tutorials for help logging in or using DPS', tutorials_path %></li>
-        </ul>
+    <div class="homepage-section">
+      <div class="usa-media_block">
+        <%= image_tag 'homepage/schedule-your-move.svg', alt: '', class: 'usa-media_block-img' %>
+        <div class="usa-media_block-body">
+          <div class="homepage-section-header">Schedule Your Move</div>
+          <p>Use Defense Personal Property System (DPS) to schedule your move with a transportation company.</p>
+        </div>
       </div>
+      <ul>
+        <li><%= link_to raw("Sign In to #{abbr_tag('dps')}"), 'https://eta.sddc.army.mil/ETASSOPortal/SSO/PortalLogin.aspx?ReturnUrl=%2fETASSOPortal%2fSSO%2fAppLogin.aspx%3fLoginType%3dportal%26SSOAppID%3dDPS&LoginType=portal&SSOAppID=DPS' %>  to schedule your move online</li>
+        <li>Visit your <%= link_to 'local personal property office', offices_path %> to get help scheduling your move</li>
+        <li><%= link_to 'Follow online tutorials for help logging in or using DPS', tutorials_path %></li>
+      </ul>
     </div>
 
-    <div class="homepage-section usa-media_block">
-      <%= image_tag 'homepage/get-ready.svg', alt: '', class: 'usa-media_block-img' %>
-      <div class="usa-media_block-body">
-        <div class="homepage-section-header">Get Ready for Moving Day</div>
-        <ul>
-          <li><%= link_to 'Create your own high-value inventory', '#TODO' %></li>
-          <li>Contact your <%= link_to 'local personal property office', offices_path %> if anything goes wrong with your transportation provider the day of your move</li>
-          <li>Review <%= link_to 'Moving Tips', page_path('moving-guide/tips') %> so that you have a successful move</li>
-        </ul>
+    <div class="homepage-section">
+      <div class="usa-media_block">
+        <%= image_tag 'homepage/get-ready.svg', alt: '', class: 'usa-media_block-img' %>
+        <div class="usa-media_block-body">
+          <div class="homepage-section-header">Get Ready for Moving Day</div>
+        </div>
       </div>
+      <ul>
+        <li><%= link_to 'Create your own high-value inventory', '#TODO' %></li>
+        <li>Contact your <%= link_to 'local personal property office', offices_path %> if anything goes wrong with your transportation provider the day of your move</li>
+        <li>Review <%= link_to 'Moving Tips', page_path('moving-guide/tips') %> so that you have a successful move</li>
+      </ul>
     </div>
 
-    <div class="homepage-section usa-media_block">
-      <%= image_tag 'homepage/settling-in.svg', alt: '', class: 'usa-media_block-img' %>
-      <div class="usa-media_block-body">
-        <div class="homepage-section-header">Settling In</div>
-        <p>As you’re unpacking you might notice that some items got lost or broken in transit. Not only should you file claims to recieve compensation for your damaged items, make sure you review your transporter so that other family’s benefit from your experience.</p>
-
-        <ul>
-          <li><%= link_to 'What happens if something is lost or broken?', '#TODO' %></li>
-          <li><%= link_to raw("Learn how to file a loss or damage claim in #{abbr_tag('dps')}"), page_path('tutorials', anchor: 'tutorial-4') %></li>
-          <li><%= link_to raw("Learn how to review your transporter in #{abbr_tag('dps')} (Customer Satisfaction Survey)"), page_path('tutorials', anchor: 'tutorial-5') %></li>
-        </ul>
+    <div class="homepage-section">
+      <div class="usa-media_block">
+        <%= image_tag 'homepage/settling-in.svg', alt: '', class: 'usa-media_block-img' %>
+        <div class="usa-media_block-body">
+          <div class="homepage-section-header">Settling In</div>
+          <p>As you’re unpacking you might notice that some items got lost or broken in transit. Not only should you file claims to recieve compensation for your damaged items, make sure you review your transporter so that other family’s benefit from your experience.</p>
+        </div>
       </div>
+      <ul>
+        <li><%= link_to 'What happens if something is lost or broken?', '#TODO' %></li>
+        <li><%= link_to raw("Learn how to file a loss or damage claim in #{abbr_tag('dps')}"), page_path('tutorials', anchor: 'tutorial-4') %></li>
+        <li><%= link_to raw("Learn how to review your transporter in #{abbr_tag('dps')} (Customer Satisfaction Survey)"), page_path('tutorials', anchor: 'tutorial-5') %></li>
+      </ul>
     </div>
   </div>
-  <aside class="usa-width-one-third">
-    <div class="helpful-links-section">
-      <h4>Helpful Links</h4>
-      <p><%= link_to 'Determine Your Entitlements', page_path('entitlements') %></p>
-      <p><%= link_to 'Household Goods Weight Estimator', weight_estimator_path %></p>
-      <p><%= link_to 'PPM (Do-It-Yourself) Reimbursement Estimator', '#TODO' %></p>
-      <p><%= link_to 'Personal Property Office Location Map', offices_path %></p>
-      <p><%= link_to 'Service Member Inventory Form', '#TODO' %></p>
-    </div>
+  <aside class="usa-width-one-third helpful-links-section">
+    <h4>Helpful Links</h4>
+    <%= render 'pages/helpful_links' %>
   </aside>
 </div>
 

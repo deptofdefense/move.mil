@@ -17,26 +17,26 @@
   }
 }
 
-.usa-header-extended {
-  em {
-    font-family: $font-sans;
-    font-size: 5rem;
-  }
-
-  .usa-logo-text {
-    color: $color-primary-darkest;
-  }
-}
-
-.usa-logo-text span {
-  display: none;
-  font-family: $font-serif;
-  font-size: $h3-font-size;
-  font-weight: $font-normal;
+.usa-header-extended .usa-logo-text {
+  color: $color-primary-darkest;
+  font-family: $font-sans;
+  font-size: $h1-font-size;
 
   @include media($nav-width) {
+    font-size: $title-font-size;
+  }
+
+  span {
     display: block;
-    margin-top: 1rem;
+    font-family: $font-serif;
+    font-size: $h5-font-size;
+    font-weight: $font-normal;
+    line-height: 3rem;
+
+    @include media($nav-width) {
+      font-size: $h3-font-size;
+      margin-top: 0.5rem;
+    }
   }
 }
 
