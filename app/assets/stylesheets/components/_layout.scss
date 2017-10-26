@@ -65,24 +65,8 @@
   }
 
   @include media($medium-screen) {
-    .usa-width-two-thirds {
-      width: 100%
-    }
-  }
-
-  @include media($nav-width) {
     .helpful-links-section {
       display: block;
-    }
-
-    .usa-width-two-thirds {
-      @include span-columns(4 of $grid-columns-medium);
-    }
-  }
-
-  @include media($large-screen) {
-    .usa-width-two-thirds {
-      @include span-columns(8 of $grid-columns-large);
     }
   }
 }

@@ -20,12 +20,17 @@
 .login-banner-text {
   @include outer-container();
   @include padding(null $site-margins-mobile);
+  font-size: $small-font-size;
   text-align: center;
 
-  @include media($nav-width) {
-     @include padding(null $site-margins);
-     text-align: left;
+  @include media($medium-screen) {
+    font-size: $base-font-size;
   }
 
-  max-width: 1040px;
+  @include media($nav-width) {
+    @include padding(null $site-margins);
+    text-align: left;
+  }
+
+  max-width: $site-max-width;
 }

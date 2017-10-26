@@ -8,7 +8,7 @@
   img {
     width: 4rem;
 
-    @include media($medium-screen) {
+    @include media($nav-width) {
       margin-right: 3rem;
       width: 9rem;
     }
@@ -19,7 +19,7 @@
     margin-top: 0;
     padding-top: 2rem;
 
-    @include media($medium-screen) {
+    @include media($nav-width) {
       clear: none;
       margin-left: 12rem;
       padding-top: 2.5rem;
@@ -35,15 +35,16 @@
       margin-bottom: 0;
     }
 
-    @include media($medium-screen) {
+    @include media($nav-width) {
       font-size: 3.5rem;
-      font-weight: 600;
+      font-weight: $font-bold;
     }
   }
 }
 
 .helpful-links-section {
-  @include padding($site-margins-mobile);
+  @include margin($site-margins-mobile null);
+  @include padding($site-margins);
 
   h4 {
     border-bottom: 1px solid $color-cool-blue;
@@ -64,6 +65,20 @@
   }
   p {
     margin: 0;
+  }
+}
+
+.homepage-anchor-section {
+  .homepage-anchor-title {
+    color: $color-primary-darker;
+    font-size: 2.5rem;
+    font-weight: $font-bold;
+    margin: 3.5rem 1.5rem 1rem 1.5rem;
+    text-align: center;
+  }
+
+  @include media($medium-screen) {
+    display: none;
   }
 }
 

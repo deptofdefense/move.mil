@@ -3,11 +3,41 @@
   <%= render 'shared/login_banner' %>
 </span>
 
+<div class="usa-grid-full homepage-anchor-section">
+  <div class="homepage-anchor-title">Prepare for your best move yet.</div>
+  <ul class="usa-unstyled-list homepage-anchor-list">
+    <li>
+      <%= link_to '#plan-your-move' do %>
+        <%= image_tag 'icons/plan-your-move.svg', alt: 'Plan your move icon' %>
+        Plan
+      <% end %>
+    </li>
+    <li>
+      <%= link_to '#schedule-your-move' do %>
+        <%= image_tag 'icons/schedule-your-move.svg', alt: 'Schedule your move icon' %>
+        Schedule
+      <% end %>
+    </li>
+    <li>
+      <%= link_to '#get-ready' do %>
+        <%= image_tag 'icons/get-ready.svg', alt: 'Get ready for moving day icon' %>
+        Moving Day
+      <% end %>
+    </li>
+    <li>
+      <%= link_to '#settling-in' do %>
+        <%= image_tag 'icons/settling-in.svg', alt: 'Settling in icon' %>
+        Settle In
+      <% end %>
+    </li>
+  </ul>
+</div>
+
 <div class="usa-grid homepage-content">
   <div class="usa-width-two-thirds">
     <div class="homepage-section" id="plan-your-move">
       <div class="usa-media_block">
-        <%= image_tag 'homepage/plan-your-move.svg', alt: '', class: 'usa-media_block-img' %>
+        <%= image_tag 'icons/plan-your-move-dark.svg', alt: '', class: 'usa-media_block-img' %>
         <div class="usa-media_block-body">
           <div class="homepage-section-header">Plan Your Move</div>
         </div>
@@ -20,9 +50,9 @@
       </ul>
     </div>
 
-    <div class="homepage-section">
+    <div class="homepage-section" id="schedule-your-move">
       <div class="usa-media_block">
-        <%= image_tag 'homepage/schedule-your-move.svg', alt: '', class: 'usa-media_block-img' %>
+        <%= image_tag 'icons/schedule-your-move-dark.svg', alt: '', class: 'usa-media_block-img' %>
         <div class="usa-media_block-body">
           <div class="homepage-section-header">Schedule Your Move</div>
           <p>Use Defense Personal Property System (DPS) to schedule your move with a transportation company.</p>
@@ -35,9 +65,9 @@
       </ul>
     </div>
 
-    <div class="homepage-section">
+    <div class="homepage-section" id="get-ready">
       <div class="usa-media_block">
-        <%= image_tag 'homepage/get-ready.svg', alt: '', class: 'usa-media_block-img' %>
+        <%= image_tag 'icons/get-ready-dark.svg', alt: '', class: 'usa-media_block-img' %>
         <div class="usa-media_block-body">
           <div class="homepage-section-header">Get Ready for Moving Day</div>
         </div>
@@ -49,9 +79,9 @@
       </ul>
     </div>
 
-    <div class="homepage-section">
+    <div class="homepage-section" id="settling-in">
       <div class="usa-media_block">
-        <%= image_tag 'homepage/settling-in.svg', alt: '', class: 'usa-media_block-img' %>
+        <%= image_tag 'icons/settling-in-dark.svg', alt: '', class: 'usa-media_block-img' %>
         <div class="usa-media_block-body">
           <div class="homepage-section-header">Settling In</div>
           <p>As you’re unpacking you might notice that some items got lost or broken in transit. Not only should you file claims to recieve compensation for your damaged items, make sure you review your transporter so that other family’s benefit from your experience.</p>
