@@ -16,8 +16,6 @@
     background-image: asset-url('uswds/angle-arrow-up-primary-hover.png');
     background-image: asset-url('uswds/angle-arrow-up-primary-hover.svg');
     color: $color-primary-darker;
-    font-family: $font-serif;
-    font-size: $h4-font-size;
 
     &:hover {
       background-color: $color-cool-blue-lighter;
@@ -32,5 +30,6 @@
 
   .usa-accordion-content {
     background-color: $color-gray-cool-light;
+    padding: 1rem 3rem 2rem 3rem;
   }
 }
