@@ -14,7 +14,7 @@
     @include padding(null $site-margins);
   }
 
-  max-width: 1040px;
+  max-width: $site-max-width;
 
   h1 {
     border-bottom: 0.25rem solid $color-primary-darker;
