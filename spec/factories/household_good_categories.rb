@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :household_good_category do
     sequence(:name) { |n| "Category #{n}" }
-    icon 'icons/bedroom.png'
+    icon 'icons/bedroom.svg'
 
     transient do
       household_goods_count 3
