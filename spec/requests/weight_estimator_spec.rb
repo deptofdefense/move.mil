@@ -12,10 +12,6 @@ RSpec.describe WeightEstimatorController, type: :request do
       it 'renders the index template' do
         assert_template 'index'
       end
-
-      it 'highlights the Weight Estimator navigation item' do
-        assert_select '.usa-sidenav-list .usa-current', text: 'Weight Estimator'
-      end
     end
 
     context 'household goods exist' do

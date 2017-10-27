@@ -12,10 +12,6 @@ RSpec.describe OfficesController, type: :request do
       it 'renders the index template' do
         assert_template 'index'
       end
-
-      it 'highlights the Locator Maps navigation item' do
-        assert_select '.usa-sidenav-list .usa-current', text: 'Locator Maps'
-      end
     end
 
     context 'when performing a ZIP code search' do
