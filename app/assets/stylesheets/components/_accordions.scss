@@ -13,8 +13,8 @@
 
   .usa-accordion-button {
     background-color: $color-gray-cool-light;
-    background-image: asset-url('uswds/angle-arrow-up-primary-hover.png');
-    background-image: asset-url('uswds/angle-arrow-up-primary-hover.svg');
+    background-image: asset-url("uswds/angle-arrow-up-primary-hover.png");
+    background-image: asset-url("uswds/angle-arrow-up-primary-hover.svg");
     color: $color-primary-darker;
 
     &:hover {
@@ -24,8 +24,8 @@
   }
 
   .usa-accordion-button[aria-expanded=false] {
-    background-image: asset-url('uswds/angle-arrow-down-primary-hover.png');
-    background-image: asset-url('uswds/angle-arrow-down-primary-hover.svg');
+    background-image: asset-url("uswds/angle-arrow-down-primary-hover.png");
+    background-image: asset-url("uswds/angle-arrow-down-primary-hover.svg");
   }
 
   .usa-accordion-content {

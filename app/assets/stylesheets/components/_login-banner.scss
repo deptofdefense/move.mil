@@ -2,17 +2,17 @@
   background-color: $color-gray-cool-light;
   color: $color-primary;
   padding: 1rem 0;
-}
 
-.homepage-login-banner .login-banner {
-  @include media($nav-width) {
-    background-color: $color-primary;
-    color: $color-white;
-    font-size: $h3-font-size;
-    padding: 2rem 0;
-
-    a {
+  .homepage-login-banner & {
+    @include media($nav-width) {
+      background-color: $color-primary;
       color: $color-white;
+      font-size: $h3-font-size;
+      padding: 2rem 0;
+
+      a {
+        color: $color-white;
+      }
     }
   }
 }
@@ -21,6 +21,7 @@
   @include outer-container();
   @include padding(null $site-margins-mobile);
   font-size: $small-font-size;
+  max-width: $site-max-width;
   text-align: center;
 
   @include media($medium-screen) {
@@ -31,6 +32,4 @@
     @include padding(null $site-margins);
     text-align: left;
   }
-
-  max-width: $site-max-width;
 }

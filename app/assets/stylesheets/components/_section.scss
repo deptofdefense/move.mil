@@ -34,14 +34,14 @@
     color: $color-primary-darker;
     font-size: 2.5rem;
 
-    & + p {
-      margin-top: 0.25rem;
-      margin-bottom: 0;
-    }
-
     @include media($nav-width) {
       font-size: 3.5rem;
       font-weight: $font-bold;
+    }
+
+    & + p {
+      margin-top: 0.25rem;
+      margin-bottom: 0;
     }
   }
 }
@@ -50,14 +50,14 @@
   @include margin($site-margins-mobile null);
   @include padding($site-margins);
 
+  background-color: $color-gray-cool-light;
+
   h4 {
     border-bottom: 1px solid $color-cool-blue;
     color: $color-cool-blue;
     margin-top: 1rem;
     padding-bottom: 0.5rem;
   }
-
-  background-color: $color-gray-cool-light;
 }
 
 .homepage-service-section {
@@ -73,16 +73,16 @@
 }
 
 .homepage-anchor-section {
+  @include media($medium-screen) {
+    display: none;
+  }
+
   .homepage-anchor-title {
     color: $color-primary-darker;
     font-size: 2.5rem;
     font-weight: $font-bold;
     margin: 3.5rem 1.5rem 1rem 1.5rem;
     text-align: center;
-  }
-
-  @include media($medium-screen) {
-    display: none;
   }
 }
 
