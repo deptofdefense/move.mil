@@ -52,7 +52,9 @@
           $subtotalInput.val(subtotal);
           $totalInput.val(total);
         } else {
-          this.$weightResult.html('Estimated grand total: ' + total + ' lbs');
+          this.$weightResult.html(
+            `<div>Estimated grand total: ${total} lbs</div><div>Average time to pack ${total} lbs is ${Math.ceil(total/4000)} day(s)</div>`
+          );
         }
       }
     },
