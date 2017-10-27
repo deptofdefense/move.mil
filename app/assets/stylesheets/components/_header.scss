@@ -12,30 +12,47 @@
     border-bottom-color: $color-gray-cool-light;
 
     .usa-logo {
+      float: none;
       margin-bottom: 2rem;
     }
   }
 }
 
-.usa-header-extended .usa-logo-text {
-  color: $color-primary-darkest;
-  font-family: $font-sans;
-  font-size: $h1-font-size;
-
-  @include media($nav-width) {
-    font-size: $title-font-size;
-  }
-
-  span {
-    display: block;
-    font-family: $font-serif;
-    font-size: $h5-font-size;
-    font-weight: $font-normal;
-    line-height: 3rem;
+.usa-header-extended {
+  .usa-logo-text {
+    color: $color-primary-darkest;
+    font-family: $font-sans;
+    font-size: $h1-font-size;
 
     @include media($nav-width) {
-      font-size: $h3-font-size;
-      margin-top: 0.5rem;
+      font-size: $title-font-size;
+      padding-top: 2rem;
+    }
+
+    span {
+      display: block;
+      font-family: $font-serif;
+      font-size: $h5-font-size;
+      font-weight: $font-normal;
+      line-height: 3rem;
+
+      @include media($nav-width) {
+        font-size: $h3-font-size;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  .header-transcom-logo {
+    display: none;
+
+    @include media($nav-width) {
+      display: block;
+      float: left;
+      margin-right: 2rem;
+      position: relative;
+      width: 185px;
+      z-index: 90001;
     }
   }
 }
