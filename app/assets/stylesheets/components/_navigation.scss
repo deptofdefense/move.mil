@@ -27,6 +27,11 @@
 
   @include media($nav-width) {
     margin: 0;
+
+    .usa-nav-link {
+      color: $color-primary;
+      font-size: $h4-font-size;
+    }
   }
 }
 
@@ -35,5 +40,11 @@
 
   @include media($nav-width) {
     border-top: 12px solid $color-primary-darkest;
+  }
+}
+
+.usa-hero .usa-nav {
+  @include media ($nav-width)  {
+    background: rgba(255, 255, 255, 0.9);
   }
 }

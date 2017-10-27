@@ -33,3 +33,10 @@
     padding: 1rem 3rem 2rem 3rem;
   }
 }
+
+.usa-nav-primary .usa-accordion-button[aria-expanded=false] {
+  @include media($nav-width) {
+    background-image: asset-url("uswds/angle-arrow-down-primary-hover.png");
+    background-image: asset-url("uswds/angle-arrow-down-primary-hover.svg");
+  }
+}

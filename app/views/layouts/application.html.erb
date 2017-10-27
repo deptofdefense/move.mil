@@ -71,7 +71,13 @@
       </div>
     </div>
     <div class="navbar-border"></div>
-    <%= render 'shared/nav' %>
+    <%- if current_page?(root_path) %>
+      <section class="usa-hero">
+        <%= render 'shared/nav' %>
+      </section>
+    <%- else %>
+      <%= render 'shared/nav' %>
+    <%- end -%>
   </header>
   <div class="usa-overlay"></div>
 
