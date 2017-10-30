@@ -15,6 +15,18 @@ ActiveRecord::Schema.define(version: 20171215164151) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "baseline_rates", force: :cascade do |t|
+    t.integer "dist_mi_min"
+    t.integer "dist_mi_max"
+    t.integer "weight_lbs_min"
+    t.integer "weight_lbs_max"
+    t.integer "rate"
+    t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["year"], name: "index_baseline_rates_on_year"
+  end
+
   create_table "branch_of_service_contacts", force: :cascade do |t|
     t.text "custsvc_org"
     t.text "custsvc_dsn"
@@ -57,6 +69,14 @@ ActiveRecord::Schema.define(version: 20171215164151) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "dtod_zip3_distances", force: :cascade do |t|
+    t.integer "orig_zip3"
+    t.integer "dest_zip3"
+    t.float "dist_mi"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "entitlements", force: :cascade do |t|
     t.string "rank", null: false
     t.integer "total_weight_self", null: false
@@ -74,6 +94,24 @@ ActiveRecord::Schema.define(version: 20171215164151) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "category"
+  end
+
+  create_table "full_packs", force: :cascade do |t|
+    t.integer "schedule"
+    t.integer "weight_lbs_min"
+    t.integer "weight_lbs_max"
+    t.decimal "rate", precision: 7, scale: 2
+    t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "full_unpacks", force: :cascade do |t|
+    t.integer "schedule"
+    t.decimal "rate", precision: 8, scale: 5
+    t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "household_good_categories", force: :cascade do |t|
@@ -112,6 +150,18 @@ ActiveRecord::Schema.define(version: 20171215164151) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "intra_alaska_baseline_rates", force: :cascade do |t|
+    t.integer "dist_mi_min"
+    t.integer "dist_mi_max"
+    t.integer "weight_lbs_min"
+    t.integer "weight_lbs_max"
+    t.integer "rate"
+    t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["year"], name: "index_intra_alaska_baseline_rates_on_year"
+  end
+
   create_table "offices", force: :cascade do |t|
     t.text "type"
     t.bigint "shipping_office_id"
@@ -137,6 +187,16 @@ ActiveRecord::Schema.define(version: 20171215164151) do
     t.index ["shipping_office_id"], name: "index_offices_on_shipping_office_id"
   end
 
+  create_table "service_areas", force: :cascade do |t|
+    t.integer "service_area"
+    t.text "name"
+    t.integer "services_schedule"
+    t.decimal "linehaul_factor", precision: 5, scale: 2
+    t.decimal "orig_dest_service_charge", precision: 5, scale: 2
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "service_specific_posts", force: :cascade do |t|
     t.text "title"
     t.date "effective_at"
@@ -145,6 +205,36 @@ ActiveRecord::Schema.define(version: 20171215164151) do
     t.datetime "updated_at", null: false
     t.bigint "branch_of_service_id"
     t.index ["branch_of_service_id"], name: "index_service_specific_posts_on_branch_of_service_id"
+  end
+
+  create_table "shorthauls", force: :cascade do |t|
+    t.integer "cwt_mi_min"
+    t.integer "cwt_mi_max"
+    t.decimal "rate", precision: 7, scale: 2
+    t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["year"], name: "index_shorthauls_on_year"
+  end
+
+  create_table "top_best_value_scores", force: :cascade do |t|
+    t.text "orig"
+    t.text "dest"
+    t.decimal "perf_period_h"
+    t.decimal "perf_period_hs"
+    t.decimal "perf_period_1"
+    t.decimal "perf_period_1s"
+    t.decimal "perf_period_2"
+    t.decimal "perf_period_2s"
+    t.decimal "perf_period_3"
+    t.decimal "perf_period_3s"
+    t.decimal "perf_period_4"
+    t.decimal "perf_period_4s"
+    t.decimal "perf_period_5"
+    t.decimal "perf_period_5s"
+    t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "tutorial_steps", force: :cascade do |t|

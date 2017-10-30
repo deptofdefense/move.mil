@@ -1,0 +1,2 @@
+class ServiceArea < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class FullPack < ApplicationRecord
+end

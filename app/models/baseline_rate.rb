@@ -1,0 +1,2 @@
+class BaselineRate < ApplicationRecord
+end

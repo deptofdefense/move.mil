@@ -97,3 +97,54 @@ end
 CSV.foreach(Rails.root.join('db', 'seeds', 'zip5_rate_areas.csv'), headers: true) do |row|
   Zip5RateArea.create(zip5: row['zip5'], rate_area: row['rate_area'])
 end
+
+CSV.foreach(Rails.root.join('db', 'seeds', '2017_400NG_Geographic_Schedule.csv'), headers:true) do |row|
+  ServiceArea.create(service_area: row['service_area'], name: row['name'], services_schedule: row['services_schedule'], linehaul_factor: row['linehaul_factor'], orig_dest_service_charge: row['orig_dest_service_charge'], year: 2017)
+end
+
+puts 'Loading Baseline Rates...'
+CSV.foreach(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_CONUS.csv'), headers: true) do |row|
+  BaselineRate.create(dist_mi_min: row['dist_mi_min'], dist_mi_max: row['dist_mi_max'], weight_lbs_min: row['weight_lbs_min'], weight_lbs_max: row['weight_lbs_max'], rate: row['rate'], year: 2017)
+end
+
+CSV.foreach(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_IntraAK.csv'), headers: true) do |row|
+  IntraAlaskaBaselineRate.create(dist_mi_min: row['dist_mi_min'], dist_mi_max: row['dist_mi_max'], weight_lbs_min: row['weight_lbs_min'], weight_lbs_max: row['weight_lbs_max'], rate: row['rate'], year: 2017)
+end
+
+CSV.foreach(Rails.root.join('db', 'seeds', '2017_400NG_Shorthaul.csv'), headers: true) do |row|
+  Shorthaul.create(cwt_mi_min: row['cwt_mi_min'], cwt_mi_max: row['cwt_mi_max'], rate: row['rate'], year: 2017)
+end
+
+CSV.foreach(Rails.root.join('db', 'seeds', '2017_400NG_Full_Pack.csv'), headers: true) do |row|
+  FullPack.create(schedule: row['schedule'], weight_lbs_min: row['weight_lbs_min'], weight_lbs_max: row['weight_lbs_max'], rate: row['rate'], year: 2017)
+end
+
+CSV.foreach(Rails.root.join('db', 'seeds', '2017_400NG_Full_Unpack.csv'), headers: true) do |row|
+  FullUnpack.create(schedule: row['schedule'], rate: row['rate'], year: 2017)
+end
+
+puts 'Loading ZIP3 to ZIP3 distances from DTOD...'
+CSV.foreach(Rails.root.join('db', 'seeds', 'zip3_dtod_output.csv'), headers: false, col_sep: ' ') do |row|
+  DtodZip3Distance.create(orig_zip3: row[0], dest_zip3: row[1], dist_mi: row[2])
+end
+
+puts 'Loading top Best Value Scores for 2017...'
+CSV.foreach(Rails.root.join('db', 'seeds', '2017_BVS.csv'), headers: true) do |row|
+  bvs = TopBestValueScore.create do |b|
+    b.year = 2017
+    b.orig = row[0]
+    b.dest = row[1]
+    b.perf_period_h  = if ((perf_period_h  = row[2]) == '#N/A') then Float::NAN else perf_period_h end
+    b.perf_period_hs = if ((perf_period_hs = row[3]) == '#N/A') then Float::NAN else perf_period_hs end
+    b.perf_period_1  = if ((perf_period_1  = row[4]) == '#N/A') then Float::NAN else perf_period_1 end
+    b.perf_period_1s = if ((perf_period_1s = row[5]) == '#N/A') then Float::NAN else perf_period_1s end
+    b.perf_period_2  = if ((perf_period_2  = row[6]) == '#N/A') then Float::NAN else perf_period_2 end
+    b.perf_period_2s = if ((perf_period_2s = row[7]) == '#N/A') then Float::NAN else perf_period_2s end
+    b.perf_period_3  = if ((perf_period_3  = row[8]) == '#N/A') then Float::NAN else perf_period_3 end
+    b.perf_period_3s = if ((perf_period_3s = row[9]) == '#N/A') then Float::NAN else perf_period_3s end
+    b.perf_period_4  = if ((perf_period_4  = row[10]) == '#N/A') then Float::NAN else perf_period_4 end
+    b.perf_period_4s = if ((perf_period_4s = row[11]) == '#N/A') then Float::NAN else perf_period_4s end
+    b.perf_period_5  = if ((perf_period_5  = row[12]) == '#N/A') then Float::NAN else perf_period_5 end
+    b.perf_period_5s = if ((perf_period_5s = row[13]) == '#N/A') then Float::NAN else perf_period_5s end
+  end
+end

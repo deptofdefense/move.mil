@@ -1,0 +1,2 @@
+class TopBestValueScore < ApplicationRecord
+end

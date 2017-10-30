@@ -1,0 +1,2 @@
+class Shorthaul < ApplicationRecord
+end

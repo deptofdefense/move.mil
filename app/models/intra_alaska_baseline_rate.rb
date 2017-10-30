@@ -1,0 +1,2 @@
+class IntraAlaskaBaselineRate < ApplicationRecord
+end
