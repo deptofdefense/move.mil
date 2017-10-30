@@ -46,15 +46,15 @@
 .usa-hero {
   background-image: url(asset_path("homepage/hero.svg"));
   background-position: left center;
-  height: 173px;
+  height: 17rem;
   padding: 0;
 
   @include media($medium-screen) {
-    height: 300px;
+    height: 30rem;
   }
 
   @include media($nav-width) {
-    height: 432px;
+    height: 43rem;
   }
 }
 
