@@ -1,0 +1,18 @@
+.breadcrumbs {
+  @media screen and (max-width: $nav-width) {
+    background-color: $color-gray-cool-light;
+  }
+}
+
+.breadcrumbs-text {
+  @include outer-container();
+  @include padding($site-margins-mobile);
+
+  font-size: $small-font-size;
+  max-width: $site-max-width;
+
+  @include media($nav-width) {
+    @include padding(2rem $site-margins);
+    text-align: left;
+  }
+}
