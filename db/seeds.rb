@@ -99,7 +99,7 @@ CSV.foreach(Rails.root.join('db', 'seeds', 'zip5_rate_areas.csv'), headers: true
 end
 
 CSV.foreach(Rails.root.join('db', 'seeds', '2017_400NG_Geographic_Schedule.csv'), headers:true) do |row|
-  ServiceArea.create(service_area: row['service_area'], name: row['name'], services_schedule: row['services_schedule'], linehaul_factor: row['linehaul_factor'], orig_dest_service_charge: row['orig_dest_service_charge'], year: 2017)
+  ServiceArea.create(service_area: row[0], name: row['name'], services_schedule: row['services_schedule'], linehaul_factor: row['linehaul_factor'], orig_dest_service_charge: row['orig_dest_service_charge'], year: 2017)
 end
 
 puts 'Loading Baseline Rates...'
