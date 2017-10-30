@@ -46,10 +46,8 @@ class PpmEstimatorController < ApplicationController
 
     weight = params[:weight].to_i
 
-    #orig_svc_area = ServiceArea.find_by(year: year, service_area: orig_zip3['service_area'])
-    #dest_svc_area = ServiceArea.find_by(year: year, service_area: dest_zip3['service_area'])
-    orig_svc_area = ServiceArea.find_by(service_area: orig_zip3['service_area'])
-    dest_svc_area = ServiceArea.find_by(service_area: dest_zip3['service_area'])
+    orig_svc_area = ServiceArea.find_by(year: year, service_area: orig_zip3['service_area'])
+    dest_svc_area = ServiceArea.find_by(year: year, service_area: dest_zip3['service_area'])
 
     distance = DtodZip3Distance.find_by(orig_zip3: orig_zip3['zip3'], dest_zip3: dest_zip3['zip3'])['dist_mi']
 

@@ -191,8 +191,9 @@ ActiveRecord::Schema.define(version: 20171215164151) do
     t.integer "service_area"
     t.text "name"
     t.integer "services_schedule"
-    t.decimal "linehaul_factor", precision: 5, scale: 2
-    t.decimal "orig_dest_service_charge", precision: 5, scale: 2
+    t.decimal "linehaul_factor", precision: 7, scale: 2
+    t.decimal "orig_dest_service_charge", precision: 7, scale: 2
+    t.integer "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
