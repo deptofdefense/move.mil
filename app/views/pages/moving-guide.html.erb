@@ -1,5 +1,8 @@
 <%- @page_title = 'Moving with the Military' -%>
 
+<%= render 'shared/login_banner' %>
+<%= render partial: 'shared/breadcrumbs', locals: {page_title: @page_title} %>
+
 <div class="usa-section main-section moving-guide">
   <h1><%= @page_title %></h1>
 

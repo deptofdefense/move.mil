@@ -12,7 +12,7 @@
   max-width: $site-max-width;
 
   @include media($nav-width) {
-    @include padding(2rem $site-margins);
+    padding: 2rem $site-margins 0 $site-margins;
     text-align: left;
   }
 }

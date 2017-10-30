@@ -1,5 +1,8 @@
 <%- @page_title = 'What to expect… OCONUS PCS' -%>
 
+<%= render 'shared/login_banner' %>
+<%= render partial: 'shared/breadcrumbs', locals: {page_title: @page_title} %>
+
 <div class="usa-section main-section">
   <h1>What to expect… <%= abbr_tag('oconus') %> <%= abbr_tag('pcs') %></h1>
 

@@ -1,5 +1,8 @@
 <%- @page_title = 'Tools & Resources' -%>
 
+<%= render 'shared/login_banner' %>
+<%= render partial: 'shared/breadcrumbs', locals: {page_title: @page_title} %>
+
 <div class="usa-section main-section tools-resources">
   <h1><%= @page_title %></h1>
   <div class="usa-grid tools-links">

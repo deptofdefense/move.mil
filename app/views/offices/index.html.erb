@@ -1,5 +1,7 @@
 <%- @page_title = 'Locator Maps' -%>
 
+<%= render 'shared/login_banner' %>
+<%= render partial: 'shared/breadcrumbs', locals: {page_title: @page_title, parent_pages: [{name: 'Tools & Resources', path: page_path('resources')}]} %>
 <div class="usa-section main-section">
   <h1><%= @page_title %></h1>
 

@@ -1,5 +1,8 @@
 <%- @page_title = 'Weight Estimator' -%>
 
+<%= render 'shared/login_banner' %>
+<%= render partial: 'shared/breadcrumbs', locals: {page_title: @page_title, parent_pages: [{name: 'Tools & Resources', path: page_path('resources')}]} %>
+
 <div class="usa-section main-section" id="weight-estimator">
   <h1><%= @page_title %></h1>
   <p>Get to know how much your personal belongings weigh with the Weight Estimator Tool. Enter the number of items you have for each type, then click "Calculate" for that category. At the bottom of the page is a Grand Total Estimate that you can use to compare to your Entitlement, and prepare for your move.</p>
