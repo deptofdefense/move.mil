@@ -1,48 +1,88 @@
-.dps-login-section {
-  @include padding($site-margins-mobile);
-  background-color: $color-gray-lightest;
+.homepage-section {
+  @include padding($site-margins-mobile null);
 
-  .usa-layout-docs-sidenav & {
-    @include margin($site-margins null);
-    @include padding($site-margins 0);
-    background-color: transparent;
-    border-top: 0.25rem solid $color-primary-darkest;
+  @include media($medium-screen) {
+    @include padding($site-margins null);
   }
 
-  p:first-child {
+  & + & {
+    border-top: 2px dotted $color-gray-cool-light;
+  }
+
+  img {
+    width: 4rem;
+
+    @include media($nav-width) {
+      margin-right: 3rem;
+      width: 9rem;
+    }
+  }
+
+  ul {
+    clear: left;
     margin-top: 0;
+    padding-top: 2rem;
+
+    @include media($nav-width) {
+      clear: none;
+      margin-left: 12rem;
+      padding-top: 2.5rem;
+    }
   }
 
-  .usa-button {
-    display: block;
+  .homepage-section-header {
+    color: $color-primary-darker;
+    font-size: 2.5rem;
+
+    @include media($nav-width) {
+      font-size: 3.5rem;
+      font-weight: $font-bold;
+    }
+
+    & + p {
+      margin-top: 0.25rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.helpful-links-section {
+  @include margin($site-margins-mobile null);
+  @include padding($site-margins);
+
+  background-color: $color-gray-cool-light;
+
+  h4 {
+    border-bottom: 1px solid $color-cool-blue;
+    color: $color-cool-blue;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.homepage-service-section {
+  border-top: 0.25rem solid $color-primary-darkest;
+  h3 {
+    color: $color-primary-darkest;
+    font-family: $font-sans;
+    margin-bottom: 0;
+  }
+  p {
     margin: 0;
   }
 }
 
-.homepage-section {
-  @include padding($site-margins null);
-  border-bottom: 1px solid $color-gray-light;
-
-  &:last-of-type {
-    border-bottom: none;
-  }
-
-  img {
+.homepage-anchor-section {
+  @include media($medium-screen) {
     display: none;
-    margin-right: $site-margins;
-    width: 14rem;
-
-    @include media($medium-screen) {
-      display: block;
-    }
   }
 
-  h3 {
-    margin: 0;
-
-    & + p {
-      margin-top: 0.25rem;
-    }
+  .homepage-anchor-title {
+    color: $color-primary-darker;
+    font-size: 2.5rem;
+    font-weight: $font-bold;
+    margin: 3.5rem 1.5rem 1rem 1.5rem;
+    text-align: center;
   }
 }
 

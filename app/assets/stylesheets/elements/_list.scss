@@ -20,8 +20,39 @@
     img {
       display: block;
       margin: 0 auto 1.5rem auto;
-      max-width: 14rem;
+      max-width: 12rem;
       width: 100%;
+    }
+  }
+}
+
+.homepage-anchor-list {
+  overflow: hidden;
+
+  li {
+    @include padding(0.6rem);
+    float: left;
+    width: 25%;
+
+    a {
+      display: block;
+      font-size: $small-font-size;
+      text-align: center;
+    }
+
+    a:link,
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:active {
+      text-decoration: underline;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto 1.5rem auto;
     }
   }
 }

@@ -6,25 +6,21 @@
 
     <ul class="usa-nav-primary usa-accordion">
       <li>
-        <button aria-controls="nav-moving-with-the-military" aria-expanded="false" class="usa-accordion-button usa-nav-link">
-          <span>Moving with the Military</span>
+        <button aria-controls="nav-moving-guide" aria-expanded="false" class="usa-accordion-button usa-nav-link">
+          <span>Moving Guide</span>
         </button>
 
-        <ul class="usa-nav-submenu" id="nav-moving-with-the-military" aria-hidden="true">
-          <li><%= link_to 'Overview', page_path('moving-guide') %></li>
-          <li><%= link_to raw("<i>What to expect…</i> #{abbr_tag('conus')} #{abbr_tag('pcs')}"), page_path('moving-guide/conus') %></li>
-          <li><%= link_to raw("<i>What to expect…</i> #{abbr_tag('oconus')} #{abbr_tag('pcs')}"), page_path('moving-guide/oconus') %></li>
-          <li><%= link_to raw("<i>What to expect…</i> #{abbr_tag('tdy')}"), page_path('moving-guide/tdy') %></li>
-          <li><%= link_to raw('<i>What to expect…</i> Retirees/Separatees'), page_path('moving-guide/retirees-separatees') %></li>
-          <li><%= link_to raw('<i>What to expect…</i> Civilians'), page_path('moving-guide/civilians') %></li>
-          <li><%= link_to 'Moving Tips', page_path('moving-guide/tips') %></li>
+        <ul class="usa-nav-submenu" id="nav-moving-guide" aria-hidden="true">
+          <li><%= link_to 'Moving in the Military Overview', page_path('moving-guide') %></li>
+          <li><%= link_to 'Entitlements/Guidelines', page_path('entitlements') %></li>
+          <li><%= link_to 'What to Expect?', page_path('moving-guide/conus') %></li>
           <li><%= link_to 'Nightmare Moves', page_path('moving-guide/nightmare-moves') %></li>
+          <li><%= link_to 'Moving Tips', page_path('moving-guide/tips') %></li>
+          <li><%= link_to raw("Overseas Moves (#{abbr_tag('oconus')})"), page_path('moving-guide/oconus') %></li>
+          <li><%= link_to raw('Retirees/Separatees'), page_path('moving-guide/retirees-separatees') %></li>
+          <li><%= link_to raw("#{abbr_tag('dod')} Civilian Employees"), page_path('moving-guide/civilians') %></li>
+          <li><%= link_to 'Service Specific Info', service_specific_information_path %></li>
         </ul>
-      </li>
-      <li>
-        <%= link_to page_path('entitlements'), class: 'usa-nav-link' do %>
-          <span>Entitlements</span>
-        <% end %>
       </li>
       <li>
         <%= link_to tutorials_path, class: 'usa-nav-link' do %>
@@ -32,8 +28,13 @@
         <% end %>
       </li>
       <li>
-        <%= link_to service_specific_information_path, class: 'usa-nav-link' do %>
-          <span>Service-Specific Information</span>
+        <%= link_to faqs_path, class: 'usa-nav-link' do %>
+          <span>FAQ</span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to page_path('customer-service'), class: 'usa-nav-link' do %>
+          <span>Customer Service</span>
         <% end %>
       </li>
       <li>
@@ -42,18 +43,11 @@
         </button>
 
         <ul class="usa-nav-submenu" id="nav-resources" aria-hidden="true">
-          <li><%= link_to 'Overview', page_path('resources') %></li>
-          <li><%= link_to 'Locator Maps', offices_path %></li>
+          <li><%= link_to 'DOD Policy & Resources', page_path('resources') %></li>
           <li><%= link_to 'Weight Estimator', weight_estimator_path %></li>
+          <li><%= link_to 'PPPO & Weight Scale Locations', offices_path %></li>
         </ul>
       </li>
     </ul>
-
-    <div class="usa-nav-secondary">
-      <ul class="usa-unstyled-list usa-nav-secondary-links">
-        <li><%= link_to 'Frequently Asked Questions', faqs_path %></li>
-        <li><%= link_to 'Customer Service', page_path('customer-service') %></li>
-      </ul>
-    </div>
   </div>
 </nav>

@@ -1,6 +1,6 @@
 .usa-navbar {
-  @include padding(1rem 0);
-  height: 6rem;
+  @include padding(2rem 0);
+  height: 10.5rem;
 
   @include media($nav-width) {
     @include padding(0 null);
@@ -20,6 +20,10 @@
   .usa-header-extended .usa-nav-inner {
     margin-top: 0;
   }
+
+  .usa-header-extended .usa-navbar::after {
+    content: none;
+  }
 }
 
 .usa-nav-primary {
@@ -27,9 +31,24 @@
 
   @include media($nav-width) {
     margin: 0;
+
+    .usa-nav-link {
+      color: $color-primary;
+      font-size: $h4-font-size;
+    }
   }
 }
 
 .navbar-border {
-  border-top: 12px solid $color-primary-darkest;
+  border-top: 5px solid $color-primary-darkest;
+
+  @include media($nav-width) {
+    border-top: 12px solid $color-primary-darkest;
+  }
+}
+
+.usa-hero .usa-nav {
+  @include media ($nav-width)  {
+    background: rgba(255, 255, 255, 0.9);
+  }
 }

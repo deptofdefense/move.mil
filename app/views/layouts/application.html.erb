@@ -62,16 +62,23 @@
       <%= raw('<button class="usa-menu-btn">Menu</button>') %>
 
       <div class="usa-logo" id="logo">
-        <em class="usa-logo-text">
-          <%= link_to root_path, 'aria-label': 'Home', rel: 'home' do %>
+        <%= link_to root_path, 'aria-label': 'Home', rel: 'home' do %>
+          <%= image_tag 'emblems/ustranscom.svg', alt: 'United States Transportation Command emblem', class: 'header-transcom-logo' %>
+          <em class="usa-logo-text">
             <%= t('site.name') %>
-            <span>– <%= raw t('site.tagline', abbr: abbr_tag('dod')) %></span>
-          <% end %>
-        </em>
+            <span> <%= raw t('site.tagline', abbr: abbr_tag('dod')) %></span>
+          </em>
+        <% end %>
       </div>
     </div>
     <div class="navbar-border"></div>
-    <%= render 'shared/nav' %>
+    <%- if current_page?(root_path) %>
+      <section class="usa-hero">
+        <%= render 'shared/nav' %>
+      </section>
+    <%- else %>
+      <%= render 'shared/nav' %>
+    <%- end -%>
   </header>
   <div class="usa-overlay"></div>
 
