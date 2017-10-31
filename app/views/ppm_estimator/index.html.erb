@@ -47,13 +47,13 @@
     <fieldset>
       <legend><div class="ppm-outline"></div>Where are you moving from?</legend>
       <%= form.label :start, 'Origin ZIP Code' %>
-      <%= form.text_field :start, { id: :start, required: true } %>
+      <%= form.text_field :start, { id: :start, onkeypress: 'return onZipCodeKey(this, event)', required: true } %>
     </fieldset>
 
     <fieldset>
       <legend><div class="ppm-outline"></div>Where are you moving to?</legend>
       <%= form.label :end, 'Destination ZIP Code' %>
-      <%= form.text_field :end, { id: :end, required: true } %>
+      <%= form.text_field :end, { id: :end, onkeypress: 'return onZipCodeKey(this, event)', required: true } %>
     </fieldset>
 
     <fieldset>
@@ -67,22 +67,22 @@
       <p>
         The government will only pay for the actual weight transported, up to your weight allowance.
         Don't forget - if you move some of your goods yourself (<%= abbr_tag('ppm') %>) and
-        have the government move the rest (<%= abbr_tag('hhg') %>), <em>the weight of both shipments
+        have the government move the rest (<%= abbr_tag('hhg') %>), <em>the weights of both shipments
         count towards your allowance.</em>
         <a href="#TODO">Need help estimating your total household weight?</a>
       </p>
       <%= form.label :weight, 'Estimated Household Goods Weight' %>
-      <%= form.text_field :weight, { id: :weight, required: true } %>
+      <%= form.text_field :weight, { id: :weight, onkeypress: 'return isDigitKey(event)', required: true } %>
       <p>
         Your weight allowance is <strong><%= @entitlement_weight %> lbs</strong>.
       </p>
       <%= form.label :weight_progear, 'Estimated ProGear Weight' %>
-      <%= form.text_field :weight_progear, { id: :weight_progear, required: false } %>
+      <%= form.text_field :weight_progear, { id: :weight_progear, onkeypress: 'return isDigitKey(event)', required: false } %>
       <p>
         Your ProGear allowance is <strong><%= @entitlement_progear %> lbs</strong>.
       </p>
       <%= form.label :weight_progear_spouse, 'Estimated ProGear Weight (Spouse)' %>
-      <%= form.text_field :weight_progear_spouse, { id: :weight_progear_spouse, required: false } %>
+      <%= form.text_field :weight_progear_spouse, { id: :weight_progear_spouse, onkeypress: 'return isDigitKey(event)', required: false } %>
       <p>
         Your spouse's ProGear allowance is <strong><%= @entitlement_progear_spouse %> lbs</strong>.
       </p>
