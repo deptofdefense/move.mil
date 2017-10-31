@@ -1,155 +1,150 @@
 <%- @page_title = 'Personally Procured Move (PPM) Estimator' -%>
 
-<div class="usa-grid usa-section usa-layout-docs">
-  <%= render 'shared/sidenav' %>
+<div class="usa-section main-section">
+  <h1><%= @page_title %></h1>
 
-  <div class="usa-width-three-fourths usa-layout-docs-main_content">
-    <h1><%= @page_title %></h1>
+  <h4>
+    For your upcoming move, get an estimate for how much the government will
+    pay <strong>you</strong> if you choose to "do it yourself."
+  </h4>
 
-    <h4>
-      For your upcoming move, get an estimate for how much the government will
-      pay <strong>you</strong> if you choose to "do it yourself."
-    </h4>
+  <p>
+    You can use this money to cover the cost of hiring packers and movers,
+    renting moving trucks, and so on. If you spend less to move than the
+    government will incentivize you to move yourself, you get to pocket the
+    difference!
+  </p>
 
-    <p>
-      You can use this money to cover the cost of hiring packers and movers,
-      renting moving trucks, and so on. If you spend less to move than the
-      government will incentivize you to move yourself, you get to pocket the
-      difference!
-    </p>
+  <%= form_with url: ppm_estimator_path, class: 'ppm-form', method: 'get' do |form| %>
+    <fieldset>
+      <legend><div class="ppm-outline"></div>What is your rank?</legend>
+        <%= form.label :rank, 'Rank' %>
+        <%= form.select :rank, options_from_collection_for_select(@entitlements, :slug, :rank), { include_blank: true }, { id: :rank, required: true } %>
+    </fieldset>
 
-    <%= form_with url: ppm_estimator_path, class: 'ppm-form', method: 'get' do |form| %>
-      <fieldset>
-        <legend><div class="ppm-outline"></div>What is your rank?</legend>
-          <%= form.label :rank, 'Rank' %>
-          <%= form.select :rank, options_from_collection_for_select(@entitlements, :slug, :rank), { include_blank: true }, { id: :rank, required: true } %>
-      </fieldset>
+    <fieldset>
+      <legend><div class="ppm-outline"></div>What is your branch of service?</legend>
+        <%= form.label :branch, 'Branch of Service' %>
+        <%= form.select :branch, [['Air Force', 'air-force'], ['Army', 'army'], ['Coast Guard', 'coast-guard'], ['Marine Corps', 'marines'], ['Navy', 'navy']], { include_blank: true }, { id: :branch, required: true } %>
+    </fieldset>
 
-      <fieldset>
-        <legend><div class="ppm-outline"></div>What is your branch of service?</legend>
-          <%= form.label :branch, 'Branch of Service' %>
-          <%= form.select :branch, [['Air Force', 'air-force'], ['Army', 'army'], ['Coast Guard', 'coast-guard'], ['Marine Corps', 'marines'], ['Navy', 'navy']], { include_blank: true }, { id: :branch, required: true } %>
-      </fieldset>
+    <fieldset>
+      <legend><div class="ppm-outline"></div>Do you have dependents?</legend>
+      <%= form.radio_button :dependents, 'yes', { id: :dependents_yes, required: true } %>
+      <%= form.label :dependents, raw('<strong>Yes</strong>, I have dependents'), :value => 'yes' %>
+      <%= form.radio_button :dependents, 'no', { id: :dependents_no, required: true } %>
+      <%= form.label :dependents, raw('<strong>No</strong>, I do not have dependents'), :value => 'no' %>
+    </fieldset>
 
-      <fieldset>
-        <legend><div class="ppm-outline"></div>Do you have dependents?</legend>
-        <%= form.radio_button :dependents, 'yes', { id: :dependents_yes, required: true } %>
-        <%= form.label :dependents, raw('<strong>Yes</strong>, I have dependents'), :value => 'yes' %>
-        <%= form.radio_button :dependents, 'no', { id: :dependents_no, required: true } %>
-        <%= form.label :dependents, raw('<strong>No</strong>, I do not have dependents'), :value => 'no' %>
-      </fieldset>
+    <fieldset>
+      <legend><div class="ppm-outline"></div>Are you married?</legend>
+      <%= form.radio_button :married, 'yes', { id: :married_yes, required: true } %>
+      <%= form.label :married, raw('<strong>Yes</strong>, I am married'), :value => 'yes' %>
+      <%= form.radio_button :married, 'no', { id: :married_no, required: true } %>
+      <%= form.label :married, raw('<strong>No</strong>, I am not married'), :value => 'no' %>
+    </fieldset>
 
-      <fieldset>
-        <legend><div class="ppm-outline"></div>Are you married?</legend>
-        <%= form.radio_button :married, 'yes', { id: :married_yes, required: true } %>
-        <%= form.label :married, raw('<strong>Yes</strong>, I am married'), :value => 'yes' %>
-        <%= form.radio_button :married, 'no', { id: :married_no, required: true } %>
-        <%= form.label :married, raw('<strong>No</strong>, I am not married'), :value => 'no' %>
-      </fieldset>
+    <fieldset>
+      <legend><div class="ppm-outline"></div>Where are you moving from?</legend>
+      <%= form.label :start, 'Origin ZIP Code' %>
+      <%= form.text_field :start, { id: :start, required: true } %>
+    </fieldset>
 
-      <fieldset>
-        <legend><div class="ppm-outline"></div>Where are you moving from?</legend>
-        <%= form.label :start, 'Origin ZIP Code' %>
-        <%= form.text_field :start, { id: :start, required: true } %>
-      </fieldset>
+    <fieldset>
+      <legend><div class="ppm-outline"></div>Where are you moving to?</legend>
+      <%= form.label :end, 'Destination ZIP Code' %>
+      <%= form.text_field :end, { id: :end, required: true } %>
+    </fieldset>
 
-      <fieldset>
-        <legend><div class="ppm-outline"></div>Where are you moving to?</legend>
-        <%= form.label :end, 'Destination ZIP Code' %>
-        <%= form.text_field :end, { id: :end, required: true } %>
-      </fieldset>
+    <fieldset>
+      <legend><div class="ppm-outline"></div>When do you want to move?</legend>
+      <%= form.label :date, 'Moving Date' %>
+      <%= form.date_field :date, { id: :date, required: true } %>
+    </fieldset>
 
-      <fieldset>
-        <legend><div class="ppm-outline"></div>When do you want to move?</legend>
-        <%= form.label :date, 'Moving Date' %>
-        <%= form.date_field :date, { id: :date, required: true } %>
-      </fieldset>
+    <fieldset>
+      <legend><div class="ppm-outline"></div>How much, in pounds, do you expect to move without the government's help?</legend>
+      <p>
+        The government will only pay for the actual weight transported, up to your weight allowance.
+        Don't forget - if you move some of your goods yourself (<%= abbr_tag('ppm') %>) and
+        have the government move the rest (<%= abbr_tag('hhg') %>), <em>the weight of both shipments
+        count towards your allowance.</em>
+        <a href="#TODO">Need help estimating your total household weight?</a>
+      </p>
+      <%= form.label :weight, 'Estimated Household Goods Weight' %>
+      <%= form.text_field :weight, { id: :weight, required: true } %>
+      <p>
+        Your weight allowance is <strong><%= @entitlement_weight %> lbs</strong>.
+      </p>
+      <%= form.label :weight_progear, 'Estimated ProGear Weight' %>
+      <%= form.text_field :weight_progear, { id: :weight_progear, required: false } %>
+      <p>
+        Your ProGear allowance is <strong><%= @entitlement_progear %> lbs</strong>.
+      </p>
+      <%= form.label :weight_progear_spouse, 'Estimated ProGear Weight (Spouse)' %>
+      <%= form.text_field :weight_progear_spouse, { id: :weight_progear_spouse, required: false } %>
+      <p>
+        Your spouse's ProGear allowance is <strong><%= @entitlement_progear_spouse %> lbs</strong>.
+      </p>
+    </fieldset>
 
-      <fieldset>
-        <legend><div class="ppm-outline"></div>How much, in pounds, do you expect to move without the government's help?</legend>
-        <p>
-          The government will only pay for the actual weight transported, up to your weight allowance.
-          Don't forget - if you move some of your goods yourself (<%= abbr_tag('ppm') %>) and
-          have the government move the rest (<%= abbr_tag('hhg') %>), <em>the weight of both shipments
-          count towards your allowance.</em>
-          <a href="#TODO">Need help estimating your total household weight?</a>
-        </p>
-        <%= form.label :weight, 'Estimated Household Goods Weight' %>
-        <%= form.text_field :weight, { id: :weight, required: true } %>
-        <p>
-          Your weight allowance is <strong><%= @entitlement_weight %> lbs</strong>.
-        </p>
-        <%= form.label :weight_progear, 'Estimated ProGear Weight' %>
-        <%= form.text_field :weight_progear, { id: :weight_progear, required: false } %>
-        <p>
-          Your ProGear allowance is <strong><%= @entitlement_progear %> lbs</strong>.
-        </p>
-        <%= form.label :weight_progear_spouse, 'Estimated ProGear Weight (Spouse)' %>
-        <%= form.text_field :weight_progear_spouse, { id: :weight_progear_spouse, required: false } %>
-        <p>
-          Your spouse's ProGear allowance is <strong><%= @entitlement_progear_spouse %> lbs</strong>.
-        </p>
-      </fieldset>
+    <fieldset>
+      <legend><div class="ppm-outline"></div>Do you plan to pack your household goods yourself?</legend>
+      <p>
+        The government will pay you the amount equal to the government cost
+        to have your belongings professionally packed. The payment can be
+        used to cover the packing materials or to hire any help you may need
+        to pack your house. Any left over money, you can keep — no reciepts
+        needed!
+        <a href="#TODO">How do I make sure the government pays me my packing entitlement?</a>
+      </p>
+      <%= form.radio_button :selfpack, 'yes', { id: :selfpack_yes, required: true }  %>
+      <%= form.label :selfpack, 'Yes', :value => 'yes' %>
+      <%= form.radio_button :selfpack, 'no', { id: :selfpack_no, required: true } %>
+      <%= form.label :selfpack, 'No', :value => 'no' %>
+    </fieldset>
 
-      <fieldset>
-        <legend><div class="ppm-outline"></div>Do you plan to pack your household goods yourself?</legend>
-        <p>
-          The government will pay you the amount equal to the government cost
-          to have your belongings professionally packed. The payment can be
-          used to cover the packing materials or to hire any help you may need
-          to pack your house. Any left over money, you can keep — no reciepts
-          needed!
-          <a href="#TODO">How do I make sure the government pays me my packing entitlement?</a>
-        </p>
-        <%= form.radio_button :selfpack, 'yes', { id: :selfpack_yes, required: true }  %>
-        <%= form.label :selfpack, 'Yes', :value => 'yes' %>
-        <%= form.radio_button :selfpack, 'no', { id: :selfpack_no, required: true } %>
-        <%= form.label :selfpack, 'No', :value => 'no' %>
-      </fieldset>
+    <button>Calculate My Estimate</button>
+  <% end %>
 
-      <button>Calculate My Estimate</button>
-    <% end %>
+  <div class="ppm-estimate-table-title">
+    Your PPM Incentive Estimate:<a href="#TODO">Edit Details</a>
+  </div>
+  <div class="ppm-estimate-table">
+    Estimated Transportation Incentive<br>
+    <span class="ppm-estimate-amount">$<%= number_with_precision(@incentive_without_packing, precision: 2) %></span>
+    <span class="ppm-estimate-detail">
+      From <%= @start_basepoint_city %>, <%= @start_state %> <%= params['start'] %>
+      to <%= @end_basepoint_city %>, <%= @end_state %> <%= params['end'] %>
+    </span><br>
+    <span class="ppm-estimate-detail">
+      Departing <%= @date %> (Peak Season)<br>
+      <%= params['weight'] %> lbs
+    </span>
+  </div>
+  <div class="ppm-estimate-table">
+    Estimated Packing Incentive<br>
+    <span class="ppm-estimate-detail"><%= params['weight'] %> lbs</span>
+    <span class="ppm-estimate-amount">+ $<%= number_with_precision(@full_pack_cost, precision: 2) %></span>
+  </div>
+  <div class="ppm-estimate-table-total">
+    <span class="ppm-estimate-detail-total">Total Estimated Incentive</span>
+    <span class="ppm-estimate-amount-total">$<%= number_with_precision(@incentive, precision: 2) %></span>
+    Maximum Advance Payment
+    <span class="ppm-estimate-amount">$<%= number_with_precision(@advance, precision: 2) %>(<%= @advance_percentage %>%)</span>
+  </div>
 
-    <div class="ppm-estimate-table-title">
-      Your PPM Incentive Estimate:<a href="#TODO">Edit Details</a>
-    </div>
-    <div class="ppm-estimate-table">
-      Estimated Transportation Incentive<br>
-      <span class="ppm-estimate-amount">$<%= number_with_precision(@incentive_without_packing, precision: 2) %></span>
-      <span class="ppm-estimate-detail">
-        From <%= @start_basepoint_city %>, <%= @start_state %> <%= params['start'] %>
-        to <%= @end_basepoint_city %>, <%= @end_state %> <%= params['end'] %>
-      </span><br>
-      <span class="ppm-estimate-detail">
-        Departing <%= @date %> (Peak Season)<br>
-        <%= params['weight'] %> lbs
-      </span>
-    </div>
-    <div class="ppm-estimate-table">
-      Estimated Packing Incentive<br>
-      <span class="ppm-estimate-detail"><%= params['weight'] %> lbs</span>
-      <span class="ppm-estimate-amount">+ $<%= number_with_precision(@full_pack_cost, precision: 2) %></span>
-    </div>
-    <div class="ppm-estimate-table-total">
-      <span class="ppm-estimate-detail-total">Total Estimated Incentive</span>
-      <span class="ppm-estimate-amount-total">$<%= number_with_precision(@incentive, precision: 2) %></span>
-      Maximum Advance Payment
-      <span class="ppm-estimate-amount">$<%= number_with_precision(@advance, precision: 2) %>(<%= @advance_percentage %>%)</span>
-    </div>
+  <button>Schedule My PPM Move</button>
+  <%= link_to ppm_estimator_path do %>
+    <button class="usa-button-outline">Start a New Estimate</button>
+  <% end %>
 
-    <button>Schedule My PPM Move</button>
-    <%= link_to ppm_estimator_path do %>
-      <button class="usa-button-outline">Start a New Estimate</button>
-    <% end %>
-
-    <div class="ppm-footer">
-      <strong>Note:</strong> This tool only provides an estimate of what you
-      might recieve if you decide to do a personally procured move.
-      <strong>Your actual incentive will be calculated based off the
-      daily rates available when you schedule your move in DPS.</strong> Rates
-      vary based on transporter availability, selected move date (Peak vs.
-      Non-Peak Season), distance traveled, and the actual weight of the shipment.
-    </div>
-
+  <div class="ppm-footer">
+    <strong>Note:</strong> This tool only provides an estimate of what you
+    might recieve if you decide to do a personally procured move.
+    <strong>Your actual incentive will be calculated based off the
+    daily rates available when you schedule your move in DPS.</strong> Rates
+    vary based on transporter availability, selected move date (Peak vs.
+    Non-Peak Season), distance traveled, and the actual weight of the shipment.
   </div>
 </div>
