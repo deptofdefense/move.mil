@@ -1,9 +1,35 @@
 <%- @page_title = 'Tools & Resources' -%>
 
-<div class="usa-section main-section">
+<div class="usa-section main-section tools-resources">
   <h1><%= @page_title %></h1>
-
-  <%# TODO Add page content %>
-
-  <p>Coming soon!</p>
+  <div class="usa-grid tools-links">
+    <ul class="usa-unstyled-list usa-width-one-half tools-list">
+      <li>
+        <%= link_to weight_estimator_path do %>
+          <%= image_tag 'icons/weight-estimator.svg' %>
+          Household Goods Weight Estimator
+        <% end %>
+      </li>
+      <li>
+        <%= link_to offices_path do %>
+          <%= image_tag 'icons/office-locator.svg' %>
+          PPPO &amp; Weight Scale Locations
+        <% end %>
+      </li>
+    </ul>
+    <ul class="usa-unstyled-list usa-width-one-half tools-list">
+      <li>
+        <%= link_to '#TODO' do %>
+          <%= image_tag 'icons/inventory-form.svg' %>
+          Self-Inventory Form
+        <% end %>
+      </li>
+      <li>
+        <%= link_to '#TODO' do %>
+          <%= image_tag 'icons/ppm-estimator.svg' %>
+          PPM Reimbursement Estimator
+        <% end %>
+      </li>
+    </ul>
+  </div>
 </div>
