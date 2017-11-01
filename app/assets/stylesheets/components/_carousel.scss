@@ -19,6 +19,7 @@
 
 .carousel-item-content {
   margin: 0;
+  max-width: 92rem;
   padding: 0 3rem;
 
   @include media($nav-width) {
