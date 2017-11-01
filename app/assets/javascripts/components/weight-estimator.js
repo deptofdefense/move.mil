@@ -52,8 +52,16 @@
           $subtotalInput.val(subtotal);
           $totalInput.val(total);
         } else {
+          var packing_days = '4 days';
+          if (total < 5000) {
+            packing_days = '1 day';
+          } else if (total < 7000) {
+            packing_days = '2 days';
+          } else if (total < 9000) {
+            packing_days = '3 days';
+          }
           this.$weightResult.html(
-            `<div>Estimated grand total: ${total} lbs</div><div>Average time to pack ${total} lbs is ${Math.ceil(total/4000)} day(s)</div>`
+            '<div>Estimated grand total: ' + total + ' lbs</div><div>Average time to pack ' + total + ' lbs is ' + packing_days + '</div>'
           );
         }
       }
