@@ -51,6 +51,9 @@
     });
   }
 
+  $('#married_yes').on('change', function() { $('#ppm-progear-spouse').removeAttr('hidden'); });
+  $('#married_no').on('change', function() { $('#ppm-progear-spouse').attr('hidden', true); });
+
 })(window, jQuery);
 
 function isDigitKey(evt) {
