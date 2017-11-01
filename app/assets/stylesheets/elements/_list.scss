@@ -80,7 +80,7 @@
   }
 
   li {
-    @include padding(0.8rem);
+    @include padding(0.8rem 2rem);
     width: 50%;
   }
 }

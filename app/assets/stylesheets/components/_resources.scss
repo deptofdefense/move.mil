@@ -1,0 +1,57 @@
+.tools-resources h1 {
+  margin-bottom: 0;
+}
+
+.tools-links {
+  background-color: $color-gray-cool-light;
+  @include padding($site-margins-mobile 0);
+
+  @include media($medium-screen) {
+    @include padding($site-margins 0);
+  }
+
+  .usa-width-one-half {
+    margin: 0;
+  }
+}
+
+.resources-links {
+  margin-top: 1rem;
+
+  h4 {
+    font-family: $font-sans;
+    margin-top: 0;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  li {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .usa-grid {
+    @include padding($site-margins-mobile 0);
+
+    @include media($medium-screen) {
+      @include padding($site-margins 0);
+    }
+
+    .usa-width-two-thirds {
+      max-width: 50rem;
+    }
+  }
+
+  .usa-grid + .usa-grid {
+    border-top: 1px solid $color-gray-cool-light;
+  }
+
+  .usa-width-one-third {
+    margin-bottom: 1rem;
+
+    @include media($medium-screen) {
+      margin-bottom: 0;
+    }
+  }
+}
