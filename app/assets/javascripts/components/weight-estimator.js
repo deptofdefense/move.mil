@@ -61,8 +61,7 @@
             packing_days = '3 days';
           }
           this.$weightResult.html(
-            '<div>Estimated grand total: ' + total + ' lbs</div>' +
-            '<div>Average time to pack ' + total + ' lbs is ' + packing_days + '</div>'
+            '<div>Estimated grand total: ' + total + ' lbs</div><div>Average time to pack ' + total + ' lbs is ' + packing_days + '</div>'
           );
         }
       }
