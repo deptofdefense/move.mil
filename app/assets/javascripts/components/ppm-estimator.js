@@ -61,3 +61,8 @@ function isDigitKey(evt) {
 function onZipCodeKey(field, evt) {
   return isDigitKey(evt) && field.value.length < 5;
 }
+
+function onEditDetails() {
+  $('#ppm-estimate-form').removeAttr('hidden');
+  $('#ppm-estimate-results').attr('hidden', true);
+}
