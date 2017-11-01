@@ -15,7 +15,7 @@
     difference!
   </p>
 
-  <%= form_with url: ppm_estimator_path, class: 'ppm-form', method: 'get' do |form| %>
+  <%= form_with url: ppm_estimator_path, class: 'ppm-form', id: 'ppm-estimate-form', method: 'get' do |form| %>
     <fieldset>
       <legend><div class="ppm-outline"></div>What is your rank?</legend>
         <%= form.label :rank, 'Rank' %>
@@ -107,37 +107,17 @@
     <button>Calculate My Estimate</button>
   <% end %>
 
-  <div class="ppm-estimate-table-title">
-    Your PPM Incentive Estimate:<a href="#TODO">Edit Details</a>
-  </div>
-  <div class="ppm-estimate-table">
-    Estimated Transportation Incentive<br>
-    <span class="ppm-estimate-amount">$<%= number_with_precision(@incentive_without_packing, precision: 2) %></span>
-    <span class="ppm-estimate-detail">
-      From <%= @start_basepoint_city %>, <%= @start_state %> <%= params['start'] %>
-      to <%= @end_basepoint_city %>, <%= @end_state %> <%= params['end'] %>
-    </span><br>
-    <span class="ppm-estimate-detail">
-      Departing <%= @date %> (Peak Season)<br>
-      <%= params['weight'] %> lbs
-    </span>
-  </div>
-  <div class="ppm-estimate-table">
-    Estimated Packing Incentive<br>
-    <span class="ppm-estimate-detail"><%= params['weight'] %> lbs</span>
-    <span class="ppm-estimate-amount">+ $<%= number_with_precision(@full_pack_cost, precision: 2) %></span>
-  </div>
-  <div class="ppm-estimate-table-total">
-    <span class="ppm-estimate-detail-total">Total Estimated Incentive</span>
-    <span class="ppm-estimate-amount-total">$<%= number_with_precision(@incentive, precision: 2) %></span>
-    Maximum Advance Payment
-    <span class="ppm-estimate-amount">$<%= number_with_precision(@advance, precision: 2) %>(<%= @advance_percentage %>%)</span>
+  <div class="usa-alert usa-alert-info" id="ppm-estimate-alert" hidden>
+    <div class="usa-alert-body">
+      <h3 class="usa-alert-heading">Information Needed</h3>
+      <p class="usa-alert-text">Could not calculate a PPM estimate. Please double-check your choices in <%= link_to 'the form above', '#ppm-estimate-form' %>.</p>
+    </div>
   </div>
 
-  <button>Schedule My PPM Move</button>
-  <%= link_to ppm_estimator_path do %>
-    <button class="usa-button-outline">Start a New Estimate</button>
-  <% end %>
+  <div id="ppm-estimate-results-container" tabindex="-1">
+    <div id="ppm-estimate-results" hidden>
+    </div>
+  </div>
 
   <div class="ppm-footer">
     <strong>Note:</strong> This tool only provides an estimate of what you
