@@ -69,7 +69,7 @@
         Don't forget - if you move some of your goods yourself (<%= abbr_tag('ppm') %>) and
         have the government move the rest (<%= abbr_tag('hhg') %>), <em>the weights of both shipments
         count towards your allowance.</em>
-        <a href="#TODO">Need help estimating your total household weight?</a>
+        <%= link_to 'Need help estimating your total household weight?', weight_estimator_path %>
       </p>
       <%= form.label :weight, 'Estimated Household Goods Weight' %>
       <%= form.text_field :weight, { id: :weight, onkeypress: 'return isDigitKey(event)', required: true } %>
