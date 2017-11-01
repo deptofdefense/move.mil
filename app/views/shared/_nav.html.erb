@@ -24,9 +24,17 @@
         </ul>
       </li>
       <li>
-        <%= link_to tutorials_path, class: 'usa-nav-link' do %>
+        <button aria-controls="nav-tutorials" aria-expanded="false" class="usa-accordion-button usa-nav-link">
           <span>Tutorials</span>
-        <% end %>
+        </button>
+
+        <ul class="usa-nav-submenu" id="nav-tutorials" aria-hidden="true">
+          <li><%= link_to 'Create an Account', tutorials_path(anchor: 'tutorial-1') %></li>
+          <li><%= link_to 'Log In', tutorials_path(anchor: 'tutorial-2') %></li>
+          <li><%= link_to 'Schedule a Move', tutorials_path(anchor: 'tutorial-3') %></li>
+          <li><%= link_to 'File a Claim', tutorials_path(anchor: 'tutorial-4') %></li>
+          <li><%= link_to 'Rate your Transporter (CSS)', tutorials_path(anchor: 'tutorial-5') %></li>
+        </ul>
       </li>
       <li>
         <%= link_to faqs_path, class: 'usa-nav-link' do %>
