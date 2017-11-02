@@ -119,7 +119,7 @@ class PpmEstimator
     orig_svc_area = ServiceArea.find_by(year: year, service_area: orig_zip3['service_area'])
     dest_svc_area = ServiceArea.find_by(year: year, service_area: dest_zip3['service_area'])
 
-    distance = DtodZip3Distance.find_by(orig_zip3: orig_zip3['zip3'], dest_zip3: dest_zip3['zip3'])['dist_mi']
+    distance = DtodZip3Distance.find_by(orig_zip3: orig_zip3['zip3'], dest_zip3: dest_zip3['zip3'])['dist_mi'].to_i
 
     lh_charges = get_linehaul_charges(orig_svc_area, dest_svc_area, distance, @full_weight, year)
     non_lh_charges = get_non_linehaul_charges(orig_svc_area, dest_svc_area, @full_weight, year)
