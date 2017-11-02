@@ -21,7 +21,7 @@
     color: $color-primary-darker;
     font-family: $font-sans;
     font-size: $h1-font-size;
-    padding-bottom: $site-margins;
+    padding-bottom: 2.5rem;
   }
 
   h2 {
@@ -77,8 +77,9 @@
 }
 
 .back-to-top {
+  display: none;
   float: right;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   position: sticky;
   position: -webkit-sticky;
   top: 1rem;
@@ -97,5 +98,9 @@
     &:focus {
       text-decoration: underline;
     }
+  }
+
+  @include media($nav-width) {
+    display: block;
   }
 }
