@@ -75,3 +75,27 @@
     }
   }
 }
+
+.back-to-top {
+  float: right;
+  margin-top: 1rem;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 1rem;
+
+  a {
+    @include padding(0.75rem 1.5rem);
+    background-color: $color-gold;
+    border-radius: $border-radius;
+    color: $color-base;
+    display: inline-block;
+    font-size: $small-font-size;
+    font-weight: $font-bold;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
