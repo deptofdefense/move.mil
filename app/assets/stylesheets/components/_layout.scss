@@ -76,12 +76,11 @@
   }
 }
 
-.back-to-top {
-  display: none;
+.back-to-top,
+.back-to-top-mobile {
   float: right;
-  margin-top: 1.5rem;
-  position: sticky;
   position: -webkit-sticky;
+  position: sticky;
   top: 1rem;
 
   a {
@@ -99,6 +98,18 @@
       text-decoration: underline;
     }
   }
+}
+
+.back-to-top-mobile {
+  margin-top: 0.5rem;
+  @include media($nav-width) {
+    display: none;
+  }
+}
+
+.back-to-top {
+  display: none;
+  margin-top: 1.5rem;
 
   @include media($nav-width) {
     display: block;

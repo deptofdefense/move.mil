@@ -1,8 +1,6 @@
 <%- @page_title = 'Tutorials' -%>
 
-<%= render 'shared/login_banner' %>
-<%= render 'shared/back_to_top' %>
-<%= render partial: 'shared/breadcrumbs', locals: {page_title: @page_title} %>
+<%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: []} %>
 
 <div class="usa-section main-section">
   <h1><%= @page_title %></h1>
