@@ -48,7 +48,6 @@
   });
 
   var $rank = $('#rank');
-  var $branch = $('#branch');
   var $ppmEntitlementWeight = $('#ppm-entitlement-weight');
   var $ppmEntitlementProgear = $('#ppm-entitlement-progear');
   var $ppmEntitlementProgearSpouse = $('#ppm-entitlement-progear-spouse');
@@ -57,7 +56,7 @@
   $ppmEntitlementProgearSpouse.css('visibility', 'hidden');
 
   var onPersonalInfoChanged = function () {
-    if (!$rank.val() || !$branch.val() || $('input[name="dependents"]:checked').length == 0) {
+    if (!$rank.val() || $('input[name="dependents"]:checked').length == 0) {
       $ppmEntitlementWeight.css('visibility', 'hidden');
       $ppmEntitlementProgear.css('visibility', 'hidden');
       $ppmEntitlementProgearSpouse.css('visibility', 'hidden');
@@ -70,7 +69,6 @@
   };
 
   $rank.on('change', onPersonalInfoChanged);
-  $branch.on('change', onPersonalInfoChanged);
   $('#dependents_yes').on('change', onPersonalInfoChanged);
   $('#dependents_no').on('change', onPersonalInfoChanged);
   $('#married_yes').on('change', function() { $('#ppm-progear-spouse').removeAttr('hidden'); });
