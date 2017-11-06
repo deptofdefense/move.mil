@@ -1,11 +1,14 @@
 (function(window, $) {
   'use strict';
 
+  var $ppmEstimateForm = $('#ppm-estimate-form');
+  if ($ppmEstimateForm.length == 0)
+    return;
+
   var PpmEstimator = function(options) {
     this.$alert = options.$alert;
     this.$form = options.$form;
     this.$results = options.$results;
-    this.$resultsContainer = options.$resultsContainer;
 
     this.$form.on('submit', this.events.submit.bind(this));
   };
@@ -29,28 +32,47 @@
       this.$results.empty().attr('hidden', true);
       this.$alert.removeAttr('hidden');
       this.$form.removeAttr('hidden');
-      this.$resultsContainer.trigger('focus');
     },
 
     handleAjaxSuccess: function(markup) {
       this.$alert.attr('hidden', true);
       this.$form.attr('hidden', true);
       this.$results.html(markup).removeAttr('hidden');
-      this.$resultsContainer.trigger('focus');
     }
   };
 
-  var $ppmEstimateForm = $('#ppm-estimate-form');
+  new PpmEstimator({
+    $alert: $('#ppm-estimate-alert'),
+    $form: $ppmEstimateForm,
+    $results: $('#ppm-estimate-results')
+  });
 
-  if ($ppmEstimateForm.length) {
-    new PpmEstimator({
-      $alert: $('#ppm-estimate-alert'),
-      $form: $ppmEstimateForm,
-      $results: $('#ppm-estimate-results'),
-      $resultsContainer: $('#ppm-estimate-results-container')
-    });
-  }
+  var $rank = $('#rank');
+  var $branch = $('#branch');
+  var $ppmEntitlementWeight = $('#ppm-entitlement-weight');
+  var $ppmEntitlementProgear = $('#ppm-entitlement-progear');
+  var $ppmEntitlementProgearSpouse = $('#ppm-entitlement-progear-spouse');
+  $ppmEntitlementWeight.css('visibility', 'hidden');
+  $ppmEntitlementProgear.css('visibility', 'hidden');
+  $ppmEntitlementProgearSpouse.css('visibility', 'hidden');
 
+  var onPersonalInfoChanged = function () {
+    if (!$rank.val() || !$branch.val() || $('input[name="dependents"]:checked').length == 0) {
+      $ppmEntitlementWeight.css('visibility', 'hidden');
+      $ppmEntitlementProgear.css('visibility', 'hidden');
+      $ppmEntitlementProgearSpouse.css('visibility', 'hidden');
+    }
+    else {
+      $ppmEntitlementWeight.css('visibility', 'visible');
+      $ppmEntitlementProgear.css('visibility', 'visible');
+      $ppmEntitlementProgearSpouse.css('visibility', 'visible');
+    }
+  };
+
+  $rank.on('change', onPersonalInfoChanged);
+  $branch.on('change', onPersonalInfoChanged);
+  $('#dependents_yes').on('change', onPersonalInfoChanged);
+  $('#dependents_no').on('change', onPersonalInfoChanged);
   $('#married_yes').on('change', function() { $('#ppm-progear-spouse').removeAttr('hidden'); });
   $('#married_no').on('change', function() { $('#ppm-progear-spouse').attr('hidden', true); });
 

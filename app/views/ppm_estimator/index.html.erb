@@ -73,18 +73,18 @@
       </p>
       <%= form.label :weight, 'Estimated Household Goods Weight' %>
       <%= form.text_field :weight, { id: :weight, onkeypress: 'return isDigitKey(event)', required: true } %>
-      <p>
+      <p id="ppm-entitlement-weight">
         Your weight allowance is <strong><%= @entitlement_weight %> lbs</strong>.
       </p>
       <%= form.label :weight_progear, 'Estimated ProGear Weight' %>
       <%= form.text_field :weight_progear, { id: :weight_progear, onkeypress: 'return isDigitKey(event)', required: false } %>
-      <p>
+      <p id="ppm-entitlement-progear">
         Your ProGear allowance is <strong><%= @entitlement_progear %> lbs</strong>.
       </p>
       <div id="ppm-progear-spouse" hidden>
         <%= form.label :weight_progear_spouse, 'Estimated ProGear Weight (Spouse)' %>
         <%= form.text_field :weight_progear_spouse, { id: :weight_progear_spouse, onkeypress: 'return isDigitKey(event)', required: false } %>
-        <p>
+        <p id="ppm-entitlement-progear-spouse">
           Your spouse's ProGear allowance is <strong><%= @entitlement_progear_spouse %> lbs</strong>.
         </p>
       </div>
