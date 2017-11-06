@@ -1,9 +1,100 @@
 <%- @page_title = 'Tools & Resources' -%>
 
-<div class="usa-section main-section">
+<div class="usa-section main-section tools-resources">
   <h1><%= @page_title %></h1>
+  <div class="usa-grid tools-links">
+    <ul class="usa-unstyled-list usa-width-one-half tools-list">
+      <li>
+        <%= link_to weight_estimator_path do %>
+          <%= image_tag 'icons/weight-estimator.svg', alt: '', role: 'presentation' %>
+          Household Goods Weight Estimator
+        <% end %>
+      </li>
+      <li>
+        <%= link_to offices_path do %>
+          <%= image_tag 'icons/office-locator.svg', alt: '', role: 'presentation' %>
+          PPPO &amp; Weight Scale Locations
+        <% end %>
+      </li>
+    </ul>
+    <ul class="usa-unstyled-list usa-width-one-half tools-list">
+      <li>
+        <%= link_to '#TODO' do %>
+          <%= image_tag 'icons/inventory-form.svg', alt: '', role: 'presentation' %>
+          Self-Inventory Form
+        <% end %>
+      </li>
+      <li>
+        <%= link_to '#TODO' do %>
+          <%= image_tag 'icons/ppm-estimator.svg', alt: '', role: 'presentation' %>
+          PPM Reimbursement Estimator
+        <% end %>
+      </li>
+    </ul>
+  </div>
+  <div class="resources-links">
+    <div class="usa-grid">
+      <div class="usa-width-one-third">
+        <%= image_tag 'logos/military_one_source_logo.svg' %>
+      </div>
+      <div class="usa-width-two-thirds">
+        <h4><%= link_to 'Military One Source', 'https://www.militaryonesource.mil/' %></h4>
+        <p>Military One Source has a bunch of articles about how to plan your move, find housing and employement in your new location, and how to deal with the stress  caused from uprooting your family.</p>
+        <ul class="usa-unstyled-list two-column-list">
+          <li><%= link_to 'Master Your Move Guide', 'https://www.militaryonesource.mil/pcs', class: "usa-external_link" %></li>
+          <li><%= link_to 'Military Spouses’ Blog', 'https://blog-brigade.militaryonesource.mil/blogs/moving-2/', class: "usa-external_link" %></li>
+          <li><%= link_to 'Moving Benefits', 'http://www.militaryonesource.mil/web/mos/moving-benefits', class: "usa-external_link" %></li>
+          <li><%= link_to '24/7 Family Support Line', 'https://www.militaryonesource.mil/web/mos/confidential-help', class: "usa-external_link" %></li>
+          <li><%= link_to 'Helping Your Kids Cope', 'https://www.militaryonesource.mil/web/mos/-/nine-ways-to-help-your-kids-cope-with-moving', class: "usa-external_link" %></li>
+        </ul>
+      </div>
+    </div>
 
-  <%# TODO Add page content %>
+    <div class="usa-grid">
+      <div class="usa-width-one-third">
+        <%= image_tag 'logos/military_installations_logo.svg' %>
+      </div>
+      <div class="usa-width-two-thirds">
+        <h4><%= link_to 'Military Installations', 'http://www.militaryinstallations.dod.mil/' %></h4>
+        <p>Everything you need to know about your new base including school districts, pet restrictions, and on-base contact infomation.</p>
+      </div>
+    </div>
 
-  <p>Coming soon!</p>
+    <div class="usa-grid">
+      <div class="usa-width-one-third">
+        <%= image_tag 'logos/sesame_street_logo.svg' %>
+      </div>
+      <div class="usa-width-two-thirds">
+        <h4><%= link_to 'PBS Kids Relocation Resources', 'http://sesamestreetformilitaryfamilies.org/topic/relocation/' %></h4>
+        <p>Videos, worksheets, and tips to help prepare the youngest members of the family for the PCS process.</p>
+      </div>
+    </div>
+
+    <div class="usa-grid">
+      <div class="usa-width-one-third">
+        <h4>Household Goods Policies and Supplements</h4>
+      </div>
+      <div class="usa-width-two-thirds">
+        <ul class="usa-unstyled-list">
+          <li><%= link_to 'Joint Travel Regulation', 'http://www.defensetravel.dod.mil/site/travelreg.cfm', class: "usa-external_link" %></li>
+          <li><%= link_to 'Defense Travel Regulation', 'https://www.ustranscom.mil/dtr/', class: "usa-external_link" %></li>
+          <li><%= link_to 'Air Force Household Goods Supplement', 'http://static.e-publishing.af.mil/production/1/af_a4_7/publication/afi24-501/afi24-501.pdf', class: "usa-external_link" %></li>
+          <li><%= link_to 'Marine Corps Household Goods Supplement', 'https://www.move.mil/documents/dod/MCO_4600_39_19_AUG_2016.pdf', class: "usa-external_link" %></li>
+          <li><%= link_to 'Navy Household Goods Supplement', 'https://www.move.mil/documents/dod/NAVSUP_PUB_490_Rev5.pdf', class: "usa-external_link" %></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="usa-grid">
+      <div class="usa-width-one-third">
+        <h4>Lodging</h4>
+      </div>
+      <div class="usa-width-two-thirds">
+        <ul class="usa-unstyled-list">
+          <li><%= link_to raw("#{abbr_tag('dod')} Lodging"), 'http://www.dodlodging.net/', class: "usa-external_link" %></li>
+          <li><%= link_to 'Coast Guard Lodging Locations', 'https://www.dodlodging.com/html/coastguard.htm', class: "usa-external_link" %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>

@@ -26,7 +26,8 @@
   }
 }
 
-.homepage-anchor-list {
+.homepage-anchor-list,
+.tools-list {
   overflow: hidden;
 
   li {
@@ -65,5 +66,21 @@
   li {
     margin-bottom: 0;
     margin-left: 2rem;
+  }
+}
+
+.tools-list {
+  li {
+    @include padding(0.8rem 2rem);
+    width: 50%;
+  }
+
+  img {
+    height: 5rem;
+
+    @include media($medium-screen) {
+      height: 8rem;
+      max-width: 50%
+    }
   }
 }
