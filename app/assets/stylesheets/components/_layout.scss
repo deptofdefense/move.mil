@@ -76,17 +76,21 @@
   }
 }
 
-.back-to-top,
-.back-to-top-mobile {
+.back-to-top {
   float: right;
+  margin-top: 0.5rem;
   position: -webkit-sticky;
   position: sticky;
   top: 1rem;
 
+  @include media($nav-width) {
+    margin-top: -3.75rem;
+  }
+
   a {
     @include padding(0.75rem 1.5rem);
     background-color: $color-gold;
-    border-radius: $border-radius;
+    border-radius: $border-radius 0 0 $border-radius;
     color: $color-base;
     display: inline-block;
     font-size: $small-font-size;
@@ -97,21 +101,5 @@
     &:focus {
       text-decoration: underline;
     }
-  }
-}
-
-.back-to-top-mobile {
-  margin-top: 0.5rem;
-  @include media($nav-width) {
-    display: none;
-  }
-}
-
-.back-to-top {
-  display: none;
-  margin-top: 1.5rem;
-
-  @include media($nav-width) {
-    display: block;
   }
 }
