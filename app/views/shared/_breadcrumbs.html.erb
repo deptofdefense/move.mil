@@ -1,0 +1,9 @@
+<div class="breadcrumbs">
+  <%= link_to 'Home', root_path %> /
+
+  <%- parent_pages.each do |parent_page| -%>
+    <%= link_to parent_page[:name], parent_page[:path] %> /
+  <%- end -%>
+
+  <%= page_title %>
+</div>

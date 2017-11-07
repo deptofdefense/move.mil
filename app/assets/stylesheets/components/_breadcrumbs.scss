@@ -1,0 +1,12 @@
+.breadcrumbs {
+  @include outer-container;
+  @include padding(1.2rem $site-margins-mobile);
+  background-color: $color-gray-cool-light;
+  font-size: $small-font-size;
+  max-width: $site-max-width;
+
+  @include media($nav-width) {
+    @include padding($site-margins-mobile $site-margins);
+    background-color: transparent;
+  }
+}
