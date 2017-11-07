@@ -12,6 +12,7 @@ class PpmEstimatorController < ApplicationController
 
   def entitlements
     @entitlements ||= Entitlement.all
+    @entitlements_json ||= @entitlements.to_json
   end
 
   def ppm_estimator

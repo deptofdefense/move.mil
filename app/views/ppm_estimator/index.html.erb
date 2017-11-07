@@ -62,6 +62,8 @@
       <%= form.date_field :date, { id: :date, required: true } %>
     </fieldset>
 
+    <%= tag.div id: 'entitlements-json', data: { entitlements_json: @entitlements_json } %>
+
     <fieldset>
       <legend><div class="ppm-outline"></div>How much, in pounds, do you expect to move without the government's help?</legend>
       <p>
@@ -74,18 +76,18 @@
       <%= form.label :weight, 'Estimated Household Goods Weight' %>
       <%= form.text_field :weight, { id: :weight, onkeypress: 'return isDigitKey(event)', required: true } %>
       <p id="ppm-entitlement-weight">
-        Your weight allowance is <strong><%= @entitlement_weight %> lbs</strong>.
+        Your weight allowance is <strong><span id="entitlement_weight"></span> lbs</strong>.
       </p>
       <%= form.label :weight_progear, 'Estimated ProGear Weight' %>
       <%= form.text_field :weight_progear, { id: :weight_progear, onkeypress: 'return isDigitKey(event)', required: false } %>
       <p id="ppm-entitlement-progear">
-        Your ProGear allowance is <strong><%= @entitlement_progear %> lbs</strong>.
+        Your ProGear allowance is <strong><span id="entitlement_progear"></span> lbs</strong>.
       </p>
       <div id="ppm-progear-spouse" hidden>
         <%= form.label :weight_progear_spouse, 'Estimated ProGear Weight (Spouse)' %>
         <%= form.text_field :weight_progear_spouse, { id: :weight_progear_spouse, onkeypress: 'return isDigitKey(event)', required: false } %>
         <p id="ppm-entitlement-progear-spouse">
-          Your spouse's ProGear allowance is <strong><%= @entitlement_progear_spouse %> lbs</strong>.
+          Your spouse's ProGear allowance is <strong><span id="entitlement_progear_spouse"></span> lbs</strong>.
         </p>
       </div>
     </fieldset>

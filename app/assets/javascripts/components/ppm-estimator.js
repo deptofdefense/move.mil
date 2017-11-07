@@ -54,6 +54,7 @@
   $ppmEntitlementWeight.css('visibility', 'hidden');
   $ppmEntitlementProgear.css('visibility', 'hidden');
   $ppmEntitlementProgearSpouse.css('visibility', 'hidden');
+  var entitlementsJson = $('#entitlements-json').data('entitlementsJson');
 
   var onPersonalInfoChanged = function () {
     if (!$rank.val() || $('input[name="dependents"]:checked').length == 0) {
@@ -62,8 +63,21 @@
       $ppmEntitlementProgearSpouse.css('visibility', 'hidden');
     }
     else {
+      var entitlement = entitlementsJson.find(function(data) { return data.slug == $rank.val(); });
+
+      var totalWeightSelf = $('#dependents_yes').checked ?
+          (entitlement.total_weight_self_plus_dependents > 0 ? entitlement.total_weight_self_plus_dependents : 0) :
+          (entitlement.total_weight_self > 0 ? entitlement.total_weight_self : 0);
+      $('#entitlement_weight').text(totalWeightSelf.toString());
       $ppmEntitlementWeight.css('visibility', 'visible');
+
+      var proGearWeight = entitlement.pro_gear_weight > 0 ? entitlement.pro_gear_weight : 0;
+      $('#entitlement_progear').text(proGearWeight.toString());
       $ppmEntitlementProgear.css('visibility', 'visible');
+
+      // The visibility of the spouse progear field is controlled elsewhere, so it is safe to make this label visible regardless
+      var proGearWeightSpouse = entitlement.pro_gear_weight_spouse > 0 ? entitlement.pro_gear_weight_spouse : 0;
+      $('#entitlement_progear_spouse').text(proGearWeightSpouse.toString());
       $ppmEntitlementProgearSpouse.css('visibility', 'visible');
     }
   };
