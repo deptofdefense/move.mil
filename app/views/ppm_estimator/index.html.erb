@@ -73,20 +73,24 @@
         count towards your allowance.</em>
         <%= link_to 'Need help estimating your total household weight?', weight_estimator_path %>
       </p>
-      <%= form.label :weight, 'Estimated Household Goods Weight' %>
-      <%= form.text_field :weight, { id: :weight, onkeypress: 'return isDigitKey(event)', required: true } %>
-      <p id="ppm-entitlement-weight">
-        Your weight allowance is <strong><span id="entitlement_weight"></span> lbs</strong>.
-      </p>
-      <%= form.label :weight_progear, 'Estimated ProGear Weight' %>
-      <%= form.text_field :weight_progear, { id: :weight_progear, onkeypress: 'return isDigitKey(event)', required: false } %>
-      <p id="ppm-entitlement-progear">
-        Your ProGear allowance is <strong><span id="entitlement_progear"></span> lbs</strong>.
-      </p>
-      <div id="ppm-progear-spouse" hidden>
+      <div id="weight-section">
+        <%= form.label :weight, 'Estimated Household Goods Weight' %>
+        <%= form.text_field :weight, { id: :weight, onkeypress: 'return isDigitKey(event)', required: true } %>
+        <p id="weight-allowance-text">
+          Your weight allowance is <strong><span id="entitlement_weight"></span> lbs</strong>.
+        </p>
+      </div>
+      <div id="progear-section">
+        <%= form.label :weight_progear, 'Estimated ProGear Weight' %>
+        <%= form.text_field :weight_progear, { id: :weight_progear, onkeypress: 'return isDigitKey(event)', required: false } %>
+        <p id="progear-allowance-text">
+          Your ProGear allowance is <strong><span id="entitlement_progear"></span> lbs</strong>.
+        </p>
+      </div>
+      <div id="progear-spouse-section" hidden>
         <%= form.label :weight_progear_spouse, 'Estimated ProGear Weight (Spouse)' %>
         <%= form.text_field :weight_progear_spouse, { id: :weight_progear_spouse, onkeypress: 'return isDigitKey(event)', required: false } %>
-        <p id="ppm-entitlement-progear-spouse">
+        <p id="progear-spouse-allowance-text">
           Your spouse's ProGear allowance is <strong><span id="entitlement_progear_spouse"></span> lbs</strong>.
         </p>
       </div>
