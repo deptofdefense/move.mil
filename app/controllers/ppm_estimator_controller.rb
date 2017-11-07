@@ -1,5 +1,4 @@
 class PpmEstimatorController < ApplicationController
-
   def index
     # The entitlements are used to populate some of the drop downs in the form
     return entitlements unless request.xhr?
@@ -18,5 +17,4 @@ class PpmEstimatorController < ApplicationController
   def ppm_estimator
     @ppm_estimator ||= PpmEstimator.new(params)
   end
-
 end
