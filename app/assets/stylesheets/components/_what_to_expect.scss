@@ -1,0 +1,40 @@
+.what-to-expect-body {
+  .what-to-expect-intro {
+    background-color: $color-gray-cool-light;
+    @include margin(2rem 0);
+    @include padding($site-margins-mobile);
+
+    @include media($medium-screen) {
+      @include padding($site-margins);
+    }
+  }
+
+  h3 {
+    color: $color-primary-darkest;
+  }
+}
+
+.what-to-expect-section {
+  @include padding(2rem 0);
+
+  & + & {
+    border-top: 1px solid $color-gray-cool-light;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
+}
+
+.branch-of-service-links {
+  a + a {
+    white-space: nowrap;
+    margin-left: 3rem;
+  }
+}
+
+.pro-tip {
+  border: solid 1px $color-gray-cool-light;
+  margin-top: 2rem;
+  padding: 1rem;
+}
