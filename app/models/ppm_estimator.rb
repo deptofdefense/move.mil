@@ -51,9 +51,11 @@ class PpmEstimator
     get_weight_entitlement(rank, dependents == 'yes')
     @full_weight = get_full_allowed_weight
     incentive = get_ppm_cost_estimate
+    incentive_without_packing = incentive - @full_pack_cost
     advance_percentage = (branch == 'marines') ? 50 : 60
     results = {
       advance: incentive * (advance_percentage / 100.0),
+      advance_without_packing: incentive_without_packing * (advance_percentage / 100.0),
       advance_percentage: advance_percentage,
       date: date,
       end_basepoint_city: @end_basepoint_city,
@@ -64,7 +66,7 @@ class PpmEstimator
       full_pack_cost: @full_pack_cost,
       full_weight: @full_weight,
       incentive: incentive,
-      incentive_without_packing: incentive - @full_pack_cost,
+      incentive_without_packing: incentive_without_packing,
       start_basepoint_city: @start_basepoint_city,
       start_state: @start_state
     }
@@ -92,13 +94,13 @@ class PpmEstimator
 
   def get_weight_entitlement(rank, dependents)
     entitlement = Entitlement.find_by(slug: rank)
-    if dependents
+    if dependents && entitlement['total_weight_self_plus_dependents']
       @entitlement_weight = entitlement['total_weight_self_plus_dependents']
     else
       @entitlement_weight = entitlement['total_weight_self']
     end
-    @entitlement_progear = entitlement['pro_gear_weight']
-    @entitlement_progear_spouse = married == 'yes' ? entitlement['pro_gear_weight_spouse'] : 0
+    @entitlement_progear = entitlement['pro_gear_weight'] ? entitlement['pro_gear_weight'] : 0;
+    @entitlement_progear_spouse = (married == 'yes' && entitlement['pro_gear_weight_spouse']) ? entitlement['pro_gear_weight_spouse'] : 0
   end
 
   def get_ppm_cost_estimate
@@ -139,7 +141,7 @@ class PpmEstimator
     wpgs = (weight_progear_spouse.present? && (married == 'yes')) ? weight_progear_spouse.to_i : 0
     wpgs_allowed = [wpgs, @entitlement_progear_spouse].min
 
-    return wt + wpg_allowed + wpgs_allowed
+    return wt_allowed + wpg_allowed + wpgs_allowed
   end
 
   def get_inv_linehaul_discount(orig_zip3, dest_zip3, date)
