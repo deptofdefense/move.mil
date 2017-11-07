@@ -11,15 +11,9 @@
         Jump to:
       </div>
       <ul class="usa-sidenav-list">
-        <li>
-          <%= link_to 'Shipping TDY Household Goods', '#shipping' %>
-        </li>
-        <li>
-          <%= link_to 'Weight Allowances for TDY Shipments', '#weight_allowances' %>
-        </li>
-        <li>
-          <%= link_to 'TDY Shipments', '#shipments' %>
-        </li>
+        <li><%= link_to 'Shipping TDY Household Goods', '#shipping' %></li>
+        <li><%= link_to 'Weight Allowances for TDY Shipments', '#weight_allowances' %></li>
+        <li><%= link_to 'TDY Shipments', '#shipments' %></li>
       </ul>
     </aside>
   </div>
@@ -124,7 +118,7 @@
     </div>
     <div id="shipments">
       <h4>TDY Shipments</h4>
-      <p>Since these can be unique, the list below includes some situations when the shipment of goods would be authorized with a TDY.  As a reminder, if you have any questions please reach out to your local personal property office.</p>
+      <p>Since these can be unique, the list below includes some situations when the shipment of goods would be authorized with a TDY.  As a reminder, if you have any questions please reach out to your <%= link_to 'local personal property office', offices_path %>.</p>
 
       <ul>
         <li>PCS with a TDY EnRoute</li>
