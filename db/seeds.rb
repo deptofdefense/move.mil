@@ -90,42 +90,60 @@ hhg_weights.each do |category|
 end
 
 puts 'Loading ZIP code rate areas, service areas, regions, and basepoint cities...'
-CSV.foreach(Rails.root.join('db', 'seeds', 'zip3.csv'), headers: true) do |row|
-  Zip3.create(zip3: row['zip3'], basepoint_city: row['basepoint_city'], state: row['state'], service_area: row['service_area'], rate_area: row['rate_area'], region: row['region'], mileage_t: row['mileage_t'], mileage_i: row['mileage_i'])
+zip3s = CSV.read(Rails.root.join('db', 'seeds', 'zip3.csv'))
+columns = [:zip3, :basepoint_city, :state, :service_area, :rate_area, :region]
+Zip3.transaction do
+  Zip3.import columns, zip3s
 end
 
-CSV.foreach(Rails.root.join('db', 'seeds', 'zip5_rate_areas.csv'), headers: true) do |row|
-  Zip5RateArea.create(zip5: row['zip5'], rate_area: row['rate_area'])
+zip5s = CSV.read(Rails.root.join('db', 'seeds', 'zip5_rate_areas.csv'))
+columns = [:zip5, :rate_area]
+Zip5RateArea.transaction do
+  Zip5RateArea.import columns, zip5s
 end
 
-CSV.foreach(Rails.root.join('db', 'seeds', '2017_400NG_Geographic_Schedule.csv'), headers:true) do |row|
-  ServiceArea.create(service_area: row[0], name: row['name'], services_schedule: row['services_schedule'], linehaul_factor: row['linehaul_factor'], orig_dest_service_charge: row['orig_dest_service_charge'], year: 2017)
+schedules = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Geographic_Schedule.csv'))
+columns = [:service_area, :name, :services_schedule, :linehaul_factor, :orig_dest_service_charge, :year]
+ServiceArea.transaction do
+  ServiceArea.import columns, schedules
 end
 
 puts 'Loading Baseline Rates...'
-CSV.foreach(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_CONUS.csv'), headers: true) do |row|
-  BaselineRate.create(dist_mi_min: row['dist_mi_min'], dist_mi_max: row['dist_mi_max'], weight_lbs_min: row['weight_lbs_min'], weight_lbs_max: row['weight_lbs_max'], rate: row['rate'], year: 2017)
+baseline_rates = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_CONUS.csv'))
+columns = [:dist_mi_min, :dist_mi_max, :weight_lbs_min, :weight_lbs_max, :rate, :year]
+BaselineRate.transaction do
+  BaselineRate.import columns, baseline_rates, batch_size: 1000
 end
 
-CSV.foreach(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_IntraAK.csv'), headers: true) do |row|
-  IntraAlaskaBaselineRate.create(dist_mi_min: row['dist_mi_min'], dist_mi_max: row['dist_mi_max'], weight_lbs_min: row['weight_lbs_min'], weight_lbs_max: row['weight_lbs_max'], rate: row['rate'], year: 2017)
+intra_ak_baseline_rates = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_IntraAK.csv'))
+columns = [:dist_mi_min, :dist_mi_max, :weight_lbs_min, :weight_lbs_max, :rate, :year]
+IntraAlaskaBaselineRate.transaction do
+  IntraAlaskaBaselineRate.import columns, intra_ak_baseline_rates, batch_size: 1000
 end
 
-CSV.foreach(Rails.root.join('db', 'seeds', '2017_400NG_Shorthaul.csv'), headers: true) do |row|
-  Shorthaul.create(cwt_mi_min: row['cwt_mi_min'], cwt_mi_max: row['cwt_mi_max'], rate: row['rate'], year: 2017)
+shorthauls = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Shorthaul.csv'))
+columns = [:cwt_mi_min, :cwt_mi_max, :rate, :year]
+Shorthaul.transaction do
+  Shorthaul.import columns, shorthauls
 end
 
-CSV.foreach(Rails.root.join('db', 'seeds', '2017_400NG_Full_Pack.csv'), headers: true) do |row|
-  FullPack.create(schedule: row['schedule'], weight_lbs_min: row['weight_lbs_min'], weight_lbs_max: row['weight_lbs_max'], rate: row['rate'], year: 2017)
+full_packs = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Full_Pack.csv'))
+columns = [:schedule, :weight_lbs_min, :weight_lbs_max, :rate, :year]
+FullPack.transaction do
+  FullPack.import columns, full_packs
 end
 
-CSV.foreach(Rails.root.join('db', 'seeds', '2017_400NG_Full_Unpack.csv'), headers: true) do |row|
-  FullUnpack.create(schedule: row['schedule'], rate: row['rate'], year: 2017)
+full_unpacks = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Full_Unpack.csv'))
+columns = [:schedule, :rate, :year]
+FullUnpack.transaction do
+  FullUnpack.import columns, full_unpacks
 end
 
 puts 'Loading ZIP3 to ZIP3 distances from DTOD...'
-CSV.foreach(Rails.root.join('db', 'seeds', 'zip3_dtod_output.csv'), headers: false, col_sep: ' ') do |row|
-  DtodZip3Distance.create(orig_zip3: row[0], dest_zip3: row[1], dist_mi: row[2])
+DtodZip3Distance.transaction do
+  distances = CSV.read(Rails.root.join('db', 'seeds', 'zip3_dtod_output.csv'), { headers: false, col_sep: ' ' })
+  columns = [:orig_zip3, :dest_zip3, :dist_mi]
+  DtodZip3Distance.import columns, distances, batch_size: 1000
 end
 
 puts 'Loading top Best Value Scores for 2017...'

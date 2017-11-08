@@ -7,8 +7,6 @@ class CreateZip3s < ActiveRecord::Migration[5.1]
       t.integer :service_area
       t.text :rate_area
       t.integer :region
-      t.text :mileage_t
-      t.integer :mileage_i
 
       t.timestamps
     end

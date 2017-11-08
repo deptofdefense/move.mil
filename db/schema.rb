@@ -262,8 +262,6 @@ ActiveRecord::Schema.define(version: 20171215164151) do
     t.integer "service_area"
     t.text "rate_area"
     t.integer "region"
-    t.text "mileage_t"
-    t.integer "mileage_i"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
