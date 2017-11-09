@@ -100,7 +100,7 @@ class PpmEstimator
       else
         entitlement['total_weight_self']
       end
-    @entitlement_progear = entitlement['pro_gear_weight'] ? entitlement['pro_gear_weight'] : 0
+    @entitlement_progear = entitlement['pro_gear_weight'] || 0
     @entitlement_progear_spouse = married == 'yes' && entitlement['pro_gear_weight_spouse'] ? entitlement['pro_gear_weight_spouse'] : 0
   end
 
@@ -181,7 +181,6 @@ class PpmEstimator
   end
 
   def base_linehaul(distance, wt, year)
-    # TODO: handle distances beyond 3800 mi
     # TODO: handle intra-AK
     # TODO: handle inter-AK
     # TODO: handle lookup failures
