@@ -1,20 +1,18 @@
+$sidenav-screen-width: 800px;
+
 .sidenav {
-  width: 90%;
+  float: left;
+  margin-right: 5%;
+  width: 100%;
 
-  @include media($large-screen) {
+  @include media($sidenav-screen-width) {
     padding-top: 1.5rem;
-  }
-
-  .sidenav-jump-to {
-    margin-bottom: 0.5rem;
-    @include media($large-screen) {
-      display: none;
-    }
+    width: 20%
   }
 
   .usa-sidenav-list {
     // undo sidenav styling
-    @media screen and (max-width: $large-screen) {
+    @media screen and (max-width: $sidenav-screen-width - 1) {
       li {
         border-top: none;
       }
@@ -29,5 +27,21 @@
         }
       }
     }
+  }
+}
+
+.sidenav-jump-to {
+  margin-bottom: 0.5rem;
+  @include media($sidenav-screen-width) {
+    display: none;
+  }
+}
+
+.sidenav-body {
+  float: left;
+  width: 100%;
+
+  @include media($sidenav-screen-width) {
+    width: 75%;
   }
 }
