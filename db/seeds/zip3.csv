@@ -31,7 +31,7 @@
 40,Standish,ME,372,11,9
 41,Portland,ME,372,11,9
 42,Bryant Pond,ME,372,11,9
-43,Augta,ME,364,11,9
+43,Augusta,ME,364,11,9
 44,Milo,ME,368,11,9
 45,Wiscasset,ME,364,11,9
 46,Harrington,ME,368,11,9
@@ -64,7 +64,7 @@
 73,Jersey City,NJ,544,19,9
 74,Oakland,NJ,544,19,9
 75,Paterson,NJ,544,19,9
-76,Param,NJ,544,19,9
+76,Paramus,NJ,544,19,9
 77,Eatontown,NJ,544,19,9
 78,Netcong,NJ,544,19,9
 79,Madisonville,NJ,544,19,9
@@ -91,7 +91,7 @@
 110,Kew Gardens,NY,545,17,9
 111,Long Island City,NY,545,17,9
 112,Long Island City,NY,545,17,9
-113,Flhing,NY,545,17,9
+113,Flushing,NY,545,17,9
 114,Kew Gardens,NY,545,17,9
 115,Hempstead,NY,544,17,9
 116,Valley Stream,NY,544,17,9
@@ -108,9 +108,9 @@
 127,Monticello,NY,544,17,9
 128,Warrensburg,NY,556,17,9
 129,Loon Lake Junction,NY,548,17,9
-130,Syrace,NY,552,17,9
-131,Syrace,NY,552,17,9
-132,Syrace,NY,552,17,9
+130,Syracuse,NY,552,17,9
+131,Syracuse,NY,552,17,9
+132,Syracuse,NY,552,17,9
 133,Poland,NY,556,17,9
 134,Poland,NY,556,17,9
 135,Utica,NY,556,17,9
@@ -223,7 +223,7 @@
 242,Norton,VA,716,25,10
 243,Wytheville,VA,824,25,10
 244,Goshen,VA,812,25,10
-245,Rtburg,VA,824,25,10
+245,Rustburg,VA,824,25,10
 246,Tazewell,VA,824,25,10
 247,Princeton,WV,824,27,10
 248,Welch,WV,860,27,10
@@ -286,7 +286,7 @@
 306,Lexington,GA,204,45,12
 307,Dalton,GA,720,45,12
 308,Harlem,GA,208,45,12
-309,Augta,GA,208,45,12
+309,Augusta,GA,208,45,12
 310,McIntyre,GA,212,45,12
 311,Atlanta,GA,205,45,12
 312,Macon,GA,212,45,12
@@ -296,7 +296,7 @@
 316,Lakeland,GA,192,45,12
 317,Albany,GA,200,45,12
 318,Buena Vista,GA,212,45,12
-319,Columb,GA,212,45,12
+319,Columbus,GA,212,45,12
 320,Macclenny,FL,176,49,13
 321,Crescent City,FL,184,ZIP,13
 322,Jacksonville,FL,176,49,13
@@ -326,7 +326,7 @@
 350,Leeds,AL,4,47,11
 351,Leeds,AL,4,47,11
 352,Birmingham,AL,4,47,11
-354,Tcaloosa,AL,4,47,11
+354,Tuscaloosa,AL,4,47,11
 355,Carbon Hill,AL,4,47,11
 356,Town Creek,AL,12,47,11
 357,Paint Rock,AL,12,47,11
@@ -401,7 +401,7 @@
 427,Rowletts,KY,332,28,11
 430,Worthington,OH,616,34,8
 431,South Bloomfield,OH,616,34,8
-432,Columb,OH,616,34,8
+432,Columbus,OH,616,34,8
 433,La Rue,OH,616,34,8
 434,Woodville,OH,628,34,8
 435,Napoleon,OH,628,34,8
@@ -427,7 +427,7 @@
 455,Springfield,OH,620,34,8
 456,Jackson,OH,860,34,8
 457,Barlow,OH,624,34,8
-458,Columb Grove,OH,628,34,8
+458,Columbus Grove,OH,628,34,8
 459,Cincinnati,OH,608,34,8
 460,Noblesville,IN,280,36,8
 461,Franklin,IN,280,36,8
@@ -463,7 +463,7 @@
 491,Niles,MI,268,30,7
 492,Jackson,MI,400,30,7
 493,Grand Rapids,MI,404,30,7
-494,Mkegon,MI,404,30,7
+494,Muskegon,MI,404,30,7
 495,Grand Rapids,MI,404,30,7
 496,Manton,MI,396,30,7
 497,Mackinaw City,MI,396,30,7
@@ -504,10 +504,10 @@
 538,Lancaster,WI,868,32,7
 539,Portage,WI,868,32,7
 540,New Richmond,WI,416,32,7
-541,Waaukee,WI,876,32,7
+541,Wausaukee,WI,876,32,7
 542,Algoma,WI,876,32,7
 543,Green Bay,WI,876,32,7
-544,Waau,WI,876,32,7
+544,Wausau,WI,876,32,7
 545,Woodruff,WI,876,32,7
 546,Tomah,WI,868,32,7
 547,Eau Claire,WI,864,32,7
@@ -672,7 +672,7 @@
 729,Charleston,AR,40,60,6
 730,Minco,OK,636,62,6
 731,Oklahoma City,OK,636,62,6
-733,Atin,TX,744,68,6
+733,Austin,TX,744,68,6
 734,Ardmore,OK,636,62,6
 735,Snyder,OK,636,62,6
 736,Hammon,OK,636,62,6
@@ -682,7 +682,7 @@
 740,Hominy,OK,640,62,6
 741,Tulsa,OK,640,62,6
 743,Vinita,OK,640,62,6
-744,Mkogee,OK,640,62,6
+744,Muskogee,OK,640,62,6
 745,Clayton,OK,40,62,6
 746,Ponca City,OK,632,62,6
 747,Hugo,OK,636,62,6
@@ -697,7 +697,7 @@
 756,Longview,TX,764,66,6
 757,Tyler,TX,784,ZIP,6
 758,Crockett,TX,764,ZIP,6
-759,San Augtine,TX,764,ZIP,6
+759,San Augustine,TX,764,ZIP,6
 760,Weatherford,TX,752,66,6
 761,Fort Worth,TX,752,66,6
 762,St Jo,TX,752,66,6
@@ -723,8 +723,8 @@
 783,Alice,TX,748,68,6
 784,Corpus Christi,TX,748,68,6
 785,McAllen,TX,768,68,6
-786,Atin,TX,744,ZIP,6
-787,Atin,TX,744,68,6
+786,Austin,TX,744,ZIP,6
+787,Austin,TX,744,68,6
 788,Uvalde,TX,756,ZIP,6
 789,La Grange,TX,744,68,6
 790,Amarillo,TX,740,66,6
@@ -756,7 +756,7 @@
 816,Meeker,CO,148,74,5
 820,Laramie,WY,880,72,4
 821,Lake Junction,WY,884,72,4
-822,Lk,WY,880,72,4
+822,Lusk,WY,880,72,4
 823,Rawlins,WY,888,72,4
 824,Emblem,WY,884,72,4
 825,Riverton,WY,888,72,4
