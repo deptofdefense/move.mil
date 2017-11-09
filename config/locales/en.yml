@@ -39,6 +39,7 @@ en:
     gps: Global Positioning System
     hhg: Household Goods
     jtr: Joint Travel Regulations
+    nte: Not to Exceed
     nts: Non-Temporary Storage
     oconus: Outside the Continental United States
     pcs: Permanent Change of Station
@@ -47,6 +48,7 @@ en:
     pppo: Personal Property Processing Office
     ppso: Personal Property Shipping Office
     pov: Privately-Owned Vehicle
+    sit: Storage in Transit
     src: System Response Center
     tdy: Temporary Duty Yonder
   site:
