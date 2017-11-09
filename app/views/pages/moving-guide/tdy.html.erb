@@ -5,20 +5,18 @@
 <div class="usa-section main-section">
   <h1>What to Expect with a <%= abbr_tag('tdy') %> Move</h1>
 
-  <div class="usa-width-one-fourth">
-    <aside class="sidenav">
-      <div class="sidenav-jump-to">
-        Jump to:
-      </div>
-      <ul class="usa-sidenav-list">
-        <li><%= link_to raw("Shipping #{abbr_tag('tdy')} Household Goods"), '#shipping' %></li>
-        <li><%= link_to raw("Weight Allowances for #{abbr_tag('tdy')} Shipments"), '#weight_allowances' %></li>
-        <li><%= link_to raw("#{abbr_tag('tdy')} Shipments"), '#shipments' %></li>
-      </ul>
-    </aside>
-  </div>
+  <aside class="sidenav">
+    <div class="sidenav-jump-to">
+      Jump to:
+    </div>
+    <ul class="usa-sidenav-list">
+      <li><%= link_to raw("Shipping #{abbr_tag('tdy')} Household Goods"), '#shipping' %></li>
+      <li><%= link_to raw("Weight Allowances for #{abbr_tag('tdy')} Shipments"), '#weight_allowances' %></li>
+      <li><%= link_to raw("#{abbr_tag('tdy')} Shipments"), '#shipments' %></li>
+    </ul>
+  </aside>
 
-  <div class="usa-width-three-fourths">
+  <div class="sidenav-body">
     <div id="shipping">
       <h4>Shipping <%= abbr_tag('tdy') %> Household Goods</h4>
       <p>If you find yourself heading out on Temporary Duty for an extended period of time (31 or more days), your Approving Official may authorize you to ship a small amount of household goods, to include some of your professional gear and medical equipment. Your <%= abbr_tag('tdy') %> shipment should be scheduled on the Defense Personal Property System (DPS) and as with any PCS visit your local Personal Property Office if you have any questions.</p>

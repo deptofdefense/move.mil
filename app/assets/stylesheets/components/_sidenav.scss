@@ -10,16 +10,9 @@ $sidenav-screen-width: 800px;
     width: 20%
   }
 
-  .sidenav-jump-to {
-    margin-bottom: 0.5rem;
-    @include media($sidenav-screen-width) {
-      display: none;
-    }
-  }
-
   .usa-sidenav-list {
     // undo sidenav styling
-    @media screen and (max-width: $sidenav-screen-width) {
+    @media screen and (max-width: $sidenav-screen-width - 1) {
       li {
         border-top: none;
       }
@@ -34,6 +27,13 @@ $sidenav-screen-width: 800px;
         }
       }
     }
+  }
+}
+
+.sidenav-jump-to {
+  margin-bottom: 0.5rem;
+  @include media($sidenav-screen-width) {
+    display: none;
   }
 }
 
