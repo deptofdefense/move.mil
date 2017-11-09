@@ -1,0 +1,33 @@
+.sidenav {
+  width: 90%;
+
+  @include media($large-screen) {
+    padding-top: 1.5rem;
+  }
+
+  .sidenav-jump-to {
+    margin-bottom: 0.5rem;
+    @include media($large-screen) {
+      display: none;
+    }
+  }
+
+  .usa-sidenav-list {
+    // undo sidenav styling
+    @media screen and (max-width: $large-screen) {
+      li {
+        border-top: none;
+      }
+
+      a {
+        color: $color-primary;
+        margin-bottom: 0.5rem;
+        padding: 0;
+
+        &:hover {
+          background-color: $color-white;
+        }
+      }
+    }
+  }
+}

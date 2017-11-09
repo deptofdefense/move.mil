@@ -1,11 +1,133 @@
-<%- @page_title = 'What to expect… TDY' -%>
+<%- @page_title = 'What to Expect with a TDY Move' -%>
 
 <%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: []} %>
 
 <div class="usa-section main-section">
-  <h1>What to expect… <%= abbr_tag('tdy') %></h1>
+  <h1>What to Expect with a <%= abbr_tag('tdy') %> Move</h1>
 
-  <%# TODO Add page content %>
+  <div class="usa-width-one-fourth">
+    <aside class="sidenav">
+      <div class="sidenav-jump-to">
+        Jump to:
+      </div>
+      <ul class="usa-sidenav-list">
+        <li><%= link_to raw("Shipping #{abbr_tag('tdy')} Household Goods"), '#shipping' %></li>
+        <li><%= link_to raw("Weight Allowances for #{abbr_tag('tdy')} Shipments"), '#weight_allowances' %></li>
+        <li><%= link_to raw("#{abbr_tag('tdy')} Shipments"), '#shipments' %></li>
+      </ul>
+    </aside>
+  </div>
 
-  <p>Coming soon!</p>
+  <div class="usa-width-three-fourths">
+    <div id="shipping">
+      <h4>Shipping <%= abbr_tag('tdy') %> Household Goods</h4>
+      <p>If you find yourself heading out on Temporary Duty for an extended period of time (31 or more days), your Approving Official may authorize you to ship a small amount of household goods, to include some of your professional gear and medical equipment. Your <%= abbr_tag('tdy') %> shipment should be scheduled on the Defense Personal Property System (DPS) and as with any PCS visit your local Personal Property Office if you have any questions.</p>
+    </div>
+    <div id="weight_allowances">
+      <h4>Weight Allowances for <%= abbr_tag('tdy') %> Shipments</h4>
+      <p>The member’s grade on the day travel begins determines which weight allowance is allowed.  The weight allowances below are in addition to any unaccompanied or accompanied baggage.  Furthermore, in the event the <%= abbr_tag('tdy') %> location becomes the permanent duty station, this would mean that the <%= abbr_tag('tdy') %> weight allowance would also be an additional allowance to any PCS weight entitlements.</p>
+
+      <p>Check out the table below. You’ll find out just how much you are allowed to ship to this location.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Military Ranks</th>
+            <th scope="col">Public Health Services</th>
+            <th scope="col">Weight Allowance (lbs)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>O-10</td>
+            <td>N/A</td>
+            <td>2,000</td>
+          </tr>
+          <tr>
+            <td>O-9</td>
+            <td>Surgeon General</td>
+            <td>1,500</td>
+          </tr>
+          <tr>
+            <td>O-8</td>
+            <td>Deputy/Asst. Surgeon General</td>
+            <td>1,000</td>
+          </tr>
+          <tr>
+            <td>O-7</td>
+            <td>Asst. Surgeon General</td>
+            <td>1,000</td>
+          </tr>
+          <tr>
+            <td>O-6</td>
+            <td>Director</td>
+            <td>800</td>
+          </tr>
+          <tr>
+            <td>O-5/W-5</td>
+            <td>Senior</td>
+            <td>800</td>
+          </tr>
+          <tr>
+            <td>O-4/W-4</td>
+            <td>Full</td>
+            <td>600</td>
+          </tr>
+          <tr>
+            <td>O-3/W-3</td>
+            <td>Senior Assistant</td>
+            <td>600</td>
+          </tr>
+          <tr>
+            <td>O-2/W-2</td>
+            <td>Assistant</td>
+            <td>600</td>
+          </tr>
+          <tr>
+            <td>O-1/W-1</td>
+            <td>Junior Assistant</td>
+            <td>600</td>
+          </tr>
+          <tr>
+            <td>E-9</td>
+            <td>N/A</td>
+            <td>600</td>
+          </tr>
+          <tr>
+            <td>E-8</td>
+            <td>N/A</td>
+            <td>500</td>
+          </tr>
+          <tr>
+            <td>E-7 to E-1</td>
+            <td>N/A</td>
+            <td>400</td>
+          </tr>
+          <tr>
+            <td>Aviation Cadet</td>
+            <td>N/A</td>
+            <td>400</td>
+          </tr>
+          <tr>
+            <td>Service Academy</td>
+            <td>N/A</td>
+            <td>350</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Civilian employees, with authorization from the Approving Official on an extended <%= abbr_tag('tdy') %> assignment, may ship up to 350 lbs. This unaccompanied baggage is limited to additional clothing, personal effects, and equipment directly related to the mission, locality, or unusual conditions of the assignment.</p>
+    </div>
+    <div id="shipments">
+      <h4><%= abbr_tag('tdy') %> Shipments</h4>
+      <p>Since these can be unique, the list below includes some situations when the shipment of goods would be authorized with a <%= abbr_tag('tdy') %>.  As a reminder, if you have any questions please reach out to your <%= link_to 'local personal property office', offices_path %>.</p>
+
+      <ul>
+        <li>PCS with a <%= abbr_tag('tdy') %> en route</li>
+        <li>Indeterminate <%= abbr_tag('tdy') %></li>
+        <li><%= abbr_tag('tdy') %> pending a further assignment</li>
+        <li><%= abbr_tag('tdy') %> performed under an order pending an OCONUS PCS or assignment to a ship</li>
+        <li><%= abbr_tag('tdy') %> in connection with building, fitting out, converting, or reactivating a ship</li>
+      </ul>
+    </div>
+  </div>
 </div>
