@@ -92,59 +92,41 @@ end
 puts 'Loading ZIP code rate areas, service areas, regions, and basepoint cities...'
 zip3s = CSV.read(Rails.root.join('db', 'seeds', 'zip3.csv'))
 columns = [:zip3, :basepoint_city, :state, :service_area, :rate_area, :region]
-Zip3.transaction do
-  Zip3.import columns, zip3s
-end
+Zip3.import columns, zip3s
 
 zip5s = CSV.read(Rails.root.join('db', 'seeds', 'zip5_rate_areas.csv'))
 columns = [:zip5, :rate_area]
-Zip5RateArea.transaction do
-  Zip5RateArea.import columns, zip5s
-end
+Zip5RateArea.import columns, zip5s
 
 schedules = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Geographic_Schedule.csv'))
 columns = [:service_area, :name, :services_schedule, :linehaul_factor, :orig_dest_service_charge, :year]
-ServiceArea.transaction do
-  ServiceArea.import columns, schedules
-end
+ServiceArea.import columns, schedules
 
 puts 'Loading Baseline Rates...'
 baseline_rates = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_CONUS.csv'))
 columns = [:dist_mi_min, :dist_mi_max, :weight_lbs_min, :weight_lbs_max, :rate, :year]
-BaselineRate.transaction do
-  BaselineRate.import columns, baseline_rates, batch_size: 1000
-end
+BaselineRate.import columns, baseline_rates, batch_size: 1000
 
 intra_ak_baseline_rates = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_IntraAK.csv'))
 columns = [:dist_mi_min, :dist_mi_max, :weight_lbs_min, :weight_lbs_max, :rate, :year]
-IntraAlaskaBaselineRate.transaction do
-  IntraAlaskaBaselineRate.import columns, intra_ak_baseline_rates, batch_size: 1000
-end
+IntraAlaskaBaselineRate.import columns, intra_ak_baseline_rates, batch_size: 1000
 
 shorthauls = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Shorthaul.csv'))
 columns = [:cwt_mi_min, :cwt_mi_max, :rate, :year]
-Shorthaul.transaction do
-  Shorthaul.import columns, shorthauls
-end
+Shorthaul.import columns, shorthauls
 
 full_packs = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Full_Pack.csv'))
 columns = [:schedule, :weight_lbs_min, :weight_lbs_max, :rate, :year]
-FullPack.transaction do
-  FullPack.import columns, full_packs
-end
+FullPack.import columns, full_packs
 
 full_unpacks = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Full_Unpack.csv'))
 columns = [:schedule, :rate, :year]
-FullUnpack.transaction do
-  FullUnpack.import columns, full_unpacks
-end
+FullUnpack.import columns, full_unpacks
 
 puts 'Loading ZIP3 to ZIP3 distances from DTOD...'
-DtodZip3Distance.transaction do
-  distances = CSV.read(Rails.root.join('db', 'seeds', 'zip3_dtod_output.csv'), { headers: false, col_sep: ' ' })
-  columns = [:orig_zip3, :dest_zip3, :dist_mi]
-  DtodZip3Distance.import columns, distances, batch_size: 1000
-end
+distances = CSV.read(Rails.root.join('db', 'seeds', 'zip3_dtod_output.csv'), { headers: false, col_sep: ' ' })
+columns = [:orig_zip3, :dest_zip3, :dist_mi]
+DtodZip3Distance.import columns, distances, batch_size: 1000
 
 puts 'Loading top Best Value Scores for 2017...'
 CSV.foreach(Rails.root.join('db', 'seeds', '2017_BVS.csv'), headers: true) do |row|
