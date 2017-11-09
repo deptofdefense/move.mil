@@ -1,11 +1,163 @@
-<%- @page_title = 'What to expect… Retirees/Separatees' -%>
+<%- @page_title = 'Retiree and Separatee Moves' -%>
 
 <%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: []} %>
 
 <div class="usa-section main-section">
   <h1><%= @page_title %></h1>
 
-  <%# TODO Add page content %>
+  <div class="usa-width-one-fourth">
+    <aside class="sidenav">
+      <div class="sidenav-jump-to">
+        Jump to:
+      </div>
+      <ul class="usa-sidenav-list">
+        <li><%= link_to 'Destination', '#destination' %></li>
+        <li><%= link_to 'Timing', '#timing' %></li>
+        <li><%= link_to 'Extensions', '#extensions' %></li>
+        <li><%= link_to 'Storage Options', '#storage' %></li>
+        <li><%= link_to 'Advance Payments', '#payments' %></li>
+        <li><%= link_to 'Short Distance Moves', '#short-distance' %></li>
+        <li><%= link_to 'Weight Entitlements', '#weight' %></li>
+        <li><%= link_to 'Personally Owned Vehicles (POV)', '#pov' %></li>
+        <li><%= link_to 'Pro Gear', '#pro-gear' %></li>
+        <li><%= link_to 'Shipping Methods', '#shipping' %></li>
+      </ul>
+    </aside>
+  </div>
 
-  <p>Coming soon!</p>
+  <div class="usa-width-three-fourths what-to-expect-body">
+    <div class="what-to-expect-intro">
+      At this point in your career, you are probably well versed in the <%= abbr_tag('pcs') %> process - making you wonder what the big differences are for this final move. It is  recommended that you reach out to your <%= link_to 'local personal property office', offices_path %> for help arranging your move.
+    </div>
+
+    <h3>What is different about a retiree or separatee move?</h3>
+
+    <div id="destination" class="what-to-expect-section usa-grid">
+      <div class="usa-width-one-fourth">
+        <h4>Destination<h4>
+      </div>
+      <div class="usa-width-three-fourths">
+        <p><strong>For separatees with less than 8 years of continuous active duty:</strong> The government will only pay the cost of moving your belongings to your Home of Record (HOR) or your Place Entering Active Duty (PLEAD).<p>
+        <p>You can still move somewhere else, however you will be responsible any additional costs above what it would have cost to move your entire weight allowance to your Home of Record (HOR) or to your Place Entering Active Duty (PLEAD).</p>
+        <p><strong>For retirees or separatees with more than 8 years of continuous active duty:</strong> The government will cover the cost of relocating you to your Home of Selection (HOS), anywhere within the United States.</p>
+        <p>You can still move outside the United States, however you will be responsible for any additional costs above what it would have cost to move you within the contiguous 48-states. To determine the government cost, the Personal Property Office typically uses the cost of transporting your entire weight allowance to the farthest possible location within the 48-contiguous states from your current station to calculate the government's maximum liability.</p>
+      </div>
+    </div>
+
+    <div id="timing" class="what-to-expect-section usa-grid">
+      <div class="usa-width-one-fourth">
+        <h4>Timing<h4>
+      </div>
+      <div class="usa-width-three-fourths">
+        <p><strong>For separatees with less than 8 years of continuous active duty:</strong> Your move must be scheduled within 180 days from your active duty termination date.<p>
+        <p><strong>For retirees or separatees with more than 8 years of continuous active duty:</strong> Your move must be scheduled within 1 year from your active duty termination date.</p>
+      </div>
+    </div>
+
+    <div id="extensions" class="what-to-expect-section usa-grid">
+      <div class="usa-width-one-fourth">
+        <h4>Extensions<h4>
+      </div>
+      <div class="usa-width-three-fourths">
+        <p>If you cannot make your separation or retirement move within the designated time frame, you can request an extension (usually via email) from your branch of service. <strong>Time limit extensions can not extend the amount of time you can use <%= abbr_tag('nts') %> or <%= abbr_tag('sit') %>.</strong></p>
+
+        <p><strong>Extensions are granted for the following reasons (extensions cannot be granted for convenience or personal preferences):</strong></p>
+        <ul>
+          <li>Medical treatment: The service member is undergoing hospitalization or receiving medical treatment.</li>
+          <li>Education or training: The service member is undergoing education or training.</li>
+          <li>Other worthy causes: Specific hardship situations, legal or administrative proceedings that preclude the service member from moving within the time limit, unexpected events such as delay in selling/renovating/construction of a new home, or any delay necessitated as a result of separating/retirement from the service.</li>
+        </ul>
+
+        <p>Each branch of service has slight variations regarding the process and maximum amount of time that extensions can be granted for. Generally, separatees with less than 8 years of service can request extensions in 180-day intervals, for no longer than 3 years, while retirees and separatees with over 8 years of experience can request annual (1-year) extensions, for up to 6 years.</p>
+
+        <p>Select your branch of service to check the specific requirements:</p>
+        <ul class="usa-unstyled-list service-links-list">
+          <li><%= link_to 'Army', service_specific_information_path(anchor: 'army'), class: 'usa-width-one-sixth'%></li>
+          <li><%= link_to 'Marine Corps', service_specific_information_path(anchor: 'marines') %></li>
+          <li><%= link_to 'Navy', service_specific_information_path(anchor: 'navy') %></li>
+          <li><%= link_to 'Air Force', service_specific_information_path(anchor: 'air-force') %></li>
+          <li><%= link_to 'Coast Guard', service_specific_information_path(anchor: 'coast-guard') %></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="storage" class="what-to-expect-section usa-grid">
+      <div class="usa-width-one-fourth">
+        <h4>Storage Options<h4>
+      </div>
+      <div class="usa-width-three-fourths">
+        <p>Unlike some <%= abbr_tag('pcs') %> Moves, <strong>you are only allowed ONE of the following options:</strong></p>
+
+        <p><strong>Long term storage (NTS) at origin</strong> (the location where you were last stationed) for up to 180 days. If you have not scheduled your delivery before your 180 days expires, you will be personally responsible for any additional storage costs.</p>
+        <div class="centered">OR</div>
+        <p><strong>Short term storage (SIT)</strong> at your destination up to 90 days. If your household goods aren't delivered before the 90 days expires, you will be responsible for the very expensive excess storage costs and you will be ineligible to file any claims within the government Military Claims Office.</p>
+
+        <div class="usa-media_block pro-tip">
+          <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
+          <div class="usa-media_block-body"><strong>Pro-Tip:</strong> It is recommended that you only use short term storage (SIT), if you know your final delivery address upon retirement. If for some reason, you cannot secure housing or a place to deliver your household goods, you will be responsible for any additional storage cost beyond the initial 90 days. Additional storage costs can be very expensive - sometimes thousands dollars a month.</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="payments" class="what-to-expect-section usa-grid">
+      <div class="usa-width-one-fourth">
+        <h4>Advance Payment for <%= abbr_tag('ppm') %> “Do-it-Yourself” Moves<h4>
+      </div>
+      <div class="usa-width-three-fourths">
+        <p>Advances for <%= abbr_tag('ppm') %> “Do-it Yourself” moves may be limited by your branch of service for retiree/separtee moves.<p>
+        <p><strong>Army:</strong> No advance payment is made for separatees. Retirees can recieve an advance of up to 60% of the 95% <%= abbr_tag('ppm') %> incentive payment.</p>
+        <p><strong>Marines:</strong> Marine retirees and separatees can recieve an advancement of up to 60% of the 95% <%= abbr_tag('ppm') %> incentive payment. To receive your advancement, you must complete a <%= link_to 'detailed weight estimation', weight_estimator_path %> and reach out to your <%= link_to 'local personal property office (PPPO)', offices_path %> to arrange for a local quality assurance inspector to visit your residence to verify your estimated weight.</p>
+        <p><strong>Navy:</strong> No advance payment is given for separatee/retiree moves.</p>
+        <p><strong>Air Force:</strong> Air Force retirees and separatees can receive an advancement of up to 60% of the 95% <%= abbr_tag('ppm') %> incentive payment. </p>
+        <p><strong>Coast Guard:</strong> Retirees and separatees still on active duty are authorized an advance <%= abbr_tag('nte') %> written estimate from rental company for costs of truck, equipment etc. up to 60% of the 95% incentive payment. Separatees whose active duty termination date have past cannot receive advance payment for <%= abbr_tag('ppm') %> moves.</p>
+      </div>
+    </div>
+
+    <div id="short-distance" class="what-to-expect-section usa-grid">
+      <div class="usa-width-one-fourth">
+        <h4>Short Distance Moves<h4>
+      </div>
+      <div class="usa-width-three-fourths">
+        <p>If you were living on base, and your housing agreement requires you to move out of government quarters before you can determine your Home of Selection (HOS) you are authorized a short distance <%= abbr_tag('hhg') %> move from the government quarters to a local temporary residence in the vicinity of the vacated quarters. You must obtain a memo from the garrison housing office providing the funding citation to be used for the move. The usual rank-based weight limits do not apply to this "local move" out of government quarters. This local move does not count as your retirement move, unless you use your retirement orders for the move. <strong>Local moves must take place within a 30-mile radius from your base.</strong></p>
+      </div>
+    </div>
+
+    <h3>What is the same between a <%= abbr_tag('pcs') %> and a retiree or separatee move?</h3>
+
+    <div id="weight" class="what-to-expect-section usa-grid">
+      <div class="usa-width-one-fourth">
+        <h4>Weight Entitlements<h4>
+      </div>
+      <div class="usa-width-three-fourths">
+        <p>The amount of household goods you are allowed to move is still dependent on your final rank upon exiting military service. <%= link_to 'Determine your weight entitlement.', page_path('entitlements') %></p>
+      </div>
+    </div>
+
+    <div id="pov" class="what-to-expect-section usa-grid">
+      <div class="usa-width-one-fourth">
+        <h4>Personally-Owned Vehicles (POV)<h4>
+      </div>
+      <div class="usa-width-three-fourths">
+        <p>You are required to drive or ship your primary vehicles (POVs) primarily at your own expense as with any CONUS Permanent Change of Station (PCS). In some cases, a <%= abbr_tag('pov') %> shipment can requested and authorized if the service member physically cannot drive their car because of geographical or medical limitations.</p>
+      </div>
+    </div>
+
+    <div id="pro-gear" class="what-to-expect-section usa-grid">
+      <div class="usa-width-one-fourth">
+        <h4>Pro Gear<h4>
+      </div>
+      <div class="usa-width-three-fourths">
+        <p>You and your spouse (if applicable) are allowed to move Pro-Gear that was related to your professional duties. Just like with your past active duty PCS moves, you can move up to 2,000 lbs of professional gear, and your spouse can move up to 500 lbs of professional gear.</p>
+      </div>
+    </div>
+
+    <div id="shipping" class="what-to-expect-section usa-grid">
+      <div class="usa-width-one-fourth">
+        <h4>Shipping Methods<h4>
+      </div>
+      <div class="usa-width-three-fourths">
+        <p>You are allowed to have the government coordinate a move of your household goods with a “Household Goods Move” (HHG), to coordinate your own move with a Personally-Procured “Do-It-Yourself” Move (PPM), or a combination of both options. Use the <%= link_to 'PPM Estimator', '#TODO' %> to estimate the government incentive cost of doing a Personally-Procured Move.</p>
+      </div>
+    </div>
+  </div>
 </div>

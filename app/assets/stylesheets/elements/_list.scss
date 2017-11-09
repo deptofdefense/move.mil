@@ -80,7 +80,17 @@
 
     @include media($medium-screen) {
       height: 8rem;
-      max-width: 50%
+      max-width: 50%;
     }
+  }
+}
+
+.service-links-list li {
+  float: left;
+  width: 50%;
+
+  @include media($medium-screen) {
+    width: auto;
+    margin-right: 3rem;
   }
 }
