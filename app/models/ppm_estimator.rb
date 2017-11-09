@@ -94,11 +94,12 @@ class PpmEstimator
 
   def weight_entitlement(rank, dependents)
     entitlement = Entitlement.find_by(slug: rank)
-    if dependents && entitlement['total_weight_self_plus_dependents']
-      @entitlement_weight = entitlement['total_weight_self_plus_dependents']
-    else
-      @entitlement_weight = entitlement['total_weight_self']
-    end
+    @entitlement_weight =
+      if dependents && entitlement['total_weight_self_plus_dependents']
+        entitlement['total_weight_self_plus_dependents']
+      else
+        entitlement['total_weight_self']
+      end
     @entitlement_progear = entitlement['pro_gear_weight'] ? entitlement['pro_gear_weight'] : 0
     @entitlement_progear_spouse = married == 'yes' && entitlement['pro_gear_weight_spouse'] ? entitlement['pro_gear_weight_spouse'] : 0
   end
@@ -138,7 +139,7 @@ class PpmEstimator
     wpg = weight_progear.present? ? weight_progear.to_i : 0
     wpg_allowed = [wpg, @entitlement_progear].min
 
-    wpgs = (weight_progear_spouse.present? && (married == 'yes')) ? weight_progear_spouse.to_i : 0
+    wpgs = weight_progear_spouse.present? && married == 'yes' ? weight_progear_spouse.to_i : 0
     wpgs_allowed = [wpgs, @entitlement_progear_spouse].min
 
     wt_allowed + wpg_allowed + wpgs_allowed
@@ -148,17 +149,16 @@ class PpmEstimator
     # Origin is the rate_area, which you can usually get from just the ZIP3
     orig = orig_zip3['rate_area']
     # Sometimes, all 5 digits of the ZIP code are needed to get the rate area
-    if orig == 'ZIP'
-      orig = Zip5RateArea.find_by(zip5: orig_zipcode)['rate_area']
-    end
+    orig = Zip5RateArea.find_by(zip5: orig_zipcode)['rate_area'] if orig == 'ZIP'
 
     # For CONUS moves, destination is the region.
     # If the orig and dest are in the same state, the region is 15!
-    if orig_zip3['state'] == dest_zip3['state']
-      dest = 15
-    else
-      dest = dest_zip3['region']
-    end
+    dest =
+      if orig_zip3['state'] == dest_zip3['state']
+        15
+      else
+        dest_zip3['region']
+      end
 
     bvs = TopBestValueScore.find_by(orig: orig, dest: dest, year: date.year)
     # TODO: return rate from correct performance period
@@ -166,16 +166,22 @@ class PpmEstimator
   end
 
   def linehaul_charges(orig_svc_area, dest_svc_area, distance, wt, year)
-    base_linehaul = base_linehaul(distance, wt, year)
+    base_rate =
+      if wt >= 1000
+        base_linehaul(distance, wt, year)
+      else
+        # pro-rate the 1000 lb baseline rate for shipments less than 1000 lbs
+        base_linehaul(distance, 1000, year) * (wt / 1000.0)
+      end
     cwt = wt / 100
     orig_linehaul_factor = orig_svc_area['linehaul_factor'] * cwt
     dest_linehaul_factor = dest_svc_area['linehaul_factor'] * cwt
     shorthaul = shorthaul(distance, wt, year)
-    base_linehaul + orig_linehaul_factor + dest_linehaul_factor + shorthaul
+    base_rate + orig_linehaul_factor + dest_linehaul_factor + shorthaul
   end
 
   def base_linehaul(distance, wt, year)
-    # TODO: handle distances and weights beyond 3800 mi and 24000 lbs
+    # TODO: handle distances beyond 3800 mi
     # TODO: handle intra-AK
     # TODO: handle inter-AK
     # TODO: handle lookup failures
@@ -184,9 +190,7 @@ class PpmEstimator
   end
 
   def shorthaul(distance, wt, year)
-    if distance > 800
-      return 0
-    end
+    return 0 if distance > 800
 
     cwt_m = hundred_weight_miles(distance, wt)
     shorthaul = Shorthaul.find_by('year = ? AND ? BETWEEN cwt_mi_min AND cwt_mi_max', year, cwt_m)
