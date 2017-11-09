@@ -3,6 +3,8 @@ branch-defaults:
     environment: move-mil-staging
   production:
     environment: move-mil-prod
+  ppm-estimator:
+    environment: temp-ppm-estimator
 global:
   application_name: move.mil
   default_ec2_keyname: move-mil-deployer
