@@ -498,10 +498,8 @@
 530,West Bend,WI,872,32,7
 531,Mukwonago,WI,872,32,7
 532,Milwaukee,WI,872,32,7
-533,Milwaukee,WI,872,32,7
 534,Racine,WI,872,32,7
 535,Mt Horeb,WI,868,32,7
-536,Madison,WI,868,32,7
 537,Madison,WI,868,32,7
 538,Lancaster,WI,868,32,7
 539,Portage,WI,868,32,7
@@ -519,7 +517,6 @@
 551,St Paul,MN,417,50,7
 553,Montrose,MN,416,50,7
 554,Minneapolis,MN,417,50,7
-555,Montrose,MN,416,50,7
 556,Schroeder,MN,412,50,7
 557,Hibbing,MN,412,50,7
 558,Duluth,MN,412,50,7
@@ -711,9 +708,8 @@
 767,Waco,TX,744,66,6
 768,Brady,TX,776,ZIP,6
 769,Barnhart,TX,776,ZIP,6
-770,Hoton,TX,765,68,6
-771,Hoton,TX,765,68,6
-772,Hoton,TX,765,68,6
+770,Houston,TX,765,68,6
+772,Houston,TX,765,68,6
 773,Shepherd,TX,764,68,6
 774,East Bernard,TX,764,68,6
 775,Baytown,TX,764,68,6
@@ -725,7 +721,7 @@
 781,Stockdale,TX,780,68,6
 782,San Antonio,TX,781,68,6
 783,Alice,TX,748,68,6
-784,Corp Christi,TX,748,68,6
+784,Corpus Christi,TX,748,68,6
 785,McAllen,TX,768,68,6
 786,Atin,TX,744,ZIP,6
 787,Atin,TX,744,68,6
@@ -830,7 +826,6 @@
 906,Norwalk,CA,56,88,2
 907,Lakewood,CA,56,88,2
 908,Signal Hill,CA,56,88,2
-909,Los Angeles,CA,57,88,2
 910,Pasadena,CA,56,88,2
 911,Pasadena,CA,56,88,2
 912,Pasadena,CA,56,88,2
