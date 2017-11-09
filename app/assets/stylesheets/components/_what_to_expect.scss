@@ -1,10 +1,11 @@
 .what-to-expect-body {
   .what-to-expect-intro {
     background-color: $color-gray-cool-light;
-    @include margin(2rem 0);
+    @include margin(2rem 0-$site-margins-mobile);
     @include padding($site-margins-mobile);
 
     @include media($medium-screen) {
+      @include margin(2rem 0);
       @include padding($site-margins);
     }
   }
