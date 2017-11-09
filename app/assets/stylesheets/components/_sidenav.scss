@@ -1,20 +1,25 @@
-.sidenav {
-  width: 90%;
+$sidenav-screen-width: 800px;
 
-  @include media($large-screen) {
+.sidenav {
+  float: left;
+  margin-right: 5%;
+  width: 100%;
+
+  @include media($sidenav-screen-width) {
     padding-top: 1.5rem;
+    width: 20%
   }
 
   .sidenav-jump-to {
     margin-bottom: 0.5rem;
-    @include media($large-screen) {
+    @include media($sidenav-screen-width) {
       display: none;
     }
   }
 
   .usa-sidenav-list {
     // undo sidenav styling
-    @media screen and (max-width: $large-screen) {
+    @media screen and (max-width: $sidenav-screen-width) {
       li {
         border-top: none;
       }
@@ -29,5 +34,14 @@
         }
       }
     }
+  }
+}
+
+.sidenav-body {
+  float: left;
+  width: 100%;
+
+  @include media($sidenav-screen-width) {
+    width: 75%;
   }
 }
