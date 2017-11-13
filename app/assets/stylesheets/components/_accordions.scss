@@ -1,11 +1,37 @@
-.faq-accordion-button {
+.faq-accordion-button,
+.moving-guide-accordion-button {
   background-image: asset-url('minus-blue.png');
   background-image: asset-url('minus-blue.svg');
 }
 
-.faq-accordion-button[aria-expanded=false] {
+.faq-accordion-button[aria-expanded=false],
+.moving-guide-accordion-button[aria-expanded=false] {
   background-image: asset-url('plus-blue.png');
   background-image: asset-url('plus-blue.svg');
+}
+
+.moving-guide-accordion-button {
+  background-position: right 1.5rem center;
+  padding: 1.5rem 3.5rem 1.5rem 1.5rem;
+
+  div {
+    display: table;
+  }
+
+  img {
+    height: 42px;
+    width: 42px;
+  }
+
+  span {
+    padding-left: 1.5rem;
+  }
+
+  img,
+  span {
+    display: table-cell;
+    vertical-align: middle;
+  }
 }
 
 .helpful-links-accordion {

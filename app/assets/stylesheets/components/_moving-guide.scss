@@ -20,47 +20,85 @@
     }
   }
 
-  dt {
-    img {
-      margin-right: 0.7rem;
-      vertical-align: middle;
+  .usa-accordion-bordered {
+    @include media($medium-screen) {
+      display: none;
+    }
+  }
+
+  table {
+    display: none;
+
+    @include media($medium-screen) {
+      display: block;
     }
   }
 
   th {
-    display: block;
-    font-size: $lead-font-size;
-    font-weight: $font-normal;
-    overflow: auto;
-    padding: 0.7rem 1.5rem 0.7rem 1.5rem;
-
-    @include media($medium-screen) {
-      display: table-cell;
-      padding: 1.5rem;
-      text-align: center;
-      width: 1.75rem;
-    }
+    padding: 1.5rem;
+    text-align: center;
+    width: 1.75rem;
 
     img {
-      float: left;
-      height: 42px;
-      margin: 0 1.6rem 0 0;
-      width: 42px;
+      height: 60px;
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
 
-      @include media($medium-screen) {
-        float: none;
-        height: 75px;
-        margin: 0;
-        width: 100%;
-      }
+.approvals {
+  img {
+    margin-right: 0.7rem;
+    vertical-align: middle;
+  }
+
+  .move-type {
+    font-size: $h3-font-size;
+    margin-bottom: 0.75rem;
+  }
+
+  .tag {
+    border-radius: $border-radius;
+    display: inline-block;
+    font-size: $h5-font-size;
+    margin: 0.15rem 0;
+    padding: 0.4rem 1rem;
+
+    &::before {
+      display: inline-block;
+      margin-right: 0.5rem;
     }
   }
 
-  td {
-    display: block;
+  .tag-approved,
+  .tag-semiapproved {
+    color: $color-white;
 
-    @include media($medium-screen) {
-      display: table-cell;
+    &::before {
+      content: "✓";
+    }
+  }
+
+  .tag-approved {
+    background-color: $color-green-light;
+  }
+
+  .tag-semiapproved {
+    background-color: $color-gold;
+  }
+
+  .tag-unapproved {
+    color: $color-gray-light;
+
+    &::before {
+      content: "𝘟";
+    }
+  }
+
+  & + & {
+    @media screen and (max-width: $medium-screen) {
+      margin-top: 2rem;
     }
   }
 }

@@ -1,0 +1,38 @@
+<p>A Household Goods "HHG" move is a move completed by a government-furnished moving company, also called a Transportation Service Provider (TSP). During a HHG move, your transporter is responsible for packing all of your belongings and transporting them to your new location. If anything becomes lost or broken during your move, you can work with your transporter or the <%= link_to 'Military Claims Office', page_path('customer-service', anchor: 'claims') %> to receive financial compensation for your items.</p>
+
+<p><strong>Approved for:</strong></p>
+
+<div class="usa-grid-full">
+  <div class="approvals usa-width-one-half">
+    <div class="move-type">
+      <%= image_tag 'conus.svg', width: '40px', alt: '', role: 'presentation' %>
+      <%= abbr_tag('conus') %>
+    </div>
+    <div>
+    <span class="tag tag-unapproved">
+      <span class="usa-sr-only">Not approved for</span> Temporary Duty Yonder (TDY)
+    </span>
+  </div>
+  <div>
+    <span class="tag tag-approved">
+      <span class="usa-sr-only">Approved for</span> Permanent Change of Station (PCS)
+    </span>
+  </div>
+  </div>
+  <div class="approvals usa-width-one-half">
+    <div class="move-type">
+      <%= image_tag 'oconus.svg', width: '40px', alt: '', role: 'presentation' %>
+      <%= abbr_tag('oconus') %>
+    </div>
+    <div>
+      <span class="tag tag-unapproved">
+        <span class="usa-sr-only">Not approved for</span> Temporary Duty Yonder (TDY)
+      </span>
+    </div>
+    <div>
+      <span class="tag tag-approved">
+        <span class="usa-sr-only">Approved for</span> Permanent Change of Station (PCS)
+      </span>
+    </div>
+  </div>
+</div>
