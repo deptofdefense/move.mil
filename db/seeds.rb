@@ -105,11 +105,11 @@ ServiceArea.import columns, schedules
 puts 'Loading Baseline Rates...'
 baseline_rates = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_CONUS.csv'))
 columns = [:dist_mi_min, :dist_mi_max, :weight_lbs_min, :weight_lbs_max, :rate, :year]
-BaselineRate.import columns, baseline_rates, batch_size: 1000
+BaselineRate.import columns, baseline_rates, batch_size: 500
 
 intra_ak_baseline_rates = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_IntraAK.csv'))
 columns = [:dist_mi_min, :dist_mi_max, :weight_lbs_min, :weight_lbs_max, :rate, :year]
-IntraAlaskaBaselineRate.import columns, intra_ak_baseline_rates, batch_size: 1000
+IntraAlaskaBaselineRate.import columns, intra_ak_baseline_rates, batch_size: 500
 
 shorthauls = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Shorthaul.csv'))
 columns = [:cwt_mi_min, :cwt_mi_max, :rate, :year]
@@ -126,7 +126,7 @@ FullUnpack.import columns, full_unpacks
 puts 'Loading ZIP3 to ZIP3 distances from DTOD...'
 distances = CSV.read(Rails.root.join('db', 'seeds', 'zip3_dtod_output.csv'), { headers: false, col_sep: ' ' })
 columns = [:orig_zip3, :dest_zip3, :dist_mi]
-DtodZip3Distance.import columns, distances, batch_size: 1000
+DtodZip3Distance.import columns, distances, batch_size: 500
 
 puts 'Loading top Best Value Scores for 2017...'
 CSV.foreach(Rails.root.join('db', 'seeds', '2017_BVS.csv'), headers: true) do |row|
