@@ -9,16 +9,16 @@ source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
 gem 'friendly_id', '~> 5.2', '>= 5.2.3'
-gem 'geokit-rails', '~> 2.3.0'
+gem 'geokit-rails', '~> 2.3'
 gem 'high_voltage', '~> 3.0'
 gem 'lograge', '~> 0.7.1'
 gem 'pg', '~> 0.21.0'
 gem 'puma', '~> 3.10'
 gem 'rails', '~> 5.1', '>= 5.1.4'
-gem 'sass', '~> 3.5', '>= 3.5.1'
+gem 'sass', '~> 3.5', '>= 3.5.3'
 gem 'sass-rails', '~> 5.0', '>= 5.0.6'
 gem 'uglifier', '~> 3.2'
-gem 'uswds-rails', '~> 1.3'
+gem 'uswds-rails', '~> 1.3.1'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
 source 'https://rails-assets.org' do
@@ -42,7 +42,7 @@ group :development do
 end
 
 group :test do
-  gem 'factory_girl_rails', '~> 4.8'
+  gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
   gem 'simplecov', '~> 0.15.1', require: false
   gem 'simplecov-console', '~> 0.4.2', require: false
 end
