@@ -127,24 +127,3 @@ puts 'Loading ZIP3 to ZIP3 distances from DTOD...'
 distances = CSV.read(Rails.root.join('db', 'seeds', 'zip3_dtod_output.csv'), { headers: false, col_sep: ' ' })
 columns = [:orig_zip3, :dest_zip3, :dist_mi]
 DtodZip3Distance.import columns, distances, batch_size: 500
-
-puts 'Loading top Best Value Scores for 2017...'
-CSV.foreach(Rails.root.join('db', 'seeds', '2017_BVS.csv'), headers: true) do |row|
-  bvs = TopBestValueScore.create do |b|
-    b.year = 2017
-    b.orig = row[0]
-    b.dest = row[1]
-    b.perf_period_h  = if ((perf_period_h  = row[2]) == '#N/A') then Float::NAN else perf_period_h end
-    b.perf_period_hs = if ((perf_period_hs = row[3]) == '#N/A') then Float::NAN else perf_period_hs end
-    b.perf_period_1  = if ((perf_period_1  = row[4]) == '#N/A') then Float::NAN else perf_period_1 end
-    b.perf_period_1s = if ((perf_period_1s = row[5]) == '#N/A') then Float::NAN else perf_period_1s end
-    b.perf_period_2  = if ((perf_period_2  = row[6]) == '#N/A') then Float::NAN else perf_period_2 end
-    b.perf_period_2s = if ((perf_period_2s = row[7]) == '#N/A') then Float::NAN else perf_period_2s end
-    b.perf_period_3  = if ((perf_period_3  = row[8]) == '#N/A') then Float::NAN else perf_period_3 end
-    b.perf_period_3s = if ((perf_period_3s = row[9]) == '#N/A') then Float::NAN else perf_period_3s end
-    b.perf_period_4  = if ((perf_period_4  = row[10]) == '#N/A') then Float::NAN else perf_period_4 end
-    b.perf_period_4s = if ((perf_period_4s = row[11]) == '#N/A') then Float::NAN else perf_period_4s end
-    b.perf_period_5  = if ((perf_period_5  = row[12]) == '#N/A') then Float::NAN else perf_period_5 end
-    b.perf_period_5s = if ((perf_period_5s = row[13]) == '#N/A') then Float::NAN else perf_period_5s end
-  end
-end
