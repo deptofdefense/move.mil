@@ -33,12 +33,16 @@ class PpmEstimator
     date >= peak_start && date <= peak_end
   end
 
+  def selfpack?
+    estimator_params[:selfpack] == 'yes'
+  end
+
   def result
     incentive_without_packing = incentive - @discounted_full_pack_cost
     {
-      advance: incentive * (advance_percentage / 100.0),
-      advance_without_packing: incentive_without_packing * (advance_percentage / 100.0),
+      advance: (selfpack? ? incentive : incentive_without_packing) * (advance_percentage / 100.0),
       discounted_full_pack_cost: @discounted_full_pack_cost,
+      incentive: selfpack? ? incentive : incentive_without_packing,
       incentive_without_packing: incentive_without_packing
     }
   end

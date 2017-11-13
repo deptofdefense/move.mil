@@ -15,12 +15,24 @@
 </div>
 <div class="ppm-estimate-table">
   Estimated Packing Incentive<br>
-  <span class="ppm-estimate-detail"><%= @ppm_estimator.full_weight %> lbs</span>
-  <span class="ppm-estimate-amount">+ $<%= number_with_precision(discounted_full_pack_cost, precision: 2) %></span>
+  <span class="ppm-estimate-detail">
+    <% if @ppm_estimator.selfpack? -%>
+      <%= @ppm_estimator.full_weight %> lbs
+    <% else -%>
+      (Government-provided packing)
+    <% end -%>
+  </span>
+  <span class="ppm-estimate-amount">
+    <% if @ppm_estimator.selfpack? -%>
+      + $<%= number_with_precision(discounted_full_pack_cost, precision: 2) %>
+    <% else -%>
+      + $0.00
+    <% end -%>
+  </span>
 </div>
 <div class="ppm-estimate-table-total">
   <span class="ppm-estimate-detail-total">Total Estimated Incentive</span>
-  <span class="ppm-estimate-amount-total">$<%= number_with_precision(@ppm_estimator.incentive, precision: 2) %></span>
+  <span class="ppm-estimate-amount-total">$<%= number_with_precision(incentive, precision: 2) %></span>
   Maximum Advance Payment
   <span class="ppm-estimate-amount">$<%= number_with_precision(advance, precision: 2) %> (<%= @ppm_estimator.advance_percentage %>%)</span>
 </div>
