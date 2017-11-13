@@ -3,211 +3,176 @@ class PpmEstimator
     @params = params
   end
 
-  def rank
-    estimator_params[:rank]
-  end
-
-  def branch
-    estimator_params[:branch]
-  end
-
-  def dependents
-    estimator_params[:dependents]
-  end
-
-  def married
-    estimator_params[:married]
-  end
-
-  def start
-    estimator_params[:start]
-  end
-
-  def end_
-    estimator_params[:end]
+  def advance_percentage
+    estimator_params[:branch] == 'marines' ? 50 : 60
   end
 
   def date
-    estimator_params[:date]
+    @date ||= Date.parse(estimator_params[:date])
   end
 
-  def weight
-    estimator_params[:weight]
+  def full_weight
+    @full_weight ||= full_allowed_weight
   end
 
-  def weight_progear
-    estimator_params[:weight_progear]
+  def incentive
+    @incentive ||= ppm_cost_estimate
   end
 
-  def weight_progear_spouse
-    estimator_params[:weight_progear_spouse]
+  def start_zip3
+    @start_zip3 ||= Zip3.find_by(zip3: estimator_params[:start][0, 3].to_i)
   end
 
-  def selfpack
-    estimator_params[:selfpack]
+  def end_zip3
+    @end_zip3 ||= Zip3.find_by(zip3: estimator_params[:end][0, 3].to_i)
+  end
+
+  def peak_season?
+    peak_start = Date.new(date.year, 5, 15)
+    peak_end = Date.new(date.year, 9, 30)
+    date >= peak_start && date <= peak_end
   end
 
   def result
-    weight_entitlement(rank, dependents == 'yes')
-    @full_weight = full_allowed_weight
-    incentive = ppm_cost_estimate
-    incentive_without_packing = incentive - @full_pack_cost
-    advance_percentage = branch == 'marines' ? 50 : 60
+    incentive_without_packing = incentive - @discounted_full_pack_cost
     {
       advance: incentive * (advance_percentage / 100.0),
       advance_without_packing: incentive_without_packing * (advance_percentage / 100.0),
-      advance_percentage: advance_percentage,
-      date: date,
-      end_basepoint_city: @end_basepoint_city,
-      end_state: @end_state,
-      entitlement_weight: @entitlement_weight,
-      entitlement_progear: @entitlement_progear,
-      entitlement_progear_spouse: @entitlement_progear_spouse,
-      full_pack_cost: @full_pack_cost,
-      full_weight: @full_weight,
-      incentive: incentive,
-      incentive_without_packing: incentive_without_packing,
-      start_basepoint_city: @start_basepoint_city,
-      start_state: @start_state
+      discounted_full_pack_cost: @discounted_full_pack_cost,
+      incentive_without_packing: incentive_without_packing
     }
   end
 
   def valid?
-    estimator_params.permitted? &&
-      rank.present? &&
-      branch.present? &&
-      dependents.present? &&
-      married.present? &&
-      start.present? &&
-      end_.present? &&
-      date.present? &&
-      weight.present? &&
-      selfpack.present?
     # weight_progear and weight_progear_spouse can be empty, will be regarded as 0
+    required_params = %w[rank branch dependents married start end date weight selfpack]
+
+    estimator_params.permitted? && (required_params - estimator_params.keys).empty?
   end
 
   private
+
+  def cwt
+    full_weight / 100
+  end
 
   def estimator_params
     @estimator_params ||= @params.permit(:rank, :branch, :dependents, :married, :start, :end, :date, :weight, :weight_progear, :weight_progear_spouse, :selfpack)
   end
 
-  def weight_entitlement(rank, dependents)
-    entitlement = Entitlement.find_by(slug: rank)
-    @entitlement_weight =
-      if dependents && entitlement['total_weight_self_plus_dependents']
+  def entitlement
+    @entitlement ||= Entitlement.find_by(slug: estimator_params[:rank])
+  end
+
+  def entitlement_self
+    @entitlement_self ||=
+      if estimator_params[:dependents] == 'yes' && entitlement['total_weight_self_plus_dependents']
         entitlement['total_weight_self_plus_dependents']
       else
         entitlement['total_weight_self']
       end
-    @entitlement_progear = entitlement['pro_gear_weight'] || 0
-    @entitlement_progear_spouse = married == 'yes' && entitlement['pro_gear_weight_spouse'] ? entitlement['pro_gear_weight_spouse'] : 0
+  end
+
+  def entitlement_progear
+    @entitlement_progear ||= entitlement['pro_gear_weight'] || 0
+  end
+
+  def entitlement_progear_spouse
+    @entitlement_progear_spouse = estimator_params[:married] == 'yes' && entitlement['pro_gear_weight_spouse'] ? entitlement['pro_gear_weight_spouse'] : 0
+  end
+
+  def full_pack_cost
+    @full_pack ||= FullPack.find_by('year = ? AND schedule = ? AND ? BETWEEN weight_lbs_min AND weight_lbs_max', date.year, orig_svc_area['services_schedule'], full_weight)
+    @full_pack_cost ||= @full_pack['rate'] * cwt
+  end
+
+  def orig_svc_area
+    @orig_svc_area ||= ServiceArea.find_by(year: date.year, service_area: start_zip3['service_area'])
+  end
+
+  def dest_svc_area
+    @dest_svc_area ||= ServiceArea.find_by(year: date.year, service_area: end_zip3['service_area'])
+  end
+
+  def rate_area(zip3, zip5)
+    # you can usually get the rate_area from just the ZIP3
+    area = zip3['rate_area']
+    # Sometimes, all 5 digits of the ZIP code are needed to get the rate area
+    return area unless area == 'ZIP'
+    Zip5RateArea.find_by(zip5: zip5)['rate_area']
   end
 
   def ppm_cost_estimate
     # TODO: Intra-AK
     # TODO: OCONUS
     # TODO: error handling
-    orig_zip3 = Zip3.find_by(zip3: start[0, 3].to_i)
-    dest_zip3 = Zip3.find_by(zip3: end_[0, 3].to_i)
-
-    @start_basepoint_city = orig_zip3['basepoint_city']
-    @start_state = orig_zip3['state']
-    @end_basepoint_city = dest_zip3['basepoint_city']
-    @end_state = dest_zip3['state']
-
-    date_parsed = Date.parse(date)
-    year = date_parsed.year
-
-    orig_svc_area = ServiceArea.find_by(year: year, service_area: orig_zip3['service_area'])
-    dest_svc_area = ServiceArea.find_by(year: year, service_area: dest_zip3['service_area'])
-
-    distance = DtodZip3Distance.find_by(orig_zip3: orig_zip3['zip3'], dest_zip3: dest_zip3['zip3'])['dist_mi'].to_i
-
-    lh_charges = linehaul_charges(orig_svc_area, dest_svc_area, distance, @full_weight, year)
-    non_lh_charges = non_linehaul_charges(orig_svc_area, dest_svc_area, @full_weight, year)
-
-    inv_discount = inv_linehaul_discount(orig_zip3, dest_zip3, date_parsed)
-    @full_pack_cost *= inv_discount * 0.95
-    (lh_charges + non_lh_charges) * inv_discount * 0.95
+    inv_discount = inv_linehaul_discount
+    @discounted_full_pack_cost = full_pack_cost * inv_discount * 0.95
+    (linehaul_charges + non_linehaul_charges) * inv_discount * 0.95
   end
 
   def full_allowed_weight
-    wt = weight.to_i
-    wt_allowed = [wt, @entitlement_weight].min
+    self_allowed = [estimator_params[:weight].to_i, entitlement_self].min
+    wpg_allowed = [estimator_params[:weight_progear].to_i, entitlement_progear].min
 
-    wpg = weight_progear.present? ? weight_progear.to_i : 0
-    wpg_allowed = [wpg, @entitlement_progear].min
+    wpgs = estimator_params[:married] == 'yes' ? estimator_params[:weight_progear_spouse].to_i : 0
+    wpgs_allowed = [wpgs, entitlement_progear_spouse].min
 
-    wpgs = weight_progear_spouse.present? && married == 'yes' ? weight_progear_spouse.to_i : 0
-    wpgs_allowed = [wpgs, @entitlement_progear_spouse].min
-
-    wt_allowed + wpg_allowed + wpgs_allowed
+    self_allowed + wpg_allowed + wpgs_allowed
   end
 
-  def inv_linehaul_discount(orig_zip3, dest_zip3, date)
-    # Origin is the rate_area, which you can usually get from just the ZIP3
-    orig = orig_zip3['rate_area']
-    # Sometimes, all 5 digits of the ZIP code are needed to get the rate area
-    orig = Zip5RateArea.find_by(zip5: orig_zipcode)['rate_area'] if orig == 'ZIP'
+  def inv_linehaul_discount
+    # the origin is a rate area
+    orig = rate_area(start_zip3, estimator_params[:start].to_i)
 
     # For CONUS moves, destination is the region.
     # If the orig and dest are in the same state, the region is 15!
     dest =
-      if orig_zip3['state'] == dest_zip3['state']
+      if start_zip3['state'] == end_zip3['state']
         15
       else
-        dest_zip3['region']
+        end_zip3['region']
       end
 
     bvs = TopBestValueScore.find_by(orig: orig, dest: dest, year: date.year)
     # TODO: return rate from correct performance period
-    bvs['perf_period_2'] / 100
+    bvs['perf_period_2'] / 100.0
   end
 
-  def linehaul_charges(orig_svc_area, dest_svc_area, distance, wt, year)
+  def linehaul_charges
+    distance = DtodZip3Distance.find_by(orig_zip3: start_zip3['zip3'], dest_zip3: end_zip3['zip3'])['dist_mi'].to_i
     base_rate =
-      if wt >= 1000
-        base_linehaul(distance, wt, year)
+      if full_weight >= 1000
+        base_linehaul(distance, full_weight)
       else
         # pro-rate the 1000 lb baseline rate for shipments less than 1000 lbs
-        base_linehaul(distance, 1000, year) * (wt / 1000.0)
+        base_linehaul(distance, 1000) * (full_weight / 1000.0)
       end
-    cwt = wt / 100
     orig_linehaul_factor = orig_svc_area['linehaul_factor'] * cwt
     dest_linehaul_factor = dest_svc_area['linehaul_factor'] * cwt
-    shorthaul = shorthaul(distance, wt, year)
+    shorthaul = shorthaul(distance)
     base_rate + orig_linehaul_factor + dest_linehaul_factor + shorthaul
   end
 
-  def base_linehaul(distance, wt, year)
+  def base_linehaul(distance, wt)
     # TODO: handle intra-AK
     # TODO: handle inter-AK
     # TODO: handle lookup failures
-    conus_linehaul = BaselineRate.find_by('year = ? AND ? BETWEEN dist_mi_min AND dist_mi_max AND ? BETWEEN weight_lbs_min AND weight_lbs_max', year, distance, wt)
+    conus_linehaul = BaselineRate.find_by('year = ? AND ? BETWEEN dist_mi_min AND dist_mi_max AND ? BETWEEN weight_lbs_min AND weight_lbs_max', date.year, distance, wt)
     conus_linehaul['rate']
   end
 
-  def shorthaul(distance, wt, year)
+  def shorthaul(distance)
     return 0 if distance > 800
 
-    cwt_m = hundred_weight_miles(distance, wt)
-    shorthaul = Shorthaul.find_by('year = ? AND ? BETWEEN cwt_mi_min AND cwt_mi_max', year, cwt_m)
+    cwt_m = distance * cwt
+    shorthaul = Shorthaul.find_by('year = ? AND ? BETWEEN cwt_mi_min AND cwt_mi_max', date.year, cwt_m)
     shorthaul['rate']
   end
 
-  def hundred_weight_miles(distance, wt)
-    # From page 61 of '2017 400NG Tariff.pdf':
-    # "Determine CWT-M by multiplying total shipment MILES times CWT."
-    distance * (wt / 100)
-  end
+  def non_linehaul_charges
+    full_unpack = FullUnpack.find_by(year: date.year, schedule: dest_svc_area['services_schedule'])
 
-  def non_linehaul_charges(orig_svc_area, dest_svc_area, wt, year)
-    full_pack = FullPack.find_by('year = ? AND schedule = ? AND ? BETWEEN weight_lbs_min AND weight_lbs_max', year, orig_svc_area['services_schedule'], wt)
-    full_unpack = FullUnpack.find_by(year: year, schedule: dest_svc_area['services_schedule'])
-    cwt = wt / 100
-
-    @full_pack_cost = full_pack['rate'] * cwt
-    (orig_svc_area['orig_dest_service_charge'] + dest_svc_area['orig_dest_service_charge'] + full_pack['rate'] + full_unpack['rate']) * cwt
+    (orig_svc_area['orig_dest_service_charge'] + dest_svc_area['orig_dest_service_charge'] + full_unpack['rate']) * cwt + full_pack_cost
   end
 end

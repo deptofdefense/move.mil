@@ -5,24 +5,24 @@
   Estimated Transportation Incentive<br>
   <span class="ppm-estimate-amount">$<%= number_with_precision(incentive_without_packing, precision: 2) %></span>
   <span class="ppm-estimate-detail">
-    From <%= start_basepoint_city %>, <%= start_state %> <%= params['start'] %>
-    to <%= end_basepoint_city %>, <%= end_state %> <%= params['end'] %>
+    From <%= @ppm_estimator.start_zip3['basepoint_city'] %>, <%= @ppm_estimator.start_zip3['state'] %> <%= params['start'] %>
+    to <%= @ppm_estimator.end_zip3['basepoint_city'] %>, <%= @ppm_estimator.end_zip3['state'] %> <%= params['end'] %>
   </span><br>
   <span class="ppm-estimate-detail">
-    Departing <%= date %> (Peak Season)<br>
-    <%= full_weight %> lbs
+    Departing <%= @ppm_estimator.date.strftime('%B %-d, %Y') %><% if @ppm_estimator.peak_season? %> (Peak Season)<% end %><br>
+    <%= @ppm_estimator.full_weight %> lbs
   </span>
 </div>
 <div class="ppm-estimate-table">
   Estimated Packing Incentive<br>
-  <span class="ppm-estimate-detail"><%= full_weight %> lbs</span>
-  <span class="ppm-estimate-amount">+ $<%= number_with_precision(full_pack_cost, precision: 2) %></span>
+  <span class="ppm-estimate-detail"><%= @ppm_estimator.full_weight %> lbs</span>
+  <span class="ppm-estimate-amount">+ $<%= number_with_precision(discounted_full_pack_cost, precision: 2) %></span>
 </div>
 <div class="ppm-estimate-table-total">
   <span class="ppm-estimate-detail-total">Total Estimated Incentive</span>
-  <span class="ppm-estimate-amount-total">$<%= number_with_precision(incentive, precision: 2) %></span>
+  <span class="ppm-estimate-amount-total">$<%= number_with_precision(@ppm_estimator.incentive, precision: 2) %></span>
   Maximum Advance Payment
-  <span class="ppm-estimate-amount">$<%= number_with_precision(advance, precision: 2) %> (<%= advance_percentage %>%)</span>
+  <span class="ppm-estimate-amount">$<%= number_with_precision(advance, precision: 2) %> (<%= @ppm_estimator.advance_percentage %>%)</span>
 </div>
 
 <button>Schedule My PPM Move</button>
