@@ -1,0 +1,40 @@
+.nightmare-moves {
+  p {
+    line-height: 1.8;
+  }
+
+  .pro-tip {
+    margin-top: 0;
+  }
+}
+
+.story-title {
+  color: $color-primary-darker;
+  display: table;
+  font-size: $h2-font-size;
+  margin: auto;
+
+  img {
+    width: 65px;
+  }
+
+  span {
+    padding-left: 1rem;
+  }
+
+  img,
+  span {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.quotation-mark {
+  color: $color-primary;
+  font-size: 3.5rem;
+  line-height: 1.8rem;
+}
+
+.color-primary {
+  color: $color-primary;
+}

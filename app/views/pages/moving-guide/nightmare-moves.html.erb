@@ -2,19 +2,82 @@
 
 <%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: []} %>
 
-<div class="usa-section main-section">
+<div class="usa-section main-section nightmare-moves">
   <h1><%= @page_title %></h1>
 
-  <h2>Lesson: Create a detailed inventory &amp; bring the parts box with you!</h2>
-  <p>“On our first PCS, my wife and I were moving from North Carolina to Pearl Harbor. The packing company in North Carolina disassembled all of our furniture, including a sectional sofa and our bed, to fit it on the truck more compactly. After 1 month, when our furniture finally arrived, the movers in Pearl Harbor couldn’t find the box of bolts that the previous movers had packed. Yep, that’s right, the single box with every single screw, nut and bolt for our furniture was lost. Because we couldn’t prove the movers disassembled everything, we were left with a houseful of unassembled furniture. My wife and I ended up throwing everything away and buying new stuff.</p>
-  <p>“Every move since then, I make sure the inventory says whether or not the movers took something apart and where those bolts are stored!”</p>
+  <aside class="sidenav">
+    <div class="sidenav-jump-to">
+      Jump to:
+    </div>
+    <ul class="usa-sidenav-list">
+      <li><%= link_to 'The Bolt Box Blunder', '#bolt-box' %></li>
+      <li><%= link_to 'Dented Drywall Debacle', '#dented-drywall' %></li>
+      <li><%= link_to 'Car Key Cluster', '#car-key' %></li>
+      <li><%= link_to 'Soiled Sofa Situation', '#soiled-sofa' %></li>
+    </ul>
+  </aside>
 
-  <h2>Lesson: Separate anything you don’t want packed in a separate room or put in your car!</h2>
-  <p>“When the packers come there’s an absolute flurry of activity, everything getting boxed up. It’s impossible to watch absolutely everything. On one of our moves, the movers packed up the whole house, closed the truck, and was preparing to drive off when my husband realized we couldn’t find the car keys—I had put them on the kitchen counter earlier that morning. My husband ran outside and chased the moving truck down the street. They returned and started unpacking all of our boxes until they found our keys!”</p>
+  <div class="sidenav-body what-to-expect-body">
+    <div class="what-to-expect-intro">
+      While no moving experience is perfect, some are worse than others. While the Department of Defense strives to provide every service family with a good experience, mistakes can happen and the ball gets dropped. These “Nightmare Moves” are true stories as told by real service members.
+    </div>
 
-  <h2>Lesson: Take pictures &amp; videos of everything… your residence &amp; all your items <i>before</i> the movers arrive!</h2>
-  <p>“Last Monday, the movers took a giant chunk out of my wall and then proceeded to argue with me over if was already there even though I saw it happen, and tried to play it off as if it was no big deal. So, in the grand scheme of things, a little drywall is not a big deal, but when you are out of time, closing on your home, living in lodging, have family already on the road ahead of you, and your ability to fix it is limited.”</p>
+    <div class="what-to-expect-section usa-grid-full" id="bolt-box">
+      <div class="usa-width-two-thirds">
+        <div class="story-title">
+          <%= image_tag 'icons/bolt-box.svg', alt: '', role: 'presentation' %>
+          <span>The Bolt Box Blunder</span>
+        </div>
+        <p><span class="quotation-mark">“</span>On our first <%= abbr_tag('pcs') %>, my wife and I were moving from North Carolina to Pearl Harbor. The packing company in North Carolina disassembled all of our furniture, including a sectional sofa and our bed, to fit it on the truck more compactly. After 1 month, when our furniture finally arrived, the movers in Pearl Harbor couldn’t find the box of bolts that the previous movers had packed. <span class="color-primary">Yep, that’s right, the single box with every single screw, nut and bolt for our furniture was lost.</span> Because we couldn’t prove the movers disassembled everything, we were left with a houseful of unassembled furniture. My wife and I ended up throwing everything away and buying new stuff.</p>
+        <p>Every move since then, I make sure the inventory says whether or not the movers took something apart and where those bolts are stored!<span class="quotation-mark">”</span></p>
+      </div>
+      <div class="usa-media_block pro-tip usa-width-one-third">
+        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
+        <div class="usa-media_block-body"><strong>Pro-Tip:</strong> Bring the parts box with you. As the packers disassemble your furniture, place all the parts in baggies labelled with the name of the piece of furniture it came from. Then, take the parts box with you to your new location.</div>
+      </div>
+    </div>
 
-  <h2>Lesson: Check that inventory sheet… make sure the pre-existing damage section is correct!</h2>
-  <p>“Our movers were trying to convince me that my brand new dining room set needed to be marked with every pre-existing condition acronym possible since it surely looked like it had just left a war zone.”</p>
+    <div class="what-to-expect-section usa-grid-full" id="dented-drywall">
+      <div class="usa-width-two-thirds">
+        <div class="story-title">
+          <%= image_tag 'icons/drywall.svg', alt: '', role: 'presentation' %>
+          <span>The Drywall Debacle</span>
+        </div>
+        <p><span class="quotation-mark">“</span>Last Monday, the movers took a giant chunk out of my wall and when I pointed it out to them, they proceeded to argue with me over if was already there. After some back and forth they agreed to fix-it before they left. I went over to check out their handiwork… they had duck taped over the wall and painted over it! In the grand scheme of things, a little drywall is not a big deal, but when you are out of time, closing on your home, living in lodging, have family already on the road ahead of you, and your ability to fix it is limited.<span class="quotation-mark">”</span></p>
+      </div>
+      <div class="usa-media_block pro-tip usa-width-one-third">
+        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
+        <div class="usa-media_block-body"><strong>Pro-Tip:</strong> Photograph your house condition the morning before the packers arrive. If anything becomes damaged, take photos of that as well. If you can point it out to the driver - he’s in charge. Fill out Form ____ and the TSP can be financially responsible for fixing any damage caused by the moving crew.</div>
+      </div>
+    </div>
+
+    <div class="what-to-expect-section usa-grid-full" id="car-key">
+      <div class="usa-width-two-thirds">
+        <div class="story-title">
+          <%= image_tag 'icons/car-key.svg', alt: '', role: 'presentation' %>
+          <span>The Car Key Cluster</span>
+        </div>
+        <p><span class="quotation-mark">“</span>When the packers come there's an absolute flurry of activity, everything getting boxed up. It's impossible to watch absolutely everything. On one of our moves, the movers packed up the whole house, closed the truck, and was preparing to drive off when my husband realized we couldn’t find the car keys—I had put them on the kitchen counter earlier that morning. My husband ran outside and chased the moving truck down the street. They returned and started unpacking all of our boxes until they found our keys!<span class="quotation-mark">”</span></p>
+      </div>
+      <div class="usa-media_block pro-tip usa-width-one-third">
+        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
+        <div class="usa-media_block-body"><strong>Pro-Tip:</strong> Before the packers come, separtate anything you don't want packed in a separate room or put them in your car. Aggressively mark this area off limits with tape/signage.</div>
+      </div>
+    </div>
+
+    <div class="what-to-expect-section usa-grid-full" id="soiled-sofa">
+      <div class="usa-width-two-thirds">
+        <div class="story-title">
+          <%= image_tag 'icons/sofa.svg', alt: '', role: 'presentation' %>
+          <span>The Soiled Sofa Situation</span>
+        </div>
+        <p><span class="quotation-mark">“</span>Before we moved, against our better judgement we bought a new sofa from Costco. Because we were moving, we left it in the box. Our movers actually tried to convince me that my brand new, in the box sofa  needed to be marked with every pre-existing condition acronym possible since surely it had just left a war zone.<span class="quotation-mark">”</span></p>
+      </div>
+      <div class="usa-media_block pro-tip usa-width-one-third">
+        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
+        <div class="usa-media_block-body"><strong>Pro-Tip:</strong> You don't have to agree with your inventory. You should read it carefully and DO NOT sign it (no matter what the moving company says) until you make sure your all your items are listed and agree with the condition. On the bottom of the form there is usually a remarks section where you can add items and annotate any conditions that you don't agree with. If you need more space, ask your moving company for another sheet. To prepare, we recommend <%= link_to 'making your own "high value" inventory', '#TODO' %> of items you care most about. This makes it easier to check the mover's inventory.<br/><br/>Also those codes are industry standards and the meanings can be found <%= link_to 'here', '#TODO' %>.</div>
+      </div>
+    </div>
+
+
 </div>
