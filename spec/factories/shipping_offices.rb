@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :shipping_office do
     sequence(:name) { |n| "Shipping Office #{n}" }
     latitude 38.8718568

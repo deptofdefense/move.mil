@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :household_good_category do
     sequence(:name) { |n| "Category #{n}" }
     icon 'icons/bedroom.svg'

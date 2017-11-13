@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   sequence(:post_title) { |n| "Test Service Specific Post #{n}" }
 
   factory :service_specific_post do

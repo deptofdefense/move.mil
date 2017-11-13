@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   sequence(:title) { |n| "Test Tutorial Title #{n}" }
 
   factory :tutorial do

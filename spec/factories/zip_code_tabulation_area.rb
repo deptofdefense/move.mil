@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :zip_code_tabulation_area do
     # rubocop:disable Style/NumericLiterals
     zip_code 20010

@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   sequence(:branch) { |n| "Branch #{n}" }
 
   factory :branch_of_service_contact do
