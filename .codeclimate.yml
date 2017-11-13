@@ -11,7 +11,7 @@ plugins:
     enabled: true
     channel: "rubocop-0-51"
 exclude_patterns:
-  - "db/migrations/"
+  - "db/"
   - "lib/tasks/*.rake"
   - "spec/"
   - "vendor/"
