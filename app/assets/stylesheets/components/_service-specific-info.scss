@@ -1,3 +1,7 @@
+.svc-spec-banner {
+  margin: 2rem 0;
+}
+
 .post {
   background-color: $color-primary-alt-lightest;
   border-left: 6px solid $color-primary-alt;
@@ -31,8 +35,14 @@
   }
 
   th, td {
+    background-color: inherit;
     border: 0;
     padding: 0;
     word-wrap: break-word;
+  }
+
+  p {
+    line-height: 1.3;
+    margin: 0;
   }
 }

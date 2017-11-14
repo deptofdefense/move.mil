@@ -54,13 +54,13 @@
   margin-top: 1rem;
 
   .usa-accordion-button {
-    background-color: $color-gray-cool-light;
+    background-color: #f3f7fa;
     background-image: asset-url("uswds/angle-arrow-up-primary-hover.png");
     background-image: asset-url("uswds/angle-arrow-up-primary-hover.svg");
     color: $color-primary-darker;
 
     &:hover {
-      background-color: $color-cool-blue-lighter;
+      background-color: $color-gray-cool-light;
       color: $color-primary-darker;
     }
   }
@@ -71,7 +71,7 @@
   }
 
   .usa-accordion-content {
-    background-color: $color-gray-cool-light;
+    background-color: #f3f7fa;
     padding: 1rem 3rem 2rem 3rem;
   }
 }

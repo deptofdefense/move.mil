@@ -1,4 +1,4 @@
-<div class="usa-width-one-third">
+<div class="svc-spec-links-section">
   <h4>Customer Service Info</h4>
 
   <%- if contact.customer_service_contact_info? -%>
@@ -26,14 +26,11 @@
                 <td><a href="mailto:<%= contact.custsvc_email%>"><%= contact.custsvc_email %></a></td>
               </tr>
             <%- end -%>
-            <%- if contact.custsvc_facebook_url -%>
-              <tr>
-                <th></th>
-                <td><a class="usa-external_link" href="<%= contact.custsvc_facebook_url %>"><%= image_tag("find-us-on-facebook-512.png", :alt => "Find Us On Facebook", :width => "98") %></a><br></td>
-              </tr>
-            <%- end -%>
           </tbody>
         </table>
+        <%- if contact.custsvc_facebook_url -%>
+          <a class="usa-external_link" href="<%= contact.custsvc_facebook_url %>"><%= image_tag("find-us-on-facebook-512.png", :alt => "Find Us On Facebook", :width => "98") %></a>
+        <%- end -%>
       </section>
     </article>
   <%- end -%>
@@ -123,18 +120,22 @@
           </tbody>
         </table>
         <%- if contact.retiree_post? -%>
-          Address:<br>
+          Address:
           <%= simple_format(contact.retiree_post) %>
         <%- end -%>
       </section>
     </article>
   <%- end -%>
-  <article class="svc-spec-links">
-    <header>Supplemental Policies</header>
-    <section>
-      <p>
-        <a class="usa-external_link" href="http://static.e-publishing.af.mil/production/1/af_a4_7/publication/afi24-501/afi24-501.pdf">AFI 24-501 Air Force Personal Property Moving and Storage</a>
-      </p>
-    </section>
-  </article>
+  <%- if policies.any? -%>
+    <article class="svc-spec-links">
+      <header>Supplemental Policies</header>
+      <section>
+        <ul class="usa-unstyled-list">
+          <%- policies.each do |policy| -%>
+            <li><a class="usa-external_link" href="<%= policy[:url] %>"><%= policy[:name] %></a></li>
+          <%- end -%>
+        </ul>
+      </section>
+    </article>
+  <%- end -%>
 </div>
