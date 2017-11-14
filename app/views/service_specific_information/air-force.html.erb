@@ -1,0 +1,34 @@
+<%- @page_title = 'Service-Specific Information' -%>
+
+<%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: []} %>
+
+<div class="usa-section main-section">
+  <h1><%= @page_title %></h1>
+
+  <aside class="sidenav">
+    <div class="sidenav-jump-to">
+      Jump to:
+    </div>
+    <ul class="usa-sidenav-list">
+      <li><%= link_to 'Army', service_specific_information_path(branch: 'army') %></li>
+      <li><%= link_to 'Marine Corps', service_specific_information_path(branch: 'marine_corps') %></li>
+      <li><%= link_to 'Navy', service_specific_information_path(branch: 'navy') %></li>
+      <li><%= link_to 'Air Force', service_specific_information_path(branch: 'air-force'), class: 'usa-current' %></li>
+      <li><%= link_to 'Coast Guard', service_specific_information_path(branch: 'coast_guard') %></li>
+    </ul>
+  </aside>
+
+  <div class="sidenav-body svc-spec-body">
+    <%= image_tag('service_specific_information/air-force.png') %>
+    <div>
+      <h3>Announcements:</h3>
+      <%- if @posts -%>
+        <div class="usa-width-two-thirds">
+          <%- @posts.each do |post| -%>
+            <%= render partial: 'post', object: post %>
+          <%- end -%>
+        </div>
+      <%- end -%>
+    </div>
+  </div>
+</div>

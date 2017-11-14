@@ -1,24 +1,7 @@
 .svc-spec-frame {
-  border: 2px solid $color-primary-darkest;
-  border-radius: 0.5em;
-  margin-bottom: 2em;
-
-  header {
-    background: $color-primary-darkest;
-    color: $color-white;
-    font-size: $lead-font-size;
-    padding: 0.5em;
-  }
-
-  time {
-    font-size: $small-font-size;
-    font-style: italic;
-  }
-
-  section {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
+  background-color: $color-primary-alt-lightest;
+  border-left: 6px solid $color-primary-alt;
+  @include padding($site-margins-mobile);
 }
 
 .svc-spec-links {
