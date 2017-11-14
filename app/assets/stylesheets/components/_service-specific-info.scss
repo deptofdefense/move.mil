@@ -1,7 +1,8 @@
 .post {
   background-color: $color-primary-alt-lightest;
   border-left: 6px solid $color-primary-alt;
-  @include padding($site-margins-mobile);
+  padding: $site-margins-mobile;
+  margin-bottom: 1.5rem;
 }
 
 .svc-spec-links {

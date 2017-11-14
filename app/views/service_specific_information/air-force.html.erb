@@ -10,5 +10,6 @@
   <div class="sidenav-body svc-spec-body">
     <%= image_tag('service_specific_information/air-force.png') %>
     <%= render partial: 'posts', object: @posts %>
+    <%= render partial: 'customer-service', locals: {'contact': @contact} %>
   </div>
 </div>

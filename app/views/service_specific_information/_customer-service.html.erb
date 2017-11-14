@@ -1,0 +1,140 @@
+<div class="usa-width-one-third">
+  <h4>Customer Service Info</h4>
+
+  <%- if contact.customer_service_contact_info? -%>
+    <article class="svc-spec-links">
+      <header><%= contact.branch %> Customer Service</header>
+      <em>(Entitlements, Exceptions to Policy, General Info)</em>
+      <section>
+        <table>
+          <tbody>
+            <%- if contact.custsvc_dsn -%>
+              <tr>
+                <th scope="row">DSN:</th>
+                <td><%= contact.custsvc_dsn %></td>
+              </tr>
+            <%- end -%>
+            <%- if contact.custsvc_tel_comm -%>
+              <tr>
+                <th scope="row">Comm:</th>
+                <td><%= contact.custsvc_tel_comm %></td>
+              </tr>
+            <%- end -%>
+            <%- if contact.custsvc_email -%>
+              <tr>
+                <th scope="row">Email:</th>
+                <td><a href="mailto:<%= contact.custsvc_email%>"><%= contact.custsvc_email %></a></td>
+              </tr>
+            <%- end -%>
+            <%- if contact.custsvc_facebook_url -%>
+              <tr>
+                <th></th>
+                <td><a class="usa-external_link" href="<%= contact.custsvc_facebook_url %>"><%= image_tag("find-us-on-facebook-512.png", :alt => "Find Us On Facebook", :width => "98") %></a><br></td>
+              </tr>
+            <%- end -%>
+          </tbody>
+        </table>
+      </section>
+    </article>
+  <%- end -%>
+  <%- if contact.claims_contact_info? -%>
+    <article class="svc-spec-links">
+      <header>Claims</header>
+      <section>
+        <table class="svc-spec-links">
+          <tbody>
+            <%- if contact.claims_dsn? -%>
+              <tr>
+                <th scope="row">DSN:</th>
+                <td><%= contact.claims_dsn %></td>
+              </tr>
+            <%- end -%>
+            <%- if contact.claims_tel_comm? -%>
+              <tr>
+                <th scope="row">Comm:</ht>
+                <td><%= contact.claims_tel_comm %></td>
+              </tr>
+            <%- end -%>
+            <%- if contact.claims_tel_tollfree? -%>
+              <tr>
+                <th scope="row">Toll Free:</th>
+                <td><%= contact.claims_tel_tollfree %></td>
+              </tr>
+            <%- end -%>
+            <%- if contact.claims_email? -%>
+              <tr>
+                <th scope="row">Email:</th>
+                <td><a href="mailto:<%= contact.claims_email %>"><%= contact.claims_email %></a></td>
+              </tr>
+            <%- end -%>
+            <%- if contact.claims_fax_dsn? -%>
+              <tr>
+                <th scope="row">DSN-Fax:</th>
+                <td><%= contact.claims_fax_dsn %></td>
+              </tr>
+            <%- end -%>
+            <%- if contact.claims_fax_comm? -%>
+              <tr>
+                <th scope="row">Comm-Fax:</th>
+                <td><%= contact.claims_fax_comm %></td>
+              </tr>
+            <%- end -%>
+          </tbody>
+        </table>
+      </section>
+    </article>
+  <%- end -%>
+  <%- if contact.retiree_contact_info? -%>
+    <article class="svc-spec-links">
+      <header>Retirement/Separation HHG Extensions</header>
+      <section>
+        <table>
+          <tbody>
+            <%- if contact.retiree_fax_dsn? -%>
+              <tr>
+                <th scope="row">DSN:</th>
+                <td><%= contact.retiree_fax_dsn %></td>
+              </tr>
+            <%- end -%>
+            <%- if contact.retiree_tel_comm? -%>
+              <tr>
+                <th scope="row">Comm:</th>
+                <td><%= contact.retiree_tel_comm %></td>
+              </tr>
+            <%- end -%>
+            <%- if contact.retiree_email? -%>
+              <tr>
+                <th scope="row">Email:</th>
+                <td><a href="mailto:<%= contact.retiree_email %>"><%= contact.retiree_email %></a></td>
+              </tr>
+            <%- end -%>
+            <%- if contact.retiree_fax_dsn? -%>
+              <tr>
+                <th scope="row">DSN-Fax:</th>
+                <td><%= contact.retiree_fax_dsn %></td>
+              </tr>
+            <%- end -%>
+            <%- if contact.retiree_fax_comm? -%>
+              <tr>
+                <th scope="row">Comm-Fax:</th>
+                <td><%= contact.retiree_fax_comm %></td>
+              </tr>
+            <%- end -%>
+          </tbody>
+        </table>
+        <%- if contact.retiree_post? -%>
+          Address:<br>
+          <%= simple_format(contact.retiree_post) %>
+        <%- end -%>
+      </section>
+    </article>
+  <%- end -%>
+  <article class="svc-spec-links">
+    <header>Supplemental Policies</header>
+    <section>
+      <p>
+        <a class="usa-external_link" href="http://static.e-publishing.af.mil/production/1/af_a4_7/publication/afi24-501/afi24-501.pdf">AFI 24-501 Air Force Personal Property Moving and Storage</a>
+      </p>
+    </section>
+  </article>
+</div>
