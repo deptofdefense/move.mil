@@ -1,7 +1,0 @@
-<article class="svc-spec-frame">
-  <strong><%= post.title %></strong>
-  <%- unless post.effective_at.nil? -%>
-    <br><em><%= post.effective_at.strftime("%B #{post.effective_at.day.ordinalize}, %Y") %></em>
-  <%- end -%>
-  <p><%= post.content.html_safe %></p>
-</article>

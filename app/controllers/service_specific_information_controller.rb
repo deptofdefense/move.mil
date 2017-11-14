@@ -16,7 +16,7 @@ class ServiceSpecificInformationController < ApplicationController
     when 'coast-guard'
       @posts = ServiceSpecificPost.where(branch: 'coast_guard')
     else
-      # Fall back to Army
+      # Fall back to army
       @posts = ServiceSpecificPost.where(branch: 'army')
       render 'army'
     end
