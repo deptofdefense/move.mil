@@ -32,13 +32,13 @@ brew tap homebrew/services
 brew services run postgresql
 ```
 
-This project uses Ruby (version 2.3.4) which can be installed using a Ruby version manager like [rbenv](https://github.com/rbenv/rbenv).
+This project uses Ruby (version 2.4.2) which can be installed using a Ruby version manager like [rbenv](https://github.com/rbenv/rbenv).
 
 ```sh
-rbenv install 2.3.4
+rbenv install 2.4.2
 ```
 
-Once you've installed Ruby 2.3.4, install the Bundler gem:
+Once you've installed Ruby 2.4.2, install the Bundler gem:
 
 ```sh
 gem install bundler

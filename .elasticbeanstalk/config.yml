@@ -1,10 +1,10 @@
 branch-defaults:
   master:
-    environment: staging
+    environment: move-mil-staging
 global:
   application_name: move.mil
   default_ec2_keyname: move-mil-deployer
-  default_platform: Ruby 2.3 (Puma)
+  default_platform: Ruby 2.4 (Puma)
   default_region: us-east-1
   sc: git
   workspace_type: Application
