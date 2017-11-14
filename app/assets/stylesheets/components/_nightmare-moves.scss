@@ -4,7 +4,27 @@
   }
 
   .pro-tip {
+    float: left;
     margin-top: 0;
+
+    @include media($nav-width) {
+      width: 35%;
+    }
+  }
+
+  .what-to-expect-section::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+.story {
+  float: left;
+  margin-right: 3%;
+
+  @include media($nav-width) {
+    width: 62%;
   }
 }
 
