@@ -31,21 +31,32 @@
 .story-title {
   color: $color-primary-darker;
   display: table;
-  font-size: $h2-font-size;
+  font-size: 2.5rem;
   margin: auto;
 
   img {
-    width: 65px;
+    display: block;
+    margin: 0 auto 2rem auto;
+    width: 105px;
   }
 
-  span {
-    padding-left: 1rem;
-  }
+  @include media($medium-screen) {
+    font-size: $h2-font-size;
 
-  img,
-  span {
-    display: table-cell;
-    vertical-align: middle;
+    img {
+      margin: 0;
+      width: 65px;
+    }
+
+    span {
+      padding-left: 1rem;
+    }
+
+    img,
+    span {
+      display: table-cell;
+      vertical-align: middle;
+    }
   }
 }
 
