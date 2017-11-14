@@ -59,7 +59,7 @@
     <fieldset>
       <legend><div class="ppm-outline"></div>When do you want to move?</legend>
       <%= form.label :date, 'Moving Date' %>
-      <%= form.date_field :date, { id: :date, required: true } %>
+      <%= form.date_field :date, { id: :date, pattern: '\d\d\d\d-\d\d?-\d\d?', placeholder: 'yyyy-mm-dd', required: true } %>
     </fieldset>
 
     <%= tag.div id: 'entitlements-json', data: { entitlements_json: @entitlements_json } %>
