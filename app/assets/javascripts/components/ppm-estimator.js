@@ -146,16 +146,17 @@
   $('#weight').on('input', onWeightInput);
   $('#weight_progear').on('input', onWeightProgearInput);
   $('#weight_progear_spouse').on('input', onWeightProgearSpouseInput);
+
+  var onZipCodeKey = function(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    // charCode 8 is backspace, required for Firefox to allow backspace when there are already 5 numbers in the box
+    return evt.target.value.length < 5 || charCode == 8;
+  };
+
+  $('#start').keypress(onZipCodeKey);
+  $('#end').keypress(onZipCodeKey);
+
 })(window, jQuery);
-
-function isDigitKey(evt) {
-  var charCode = (evt.which) ? evt.which : event.keyCode
-  return (charCode >= 48 && charCode <= 57);
-}
-
-function onZipCodeKey(field, evt) {
-  return isDigitKey(evt) && field.value.length < 5;
-}
 
 function onEditDetails() {
   $('#ppm-estimate-form').removeAttr('hidden');
