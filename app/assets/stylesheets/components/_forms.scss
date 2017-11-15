@@ -44,10 +44,11 @@
   }
 }
 
-.coordinates-search-form {
+.coordinates-search {
   margin-top: $site-margins-mobile;
 
   @include media(42rem) {
+    float: left;
     margin: 0 0 0 $site-margins-mobile;
   }
 }

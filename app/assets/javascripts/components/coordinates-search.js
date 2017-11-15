@@ -4,20 +4,16 @@
   var disabledButtonClassName = 'usa-button-disabled',
       errorMessageHTML = '<div class="usa-alert usa-alert-error" role="alert"><div class="usa-alert-body"><p class="usa-alert-text">There was a problem determining your location. Please reload the page and try again.</p></div></div>';
 
-  var CoordinatesSearchForm = function(options) {
+  var CoordinatesSearch = function(options) {
     this.$container = options.$container;
-    this.$latitudeInput = options.$latitudeInput;
-    this.$longitudeInput = options.$longitudeInput;
     this.$button = options.$button;
     this.$errorContainer = options.$errorContainer;
     this.$noticeContainer = options.$noticeContainer;
 
-    if (navigator.geolocation) {
-      this.setup();
-    }
+    this.setup();
   };
 
-  CoordinatesSearchForm.prototype = {
+  CoordinatesSearch.prototype = {
     events: {
       click: function(event) {
         event.preventDefault();
@@ -41,7 +37,7 @@
         if (coords) {
           this.$button.removeAttr('disabled');
 
-          location.href = this.$container.attr('action') + '/' + coords.latitude + ',' + coords.longitude;
+          location.href = this.$button.data('action') + '/' + coords.latitude + ',' + coords.longitude;
         }
       }
     },
@@ -53,13 +49,11 @@
     }
   };
 
-  var $container = $('#coordinates-search-form');
+  var $container = $('#coordinates-search');
 
-  if ($container.length) {
-    new CoordinatesSearchForm({
+  if (navigator.geolocation && $container.length) {
+    new CoordinatesSearch({
       $container: $container,
-      $latitudeInput: $('#latitude'),
-      $longitudeInput: $('#longitude'),
       $button: $container.find('button'),
       $errorContainer: $('#error-container'),
       $noticeContainer: $('#geolocation-notice')

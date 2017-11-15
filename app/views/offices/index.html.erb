@@ -29,12 +29,9 @@
       <button>Search</button>
     <% end %>
 
-    <%= form_with url: offices_path, class: 'usa-form coordinates-search-form', html: { hidden: true }, id: 'coordinates-search-form' do |form| %>
-      <%= form.hidden_field :latitude, id: 'latitude' %>
-      <%= form.hidden_field :longitude, id: 'longitude' %>
-
-      <button>Search by Your Location</button>
-    <% end %>
+    <div class="coordinates-search" id="coordinates-search" hidden>
+      <button data-action="<%= offices_path %>" type="button">Search by Your Location</button>
+    </div>
   </div>
 
   <%- if @transportation_offices -%>
