@@ -12,6 +12,17 @@ require 'csv'
 require 'json'
 require 'yaml'
 
+CSV::Converters[:int4range] = lambda{|s|
+  begin
+    m = /\A(\d+)\.\.(\d+)\z/.match(s)
+    if m.present?
+      Range.new(m[1].to_i,m[2].to_i)
+    else
+      s
+    end
+  end
+}
+
 puts 'Loading tutorials...'
 tutorials = YAML::load_file(Rails.root.join('db', 'seeds', 'tutorials.yml'))
 
@@ -103,20 +114,20 @@ columns = [:service_area, :name, :services_schedule, :linehaul_factor, :orig_des
 ServiceArea.import columns, schedules
 
 puts 'Loading Baseline Rates...'
-base_linehauls = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_CONUS.csv'))
-columns = [:dist_mi_min, :dist_mi_max, :weight_lbs_min, :weight_lbs_max, :rate, :year]
+base_linehauls = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_CONUS.csv'), converters: [:numeric, :int4range])
+columns = [:dist_mi, :weight_lbs, :rate, :year]
 BaseLinehaul.import columns, base_linehauls, batch_size: 500
 
-intra_ak_base_linehauls = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_IntraAK.csv'))
-columns = [:dist_mi_min, :dist_mi_max, :weight_lbs_min, :weight_lbs_max, :rate, :year]
+intra_ak_base_linehauls = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_IntraAK.csv'), converters: [:numeric, :int4range])
+columns = [:dist_mi, :weight_lbs, :rate, :year]
 IntraAlaskaBaseLinehaul.import columns, intra_ak_base_linehauls, batch_size: 500
 
-shorthauls = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Shorthaul.csv'))
-columns = [:cwt_mi_min, :cwt_mi_max, :rate, :year]
+shorthauls = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Shorthaul.csv'), converters: [:numeric, :int4range])
+columns = [:cwt_mi, :rate, :year]
 Shorthaul.import columns, shorthauls
 
-full_packs = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Full_Pack.csv'))
-columns = [:schedule, :weight_lbs_min, :weight_lbs_max, :rate, :year]
+full_packs = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Full_Pack.csv'), converters: [:numeric, :int4range])
+columns = [:schedule, :weight_lbs, :rate, :year]
 FullPack.import columns, full_packs
 
 full_unpacks = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Full_Unpack.csv'))

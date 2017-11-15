@@ -16,10 +16,8 @@ ActiveRecord::Schema.define(version: 20171215164151) do
   enable_extension "plpgsql"
 
   create_table "base_linehauls", force: :cascade do |t|
-    t.integer "dist_mi_min"
-    t.integer "dist_mi_max"
-    t.integer "weight_lbs_min"
-    t.integer "weight_lbs_max"
+    t.int4range "dist_mi"
+    t.int4range "weight_lbs"
     t.integer "rate"
     t.integer "year"
     t.datetime "created_at", null: false
@@ -98,8 +96,7 @@ ActiveRecord::Schema.define(version: 20171215164151) do
 
   create_table "full_packs", force: :cascade do |t|
     t.integer "schedule"
-    t.integer "weight_lbs_min"
-    t.integer "weight_lbs_max"
+    t.int4range "weight_lbs"
     t.decimal "rate", precision: 7, scale: 2
     t.integer "year"
     t.datetime "created_at", null: false
@@ -151,10 +148,8 @@ ActiveRecord::Schema.define(version: 20171215164151) do
   end
 
   create_table "intra_alaska_base_linehauls", force: :cascade do |t|
-    t.integer "dist_mi_min"
-    t.integer "dist_mi_max"
-    t.integer "weight_lbs_min"
-    t.integer "weight_lbs_max"
+    t.int4range "dist_mi"
+    t.int4range "weight_lbs"
     t.integer "rate"
     t.integer "year"
     t.datetime "created_at", null: false
@@ -209,8 +204,7 @@ ActiveRecord::Schema.define(version: 20171215164151) do
   end
 
   create_table "shorthauls", force: :cascade do |t|
-    t.integer "cwt_mi_min"
-    t.integer "cwt_mi_max"
+    t.int4range "cwt_mi"
     t.decimal "rate", precision: 7, scale: 2
     t.integer "year"
     t.datetime "created_at", null: false
@@ -221,19 +215,8 @@ ActiveRecord::Schema.define(version: 20171215164151) do
   create_table "top_tsp_by_channel_linehaul_discounts", force: :cascade do |t|
     t.text "orig"
     t.text "dest"
-    t.decimal "perf_period_h"
-    t.decimal "perf_period_hs"
-    t.decimal "perf_period_1"
-    t.decimal "perf_period_1s"
-    t.decimal "perf_period_2"
-    t.decimal "perf_period_2s"
-    t.decimal "perf_period_3"
-    t.decimal "perf_period_3s"
-    t.decimal "perf_period_4"
-    t.decimal "perf_period_4s"
-    t.decimal "perf_period_5"
-    t.decimal "perf_period_5s"
-    t.integer "year"
+    t.daterange "tdl"
+    t.decimal "discount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
