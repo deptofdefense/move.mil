@@ -1,9 +1,15 @@
 class OfficesController < ApplicationController
   def index
+    # return on direct requests to the page
     return unless search
+
+    # return error message on invalid search
     return error_message unless search.valid?
+
+    # return search results on valid search (GET)
     return transportation_offices unless request.post?
 
+    # redirect on valid search (POST)
     redirect_to offices_path(search.result)
   end
 
