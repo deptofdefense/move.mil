@@ -1,235 +1,148 @@
-<%- @page_title = 'Moving with the Military' -%>
+<%- @page_title = 'Moving with the Military Overview' -%>
 
 <%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: []} %>
 
 <div class="usa-section main-section moving-guide">
   <h1><%= @page_title %></h1>
 
-  <p>Below you will find basic information on moving with the military.</p>
+  <aside class="sidenav">
+    <div class="sidenav-jump-to">
+      Jump to:
+    </div>
+    <ul class="usa-sidenav-list">
+      <li><%= link_to 'Moves Start with Orders', '#orders' %></li>
+      <li><%= link_to 'Destination Matters', '#destination' %></li>
+      <li><%= link_to 'Choose How to Ship Your Household Goods (Move Types)', '#move-types' %></li>
+      <li><%= link_to 'What does rank have to do with it?', '#rank' %></li>
+    </ul>
+  </aside>
 
-  <ul class="two-column-list">
-    <li><%= link_to 'Understand Your Orders', '#your-orders' %></li>
-    <li><%= link_to 'Location Matters', '#location-matters' %></li>
-    <li><%= link_to 'Know Your Options (Move Types)', '#move-types' %></li>
-    <li><%= link_to 'What does rank have to do with it?', '#about-entitlements' %></li>
-  </ul>
+  <div class="sidenav-body what-to-expect-body">
+    <div class="what-to-expect-intro">
+      The Department of Defense relocates more families than any other organization in the United States. At that scale, the process can sometimes feel overwhelming - but you have choices regarding how you move. Do not hesitate to reach out to the <%= link_to 'local personal property office', offices_path %> or the <%= link_to 'family support center', 'http://www.militaryinstallations.dod.mil/MOS/f?p=MI:ENTRY:0' %> at your current installation for help. Another amazing resource is <%= link_to 'MilitaryOne Source', 'https://www.militaryonesource.mil/web/mos/moving-housing' %> - they have representatives available 24/7 to answer those late night questions about your upcoming move.
+      <br/><br/>
+      <b>Just Remember: Moving is never easy, but you will get through it.</b>
+    </div>
 
-  <h2 id="your-orders">Understand Your Orders.</h2>
+    <div class="what-to-expect-section">
+      <h4 id="orders">Moves Start with Orders</h4>
 
-  <p>In general, your moving process will start with the job/travel order’s you recieve from your service. In your orders, information describing your rank, the duration of your job/training, and your assigned location will determine if your entire dependent family can come, what you are allowed to bring, and how those items will arrive to your new location. If you have any questions, <%= link_to 'your local personal property office', offices_path %> is the place to go for help deciphering your orders as they pertain to moving.</p>
-  <p><b>Permanent Duty Station (PCS)</b> is when you are assigned to a location for 20+ weeks, regardless of whether your assignment pertains to training or a new job. In these circumstances, you should be allowed a full household move should you choose to take it.</p>
-  <p><b>Temporary Duty Yonder (TDY)</b> is when you are temporarily assigned to a new location, for generally less than 20 weeks. For <%= abbr_tag('tdy') %>, it is common that only a small subset of your household belonging will be able to travel with you to your new location.  What to expect for a <%= abbr_tag('tdy') %> move?</p>
+      <p>In general, your moving process will start with the job/travel orders you recieve from your service. In your orders, information describing your rank, the duration of your job/training, and your assigned location will determine if your entire dependent family can come, what you are allowed to bring, and how those items will arrive to your new location. If you have any questions, your <%= link_to 'local personal property office', offices_path %> is the place to go for help deciphering your orders as they pertain to moving.</p>
+      <p><b>Permanent Duty Station (PCS)</b> is when you are assigned to a location for 20+ weeks, regardless of whether your assignment pertains to training or a new job. In these circumstances, you should be allowed a full household move should you choose to take it.</p>
+      <p><b>Temporary Duty Yonder (TDY)</b> is when you are temporarily assigned to a new location, for an extended period of time (over 31 days), but generally less than 20 weeks. For <%= abbr_tag('tdy') %>, it is common that only a small subset of your household belongings will be able to travel with you to your new location.  What to expect for a <%= abbr_tag('tdy') %> move?</p>
+    </div>
 
-  <h2 id="location-matters">Location Matters.</h2>
+    <div class="what-to-expect-section">
+      <h4 id="destination">Destination Matters</h4>
 
-  <p>When you are moving for a <b>Permanent Change of Station (PCS)</b> or a <b>Temporary Duty Yonder (TDY)</b> with the military, the way your household goods get transported from “Point A” to “Point B” largely depends on your rank and whether your entire move will happen within the 48 contiguous states or internationally (including Alaska &amp; Hawaii).</p>
+      <p>When you are moving for a <b>Permanent Change of Station (PCS)</b> or a <b>Temporary Duty Yonder (TDY)</b> with the military, the way your household goods get transported from “Point A” to “Point B” largely depends whether your entire move will happen within the 48 contiguous US states or internationally (includes Alaska &amp; Hawaii).</p>
 
-  <div class="usa-media_block location-section">
-    <%= image_tag 'conus.svg', alt: 'Continental U S', class: 'usa-media_block-img' %>
-    <div class="usa-media_block-body">
-      <h3><%= abbr_tag('conus') %> (48 Contiguous States)</h3>
-      <p><%= abbr_tag('conus') %> are moves that start and end within the 48 contiguous states of the US. Most moves in the US Military are <%= abbr_tag('conus') %> moves.</p>
-      <p><%= link_to raw("What to expect for a #{abbr_tag('conus')} move?"), page_path('moving-guide/conus') %></p>
+      <div class="usa-media_block location-section">
+        <%= image_tag 'conus.svg', alt: 'Continental U S', class: 'usa-media_block-img' %>
+        <div class="usa-media_block-body">
+          <h4><%= abbr_tag('conus') %> (48 Contiguous States)</h4>
+          <p><%= abbr_tag('conus') %> are moves that start and end within the 48 contiguous states of the US. Most moves in the US Military are <%= abbr_tag('conus') %> moves.</p>
+          <p><%= link_to raw("What to expect for a #{abbr_tag('conus')} move"), page_path('moving-guide/conus') %></p>
+        </div>
+      </div>
+
+      <div class="usa-media_block location-section">
+        <%= image_tag 'oconus.svg', alt: 'Outside Continental U S', class: 'usa-media_block-img' %>
+        <div class="usa-media_block-body">
+          <h4><%= abbr_tag('oconus') %> (International + Hawaii &amp; Alaska)</h4>
+          <p>Moves to or from Alaska and Hawaii along with international stations are considered <%= abbr_tag('oconus') %> moves. These moves are more complicated and each location may have additional limitations on what you are allowed to transport.</p>
+          <p><%= link_to raw("What to expect for a #{abbr_tag('oconus')} move"), page_path('moving-guide/oconus') %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="what-to-expect-section">
+      <h4 id="move-types">Choose How to Ship Your Household Goods (Move Types)</h4>
+
+      <p>Once you have figured out the type of move (<%= abbr_tag('pcs') %> or <%= abbr_tag('tdy') %>) and your move location (<%= abbr_tag('conus') %> or <%= abbr_tag('oconus') %>), you will have some choices to make regarding how your belongings are shipped to your new destination. Remember, you can split up your <%= link_to 'total allowable weight', page_path('entitlements') %> into multiple shipments. For example, most service members doing a <%= abbr_tag('pcs') %> <%= abbr_tag('conus') %> move will have both a <%= abbr_tag('ppm') %> (“do it yourself”) shipment of their prized, valuable possessions and an <%= abbr_tag('hhg') %> (“Household Goods") shipment using a government-furnished moving company for the bulk of their belongings.</p>
+      <p>If you have any questions, your <%= link_to 'local personal property office', offices_path %> is the place to go for help figuring out how to break up your weight into various shipments.</p>
+
+      <h4>Move Types</h4>
+
+      <ul class="usa-accordion-bordered">
+        <li>
+          <button class="usa-accordion-button moving-guide-accordion-button" aria-controls="hhg-guide">
+            <div>
+              <%= image_tag 'hhg.svg', alt: '', role: 'presentation' %>
+              <span>Household Goods Move (HHG)</span>
+            </div>
+          </button>
+          <div class="usa-accordion-content" id="hhg-guide"><%= render 'pages/moving-guide/hhg-guide' %></div>
+        </li>
+        <li>
+          <button class="usa-accordion-button moving-guide-accordion-button" aria-controls="ppm-guide">
+            <div>
+              <%= image_tag 'ppm.svg', alt: '', role: 'presentation' %>
+              <span>Personally Procured Move (PPM)</span>
+            </div>
+          </button>
+          <div class="usa-accordion-content" id="ppm-guide"><%= render 'pages/moving-guide/ppm-guide' %></div>
+        </li>
+        <li>
+          <button class="usa-accordion-button moving-guide-accordion-button" aria-controls="ug-guide">
+            <div>
+              <%= image_tag 'unaccompanied_baggage.svg', alt: '', role: 'presentation' %>
+              <span>Unaccompanied Baggage (UG)</span>
+            </div>
+          </button>
+          <div class="usa-accordion-content" id="ug-guide"><%= render 'pages/moving-guide/ug-guide' %></div>
+        </li>
+        <li>
+          <button class="usa-accordion-button moving-guide-accordion-button" aria-controls="pov-guide">
+            <div>
+              <%= image_tag 'pov.svg', alt: '', role: 'presentation' %>
+              <span>Privately-Owned Vehicle (POV) Shipment</span>
+            </div>
+          </button>
+          <div class="usa-accordion-content" id="pov-guide"><%= render 'pages/moving-guide/pov-guide' %></div>
+        </li>
+        <li>
+          <button class="usa-accordion-button moving-guide-accordion-button" aria-controls="nts-guide">
+            <div>
+              <%= image_tag 'nontemp_storage.svg', alt: '', role: 'presentation' %>
+              <span>Non-Temporary Storage (NTS)</span>
+            </div>
+          </button>
+          <div class="usa-accordion-content" id="nts-guide"><%= render 'pages/moving-guide/nts-guide' %></div>
+        </li>
+      </ul>
+
+      <table>
+        <tbody>
+          <tr>
+            <th scope="row"><%= image_tag 'hhg.svg', alt: '', role: 'presentation' %>Household Goods Move (HHG)</th>
+            <td><%= render 'pages/moving-guide/hhg-guide' %></td>
+          </tr>
+          <tr>
+            <th scope="row"><%= image_tag 'ppm.svg', alt: '', role: 'presentation' %>Personally Procured Move (PPM)</th>
+            <td><%= render 'pages/moving-guide/ppm-guide' %></td>
+          </tr>
+          <tr>
+            <th scope="row"><%= image_tag 'unaccompanied_baggage.svg', width: '75px', alt: '', role: 'presentation' %>Unaccompanied Baggage (UG)</th>
+            <td><%= render 'pages/moving-guide/ug-guide' %></td>
+          </tr>
+          <tr>
+            <th scope="row"><%= image_tag 'pov.svg', alt: '', role: 'presentation' %>Privately-Owned Vehicle (POV) Shipment</th>
+            <td><%= render 'pages/moving-guide/pov-guide' %></td>
+          </tr>
+          <tr>
+            <th scope="row"><%= image_tag 'nontemp_storage.svg', alt: '', role: 'presentation' %>Non-Temporary Storage (NTS)</th>
+            <td><%= render 'pages/moving-guide/nts-guide' %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="what-to-expect-section">
+      <h4 id="rank">What does rank have to do with it?</h4>
+
+      <p>The rank specified on your job/travel orders will be used to determine how much total weight or moving allowance (a.k.a. "how much stuff") you are allowed to take to your new location. In general, as your rank increases, your moving allowance also increases. Any cost to move items/weight above a service member's moving allowance will be charged to the service member after delivery.</p>
+      <p><%= link_to 'Learn your weight allowance (entitlements)', page_path('entitlements') %>.</p>
     </div>
   </div>
-
-  <div class="usa-media_block location-section">
-    <%= image_tag 'oconus.svg', alt: 'Outside Continental U S', class: 'usa-media_block-img' %>
-    <div class="usa-media_block-body">
-      <h3><%= abbr_tag('oconus') %> (International + Hawaii &amp; Alaska)</h3>
-      <p>Moves to or from Alaska and Hawaii along with international stations are considered <%= abbr_tag('oconus') %> moves. These moves are more complicated and each location may have additional limitations on what you are allowed to transport.</p>
-      <p><%= link_to raw("What to expect for a #{abbr_tag('oconus')} Move?"), page_path('moving-guide/oconus') %></p>
-    </div>
-  </div>
-
-  <h2 id="move-types">Know Your Options. (Move Types)</h2>
-
-  <p>Once you have figured out the type of move (<%= abbr_tag('pcs') %> or <%= abbr_tag('tdy') %>) and your move location (<%= abbr_tag('conus') %> or <%= abbr_tag('oconus') %>), you will have some choices to make regarding how your belongings are shipped to your new destination. Remember, you can split up your total allowable weight into multiple shipments. For example, most service members doing a <%= abbr_tag('pcs') %> <%= abbr_tag('conus') %> move will have both a <%= abbr_tag('ppm') %> (“do it yourself”) shipment of their prized, valuable possessions and an <%= abbr_tag('hhg') %> (“Household Goods") shipment using a government-furnished moving company for the bulk of their belongings.</p>
-  <p>If you have any questions, <%= link_to 'your local personal property office', offices_path %> is the place to go for help figuring out how to break up your weight into various shipments.</p>
-
-  <h3>Move Types</h3>
-
-  <table>
-    <tbody>
-      <tr>
-        <th scope="row"><%= image_tag 'ppm.svg', alt: '', role: 'presentation' %><strong>Personally Procured Move</strong> (PPM)</th>
-        <td>
-          <p>In a Personally Procured Move (PPM), you either hire a moving company yourself to handle packing and transporting your belongings, or you pack and transport your household goods on your own.</p>
-          <p>The government will pay you 95% of what <em>their</em> cost would have been to hire a moving company on your behalf. If you can move your belongings yourself for less money, you get to keep the difference.</p>
-          <p><%= abbr_tag('ppm') %>s are especially recommended for any irreplaceable valuables you own (i.e. family heirlooms, photos, important documents, etc.) or for necessities you will need immediately at your new location while waiting for your transporter to arrive.</p>
-
-          <h4>Approved for:</h4>
-
-          <dl class="approvals-list">
-            <dt><%= image_tag 'conus.svg', width: '40px', alt: '', role: 'presentation' %><%= abbr_tag('conus') %></dt>
-            <dd>
-              <span class="tag tag-approved">
-                <span class="usa-sr-only">Approved for</span> Temporary Duty Yonder (TDY)
-              </span>
-            </dd>
-            <dd>
-              <span class="tag tag-approved">
-                <span class="usa-sr-only">Approved for</span> Permanent Change of Station (PCS)
-              </span>
-            </dd>
-
-            <dt><%= image_tag 'oconus.svg', width: '40px', alt: '', role: 'presentation' %><%= abbr_tag('oconus') %></dt>
-            <dd>
-              <span class="tag tag-approved">
-                <span class="usa-sr-only">Approved for</span> Temporary Duty Yonder (TDY)
-              </span>
-            </dd>
-            <dd>
-              <span class="tag tag-unapproved">
-                <span class="usa-sr-only">Not approved for</span> Permanent Change of Station (PCS)
-              </span>
-            </dd>
-          </dl>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row"><%= image_tag 'hhg.svg', alt: '', role: 'presentation' %><strong>Household Goods Moves</strong> (HHG)</th>
-        <td>
-          <p>A Household Goods “HHG” move is a move completed by a government-furnished moving company, also called a Transportation Service Provider (TSP). During a HHG move, your transporter is responsible for packing all of your belongings and transporting them to your new location. If anything becomes lost or broken during your move, you can work with your transporter  to recieve financial compensation for your items.</p>
-
-          <h4>Approved for:</h4>
-
-          <dl class="approvals-list">
-            <dt><%= image_tag 'conus.svg', width: '40px', alt: '', role: 'presentation' %><%= abbr_tag('conus') %></dt>
-            <dd>
-              <span class="tag tag-unapproved">
-                <span class="usa-sr-only">Not approved for</span> Temporary Duty Yonder (TDY)
-              </span>
-            </dd>
-            <dd>
-              <span class="tag tag-approved">
-                <span class="usa-sr-only">Approved for</span> Permanent Change of Station (PCS)
-              </span>
-            </dd>
-
-            <dt><%= image_tag 'oconus.svg', width: '40px', alt: '', role: 'presentation' %><%= abbr_tag('oconus') %></dt>
-            <dd>
-              <span class="tag tag-unapproved">
-                <span class="usa-sr-only">Not approved for</span> Temporary Duty Yonder (TDY)
-              </span>
-            </dd>
-            <dd>
-              <span class="tag tag-approved">
-                <span class="usa-sr-only">Approved for</span> Permanent Change of Station (PCS)
-              </span>
-            </dd>
-          </dl>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row"><%= image_tag 'unaccompanied_baggage.svg', width: '75px', alt: '', role: 'presentation' %><strong>Unaccompanied Baggage</strong> (UG)</th>
-        <td>
-          <p>Unaccompanied baggage (UG) is an option for shipments where a small subset of your total weight allowance is expedited to your new location, typically while you wait for the rest of your belongings to arrive at a later date.</p>
-
-          <h4>Approved for:</h4>
-
-          <dl class="approvals-list">
-            <dt><%= image_tag 'conus.svg', width: '40px', alt: '', role: 'presentation' %><%= abbr_tag('conus') %></dt>
-            <dd>
-              <span class="tag tag-approved">
-                <span class="usa-sr-only">Approved for</span> Temporary Duty Yonder (TDY)
-              </span>
-            </dd>
-            <dd>
-              <span class="tag tag-unapproved">
-                <span class="usa-sr-only">Not approved for</span> Permanent Change of Station (PCS)
-              </span>
-            </dd>
-
-            <dt><%= image_tag 'oconus.svg', width: '40px', alt: '', role: 'presentation' %><%= abbr_tag('oconus') %></dt>
-            <dd>
-              <span class="tag tag-approved">
-                <span class="usa-sr-only">Approved for</span> Temporary Duty Yonder (TDY)
-              </span>
-            </dd>
-            <dd>
-              <span class="tag tag-approved">
-                <span class="usa-sr-only">Approved for</span> Permanent Change of Station (PCS)
-              </span>
-            </dd>
-          </dl>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row"><%= image_tag 'pov.svg', alt: '', role: 'presentation' %><strong>Privately-Owned Vehicle</strong> (POV) Shipment</th>
-        <td>
-          <p>In general, if you are traveling overseas (<%= abbr_tag('oconus') %>), the government will pay to ship one <%= abbr_tag('pov') %> to your new location, but you will need to arrange for it to be dropped off at the designated drop-off center before departing. (Note: There may be some overseas bases, such as in Japan, where it is not possible to have a car.)</p>
-          <p>If you are travelling within the 48 contiguous states, the government requires you to drive your car to your new location or to pay for shipment at your own expense. The government will reimburse you for the mileage as well as any toll expenses you encounter along the way, so be sure to save reciepts/tickets.</p>
-          <p>In some cases, service members may be able to get a waiver to allow for vehicle shipment if a medical condition prevents them from sitting for long distances or if the report date makes it geographically impossible to drive with the alloted period of time.</p>
-
-          <h4>Approved for:</h4>
-
-          <dl class="approvals-list">
-            <dt><%= image_tag 'conus.svg', width: '40px', alt: '', role: 'presentation' %><%= abbr_tag('conus') %></dt>
-            <dd>
-              <span class="tag tag-unapproved">
-                <span class="usa-sr-only">Not approved for</span> Temporary Duty Yonder (TDY)
-              </span>
-            </dd>
-            <dd>
-              <span class="tag tag-unapproved">
-                <span class="usa-sr-only">Not approved for</span> Permanent Change of Station (PCS)
-              </span>
-            </dd>
-
-            <dt><%= image_tag 'oconus.svg', width: '40px', alt: '', role: 'presentation' %><%= abbr_tag('oconus') %></dt>
-            <dd>
-              <span class="tag tag-unapproved">
-                <span class="usa-sr-only">Not approved for</span> Temporary Duty Yonder (TDY)
-              </span>
-            </dd>
-            <dd>
-              <span class="tag tag-approved">
-                <span class="usa-sr-only">Approved for</span> Permanent Change of Station (PCS)
-              </span>
-            </dd>
-          </dl>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row"><%= image_tag 'nontemp_storage.svg', alt: '', role: 'presentation' %><strong>Non-Temporary Storage</strong> (NTS)</th>
-        <td>
-          <p>Non-temporary storage (NTS) is long-term storage of your belongings used generally in lieu of shipping your items to your new duty station. Expect the storage location to be located near the origin (pickup) location where items may remain for the duration of your tour. When you return and have established a new address, you can request retrieval and shipment of your stored belongings.</p>
-
-          <h4>Approved for:</h4>
-
-          <dl class="approvals-list">
-            <dt><%= image_tag 'conus.svg', width: '40px', alt: '', role: 'presentation' %><%= abbr_tag('conus') %></dt>
-            <dd>
-              <span class="tag tag-unapproved">
-                <span class="usa-sr-only">Not approved for</span> Temporary Duty Yonder (TDY)
-              </span>
-            </dd>
-            <dd>
-              <span class="tag tag-unapproved">
-                <span class="usa-sr-only">Not approved for</span> Permanent Change of Station (PCS)
-              </span>
-            </dd>
-
-            <dt><%= image_tag 'oconus.svg', width: '40px', alt: '', role: 'presentation' %><%= abbr_tag('oconus') %></dt>
-            <dd>
-              <span class="tag tag-unapproved">
-                <span class="usa-sr-only">Not approved for</span> Temporary Duty Yonder (TDY)
-              </span>
-            </dd>
-            <dd>
-              <span class="tag tag-approved">
-                <span class="usa-sr-only">Approved for</span> Permanent Change of Station (PCS)
-              </span>
-            </dd>
-          </dl>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h2 id="about-entitlements">What does rank have to do with it?</h2>
-
-  <p>The rank specified on your job/travel orders will be used to determine how much total weight or moving allowance (a.k.a. “how much stuff”) you are allowed to take to your new location. In general, as your rank increases, your moving allowance also increases. Any cost to move items/weight above a service member’s moving allowance will be charged to the service member after delivery.</p>
-  <p><%= link_to 'Learn your weight allowance (entitlements)', page_path('entitlements') %>.</p>
 </div>
