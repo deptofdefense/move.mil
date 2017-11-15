@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :installation do
     sequence(:name) { |n| "Installation #{n}" }
     latitude 38.6921631
