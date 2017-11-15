@@ -1,6 +1,6 @@
-class CreateBaselineRates < ActiveRecord::Migration[5.1]
+class CreateBaseLinehauls < ActiveRecord::Migration[5.1]
   def change
-    create_table :baseline_rates do |t|
+    create_table :base_linehauls do |t|
       t.integer :dist_mi_min
       t.integer :dist_mi_max
       t.integer :weight_lbs_min
@@ -10,6 +10,6 @@ class CreateBaselineRates < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-    add_index :baseline_rates, :year
+    add_index :base_linehauls, :year
   end
 end

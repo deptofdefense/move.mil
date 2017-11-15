@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20171215164151) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "baseline_rates", force: :cascade do |t|
+  create_table "base_linehauls", force: :cascade do |t|
     t.integer "dist_mi_min"
     t.integer "dist_mi_max"
     t.integer "weight_lbs_min"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20171215164151) do
     t.integer "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["year"], name: "index_baseline_rates_on_year"
+    t.index ["year"], name: "index_base_linehauls_on_year"
   end
 
   create_table "branch_of_service_contacts", force: :cascade do |t|
@@ -150,7 +150,7 @@ ActiveRecord::Schema.define(version: 20171215164151) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "intra_alaska_baseline_rates", force: :cascade do |t|
+  create_table "intra_alaska_base_linehauls", force: :cascade do |t|
     t.integer "dist_mi_min"
     t.integer "dist_mi_max"
     t.integer "weight_lbs_min"
@@ -159,7 +159,7 @@ ActiveRecord::Schema.define(version: 20171215164151) do
     t.integer "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["year"], name: "index_intra_alaska_baseline_rates_on_year"
+    t.index ["year"], name: "index_intra_alaska_base_linehauls_on_year"
   end
 
   create_table "offices", force: :cascade do |t|
@@ -218,7 +218,7 @@ ActiveRecord::Schema.define(version: 20171215164151) do
     t.index ["year"], name: "index_shorthauls_on_year"
   end
 
-  create_table "top_best_value_scores", force: :cascade do |t|
+  create_table "top_tsp_by_channel_linehaul_discounts", force: :cascade do |t|
     t.text "orig"
     t.text "dest"
     t.decimal "perf_period_h"

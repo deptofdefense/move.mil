@@ -103,13 +103,13 @@ columns = [:service_area, :name, :services_schedule, :linehaul_factor, :orig_des
 ServiceArea.import columns, schedules
 
 puts 'Loading Baseline Rates...'
-baseline_rates = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_CONUS.csv'))
+base_linehauls = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_CONUS.csv'))
 columns = [:dist_mi_min, :dist_mi_max, :weight_lbs_min, :weight_lbs_max, :rate, :year]
-BaselineRate.import columns, baseline_rates, batch_size: 500
+BaseLinehaul.import columns, base_linehauls, batch_size: 500
 
-intra_ak_baseline_rates = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_IntraAK.csv'))
+intra_ak_base_linehauls = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_IntraAK.csv'))
 columns = [:dist_mi_min, :dist_mi_max, :weight_lbs_min, :weight_lbs_max, :rate, :year]
-IntraAlaskaBaselineRate.import columns, intra_ak_baseline_rates, batch_size: 500
+IntraAlaskaBaseLinehaul.import columns, intra_ak_base_linehauls, batch_size: 500
 
 shorthauls = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Shorthaul.csv'))
 columns = [:cwt_mi_min, :cwt_mi_max, :rate, :year]

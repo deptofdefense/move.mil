@@ -1,6 +1,6 @@
-class CreateTopBestValueScores < ActiveRecord::Migration[5.1]
+class CreateTopTspByChannelLinehaulDiscounts < ActiveRecord::Migration[5.1]
   def change
-    create_table :top_best_value_scores do |t|
+    create_table :top_tsp_by_channel_linehaul_discounts do |t|
       t.text :orig
       t.text :dest
       t.decimal :perf_period_h

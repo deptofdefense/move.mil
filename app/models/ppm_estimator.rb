@@ -137,7 +137,7 @@ class PpmEstimator
     # If the orig and dest are in the same state, the region is 15!
     dest = start_zip3.state == end_zip3.state ? 15 : end_zip3.region
 
-    bvs = TopBestValueScore.find_by(orig: orig, dest: dest, year: date.year)
+    bvs = TopTspByChannelLinehaulDiscount.find_by(orig: orig, dest: dest, year: date.year)
     # TODO: return rate from correct performance period
     bvs.perf_period_2 / 100.0
   end
@@ -157,7 +157,7 @@ class PpmEstimator
     # TODO: handle intra-AK
     # TODO: handle inter-AK
     # TODO: handle lookup failures
-    BaselineRate.rate(date.year, distance, wt)
+    BaseLinehaul.rate(date.year, distance, wt)
   end
 
   def shorthaul(distance)

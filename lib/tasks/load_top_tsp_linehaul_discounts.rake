@@ -2,10 +2,10 @@ require 'csv'
 
 namespace :admin do
   desc 'Load linehaul discounts from the top TSP (by BVS) for each channel into the DB'
-  task :load_top_bvs, [:bvs_csv_file, :year] => :environment do |_t, args|
+  task :load_top_tsp_linehaul_discounts, [:discounts_csv_file, :year] => :environment do |_t, args|
     puts "Loading linehaul discounts from the top TSP (by Best Value Score) for each channel for the year #{args[:year]}..."
-    CSV.foreach(args[:bvs_csv_file], headers: true) do |row|
-      TopBestValueScore.create do |b|
+    CSV.foreach(args[:discounts_csv_file], headers: true) do |row|
+      TopTspByChannelLinehaulDiscount.create do |b|
         b.year = args[:year].to_i
         b.orig = row[0]
         b.dest = row[1]
