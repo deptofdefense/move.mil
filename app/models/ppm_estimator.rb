@@ -137,9 +137,7 @@ class PpmEstimator
     # If the orig and dest are in the same state, the region is 15!
     dest = start_zip3.state == end_zip3.state ? 15 : end_zip3.region
 
-    bvs = TopTspByChannelLinehaulDiscount.find_by(orig: orig, dest: dest, year: date.year)
-    # TODO: return rate from correct performance period
-    bvs.perf_period_2 / 100.0
+    TopTspByChannelLinehaulDiscount.inv_discount(orig, dest, date)
   end
 
   def base_rate(distance)
