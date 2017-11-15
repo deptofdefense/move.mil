@@ -126,4 +126,4 @@ FullUnpack.import columns, full_unpacks
 puts 'Loading ZIP3 to ZIP3 distances from DTOD...'
 distances = CSV.read(Rails.root.join('db', 'seeds', 'zip3_dtod_output.csv'), { headers: false, col_sep: ' ' })
 columns = [:orig_zip3, :dest_zip3, :dist_mi]
-DtodZip3Distance.import columns, distances, batch_size: 500
+DtodZip3Distance.import columns, distances, { batch_size: 500, validate: false }
