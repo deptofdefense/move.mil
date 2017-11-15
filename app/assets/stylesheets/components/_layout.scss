@@ -86,6 +86,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 1rem;
+  z-index: 1000;
 
   @include media($nav-width) {
     margin-top: -3.75rem;
