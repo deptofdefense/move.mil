@@ -45,15 +45,21 @@
     </fieldset>
 
     <fieldset>
-      <legend><div class="ppm-outline"></div>Where are you moving from?</legend>
-      <%= form.label :start, 'Origin ZIP Code' %>
-      <%= form.number_field :start, { id: :start, minlength: 5, maxlength: 5, inputmode: 'numeric', required: true } %>
-    </fieldset>
-
-    <fieldset>
-      <legend><div class="ppm-outline"></div>Where are you moving to?</legend>
-      <%= form.label :end, 'Destination ZIP Code' %>
-      <%= form.number_field :end, { id: :end, minlength: 5, maxlength: 5, inputmode: 'numeric', required: true } %>
+      <legend><div class="ppm-outline"></div>Where are you moving from and to?</legend>
+      <p>
+        To get the most accurate estimate, enter the locations authorized by
+        your orders. These locations might be different from where you live.
+      </p>
+      <div class="usa-grid-full grid-form-width">
+        <div class="usa-width-one-half">
+          <%= form.label :start, 'Origin ZIP Code' %>
+          <%= form.number_field :start, { id: :start, minlength: 5, maxlength: 5, inputmode: 'numeric', required: true } %>
+        </div>
+        <div class="usa-width-one-half">
+          <%= form.label :end, 'Destination ZIP Code' %>
+          <%= form.number_field :end, { id: :end, minlength: 5, maxlength: 5, inputmode: 'numeric', required: true } %>
+        </div>
+      </div>
     </fieldset>
 
     <fieldset>
@@ -74,24 +80,24 @@
         <%= link_to 'Need help estimating your total household weight?', weight_estimator_path %>
       </p>
       <div id="weight-section">
-        <%= form.label :weight, 'Estimated Household Goods Weight' %>
+        <%= form.label :weight, 'Estimated Household Goods Weight (lbs)' %>
         <%= form.number_field :weight, { id: :weight, inputmode: 'numeric', required: true } %>
         <p id="weight-allowance-text">
-          Your weight allowance is <strong><span id="entitlement_weight"></span> lbs</strong>.
+          Your weight allowance is up to <strong><span id="entitlement_weight"></span> lbs</strong>.
         </p>
       </div>
       <div id="progear-section">
-        <%= form.label :weight_progear, 'Estimated ProGear Weight' %>
+        <%= form.label :weight_progear, 'Estimated ProGear Weight (lbs)' %>
         <%= form.number_field :weight_progear, { id: :weight_progear, inputmode: 'numeric', required: false } %>
         <p id="progear-allowance-text">
-          Your ProGear allowance is <strong><span id="entitlement_progear"></span> lbs</strong>.
+          Your ProGear allowance is up to <strong><span id="entitlement_progear"></span> lbs</strong>.
         </p>
       </div>
       <div id="progear-spouse-section" hidden>
-        <%= form.label :weight_progear_spouse, 'Estimated ProGear Weight (Spouse)' %>
+        <%= form.label :weight_progear_spouse, "Estimated Spouse's ProGear Weight (lbs)" %>
         <%= form.number_field :weight_progear_spouse, { id: :weight_progear_spouse, inputmode: 'numeric', required: false } %>
         <p id="progear-spouse-allowance-text">
-          Your spouse's ProGear allowance is <strong><span id="entitlement_progear_spouse"></span> lbs</strong>.
+          Your spouse's ProGear allowance is up to <strong><span id="entitlement_progear_spouse"></span> lbs</strong>.
         </p>
       </div>
     </fieldset>

@@ -1,3 +1,8 @@
+.grid-form-width {
+  margin-left: unset;
+  max-width: $input-max-width;
+}
+
 .ppm-form {
   counter-reset: level;
   padding-left: 5rem;
