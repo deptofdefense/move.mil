@@ -17,8 +17,8 @@ namespace :admin do
 
     CSV.foreach(args[:discounts_csv_file], headers: true) do |row|
       discounts_by_pp = [row[4], row[6], row[8], row[10], row[12]]
-      for i in 0..(dates_by_pp.count - 1)
-        next if !discounts_by_pp[i].present?
+      (0..(dates_by_pp.count - 1)).each do |i|
+        next if discounts_by_pp[i].blank?
         TopTspByChannelLinehaulDiscount.where(orig: row[0], dest: row[1], tdl: dates_by_pp[i]).first_or_initialize.tap do |d|
           d.discount = discounts_by_pp[i] == '#N/A' ? Float::NAN : discounts_by_pp[i]
           d.save
