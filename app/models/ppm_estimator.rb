@@ -108,11 +108,11 @@ class PpmEstimator
   end
 
   def orig_svc_area
-    @orig_svc_area ||= ServiceArea.find_by_date_and_svc_area_number(date, start_zip3.service_area)
+    @orig_svc_area ||= ServiceArea.from_date_and_svc_area_number(date, start_zip3.service_area)
   end
 
   def dest_svc_area
-    @dest_svc_area ||= ServiceArea.find_by_date_and_svc_area_number(date, end_zip3.service_area)
+    @dest_svc_area ||= ServiceArea.from_date_and_svc_area_number(date, end_zip3.service_area)
   end
 
   def distance

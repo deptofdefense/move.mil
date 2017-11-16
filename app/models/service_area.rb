@@ -1,5 +1,5 @@
 class ServiceArea < ApplicationRecord
-  def self.find_by_date_and_svc_area_number(date, svc_area_num)
+  def self.from_date_and_svc_area_number(date, svc_area_num)
     find_by('effective @> ?::date AND service_area = ?', date, svc_area_num)
   end
 
