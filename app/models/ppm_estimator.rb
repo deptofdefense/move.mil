@@ -1,4 +1,8 @@
 class PpmEstimator
+  # TODO: Intra-AK
+  # TODO: Inter-AK
+  # TODO: error handling
+
   def initialize(params)
     @params = params
   end
@@ -16,7 +20,7 @@ class PpmEstimator
   end
 
   def incentive
-    @incentive ||= ppm_cost_estimate
+    @incentive ||= (linehaul_charges + non_linehaul_charges) * inv_linehaul_discount * 0.95
   end
 
   def start_zip3
@@ -28,9 +32,7 @@ class PpmEstimator
   end
 
   def peak_season?
-    peak_start = Date.new(date.year, 5, 15)
-    peak_end = Date.new(date.year, 9, 30)
-    date >= peak_start && date <= peak_end
+    @peak_season ||= (Date.new(date.year, 5, 15)..Date.new(date.year, 9, 30)).cover?(date)
   end
 
   def selfpack?
@@ -38,10 +40,11 @@ class PpmEstimator
   end
 
   def result
-    incentive_without_packing = incentive - @discounted_full_pack_cost
+    discounted_full_pack_cost = full_pack_cost * inv_linehaul_discount * 0.95
+    incentive_without_packing = incentive - discounted_full_pack_cost
     {
       advance: (selfpack? ? incentive : incentive_without_packing) * (advance_percentage / 100.0),
-      discounted_full_pack_cost: @discounted_full_pack_cost,
+      discounted_full_pack_cost: discounted_full_pack_cost,
       incentive: selfpack? ? incentive : incentive_without_packing,
       incentive_without_packing: incentive_without_packing
     }
@@ -112,6 +115,10 @@ class PpmEstimator
     @dest_svc_area ||= ServiceArea.find_by(year: date.year, service_area: end_zip3.service_area)
   end
 
+  def distance
+    @distance ||= DtodZip3Distance.dist_mi(start_zip3.zip3, end_zip3.zip3).to_i
+  end
+
   def rate_area(zip3, zip5)
     # you can usually get the rate_area from just the ZIP3
     area = zip3.rate_area
@@ -120,45 +127,32 @@ class PpmEstimator
     Zip5RateArea.select(:rate_area).find_by(zip5: zip5).rate_area
   end
 
-  def ppm_cost_estimate
-    # TODO: Intra-AK
-    # TODO: OCONUS
-    # TODO: error handling
-    inv_discount = inv_linehaul_discount
-    @discounted_full_pack_cost = full_pack_cost * inv_discount * 0.95
-    (linehaul_charges + non_linehaul_charges) * inv_discount * 0.95
-  end
-
   def inv_linehaul_discount
-    # the origin is a rate area
-    orig = rate_area(start_zip3, estimator_params[:start].to_i)
-
-    # For CONUS moves, destination is the region.
-    # If the orig and dest are in the same state, the region is 15!
-    dest = start_zip3.state == end_zip3.state ? 15 : end_zip3.region
-
-    TopTspByChannelLinehaulDiscount.inv_discount(orig, dest, date)
+    @inv_linehaul_discount ||= TopTspByChannelLinehaulDiscount.inv_discount(
+      # the origin is a rate area
+      rate_area(start_zip3, estimator_params[:start].to_i),
+      # For CONUS moves, destination is the region.
+      # If the orig and dest are in the same state, the region is 15!
+      start_zip3.state == end_zip3.state ? 15 : end_zip3.region,
+      date
+    )
   end
 
-  def base_rate(distance)
+  def base_rate
     return base_linehaul(distance, full_weight) unless full_weight < 1000
     # pro-rate the 1000 lb baseline rate for shipments less than 1000 lbs
     base_linehaul(distance, 1000) * (full_weight / 1000.0)
   end
 
   def linehaul_charges
-    distance = DtodZip3Distance.dist_mi(start_zip3.zip3, end_zip3.zip3).to_i
-    base_rate(distance) + (orig_svc_area.linehaul_factor + dest_svc_area.linehaul_factor) * cwt + shorthaul(distance)
+    base_rate + (orig_svc_area.linehaul_factor + dest_svc_area.linehaul_factor) * cwt + shorthaul
   end
 
-  def base_linehaul(distance, wt)
-    # TODO: handle intra-AK
-    # TODO: handle inter-AK
-    # TODO: handle lookup failures
-    BaseLinehaul.rate(date.year, distance, wt)
+  def base_linehaul(dist_mi, wt)
+    BaseLinehaul.rate(date.year, dist_mi, wt)
   end
 
-  def shorthaul(distance)
+  def shorthaul
     return 0 if distance > 800
     Shorthaul.rate(date.year, cwt, distance)
   end
