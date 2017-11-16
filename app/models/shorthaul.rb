@@ -1,7 +1,7 @@
 class Shorthaul < ApplicationRecord
-  def self.rate(year, cwt, distance)
-    select(:rate).find_by('year = ? AND cwt_mi @> ?', year, cwt * distance).rate
+  def self.rate(date, cwt, distance)
+    select(:rate).find_by('effective @> ?::date AND cwt_mi @> ?', date, cwt * distance).rate
   end
 
-  validates :year, :cwt_mi, :rate, presence: true
+  validates :effective, :cwt_mi, :rate, presence: true
 end

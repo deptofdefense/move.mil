@@ -1,7 +1,7 @@
 class FullPack < ApplicationRecord
-  def self.rate(year, schedule, weight)
-    select(:rate).find_by('year = ? AND schedule = ? AND weight_lbs @> ?', year, schedule, weight).rate
+  def self.rate(date, schedule, weight)
+    select(:rate).find_by('effective @> ?::date AND schedule = ? AND weight_lbs @> ?', date, schedule, weight).rate
   end
 
-  validates :year, :schedule, :weight_lbs, :rate, presence: true
+  validates :effective, :schedule, :weight_lbs, :rate, presence: true
 end

@@ -23,6 +23,17 @@ CSV::Converters[:int4range] = lambda{|s|
   end
 }
 
+CSV::Converters[:daterange] = lambda{|s|
+begin
+  m = /\A(\d{4}\-\d{2}\-\d{2})\.\.(\d{4}\-\d{2}\-\d{2})\z/.match(s)
+  if m.present?
+    (Date.parse(m[1])..Date.parse(m[2]))
+  else
+    s
+  end
+end
+}
+
 puts 'Loading tutorials...'
 tutorials = YAML::load_file(Rails.root.join('db', 'seeds', 'tutorials.yml'))
 
@@ -109,29 +120,29 @@ zip5s = CSV.read(Rails.root.join('db', 'seeds', 'zip5_rate_areas.csv'))
 columns = [:zip5, :rate_area]
 Zip5RateArea.import columns, zip5s
 
-schedules = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Geographic_Schedule.csv'))
-columns = [:service_area, :name, :services_schedule, :linehaul_factor, :orig_dest_service_charge, :year]
+puts 'Loading 400NG Baseline Rates...'
+schedules = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Geographic_Schedule.csv'), converters: [:numeric, :daterange])
+columns = [:service_area, :name, :services_schedule, :linehaul_factor, :orig_dest_service_charge, :effective]
 ServiceArea.import columns, schedules
 
-puts 'Loading Baseline Rates...'
-base_linehauls = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_CONUS.csv'), converters: [:numeric, :int4range])
-columns = [:dist_mi, :weight_lbs, :rate, :year]
+base_linehauls = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_CONUS.csv'), converters: [:numeric, :int4range, :daterange])
+columns = [:dist_mi, :weight_lbs, :rate, :effective]
 BaseLinehaul.import columns, base_linehauls, batch_size: 500
 
-intra_ak_base_linehauls = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_IntraAK.csv'), converters: [:numeric, :int4range])
-columns = [:dist_mi, :weight_lbs, :rate, :year]
+intra_ak_base_linehauls = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Linehaul_IntraAK.csv'), converters: [:numeric, :int4range, :daterange])
+columns = [:dist_mi, :weight_lbs, :rate, :effective]
 IntraAlaskaBaseLinehaul.import columns, intra_ak_base_linehauls, batch_size: 500
 
-shorthauls = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Shorthaul.csv'), converters: [:numeric, :int4range])
-columns = [:cwt_mi, :rate, :year]
+shorthauls = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Shorthaul.csv'), converters: [:numeric, :int4range, :daterange])
+columns = [:cwt_mi, :rate, :effective]
 Shorthaul.import columns, shorthauls
 
-full_packs = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Full_Pack.csv'), converters: [:numeric, :int4range])
-columns = [:schedule, :weight_lbs, :rate, :year]
+full_packs = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Full_Pack.csv'), converters: [:numeric, :int4range, :daterange])
+columns = [:schedule, :weight_lbs, :rate, :effective]
 FullPack.import columns, full_packs
 
-full_unpacks = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Full_Unpack.csv'))
-columns = [:schedule, :rate, :year]
+full_unpacks = CSV.read(Rails.root.join('db', 'seeds', '2017_400NG_Full_Unpack.csv'), converters: [:numeric, :daterange])
+columns = [:schedule, :rate, :effective]
 FullUnpack.import columns, full_unpacks
 
 puts 'Loading ZIP3 to ZIP3 distances from DTOD...'

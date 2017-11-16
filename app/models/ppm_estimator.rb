@@ -104,15 +104,15 @@ class PpmEstimator
   end
 
   def full_pack_cost
-    @full_pack_cost ||= FullPack.rate(date.year, orig_svc_area.services_schedule, full_weight) * cwt
+    @full_pack_cost ||= FullPack.rate(date, orig_svc_area.services_schedule, full_weight) * cwt
   end
 
   def orig_svc_area
-    @orig_svc_area ||= ServiceArea.find_by(year: date.year, service_area: start_zip3.service_area)
+    @orig_svc_area ||= ServiceArea.find_by_date_and_svc_area_number(date, start_zip3.service_area)
   end
 
   def dest_svc_area
-    @dest_svc_area ||= ServiceArea.find_by(year: date.year, service_area: end_zip3.service_area)
+    @dest_svc_area ||= ServiceArea.find_by_date_and_svc_area_number(date, end_zip3.service_area)
   end
 
   def distance
@@ -149,15 +149,15 @@ class PpmEstimator
   end
 
   def base_linehaul(dist_mi, wt)
-    BaseLinehaul.rate(date.year, dist_mi, wt)
+    BaseLinehaul.rate(date, dist_mi, wt)
   end
 
   def shorthaul
     return 0 if distance > 800
-    Shorthaul.rate(date.year, cwt, distance)
+    Shorthaul.rate(date, cwt, distance)
   end
 
   def non_linehaul_charges
-    full_pack_cost + cwt * (orig_svc_area.orig_dest_service_charge + dest_svc_area.orig_dest_service_charge + FullUnpack.rate(date.year, dest_svc_area.services_schedule))
+    full_pack_cost + cwt * (orig_svc_area.orig_dest_service_charge + dest_svc_area.orig_dest_service_charge + FullUnpack.rate(date, dest_svc_area.services_schedule))
   end
 end

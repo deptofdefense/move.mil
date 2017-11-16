@@ -19,10 +19,9 @@ ActiveRecord::Schema.define(version: 20171215164151) do
     t.int4range "dist_mi"
     t.int4range "weight_lbs"
     t.integer "rate"
-    t.integer "year"
+    t.daterange "effective"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["year"], name: "index_base_linehauls_on_year"
   end
 
   create_table "branch_of_service_contacts", force: :cascade do |t|
@@ -98,7 +97,7 @@ ActiveRecord::Schema.define(version: 20171215164151) do
     t.integer "schedule"
     t.int4range "weight_lbs"
     t.decimal "rate", precision: 7, scale: 2
-    t.integer "year"
+    t.daterange "effective"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -106,7 +105,7 @@ ActiveRecord::Schema.define(version: 20171215164151) do
   create_table "full_unpacks", force: :cascade do |t|
     t.integer "schedule"
     t.decimal "rate", precision: 8, scale: 5
-    t.integer "year"
+    t.daterange "effective"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -151,10 +150,9 @@ ActiveRecord::Schema.define(version: 20171215164151) do
     t.int4range "dist_mi"
     t.int4range "weight_lbs"
     t.integer "rate"
-    t.integer "year"
+    t.daterange "effective"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["year"], name: "index_intra_alaska_base_linehauls_on_year"
   end
 
   create_table "offices", force: :cascade do |t|
@@ -188,7 +186,7 @@ ActiveRecord::Schema.define(version: 20171215164151) do
     t.integer "services_schedule"
     t.decimal "linehaul_factor", precision: 7, scale: 2
     t.decimal "orig_dest_service_charge", precision: 7, scale: 2
-    t.integer "year"
+    t.daterange "effective"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -206,10 +204,9 @@ ActiveRecord::Schema.define(version: 20171215164151) do
   create_table "shorthauls", force: :cascade do |t|
     t.int4range "cwt_mi"
     t.decimal "rate", precision: 7, scale: 2
-    t.integer "year"
+    t.daterange "effective"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["year"], name: "index_shorthauls_on_year"
   end
 
   create_table "top_tsp_by_channel_linehaul_discounts", force: :cascade do |t|
