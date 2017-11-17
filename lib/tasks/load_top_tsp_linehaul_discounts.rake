@@ -16,10 +16,28 @@ namespace :admin do
     ]
 
     CSV.foreach(args[:discounts_csv_file], headers: true) do |row|
-      discounts_by_pp = [row[4], row[6], row[8], row[10], row[12]]
+      # skip blank rows
+      next if row[0].blank?
+
+      # CONUS - US rate area (but just the number) and region number
+      # US rate area numbers either 2 digits or 7 digits
+      # regions go from 1-15
+      /\A(?<orig>\d{2}|\d{7})(?<dest>\d\d?)\s*\z/ =~ row[0]
+
+      # OCONUS - rate area to rate area
+      # all rate areas start with 2 character all-caps prefix
+      # some have digits following, some don't
+      /\A(?<orig>[[:upper:]]{2}\d*)\s*(?<dest>[[:upper:]]{2}\d*)\s*\z/ =~ row[0] if $~.nil? # if the previous match failed
+
+      if $~.nil?
+        puts 'Could not parse channel named', row[0]
+        next
+      end
+
+      discounts_by_pp = [row[3], row[5], row[7], row[9], row[11]]
       (0..(dates_by_pp.count - 1)).each do |i|
         next if discounts_by_pp[i].blank?
-        TopTspByChannelLinehaulDiscount.where(orig: row[0], dest: row[1], tdl: dates_by_pp[i]).first_or_initialize.tap do |d|
+        TopTspByChannelLinehaulDiscount.where(orig: orig, dest: dest, tdl: dates_by_pp[i]).first_or_initialize.tap do |d|
           d.discount = discounts_by_pp[i] == '#N/A' ? Float::NAN : discounts_by_pp[i]
           d.save
         end
