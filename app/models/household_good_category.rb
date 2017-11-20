@@ -1,8 +1,10 @@
 class HouseholdGoodCategory < ApplicationRecord
+  has_many :household_goods, dependent: :destroy
+
   validates :icon, presence: true
   validates :name, presence: true, uniqueness: true
 
-  has_many :household_goods, dependent: :destroy
+  default_scope { order(name: :asc) }
 
   def key
     @key ||= name.parameterize

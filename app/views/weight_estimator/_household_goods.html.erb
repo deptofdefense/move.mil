@@ -10,11 +10,11 @@
       <%- household_goods.each do |household_good| -%>
         <tr>
           <td>
-            <label for="<%= household_good.key %>"><%= household_good.name %></label>
+            <%= label_tag household_good.key, household_good.name %>
           </td>
           <td>
-            <input class="hhg-quantity-input" id="<%= household_good.key %>" name="<%= household_good.key %>" type="text" pattern="\d+">
-            <input class="hhg-weight" type="hidden" id="<%= household_good.weight_key %>" value=<%= household_good.weight %>>
+            <%= text_field_tag household_good.key, nil, class: 'hhg-quantity-input', id: household_good.key, pattern: '\d+' %>
+            <%= hidden_field_tag household_good.weight_key, household_good.weight, class: 'hhg-weight' %>
           </td>
         </tr>
       <%- end -%>
