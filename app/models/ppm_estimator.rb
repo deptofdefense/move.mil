@@ -16,10 +16,6 @@ class PpmEstimator
     @full_weight ||= weight_self_limited + weight_progear_limited + weight_progear_spouse_limited
   end
 
-  def incentive
-    @incentive ||= (linehaul_charges + non_linehaul_charges) * inv_linehaul_discount * 0.95
-  end
-
   def start_zip3
     @start_zip3 ||= Zip3.find_by(zip3: estimator_params[:start][0, 3].to_i)
   end
@@ -36,15 +32,30 @@ class PpmEstimator
     estimator_params[:selfpack] == 'yes'
   end
 
-  def result
-    discounted_full_pack_cost = full_pack_cost * inv_linehaul_discount * 0.95
-    incentive_without_packing = incentive - discounted_full_pack_cost
-    {
-      advance: (selfpack? ? incentive : incentive_without_packing) * (advance_percentage / 100.0),
-      discounted_full_pack_cost: discounted_full_pack_cost,
-      incentive: selfpack? ? incentive : incentive_without_packing,
-      incentive_without_packing: incentive_without_packing
-    }
+  def packing_weight
+    selfpack? ? "#{full_weight} lbs" : '(Government-provided packing)'
+  end
+
+  def packing_incentive
+    selfpack? ? "$#{full_pack_range.min}–$#{full_pack_range.max}" : '$0'
+  end
+
+  def full_pack_range
+    @full_pack_range ||= range_rounded_to_multiples_of_100(full_pack_cost * discount_range.min, full_pack_cost * discount_range.max)
+  end
+
+  def incentive_without_packing_range
+    return @incentive_without_packing_range if @incentive_without_packing_range.present?
+    cost_without_packing = linehaul_charges + non_linehaul_charges - full_pack_cost
+    @incentive_without_packing_range = range_rounded_to_multiples_of_100(cost_without_packing * discount_range.min, cost_without_packing * discount_range.max)
+  end
+
+  def total_incentive_range
+    @total_incentive_range ||= (full_pack_range.min + incentive_without_packing_range.min)..(full_pack_range.max + incentive_without_packing_range.max)
+  end
+
+  def advance_range
+    @advance_range ||= (total_incentive_range.min * (advance_percentage / 100.0)).to_i..(total_incentive_range.max * (advance_percentage / 100.0)).to_i
   end
 
   def valid?
@@ -59,12 +70,12 @@ class PpmEstimator
 
   private
 
-  def cwt
-    full_weight / 100
-  end
-
   def estimator_params
     @estimator_params ||= @params.permit(:rank, :branch, :dependents, :married, :start, :end, :date, :weight, :weight_progear, :weight_progear_spouse, :selfpack)
+  end
+
+  def cwt
+    full_weight / 100
   end
 
   def entitlement
@@ -72,20 +83,15 @@ class PpmEstimator
   end
 
   def entitlement_self
-    @entitlement_self ||=
-      if estimator_params[:dependents] == 'yes' && entitlement.total_weight_self_plus_dependents
-        entitlement.total_weight_self_plus_dependents
-      else
-        entitlement.total_weight_self
-      end
+    estimator_params[:dependents] == 'yes' && entitlement.total_weight_self_plus_dependents ? entitlement.total_weight_self_plus_dependents : entitlement.total_weight_self
   end
 
   def entitlement_progear
-    @entitlement_progear ||= entitlement.pro_gear_weight || 0
+    entitlement.pro_gear_weight || 0
   end
 
   def entitlement_progear_spouse
-    @entitlement_progear_spouse = estimator_params[:married] == 'yes' && entitlement.pro_gear_weight_spouse ? entitlement.pro_gear_weight_spouse : 0
+    estimator_params[:married] == 'yes' && entitlement.pro_gear_weight_spouse ? entitlement.pro_gear_weight_spouse : 0
   end
 
   def weight_self_limited
@@ -97,7 +103,7 @@ class PpmEstimator
   end
 
   def weight_progear_spouse_limited
-    [estimator_params[:married] == 'yes' ? estimator_params[:weight_progear_spouse].to_i : 0, entitlement_progear_spouse].min
+    [estimator_params[:weight_progear_spouse].to_i, entitlement_progear_spouse].min
   end
 
   def full_pack_cost
@@ -163,17 +169,13 @@ class PpmEstimator
   end
 
   def base_rate
-    return base_linehaul(distance, full_weight) unless full_weight < 1000
+    return BaseLinehaul.rate(effective_400ng_date, distance, full_weight) unless full_weight < 1000
     # pro-rate the 1000 lb baseline rate for shipments less than 1000 lbs
-    base_linehaul(distance, 1000) * (full_weight / 1000.0)
+    BaseLinehaul.rate(effective_400ng_date, distance, 1000) * (full_weight / 1000.0)
   end
 
   def linehaul_charges
     base_rate + (orig_svc_area.linehaul_factor + dest_svc_area.linehaul_factor) * cwt + shorthaul
-  end
-
-  def base_linehaul(dist_mi, wt)
-    BaseLinehaul.rate(effective_400ng_date, dist_mi, wt)
   end
 
   def shorthaul
@@ -183,6 +185,28 @@ class PpmEstimator
 
   def non_linehaul_charges
     full_pack_cost + cwt * (orig_svc_area.orig_dest_service_charge + dest_svc_area.orig_dest_service_charge + FullUnpack.rate(effective_400ng_date, dest_svc_area.services_schedule))
+  end
+
+  def discount_range
+    # don't go below 0% or above 100% before applying PPM incentive %
+    @discount_range ||= ([inv_linehaul_discount - 0.02, 0].max * 0.95)..([inv_linehaul_discount + 0.02, 1].min * 0.95)
+  end
+
+  # returns the nearest integer multiple of 100 below the input, clamped to 0.
+  def floor_hundred(num)
+    [(num.to_i / 100) * 100, 0].max
+  end
+
+  # returns the nearest integer multiple of 100 above the input
+  def ceil_hundred(num)
+    return num if (num % 100).zero?
+    (num.to_i / 100 + 1) * 100
+  end
+
+  # returns a Range of the supplied low and high values, where the bounds of
+  # the Range have been rounded outward to the nearest multiples of 100
+  def range_rounded_to_multiples_of_100(low, high)
+    floor_hundred(low)..ceil_hundred(high)
   end
 end
 # rubocop:enable Metrics/ClassLength
