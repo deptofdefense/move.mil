@@ -1,5 +1,23 @@
 .svc-spec-banner {
-  margin: 2rem 0;
+  margin: 2rem 0-$site-margins-mobile;
+  position: relative;
+
+  @include media($medium-screen) {
+    margin: 2rem 0;
+  }
+}
+
+.svc-spec-logo {
+  left: 1rem;
+  max-width: 10rem;
+  position: absolute;
+  top: 1rem;
+  width: 20%;
+
+  @include media($medium-screen) {
+    left: 2rem;
+    top: 2rem;
+  }
 }
 
 .post {

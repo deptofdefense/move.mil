@@ -8,7 +8,10 @@
   <%= render partial: 'sidenav', locals: {branch: 'air-force'} %>
 
   <div class="sidenav-body">
-    <%= image_tag('service_specific_information/air-force.png', alt: 'Air Force banner', class: 'svc-spec-banner') %>
+    <div class="svc-spec-banner">
+      <%= image_tag('service_specific_information/air-force-banner.png', alt: 'Air Force logo') %>
+      <%= image_tag('service_specific_information/air-force-logo.svg', alt: 'Air Force logo', class: 'svc-spec-logo') %>
+    </div>
     <%= render partial: 'customer-service', locals: {'contact': @contact, 'policies': [{'name': 'Air Force Household Goods Policy', 'url': 'http://static.e-publishing.af.mil/production/1/af_a4_7/publication/afi24-501/afi24-501.pdf'}]} %>
     <%= render partial: 'posts', object: @posts %>
   </div>
