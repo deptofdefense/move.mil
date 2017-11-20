@@ -1,8 +1,5 @@
+# rubocop:disable Metrics/ClassLength
 class PpmEstimator
-  # TODO: Intra-AK
-  # TODO: Inter-AK
-  # TODO: error handling
-
   def initialize(params)
     @params = params
   end
@@ -104,19 +101,46 @@ class PpmEstimator
   end
 
   def full_pack_cost
-    @full_pack_cost ||= FullPack.rate(date, orig_svc_area.services_schedule, full_weight) * cwt
+    @full_pack_cost ||= FullPack.rate(effective_400ng_date, orig_svc_area.services_schedule, full_weight) * cwt
   end
 
   def orig_svc_area
-    @orig_svc_area ||= ServiceArea.from_date_and_svc_area_number(date, start_zip3.service_area)
+    @orig_svc_area ||= ServiceArea.from_date_and_svc_area_number(effective_400ng_date, start_zip3.service_area)
   end
 
   def dest_svc_area
-    @dest_svc_area ||= ServiceArea.from_date_and_svc_area_number(date, end_zip3.service_area)
+    @dest_svc_area ||= ServiceArea.from_date_and_svc_area_number(effective_400ng_date, end_zip3.service_area)
   end
 
   def distance
     @distance ||= DtodZip3Distance.dist_mi(start_zip3.zip3, end_zip3.zip3).to_i
+  end
+
+  def effective_400ng_date
+    # If the user enters a date that's before or after all 400NG rates in the database, then
+    # use the 400NG rates with an effective date closest to the date the user gave
+    # the FullUnpacks table is the shortest, so should be the quickest to query
+    @effective_400ng_date ||=
+      if (effective_range = FullUnpack.effective_date_range).cover?(date)
+        date
+      elsif date < effective_range.min
+        effective_range.min
+      else
+        effective_range.max
+      end
+  end
+
+  def effective_tdl_date
+    # If the user enters a date that's before or after the TDLs in the database, then
+    # use the discounts with a TDL closest to the date the user gave
+    @effective_tdl_date ||=
+      if (tdl_range = TopTspByChannelLinehaulDiscount.tdl_date_range).cover?(date)
+        date
+      elsif date < tdl_range.min
+        tdl_range.min
+      else
+        tdl_range.max
+      end
   end
 
   def rate_area(zip3, zip5)
@@ -134,7 +158,7 @@ class PpmEstimator
       # For CONUS moves, destination is the region.
       # If the orig and dest are in the same state, the region is 15!
       start_zip3.state == end_zip3.state ? 15 : end_zip3.region,
-      date
+      effective_tdl_date
     )
   end
 
@@ -149,15 +173,16 @@ class PpmEstimator
   end
 
   def base_linehaul(dist_mi, wt)
-    BaseLinehaul.rate(date, dist_mi, wt)
+    BaseLinehaul.rate(effective_400ng_date, dist_mi, wt)
   end
 
   def shorthaul
     return 0 if distance > 800
-    Shorthaul.rate(date, cwt, distance)
+    Shorthaul.rate(effective_400ng_date, cwt, distance)
   end
 
   def non_linehaul_charges
-    full_pack_cost + cwt * (orig_svc_area.orig_dest_service_charge + dest_svc_area.orig_dest_service_charge + FullUnpack.rate(date, dest_svc_area.services_schedule))
+    full_pack_cost + cwt * (orig_svc_area.orig_dest_service_charge + dest_svc_area.orig_dest_service_charge + FullUnpack.rate(effective_400ng_date, dest_svc_area.services_schedule))
   end
 end
+# rubocop:enable Metrics/ClassLength

@@ -8,5 +8,7 @@ class CreateTopTspByChannelLinehaulDiscounts < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+
+    add_index :top_tsp_by_channel_linehaul_discounts, :tdl
   end
 end
