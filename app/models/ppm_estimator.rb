@@ -51,7 +51,7 @@ class PpmEstimator
   end
 
   def total_incentive_range
-    @total_incentive_range ||= (full_pack_range.min + incentive_without_packing_range.min)..(full_pack_range.max + incentive_without_packing_range.max)
+    @total_incentive_range ||= selfpack? ? (full_pack_range.min + incentive_without_packing_range.min)..(full_pack_range.max + incentive_without_packing_range.max) : incentive_without_packing_range
   end
 
   def advance_range
