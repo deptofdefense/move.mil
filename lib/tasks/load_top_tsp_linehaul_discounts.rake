@@ -27,9 +27,9 @@ namespace :admin do
       # OCONUS - rate area to rate area
       # all rate areas start with 2 character all-caps prefix
       # some have digits following, some don't
-      /\A(?<orig>[[:upper:]]{2}\d*)\s*(?<dest>[[:upper:]]{2}\d*)\s*\z/ =~ row[0] if $~.nil? # if the previous match failed
+      /\A(?<orig>[[:upper:]]{2}\d*)\s*(?<dest>[[:upper:]]{2}\d*)\s*\z/ =~ row[0] if $LAST_MATCH_INFO.nil? # if the previous match failed
 
-      if $~.nil?
+      if $LAST_MATCH_INFO.nil?
         puts 'Could not parse channel named', row[0]
         next
       end
