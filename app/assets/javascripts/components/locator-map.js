@@ -15,6 +15,7 @@
   LocatorMapMarker.prototype = {
     setup: function() {
       this.marker = L.marker([this.latitude, this.longitude], {
+        alt: 'Map marker for ' + this.name,
         icon: this.icon,
         riseOnHover: true,
         title: this.name
@@ -103,6 +104,7 @@
 
       if (location.search.indexOf('coordinates=') !== -1) {
         L.marker([latitude, longitude], {
+          alt: 'Your current location',
           icon: L.divIcon({
             className: 'map-marker-pulse'
           })
