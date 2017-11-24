@@ -22,25 +22,32 @@
   }
 
   span {
-    padding-left: 1.5rem;
-  }
-
-  img,
-  span {
     display: table-cell;
     vertical-align: middle;
+  }
+
+  img {
+    margin-right: 1.5rem;
   }
 }
 
 .moving-guide-accordion-button img {
+  display: table-cell;
   height: 42px;
+  vertical-align: middle;
   width: 42px;
 }
 
 .moving-tips-accordion-button img {
-  height: 50px;
-  max-width: 55px;
-  width: 55px;
+  display: none;
+
+  @include media($medium-screen) {
+    display: table-cell;
+    height: 50px;
+    max-width: 55px;
+    width: 55px;
+    vertical-align: middle;
+  }
 }
 
 .helpful-links-accordion {
