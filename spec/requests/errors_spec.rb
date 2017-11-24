@@ -1,6 +1,5 @@
 RSpec.describe ErrorsController, type: :request do
-
-  describe "GET #not_found" do
+  describe 'GET #not_found' do
     before do
       get '/404'
     end
