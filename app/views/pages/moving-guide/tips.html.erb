@@ -5,17 +5,25 @@
 <div class="usa-section main-section">
   <h1><%= @page_title %></h1>
 
-  <p>Whether this is your first move or you’re a seasoned expert… moving is stressful. While the hope would be that everything goes off without a hitch, we’ve combed service members and their families far and wide to compile some of the Top Tips to help you out.</p>
-  <p>This list certainly is not the end all be all, but it’s a great place to start!</p>
-
-  <div class="tabs" id="tabs">
-    <ul class="tabs-list">
-      <li><a href="#prepping-the-move" id="tab-prepping-the-move">Prepping the Move</a></li>
-      <li><a href="#during-the-move" id="tab-during-the-move">During the Move <span>(Packing &amp; Loading)</span></a></li>
-      <li><a href="#at-your-destination" id="tab-at-your-destination">At Your Destination</a></li>
+  <aside class="sidenav">
+    <div class="sidenav-jump-to">
+      Jump to:
+    </div>
+    <ul class="usa-sidenav-list">
+      <li><%= link_to 'Prepping the Move', '#prepping-the-move' %></li>
+      <li><%= link_to 'During the Move (Packing & Unloading)', '#during-the-move' %></li>
+      <li><%= link_to 'At Your Destination', '#at-your-destination' %></li>
     </ul>
+  </aside>
 
-    <section class="moving-tips-section tabs-panel" id="prepping-the-move">
+  <div class="sidenav-body what-to-expect-body">
+    <div class="what-to-expect-intro">
+      Whether this is your first move or you’re a seasoned expert… moving is stressful. While the hope would be that everything goes off without a hitch, we’ve combed service members and their families far and wide to compile some of the Top Tips to help you out.
+      <br><br>
+      This list certainly is not the end all be all, but it’s a great place to start!
+    </div>
+
+    <section class="what-to-expect-section" id="prepping-the-move">
       <div class="usa-media_block">
         <%= image_tag 'icons/clipboard-blue.svg', alt: '', class: 'usa-media_block-img', role: 'presentation' %>
         <div class="usa-media_block-body">
