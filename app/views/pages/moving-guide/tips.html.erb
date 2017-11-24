@@ -2,7 +2,7 @@
 
 <%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: []} %>
 
-<div class="usa-section main-section">
+<div class="usa-section main-section moving-tips">
   <h1><%= @page_title %></h1>
 
   <aside class="sidenav">
@@ -149,7 +149,133 @@
     </section>
 
     <section class="what-to-expect-section" id="during-the-move">
-      <h4>During the Move</h4>
+      <h4>During the Move (Packing &amp; Unloading)</h4>
+
+      <ul class="usa-accordion-bordered">
+        <li>
+          <button class="usa-accordion-button moving-tips-accordion-button" aria-controls="playdate">
+            <div>
+              <%= image_tag 'icons/playdate-blue.svg', alt: '', role: 'presentation' %>
+              <span>Beg for a playdate.</span>
+            </div>
+          </button>
+          <div id="playdate" class="usa-accordion-content">
+            You are much more likely to have friends offer to keep your kids when you are moving out than when you are moving in. Not only should you say yes to any offers of help with your kids, but you should actively ask for help on moving days. People are willing or maybe it’s time for the kids to visit with the grandparents.
+          </div>
+        </li>
+
+        <li>
+          <button class="usa-accordion-button moving-tips-accordion-button" aria-controls="packers">
+            <div>
+              <%= image_tag 'icons/packing-blue.svg', alt: '', role: 'presentation' %>
+              <span>Packers are more important than movers.</span>
+            </div>
+          </button>
+          <div id="packers" class="usa-accordion-content">
+            Most people focus their efforts on the movers. Movers can be picked up off the street on the day of a move. Packers are the experienced professionals. They can make sure your breakable stuff has the best chance of arriving unbroken. Learn their names. Offer to run out and get them a lunch and make sure the fridge is stocked with waters and other beverages. Praise the nice job that they are doing or start up some small talk — and they typically do a nicer job.
+          </div>
+        </li>
+
+        <li>
+          <button class="usa-accordion-button moving-tips-accordion-button" aria-controls="fire">
+            <div>
+              <%= image_tag 'icons/fire-blue.svg', alt: '', role: 'presentation' %>
+              <span>Remember you can "fire" your movers and packers.</span>
+            </div>
+          </button>
+          <div id="fire" class="usa-accordion-content">
+            If something seems to be going very, very wrong on your move (movers are fighting, things are getting damaged, movers are doing crack in your bathroom) call the transportation office immediately!  They will send a representative over to sort things out. Don’t become another <%= link_to 'nightmare move story', page_path('moving-guide/nightmare-moves') %>!
+          </div>
+        </li>
+
+        <li>
+          <button class="usa-accordion-button moving-tips-accordion-button" aria-controls="sign-inventory">
+            <div>
+              <%= image_tag 'icons/inventory-blue.svg', alt: '', role: 'presentation' %>
+              <span>Don’t sign the mover’s inventory until you understand and agree with everything listed. If you disagree, make sure write it in the remarks section!</span>
+            </div>
+          </button>
+          <div id="sign-inventory" class="usa-accordion-content">
+            Ok... no one likes doing paperwork but if you spend just a few extra minutes reviewing the inventory sheets on the front end it will make your life much easier during delivery of your goods. The movers will identify any dings, dents, scratches, etc. (aka pre-existing damage) on the inventory form and you need to make sure that's accurate! Your brand new dining table that is flawless should not be marked down as having a chip in it... this will make the claims process much easier. Also, for high value items, make sure the inventory specifies the make, model and serial number of the item. Generic labels like "Electronics", "TV", etc. should be a huge red flag for you. If they miss something, you can request that they unpack the item so that the specific details can be added to the inventory.
+            <br>
+            If you disagree with the survey, write it in the remarks section.  Your future self will thank you - I promise. Don’t be afraid to call the transportation office if you aren’t sure about something!
+          </div>
+        </li>
+
+        <li>
+          <button class="usa-accordion-button moving-tips-accordion-button" aria-controls="old-supplies">
+            <div>
+              <%= image_tag 'icons/toilet-brush-blue.svg', alt: '', role: 'presentation' %>
+              <span>Throw out your old toilet brush, mops and brooms before you move. Treat yourself to new ones in you new house.</span>
+            </div>
+          </button>
+          <div id="old-supplies" class="usa-accordion-content">
+            Some items just aren’t as much a part of the family when you get to the new place as they were at the old place. The toilet brush is one of those. Old mops and brooms that have become, well, less than their former selves need to be used one last time at the old place.
+          </div>
+        </li>
+
+        <li>
+          <button class="usa-accordion-button moving-tips-accordion-button" aria-controls="trash">
+            <div>
+              <%= image_tag 'icons/trash-blue.svg', alt: '', role: 'presentation' %>
+              <span>Clean out your trash before the packers come.</span>
+            </div>
+          </button>
+          <div id="trash" class="usa-accordion-content">
+            Simply put, empty the trash can and maybe give it a once over with a wipe to make sure it’s clean before the movers pack it up. You don’t want to have a box packed up with your trash in it and you definitely don’t want to put in your stinky old trash can.
+          </div>
+        </li>
+
+        <li>
+          <button class="usa-accordion-button moving-tips-accordion-button" aria-controls="necessities">
+            <div>
+              <%= image_tag 'icons/suitcases-blue.svg', alt: '', role: 'presentation' %>
+              <span>Don’t let your "First Day" box and any other necessities go on the truck.</span>
+            </div>
+          </button>
+          <div id="necessities" class="usa-accordion-content">
+            Think long and hard about the necessities of those first few days at the new house. Even if your belongings are arriving "door-to-door" plan for an extra day or two without your things because delays happen, especially in summer.
+            <br><br>
+            Make a list of the things you are going to buy before you arrive at your new house: toilet paper, paper towels, hand soap, cleaners, toilet brush, broom, mop, drinks, snacks, diapers, etc. Then pack an extra bag (not a box, boxes are a struggle during the move) with sheets, towels, and an air mattress. Forget pots, pans and dishes. This is a time for takeout. Or peanut butter and jelly sandwiches.
+          </div>
+        </li>
+
+        <li>
+          <button class="usa-accordion-button moving-tips-accordion-button" aria-controls="medicine">
+            <div>
+              <%= image_tag 'icons/medicine-blue.svg', alt: '', role: 'presentation' %>
+              <span>Empty the medicine cabinet and plan to take it with you.</span>
+            </div>
+          </button>
+          <div id="medicine" class="usa-accordion-content">
+            While you may not need those prescription pain killers right now, you certainly do not want to be without them on the move or when you arrive at the new location. Some members have even said these bottles have grown legs and gone missing... so grab a small ziplock bag and pack them away to take with you if possible.
+          </div>
+        </li>
+
+        <li>
+          <button class="usa-accordion-button moving-tips-accordion-button" aria-controls="friends">
+            <div>
+              <%= image_tag 'icons/friends-blue.svg', alt: '', role: 'presentation' %>
+              <span>Two sets of eyes are better than one. Invite good friends and neighbors to your house to keep an eye on the packers.</span>
+            </div>
+          </button>
+          <div id="friends" class="usa-accordion-content">
+            Shoot... if you get four set of eyes, that’s even better than two.  While you can certainly be the only person in the house, it does help to have an extra set of eyes on everything that’s going on, especially if you have to run out to pick up that lunch you promised the packers.
+          </div>
+        </li>
+
+        <li>
+          <button class="usa-accordion-button moving-tips-accordion-button" aria-controls="labels">
+            <div>
+              <%= image_tag 'icons/box-label-blue.svg', alt: '', role: 'presentation' %>
+              <span>Have the packers show you the inside of each box before they tape it. You can make additional notes on the outside describing exactly what is in there!</span>
+            </div>
+          </button>
+          <div id="labels" class="usa-accordion-content">
+            Here’s another situation when your future self will thank you... we all know that a box labeled  "Kitchen - Misc" sounds super detailed but when you arrive at your new spot and you NEED that one tool/toy/utensil right away, digging through 13 other boxes to find it can be frustrating. If at all possible, add a few additional notes to the boxes... pots pans, utensils, toy trucks, hammer, etc.
+          </div>
+        </li>
+      </ul>
     </section>
 
     <section class="what-to-expect-section" id="at-your-destination">
