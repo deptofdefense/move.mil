@@ -112,9 +112,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 33.6271426,
-    "longitude": -85.9695898,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -85.9695898
   },
   {
     "name": "Ansbach, United States Army Garrison",
@@ -180,9 +178,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 35.3828616,
-    "longitude": -86.0303306,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -86.0303306
   },
   {
     "name": "Aviano Air Base",
@@ -399,9 +395,7 @@
     "country_name": "Germany",
     "country_code": "DE",
     "latitude": 50.176189,
-    "longitude": 7.0640743,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": 7.0640743
   },
   {
     "name": "Camp Humphreys / USAG Humphreys",
@@ -561,9 +555,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 33.2295467,
-    "longitude": -117.3811366,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -117.3811366
   },
   {
     "name": "Camp Zama",
@@ -939,8 +931,7 @@
         "dsn": true,
         "note": "DSN Fax"
       }
-    ],
-    "urls": []
+    ]
   },
   {
     "name": "Defense Distribution Depot San Joaquin",
@@ -955,9 +946,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 37.7067909,
-    "longitude": -121.3976236,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -121.3976236
   },
   {
     "name": "Defense Logistics Agency at Susquehanna",
@@ -972,9 +961,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 40.2101139,
-    "longitude": -76.8490968,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -76.8490968
   },
   {
     "name": "Defense Supply Center Columbus",
@@ -1036,9 +1023,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 37.414644,
-    "longitude": -77.440685,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -77.440685
   },
   {
     "name": "Dover AFB",
@@ -1151,9 +1136,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 32.422379,
-    "longitude": -99.8418696,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -99.8418696
   },
   {
     "name": "Edwards AFB",
@@ -1168,9 +1151,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 34.9240314,
-    "longitude": -117.8912085,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -117.8912085
   },
   {
     "name": "Eglin AFB",
@@ -1336,9 +1317,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 41.1446846,
-    "longitude": -104.8629746,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -104.8629746
   },
   {
     "name": "Fairchild AFB",
@@ -1555,9 +1534,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 35.1414552,
-    "longitude": -79.0079949,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -79.0079949
   },
   {
     "name": "Fort Buchanan",
@@ -1907,9 +1884,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 39.097893,
-    "longitude": -76.72917799999999,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -76.72917799999999
   },
   {
     "name": "Fort Gordon",
@@ -2104,9 +2079,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 31.554491,
-    "longitude": -110.3555209,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -110.3555209
   },
   {
     "name": "Fort Hunter Liggett",
@@ -2121,9 +2094,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 36.0086825,
-    "longitude": -121.2369266,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -121.2369266
   },
   {
     "name": "Fort Irwin",
@@ -2314,9 +2285,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 37.2489537,
-    "longitude": -77.3381855,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -77.3381855
   },
   {
     "name": "Fort Leonard Wood",
@@ -2740,9 +2709,7 @@
     "country_name": "Germany",
     "country_code": "DE",
     "latitude": 50.960556,
-    "longitude": 6.0425,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": 6.0425
   },
   {
     "name": "Ghedi Air Base",
@@ -2757,9 +2724,7 @@
     "country_name": "Italy",
     "country_code": "IT",
     "latitude": 45.436254,
-    "longitude": 10.2743529,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": 10.2743529
   },
   {
     "name": "Goodfellow AFB",
@@ -3291,9 +3256,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 32.8909785,
-    "longitude": -80.0691552,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -80.0691552
   },
   {
     "name": "Joint Base Elmendorf - Richardson JBER",
@@ -3308,9 +3271,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 61.24677759999999,
-    "longitude": -149.8125404,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -149.8125404
   },
   {
     "name": "Joint Base Langley-Eustis",
@@ -3325,9 +3286,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 37.08350739999999,
-    "longitude": -76.35922409999999,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -76.35922409999999
   },
   {
     "name": "Joint Base Lewis-McChord",
@@ -3368,8 +3327,7 @@
         "dsn": true,
         "note": "DSN Phone"
       }
-    ],
-    "urls": []
+    ]
   },
   {
     "name": "Joint Base McGuire-Dix-Lakehurst",
@@ -3384,9 +3342,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 40.0378213,
-    "longitude": -74.5884559,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -74.5884559
   },
   {
     "name": "Joint Base Pearl Harbor - Hickam",
@@ -3401,9 +3357,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 21.3488372,
-    "longitude": -157.9435574,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -157.9435574
   },
   {
     "name": "Joint Base San Antonio (Lackland Randolph Sam Houston)",
@@ -3561,9 +3515,7 @@
     "country_name": "Guam",
     "country_code": "GU",
     "latitude": 13.5875,
-    "longitude": 144.924438,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": 144.924438
   },
   {
     "name": "Joint Region Marianas - Naval Base Guam",
@@ -3794,9 +3746,7 @@
     "country_name": "Belgium",
     "country_code": "BE",
     "latitude": 51.169724,
-    "longitude": 5.471110899999999,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": 5.471110899999999
   },
   {
     "name": "Kunsan AB",
@@ -3905,9 +3855,7 @@
     "country_name": "Germany",
     "country_code": "DE",
     "latitude": 49.40426,
-    "longitude": 7.559619999999999,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": 7.559619999999999
   },
   {
     "name": "Laughlin AFB",
@@ -4098,9 +4046,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 36.9201397,
-    "longitude": -76.29777969999999,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -76.29777969999999
   },
   {
     "name": "MCAS Beaufort",
@@ -4831,9 +4777,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 34.8432962,
-    "longitude": -95.9084376,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -95.9084376
   },
   {
     "name": "McConnell AFB",
@@ -4899,9 +4843,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 48.4157509,
-    "longitude": -101.3386723,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -101.3386723
   },
   {
     "name": "Misawa AB",
@@ -5012,8 +4954,7 @@
         "dsn": true,
         "note": "DSN Phone"
       }
-    ],
-    "urls": []
+    ]
   },
   {
     "name": "Mountain Home AFB",
@@ -5075,9 +5016,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 42.2913753,
-    "longitude": -71.3571839,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -71.3571839
   },
   {
     "name": "Naval Air Facility Atsugi",
@@ -5139,9 +5078,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 32.8197392,
-    "longitude": -115.6692123,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -115.6692123
   },
   {
     "name": "Naval Air Station Corpus Christi",
@@ -5344,9 +5281,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 29.8247206,
-    "longitude": -90.01679899999999,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -90.01679899999999
   },
   {
     "name": "Naval Air Station Key West",
@@ -5361,9 +5296,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 24.5770803,
-    "longitude": -81.7000637,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -81.7000637
   },
   {
     "name": "Naval Air Station Kingsville",
@@ -5928,9 +5861,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 47.72215,
-    "longitude": -122.7181033,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -122.7181033
   },
   {
     "name": "Naval Base Point Loma",
@@ -6282,9 +6213,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 30.391306,
-    "longitude": -81.4237363,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -81.4237363
   },
   {
     "name": "Naval Station Newport",
@@ -6299,9 +6228,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 41.5075845,
-    "longitude": -71.3223695,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -71.3223695
   },
   {
     "name": "Naval Station Norfolk",
@@ -6416,9 +6343,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 30.7932415,
-    "longitude": -81.5703539,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -81.5703539
   },
   {
     "name": "Naval Submarine Base New London",
@@ -6580,9 +6505,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 39.0032877,
-    "longitude": -77.0907111,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -77.0907111
   },
   {
     "name": "Naval Support Activity Hampton Roads Northwest Annex",
@@ -6900,9 +6823,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 38.6000889,
-    "longitude": -77.1622294,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -77.1622294
   },
   {
     "name": "Naval Support Activity Washington",
@@ -6917,9 +6838,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 38.9072276,
-    "longitude": -77.02677659999999,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -77.02677659999999
   },
   {
     "name": "Naval Weapons Station Earle",
@@ -6981,9 +6900,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 37.238157,
-    "longitude": -76.55209959999999,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -76.55209959999999
   },
   {
     "name": "Nellis AFB",
@@ -6998,9 +6915,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 36.2414162,
-    "longitude": -115.0508066,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -115.0508066
   },
   {
     "name": "Newport News Shipyard",
@@ -7015,9 +6930,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 36.9882362,
-    "longitude": -76.4371783,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -76.4371783
   },
   {
     "name": "Norfolk Naval Shipyard",
@@ -7032,9 +6945,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 36.8166954,
-    "longitude": -76.3054585,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -76.3054585
   },
   {
     "name": "Offutt AFB",
@@ -7096,9 +7007,7 @@
     "country_name": "South Korea",
     "country_code": "KR",
     "latitude": 37.0790632,
-    "longitude": 127.0421916,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": 127.0421916
   },
   {
     "name": "Papa Air Base",
@@ -7113,9 +7022,7 @@
     "country_name": "Hungary",
     "country_code": "HU",
     "latitude": 47.363888,
-    "longitude": 17.500555,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": 17.500555
   },
   {
     "name": "Patrick AFB",
@@ -7177,9 +7084,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 38.86,
-    "longitude": -77.05,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -77.05
   },
   {
     "name": "Pentagon - Army",
@@ -7194,9 +7099,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 38.87098340000001,
-    "longitude": -77.0559918,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -77.0559918
   },
   {
     "name": "Peterson AFB",
@@ -7356,9 +7259,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 35.1713704,
-    "longitude": -79.0173411,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -79.0173411
   },
   {
     "name": "Portsmouth Naval Shipyard",
@@ -7506,9 +7407,7 @@
     "country_name": "United Kingdom",
     "country_code": "GB",
     "latitude": 51.68476940000001,
-    "longitude": -1.7781973,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -1.7781973
   },
   {
     "name": "RAF Lakenheath",
@@ -7887,9 +7786,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 38.8086033,
-    "longitude": -104.5257202,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -104.5257202
   },
   {
     "name": "Scott Air Force Base",
@@ -8157,9 +8054,7 @@
     "country_name": "Norway",
     "country_code": "NO",
     "latitude": 58.9699756,
-    "longitude": 5.7331074,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": 5.7331074
   },
   {
     "name": "Stennis Space Center",
@@ -8174,9 +8069,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 30.3619837,
-    "longitude": -89.5994225,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -89.5994225
   },
   {
     "name": "Surface Combat Systems Center Wallops Island",
@@ -8191,9 +8084,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 37.8815432,
-    "longitude": -75.437386,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -75.437386
   },
   {
     "name": "Tinker AFB",
@@ -8228,8 +8119,7 @@
         "dsn": true,
         "note": "DSN Fax"
       }
-    ],
-    "urls": []
+    ]
   },
   {
     "name": "Tobyhanna Army Depot",
@@ -8391,9 +8281,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 34.233333,
-    "longitude": -116.0613679,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -116.0613679
   },
   {
     "name": "Tyndall AFB",
@@ -8539,9 +8427,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 37.9178326,
-    "longitude": -85.9450402,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -85.9450402
   },
   {
     "name": "US Army Cadet Command 3rd Brigade",
@@ -8556,9 +8442,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 42.3128078,
-    "longitude": -87.8396061,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -87.8396061
   },
   {
     "name": "US Army Cadet Command 4th Brigade",
@@ -8573,9 +8457,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 37.8978405,
-    "longitude": -85.94813649999999,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -85.94813649999999
   },
   {
     "name": "US Army Cadet Command 5th Brigade",
@@ -8590,9 +8472,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 37.8978405,
-    "longitude": -85.94813649999999,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -85.94813649999999
   },
   {
     "name": "US Army Cadet Command 6th Brigade",
@@ -8607,9 +8487,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 32.0311027,
-    "longitude": -81.132886,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -81.132886
   },
   {
     "name": "US Army Cadet Command 7th Brigade",
@@ -8624,9 +8502,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 37.90175490000001,
-    "longitude": -85.9527399,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -85.9527399
   },
   {
     "name": "US Army Cadet Command 8th Brigade",
@@ -8641,9 +8517,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 37.8978405,
-    "longitude": -85.94813649999999,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -85.94813649999999
   },
   {
     "name": "US Army Cadet Command Headquarters",
@@ -8658,9 +8532,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 37.89847719999999,
-    "longitude": -85.9488192,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -85.9488192
   },
   {
     "name": "USAF Academy",
@@ -8763,9 +8635,7 @@
     "country_name": "Belgium",
     "country_code": "BE",
     "latitude": 50.577499,
-    "longitude": 3.84,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": 3.84
   },
   {
     "name": "USAG Bavaria",
@@ -8833,9 +8703,7 @@
     "country_name": "Germany",
     "country_code": "DE",
     "latitude": 47.4836559,
-    "longitude": 11.0623527,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": 11.0623527
   },
   {
     "name": "USAG Daegu",
@@ -9106,9 +8974,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 39.0976331,
-    "longitude": -76.7385798,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -76.7385798
   },
   {
     "name": "USAREC, 2nd Medical Recruiting Battalion",
@@ -9123,9 +8989,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 34.6831973,
-    "longitude": -86.6352498,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -86.6352498
   },
   {
     "name": "USAREC, 3rd Medical Recruiting Battalion",
@@ -9140,9 +9004,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 37.90175490000001,
-    "longitude": -85.9527399,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -85.9527399
   },
   {
     "name": "USAREC, 6th Medical Recruiting Battalion",
@@ -9157,9 +9019,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 36.0764801,
-    "longitude": -115.102622,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -115.102622
   },
   {
     "name": "USAREC, Albany Battalion",
@@ -9174,9 +9034,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 42.7221942,
-    "longitude": -73.7065818,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -73.7065818
   },
   {
     "name": "USAREC, Atlanta Battalion",
@@ -9191,9 +9049,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 33.9052166,
-    "longitude": -84.4791541,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -84.4791541
   },
   {
     "name": "USAREC, Baltimore Battalion",
@@ -9208,9 +9064,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 39.0976331,
-    "longitude": -76.7385798,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -76.7385798
   },
   {
     "name": "USAREC, Baton Rouge Battalion",
@@ -9225,9 +9079,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 30.380006,
-    "longitude": -91.0942857,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -91.0942857
   },
   {
     "name": "USAREC, Chicago Battalion",
@@ -9242,9 +9094,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 42.3085965,
-    "longitude": -87.8730575,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -87.8730575
   },
   {
     "name": "USAREC, Cleveland Battalion",
@@ -9259,9 +9109,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 41.50067680000001,
-    "longitude": -81.68196280000001,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -81.68196280000001
   },
   {
     "name": "USAREC, Columbia Recruiting Battalion",
@@ -9276,9 +9124,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 33.9978492,
-    "longitude": -80.9547682,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -80.9547682
   },
   {
     "name": "USAREC, Columbus Battalion",
@@ -9293,9 +9139,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 39.980476,
-    "longitude": -82.89432099999999,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -82.89432099999999
   },
   {
     "name": "USAREC, Dallas Battalion",
@@ -9310,9 +9154,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 32.6782935,
-    "longitude": -96.857974,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -96.857974
   },
   {
     "name": "USAREC, Denver Battalion",
@@ -9327,9 +9169,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 39.7460752,
-    "longitude": -104.9899139,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -104.9899139
   },
   {
     "name": "USAREC, Great Lakes Battalion",
@@ -9344,9 +9184,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 42.664981,
-    "longitude": -84.53616699999999,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -84.53616699999999
   },
   {
     "name": "USAREC, Harrisburg Battalion",
@@ -9361,9 +9199,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 40.20775099999999,
-    "longitude": -76.83927,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -76.83927
   },
   {
     "name": "USAREC, Houston Battalion",
@@ -9378,9 +9214,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 29.75188129999999,
-    "longitude": -95.3737732,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -95.3737732
   },
   {
     "name": "USAREC, Indianapolis Battalion",
@@ -9395,9 +9229,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 39.86215600000001,
-    "longitude": -86.00733799999999,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -86.00733799999999
   },
   {
     "name": "USAREC, Jacksonville Battalion",
@@ -9412,9 +9244,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 30.3041327,
-    "longitude": -81.6191675,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -81.6191675
   },
   {
     "name": "USAREC, Kansas City Battalion",
@@ -9429,9 +9259,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 39.2788783,
-    "longitude": -94.67465949999999,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -94.67465949999999
   },
   {
     "name": "USAREC, Los Angeles Battalion",
@@ -9526,9 +9354,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 40.0295979,
-    "longitude": -74.3144909,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -74.3144909
   },
   {
     "name": "USAREC, Milwaukee Battalion",
@@ -9543,9 +9369,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 43.1581597,
-    "longitude": -88.0536746,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -88.0536746
   },
   {
     "name": "USAREC, Minneapolis Battalion",
@@ -9560,9 +9384,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 44.8930952,
-    "longitude": -93.19554509999999,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -93.19554509999999
   },
   {
     "name": "USAREC, Montgomery Battalion",
@@ -9577,9 +9399,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 32.3800285,
-    "longitude": -86.3527455,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -86.3527455
   },
   {
     "name": "USAREC, Nashville Battalion",
@@ -9594,9 +9414,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 36.1489417,
-    "longitude": -86.6764484,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -86.6764484
   },
   {
     "name": "USAREC, New England Battalion",
@@ -9611,9 +9429,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 43.0803451,
-    "longitude": -70.73991149999999,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -70.73991149999999
   },
   {
     "name": "USAREC, New York City Battalion",
@@ -9628,9 +9444,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 40.6086013,
-    "longitude": -74.0293232,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -74.0293232
   },
   {
     "name": "USAREC, Oklahoma City Battalion",
@@ -9645,9 +9459,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 35.47464739999999,
-    "longitude": -97.5185089,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -97.5185089
   },
   {
     "name": "USAREC, Phoenix Battalion",
@@ -9662,9 +9474,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 33.4485961,
-    "longitude": -112.0721686,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -112.0721686
   },
   {
     "name": "USAREC, Portland Battalion",
@@ -9679,9 +9489,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 45.5144544,
-    "longitude": -122.6770112,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -122.6770112
   },
   {
     "name": "USAREC, Raleigh Battalion",
@@ -9696,9 +9504,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 35.8178485,
-    "longitude": -78.60496979999999,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -78.60496979999999
   },
   {
     "name": "USAREC, Richmond Recruiting Battalion",
@@ -9748,9 +9554,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 40.7092032,
-    "longitude": -111.9401461,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -111.9401461
   },
   {
     "name": "USAREC, San Antonio Battalion",
@@ -9765,9 +9569,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 29.4510329,
-    "longitude": -98.4668865,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -98.4668865
   },
   {
     "name": "USAREC, Seattle Battalion",
@@ -9782,9 +9584,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 47.5598576,
-    "longitude": -122.3424551,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -122.3424551
   },
   {
     "name": "USAREC, Southern California Battalion",
@@ -9799,9 +9599,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 33.5642084,
-    "longitude": -117.6660812,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -117.6660812
   },
   {
     "name": "USAREC, Syracuse Battalion",
@@ -9816,9 +9614,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 43.050071,
-    "longitude": -76.152778,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -76.152778
   },
   {
     "name": "USAREC, Tampa Battalion",
@@ -9833,9 +9629,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 28.0351802,
-    "longitude": -82.4944912,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -82.4944912
   },
   {
     "name": "USAREC, US Army Battalion Central California",
@@ -9850,9 +9644,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 36.2605985,
-    "longitude": -119.9108761,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -119.9108761
   },
   {
     "name": "USAREC, US Army Recruiting Battalion Northern California",
@@ -9867,9 +9659,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 38.5992161,
-    "longitude": -121.2663216,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -121.2663216
   },
   {
     "name": "USSOUTHCOM/U.S. Army Garrison-Miami",
@@ -9884,9 +9674,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 25.8049792,
-    "longitude": -80.3503638,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -80.3503638
   },
   {
     "name": "United States Army Garrison Benelux-Schinnen",
@@ -9901,9 +9689,7 @@
     "country_name": "Belgium",
     "country_code": "BE",
     "latitude": 50.5903038,
-    "longitude": 3.8193798,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": 3.8193798
   },
   {
     "name": "United States Military Academy at West Point",
@@ -10063,9 +9849,7 @@
     "country_name": "Netherlands",
     "country_code": "NL",
     "latitude": 51.65770209999999,
-    "longitude": 5.684824,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": 5.684824
   },
   {
     "name": "Westover ARB",
@@ -10080,9 +9864,7 @@
     "country_name": "United States",
     "country_code": "US",
     "latitude": 42.19910640000001,
-    "longitude": -72.5438059,
-    "phone_numbers": null,
-    "urls": null
+    "longitude": -72.5438059
   },
   {
     "name": "Whiteman AFB",
