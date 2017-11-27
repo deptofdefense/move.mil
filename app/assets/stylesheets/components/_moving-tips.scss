@@ -1,20 +1,3 @@
-.moving-tips-section {
-  .usa-media_block {
-    margin-top: $site-margins;
-  }
-
-  img {
-    display: none;
-    margin-right: $site-margins;
-    width: 5rem;
-
-    @include media($medium-screen) {
-      display: block;
-    }
-  }
-
-  h3 {
-    color: $color-primary;
-    margin: 0;
-  }
+.moving-tips .usa-accordion-bordered{
+  margin-top: 3rem;
 }
