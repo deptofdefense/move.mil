@@ -1,7 +1,4 @@
 class ServiceSpecificInformationController < ApplicationController
-<<<<<<< HEAD
-  def index; end
-=======
   def index
     case params[:branch]
     when 'air-force'
@@ -19,6 +16,7 @@ class ServiceSpecificInformationController < ApplicationController
     when 'coast-guard'
       @posts = ServiceSpecificPost.where(branch: 'coast_guard')
       @contact = BranchOfServiceContact.find_by(branch: 'Coast Guard')
+      render 'coast-guard'
     else
       # Fall back to army
       @posts = ServiceSpecificPost.where(branch: 'army')
@@ -26,5 +24,4 @@ class ServiceSpecificInformationController < ApplicationController
       render 'army'
     end
   end
->>>>>>> Change routing for service-specific pages
 end
