@@ -2,11 +2,7 @@
   padding-top: 2rem;
 
   .sidebar-accordion {
-    margin: 0 0-$site-margins-mobile;
-  }
-
-  .usa-grid-full {
-    margin-top: 2rem;
+    margin: 0 0-$site-margins-mobile 2rem 0-$site-margins-mobile;
   }
 }
 
@@ -15,7 +11,7 @@
   position: relative;
 
   @include media($medium-screen) {
-    margin: 0;
+    margin: 0 0 2rem 0;
   }
 
   img {

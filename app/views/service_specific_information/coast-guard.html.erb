@@ -8,7 +8,24 @@
   <%= render partial: 'sidenav', locals: {branch: 'coast-guard'} %>
 
   <div class="sidenav-body svc-spec-body">
-    <%= render partial: 'posts', object: @posts %>
-    <%= render partial: 'customer-service', locals: {'contact': @contact, 'policies': [{'name': 'Coast Guard Personally Procured Move (PPM) Policy', 'url': 'https://www.fincen.uscg.mil/dity.htm'}]} %>
+    <ul class="usa-accordion sidebar-accordion">
+      <li>
+        <button class="usa-accordion-button" aria-controls="customer-service">
+          <h4>Customer Service Info</h4>
+        </button>
+        <div id="customer-service" class="usa-accordion-content">
+          <%= render partial: 'customer-service', locals: {'contact': @contact, 'policies': [{'name': 'Coast Guard Personally Procured Move (PPM) Policy', 'url': 'https://www.fincen.uscg.mil/dity.htm'}]} %>
+        </div>
+      </li>
+    </ul>
+
+    <div class="usa-grid-full">
+      <%= render partial: 'posts', object: @posts %>
+
+      <div class="sidebar-section usa-width-one-third">
+        <h4>Customer Service Info</h4>
+        <%= render partial: 'customer-service', locals: {'contact': @contact, 'policies': [{'name': 'Coast Guard Personally Procured Move (PPM) Policy', 'url': 'https://www.fincen.uscg.mil/dity.htm'}]} %>
+      </div>
+    </div>
   </div>
 </div>
