@@ -46,11 +46,15 @@
   }
 }
 
-.helpful-links-section,
-.svc-spec-links-section {
-  @include margin($site-margins-mobile null);
-
+.sidebar-section {
   background-color: #f3f7fa;
+  display: none;
+  @include margin($site-margins-mobile null);
+  @include padding($site-margins-mobile);
+
+  @include media($medium-screen) {
+    display: block;
+  }
 
   h4 {
     border-bottom: 1px solid $color-cool-blue;
@@ -58,16 +62,6 @@
     margin-top: 1rem;
     padding-bottom: 0.5rem;
   }
-}
-
-.helpful-links-section {
-  @include padding($site-margins);
-}
-
-.svc-spec-links-section {
-  float: right;
-  width: 30%;
-  @include padding($site-margins-mobile);
 }
 
 .homepage-service-section {
@@ -83,6 +77,8 @@
 }
 
 .homepage-anchor-section {
+  margin-bottom: 1rem;
+
   @include media($medium-screen) {
     display: none;
   }

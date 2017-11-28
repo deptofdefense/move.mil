@@ -50,8 +50,12 @@
   }
 }
 
-.helpful-links-accordion {
-  margin-top: 1rem;
+.sidebar-accordion {
+  width: auto;
+
+  @include media($medium-screen) {
+    display: none;
+  }
 
   .usa-accordion-button {
     background-color: #f3f7fa;
@@ -62,6 +66,10 @@
     &:hover {
       background-color: $color-gray-cool-light;
       color: $color-primary-darker;
+    }
+
+    h4 {
+      font-family: $font-serif;
     }
   }
 
