@@ -1,0 +1,6 @@
+<b>Website:</b><br>
+<%- urls.each do |url| -%>
+  <%= "#{url['note']}: " if url['note'] %>
+  <%= link_to url['url'] %><br>
+<%- end -%>
+<br>

@@ -1,0 +1,6 @@
+<b>Phone:</b><br>
+<%- phone_numbers.each do |phone_number| -%>
+  <%= "#{phone_number['note']}: " if phone_number['note'] %>
+  <%= phone_number['phone_number'] %> (<%= phone_number['phone_type'] %>)<%= ' (DSN)' if phone_number['dsn'] %><br>
+<%- end -%>
+<br>

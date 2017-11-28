@@ -1,0 +1,6 @@
+<b>Email:</b><br>
+<%- email_addresses.each do |email_address| -%>
+  <%= "#{email_address['note']}: " if email_address['note'] %>
+  <%= mail_to email_address['email_address'] %><br>
+<%- end -%>
+<br>

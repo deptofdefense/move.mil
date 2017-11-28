@@ -4,32 +4,56 @@
   </div>
 
   <div class="transportation-office-body">
-    <b>Location:</b><br>
-    <%= transportation_office.street_address %><br>
-    <%- if transportation_office.extended_address? -%>
-      <%= transportation_office.extended_address %><br>
-    <%- end -%>
-    <%= transportation_office.locality %>, <%= transportation_office.region %> <%= transportation_office.postal_code %><br>
-    <%= transportation_office.country_name %><br>
+    <div class="usa-grid-full">
+      <div class="usa-width-one-third">
+        <b>Location:</b><br>
+        <%= transportation_office.street_address %><br>
+        <%- if transportation_office.extended_address? -%>
+          <%= transportation_office.extended_address %><br>
+        <%- end -%>
+        <%= transportation_office.locality %>, <%= transportation_office.region %> <%= transportation_office.postal_code %><br>
+        <%= transportation_office.country_name %><br><br>
 
-    <%- if transportation_office.phone_numbers.any? -%>
-      <br>
-      <b>Phone:</b><br>
-      <%- transportation_office.phone_numbers.each do |phone_number| -%>
-        <%= "#{phone_number['note']}: " if phone_number['note'] %>
-        <%= phone_number['phone_number'] %> (<%= phone_number['phone_type'] %>)<%= ' (DSN)' if phone_number['dsn'] %><br>
-      <%- end -%>
-    <%- end -%>
+        <%- if transportation_office.phone_numbers.any? -%>
+          <%= render partial: 'phone_numbers', object: transportation_office.phone_numbers %>
+        <%- end -%>
+      </div>
 
-    <%- if transportation_office.email_addresses.any? -%>
-      <br>
-      <b>Email:</b><br>
-      <%- transportation_office.email_addresses.each do |email_address| -%>
-        <%= "#{email_address['note']}: " if email_address['note'] %>
-        <%= mail_to email_address['email_address'] %><br>
-      <%- end -%>
-    <%- end -%>
+      <div class="usa-width-one-third">
+        <%- if transportation_office.email_addresses.any? -%>
+          <%= render partial: 'email_addresses', object: transportation_office.email_addresses %>
+        <%- end -%>
 
-    <%= render partial: 'shipping_office', object: transportation_office.shipping_office if transportation_office.shipping_office %>
+        <%- if transportation_office.urls.any? -%>
+          <%= render partial: 'urls', object: transportation_office.urls %>
+        <%- end -%>
+      </div>
+
+      <div class="usa-width-one-third">
+        <%- if transportation_office.hours? -%>
+          <b>Hours:</b><br>
+          <%= transportation_office.hours %><br><br>
+        <%- end -%>
+
+        <%- if transportation_office.note? -%>
+          <b>Notes:</b><br>
+          <%= transportation_office.note %><br><br>
+        <%- end -%>
+
+        <%- if transportation_office.services.any? -%>
+          <b>Services:</b><br>
+
+          <ul class="transportation-office-services">
+            <%- transportation_office.services.each do |service| -%>
+              <li><%= service %></li>
+            <%- end -%>
+          </ul>
+        <%- end -%>
+      </div>
+    </div>
+
+    <%- if transportation_office.shipping_office -%>
+      <%= render partial: 'shipping_office', object: transportation_office.shipping_office %>
+    <%- end -%>
   </div>
 </div>
