@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'csv'
+require 'json'
+require 'yaml'
 
 puts 'Loading tutorials...'
 tutorials = YAML::load_file(Rails.root.join('db', 'seeds', 'tutorials.yml'))
@@ -63,7 +65,7 @@ puts 'Loading transportation offices...'
 transportation_offices = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'transportation_offices.json')))
 
 transportation_offices.each do |office|
-  shipping_office_id = ShippingOffice.where(name: office['shipping_office_name']).first.id
+  shipping_office_id = ShippingOffice.where(name: office['shipping_office_name']).first.id if office['shipping_office_name']
 
   TransportationOffice.create(office.except('shipping_office_name').merge(shipping_office_id: shipping_office_id))
 end
@@ -76,7 +78,7 @@ installations.each do |installation|
 end
 
 puts 'Loading household goods weights...'
-hhg_weights = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'hhg_weights.json')))
+hhg_weights = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'household_goods_weights.json')))
 
 hhg_weights.each do |category|
   hhg_category = HouseholdGoodCategory.where(name: category['name']).first_or_create(name: category['name'], icon: category['icon'])
