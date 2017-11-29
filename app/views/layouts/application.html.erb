@@ -58,6 +58,12 @@
       </div>
     </div>
 
+    <div class="archive-banner">
+      <div class="usa-grid">
+        <p><b>Welcome to the new <%= t('site.name') %>!</b> Can’t find what you’re looking for? Legacy content can be found at <%= link_to 'archive.move.mil', 'https://archive.move.mil' %>.</p>
+      </div>
+    </div>
+
     <div class="usa-navbar">
       <%= raw('<button class="usa-menu-btn">Menu</button>') %>
 
@@ -71,7 +77,9 @@
         <% end %>
       </div>
     </div>
+
     <div class="navbar-border"></div>
+
     <%- if current_page?(root_path) %>
       <section class="usa-hero">
         <%= render 'shared/nav' %>
