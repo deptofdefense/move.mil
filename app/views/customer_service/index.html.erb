@@ -299,8 +299,16 @@
         </div>
       </div>
       <div class="usa-width-two-thirds">
+        <div class="usa-grid-full">
+          <div class="usa-width-one-fourth">
+            <h5>Army</h5>
+          </div>
+          <div class="usa-width-three-fourths">
+            Requests for retirement extensions should be submitted through your <%= link_to 'local personal property office (PPPO)', offices_path %>.<br><br>
+          </div>
+        </div>
         <%- @contacts.each do |contact| -%>
-          <% if contact.retiree_contact_info? %>
+          <% if contact.retiree_contact_info? and not contact.branch == 'Army' %>
             <div class="usa-grid-full">
               <div class="usa-width-one-fourth">
                 <h5><%= contact.branch %></h5>
