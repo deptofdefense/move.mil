@@ -240,6 +240,12 @@
                       <td><%= link_to contact.claims_email.sub(',', '<br>').html_safe, "mailto:#{contact.claims_email}" %></td>
                     </tr>
                   <% end %>
+                  <% if contact.claims_url %>
+                    <tr>
+                      <th scope="row">Online:</th>
+                      <td><%= link_to contact.claims_url, contact.claims_url, class: 'usa-external_link' %></td>
+                    </tr>
+                  <% end %>
                   <% if contact.claims_fax_dsn %>
                     <tr>
                       <th scope="row">DSN Fax:</th>
