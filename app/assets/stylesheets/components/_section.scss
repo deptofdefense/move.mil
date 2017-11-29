@@ -56,6 +56,10 @@
     display: block;
   }
 
+  .homepage-content & {
+    @include padding($site-margins);
+  }
+
   h4 {
     border-bottom: 1px solid $color-cool-blue;
     color: $color-cool-blue;
