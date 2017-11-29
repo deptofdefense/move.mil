@@ -1,6 +1,8 @@
 class BranchOfServiceContact < ApplicationRecord
   validates :branch, presence: true
 
+  belongs_to :branch_of_service
+
   def retiree_contact_phone?
     retiree_dsn || retiree_tel_comm || retiree_tel_tollfree
   end
