@@ -70,11 +70,11 @@
 
         <p>Select your branch of service to check the specific requirements:</p>
         <ul class="usa-unstyled-list service-links-list">
-          <li><%= link_to 'Army', service_specific_information_path(branch: 'army'), class: 'usa-width-one-sixth'%></li>
-          <li><%= link_to 'Marine Corps', service_specific_information_path(branch: 'marine-corps') %></li>
-          <li><%= link_to 'Navy', service_specific_information_path(branch: 'navy') %></li>
-          <li><%= link_to 'Air Force', service_specific_information_path(branch: 'air-force') %></li>
-          <li><%= link_to 'Coast Guard', service_specific_information_path(branch: 'coast-guard') %></li>
+          <li><%= link_to 'Army', service_specific_information_path(id: 'army'), class: 'usa-width-one-sixth'%></li>
+          <li><%= link_to 'Marine Corps', service_specific_information_path(id: 'marine-corps') %></li>
+          <li><%= link_to 'Navy', service_specific_information_path(id: 'navy') %></li>
+          <li><%= link_to 'Air Force', service_specific_information_path(id: 'air-force') %></li>
+          <li><%= link_to 'Coast Guard', service_specific_information_path(id: 'coast-guard') %></li>
         </ul>
       </div>
     </div>
