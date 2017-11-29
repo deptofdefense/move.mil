@@ -3,8 +3,8 @@ class BranchOfService < ApplicationRecord
 
   friendly_id :name
 
-  has_one :branch_of_service_contacts, dependent: :destroy
+  has_one :branch_of_service_contact, dependent: :destroy
   has_many :service_specific_posts, dependent: :destroy
 
-  validates :name, :display:order, presence: true
+  validates :name, :display_order, presence: true
 end

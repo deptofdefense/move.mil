@@ -1,0 +1,144 @@
+- name: Army
+  display_order: 1
+  contact:
+    claims_dsn: 536-3000
+    claims_tel_comm: (502) 626-3000
+    claims_email: usarmy.knox.hqda-otjag.mbx.cpcs@mail.mil
+  posts:
+    - title: New Process For Claims Filing
+      effective_at: 20170705
+      content: |
+        <p>WASHINGTON -- The Army has created a new office at Fort Knox, Kentucky, to process Soldiers' claims for personal property losses resulting from government service. The Center for Personnel Claims Support will be fully operational on July 5, and will process all claims of Soldiers and employees in the continental United States, Alaska, Hawaii and Puerto Rico.</p>
+        <p>The claims are known as personnel claims, and include claims for loss or damage to household goods and privately owned vehicles during permanent change of station shipment, or while stored at government expense.</p>
+        <p>Visit <a class="usa-external_link" href="http://www.JAGCNet.army.mil/Pclaims">http://www.JAGCNet.army.mil/Pclaims</a> to find more information on how to file a claim. The site also includes the trifold titled "The A,B,C's of Claims." Those who want to file a claim can also call 1-502-626-3000 or DSN 536-3000 with questions, or contact the Center for Personnel Claims Support by email at <a href="mailto:usarmy.knox.hqda-otjag.mbx.cpcs@mail.mil">usarmy.knox.hqda-otjag.mbx.cpcs@mail.mil</a>.</p>
+        <p>Read the <a class="usa-external_link" href="https://www.army.mil/article/189685/army_creates_new_office_for_personnel_claims">full article</a>.</p>
+
+- name: Marine Corps
+  display_order: 2
+  contact:
+    custsvc_org: Marine Corps Customer Service
+    custsvc_tel_comm: (703) 695-7765
+    custsvc_email: usmcpersonalproperty@usmc.mil
+    custsvc_facebook_url: https://www.facebook.com/usmchouseholdgoods
+    claims_dsn: 278-9533
+    claims_tel_comm: (703) 784-9533
+    claims_email: hgmc.claims@usmc.mil
+    claims_fax_comm: (703) 432-2591
+    retiree_dsn: 225-7765
+    retiree_tel_comm: (703) 695-7765
+    retiree_fax_dsn: 225-8160
+    retiree_fax_comm: (703) 695-8160
+    retiree_post: |
+      Commandant of the Marine Corps
+      3000 Marine Corps Pentagon
+      Rm 2E227 (LPD-2)
+      Washington, DC 20350-3000
+  posts:
+    - title: Privately Owned Vehicle (POV)
+      effective_at: 20170329
+      content: |
+        <p>Marines conducting a PCS move to, from or between OCONUS locations may be entitled to move or store their POV. Questions regarding eligibility for shipment or storage of POVs should first be forwarded to the local PPO.</p>
+        <p>When storing a POV, Marines are reminded to obtain an authorization letter from the local PPO to store their POV when shipment to an OCONUS destination is not authorized. Marines must make a drop-off appointment with the Global POV Contractor, International Auto Logistics, at <a class="usa-external_link" href="pcsmypov.com">PCSMyPOV.com</a>.</p>
+        <p>Prior to turn in, customers are responsible for ensuring their vehicle does not have an unresolved Recall Notice. Vehicle Owners can verify if their vehicles have a recall notice at the following link: <a class="usa-external_link" href="https://vinrcl.safercar.gov/vin/">https://vinrcl.safercar.gov/vin/</a>. Service members can also contact their servicing Vehicle Processing Center to determine if their particular vehicle will be accepted for shipment or storage. If there is a recall on a vehicle, owners must provide documented proof of repair by a certified mechanic dealership (authorized by the manufacturer).</p>
+    - title: Move Date Selection
+      effective_at: 20170329
+      content: |
+        <p>All Marines must provide Primary and Alternate move dates. There must be at least three (3) Government Business Days (GBD) between these dates.</p>
+    - title: Avoid Popular Moving Dates When Possible
+      effective_at: 20170329
+      content: |
+        <p>The most popular dates for moves during the peak moving season are just prior to Memorial Day through two weeks after the Fourth of July. Performing HHG moves during this window could present challenges with scheduling and the quality  of TSP/Moving Company performance. It is recommended that Marines complete their self-counseling and submit their Primary and Alternate move dates at least 90 days in advance of their Primary move date. Pickup dates should be planned to allow for flexibility when selecting dates to vacate housing, commence travel, and perform other PCS-related events.</p>
+        <p>Note that the last two days and the first two days of every month are also particularly difficult dates for pickup since most leases and rental agreements start or end during that time. Final pack and pick-up dates are not confirmed until the conclusion of the pre-move survey (either in person or telephonically) conducted by a representative of the TSP/Moving Company. If personal circumstances require a change to the agreed upon pickup date, there is a substantial risk that new requested dates may not be available.</p>
+
+- name: Navy
+  display_order: 3
+  contact:
+    custsvc_org: Navy Customer Service
+    custsvc_tel_comm: +1 (855) 444-6683
+    custsvc_email: householdgoods@navy.mil
+    custsvc_facebook_url: https://www.facebook.com/NAVYHHG
+    claims_dsn: 564-3310
+    claims_tel_comm: (757) 440-6315
+    claims_tel_tollfree: +1 (888) 897-8217
+    claims_email: NorfolkClaims@navy.mil
+    claims_url: http://www.jag.navy.mil/organization/code_15.htm
+    retiree_email: nxag_n130c1@navy.mil,david.maly@navy.mil
+  posts:
+    - title: Visit NAVSUP for everything you need to know about the moving process.
+      content: |
+        <p><a class="usa-external_link" href="https://www.navsup.navy.mil/public/navsup/household/">https://www.navsup.navy.mil/public/navsup/household/</a></p>
+
+- name: Air Force
+  display_order: 4
+  contact:
+    custsvc_org: Air Force Customer Service
+    custsvc_dsn: 487-3357
+    custsvc_tel_comm: (210) 652-3357
+    custsvc_email: ppahq.ppec.customerservice@us.af.mil
+    custsvc_facebook_url: https://www.facebook.com/PPAHQ1
+    claims_dsn: 986-8044
+    claims_tel_comm: (937) 656-8044
+    claims_tel_tollfree: +1 (877) 754-1212
+    claims_email: fcsc.ja@us.af.mil
+    claims_fax_dsn: 986-8307
+    claims_fax_comm: (937) 656-8307
+    retiree_dsn: 487-3312
+    retiree_tel_comm: (210) 652-3312
+    retiree_email: hqppa.ecaf-ext@us.af.mil
+    retiree_fax_dsn: 954-4263
+    retiree_fax_comm: (210) 321-4263
+    retiree_post: |
+      PPA HQ/ECAF-B
+      2261 Hughes Ave, Ste 159
+      Lackland AFB, TX 78236-9857
+  posts:
+    - title: "Household Goods Inspection Rate Increases:"
+      effective_at: 20171102
+      content: |
+        <p>Effectively immediately, the Air Force inspection standard for HHG, unaccompanied baggage, non-temporary storage, and local move shipments into, out of, or within a Transportation Officer’s Area of Responsibility is increased from 50% to 80%.</p>
+    - title: "Air Force PPPOs Should Offer 1-1 Counselling to All Service Members:"
+      effective_at: 20171102
+      content: |
+        <p>Personal property offices will provide one-on-one counseling to all members as the norm. Group counseling and self-counseling through the Defense Personal Property System may be used where mission or unique circumstances dictate.</p>
+
+- name: Coast Guard
+  display_order: 5
+  contact:
+    custsvc_org: "Coast Guard: Finance Customer Service Team"
+    custsvc_tel_tollfree: (800) 462-2176
+    custsvc_hours: 8:00am - 5:00pm est
+    custsvc_url: http://www.fincen.uscg.mil/hhg.htm
+    claims_tel_comm: (757) 523-6940
+    claims_email:	fin-smb-hhg@uscg.mil
+    retiree_email: Otmane.Karim@uscg.mil
+    retiree_post: |
+      Commandant (CG-1332)
+      Attn: Travel & Transportation Division
+      United States Coast Guard
+      2703 Martin Luther King Jr Ave SE
+      Stop 7907
+      Washington, DC 20593-7907
+  posts:
+    - title: PPM (“Do-it-yourself”) Move Reimbursement
+      effective_at: 20170705
+      content: |
+        <p>Please direct any questions you may have regarding your PPM to the Finance Center Customer Service Team at (757) 523-6940. Our hours of operation are 8:00 a.m. to 5:00 p.m. EST. For web inquiries, which are highly recommended, please go to our Payment Status Inquiry web page at <a class="usa-external_link" href="https://www.fincen.uscg.mil/secure/payment.htm">https://www.fincen.uscg.mil/secure/payment.htm</a>. More information regarding PPM can be located at <a class="usa-external_link" href="http://www.fincen.uscg.mil/dity.htm">http://www.fincen.uscg.mil/dity.htm</a></p>
+        <p>
+          Please submit PPM claim to the following mailing address:<br>
+          USCG Finance Center<br>
+          PO Box 4102<br>
+          Chesapeake, VA 23327-4102<br>
+          <a class="usa-external_link" href="http://www.fincen.uscg.mil/dity.htm">http://www.fincen.uscg.mil/dity.htm</a>
+        </p>
+    - title: Retirement HHG Request for Extension
+      effective_at: 20170705
+      content: |
+        <p>Retired U.S. Coast Guard members request for an extension of the time limitation for shipment of household goods (HHG) must be approved by CG-1332. A request for an extension “must” be received no earlier than 90 days prior to the expiration date of the one year time limit. Members must provide a signed copy of their orders, supporting documents, and their mailing address. The information can be emailed to YNC Otmane Karim Otmane.Karim@uscg.mil, or mailed to:</p>
+        <p>
+          Commandant (CG-1332)<br>
+          Attn: Travel &amp; Transportation Division<br>
+          United States Coast Guard<br>
+          2703 Martin Luther King Jr Avenue S.E., Stop 7907<br>
+          Washington, D. C. 20593-7907
+        </p>
+        <a class="usa-external_link" href="https://www.fincen.uscg.mil/pdf/FINCENwebsiteHOS_NTSExtensionDocument.pdf">View Documentation</a>

@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171129161530) do
+ActiveRecord::Schema.define(version: 20171129204703) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "branch_of_service_contacts", force: :cascade do |t|
-    t.text "branch"
     t.text "custsvc_org"
     t.text "custsvc_dsn"
     t.text "custsvc_tel_comm"
@@ -44,6 +43,16 @@ ActiveRecord::Schema.define(version: 20171129161530) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "claims_url"
+    t.bigint "branch_of_service_id"
+    t.index ["branch_of_service_id"], name: "index_branch_of_service_contacts_on_branch_of_service_id"
+  end
+
+  create_table "branch_of_services", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "display_order", null: false
+    t.string "slug", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "entitlements", force: :cascade do |t|
@@ -129,10 +138,11 @@ ActiveRecord::Schema.define(version: 20171129161530) do
   create_table "service_specific_posts", force: :cascade do |t|
     t.text "title"
     t.date "effective_at"
-    t.text "branch"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "branch_of_service_id"
+    t.index ["branch_of_service_id"], name: "index_service_specific_posts_on_branch_of_service_id"
   end
 
   create_table "tutorial_steps", force: :cascade do |t|
@@ -157,6 +167,8 @@ ActiveRecord::Schema.define(version: 20171129161530) do
     t.float "longitude", null: false
   end
 
+  add_foreign_key "branch_of_service_contacts", "branch_of_services"
   add_foreign_key "household_goods", "household_good_categories"
+  add_foreign_key "service_specific_posts", "branch_of_services"
   add_foreign_key "tutorial_steps", "tutorials"
 end

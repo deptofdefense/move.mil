@@ -30,18 +30,17 @@ faqs.each do |faq|
   Faq.where(question: faq['question']).first_or_create(faq)
 end
 
-puts 'Loading service-specific posts...'
-service_specific_posts = YAML::load_file(Rails.root.join('db', 'seeds', 'service_specific_posts.yml'))
+puts 'Loading branches of service...'
+branches_of_service = YAML::load_file(Rails.root.join('db', 'seeds', 'branches_of_service.yml'))
 
-service_specific_posts.each do |post|
-  ServiceSpecificPost.where(title: post['title']).first_or_create(post)
-end
+branches_of_service.each do |branch_of_service|
+  branch = BranchOfService.where(name: branch_of_service['name']).first_or_create(name: branch_of_service['name'], display_order: branch_of_service['display_order'])
 
-puts 'Loading branch of service contacts...'
-branch_of_service_contacts = YAML::load_file(Rails.root.join('db', 'seeds', 'branch_of_service_contacts.yml'))
+  branch_of_service['posts'].each do |post|
+    branch.service_specific_posts.where(title: post['title']).first_or_create(post)
+  end
 
-branch_of_service_contacts.each do |contact|
-  BranchOfServiceContact.where(branch: contact['branch']).first_or_create(contact)
+  branch.branch_of_service_contact = BranchOfServiceContact.create(branch_of_service['contact'])
 end
 
 puts 'Loading entitlements...'
