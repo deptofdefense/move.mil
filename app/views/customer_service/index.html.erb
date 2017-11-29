@@ -100,8 +100,9 @@
         </div>
       </div>
       <div class="usa-width-two-thirds">
-        <%- @contacts.each do |contact| -%>
-          <% if contact.custsvc_org %>
+        <%- @branches.each do |branch| -%>
+          <% contact = branch.branch_of_service_contact %>
+          <% if contact.try(:custsvc_org) %>
             <h5><%= contact.custsvc_org %></h5>
             <table>
               <tbody>
@@ -208,77 +209,80 @@
         <p>
           Your service’s claims office can help you negotiate a higher claims price, or provide partial compensation after the 9-month filing window with your transporter expires.
         </p>
-        <%- @contacts.each do |contact| -%>
-          <div class="usa-grid-full">
-            <div class="usa-width-one-fourth">
-              <h5><%= contact.branch %></h5>
+        <%- @branches.each do |branch| -%>
+          <% contact = branch.branch_of_service_contact %>
+          <% if contact %>
+            <div class="usa-grid-full">
+              <div class="usa-width-one-fourth">
+                <h5><%= branch.name %></h5>
+              </div>
+              <div class="usa-width-three-fourths">
+                <table>
+                  <tbody>
+                    <% if contact.claims_dsn %>
+                      <tr>
+                        <th scope="row">DSN:</th>
+                        <td><%= contact.claims_dsn %></td>
+                      </tr>
+                    <% end %>
+                    <% if contact.claims_tel_comm %>
+                      <tr>
+                        <th scope="row">Comm:</th>
+                        <td><%= link_to contact.claims_tel_comm, "tel:#{contact.claims_tel_comm}" %></td>
+                      </tr>
+                    <% end %>
+                    <% if contact.claims_tel_tollfree %>
+                      <tr>
+                        <th scope="row">Toll-Free:</th>
+                        <td><%= link_to contact.claims_tel_tollfree, "tel:#{contact.claims_tel_tollfree}" %></td>
+                      </tr>
+                    <% end %>
+                    <% if contact.claims_email %>
+                      <tr>
+                        <th scope="row">Email:</th>
+                        <td><%= link_to contact.claims_email.sub(',', '<br>').html_safe, "mailto:#{contact.claims_email}" %></td>
+                      </tr>
+                    <% end %>
+                    <% if contact.claims_url %>
+                      <tr>
+                        <th scope="row">Online:</th>
+                        <td><%= link_to contact.claims_url, contact.claims_url, class: 'usa-external_link' %></td>
+                      </tr>
+                    <% end %>
+                    <% if contact.claims_fax_dsn %>
+                      <tr>
+                        <th scope="row">DSN Fax:</th>
+                        <td><%= contact.claims_fax_dsn %></td>
+                      </tr>
+                    <% end %>
+                    <% if contact.claims_fax_comm %>
+                      <tr>
+                        <th scope="row">Comm Fax:</th>
+                        <td><%= contact.claims_fax_comm %></td>
+                      </tr>
+                    <% end %>
+                    <% if contact.claims_fax_tollfree %>
+                      <tr>
+                        <th scope="row">Toll-Free Fax:</th>
+                        <td><%= contact.claims_fax_tollfree %></td>
+                      </tr>
+                    <% end %>
+                    <% if contact.claims_post %>
+                      <tr>
+                        <th scope="row">Address:</th>
+                        <td><%= simple_format(contact.claims_post) %></td>
+                      </tr>
+                    <% else %>
+                      <tr>
+                        <td></td>
+                        <td><p></p></td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div class="usa-width-three-fourths">
-              <table>
-                <tbody>
-                  <% if contact.claims_dsn %>
-                    <tr>
-                      <th scope="row">DSN:</th>
-                      <td><%= contact.claims_dsn %></td>
-                    </tr>
-                  <% end %>
-                  <% if contact.claims_tel_comm %>
-                    <tr>
-                      <th scope="row">Comm:</th>
-                      <td><%= link_to contact.claims_tel_comm, "tel:#{contact.claims_tel_comm}" %></td>
-                    </tr>
-                  <% end %>
-                  <% if contact.claims_tel_tollfree %>
-                    <tr>
-                      <th scope="row">Toll-Free:</th>
-                      <td><%= link_to contact.claims_tel_tollfree, "tel:#{contact.claims_tel_tollfree}" %></td>
-                    </tr>
-                  <% end %>
-                  <% if contact.claims_email %>
-                    <tr>
-                      <th scope="row">Email:</th>
-                      <td><%= link_to contact.claims_email.sub(',', '<br>').html_safe, "mailto:#{contact.claims_email}" %></td>
-                    </tr>
-                  <% end %>
-                  <% if contact.claims_url %>
-                    <tr>
-                      <th scope="row">Online:</th>
-                      <td><%= link_to contact.claims_url, contact.claims_url, class: 'usa-external_link' %></td>
-                    </tr>
-                  <% end %>
-                  <% if contact.claims_fax_dsn %>
-                    <tr>
-                      <th scope="row">DSN Fax:</th>
-                      <td><%= contact.claims_fax_dsn %></td>
-                    </tr>
-                  <% end %>
-                  <% if contact.claims_fax_comm %>
-                    <tr>
-                      <th scope="row">Comm Fax:</th>
-                      <td><%= contact.claims_fax_comm %></td>
-                    </tr>
-                  <% end %>
-                  <% if contact.claims_fax_tollfree %>
-                    <tr>
-                      <th scope="row">Toll-Free Fax:</th>
-                      <td><%= contact.claims_fax_tollfree %></td>
-                    </tr>
-                  <% end %>
-                  <% if contact.claims_post %>
-                    <tr>
-                      <th scope="row">Address:</th>
-                      <td><%= simple_format(contact.claims_post) %></td>
-                    </tr>
-                  <% else %>
-                    <tr>
-                      <td></td>
-                      <td><p></p></td>
-                    </tr>
-                  <% end %>
-                </tbody>
-              </table>
-            </div>
-          </div>
+          <% end %>
         <%- end -%>
 
         Contact for:
@@ -307,11 +311,12 @@
             Requests for retirement extensions should be submitted through your <%= link_to 'local personal property office (PPPO)', offices_path %>.<br><br>
           </div>
         </div>
-        <%- @contacts.each do |contact| -%>
-          <% if contact.retiree_contact_info? and not contact.branch == 'Army' %>
+        <%- @branches.each do |branch| -%>
+          <% contact = branch.branch_of_service_contact %>
+          <% if contact.try(:retiree_contact_info?) and not branch.name == 'Army' %>
             <div class="usa-grid-full">
               <div class="usa-width-one-fourth">
-                <h5><%= contact.branch %></h5>
+                <h5><%= branch.name %></h5>
               </div>
               <div class="usa-width-three-fourths">
                 <table>

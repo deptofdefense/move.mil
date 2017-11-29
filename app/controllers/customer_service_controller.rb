@@ -1,11 +1,11 @@
 class CustomerServiceController < ApplicationController
   def index
-    contacts
+    branches
   end
 
   private
 
-  def contacts
-    @contacts ||= BranchOfServiceContact.all
+  def branches
+    @branches ||= BranchOfService.includes(:branch_of_service_contact).all
   end
 end

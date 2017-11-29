@@ -7,4 +7,6 @@ class BranchOfService < ApplicationRecord
   has_many :service_specific_posts, dependent: :destroy
 
   validates :name, :display_order, presence: true
+
+  default_scope { order(display_order: :asc) }
 end
