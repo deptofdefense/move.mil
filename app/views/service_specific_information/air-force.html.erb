@@ -5,7 +5,7 @@
 <div class="usa-section main-section">
   <h1><%= @page_title %></h1>
 
-  <%= render partial: 'sidenav', locals: {branch: 'air-force'} %>
+  <%= render partial: 'sidenav', locals: {'branches': @branches, selected: 'air-force'} %>
 
   <div class="sidenav-body svc-spec-body">
     <div class="svc-spec-banner">
@@ -19,17 +19,17 @@
           <h4>Customer Service Info</h4>
         </button>
         <div id="customer-service" class="usa-accordion-content">
-          <%= render partial: 'customer-service', locals: {'contact': @contact, 'policies': [{'name': 'Air Force Household Goods Policy', 'url': 'http://static.e-publishing.af.mil/production/1/af_a4_7/publication/afi24-501/afi24-501.pdf'}]} %>
+          <%= render partial: 'customer-service', locals: {'contact': @branch.branch_of_service_contact, 'policies': [{'name': 'Air Force Household Goods Policy', 'url': 'http://static.e-publishing.af.mil/production/1/af_a4_7/publication/afi24-501/afi24-501.pdf'}]} %>
         </div>
       </li>
     </ul>
 
     <div class="usa-grid-full">
-      <%= render partial: 'posts', object: @posts %>
+      <%= render partial: 'posts', object: @branch.service_specific_posts %>
 
       <div class="sidebar-section usa-width-one-third">
         <h4>Customer Service Info</h4>
-        <%= render partial: 'customer-service', locals: {'contact': @contact, 'policies': [{'name': 'Air Force Household Goods Policy', 'url': 'http://static.e-publishing.af.mil/production/1/af_a4_7/publication/afi24-501/afi24-501.pdf'}]} %>
+        <%= render partial: 'customer-service', locals: {'contact': @branch.branch_of_service_contact, 'policies': [{'name': 'Air Force Household Goods Policy', 'url': 'http://static.e-publishing.af.mil/production/1/af_a4_7/publication/afi24-501/afi24-501.pdf'}]} %>
       </div>
     </div>
   </div>

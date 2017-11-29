@@ -5,7 +5,7 @@
 <div class="usa-section main-section">
   <h1><%= @page_title %></h1>
 
-  <%= render partial: 'sidenav', locals: {branch: 'coast-guard'} %>
+  <%= render partial: 'sidenav', locals: {'branches': @branches, selected: 'coast-guard'} %>
 
   <div class="sidenav-body svc-spec-body">
     <ul class="usa-accordion sidebar-accordion">
@@ -14,17 +14,17 @@
           <h4>Customer Service Info</h4>
         </button>
         <div id="customer-service" class="usa-accordion-content">
-          <%= render partial: 'customer-service', locals: {'contact': @contact, 'policies': [{'name': 'Coast Guard Personally Procured Move (PPM) Policy', 'url': 'https://www.fincen.uscg.mil/dity.htm'}]} %>
+          <%= render partial: 'customer-service', locals: {'contact': @branch.branch_of_service_contact, 'policies': [{'name': 'Coast Guard Personally Procured Move (PPM) Policy', 'url': 'https://www.fincen.uscg.mil/dity.htm'}]} %>
         </div>
       </li>
     </ul>
 
     <div class="usa-grid-full">
-      <%= render partial: 'posts', object: @posts %>
+      <%= render partial: 'posts', object: @branch.service_specific_posts %>
 
       <div class="sidebar-section usa-width-one-third">
         <h4>Customer Service Info</h4>
-        <%= render partial: 'customer-service', locals: {'contact': @contact, 'policies': [{'name': 'Coast Guard Personally Procured Move (PPM) Policy', 'url': 'https://www.fincen.uscg.mil/dity.htm'}]} %>
+        <%= render partial: 'customer-service', locals: {'contact': @branch.branch_of_service_contact, 'policies': [{'name': 'Coast Guard Personally Procured Move (PPM) Policy', 'url': 'https://www.fincen.uscg.mil/dity.htm'}]} %>
       </div>
     </div>
   </div>

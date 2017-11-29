@@ -1,27 +1,8 @@
 class ServiceSpecificInformationController < ApplicationController
-  def index
-    case params[:branch]
-    when 'air-force'
-      @posts = ServiceSpecificPost.where(branch: 'air_force')
-      @contact = BranchOfServiceContact.find_by(branch: 'Air Force')
-      render 'air-force'
-    when 'marine-corps'
-      @posts = ServiceSpecificPost.where(branch: 'marine_corps')
-      @contact = BranchOfServiceContact.find_by(branch: 'Marine Corps')
-      render 'marine-corps'
-    when 'navy'
-      @posts = ServiceSpecificPost.where(branch: 'navy')
-      @contact = BranchOfServiceContact.find_by(branch: 'Navy')
-      render 'navy'
-    when 'coast-guard'
-      @posts = ServiceSpecificPost.where(branch: 'coast_guard')
-      @contact = BranchOfServiceContact.find_by(branch: 'Coast Guard')
-      render 'coast-guard'
-    else
-      # Fall back to army
-      @posts = ServiceSpecificPost.where(branch: 'army')
-      @contact = BranchOfServiceContact.find_by(branch: 'Army')
-      render 'army'
-    end
+  def show
+    branch_id = params[:id] || 'army'
+    @branch = BranchOfService.includes(:service_specific_posts, :branch_of_service_contact).find(branch_id)
+    @branches = BranchOfService.all
+    render branch_id
   end
 end

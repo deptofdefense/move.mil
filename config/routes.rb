@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   post '/resources/locator-maps', to: 'offices#index'
   get '/resources/weight-estimator', to: 'weight_estimator#index', as: 'weight_estimator'
-  get '/service-specific-information(/:branch)', to: 'service_specific_information#index', as: 'service_specific_information'
+  get '/service-specific-information(/:id)', to: 'service_specific_information#show', as: 'service_specific_information'
 
   get '/404', to: 'errors#not_found'
 

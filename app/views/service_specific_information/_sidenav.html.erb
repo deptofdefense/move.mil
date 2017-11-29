@@ -3,10 +3,8 @@
     Jump to:
   </div>
   <ul class="usa-sidenav-list">
-    <li><%= link_to 'Army', service_specific_information_path(branch: 'army'), class: branch == 'army' ? 'usa-current' : nil %></li>
-    <li><%= link_to 'Marine Corps', service_specific_information_path(branch: 'marine-corps'), class: branch == 'marine-corps' ? 'usa-current' : nil %></li>
-    <li><%= link_to 'Navy', service_specific_information_path(branch: 'navy'), class: branch == 'navy' ? 'usa-current' : nil %></li>
-    <li><%= link_to 'Air Force', service_specific_information_path(branch: 'air-force'), class: branch == 'air-force' ? 'usa-current' : nil %></li>
-    <li><%= link_to 'Coast Guard', service_specific_information_path(branch: 'coast-guard'), class: branch == 'coast-guard' ? 'usa-current' : nil %></li>
+    <%- branches.each do |branch| -%>
+      <li><%= link_to branch.name, service_specific_information_path(id: branch.slug), class: selected == branch.slug ? 'usa-current' : nil %></li>
+    <%- end -%>
   </ul>
 </aside>
