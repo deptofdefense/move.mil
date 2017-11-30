@@ -29,13 +29,13 @@
 
       <p>In general, your moving process will start with the job/travel orders you receive from your service. In your orders, information describing your rank, the duration of your job/training, and your assigned location will determine if your entire dependent family can come, what you are allowed to bring, and how those items will arrive to your new location. If you have any questions, your <%= link_to 'local personal property office', offices_path %> is the place to go for help deciphering your orders as they pertain to moving.</p>
       <p><b>Permanent Duty Station (PCS)</b> is when you are assigned to a location for 20+ weeks, regardless of whether your assignment pertains to training or a new job. In these circumstances, you should be allowed a full household move should you choose to take it.</p>
-      <p><b>Temporary Duty Yonder (TDY)</b> is when you are temporarily assigned to a new location, for an extended period of time (over 31 days), but generally less than 20 weeks. For <%= abbr_tag('tdy') %>, it is common that only a small subset of your household belongings will be able to travel with you to your new location.  What to expect for a <%= abbr_tag('tdy') %> move?</p>
+      <p><b>Temporary Duty (TDY)</b> is when you are temporarily assigned to a new location, for an extended period of time (over 31 days), but generally less than 20 weeks. For <%= abbr_tag('tdy') %>, it is common that only a small subset of your household belongings will be able to travel with you to your new location.</p>
     </div>
 
     <div class="what-to-expect-section">
       <h4 id="destination">Destination Matters</h4>
 
-      <p>When you are moving for a <b>Permanent Change of Station (PCS)</b> or a <b>Temporary Duty Yonder (TDY)</b> with the military, the way your household goods get transported from “Point A” to “Point B” largely depends whether your entire move will happen within the 48 contiguous US states or internationally (includes Alaska &amp; Hawaii).</p>
+      <p>When you are moving for a <b>Permanent Change of Station (PCS)</b> or a <b>Temporary Duty (TDY)</b> with the military, the way your household goods get transported from “Point A” to “Point B” largely depends whether your entire move will happen within the 48 contiguous US states or internationally (includes Alaska &amp; Hawaii).</p>
 
       <div class="usa-media_block location-section">
         <%= image_tag 'conus.svg', alt: 'Continental U S', class: 'usa-media_block-img' %>
@@ -59,7 +59,7 @@
     <div class="what-to-expect-section">
       <h4 id="move-types">Choose How to Ship Your Household Goods (Move Types)</h4>
 
-      <p>Once you have figured out the type of move (<%= abbr_tag('pcs') %> or <%= abbr_tag('tdy') %>) and your move location (<%= abbr_tag('conus') %> or <%= abbr_tag('oconus') %>), you will have some choices to make regarding how your belongings are shipped to your new destination. Remember, you can split up your <%= link_to 'total allowable weight', page_path('entitlements') %> into multiple shipments. For example, most service members doing a <%= abbr_tag('pcs') %> <%= abbr_tag('conus') %> move will have both a <%= abbr_tag('ppm') %> (“do it yourself”) shipment of their prized, valuable possessions and an <%= abbr_tag('hhg') %> (“Household Goods") shipment using a government-furnished moving company for the bulk of their belongings.</p>
+      <p>Once you have figured out the type of move (<%= abbr_tag('pcs') %> or <%= abbr_tag('tdy') %>) and your move location (<%= abbr_tag('conus') %> or <%= abbr_tag('oconus') %>), you will have some choices to make regarding how your belongings are shipped to your new destination. Remember, you can split up your <%= link_to 'total allowable weight', page_path('entitlements') %> into multiple shipments. For example, most service members doing a <%= abbr_tag('pcs') %> <%= abbr_tag('conus') %> move will have both a PPM (Personally-Procured Move or “do it yourself”) shipment of their prized, valuable possessions and an <%= abbr_tag('hhg') %> (“Household Goods") shipment using a government-furnished moving company for the bulk of their belongings.</p>
       <p>If you have any questions, your <%= link_to 'local personal property office', offices_path %> is the place to go for help figuring out how to break up your weight into various shipments.</p>
 
       <h4>Move Types</h4>
@@ -96,7 +96,7 @@
           <button class="usa-accordion-button moving-guide-accordion-button" aria-controls="pov-guide">
             <div>
               <%= image_tag 'pov.svg', alt: '', role: 'presentation' %>
-              <span>Privately-Owned Vehicle (POV) Shipment</span>
+              <span>Privately-Owned Vehicle (POV) Shipment/Storage</span>
             </div>
           </button>
           <div class="usa-accordion-content" id="pov-guide"><%= render 'pages/moving-guide/pov-guide' %></div>
@@ -127,7 +127,7 @@
             <td><%= render 'pages/moving-guide/ug-guide' %></td>
           </tr>
           <tr>
-            <th scope="row"><%= image_tag 'pov.svg', alt: '', role: 'presentation' %>Privately-Owned Vehicle (POV) Shipment</th>
+            <th scope="row"><%= image_tag 'pov.svg', alt: '', role: 'presentation' %>Privately-Owned Vehicle (POV) Shipment/Storage</th>
             <td><%= render 'pages/moving-guide/pov-guide' %></td>
           </tr>
           <tr>

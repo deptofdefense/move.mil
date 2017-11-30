@@ -50,7 +50,7 @@ en:
     pov: Privately-Owned Vehicle
     sit: Storage in Transit
     src: System Response Center
-    tdy: Temporary Duty Yonder
+    tdy: Temporary Duty
   site:
     name: Move.mil
     tagline: Official %{abbr} Moving Portal
