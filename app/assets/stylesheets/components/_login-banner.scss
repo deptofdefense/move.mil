@@ -9,17 +9,17 @@
   }
 
   .homepage-login-banner & {
+    background-color: $color-green-light;
+    color: $color-white;
     display: block;
 
-    @include media($nav-width) {
-      background-color: $color-primary;
+    a {
       color: $color-white;
+    }
+
+    @include media($nav-width) {
       font-size: $h3-font-size;
       padding: 2rem 0;
-
-      a {
-        color: $color-white;
-      }
     }
   }
 }
