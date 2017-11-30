@@ -4,40 +4,10 @@
 
 <div class="usa-section main-section">
   <h1><%= @page_title %></h1>
-
-  <p>Below you will find basic information and instructions for <%= abbr_tag('dps') %> and Move.mil. If you get stuck or have any questions, you can visit your <%= link_to 'local transportation office', offices_path %> or call the 24-hour <%= abbr_tag('src') %> Help Desk at <%= link_to '1 (800) 462-2176', 'tel:+18004622176' %>.</p>
-
-  <ul>
-    <%- @tutorials.each do |tutorial| -%>
-      <li><%= link_to raw(tutorial.title), "#tutorial-#{tutorial.id}" %></li>
-    <%- end -%>
-  </ul>
-
-  <h2>How do I…</h2>
-
-  <ul class="usa-accordion-bordered">
-    <%- @tutorials.each do |tutorial| -%>
-      <li id="tutorial-<%= tutorial.id %>">
-        <button aria-controls="<%= tutorial.id %>" class="usa-accordion-button"><%= raw tutorial.title %></button>
-        <div class="usa-accordion-content" id="<%= tutorial.id %>">
-          <div class="carousel-item-single-page">
-            <%= link_to 'View All in Single Page', tutorial_path(tutorial) %>
-          </div>
-
-          <div class="carousel owl-carousel">
-            <%- tutorial.tutorial_steps.each do |step| -%>
-              <div class="carousel-item">
-                <figure class="carousel-item-content">
-                  <%= image_tag step.image_path, alt: '' if step.image_path? %>
-                  <figcaption>
-                    <%= raw step.content %>
-                  </figcaption>
-                </figure>
-              </div>
-            <%- end -%>
-          </div>
-        </div>
-      </li>
-    <%- end -%>
-  </ul>
+  <p>
+    Tutorials are under construction, coming to you soon! You’ll be able to use them for step-by-step instructions, guiding you through the Defense Personal Property System.
+  </p>
+  <p>
+    If you are currently planning a move and need help today, visit <%= link_to 'your local transportation office', offices_path %> or call the 24-hour Help Desk at <%= link_to '1 (800) 462-2176', 'tel:+18004622176' %>.
+  </p>
 </div>
