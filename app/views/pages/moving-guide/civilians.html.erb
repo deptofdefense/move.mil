@@ -1,9 +1,9 @@
-<%- @page_title = 'What to expect… Civilians' -%>
+<%- @page_title = "#{abbr_tag('dod')} Civilian Employees" -%>
 
 <%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: []} %>
 
 <div class="usa-section main-section">
-  <h1><%= @page_title %></h1>
+  <h1><%= raw(@page_title) %></h1>
 
   <%# TODO Add page content %>
 

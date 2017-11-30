@@ -1,9 +1,9 @@
-<%- @page_title = 'What to Expect with a TDY Move' -%>
+<%- @page_title = "#{abbr_tag('tdy')} Moves" -%>
 
 <%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: []} %>
 
 <div class="usa-section main-section">
-  <h1>What to Expect with a <%= abbr_tag('tdy') %> Move</h1>
+  <h1><%= raw(@page_title) %></h1>
 
   <aside class="sidenav">
     <div class="sidenav-jump-to">
