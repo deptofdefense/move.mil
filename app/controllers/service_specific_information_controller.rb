@@ -1,4 +1,3 @@
 class ServiceSpecificInformationController < ApplicationController
-  def index
-  end
+  def index; end
 end
