@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171129204703) do
+ActiveRecord::Schema.define(version: 20171130143839) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 20171129204703) do
     t.datetime "updated_at", null: false
     t.text "claims_url"
     t.bigint "branch_of_service_id"
+    t.text "ppm_website"
+    t.text "ppm_tel_comm"
     t.index ["branch_of_service_id"], name: "index_branch_of_service_contacts_on_branch_of_service_id"
   end
 

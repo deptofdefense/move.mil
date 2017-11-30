@@ -54,8 +54,9 @@
   display_order: 3
   contact:
     custsvc_org: Navy Customer Service
-    custsvc_tel_comm: +1 (855) 444-6683
+    custsvc_tel_comm: 1-800-HHG-MOVE (1-855-444-6683)
     custsvc_email: householdgoods@navy.mil
+    custsvc_url: https://www.navysup.navy.mil/household
     custsvc_facebook_url: https://www.facebook.com/NAVYHHG
     claims_dsn: 564-3310
     claims_tel_comm: (757) 440-6315
@@ -63,6 +64,8 @@
     claims_email: NorfolkClaims@navy.mil
     claims_url: http://www.jag.navy.mil/organization/code_15.htm
     retiree_email: nxag_n130c1@navy.mil,david.maly@navy.mil
+    ppm_tel_comm: +1 (800) 742-4467
+    ppm_website: https://applications.navsup.navy.mil/pptcs
   posts:
     - title: Need Help or More Information?
       content: |

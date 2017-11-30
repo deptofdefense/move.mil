@@ -37,37 +37,37 @@
     <section>
       <table class="svc-spec-links">
         <tbody>
-          <%- if contact.claims_dsn? -%>
+          <%- if contact.claims_dsn -%>
             <tr>
               <th scope="row">DSN:</th>
               <td><%= contact.claims_dsn %></td>
             </tr>
           <%- end -%>
-          <%- if contact.claims_tel_comm? -%>
+          <%- if contact.claims_tel_comm -%>
             <tr>
               <th scope="row">Comm:</ht>
               <td><%= contact.claims_tel_comm %></td>
             </tr>
           <%- end -%>
-          <%- if contact.claims_tel_tollfree? -%>
+          <%- if contact.claims_tel_tollfree -%>
             <tr>
               <th scope="row">Toll Free:</th>
               <td><%= contact.claims_tel_tollfree %></td>
             </tr>
           <%- end -%>
-          <%- if contact.claims_email? -%>
+          <%- if contact.claims_email -%>
             <tr>
               <th scope="row">Email:</th>
               <td><a href="mailto:<%= contact.claims_email %>"><%= contact.claims_email %></a></td>
             </tr>
           <%- end -%>
-          <%- if contact.claims_fax_dsn? -%>
+          <%- if contact.claims_fax_dsn -%>
             <tr>
               <th scope="row">DSN-Fax:</th>
               <td><%= contact.claims_fax_dsn %></td>
             </tr>
           <%- end -%>
-          <%- if contact.claims_fax_comm? -%>
+          <%- if contact.claims_fax_comm -%>
             <tr>
               <th scope="row">Comm-Fax:</th>
               <td><%= contact.claims_fax_comm %></td>
@@ -84,31 +84,31 @@
     <section>
       <table>
         <tbody>
-          <%- if contact.retiree_fax_dsn? -%>
+          <%- if contact.retiree_fax_dsn -%>
             <tr>
               <th scope="row">DSN:</th>
               <td><%= contact.retiree_fax_dsn %></td>
             </tr>
           <%- end -%>
-          <%- if contact.retiree_tel_comm? -%>
+          <%- if contact.retiree_tel_comm -%>
             <tr>
               <th scope="row">Comm:</th>
               <td><%= contact.retiree_tel_comm %></td>
             </tr>
           <%- end -%>
-          <%- if contact.retiree_email? -%>
+          <%- if contact.retiree_email -%>
             <tr>
               <th scope="row">Email:</th>
               <td><a href="mailto:<%= contact.retiree_email %>"><%= contact.retiree_email %></a></td>
             </tr>
           <%- end -%>
-          <%- if contact.retiree_fax_dsn? -%>
+          <%- if contact.retiree_fax_dsn -%>
             <tr>
               <th scope="row">DSN-Fax:</th>
               <td><%= contact.retiree_fax_dsn %></td>
             </tr>
           <%- end -%>
-          <%- if contact.retiree_fax_comm? -%>
+          <%- if contact.retiree_fax_comm -%>
             <tr>
               <th scope="row">Comm-Fax:</th>
               <td><%= contact.retiree_fax_comm %></td>
@@ -116,11 +116,34 @@
           <%- end -%>
         </tbody>
       </table>
-      <%- if contact.retiree_post? -%>
+      <%- if contact.retiree_post -%>
         Address:
         <%= simple_format(contact.retiree_post) %>
       <%- end -%>
     </section>
+  </div>
+<%- end -%>
+<%- if contact.ppm_contact_info? -%>
+  <div class="svc-spec-links">
+    <header>Personally Procured Moves (PPM): Submit or Check Status</header>
+    <section>
+      <table>
+        <tbody>
+          <%- if contact.ppm_website -%>
+            <tr>
+              <th scope="row">Website:</th>
+              <td><%= link_to contact.ppm_website, contact.ppm_website %></td>
+            </tr>
+          <%- end -%>
+          <%- if contact.ppm_tel_comm -%>
+            <tr>
+              <th scope="row">Comm:</th>
+              <td><%= contact.ppm_tel_comm %></td>
+            </tr>
+          <%- end -%>
+        </tbody>
+      </table>
+    </secton>
   </div>
 <%- end -%>
 <%- if policies.any? -%>
