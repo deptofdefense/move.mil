@@ -84,24 +84,28 @@
     claims_email: fcsc.ja@us.af.mil
     claims_fax_dsn: 986-8307
     claims_fax_comm: (937) 656-8307
-    retiree_dsn: 954-4200 Ext 5997/5957/5962
-    retiree_tel_comm: (210) 321-4200
+    retiree_dsn: 487-3312
+    retiree_tel_comm: (210) 652-3312
     retiree_email: hqppa.ecaf-ext@us.af.mil
     retiree_fax_dsn: 954-4263
     retiree_fax_comm: (210) 321-4263
     retiree_post: |
-      PPA HQ/ECAF-B
-      2261 Hughes Ave, Ste 159
-      Lackland AFB, TX 78236-9857
+      PPA HQ/PPEC
+      555 E. Street East, Suite 4
+      JBSA Randolph, Texas 78150-4439
   posts:
     - title: "Household Goods Inspection Rate Increases:"
       effective_at: 20171102
       content: |
         <p>Effectively immediately, the Air Force inspection standard for HHG, unaccompanied baggage, non-temporary storage, and local move shipments into, out of, or within a Transportation Officer’s Area of Responsibility is increased from 50% to 80%.</p>
+        <a download="air-force-hhg-memo.pdf" href="/documents/air-force-hhg-memo.pdf">View Memo from USAF/A4L, Maj Gen Kirkland</a><br>
+        <a download="inspection-rate-policy.pdf" href="/documents/air-force-inspection-rate-policy.pdf">View Specific Guidance</a>
     - title: "Air Force PPPOs Should Offer 1-1 Counselling to All Service Members:"
       effective_at: 20171102
       content: |
         <p>Personal property offices will provide one-on-one counseling to all members as the norm. Group counseling and self-counseling through the Defense Personal Property System may be used where mission or unique circumstances dictate.</p>
+        <a download="air-force-hhg-memo.pdf" href="/documents/air-force-hhg-memo.pdf">View Memo from USAF/A4L, Maj Gen Kirkland</a><br>
+        <a download="ppa-guidance.pdf" href="/documents/air-force-ppa-guidance.pdf">View Specific Guidance</a>
 
 - name: Coast Guard
   display_order: 5
