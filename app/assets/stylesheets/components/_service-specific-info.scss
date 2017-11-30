@@ -1,5 +1,7 @@
 .svc-spec-body {
+  overflow-wrap: break-word;
   padding-top: 2rem;
+  word-wrap: break-word;
 
   .sidebar-accordion {
     margin: 0 0-$site-margins-mobile 2rem 0-$site-margins-mobile;
