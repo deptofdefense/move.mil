@@ -1,14 +1,12 @@
-<div class="usa-width-two-thirds">
-  <h3>Announcements:</h3>
-  <%- if posts -%>
-    <%- posts.each do |post| -%>
-      <article class="post">
-        <strong><%= post.title %></strong>
-        <%- unless post.effective_at.nil? -%>
-          <br><em><%= post.effective_at.strftime("%B #{post.effective_at.day.ordinalize}, %Y") %></em>
-        <%- end -%>
-        <%= post.content.html_safe %>
-      </article>
-    <%- end -%>
+<h3>Announcements:</h3>
+<%- if posts -%>
+  <%- posts.each do |post| -%>
+    <article class="post">
+      <strong><%= post.title %></strong>
+      <%- unless post.effective_at.nil? -%>
+        <br><em><%= post.effective_at.strftime("%B #{post.effective_at.day.ordinalize}, %Y") %></em>
+      <%- end -%>
+      <%= post.content.html_safe %>
+    </article>
   <%- end -%>
-</div>
+<%- end -%>

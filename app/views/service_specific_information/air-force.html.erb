@@ -25,7 +25,9 @@
     </ul>
 
     <div class="usa-grid-full">
-      <%= render partial: 'posts', object: @branch.service_specific_posts %>
+      <div class="usa-width-two-thirds">
+        <%= render partial: 'posts', object: @branch.service_specific_posts %>
+      </div>
 
       <div class="sidebar-section usa-width-one-third">
         <h4>Customer Service Info</h4>
