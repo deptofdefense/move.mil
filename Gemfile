@@ -8,6 +8,7 @@ end
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
+gem 'activerecord-import', '~> 0.20.2'
 gem 'friendly_id', '~> 5.2', '>= 5.2.3'
 gem 'geokit-rails', '~> 2.3'
 gem 'high_voltage', '~> 3.0'
