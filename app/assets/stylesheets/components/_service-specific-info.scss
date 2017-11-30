@@ -37,6 +37,10 @@
   border-left: 6px solid $color-primary-alt;
   margin-bottom: 1.5rem;
   padding: $site-margins-mobile;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .svc-spec-links {

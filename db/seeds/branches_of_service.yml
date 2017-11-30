@@ -64,9 +64,10 @@
     claims_url: http://www.jag.navy.mil/organization/code_15.htm
     retiree_email: nxag_n130c1@navy.mil,david.maly@navy.mil
   posts:
-    - title: Visit NAVSUP for everything you need to know about the moving process.
+    - title: Need Help or More Information?
       content: |
-        <p><a class="usa-external_link" href="https://www.navsup.navy.mil/public/navsup/household/">https://www.navsup.navy.mil/public/navsup/household/</a></p>
+        <p>For assistance with completing your move application or for information on Navy entitlements, visit our website at:
+        <a class="usa-external_link" href="https://www.navsup.navy.mil/public/navsup/household/">https://www.navsup.navy.mil/public/navsup/household/</a></p>
 
 - name: Air Force
   display_order: 4
