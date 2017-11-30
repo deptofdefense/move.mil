@@ -14,6 +14,8 @@ RSpec.describe TutorialsController, type: :request do
       end
     end
 
+# rubocop:disable Style/BlockComments
+=begin
     context 'when tutorials exist' do
       let!(:tutorials) { create_list(:tutorial, 2) }
 
@@ -30,5 +32,6 @@ RSpec.describe TutorialsController, type: :request do
         end
       end
     end
+=end
   end
 end
