@@ -49,10 +49,10 @@ entitlements.each do |entitlement|
   Entitlement.where(rank: entitlement['rank']).first_or_create(entitlement)
 end
 
-puts 'Loading ZIP codes...'
-CSV.foreach(Rails.root.join('db', 'seeds', 'zip_code_tabulation_areas.csv'), headers: true) do |row|
-  ZipCodeTabulationArea.create(zip_code: row[0], latitude: row[1], longitude: row[2])
-end
+puts 'Loading ZIP code centroids...'
+areas = CSV.read(Rails.root.join('db', 'seeds', 'zip_code_tabulation_areas.csv'))
+columns = [:zip_code, :latitude, :longitude]
+ZipCodeTabulationArea.import columns, areas, batch_size: 500
 
 puts 'Loading shipping offices...'
 shipping_offices = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'shipping_offices.json')))
