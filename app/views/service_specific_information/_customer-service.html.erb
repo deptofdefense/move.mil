@@ -1,5 +1,5 @@
 <%- if contact.customer_service_contact_info? -%>
-  <article class="svc-spec-links">
+  <div class="svc-spec-links">
     <header><%= contact.branch_of_service.name %> Customer Service</header>
     <em>(Entitlements, Exceptions to Policy, General Info)</em>
     <section>
@@ -29,10 +29,10 @@
         <a class="usa-external_link" href="<%= contact.custsvc_facebook_url %>"><%= image_tag("find-us-on-facebook-512.png", :alt => "Find Us On Facebook", :width => "98") %></a>
       <%- end -%>
     </section>
-  </article>
+  </div>
 <%- end -%>
 <%- if contact.claims_contact_info? -%>
-  <article class="svc-spec-links">
+  <div class="svc-spec-links">
     <header>Claims</header>
     <section>
       <table class="svc-spec-links">
@@ -76,10 +76,10 @@
         </tbody>
       </table>
     </section>
-  </article>
+  </div>
 <%- end -%>
 <%- if contact.retiree_contact_info? -%>
-  <article class="svc-spec-links">
+  <div class="svc-spec-links">
     <header>Retirement/Separation HHG Extensions</header>
     <section>
       <table>
@@ -121,10 +121,10 @@
         <%= simple_format(contact.retiree_post) %>
       <%- end -%>
     </section>
-  </article>
+  </div>
 <%- end -%>
 <%- if policies.any? -%>
-  <article class="svc-spec-links">
+  <div class="svc-spec-links">
     <header>Supplemental Policies</header>
     <section>
       <ul class="usa-unstyled-list">
@@ -133,5 +133,5 @@
         <%- end -%>
       </ul>
     </section>
-  </article>
+  </div>
 <%- end -%>

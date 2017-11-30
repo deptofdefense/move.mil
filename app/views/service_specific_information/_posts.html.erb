@@ -3,7 +3,7 @@
   <%- if posts -%>
     <%- posts.each do |post| -%>
       <article class="post">
-        <strong><%= post.title %></strong>
+        <header><strong><%= post.title %></strong></header>
         <%- unless post.effective_at.nil? -%>
           <br><em><%= post.effective_at.strftime("%B #{post.effective_at.day.ordinalize}, %Y") %></em>
         <%- end -%>

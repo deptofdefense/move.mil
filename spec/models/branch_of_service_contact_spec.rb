@@ -1,10 +1,10 @@
 RSpec.describe BranchOfServiceContact, type: :model do
   it 'is valid with a branch' do
-    expect(BranchOfServiceContact.new(branch: 'Army')).to be_valid
+    expect(BranchOfServiceContact.new(branch_of_service: BranchOfService.create(name: 'Army', display_order: 1))).to be_valid
   end
 
   it 'is not valid without a branch' do
-    expect(BranchOfServiceContact.new(branch: nil)).to_not be_valid
+    expect(BranchOfServiceContact.new(branch_of_service: nil)).to_not be_valid
   end
 
   it 'returns the first defined phone number in retiree_contact_phone' do

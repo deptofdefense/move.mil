@@ -1,8 +1,5 @@
 FactoryBot.define do
-  sequence(:branch) { |n| "Branch #{n}" }
-
   factory :branch_of_service_contact do
-    branch
     custsvc_org 'My org'
     custsvc_dsn '555-1234'
     custsvc_tel_comm '(555)-555-9999'
@@ -27,5 +24,6 @@ FactoryBot.define do
     retiree_fax_tollfree '1-800-555-6666'
     retiree_email 'ret1@example.com,ret2@example.com'
     retiree_post ''
+    branch_of_service
   end
 end

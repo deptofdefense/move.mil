@@ -1,4 +1,4 @@
-RSpec.describe ServiceSpecificInformationController, type: :request do
+RSpec.describe CustomerServiceController, type: :request do
   describe 'GET #index' do
     context 'when navigating to the page' do
       before do
@@ -15,7 +15,7 @@ RSpec.describe ServiceSpecificInformationController, type: :request do
     end
 
     context 'when contacts exist' do
-      let!(:contacts) { create_list(:branch_of_service_contact, 5) }
+      let!(:branches) { create_list(:branch_of_service, 5) }
 
       it 'displays customer service contacts' do
         get '/customer-service'
