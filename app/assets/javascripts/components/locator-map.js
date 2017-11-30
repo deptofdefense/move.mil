@@ -85,7 +85,7 @@
 
       this.map.setView([latitude, longitude], 8);
 
-      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Map imagery © <a href="https://www.mapbox.com">Mapbox</a>.'
       }).addTo(this.map);
 
