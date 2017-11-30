@@ -15,9 +15,9 @@
 
   <h2>How do I…</h2>
 
-  <ul class="usa-accordion-bordered">
+  <ul class="usa-accordion-bordered linkable-accordion">
     <%- @tutorials.each do |tutorial| -%>
-      <li id="tutorial-<%= tutorial.id %>">
+      <li id="tutorial-<%= tutorial.id %>" class="linkable-accordion-item">
         <button aria-controls="<%= tutorial.id %>" class="usa-accordion-button"><%= raw tutorial.title %></button>
         <div class="usa-accordion-content" id="<%= tutorial.id %>">
           <div class="carousel-item-single-page">
