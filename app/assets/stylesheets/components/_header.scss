@@ -1,12 +1,3 @@
-.beta-notice {
-  display: none;
-  float: right;
-
-  @include media($nav-width) {
-    display: block;
-  }
-}
-
 @include media($nav-width) {
   .usa-header {
     border-bottom-color: $color-gray-cool-light;
