@@ -1,0 +1,126 @@
+<div class="svc-spec-links">
+  <header>Army Customer Service</header>
+  <em>(Entitlements, Exceptions to Policy, General Info)</em>
+  <section>
+    <br>
+    Contact your <%= link_to 'local personal property office', offices_path %> for assistance.
+  </section>
+</div>
+<%- if contact.claims_contact_info? -%>
+  <div class="svc-spec-links">
+    <header>Claims</header>
+    <section>
+      <br>
+      <em>For United States (including Alaska, Hawaii, and Puerto Rico)</em>
+      <table class="svc-spec-links">
+        <tbody>
+          <%- if contact.claims_dsn -%>
+            <tr>
+              <th scope="row">DSN:</th>
+              <td><%= contact.claims_dsn %></td>
+            </tr>
+          <%- end -%>
+          <%- if contact.claims_tel_comm -%>
+            <tr>
+              <th scope="row">Comm:</ht>
+              <td><%= contact.claims_tel_comm %></td>
+            </tr>
+          <%- end -%>
+          <%- if contact.claims_tel_tollfree -%>
+            <tr>
+              <th scope="row">Toll Free:</th>
+              <td><%= contact.claims_tel_tollfree %></td>
+            </tr>
+          <%- end -%>
+          <%- if contact.claims_email -%>
+            <tr>
+              <th scope="row">Email:</th>
+              <td><a href="mailto:<%= contact.claims_email %>"><%= contact.claims_email %></a></td>
+            </tr>
+          <%- end -%>
+          <%- if contact.claims_fax_dsn -%>
+            <tr>
+              <th scope="row">DSN-Fax:</th>
+              <td><%= contact.claims_fax_dsn %></td>
+            </tr>
+          <%- end -%>
+          <%- if contact.claims_fax_comm -%>
+            <tr>
+              <th scope="row">Comm-Fax:</th>
+              <td><%= contact.claims_fax_comm %></td>
+            </tr>
+          <%- end -%>
+          <tr>
+            <th scope="row">Address:</th>
+            <td>
+              Center for Personnel<br>
+              Claims Support<br>
+              50 Third Avenue, Suite 307<br>
+              Fort Knox, KY 40121
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <em>For Asia (Korea and Japan)</em>
+      <table>
+        <tr>
+          <th scope="row">Email:</th>
+          <td><a href="mailto:usarmy.yongsan.8-army.mbx.osja-client-legal-services@mail.mil">usarmy.yongsan.8-army.mbx.osja-client-legal-services@mail.mil</a></td>
+        </tr>
+        <tr>
+          <th scope="row">Address:</th>
+          <td>
+            US Armed Forces Claims Service - Korea<br>
+		        ATTN: Military Claims Division; Unit 15311<br>
+		        APO AP 96205-5311
+          </td>
+        </tr>
+      </table>
+      <em>For Europe</em>
+      <table>
+        <tr>
+          <th scope="row">Email:</th>
+          <td><a href="mailto:usarmy.wiesbaden.usareur.mbx.oja-personnel-claims-and-recovery@mail.mil">usarmy.wiesbaden.usareur.mbx.oja-personnel-claims-and-recovery@mail.mil</a></td>
+        </tr>
+        <tr>
+          <th scope="row">Address:</th>
+          <td>
+            US Army Claims Service - Europe<br>
+            ATTN: Personnel Claims and Recovery Branch; Unit 29351, Box 32<br>
+            APO AE 09014-9351
+          </td>
+        </tr>
+      </table>
+    </section>
+  </div>
+<%- end -%>
+<div class="svc-spec-links">
+  <header>Retirement/Separation HHG Extensions</header>
+  <section>
+    <br>
+    Submit to your <%= link_to 'local personal property office', offices_path %> for approval.
+  </section>
+</div>
+<%- if contact.ppm_contact_info? -%>
+  <div class="svc-spec-links">
+    <header>Personally Procured Moves (PPM): Submit or Check Status</header>
+    <section>
+      <table>
+        <tbody>
+          <%- if contact.ppm_website -%>
+            <tr>
+              <th scope="row">Website:</th>
+              <td><%= link_to contact.ppm_website, contact.ppm_website %></td>
+            </tr>
+          <%- end -%>
+          <%- if contact.ppm_tel_comm -%>
+            <tr>
+              <th scope="row">Comm:</th>
+              <td><%= contact.ppm_tel_comm %></td>
+            </tr>
+          <%- end -%>
+        </tbody>
+      </table>
+    </secton>
+  </div>
+<%- end -%>

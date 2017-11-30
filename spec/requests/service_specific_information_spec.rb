@@ -16,10 +16,10 @@ RSpec.describe ServiceSpecificInformationController, type: :request do
     end
 
     context 'when service specific posts exist' do
-      let!(:branch) { create(:branch_of_service, name: 'Army') }
+      let!(:branch) { create(:branch_of_service, name: 'Air Force') }
 
       it 'displays a list of service specific posts' do
-        get '/service-specific-information/army'
+        get '/service-specific-information/air-force'
 
         assert_select '.post', 2
 
@@ -28,7 +28,7 @@ RSpec.describe ServiceSpecificInformationController, type: :request do
       end
 
       it 'displays customer service contact information' do
-        get '/service-specific-information/army'
+        get '/service-specific-information/air-force'
 
         assert_select '.svc-spec-links:first-child' do
           assert_select 'header', text: branch.name + ' Customer Service'
@@ -42,7 +42,7 @@ RSpec.describe ServiceSpecificInformationController, type: :request do
 
         assert_select '.svc-spec-links:nth-child(3)' do
           assert_select 'header', text: 'Retirement/Separation HHG Extensions'
-          assert_select 'tr:first-child td', text: branch.branch_of_service_contact.retiree_fax_dsn
+          assert_select 'tr:first-child td', text: branch.branch_of_service_contact.retiree_dsn
         end
       end
     end

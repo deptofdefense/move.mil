@@ -5,13 +5,11 @@
     claims_tel_comm: (502) 626-3000
     claims_email: usarmy.knox.hqda-otjag.mbx.cpcs@mail.mil
   posts:
-    - title: New Process For Claims Filing
-      effective_at: 20170705
+    - title: Temporary Change of Station (TCS) Guidance
+      effective_at: 20170525
       content: |
-        <p>WASHINGTON -- The Army has created a new office at Fort Knox, Kentucky, to process Soldiers' claims for personal property losses resulting from government service. The Center for Personnel Claims Support will be fully operational on July 5, and will process all claims of Soldiers and employees in the continental United States, Alaska, Hawaii and Puerto Rico.</p>
-        <p>The claims are known as personnel claims, and include claims for loss or damage to household goods and privately owned vehicles during permanent change of station shipment, or while stored at government expense.</p>
-        <p>Visit <a class="usa-external_link" href="http://www.JAGCNet.army.mil/Pclaims">http://www.JAGCNet.army.mil/Pclaims</a> to find more information on how to file a claim. The site also includes the trifold titled "The A,B,C's of Claims." Those who want to file a claim can also call 1-502-626-3000 or DSN 536-3000 with questions, or contact the Center for Personnel Claims Support by email at <a href="mailto:usarmy.knox.hqda-otjag.mbx.cpcs@mail.mil">usarmy.knox.hqda-otjag.mbx.cpcs@mail.mil</a>.</p>
-        <p>Read the <a class="usa-external_link" href="https://www.army.mil/article/189685/army_creates_new_office_for_personnel_claims">full article</a>.</p>
+        <p>If you have a Temporary Change of Station (TCS) coming up, it is recommended that you visit your local property office for help arranging your move. They will be able to help you schedule your move and deal with the more complicated entitlements and accounting procedures than are typically associated with your normal Permanent Change of Station (PCS).</p>
+        <a download="tcs-guidance.docx" href="/documents/army-tcs-guidance.docx">View Full Temporary Change of Station (TCS Guidance)</a>
 
 - name: Marine Corps
   display_order: 2
@@ -86,8 +84,8 @@
     claims_email: fcsc.ja@us.af.mil
     claims_fax_dsn: 986-8307
     claims_fax_comm: (937) 656-8307
-    retiree_dsn: 487-3312
-    retiree_tel_comm: (210) 652-3312
+    retiree_dsn: 954-4200 Ext 5997/5957/5962
+    retiree_tel_comm: (210) 321-4200
     retiree_email: hqppa.ecaf-ext@us.af.mil
     retiree_fax_dsn: 954-4263
     retiree_fax_comm: (210) 321-4263
