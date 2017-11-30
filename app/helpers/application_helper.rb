@@ -8,7 +8,7 @@ module ApplicationHelper
   end
 
   def page_title
-    return "#{@page_title} — #{t('site.name')}" if @page_title
+    return "#{ActionView::Base.full_sanitizer.sanitize(@page_title)} — #{t('site.name')}" if @page_title
     "#{t('site.name')} — #{t('site.tagline', abbr: 'DOD')}"
   end
 end
