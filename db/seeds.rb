@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'activerecord-import/base'
+require 'activerecord-import/active_record/adapters/postgresql_adapter'
 require 'csv'
 require 'json'
 require 'yaml'
