@@ -1,12 +1,31 @@
 <%- @page_title = "#{@entitlement.rank} Entitlements" -%>
 
+<%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: []} %>
+
 <div class="usa-section main-section">
   <h1><%= @page_title %></h1>
 
-  <h2>Your Moving Allowance</h2>
+  <aside class="sidenav">
+    <div class="sidenav-jump-to">
+      Jump to:
+    </div>
+    <ul class="usa-sidenav-list">
+      <li><%= link_to 'Your Moving Allowance', '#moving-allowance' %></li>
+      <li><%= link_to 'Special Item Information', '#special-item-info' %></li>
+    </ul>
+  </aside>
 
-  <p>Moving allowances are generally based on the overall weight of your household goods. Any overages on your approved weight will be your financial responsibility, so work hard to make sure you stay within your weight allowance.</p>
+  <div class="sidenav-body">
+    <div class="what-to-expect-section">
+      <h4 id="moving-allowance">Your Moving Allowance</h4>
 
-  <%= render 'entitlements_table', entitlement: @entitlement %>
-  <%= render 'special_item_information' %>
+      <p>Moving allowances are generally based on the overall weight of your household goods. Any overages on your approved weight will be your financial responsibility, so work hard to make sure you stay within your weight allowance.</p>
+
+      <%= render 'entitlements_table', entitlement: @entitlement %>
+    </div>
+
+    <div class="what-to-expect-section">
+      <%= render 'special_item_information' %>
+    </div>
+  </div>
 </div>
