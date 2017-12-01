@@ -28,7 +28,7 @@
     </div>
 
     <%- if @entitlements.any? -%>
-      <div class="what-to-expect-section" tabindex="-1">
+      <div class="what-to-expect-section">
         <h4 id="moving-allowance">Your Moving Allowance</h4>
 
         <div id="entitlements-search" hidden>
@@ -49,7 +49,7 @@
             <button>View Results</button>
           <% end %>
 
-          <div class="moving-allowances-section" id="entitlements-search-results-container">
+          <div class="moving-allowances-section" id="entitlements-search-results-container" tabindex="-1">
             <div id="entitlements-search-results" hidden></div>
 
             <div class="usa-alert usa-alert-info" id="entitlements-search-alert">
