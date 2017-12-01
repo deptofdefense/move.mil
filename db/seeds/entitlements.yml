@@ -1,5 +1,6 @@
 - rank: Service Academy Cadets/Midshipmen
   total_weight_self: 350
+  total_weight_self_plus_dependents: 350
 
 - rank: Aviation Cadets
   total_weight_self: 7000

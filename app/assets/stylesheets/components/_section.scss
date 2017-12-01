@@ -89,12 +89,6 @@
 .moving-allowances-section {
   @include margin(0 -1.5rem);
   @include padding($site-margins $site-margins-mobile);
-
-  @include media($medium-screen) {
-    &:focus {
-      background-color: $color-gold-lightest;
-    }
-  }
 }
 
 @include media($medium-screen) {

@@ -18,7 +18,7 @@
 
 <table class="entitlements-table">
   <tbody>
-    <%- if @entitlement_search.nil? or @entitlement_search.dependency_status == 'false' or !entitlement.total_weight_self_plus_dependents? -%>
+    <%- if @entitlement_search.nil? or @entitlement_search.dependency_status == 'false' -%>
       <tr>
         <td>
           <h3>Total Weight of Household Goods</h3>
@@ -33,7 +33,7 @@
         </td>
       </tr>
     <%- end -%>
-    <%- if entitlement.total_weight_self_plus_dependents? and (@entitlement_search.nil? or @entitlement_search.dependency_status == 'true') -%>
+    <%- if @entitlement_search.nil? or @entitlement_search.dependency_status == 'true' -%>
       <tr>
         <td>
           <h3>Total Weight of Household Goods (with dependents)</h3>
