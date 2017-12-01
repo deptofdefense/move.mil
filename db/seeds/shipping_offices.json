@@ -195,41 +195,28 @@
     ]
   },
   {
-    "name": "Hanscom AFB",
-    "street_address": "10 Kirtland St",
-    "extended_address": "Bldg 1240 Rm 200",
-    "locality": "Hanscom AFB",
+    "name": "JPPSO-NE (DET 2)",
+    "street_address": "25 Chennault St.",
+    "extended_address": "Building 1723",
+    "locality": "Bedford",
     "region": "Massachusetts",
     "region_code": "MA",
     "postal_code": "01731",
     "country_name": "United States",
     "country_code": "US",
-    "latitude": 42.462762,
-    "longitude": -71.271575,
+    "latitude": 42.4638084,
+    "longitude": -71.2842004,
     "email_addresses": [
       {
-        "email_address": "jppso.hafb@us.af.mil",
-        "note": "Customer Service"
+        "email_address": "jppsone.cs@us.af.mil"
       }
     ],
     "phone_numbers": [
       {
-        "phone_number": "(781) 225-5915 / (781) 225-6399",
+        "phone_number": "1 (800) 235-7776 / (781) 225-3700",
         "phone_type": "voice",
         "dsn": false
-      },
-      {
-        "phone_number": " 845-5915 / 845-6399    ",
-        "phone_type": "voice",
-        "dsn": true
       }
-    ],
-    "hours": "Monday - Friday 0730-1530",
-    "services": [
-      "Walk-In Help",
-      "Briefings",
-      "Appointments",
-      "QA Inspections"
     ]
   },
   {

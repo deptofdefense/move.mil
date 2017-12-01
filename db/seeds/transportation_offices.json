@@ -705,7 +705,7 @@
   },
   {
     "name": "Base Cape Cod",
-    "shipping_office_name": "Hanscom AFB",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
     "street_address": "3159 Herbert Rd",
     "extended_address": null,
     "locality": "Buzzards Bay",
@@ -827,7 +827,7 @@
   },
   {
     "name": "Joint Base Charleston",
-    "shipping_office_name": "Hanscom AFB",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
     "street_address": "1000 Quality Cir",
     "extended_address": "Bldg 36",
     "locality": "Goose Creek",
@@ -902,7 +902,7 @@
   },
   {
     "name": "Seymour Johnson AFB, NC",
-    "shipping_office_name": "Hanscom AFB",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
     "street_address": "1280 Humphreys St",
     "extended_address": null,
     "locality": "Seymour Johnson AFB",
@@ -1898,7 +1898,7 @@
   },
   {
     "name": "Dover AFB",
-    "shipping_office_name": "Hanscom AFB",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
     "street_address": "550 Atlantic St",
     "extended_address": null,
     "locality": "Dover AFB",
@@ -1937,7 +1937,7 @@
   },
   {
     "name": "Joint Base Charleston (Naval Weapon Station)",
-    "shipping_office_name": "Hanscom AFB",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
     "street_address": "1000 Quality Cir",
     "extended_address": "Bldg 36",
     "locality": "Goose Creek",
@@ -1976,7 +1976,7 @@
   },
   {
     "name": "Scott AFB",
-    "shipping_office_name": "Hanscom AFB",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
     "street_address": "215 Heritage Dr",
     "extended_address": "Room D-100",
     "locality": "Scott Air Force Base",
@@ -2294,7 +2294,7 @@
   },
   {
     "name": "Rock Island Arsenal Transportation Office",
-    "shipping_office_name": "Hanscom AFB",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
     "street_address": "1 Rock Island Arsenal",
     "extended_address": "ASPA-LRI Bldg. 102 1st Fl. NE Wing",
     "locality": "Rock Island",
@@ -3628,7 +3628,7 @@
   },
   {
     "name": "Charleston Naval Weapon Station",
-    "shipping_office_name": "Hanscom AFB",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
     "street_address": "1000 Quality Cir",
     "extended_address": "Bldg 36",
     "locality": "Goose Creek",
@@ -3668,7 +3668,7 @@
   },
   {
     "name": "Ft. Eustis",
-    "shipping_office_name": "Hanscom AFB",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
     "street_address": "650 Monroe Ave",
     "extended_address": null,
     "locality": "Fort Eustis",
@@ -3708,7 +3708,7 @@
   },
   {
     "name": "JB Eustis-Langley",
-    "shipping_office_name": "Hanscom AFB",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
     "street_address": "45 Nealy Ave",
     "extended_address": "Suite 209",
     "locality": "Hampton",
@@ -3748,7 +3748,7 @@
   },
   {
     "name": "Rome NY",
-    "shipping_office_name": "Hanscom AFB",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
     "street_address": "26 Electronic Parkway",
     "extended_address": "Building 2 room C-250",
     "locality": "Rome",
@@ -3826,7 +3826,7 @@
   },
   {
     "name": "Shaw AFB, SC",
-    "shipping_office_name": "Hanscom AFB",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
     "street_address": "524 Shaw Dr",
     "extended_address": null,
     "locality": "Shaw Air Force Base",
@@ -3866,7 +3866,7 @@
   },
   {
     "name": "Wright-Patterson AFB",
-    "shipping_office_name": "Hanscom AFB",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
     "street_address": "1940 Allbrook Dr",
     "extended_address": null,
     "locality": "Wright-Patterson Air Force Base",
@@ -3906,7 +3906,7 @@
   },
   {
     "name": "Navy Submarine Base New London",
-    "shipping_office_name": "Hanscom AFB",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
     "street_address": "Grayling Ave",
     "extended_address": "Bldg 84 Room 206",
     "locality": "Groton",
@@ -3945,7 +3945,7 @@
   },
   {
     "name": "NSA Saratoga Springs",
-    "shipping_office_name": "Hanscom AFB",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
     "street_address": "19 J. F. King Dr",
     "extended_address": "Bldg 102",
     "locality": "Saratoga Springs",
@@ -3980,7 +3980,7 @@
   },
   {
     "name": "Portsmouth Navy Shipyard",
-    "shipping_office_name": "Hanscom AFB",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
     "street_address": "PPPO Portsmouth Navy Ship Yard",
     "extended_address": "Bldg H10, Room 6",
     "locality": "Kittery",
@@ -4019,7 +4019,7 @@
   },
   {
     "name": "Naval Station Newport",
-    "shipping_office_name": "Hanscom AFB",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
     "street_address": "690 Peary St",
     "extended_address": null,
     "locality": "Naval Station Newport",
@@ -4038,7 +4038,7 @@
     ],
     "phone_numbers": [
       {
-        "phone_number": "1-800-345-7512 / (401)841-4896",
+        "phone_number": "1-800-345-7512 / (401) 841-4896",
         "phone_type": "voice",
         "dsn": false
       },
@@ -7032,6 +7032,45 @@
     ],
     "hours": "07:30 to 16:30",
     "services": [
+      "Briefings",
+      "Appointments",
+      "QA Inspections"
+    ]
+  },
+  {
+    "name": "Hanscom AFB",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
+    "street_address": "10 Kirtland St",
+    "extended_address": "Bldg 1240 Rm 200",
+    "locality": "Hanscom AFB",
+    "region": "Massachusetts",
+    "region_code": "MA",
+    "postal_code": "01731",
+    "country_name": "United States",
+    "country_code": "US",
+    "latitude": 42.462762,
+    "longitude": -71.271575,
+    "email_addresses": [
+      {
+        "email_address": "jppso.hafb@us.af.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "(781) 225-5915 / (781) 225-6399",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "845-5915 / 845-6399",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ],
+    "hours": "Monday - Friday 0730-1530",
+    "services": [
+      "Walk-In Help",
       "Briefings",
       "Appointments",
       "QA Inspections"
