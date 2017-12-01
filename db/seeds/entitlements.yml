@@ -120,3 +120,9 @@
   total_weight_self_plus_dependents: 18000
   pro_gear_weight: 2000
   pro_gear_weight_spouse: 500
+
+- rank: Civilian Employee
+  total_weight_self: 18000
+  total_weight_self_plus_dependents: 18000
+  pro_gear_weight: 2000
+  pro_gear_weight_spouse: 500
