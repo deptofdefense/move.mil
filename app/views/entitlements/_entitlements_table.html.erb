@@ -18,20 +18,22 @@
 
 <table class="entitlements-table">
   <tbody>
-    <tr>
-      <td>
-        <h3>Total Weight of Household Goods</h3>
+    <%- if @entitlement_search.dependency_status == 'false' or !entitlement.total_weight_self_plus_dependents? -%>
+      <tr>
+        <td>
+          <h3>Total Weight of Household Goods</h3>
 
-        <ul>
-          <li>Excludes Pro-Gear (items used professionally for work) and your <%= abbr_tag('pov') %> vehicles (Primary Vehicles)</li>
-          <li>Using a <%= link_to 'weight estimation tool', weight_estimator_path %> can help you prepare for your move</li>
-        </ul>
-      </td>
-      <td>
-        <b><%= number_with_delimiter entitlement.total_weight_self %> lbs.</b>
-      </td>
-    </tr>
-    <%- if entitlement.total_weight_self_plus_dependents? -%>
+          <ul>
+            <li>Excludes Pro-Gear (items used professionally for work) and your <%= abbr_tag('pov') %> vehicles (Primary Vehicles)</li>
+            <li>Using a <%= link_to 'weight estimation tool', weight_estimator_path %> can help you prepare for your move</li>
+          </ul>
+        </td>
+        <td>
+          <b><%= number_with_delimiter entitlement.total_weight_self %> lbs.</b>
+        </td>
+      </tr>
+    <%- end -%>
+    <%- if entitlement.total_weight_self_plus_dependents? and @entitlement_search.dependency_status == 'true' -%>
       <tr>
         <td>
           <h3>Total Weight of Household Goods (with dependents)</h3>
@@ -80,3 +82,11 @@
     <%- end -%>
   </tbody>
 </table>
+
+<%- if @entitlement_search.move_type == 'oconus' -%>
+<div class="usa-alert usa-alert-warning" >
+  <div class="usa-alert-body">
+    <p class="usa-alert-text"><strong>Important:</strong> Certain overseas (<%= abbr_tag('oconus') %>) locations have weight restrictions due to limited housing and storage availability. If you are moving to an overseas (<%= abbr_tag('oconus') %>) location with restrictions any excess weight above your restricted weight up to your full weight entitlement can be placed in stateside longterm "non-temporary" storage (NTS).</p>
+  </div>
+</div>
+<%- end -%>
