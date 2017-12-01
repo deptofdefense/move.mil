@@ -14,7 +14,5 @@ Rails.application.routes.draw do
   get '/resources/weight-estimator', to: 'weight_estimator#index', as: 'weight_estimator'
   get '/service-specific-information(/:id)', to: 'service_specific_information#show', as: 'service_specific_information'
 
-  get '/404', to: 'errors#not_found'
-
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
