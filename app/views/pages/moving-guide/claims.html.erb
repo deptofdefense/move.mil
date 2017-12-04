@@ -20,13 +20,13 @@
 
   <div class="sidenav-body what-to-expect-body">
     <div id="introduction" class="what-to-expect-intro">
-      While we hope all of your items arrived in one piece, the reality is that isn’t always the case. If you have any questions about this process, you can contact your <%= link_to 'local Military Claims Office', '#TODO' %>.
+      While we hope all of your items arrived in one piece, the reality is that isn’t always the case. If you have any questions about this process, you can contact your <%= link_to 'Military Claims Office', page_path( 'customer-service', anchor: 'claims') %>.
     </div>
 
     <div class="what-to-expect-section" id="lost-damaged-items">
       <h4>Lost &amp; Damaged Household Goods Items</h4>
 
-      <p>If any of your household goods are lost or damaged during the moving process, you are entitled you to the full replacement value of that item, assuming your claim is filed in a timely manner. <strong>All claims must be submitted on the <%= link_to 'Defense Personal Property System (DPS)', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %>, which is the portal your move originally was scheduled in.</strong> However, if you and your transportation service provider (TSP) cannot negotiate a settlement on those items, you should later transfer the claim to your your <%= link_to 'local Military Claims Office', '#TODO' %> so that they can help.</p>
+      <p>If any of your household goods are lost or damaged during the moving process, you are entitled you to the full replacement value of that item, assuming your claim is filed in a timely manner. <strong>All claims must be submitted on the <%= link_to 'Defense Personal Property System (DPS)', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %>, which is the portal your move originally was scheduled in.</strong> However, if you and your transportation service provider (TSP) cannot negotiate a settlement on those items, you should later transfer the claim to your your <%= link_to 'Military Claims Office', page_path( 'customer-service', anchor: 'claims') %> so that they can help.</p>
 
       <div class="usa-media_block pro-tip">
         <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
@@ -47,9 +47,9 @@
 
       <p>A Loss/Damage Report allows you to notify the moving company of your intent to file a claim for missing or damaged items. The big advantage of filing the Loss/Damage report is that it extends the amount of time you can file claims and still receive the full replacement value. <strong>Remember… a Loss/Damage Report is NOT a claim, you must still file a itemized claim to receive reimbursement!</strong></p>
 
-      <p><strong>Damage found on Pack-Up/Delivery Day:</strong> If you notice any lost or damaged items on delivery day, you should ask the driver to complete and sign a <%= link_to 'DD1840 form', '#TODO' %>. (The driver should have copies of this form on hand, but if you want to be super prepared, you can print a few copies yourself.) Of course you can always report these items after the fact, but the advantage of doing it on moving day is that both you and your transportation service provider (TSP) are agreeing that damage occured up front. That can lead to less disputes later on in the claims process and potentially higher settlements. If you and the driver complete a paper <%= link_to 'DD1840 form', '#TODO' %>, a copy of this document must be uploaded to the <%= link_to 'Defense Personal Property System (DPS)', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %> within 30 days of your delivery date.</p>
+      <p><strong>Damage found on Pack-Up/Delivery Day:</strong> If you notice any lost or damaged items on delivery day, you should ask the driver to complete and sign a DD1840 form. (The driver should have copies of this form on hand, but if you want to be super prepared, you can print a few copies yourself.) Of course you can always report these items after the fact, but the advantage of doing it on moving day is that both you and your transportation service provider (TSP) are agreeing that damage occured up front. That can lead to less disputes later on in the claims process and potentially higher settlements. If you and the driver complete a paper DD1840 form, a copy of this document must be uploaded to the <%= link_to 'Defense Personal Property System (DPS)', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %> within 30 days of your delivery date.</p>
 
-      <p><%= link_to 'For help submitting a Loss & Damage Report, follow this step-by-step tutorial.', '#TODO' %></p>
+      <p><%= link_to 'For help submitting a Loss & Damage Report, follow this step-by-step tutorial.', page_path('tutorials') %></p>
 
       <p>
         <strong>Important Dates:</strong>
@@ -58,6 +58,59 @@
       </p>
 
       <table>
+        <thead>
+          <tr>
+            <th colspan="2">Important Dates WITH Loss/Damage Report</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Delivery Day (Optional)</th>
+            <td>For any lost or damaged items discovered on delivery day, request that your moving driver complete and sign a DD1840 form. Having mutual agreement on major items, can lead to less disputes when you settle the reimbursement value later on.</td>
+          </tr>
+          <tr>
+            <th scope="row">Up to 30 days after Delivery Date</th>
+            <td>If applicable: Electronically file the DD1840 form created on Delivery Day on the <%= link_to 'Defense Personal Property System (DPS)', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %>.</td>
+          </tr>
+          <tr>
+            <th scope="row">Up to 75 days after Delivery Date</th>
+            <td>Sign-In to the <%= link_to 'Defense Personal Property System (DPS)', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %> and submit a Loss/Damage Report (DD1840R) indicating your intent to file a claim.</td>
+          </tr>
+          <tr>
+            <th scope="row">Up to 9 Months after Delivery Date</th>
+            <td>Sign-In to the <%= link_to 'Defense Personal Property System (DPS)', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %> and submit itemized claims for any lost or damaged items for full replacement value.</td>
+          </tr>
+          <tr>
+            <th scope="row">Between 9 Months and 2 years after Delivery Day</th>
+            <td>Contact the <%= link_to 'Military Claims Office', page_path( 'customer-service', anchor: 'claims') %> for help receiving partial replacement value for any lost or damaged items not previously submitted.</td>
+          </tr>
+          <tr>
+            <th scope="row">60 Days after Claim Submission</th>
+            <td>Your moving company (Transportation Service Provider) should pay, deny, or make an alternate to your claim within 60 days after your claim is final.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">Important Dates WITHOUT Loss/Damage Report</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Up to 75 Days after Delivery Day</th>
+            <td>Sign-In to the <%= link_to 'Defense Personal Property System (DPS)', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %> and submit itemized claims for any lost or damaged items for full replacement value.</td>
+          </tr>
+          <tr>
+            <th scope="row">Between 75 Days and 2 years after Delivery Day</th>
+            <td>Contact the <%= link_to 'Military Claims Office', page_path( 'customer-service', anchor: 'claims') %> for help receiving partial replacement value for any lost or damaged items not previously submitted.</td>
+          </tr>
+          <tr>
+            <th scope="row">60 Days after Claim Submission</th>
+            <td>Your moving company (Transportation Service Provider) should pay, deny, or make an alternate to your claim within 60 days after your claim is final.</td>
+          </tr>
+        </tbody>
       </table>
 
       <div class="usa-media_block pro-tip">
@@ -76,6 +129,46 @@
       <p>Before logging into the system, save yourself some time by acquiring as many of artifacts below… the more details you can provide the better. If you have before and after photos or receipts of the item that will <strong>significantly help</strong> throughout the process.</p>
 
       <table>
+        <thead>
+          <tr>
+            <th scope="col">Artifact</th>
+            <th scope="col">Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Manufacturer</th>
+            <td>Samsung</td>
+          </tr>
+          <tr>
+            <th scope="row">Brief Description of Item</th>
+            <td>Front-Load Washing Machine Model No. ABC12345</td>
+          </tr>
+          <tr>
+            <th scope="row">Inventory Item Number</th>
+            <td>#78</td>
+          </tr>
+          <tr>
+            <th scope="row">Cost at Purchase</th>
+            <td>$1,000</td>
+          </tr>
+          <tr>
+            <th scope="row">Year of Purchase</th>
+            <td>2016</td>
+          </tr>
+          <tr>
+            <th scope="row">Description of Damage</th>
+            <td>Plexiglass on washing machine door has been broken.</td>
+          </tr>
+          <tr>
+            <th scope="row">Repair Estimate (Optional)</th>
+            <td>$250 from Samsung Repair Wizard</td>
+          </tr>
+          <tr>
+            <th scope="row">Photos & Reciepts (if available)</th>
+            <td></td>
+          </tr>
+        </tbody>
       </table>
 
       <p>When you sign in to the <%= link_to 'Defense Personal Property System (DPS)', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %>, if you started with a Lost/Damage Report, you can export all the data you entered directly into the Claims system. If some of the items that were lost are now found, you can remove them before you submit the final claim.</p>
@@ -84,7 +177,7 @@
 
       <p><strong>The moving company must pay, deny or make an offer within 60 days of the completed claim submission.</strong> You will have the opportunity to accept or reject the offer for each item that you have claimed. Remember, this is a negotiation so if you are not happy with the offer, you should reject it.</p>
 
-      <p>If you are unable to come to an agreement with the moving company, your next step is to transfer the claim to your <%= link_to 'Military Claims Office', '#TODO' %>. The Military Claims Office will take over from there but it’s important you stay in close contact with them throughout the process. As we stated from the start, you need to stay proactive throughout the process and it’s recommended you follow-up with the moving company and/or the Military Claims Office.</p>
+      <p>If you are unable to come to an agreement with the moving company, your next step is to transfer the claim to your <%= link_to 'Military Claims Office', page_path( 'customer-service', anchor: 'claims') %>. The Military Claims Office will take over from there but it’s important you stay in close contact with them throughout the process. As we stated from the start, you need to stay proactive throughout the process and it’s recommended you follow-up with the moving company and/or the Military Claims Office.</p>
 
       <div class="usa-media_block pro-tip">
         <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
@@ -99,7 +192,7 @@
 
       <p>If your transportation service provider (TSP) causes any damage to your home or residence, you should contact your moving company directly and arrange for the damage to be fixed. An example of damage might include scratched hardwood floors, dented walls, torn grass, etc.</p>
 
-      <p>If you have any problems negotiating your residential damage claim with the moving company, you can contact your <%= link_to 'local Personal Property Office', offices_path %> Quality Assurance Inspector or <%= link_to 'Military Claims Office', '#TODO' %> for assistance.</p>
+      <p>If you have any problems negotiating your residential damage claim with the moving company, you can contact your <%= link_to 'local Personal Property Office', offices_path %> Quality Assurance Inspector or <%= link_to 'Military Claims Office', page_path( 'customer-service', anchor: 'claims') %> for assistance.</p>
     </div>
   </div>
 </div>
