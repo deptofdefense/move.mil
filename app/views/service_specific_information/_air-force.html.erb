@@ -1,0 +1,26 @@
+<div class="svc-spec-banner">
+  <%= image_tag('service_specific_information/air-force-banner.png', alt: 'Air Force banner') %>
+  <%= image_tag('service_specific_information/air-force-logo.svg', alt: 'Air Force logo', class: 'svc-spec-logo') %>
+</div>
+
+<ul class="usa-accordion sidebar-accordion">
+  <li>
+    <button class="usa-accordion-button" aria-controls="customer-service">
+      <h4>Customer Service Info</h4>
+    </button>
+    <div id="customer-service" class="usa-accordion-content">
+      <%= render partial: 'customer-service', locals: {'contact': @branch.branch_of_service_contact, 'policies': [{'name': 'Air Force Household Goods Policy', 'url': 'http://static.e-publishing.af.mil/production/1/af_a4_7/publication/afi24-501/afi24-501.pdf'}]} %>
+    </div>
+  </li>
+</ul>
+
+<div class="usa-grid-full">
+  <div class="usa-width-two-thirds">
+    <%= render partial: 'posts', object: @branch.service_specific_posts %>
+  </div>
+
+  <div class="sidebar-section usa-width-one-third">
+    <h4>Customer Service Info</h4>
+    <%= render partial: 'customer-service', locals: {'contact': @branch.branch_of_service_contact, 'policies': [{'name': 'Air Force Household Goods Policy', 'url': 'http://static.e-publishing.af.mil/production/1/af_a4_7/publication/afi24-501/afi24-501.pdf'}]} %>
+  </div>
+</div>

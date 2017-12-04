@@ -1,8 +1,6 @@
 class ServiceSpecificInformationController < ApplicationController
   def show
-    branch_id = params[:id] || 'army'
-    @branch = BranchOfService.includes(:service_specific_posts, :branch_of_service_contact).find(branch_id)
+    @branch = BranchOfService.includes(:service_specific_posts, :branch_of_service_contact).find(params[:id] || 'army')
     @branches = BranchOfService.all
-    render @branch.slug
   end
 end
