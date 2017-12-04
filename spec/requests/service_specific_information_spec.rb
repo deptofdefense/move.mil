@@ -10,8 +10,8 @@ RSpec.describe ServiceSpecificInformationController, type: :request do
         expect(response).to have_http_status(:success)
       end
 
-      it 'renders the default (army) template' do
-        assert_template 'army'
+      it 'renders the show template' do
+        assert_template 'show'
       end
     end
 
