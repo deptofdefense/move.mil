@@ -74,6 +74,7 @@ class PpmEstimator
     @estimator_params ||= @params.permit(:rank, :branch, :dependents, :married, :start, :end, :date, :weight, :weight_progear, :weight_progear_spouse, :selfpack)
   end
 
+  # returns the full_weight divided by 100, AKA the hundredweight (centiweight?)
   def cwt
     full_weight / 100
   end
