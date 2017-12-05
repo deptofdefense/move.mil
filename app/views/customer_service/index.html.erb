@@ -273,6 +273,13 @@
                         <td><%= simple_format(contact.claims_post, {}, wrapper_tag: 'span') %></td>
                       </tr>
                     <% end %>
+                    <% if branch.slug == 'army' %>
+                      <tr>
+                        <td colspan="2">
+                          For claims related moves to overseas (<%= abbr_tag('oconus') %>) locations, international claims contacts can be found <%= link_to 'here', service_specific_information_path('army') %>.
+                        </td>
+                      </tr>
+                    <% end %>
                   </tbody>
                 </table>
               </div>
