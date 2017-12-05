@@ -57,9 +57,7 @@
   var entitlementsJson = $('#entitlements-json').data('entitlementsJson');
 
   var getEntitlementWeightSelf = function(entitlement) {
-    return $('#dependents_yes').prop('checked') ?
-      (entitlement.total_weight_self_plus_dependents > 0 ? entitlement.total_weight_self_plus_dependents : 0) :
-      (entitlement.total_weight_self > 0 ? entitlement.total_weight_self : 0);
+    return $('#dependents_yes').prop('checked') ? entitlement.total_weight_self_plus_dependents : entitlement.total_weight_self;
   };
 
   var getEntitlementProgear = function(entitlement) {
