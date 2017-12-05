@@ -41,13 +41,13 @@ class PpmEstimator
   end
 
   def full_pack_range
-    @full_pack_range ||= range_rounded_to_multiples_of_100(full_pack_cost * discount_range.min, full_pack_cost * discount_range.max)
+    @full_pack_range ||= self.class.range_rounded_to_multiples_of_100(full_pack_cost * discount_range.min, full_pack_cost * discount_range.max)
   end
 
   def incentive_without_packing_range
     return @incentive_without_packing_range if @incentive_without_packing_range.present?
     cost_without_packing = linehaul_charges + non_linehaul_charges - full_pack_cost
-    @incentive_without_packing_range = range_rounded_to_multiples_of_100(cost_without_packing * discount_range.min, cost_without_packing * discount_range.max)
+    @incentive_without_packing_range = self.class.range_rounded_to_multiples_of_100(cost_without_packing * discount_range.min, cost_without_packing * discount_range.max)
   end
 
   def total_incentive_range
