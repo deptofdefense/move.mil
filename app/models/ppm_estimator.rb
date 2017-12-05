@@ -193,20 +193,21 @@ class PpmEstimator
     @discount_range ||= ([inv_linehaul_discount - 0.02, 0].max * 0.95)..([inv_linehaul_discount + 0.02, 1].min * 0.95)
   end
 
-  # returns the nearest integer multiple of 100 below the input, clamped to 0.
-  def floor_hundred(num)
-    [(num.to_i / 100) * 100, 0].max
+  # returns the nearest integer multiple of 100 less than or equal to the input
+  def self.floor_hundred(num)
+    (num - num % 100).to_i
   end
 
-  # returns the nearest integer multiple of 100 above the input
-  def ceil_hundred(num)
-    return num if (num % 100).zero?
-    (num.to_i / 100 + 1) * 100
+  # returns the nearest integer multiple of 100 greater than or equal to the input
+  def self.ceil_hundred(num)
+    remainder = num % 100
+    return num.to_i if remainder.zero?
+    (num + (100 - remainder)).to_i
   end
 
   # returns a Range of the supplied low and high values, where the bounds of
   # the Range have been rounded outward to the nearest multiples of 100
-  def range_rounded_to_multiples_of_100(low, high)
+  def self.range_rounded_to_multiples_of_100(low, high)
     floor_hundred(low)..ceil_hundred(high)
   end
 end
