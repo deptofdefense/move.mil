@@ -84,7 +84,7 @@ class PpmEstimator
   end
 
   def entitlement_self
-    estimator_params[:dependents] == 'yes' && entitlement.total_weight_self_plus_dependents ? entitlement.total_weight_self_plus_dependents : entitlement.total_weight_self
+    estimator_params[:dependents] == 'yes' ? entitlement.total_weight_self_plus_dependents : entitlement.total_weight_self
   end
 
   def entitlement_progear
