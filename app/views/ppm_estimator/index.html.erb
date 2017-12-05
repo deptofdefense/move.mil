@@ -27,7 +27,7 @@
     <fieldset>
       <legend><div class="ppm-outline"></div>What is your branch of service?</legend>
         <%= form.label :branch, 'Branch of Service' %>
-        <%= form.select :branch, [['Air Force', 'air-force'], ['Army', 'army'], ['Coast Guard', 'coast-guard'], ['Marine Corps', 'marines'], ['Navy', 'navy']], { include_blank: true }, { id: :branch, required: true } %>
+        <%= form.select :branch, options_from_collection_for_select(@branches, :slug, :name), { include_blank: true }, { id: :branch, required: true } %>
     </fieldset>
 
     <fieldset>

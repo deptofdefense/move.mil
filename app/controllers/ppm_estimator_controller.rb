@@ -1,7 +1,6 @@
 class PpmEstimatorController < ApplicationController
   def index
-    # The entitlements are used to populate some of the drop downs in the form
-    return entitlements unless request.xhr?
+    return lookups unless request.xhr?
     return render plain: '', status: :not_found unless ppm_estimator.valid?
 
     render partial: 'ppm_estimator/estimate_table'
@@ -9,9 +8,11 @@ class PpmEstimatorController < ApplicationController
 
   private
 
-  def entitlements
+  # populate some of the drop downs in the form
+  def lookups
     @entitlements ||= Entitlement.all
     @entitlements_json ||= @entitlements.to_json
+    @branches ||= BranchOfService.select(:name, :slug)
   end
 
   def ppm_estimator

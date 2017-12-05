@@ -5,7 +5,7 @@ class PpmEstimator
   end
 
   def advance_percentage
-    estimator_params[:branch] == 'marines' ? 50 : 60
+    estimator_params[:branch] == 'marine-corps' ? 50 : 60
   end
 
   def date
