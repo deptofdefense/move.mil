@@ -1,9 +1,11 @@
 <%- @page_title = 'Personally Procured Move (PPM) Estimator' -%>
 
+<%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: [{name: 'Tools & Resources', path: page_path('resources')}]} %>
+
 <div class="usa-section main-section">
   <h1><%= @page_title %></h1>
 
-  <h4>
+<h4>
     For your upcoming move, get an estimate for how much the government will
     pay <strong>you</strong> if you choose to "do it yourself."
   </h4>
