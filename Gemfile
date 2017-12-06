@@ -18,6 +18,7 @@ gem 'lograge', '~> 0.7.1'
 gem 'pg', '~> 0.21.0'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.1', '>= 5.1.4'
+gem 'roo', '~> 2.7.1', require: false
 gem 'sass', '~> 3.5', '>= 3.5.4'
 gem 'sass-rails', '~> 5.0', '>= 5.0.6'
 gem 'uglifier', '~> 4.0', '>= 4.0.2'
