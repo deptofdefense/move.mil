@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :entitlements, only: [:index, :show]
-  resources :tutorials, only: [:index, :show]
 
   get '/customer-service', to: 'customer_service#index', as: 'customer_service'
   get '/faqs', to: 'faqs#index', as: 'faqs'
@@ -13,6 +12,7 @@ Rails.application.routes.draw do
   post '/resources/locator-maps', to: 'offices#index'
   get '/resources/weight-estimator', to: 'weight_estimator#index', as: 'weight_estimator'
   get '/service-specific-information(/:id)', to: 'service_specific_information#show', as: 'service_specific_information'
+  get '/tutorials(/:id)', to: 'tutorials#show', as: 'tutorials'
 
   get '/browserconfig.xml', to: 'meta#browserconfig', format: :xml
   get '/manifest.json', to: 'meta#manifest', format: :json

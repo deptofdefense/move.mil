@@ -1,9 +1,6 @@
 class TutorialsController < ApplicationController
-  def index
-    @tutorials = Tutorial.includes(:tutorial_steps).all
-  end
-
   def show
-    @tutorial = Tutorial.includes(:tutorial_steps).find(params[:id])
+    @tutorials = Tutorial.includes(:tutorial_steps).all
+    @tutorial = params[:id] ? @tutorials.find {|tutorial| tutorial.slug == params[:id]} : @tutorial = @tutorials.first
   end
 end
