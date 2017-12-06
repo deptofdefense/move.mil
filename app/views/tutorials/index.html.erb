@@ -5,5 +5,13 @@
 <div class="usa-section main-section">
   <h1><%= @page_title %></h1>
 
-  
+  <%= render partial: 'shared/sidenav' %>
+    <%- @tutorials.each do |tutorial| -%>
+      <li><%= link_to tutorial.title, '#' + tutorial.slug %></li>
+    <%- end -%>
+  <% end %>
+
+  <div class="sidenav-body">
+
+  </div>
 </div>
