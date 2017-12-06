@@ -19,11 +19,6 @@
 
 .carousel-item-content {
   margin: 0;
-  padding: 0 3rem;
-
-  @include media($nav-width) {
-    padding: 0 5rem;
-  }
 
   img {
     border: 1px solid $color-gray-light;
@@ -34,14 +29,17 @@
     font-size: $h5-font-size;
     margin: 1rem 0;
   }
+
+  figcaption {
+    @include margin(0 10rem);
+  }
 }
 
 .owl-next,
 .owl-prev {
   font-size: 0;
-  margin-top: -2rem;
   position: absolute;
-  top: 40%;
+  top: 73%;
 
   &:after {
     background-position: 50% 50%;

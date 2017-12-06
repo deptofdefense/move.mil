@@ -9,6 +9,7 @@
       0: {
         items: 1
       }
-    }
+    },
+    autoHeight: true
   });
 })(window, jQuery);
