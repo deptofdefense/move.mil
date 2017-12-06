@@ -1,6 +1,6 @@
 - title: Log In to DPS (New User)
   tutorial_steps:
-    - image_path: tutorials/new-user-registration-01.png
+    - image_path: tutorials/new-user-registration-01.jpg
       content: >
         <p>Go to <a href="https://eta.sddc.army.mil/ETASSOPortal/default.aspx">Electronic Transportation Acquisition (ETA)</a> and click “New User Registration.”</p>
     - image_path: tutorials/new-user-registration-02.png
