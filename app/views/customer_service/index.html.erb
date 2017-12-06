@@ -212,7 +212,7 @@
         <%- @branches.each do |branch| -%>
           <% contact = branch.branch_of_service_contact %>
           <% if contact %>
-            <div class="usa-grid-full">
+            <div class="usa-grid-full grid-table">
               <div class="usa-width-one-fourth">
                 <h5><%= branch.name %></h5>
               </div>
@@ -270,12 +270,14 @@
                     <% if contact.claims_post %>
                       <tr>
                         <th scope="row">Address:</th>
-                        <td><%= simple_format(contact.claims_post) %></td>
+                        <td><%= simple_format(contact.claims_post, {}, wrapper_tag: 'span') %></td>
                       </tr>
-                    <% else %>
+                    <% end %>
+                    <% if branch.slug == 'army' %>
                       <tr>
-                        <td></td>
-                        <td><p></p></td>
+                        <td colspan="2">
+                          For claims related moves to overseas (<%= abbr_tag('oconus') %>) locations, international claims contacts can be found <%= link_to 'here', service_specific_information_path('army') %>.
+                        </td>
                       </tr>
                     <% end %>
                   </tbody>
@@ -314,7 +316,7 @@
         <%- @branches.each do |branch| -%>
           <% contact = branch.branch_of_service_contact %>
           <% if contact.try(:retiree_contact_info?) and not branch.name == 'Army' %>
-            <div class="usa-grid-full">
+            <div class="usa-grid-full grid-table">
               <div class="usa-width-one-fourth">
                 <h5><%= branch.name %></h5>
               </div>
@@ -366,12 +368,7 @@
                     <% if contact.retiree_post %>
                       <tr>
                         <th scope="row">Address:</th>
-                        <td><%= simple_format(contact.retiree_post) %></td>
-                      </tr>
-                    <% else %>
-                      <tr>
-                        <td></td>
-                        <td><p></p></td>
+                        <td><%= simple_format(contact.retiree_post, {}, wrapper_tag: 'span') %></td>
                       </tr>
                     <% end %>
                   </tbody>
