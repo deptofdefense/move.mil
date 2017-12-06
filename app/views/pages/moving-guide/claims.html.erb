@@ -1,0 +1,193 @@
+<%- @page_title = 'Lost & Damage Claims' -%>
+
+<%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: []} %>
+
+<div class="usa-section main-section">
+  <h1><%= @page_title %></h1>
+
+  <%= render layout: 'shared/sidenav' do %>
+    <li><%= link_to 'Lost & Damaged Household Goods Items', '#lost-damaged-items' %></li>
+    <li><%= link_to 'What does "Full Replacement" Value" mean?', '#full-replacement-value' %></li>
+    <li><%= link_to 'Loss & Damage Report', '#report' %></li>
+    <li><%= link_to 'Itemized Claim', '#claim' %></li>
+    <li><%= link_to 'Residential Damage', '#residential-damage' %></li>
+  <% end %>
+
+  <div class="sidenav-body what-to-expect-body">
+    <div class="what-to-expect-intro">
+      While we hope all of your items arrived in one piece, the reality is that isn’t always the case. If you have any questions about this process, you can contact your <%= link_to 'Military Claims Office', page_path( 'customer-service', anchor: 'claims') %>.
+    </div>
+
+    <div class="what-to-expect-section">
+      <h4 id="lost-damaged-items">Lost &amp; Damaged Household Goods Items</h4>
+
+      <p>If any of your household goods are lost or damaged during the moving process, you are entitled to the full replacement value of that item, assuming your claim is filed in a timely manner. <strong>All claims must be submitted on the <%= link_to 'Defense Personal Property System (DPS)', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %>, which is the portal your move originally was scheduled in.</strong> However, if you and your transportation service provider (TSP) cannot negotiate a settlement on those items, you should later transfer the claim to your <%= link_to 'Military Claims Office', page_path( 'customer-service', anchor: 'claims') %> so that they can help.</p>
+
+      <div class="usa-media_block pro-tip">
+        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
+        <div class="usa-media_block-body">
+          <strong>Pro-Tip:</strong> You can only accept compensation for a single item once during the moving process, so be careful when you negotiate or accept payment with your transportation service provider. Sometimes, if something is immediately recognized as damaged on delivery, the moving company will offer you up to $500 that day, which is called a “quick claim”. If you accept that payment, you cannot file claims on those items later on to recieve the full replacement value.
+        </div>
+      </div>
+    </div>
+
+    <div class="what-to-expect-section">
+      <h4 id="full-replacement-value">What does "Full Replacement" Value" mean?</h4>
+
+      <p>When you are moving with the military, your items are insured at “Full Replacement Value” at no additional cost to the service family. Essentially, this means that if an item is lost or destroyed during the move, the carrier should pay to replace it with a like item. The replacement could be new, used, or if the item is damaged, repaired to fulfill the “Full Replacement Value” policy. The carrier will still require proof of the item's value and quality and will likely want evidence of the cost to replace it.</p>
+    </div>
+
+    <div class="what-to-expect-section">
+      <h4 id="report">Loss &amp; Damage Report</h4>
+
+      <p>A Loss/Damage Report allows you to notify the moving company of your intent to file a claim for missing or damaged items. The big advantage of filing the Loss/Damage report is that it extends the amount of time you can file claims and still receive the full replacement value. <strong>Remember… a Loss/Damage Report is NOT a claim. You must still file a itemized claim to receive reimbursement!</strong></p>
+
+      <p><strong>Damage found on Pack-Up/Delivery Day:</strong> If you notice any lost or damaged items on delivery day, you should ask the driver to complete and sign a DD1840 form. (The driver should have copies of this form on hand, but if you want to be super prepared, you can print a few copies yourself.) Of course you can always report these items after the fact, but the advantage of doing it on moving day is that both you and your transportation service provider (TSP) are agreeing that damage occured up front. That can lead to fewer disputes later on in the claims process and potentially higher settlements. If you and the driver complete a paper DD1840 form, a copy of this document must be uploaded to the <%= link_to 'Defense Personal Property System (DPS)', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %> within 30 days of your delivery date.</p>
+
+      <p><%= link_to 'For help submitting a Loss & Damage Report, follow this step-by-step tutorial.', page_path('tutorials') %></p>
+
+      <p>
+        <strong>Important Dates:</strong>
+        <br>
+        Submitting a Loss &amp; Damage Report is optional, but more time and flexibility.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">Important Dates WITH Loss/Damage Report</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Delivery Day (Optional)</th>
+            <td>For any lost or damaged items discovered on delivery day, request that your moving driver complete and sign a DD1840 form. Having mutual agreement on major items can lead to fewer disputes when you settle the reimbursement value later on.</td>
+          </tr>
+          <tr>
+            <th scope="row">Up to 30 days after Delivery Date</th>
+            <td>If applicable: Electronically file the DD1840 form created on Delivery Day on the <%= link_to 'Defense Personal Property System (DPS)', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %>.</td>
+          </tr>
+          <tr>
+            <th scope="row">Up to 75 days after Delivery Date</th>
+            <td>Sign-In to the <%= link_to 'Defense Personal Property System (DPS)', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %> and submit a Loss/Damage Report (DD1840R) indicating your intent to file a claim.</td>
+          </tr>
+          <tr>
+            <th scope="row">Up to 9 Months after Delivery Date</th>
+            <td>Sign-In to the <%= link_to 'Defense Personal Property System (DPS)', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %> and submit itemized claims for any lost or damaged items for full replacement value.</td>
+          </tr>
+          <tr>
+            <th scope="row">Between 9 Months and 2 years after Delivery Day</th>
+            <td>Contact the <%= link_to 'Military Claims Office', page_path( 'customer-service', anchor: 'claims') %> for help receiving partial replacement value for any lost or damaged items not previously submitted.</td>
+          </tr>
+          <tr>
+            <th scope="row">60 Days after Claim Submission</th>
+            <td>Your moving company (Transportation Service Provider) should pay, deny, or make a counter to your claim within 60 days after your claim is final.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">Important Dates WITHOUT Loss/Damage Report</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Up to 75 Days after Delivery Day</th>
+            <td>Sign-In to the <%= link_to 'Defense Personal Property System (DPS)', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %> and submit itemized claims for any lost or damaged items for full replacement value.</td>
+          </tr>
+          <tr>
+            <th scope="row">Between 75 Days and 2 years after Delivery Day</th>
+            <td>Contact the <%= link_to 'Military Claims Office', page_path( 'customer-service', anchor: 'claims') %> for help receiving partial replacement value for any lost or damaged items not previously submitted.</td>
+          </tr>
+          <tr>
+            <th scope="row">60 Days after Claim Submission</th>
+            <td>Your moving company (Transportation Service Provider) should pay, deny, or make a counter to your claim within 60 days after your claim is final.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="usa-media_block pro-tip">
+        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
+        <div class="usa-media_block-body">
+          <strong>Pro-Tip:</strong> If you file a Loss/Damage Report, you can submit claims for any additional lost or damaged items discovered after the initial 75 Day window… even if it wasn’t included on the original Loss/Damage Report.
+        </div>
+      </div>
+    </div>
+
+    <div class="what-to-expect-section">
+      <h4 id="claim">Itemized Claim</h4>
+
+      <p>Regardless of whether you submit a Loss &amp; Damage Report, you must submit an itemized claim in the <%= link_to 'Defense Personal Property System (DPS)', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %> for every item that was lost or damaged during the moving process.</p>
+
+      <p>Before logging into the system, save yourself some time by gather as much of the information below as possible. The more details you can provide the better. If you have before and after photos or receipts of the item, that will <strong>significantly help</strong> throughout the process.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Artifact</th>
+            <th scope="col">Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Manufacturer</th>
+            <td>Samsung</td>
+          </tr>
+          <tr>
+            <th scope="row">Brief Description of Item</th>
+            <td>Front-Load Washing Machine Model No. ABC12345</td>
+          </tr>
+          <tr>
+            <th scope="row">Inventory Item Number</th>
+            <td>#78</td>
+          </tr>
+          <tr>
+            <th scope="row">Cost at Purchase</th>
+            <td>$1,000</td>
+          </tr>
+          <tr>
+            <th scope="row">Year of Purchase</th>
+            <td>2016</td>
+          </tr>
+          <tr>
+            <th scope="row">Description of Damage</th>
+            <td>Plexiglass on washing machine door has been broken.</td>
+          </tr>
+          <tr>
+            <th scope="row">Repair Estimate (Optional)</th>
+            <td>$250 from Samsung Repair Wizard</td>
+          </tr>
+          <tr>
+            <th scope="row">Photos &amp; Reciepts (if available)</th>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>When you sign in to the <%= link_to 'Defense Personal Property System (DPS)', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %>, if you started with a Loss/Damage Report, you can export all the data you entered directly into the Claims system. If some of the items that were lost are now found, you can remove them before you submit the final claim.</p>
+
+      <p>After you have submitted the claim to the moving company, they are responsible for obtaining repair estimates for any of the damaged or lost items. They may send out an adjuster to take a look at the item if it’s serious as well.</p>
+
+      <p><strong>The moving company must pay, deny or make an offer within 60 days of the completed claim submission.</strong> You will have the opportunity to accept or reject the offer for each item that you have claimed. Remember, this is a negotiation, so if you are not happy with the offer, you should reject it.</p>
+
+      <p>If you are unable to come to an agreement with the moving company, your next step is to transfer the claim to your <%= link_to 'Military Claims Office', page_path( 'customer-service', anchor: 'claims') %>. The Military Claims Office will take over from there but it’s important you stay in close contact with them throughout the process. As we stated from the start, you need to stay proactive throughout the process and it’s recommended you follow-up with the moving company and/or the Military Claims Office.</p>
+
+      <div class="usa-media_block pro-tip">
+        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
+        <div class="usa-media_block-body">
+          <strong>Pro-Tip:</strong> There is a misconception that the Military Claims Office only helps you get partial replacement value for your household goods. This is not the case. The Military Claims Office will pay out a partial replacement value and then continue to negotiate for the full replacement value on your behalf. If they are successful, you will get the full replacement value for the damaged item.
+        </div>
+      </div>
+    </div>
+
+    <div class="what-to-expect-section">
+      <h4 id="residential-damage">Residential Damage</h4>
+
+      <p>If your transportation service provider (TSP) causes any damage to your home or residence, you should contact your moving company directly and arrange for the damage to be fixed. An example of damage might include scratched hardwood floors, dented walls, torn grass, etc.</p>
+
+      <p>If you have any problems negotiating your residential damage claim with the moving company, you can contact your <%= link_to 'local Personal Property Office', offices_path %> Quality Assurance Inspector or <%= link_to 'Military Claims Office', page_path( 'customer-service', anchor: 'claims') %> for assistance.</p>
+    </div>
+  </div>
+</div>

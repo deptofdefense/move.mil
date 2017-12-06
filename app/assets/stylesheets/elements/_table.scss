@@ -1,6 +1,5 @@
 table tbody {
   th {
-    font-weight: $font-bold;
     vertical-align: top;
   }
 
@@ -56,6 +55,8 @@ table tbody {
   }
 
   th {
+    font-weight: $font-bold;
+
     @include media($medium-screen) {
       text-align: center;
 
