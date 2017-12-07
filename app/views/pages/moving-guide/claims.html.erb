@@ -23,12 +23,9 @@
 
       <p>If any of your household goods are lost or damaged during the moving process, you are entitled to the full replacement value of that item, assuming your claim is filed in a timely manner. <strong>All claims must be submitted on the <%= link_to 'Defense Personal Property System (DPS)', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %>, which is the portal your move originally was scheduled in.</strong> However, if you and your transportation service provider (TSP) cannot negotiate a settlement on those items, you should later transfer the claim to your <%= link_to 'Military Claims Office', page_path( 'customer-service', anchor: 'claims') %> so that they can help.</p>
 
-      <div class="usa-media_block pro-tip">
-        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-        <div class="usa-media_block-body">
-          <strong>Pro-Tip:</strong> You can only accept compensation for a single item once during the moving process, so be careful when you negotiate or accept payment with your transportation service provider. Sometimes, if something is immediately recognized as damaged on delivery, the moving company will offer you up to $500 that day, which is called a “quick claim”. If you accept that payment, you cannot file claims on those items later on to recieve the full replacement value.
-        </div>
-      </div>
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tip:</strong> You can only accept compensation for a single item once during the moving process, so be careful when you negotiate or accept payment with your transportation service provider. Sometimes, if something is immediately recognized as damaged on delivery, the moving company will offer you up to $500 that day, which is called a “quick claim”. If you accept that payment, you cannot file claims on those items later on to recieve the full replacement value.
+      <% end %>
     </div>
 
     <div class="what-to-expect-section">
@@ -108,12 +105,9 @@
         </tbody>
       </table>
 
-      <div class="usa-media_block pro-tip">
-        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-        <div class="usa-media_block-body">
-          <strong>Pro-Tip:</strong> If you file a Loss/Damage Report, you can submit claims for any additional lost or damaged items discovered after the initial 75 Day window… even if it wasn’t included on the original Loss/Damage Report.
-        </div>
-      </div>
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tip:</strong> If you file a Loss/Damage Report, you can submit claims for any additional lost or damaged items discovered after the initial 75 Day window… even if it wasn’t included on the original Loss/Damage Report.
+      <% end %>
     </div>
 
     <div class="what-to-expect-section">
@@ -174,12 +168,9 @@
 
       <p>If you are unable to come to an agreement with the moving company, your next step is to transfer the claim to your <%= link_to 'Military Claims Office', page_path( 'customer-service', anchor: 'claims') %>. The Military Claims Office will take over from there but it’s important you stay in close contact with them throughout the process. As we stated from the start, you need to stay proactive throughout the process and it’s recommended you follow-up with the moving company and/or the Military Claims Office.</p>
 
-      <div class="usa-media_block pro-tip">
-        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-        <div class="usa-media_block-body">
-          <strong>Pro-Tip:</strong> There is a misconception that the Military Claims Office only helps you get partial replacement value for your household goods. This is not the case. The Military Claims Office will pay out a partial replacement value and then continue to negotiate for the full replacement value on your behalf. If they are successful, you will get the full replacement value for the damaged item.
-        </div>
-      </div>
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tip:</strong> There is a misconception that the Military Claims Office only helps you get partial replacement value for your household goods. This is not the case. The Military Claims Office will pay out a partial replacement value and then continue to negotiate for the full replacement value on your behalf. If they are successful, you will get the full replacement value for the damaged item.
+      <% end %>
     </div>
 
     <div class="what-to-expect-section">

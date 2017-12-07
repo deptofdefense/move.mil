@@ -39,10 +39,9 @@
         </div>
         <p><span class="quotation-mark">“</span>Last Monday, the movers took a giant chunk out of my wall and when I pointed it out to them, they proceeded to argue with me over if was already there. After some back and forth they agreed to fix-it before they left. I went over to check out their handiwork… they had duck taped over the wall and painted over it! In the grand scheme of things, a little drywall is not a big deal, but when you are out of time, closing on your home, living in lodging, have family already on the road ahead of you, and your ability to fix it is limited.<span class="quotation-mark">”</span></p>
       </div>
-      <div class="usa-media_block pro-tip">
-        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-        <div class="usa-media_block-body"><strong>Pro-Tip:</strong> Photograph your house condition the morning before the packers arrive. If anything becomes damaged, take photos of that as well. Report any damage to your moving company. They are responsible for fixing any residential damage they cause during the move. If you have problems, you can contact the Quality Assurance Inspector at your <%= link_to 'local personal property office', offices_path %> for help.</div>
-      </div>
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tip:</strong> Photograph your house condition the morning before the packers arrive. If anything becomes damaged, take photos of that as well. Report any damage to your moving company. They are responsible for fixing any residential damage they cause during the move. If you have problems, you can contact the Quality Assurance Inspector at your <%= link_to 'local personal property office', offices_path %> for help.
+      <% end %>
     </div>
 
     <div class="what-to-expect-section" id="car-key">
@@ -53,10 +52,9 @@
         </div>
         <p><span class="quotation-mark">“</span>When the packers come there's an absolute flurry of activity, everything getting boxed up. It's impossible to watch absolutely everything. On one of our moves, the movers packed up the whole house, closed the truck, and was preparing to drive off when my husband realized we couldn’t find the car keys—I had put them on the kitchen counter earlier that morning. My husband ran outside and chased the moving truck down the street. They returned and started unpacking all of our boxes until they found our keys!<span class="quotation-mark">”</span></p>
       </div>
-      <div class="usa-media_block pro-tip">
-        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-        <div class="usa-media_block-body"><strong>Pro-Tip:</strong> Before the packers come, separate anything you don't want packed in a separate room or put them in your car. Aggressively mark this area off limits with tape/signage.</div>
-      </div>
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tip:</strong> Before the packers come, separate anything you don't want packed in a separate room or put them in your car. Aggressively mark this area off limits with tape/signage.
+      <% end %>
     </div>
 
     <div class="what-to-expect-section" id="soiled-sofa">
@@ -67,10 +65,9 @@
         </div>
         <p><span class="quotation-mark">“</span>Before we moved, against our better judgement we bought a new sofa from Costco. Because we were moving, we left it in the box. Our movers actually tried to convince me that my brand new, in the box sofa  needed to be marked with every pre-existing condition acronym possible since surely it had just left a war zone.<span class="quotation-mark">”</span></p>
       </div>
-      <div class="usa-media_block pro-tip">
-        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-        <div class="usa-media_block-body"><strong>Pro-Tip:</strong> You don't have to agree with your inventory. You should read it carefully and DO NOT sign it (no matter what the moving company says) until you make sure your all your items are listed and agree with the condition. On the bottom of the form there is usually a remarks section where you can add items and annotate any conditions that you don't agree with. If you need more space, ask your moving company for another sheet. To prepare, we recommend <%= link_to 'making your own “high value” inventory', page_path('resources/inventory-form') %> of items you care most about. This makes it easier to check the mover's inventory.<br/><br/>Also those codes are industry standards and the meanings can be found <%= link_to 'here', 'https://www.ustranscom.mil/cmd/associated/dteb/files/refdata/V_D_PPLB_HHGDI_EX_CD.htm' %>.</div>
-      </div>
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tip:</strong> You don't have to agree with your inventory. You should read it carefully and DO NOT sign it (no matter what the moving company says) until you make sure your all your items are listed and agree with the condition. On the bottom of the form there is usually a remarks section where you can add items and annotate any conditions that you don't agree with. If you need more space, ask your moving company for another sheet. To prepare, we recommend <%= link_to 'making your own “high value” inventory', page_path('resources/inventory-form') %> of items you care most about. This makes it easier to check the mover's inventory.<br/><br/>Also those codes are industry standards and the meanings can be found <%= link_to 'here', 'https://www.ustranscom.mil/cmd/associated/dteb/files/refdata/V_D_PPLB_HHGDI_EX_CD.htm' %>.
+      <% end %>
     </div>
   </div>
 </div>
