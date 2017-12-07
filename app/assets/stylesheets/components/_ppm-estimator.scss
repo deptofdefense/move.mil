@@ -7,10 +7,6 @@
   counter-reset: level;
   padding-left: 5rem;
 
-  button {
-    margin-top: 3.4rem;
-  }
-
   fieldset {
     counter-increment: level;
     margin-top: 2.8rem;
@@ -115,56 +111,4 @@
   margin-bottom: 0.5rem;
   text-align: right;
   width: 40%;
-}
-
-.ppm-image-selector input{
-  appearance: none;
-  margin: 0;
-  padding: 0;
-  -webkit-appearance: none;
-}
-
-.ppm-image-selector input:active +.ppm-image-label {
-  opacity: .9;
-}
-
-.ppm-image-selector input:checked +.ppm-image-label {
-  background-color: $color-primary;
-  border-radius: 100%;
-  filter: none;
-  -webkit-filter: none;
-}
-
-.conus-image {
-  background-image: url(image_path('conus.svg'));
-}
-
-.oconus-image {
-  background-image: url(image_path('oconus.svg'));
-}
-
-.ppm-image-label {
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
-  display: inline-block;
-  filter: brightness(1.8) grayscale(1) opacity(.7);
-  height: 7rem;
-  margin-right: 0;
-  margin-top: 0;
-  padding-top: 7rem;
-  text-align: center;
-  transition: all 100ms ease-in;
-  width: 7rem;
-  -webkit-transition: all 100ms ease-in;
-  -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
-
-  :hover {
-    filter: brightness(1.2) grayscale(.5) opacity(.9);
-    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
-  }
-}
-
-[type=radio] + .ppm-image-label::before {
-  content: unset;
 }

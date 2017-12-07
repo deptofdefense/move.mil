@@ -11,7 +11,6 @@ class PpmEstimatorController < ApplicationController
   # populate some of the drop downs in the form
   def lookups
     @entitlements ||= Entitlement.all
-    @entitlements_json ||= @entitlements.to_json
     @branches ||= BranchOfService.select(:name, :slug)
   end
 

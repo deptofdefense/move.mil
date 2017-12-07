@@ -5,7 +5,7 @@
 <div class="usa-section main-section">
   <h1><%= @page_title %></h1>
 
-<h4>
+  <h4>
     For your upcoming move, get an estimate for how much the government will
     pay <strong>you</strong> if you choose to "do it yourself."
   </h4>
@@ -20,30 +20,26 @@
   <%= form_with url: ppm_estimator_path, class: 'ppm-form', id: 'ppm-estimate-form', method: 'get' do |form| %>
     <fieldset>
       <legend><div class="ppm-outline"></div>What is your rank?</legend>
-        <%= form.label :rank, 'Rank' %>
-        <%= form.select :rank, options_from_collection_for_select(@entitlements, :slug, :rank), { include_blank: true }, { id: :rank, required: true } %>
+      <%= form.label :rank, 'Rank' %>
+      <%= form.select :rank, options_from_collection_for_select(@entitlements, :slug, :rank), { include_blank: true }, { id: :rank, required: true } %>
     </fieldset>
 
     <fieldset>
       <legend><div class="ppm-outline"></div>What is your branch of service?</legend>
-        <%= form.label :branch, 'Branch of Service' %>
-        <%= form.select :branch, options_from_collection_for_select(@branches, :slug, :name), { include_blank: true }, { id: :branch, required: true } %>
+      <%= form.label :branch, 'Branch of Service' %>
+      <%= form.select :branch, options_from_collection_for_select(@branches, :slug, :name), { include_blank: true }, { id: :branch, required: true } %>
     </fieldset>
 
     <fieldset>
       <legend><div class="ppm-outline"></div>Do you have dependents?</legend>
       <%= form.radio_button :dependents, 'yes', { id: :dependents_yes, required: true } %>
-      <%= form.label :dependents, raw('<strong>Yes</strong>, I have dependents'), :value => 'yes' %>
+      <%= form.label :dependents, value: 'yes' do %>
+        <strong>Yes</strong>, I have dependents
+      <% end %>
       <%= form.radio_button :dependents, 'no', { id: :dependents_no, required: true } %>
-      <%= form.label :dependents, raw('<strong>No</strong>, I do not have dependents'), :value => 'no' %>
-    </fieldset>
-
-    <fieldset>
-      <legend><div class="ppm-outline"></div>Are you married?</legend>
-      <%= form.radio_button :married, 'yes', { id: :married_yes, required: true } %>
-      <%= form.label :married, raw('<strong>Yes</strong>, I am married'), :value => 'yes' %>
-      <%= form.radio_button :married, 'no', { id: :married_no, required: true } %>
-      <%= form.label :married, raw('<strong>No</strong>, I am not married'), :value => 'no' %>
+      <%= form.label :dependents, value: 'no' do %>
+        <strong>No</strong>, I do not have dependents
+      <% end %>
     </fieldset>
 
     <fieldset>
@@ -70,7 +66,7 @@
       <%= form.date_field :date, { id: :date, pattern: '\d\d\d\d-\d\d?-\d\d?', placeholder: 'yyyy-mm-dd', required: true } %>
     </fieldset>
 
-    <%= tag.div id: 'entitlements-json', data: { entitlements_json: @entitlements_json } %>
+    <%= tag.div id: 'entitlements-json', data: { entitlements_json: @entitlements.to_json } %>
 
     <fieldset>
       <legend><div class="ppm-outline"></div>How much, in pounds, do you expect to move without the government's help?</legend>
@@ -95,39 +91,13 @@
           Your ProGear allowance is up to <strong><span id="entitlement_progear"></span> lbs</strong>.
         </p>
       </div>
-      <div id="progear-spouse-section" hidden>
+      <div id="progear-spouse-section">
         <%= form.label :weight_progear_spouse, "Estimated Spouse's ProGear Weight (lbs)" %>
         <%= form.number_field :weight_progear_spouse, { id: :weight_progear_spouse, inputmode: 'numeric', required: false } %>
         <p id="progear-spouse-allowance-text">
           Your spouse's ProGear allowance is up to <strong><span id="entitlement_progear_spouse"></span> lbs</strong>.
         </p>
       </div>
-    </fieldset>
-
-    <fieldset>
-      <legend><div class="ppm-outline"></div>Do you plan to pack your household goods yourself?</legend>
-      <p>
-        In addition to shipping your property yourself, you can also choose to
-        pack your property yourself, and the government will pay you an incentive
-        to do this. The payment can be used to cover things like packing materials
-        and hiring any professional help you may need to pack your house. If
-        there's any money left over, you can keep it!
-        <a href="javascript:$('#alert-packing-incentive').removeAttr('hidden');">How do I make sure the government pays me my packing incentive?</a>
-      </p>
-      <div class="usa-alert usa-alert-info" id="alert-packing-incentive" hidden>
-        <div class="usa-alert-body">
-          <p class="usa-alert-text">
-            In order to get your packing incentive, when scheduling your move
-            in DPS (self-counseling), be sure to answer “Yes” to the question,
-            “Do you require packing?”
-          </p>
-          <a href="javascript:$('#alert-packing-incentive').attr('hidden', true);">Hide</a>
-        </div>
-      </div>
-      <%= form.radio_button :selfpack, 'yes', { id: :selfpack_yes, required: true }  %>
-      <%= form.label :selfpack, 'Yes', :value => 'yes' %>
-      <%= form.radio_button :selfpack, 'no', { id: :selfpack_no, required: true } %>
-      <%= form.label :selfpack, 'No', :value => 'no' %>
     </fieldset>
 
     <button>Calculate My Estimate</button>

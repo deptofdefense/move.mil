@@ -24,34 +24,9 @@ class PpmEstimator
     @end_zip3 ||= Zip3.find_by(zip3: estimator_params[:end][0, 3].to_i)
   end
 
-  def peak_season?
-    @peak_season ||= (Date.new(date.year, 5, 15)..Date.new(date.year, 9, 30)).cover?(date)
-  end
-
-  def selfpack?
-    estimator_params[:selfpack] == 'yes'
-  end
-
-  def packing_weight
-    selfpack? ? "#{full_weight} lbs" : '(Government-provided packing)'
-  end
-
-  def packing_incentive
-    selfpack? ? "$#{full_pack_range.min}–$#{full_pack_range.max}" : '$0'
-  end
-
-  def full_pack_range
-    @full_pack_range ||= self.class.range_rounded_to_multiples_of_100(full_pack_cost * discount_range.min, full_pack_cost * discount_range.max)
-  end
-
-  def incentive_without_packing_range
-    return @incentive_without_packing_range if @incentive_without_packing_range.present?
-    cost_without_packing = linehaul_charges + non_linehaul_charges - full_pack_cost
-    @incentive_without_packing_range = self.class.range_rounded_to_multiples_of_100(cost_without_packing * discount_range.min, cost_without_packing * discount_range.max)
-  end
-
   def total_incentive_range
-    @total_incentive_range ||= selfpack? ? (full_pack_range.min + incentive_without_packing_range.min)..(full_pack_range.max + incentive_without_packing_range.max) : incentive_without_packing_range
+    @total_cost ||= linehaul_charges + non_linehaul_charges
+    @total_incentive_range ||= self.class.range_rounded_to_multiples_of_100(@total_cost * discount_range.min, @total_cost * discount_range.max)
   end
 
   def advance_range
@@ -60,7 +35,7 @@ class PpmEstimator
 
   def valid?
     # weight_progear and weight_progear_spouse can be empty, will be regarded as 0
-    required_params = %w[rank branch dependents married start end date weight selfpack]
+    required_params = %w[rank branch dependents start end date weight]
 
     estimator_params.permitted? &&
       (required_params - estimator_params.keys).empty? &&
@@ -71,7 +46,7 @@ class PpmEstimator
   private
 
   def estimator_params
-    @estimator_params ||= @params.permit(:rank, :branch, :dependents, :married, :start, :end, :date, :weight, :weight_progear, :weight_progear_spouse, :selfpack)
+    @estimator_params ||= @params.permit(:rank, :branch, :dependents, :start, :end, :date, :weight, :weight_progear, :weight_progear_spouse)
   end
 
   # returns the full_weight divided by 100, AKA the hundredweight (centiweight?)
@@ -92,7 +67,7 @@ class PpmEstimator
   end
 
   def entitlement_progear_spouse
-    estimator_params[:married] == 'yes' && entitlement.pro_gear_weight_spouse ? entitlement.pro_gear_weight_spouse : 0
+    entitlement.pro_gear_weight_spouse || 0
   end
 
   def weight_self_limited
@@ -105,10 +80,6 @@ class PpmEstimator
 
   def weight_progear_spouse_limited
     [estimator_params[:weight_progear_spouse].to_i, entitlement_progear_spouse].min
-  end
-
-  def full_pack_cost
-    @full_pack_cost ||= FullPack.rate(effective_400ng_date, orig_svc_area.services_schedule, full_weight) * cwt
   end
 
   def orig_svc_area
@@ -169,14 +140,8 @@ class PpmEstimator
     )
   end
 
-  def base_rate
-    return BaseLinehaul.rate(effective_400ng_date, distance, full_weight) unless full_weight < 1000
-    # pro-rate the 1000 lb baseline rate for shipments less than 1000 lbs
-    BaseLinehaul.rate(effective_400ng_date, distance, 1000) * (full_weight / 1000.0)
-  end
-
   def linehaul_charges
-    base_rate + (orig_svc_area.linehaul_factor + dest_svc_area.linehaul_factor) * cwt + shorthaul
+    BaseLinehaul.rate(effective_400ng_date, distance, full_weight) + (orig_svc_area.linehaul_factor + dest_svc_area.linehaul_factor) * cwt + shorthaul
   end
 
   def shorthaul
@@ -185,7 +150,7 @@ class PpmEstimator
   end
 
   def non_linehaul_charges
-    full_pack_cost + cwt * (orig_svc_area.orig_dest_service_charge + dest_svc_area.orig_dest_service_charge + FullUnpack.rate(effective_400ng_date, dest_svc_area.services_schedule))
+    cwt * (orig_svc_area.orig_dest_service_charge + dest_svc_area.orig_dest_service_charge + FullPack.rate(effective_400ng_date, orig_svc_area.services_schedule, full_weight) + FullUnpack.rate(effective_400ng_date, dest_svc_area.services_schedule))
   end
 
   def discount_range

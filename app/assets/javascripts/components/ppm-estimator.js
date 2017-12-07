@@ -31,12 +31,10 @@
     handleAjaxError: function() {
       this.$results.empty().attr('hidden', true);
       this.$alert.removeAttr('hidden');
-      this.$form.removeAttr('hidden');
     },
 
     handleAjaxSuccess: function(markup) {
       this.$alert.attr('hidden', true);
-      this.$form.attr('hidden', true);
       this.$results.html(markup).removeAttr('hidden');
     }
   };
@@ -138,8 +136,6 @@
   $rank.on('change', onPersonalInfoChanged);
   $('#dependents_yes').change(onPersonalInfoChanged);
   $('#dependents_no').change(onPersonalInfoChanged);
-  $('#married_yes').change(function() { $('#progear-spouse-section').removeAttr('hidden'); });
-  $('#married_no').change(function() { $('#progear-spouse-section').attr('hidden', true); });
 
   $('#weight').on('input', onWeightInput);
   $('#weight_progear').on('input', onWeightProgearInput);
@@ -155,8 +151,3 @@
   $('#end').keypress(onZipCodeKey);
 
 })(window, jQuery);
-
-function onEditDetails() {
-  $('#ppm-estimate-form').removeAttr('hidden');
-  $('#ppm-estimate-results').attr('hidden', true);
-}
