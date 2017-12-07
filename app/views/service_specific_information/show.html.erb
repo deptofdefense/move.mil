@@ -5,16 +5,11 @@
 <div class="usa-section main-section">
   <h1><%= @page_title %></h1>
 
-  <aside class="sidenav">
-    <div class="sidenav-jump-to">
-      Jump to:
-    </div>
-    <ul class="usa-sidenav-list">
-      <%- @branches.each do |branch| -%>
-        <li><%= link_to branch.name, service_specific_information_path(branch.slug), class: branch == @branch ? 'usa-current' : nil %></li>
-      <%- end -%>
-    </ul>
-  </aside>
+  <%= render layout: 'shared/sidenav' do %>
+    <%- @branches.each do |branch| -%>
+      <li><%= link_to branch.name, service_specific_information_path(branch.slug), class: branch == @branch ? 'usa-current' : nil %></li>
+    <%- end -%>
+  <% end %>
 
   <div class="sidenav-body svc-spec-body">
     <%= render partial: @branch.slug, locals: { branch: @branch } %>

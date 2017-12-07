@@ -5,15 +5,10 @@
 <div class="usa-section main-section">
   <h1><%= @page_title %></h1>
 
-  <aside class="sidenav">
-    <div class="sidenav-jump-to">
-      Jump to:
-    </div>
-    <ul class="usa-sidenav-list">
-      <li><%= link_to 'Your Moving Allowance', '#moving-allowance' %></li>
-      <li><%= link_to 'Special Item Information', '#special-item-info' %></li>
-    </ul>
-  </aside>
+  <%= render layout: 'shared/sidenav' do %>
+    <li><%= link_to 'Your Moving Allowance', '#moving-allowance' %></li>
+    <li><%= link_to 'Special Item Information', '#special-item-info' %></li>
+  <% end %>
 
   <div class="sidenav-body">
     <div class="what-to-expect-section">
