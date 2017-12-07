@@ -11,6 +11,7 @@ source 'https://rails-assets.org'
 gem 'activerecord-import', '~> 0.21.0', require: false
 gem 'friendly_id', '~> 5.2', '>= 5.2.3'
 gem 'geokit-rails', '~> 2.3'
+gem 'health_check', '~> 2.7'
 gem 'high_voltage', '~> 3.0'
 gem 'lograge', '~> 0.7.1'
 gem 'pg', '~> 0.21.0'
