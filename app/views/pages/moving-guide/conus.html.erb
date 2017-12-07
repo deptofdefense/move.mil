@@ -67,18 +67,15 @@
         </div>
 
         <div class="usa-width-two-thirds">
-          <div class="usa-media_block pro-tip">
-            <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-            <div class="usa-media_block-body">
-              <strong>Pro-Tips:</strong>
-              <ul>
-                <li>It's also good to include an emergency contact in case the driver cannot get ahold of you during the move.</li>
-                <li>You don't need to know your exact delivery address to schedule your move. You can just specify your new base and update it later.</li>
-                <li>The pick-up date is the day your items are placed on the truck.  Your pack dates will be the days leading up to your pick-up date.  Those fluctuate depending on your estimated weight.</li>
-                <li><%= link_to 'View more tips', page_path('moving-guide/tips') %></li>
-              </ul>
-            </div>
-          </div>
+          <%= render layout: 'shared/pro_tip' do %>
+            <strong>Pro-Tips:</strong>
+            <ul>
+              <li>It's also good to include an emergency contact in case the driver cannot get ahold of you during the move.</li>
+              <li>You don't need to know your exact delivery address to schedule your move. You can just specify your new base and update it later.</li>
+              <li>The pick-up date is the day your items are placed on the truck.  Your pack dates will be the days leading up to your pick-up date.  Those fluctuate depending on your estimated weight.</li>
+              <li><%= link_to 'View more tips', page_path('moving-guide/tips') %></li>
+            </ul>
+          <% end %>
         </div>
       </div>
     </div>
@@ -88,12 +85,9 @@
 
       <p>Preparation before the big day is really important  to make sure that you and your residence are ready for a flurry of activity. If you haven't checked out some of these <%= link_to 'moving tips', page_path('moving-guide/tips') %>, now would be a great time. At the end of the day, being proactive about your move is the best way to make it successful. It will depend on the size of your residence and how many household goods you have when you should start this process.</p>
 
-      <div class="usa-media_block pro-tip">
-        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-        <div class="usa-media_block-body">
-          <strong>Pro-Tip:</strong> Make your own inventory. Before the packers come, it is suggested that you document any high-value and electronic items yourself. Make sure you document the make and serial number of each item, along with a photo or video of the item showing its condition. (If it's an TV or other electronic, a simple video showing it working can save you headache later.) Make sure that information makes it on the moving company's inventory BEFORE the truck leaves your house.
-        </div>
-      </div>
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tip:</strong> Make your own inventory. Before the packers come, it is suggested that you document any high-value and electronic items yourself. Make sure you document the make and serial number of each item, along with a photo or video of the item showing its condition. (If it's an TV or other electronic, a simple video showing it working can save you headache later.) Make sure that information makes it on the moving company's inventory BEFORE the truck leaves your house.
+      <% end %>
 
       <p>Additionally, you can expect the shipping company to send over someone to complete a <strong>Pre-Move Survey</strong> at your home. During the survey, they will also complete their own weight estimation and annotate any special items that you called out in the Defense Personal Property System (DPS). If you are within a week of your move and a survey has not been completed on your home, it's highly recommended you reach out to the moving company or your <%= link_to 'local personal property office (PPPO)', offices_path %>.</p>
     </div>
@@ -111,17 +105,14 @@
         </div>
 
         <div class="usa-width-two-thirds">
-          <div class="usa-media_block pro-tip">
-            <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-            <div class="usa-media_block-body">
-              <strong>Pro-Tips:</strong>
-              <ul>
-                <li>Physically separate anything you plan to take/keep with you from the rest of your belongings into a closet or your vehicle before the packers arrive. Clearly mark this area with a "Do Not Pack" sign.</li>
-                <li>Invite friends and family to keep an eye on things during packing day. It can be really helpful if you can have someone shadowing the packers, making sure your inventory is accurate, and potentially even taking photos of the inside of boxes as they are packed.</li>
-                <li><%= link_to 'View more tips', page_path('moving-guide/tips') %></li>
-              </ul>
-            </div>
-          </div>
+          <%= render layout: 'shared/pro_tip' do %>
+            <strong>Pro-Tips:</strong>
+            <ul>
+              <li>Physically separate anything you plan to take/keep with you from the rest of your belongings into a closet or your vehicle before the packers arrive. Clearly mark this area with a "Do Not Pack" sign.</li>
+              <li>Invite friends and family to keep an eye on things during packing day. It can be really helpful if you can have someone shadowing the packers, making sure your inventory is accurate, and potentially even taking photos of the inside of boxes as they are packed.</li>
+              <li><%= link_to 'View more tips', page_path('moving-guide/tips') %></li>
+            </ul>
+          <% end %>
         </div>
       </div>
 
@@ -145,12 +136,9 @@
 
       <p>Depending on whether your household goods will be going into storage or a door-to-door move, will determine what happens next. For those doing a door-to-door, it's important that you arrive before the driver. If the driver arrives at your new residence before you do they may have to put your items in storage, depending on their schedule. For those whose items are going into storage, you have more flexibility with your timing.</p>
 
-      <div class="usa-media_block pro-tip">
-        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-        <div class="usa-media_block-body">
-          <strong>Pro-Tip:</strong> If you are doing a door-to-door delivery, you must respond to the driver within 2 hours of their attempt to contact you. After 2 hours, your driver may try to call the <%= link_to 'local personal property office', offices_path %> and have your belongings placed in storage. Once they are in storage, it can sometimes take up to a few weeks to get them delivered.
-        </div>
-      </div>
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tip:</strong> If you are doing a door-to-door delivery, you must respond to the driver within 2 hours of their attempt to contact you. After 2 hours, your driver may try to call the <%= link_to 'local personal property office', offices_path %> and have your belongings placed in storage. Once they are in storage, it can sometimes take up to a few weeks to get them delivered.
+      <% end %>
 
       <p>While this may not necessarily be tied to your household goods shipment, it's important that you keep any receipts you can on your trip. This can include hotel receipts, gasoline, tolls, etc. that may be needed when you file your voucher at the end. Better to be safe than sorry.</p>
     </div>

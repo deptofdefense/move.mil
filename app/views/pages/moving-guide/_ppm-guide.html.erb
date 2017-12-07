@@ -42,7 +42,6 @@
 
 <p><em>*<%= abbr_tag('ppm') %>s for <%= abbr_tag('oconus') %> Permanent Change of Duty Station Moves are generally reserved for situations where the government does not have the resources to arrange a household goods move. These moves are reimbursed at 100% of the actual cost.</em></p>
 
-<div class="usa-media_block pro-tip">
-  <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-  <div class="usa-media_block-body"><strong>Did You Know:</strong> If the government cannot arrange a Household Goods (HHG) move within the timeframe requested, you can do a <%= abbr_tag('ppm') %> and receive reimbursement 100% of the actual cost associated with hiring a commercial moving company.</div>
-</div>
+<%= render layout: 'shared/pro_tip' do %>
+  <strong>Did You Know:</strong> If the government cannot arrange a Household Goods (HHG) move within the timeframe requested, you can do a <%= abbr_tag('ppm') %> and receive reimbursement 100% of the actual cost associated with hiring a commercial moving company.
+<% end %>

@@ -85,10 +85,9 @@
         <div class="centered">OR</div>
         <p><strong>Short term storage (SIT)</strong> at your destination up to 90 days. If your household goods aren't delivered before the 90 days expires, you will be responsible for the very expensive excess storage costs and you may be ineligible to file any claims within the government Military Claims Office.</p>
 
-        <div class="usa-media_block pro-tip">
-          <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-          <div class="usa-media_block-body"><strong>Pro-Tip:</strong> It is recommended that you only use short term storage (SIT), if you know your final delivery address upon retirement. If for some reason, you cannot secure housing or a place to deliver your household goods, you will be responsible for any additional storage cost beyond the initial 90 days. Additional storage costs can be very expensive - sometimes thousands dollars a month.</div>
-        </div>
+        <%= render layout: 'shared/pro_tip' do %>
+          <strong>Pro-Tip:</strong> It is recommended that you only use short term storage (SIT), if you know your final delivery address upon retirement. If for some reason, you cannot secure housing or a place to deliver your household goods, you will be responsible for any additional storage cost beyond the initial 90 days. Additional storage costs can be very expensive - sometimes thousands dollars a month.
+        <% end %>
       </div>
     </div>
 

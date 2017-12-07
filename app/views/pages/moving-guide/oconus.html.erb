@@ -62,12 +62,9 @@
         </div>
       </div>
 
-      <div class="usa-media_block pro-tip">
-        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-        <div class="usa-media_block-body">
-          <strong>Pro-Tip:</strong> Get a General Power of Attorney for your spouse. This allows them to take necessary action on moving and financial decisions while you're in the field.
-        </div>
-      </div>
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tip:</strong> Get a General Power of Attorney for your spouse. This allows them to take necessary action on moving and financial decisions while you're in the field.
+      <% end %>
 
       <p>Got Legal questions? Reach out to <%= link_to 'Armed Forces Legal Assistance', 'http://legalassistance.law.af.mil/content/locator.php' %>.</p>
       <p>Once you have your orders, you can now login to the <%= link_to 'Defense Personal Property System', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %> to schedule your move.</p>
@@ -92,18 +89,15 @@
           </ul>
         </div>
         <div class="usa-width-two-thirds">
-          <div class="usa-media_block pro-tip">
-            <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-            <div class="usa-media_block-body">
-              <strong>Pro-Tips:</strong>
-              <ul>
-                <li>It's also good to include an emergency contact in case the driver cannot get ahold of you during the move.</li>
-                <li>You don't need to know your exact delivery address to schedule your move. You can just specify your new base and update it later.</li>
-                <li>The pick-up date is the day your items are placed on the truck. Your pack dates will be the days leading up to your pick-up date. Those fluctuate depending on your estimated weight.</li>
-                <li><%= link_to 'View more tips', page_path('moving-guide/tips') %></li>
-              </ul>
-            </div>
-          </div>
+          <%= render layout: 'shared/pro_tip' do %>
+            <strong>Pro-Tips:</strong>
+            <ul>
+              <li>It's also good to include an emergency contact in case the driver cannot get ahold of you during the move.</li>
+              <li>You don't need to know your exact delivery address to schedule your move. You can just specify your new base and update it later.</li>
+              <li>The pick-up date is the day your items are placed on the truck. Your pack dates will be the days leading up to your pick-up date. Those fluctuate depending on your estimated weight.</li>
+              <li><%= link_to 'View more tips', page_path('moving-guide/tips') %></li>
+            </ul>
+          <% end %>
         </div>
       </div>
     </div>
@@ -113,12 +107,9 @@
 
       <p>Your moving company will complete a <strong>Pre-Move Survey</strong> at your home. They'll do a weight estimate and identify any special items that you entered in the Defense Personal Property System (DPS), so that on moving day, they have all the necessary packing materials. Call your moving company if you're within a week of moving day, and a Pre-Move Survey has not been completed on your home. Your <%= link_to 'local personal property office', offices_path %> can also help.</p>
 
-      <div class="usa-media_block pro-tip">
-        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-        <div class="usa-media_block-body">
-          <strong>Pro-Tip:</strong> Make your own inventory! Include the make and serial number of any high value and electronics items. Take a video of things like your TV working, to show that it's in good working condition.  Insist that information makes it on the moving company's inventory BEFORE the truck leaves your house.
-        </div>
-      </div>
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tip:</strong> Make your own inventory! Include the make and serial number of any high value and electronics items. Take a video of things like your TV working, to show that it's in good working condition.  Insist that information makes it on the moving company's inventory BEFORE the truck leaves your house.
+      <% end %>
 
       <p>
         <strong><em>What should I bring?</em></strong><br>
@@ -135,12 +126,9 @@
           </ul>
         </div>
         <div class="usa-width-one-half">
-          <div class="usa-media_block pro-tip">
-            <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-            <div class="usa-media_block-body">
-              <strong>Pro-Tip:</strong> Research your host country's electrical outlets! You may need a converter, or choose to buy new appliances and electronics when you get there. Most bases have a thrift shop, where you can pick up items when you arrive!
-            </div>
-          </div>
+          <%= render layout: 'shared/pro_tip' do %>
+            <strong>Pro-Tip:</strong> Research your host country's electrical outlets! You may need a converter, or choose to buy new appliances and electronics when you get there. Most bases have a thrift shop, where you can pick up items when you arrive!
+          <% end %>
         </div>
       </div>
 
@@ -155,31 +143,25 @@
           </ol>
         </div>
         <div class="usa-width-one-third">
-          <div class="usa-media_block pro-tip">
-            <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-            <div class="usa-media_block-body">
-              <strong>Pro-Tip:</strong> Choose wisely! A household goods shipment won't arrive at your new location for several weeks.
-            </div>
-          </div>
+          <%= render layout: 'shared/pro_tip' do %>
+            <strong>Pro-Tip:</strong> Choose wisely! A household goods shipment won't arrive at your new location for several weeks.
+          <% end %>
         </div>
       </div>
 
       <div class="usa-grid-full what-to-expect-subsection">
         <div class="usa-width-one-half">
-          <div class="usa-media_block pro-tip">
-            <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-            <div class="usa-media_block-body">
-              <strong>Pro-Tip:</strong> Pack important documents in an accordion folder and keep it in your carry-on bag. You should have several copies of each:
+          <%= render layout: 'shared/pro_tip' do %>
+            <strong>Pro-Tip:</strong> Pack important documents in an accordion folder and keep it in your carry-on bag. You should have several copies of each:
 
-              <ul>
-                <li>Orders</li>
-                <li>Passport(s)</li>
-                <li>ID Card(s) front and back</li>
-                <li>Marriage License/Certificate</li>
-                <li>Birth Certificate(s)</li>
-              </ul>
-            </div>
-          </div>
+            <ul>
+              <li>Orders</li>
+              <li>Passport(s)</li>
+              <li>ID Card(s) front and back</li>
+              <li>Marriage License/Certificate</li>
+              <li>Birth Certificate(s)</li>
+            </ul>
+          <% end %>
         </div>
         <div class="usa-width-one-half">
           <p>You'll need some of these documents as soon as you get off the plane when you go through customs in your host country.</p>
@@ -203,18 +185,15 @@
           Pack your belongings with unpacking in mind. Where do you want these boxes to go in your new place? The master bedroom, living room, or kitchen? When you move OCONUS, there can be a language barrier between you and your movers in the new host country.</p>
         </div>
         <div class="usa-width-two-thirds">
-          <div class="usa-media_block pro-tip">
-            <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-            <div class="usa-media_block-body">
-              <strong>Pro-Tips:</strong>
-              <ul>
-                <li><strong>Physically separate</strong> anything you plan to take/keep with you from the rest of your belongings into a closet or your vehicle before the packers arrive. Clearly mark this area with a "Do Not Pack" sign.</li>
-                <li><strong>Invite friends and family</strong> to keep an eye on things during packing day. It can be really helpful if you can have someone shadowing the packers, making sure your inventory is accurate, potentially even taking photos of the inside of boxes as they are packed.</li>
-                <li><strong>Label your boxes</strong> with a small piece of duct tape, each room with its own color. Others have found it helpful to number each room when you arrive in your host country, so that your movers know that the master bedroom is 1, the kitchen 2, and the living room 3.</li>
-                <li><%= link_to 'View more tips', page_path('moving-guide/tips') %></li>
-              </ul>
-            </div>
-          </div>
+          <%= render layout: 'shared/pro_tip' do %>
+            <strong>Pro-Tips:</strong>
+            <ul>
+              <li><strong>Physically separate</strong> anything you plan to take/keep with you from the rest of your belongings into a closet or your vehicle before the packers arrive. Clearly mark this area with a "Do Not Pack" sign.</li>
+              <li><strong>Invite friends and family</strong> to keep an eye on things during packing day. It can be really helpful if you can have someone shadowing the packers, making sure your inventory is accurate, potentially even taking photos of the inside of boxes as they are packed.</li>
+              <li><strong>Label your boxes</strong> with a small piece of duct tape, each room with its own color. Others have found it helpful to number each room when you arrive in your host country, so that your movers know that the master bedroom is 1, the kitchen 2, and the living room 3.</li>
+              <li><%= link_to 'View more tips', page_path('moving-guide/tips') %></li>
+            </ul>
+          <% end %>
         </div>
       </div>
       <p>Bottom line, if at any point something doesn't feel right, you should call your local personal property office and ask for the assistance from an inspector/quality assurance personnel.</p>
@@ -226,17 +205,14 @@
       <p>On moving day, the driver of the truck is usually in charge of the show.  They are responsible for ensuring there is a crew and that everything is properly loaded onto the truck before departing. If you run into any issues during this phase, talk with the driver first and if they are unable to resolve the issue don’t hesitate to call your <%= link_to 'local personal property office', offices_path %> for help.</p>
       <p>The transportation company will be creating an inventory of all your household items and will put stickers on all the boxes and larger items (couches, large appliances, etc.).  On these inventory sheets, they will also be indicating whether or not there was any pre-existing damage to your household goods. If you disagree with their assessment make sure you annotate that on the inventory sheet!</p>
 
-      <div class="usa-media_block pro-tip">
-        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-        <div class="usa-media_block-body">
-          <strong>Pro-Tips:</strong>
-          <ul>
-            <li>Do a walkthrough with the driver to make sure everything is out of your residence and loaded up.  This will ensure that nothing gets left behind and if you see any damage to the residence you can annotate that on the forms provided.</li>
-            <li>Ask the driver for their phone number so you can reach them if needed.</li>
-            <li>If you don’t agree with something on that inventory form make sure you annotate that BEFORE signing in the remarks section!</li>
-          </ul>
-        </div>
-      </div>
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>Do a walkthrough with the driver to make sure everything is out of your residence and loaded up.  This will ensure that nothing gets left behind and if you see any damage to the residence you can annotate that on the forms provided.</li>
+          <li>Ask the driver for their phone number so you can reach them if needed.</li>
+          <li>If you don’t agree with something on that inventory form make sure you annotate that BEFORE signing in the remarks section!</li>
+        </ul>
+      <% end %>
     </div>
 
     <div id="getting-there" class="what-to-expect-section">
@@ -282,12 +258,9 @@
           </ul>
         </div>
         <div class="usa-width-one-half">
-          <div class="usa-media_block pro-tip">
-            <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-            <div class="usa-media_block-body">
-              <strong>Pro-Tip:</strong> Don’t be surprised if your bags are searched in customs! Your new host country may have restricted items.
-            </div>
-          </div>
+          <%= render layout: 'shared/pro_tip' do %>
+            <strong>Pro-Tip:</strong> Don’t be surprised if your bags are searched in customs! Your new host country may have restricted items.
+          <% end %>
         </div>
       </div>
     </div>
@@ -297,12 +270,9 @@
 
       <p>When the truck arrives, you will do a walk-through with the driver and the delivery crew. Identify any pre-existing damage to the residence and let them see the layout of the home to determine the best way to deliver your household goods.</p>
 
-      <div class="usa-media_block pro-tip">
-        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-        <div class="usa-media_block-body">
-          <strong>Pro-Tip:</strong> Number your rooms, so that if there is a language barrier in your new host country, everyone will know where the boxes should go.
-        </div>
-      </div>
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tip:</strong> Number your rooms, so that if there is a language barrier in your new host country, everyone will know where the boxes should go.
+      <% end %>
 
       <p>The delivery crew should put down some type of material (plastic, fabric, etc.) to protect some of your flooring and expect them to put some form of protection on any tight corners that may be in the residence as well.</p>
       <p>Get an <strong>inventory sheet</strong> from the driver, so that you can check off the numbers, and ensure that everything is delivered. Doing this yourself is in your best interest. As the boxes come off the truck, you should expect to direct them to a room in the residence on where that item should be placed.</p>
@@ -312,12 +282,9 @@
           <p>Once the truck is empty, verify on the inventory sheet that everything has been delivered.  If not, those items need to be annotated on the inventory sheet before you sign off.  Additionally, if you saw any items come in damaged, you can annotate that as well, but you’ll still have time to file a claim in case you missed it.  This goes for any damage that may have occurred to the residence.</p>
         </div>
         <div class="usa-width-one-third">
-          <div class="usa-media_block pro-tip">
-            <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-            <div class="usa-media_block-body">
-              <strong>Pro-Tip:</strong> Enlist the help of family, or your Sponsor, to help during this during this phase.
-            </div>
-          </div>
+          <%= render layout: 'shared/pro_tip' do %>
+            <strong>Pro-Tip:</strong> Enlist the help of family, or your Sponsor, to help during this during this phase.
+          <% end %>
         </div>
       </div>
 
