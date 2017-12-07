@@ -5,23 +5,18 @@
 <div class="usa-section main-section">
   <h1>What to Expect with a <%= abbr_tag('conus') %> Move</h1>
 
-  <aside class="sidenav">
-    <div class="sidenav-jump-to">
-      Jump to:
-    </div>
-    <ul class="usa-sidenav-list">
-      <li><%= link_to 'Introduction', '#introduction' %></li>
-      <li><%= link_to 'Assignment Notification', '#assignment' %></li>
-      <li><%= link_to 'Orders', '#orders' %></li>
-      <li><%= link_to 'Scheduling the Move', '#scheduling' %></li>
-      <li><%= link_to 'Before the Packers Arrive', '#before-packing' %></li>
-      <li><%= link_to 'Pack Day!', '#pack-day' %></li>
-      <li><%= link_to 'Loading/Moving Day', '#moving-day' %></li>
-      <li><%= link_to 'On the Road', '#on-the-road' %></li>
-      <li><%= link_to 'Delivery', '#delivery' %></li>
-      <li><%= link_to 'Clean Up, Claims, & Customer Survey', '#clean-up' %></li>
-    </ul>
-  </aside>
+  <%= render layout: 'shared/sidenav' do %>
+    <li><%= link_to 'Introduction', '#introduction' %></li>
+    <li><%= link_to 'Assignment Notification', '#assignment' %></li>
+    <li><%= link_to 'Orders', '#orders' %></li>
+    <li><%= link_to 'Scheduling the Move', '#scheduling' %></li>
+    <li><%= link_to 'Before the Packers Arrive', '#before-packing' %></li>
+    <li><%= link_to 'Pack Day!', '#pack-day' %></li>
+    <li><%= link_to 'Loading/Moving Day', '#moving-day' %></li>
+    <li><%= link_to 'On the Road', '#on-the-road' %></li>
+    <li><%= link_to 'Delivery', '#delivery' %></li>
+    <li><%= link_to 'Clean Up, Claims, & Customer Survey', '#clean-up' %></li>
+  <% end %>
 
   <div class="sidenav-body what-to-expect-body">
     <div id="introduction" class="what-to-expect-intro">

@@ -5,23 +5,18 @@
 <div class="usa-section main-section">
   <h1><%= @page_title %></h1>
 
-  <aside class="sidenav">
-    <div class="sidenav-jump-to">
-      Jump to:
-    </div>
-    <ul class="usa-sidenav-list">
-      <li><%= link_to 'Destination', '#destination' %></li>
-      <li><%= link_to 'Timing', '#timing' %></li>
-      <li><%= link_to 'Extensions', '#extensions' %></li>
-      <li><%= link_to 'Storage Options', '#storage' %></li>
-      <li><%= link_to 'Advance Payments', '#payments' %></li>
-      <li><%= link_to 'Short Distance Moves', '#short-distance' %></li>
-      <li><%= link_to 'Weight Entitlements', '#weight' %></li>
-      <li><%= link_to 'Personally Owned Vehicles (POV)', '#pov' %></li>
-      <li><%= link_to 'Pro Gear', '#pro-gear' %></li>
-      <li><%= link_to 'Shipping Methods', '#shipping' %></li>
-    </ul>
-  </aside>
+  <%= render layout: 'shared/sidenav' do %>
+    <li><%= link_to 'Destination', '#destination' %></li>
+    <li><%= link_to 'Timing', '#timing' %></li>
+    <li><%= link_to 'Extensions', '#extensions' %></li>
+    <li><%= link_to 'Storage Options', '#storage' %></li>
+    <li><%= link_to 'Advance Payments', '#payments' %></li>
+    <li><%= link_to 'Short Distance Moves', '#short-distance' %></li>
+    <li><%= link_to 'Weight Entitlements', '#weight' %></li>
+    <li><%= link_to 'Personally Owned Vehicles (POV)', '#pov' %></li>
+    <li><%= link_to 'Pro Gear', '#pro-gear' %></li>
+    <li><%= link_to 'Shipping Methods', '#shipping' %></li>
+  <% end %>
 
   <div class="sidenav-body what-to-expect-body">
     <div class="what-to-expect-intro">

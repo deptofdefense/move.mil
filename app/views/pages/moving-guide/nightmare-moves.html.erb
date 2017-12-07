@@ -5,17 +5,12 @@
 <div class="usa-section main-section nightmare-moves">
   <h1><%= @page_title %></h1>
 
-  <aside class="sidenav">
-    <div class="sidenav-jump-to">
-      Jump to:
-    </div>
-    <ul class="usa-sidenav-list">
-      <li><%= link_to 'Bolt Box Blunder', '#bolt-box' %></li>
-      <li><%= link_to 'Dented Drywall Debacle', '#dented-drywall' %></li>
-      <li><%= link_to 'Car Key Catastrophe', '#car-key' %></li>
-      <li><%= link_to 'Soiled Sofa Situation', '#soiled-sofa' %></li>
-    </ul>
-  </aside>
+  <%= render layout: 'shared/sidenav' do %>
+    <li><%= link_to 'Bolt Box Blunder', '#bolt-box' %></li>
+    <li><%= link_to 'Dented Drywall Debacle', '#dented-drywall' %></li>
+    <li><%= link_to 'Car Key Catastrophe', '#car-key' %></li>
+    <li><%= link_to 'Soiled Sofa Situation', '#soiled-sofa' %></li>
+  <% end %>
 
   <div class="sidenav-body what-to-expect-body">
     <div class="what-to-expect-intro">

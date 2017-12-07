@@ -5,17 +5,12 @@
 <div class="usa-section main-section moving-guide">
   <h1><%= @page_title %></h1>
 
-  <aside class="sidenav">
-    <div class="sidenav-jump-to">
-      Jump to:
-    </div>
-    <ul class="usa-sidenav-list">
-      <li><%= link_to 'Moves Start with Orders', '#orders' %></li>
-      <li><%= link_to 'Destination Matters', '#destination' %></li>
-      <li><%= link_to 'Choose How to Ship Your Household Goods (Move Types)', '#move-types' %></li>
-      <li><%= link_to 'What does rank have to do with it?', '#rank' %></li>
-    </ul>
-  </aside>
+  <%= render layout: 'shared/sidenav' do %>
+    <li><%= link_to 'Moves Start with Orders', '#orders' %></li>
+    <li><%= link_to 'Destination Matters', '#destination' %></li>
+    <li><%= link_to 'Choose How to Ship Your Household Goods (Move Types)', '#move-types' %></li>
+    <li><%= link_to 'What does rank have to do with it?', '#rank' %></li>
+  <% end %>
 
   <div class="sidenav-body what-to-expect-body">
     <div class="what-to-expect-intro">

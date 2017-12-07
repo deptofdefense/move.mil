@@ -5,16 +5,11 @@
 <div class="usa-section main-section">
   <h1>What to Expect with a <%= abbr_tag('tdy') %> Move</h1>
 
-  <aside class="sidenav">
-    <div class="sidenav-jump-to">
-      Jump to:
-    </div>
-    <ul class="usa-sidenav-list">
-      <li><%= link_to raw("Shipping #{abbr_tag('tdy')} Household Goods"), '#shipping' %></li>
-      <li><%= link_to raw("Weight Allowances for #{abbr_tag('tdy')} Shipments"), '#weight_allowances' %></li>
-      <li><%= link_to raw("#{abbr_tag('tdy')} Shipments"), '#shipments' %></li>
-    </ul>
-  </aside>
+  <%= render layout: 'shared/sidenav' do %>
+    <li><%= link_to raw("Shipping #{abbr_tag('tdy')} Household Goods"), '#shipping' %></li>
+    <li><%= link_to raw("Weight Allowances for #{abbr_tag('tdy')} Shipments"), '#weight_allowances' %></li>
+    <li><%= link_to raw("#{abbr_tag('tdy')} Shipments"), '#shipments' %></li>
+  <% end %>
 
   <div class="sidenav-body">
     <div id="shipping">

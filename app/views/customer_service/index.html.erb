@@ -6,19 +6,14 @@
 
   <h1><%= @page_title %></h1>
 
-  <aside class="sidenav">
-    <div class="sidenav-jump-to">
-      Jump to:
-    </div>
-    <ul class="usa-sidenav-list">
-      <li><%= link_to 'Local Personal Property Office', '#local-ppo' %></li>
-      <li><%= link_to 'Technical Help Desk', '#tech-help' %></li>
-      <li><%= link_to 'Service Branch Customer Service', '#svc-help' %></li>
-      <li><%= link_to 'Accounting & Finance Office', '#accounting' %></li>
-      <li><%= link_to 'Claims', '#claims' %></li>
-      <li><%= link_to 'Retiree/Separatee Extentions', '#retirement-separation' %></li>
-    </ul>
-  </aside>
+  <%= render layout: 'shared/sidenav' do %>
+    <li><%= link_to 'Local Personal Property Office', '#local-ppo' %></li>
+    <li><%= link_to 'Technical Help Desk', '#tech-help' %></li>
+    <li><%= link_to 'Service Branch Customer Service', '#svc-help' %></li>
+    <li><%= link_to 'Accounting & Finance Office', '#accounting' %></li>
+    <li><%= link_to 'Claims', '#claims' %></li>
+    <li><%= link_to 'Retiree/Separatee Extentions', '#retirement-separation' %></li>
+  <% end %>
 
   <div class="sidenav-body what-to-expect-body">
     <div class="usa-grid-full customer-service-section" id="local-ppo">
