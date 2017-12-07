@@ -19,27 +19,35 @@
 
   <%= form_with url: ppm_estimator_path, class: 'ppm-form', id: 'ppm-estimate-form', method: 'get' do |form| %>
     <fieldset>
-      <legend><div class="ppm-outline"></div>What is your rank?</legend>
-      <%= form.label :rank, 'Rank' %>
-      <%= form.select :rank, options_from_collection_for_select(@entitlements, :slug, :rank), { include_blank: true }, { id: :rank, required: true } %>
-    </fieldset>
-
-    <fieldset>
-      <legend><div class="ppm-outline"></div>What is your branch of service?</legend>
-      <%= form.label :branch, 'Branch of Service' %>
-      <%= form.select :branch, options_from_collection_for_select(@branches, :slug, :name), { include_blank: true }, { id: :branch, required: true } %>
+      <legend><div class="ppm-outline"></div>What is your rank and branch of service?</legend>
+      <div class="usa-grid-full grid-form-width">
+        <div class="usa-width-one-half">
+          <%= form.label :rank, 'Rank' %>
+          <%= form.select :rank, options_from_collection_for_select(@entitlements, :slug, :rank), { include_blank: true }, { id: :rank, required: true } %>
+        </div>
+        <div class="usa-width-one-half">
+          <%= form.label :branch, 'Branch of Service' %>
+          <%= form.select :branch, options_from_collection_for_select(@branches, :slug, :name), { include_blank: true }, { id: :branch, required: true } %>
+        </div>
+      </div>
     </fieldset>
 
     <fieldset>
       <legend><div class="ppm-outline"></div>Do you have dependents?</legend>
-      <%= form.radio_button :dependents, 'yes', { id: :dependents_yes, required: true } %>
-      <%= form.label :dependents, value: 'yes' do %>
-        <strong>Yes</strong>, I have dependents
-      <% end %>
-      <%= form.radio_button :dependents, 'no', { id: :dependents_no, required: true } %>
-      <%= form.label :dependents, value: 'no' do %>
-        <strong>No</strong>, I do not have dependents
-      <% end %>
+      <div class="usa-grid-full grid-form-width">
+        <div class="usa-width-one-half">
+          <%= form.radio_button :dependents, 'yes', { id: :dependents_yes, required: true } %>
+          <%= form.label :dependents, value: 'yes' do %>
+            <strong>Yes</strong>, I have dependents
+          <% end %>
+        </div>
+        <div class="usa-width-one-half">
+          <%= form.radio_button :dependents, 'no', { id: :dependents_no, required: true } %>
+          <%= form.label :dependents, value: 'no' do %>
+            <strong>No</strong>, I do not have dependents
+          <% end %>
+        </div>
+      </div>
     </fieldset>
 
     <fieldset>
