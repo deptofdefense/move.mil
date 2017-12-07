@@ -19,7 +19,7 @@
 
   <%= form_with url: ppm_estimator_path, class: 'ppm-form', id: 'ppm-estimate-form', method: 'get' do |form| %>
     <fieldset>
-      <legend><div class="ppm-outline"></div>What is your rank and branch of service?</legend>
+      <legend>What is your rank and branch of service?</legend>
       <div class="usa-grid-full grid-form-width">
         <div class="usa-width-one-half">
           <%= form.label :rank, 'Rank' %>
@@ -33,7 +33,7 @@
     </fieldset>
 
     <fieldset>
-      <legend><div class="ppm-outline"></div>Do you have dependents?</legend>
+      <legend>Do you have dependents?</legend>
       <div class="usa-grid-full grid-form-width">
         <div class="usa-width-one-half">
           <%= form.radio_button :dependents, 'yes', { id: :dependents_yes, required: true } %>
@@ -51,7 +51,7 @@
     </fieldset>
 
     <fieldset>
-      <legend><div class="ppm-outline"></div>Where are you moving from and to?</legend>
+      <legend>Where are you moving from and to?</legend>
       <p>
         To get the most accurate estimate, enter the locations authorized by
         your orders. These locations might be different from where you live.
@@ -69,7 +69,7 @@
     </fieldset>
 
     <fieldset>
-      <legend><div class="ppm-outline"></div>When do you want to move?</legend>
+      <legend>When do you want to move?</legend>
       <%= form.label :date, 'Moving Date' %>
       <%= form.date_field :date, { id: :date, pattern: '\d\d\d\d-\d\d?-\d\d?', placeholder: 'yyyy-mm-dd', required: true } %>
     </fieldset>
@@ -77,7 +77,7 @@
     <%= tag.div id: 'entitlements-json', data: { entitlements_json: @entitlements.to_json } %>
 
     <fieldset>
-      <legend><div class="ppm-outline"></div>How much, in pounds, do you expect to move without the government's help?</legend>
+      <legend>How much, in pounds, do you expect to move without the government's help?</legend>
       <p>
         The government will only pay for the actual weight transported, up to your weight allowance.
         Don't forget - if you move some of your goods yourself (<%= abbr_tag('ppm') %>) and

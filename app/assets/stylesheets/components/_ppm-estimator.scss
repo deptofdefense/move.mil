@@ -17,19 +17,15 @@
     font-size: $base-font-size;
     margin-bottom: 1rem;
 
-    .ppm-outline {
+    &::after {
       color: $color-primary-darker;
+      content: counter(level);
       font-size: 3rem;
       left: -3.5rem;
       position: absolute;
       top: -0.6rem;
-
-      &::before {
-        content: counter(level);
-      }
-
     }
-}
+  }
 
   label {
     display: inline-block;
