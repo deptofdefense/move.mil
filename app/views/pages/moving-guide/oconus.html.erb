@@ -1,9 +1,9 @@
-<%- @page_title = 'What to Expect with an OCONUS Move' -%>
+<%- @page_title = "Overseas Moves (#{abbr_tag('oconus')})" -%>
 
 <%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: []} %>
 
 <div class="usa-section main-section">
-  <h1>What to Expect with an <%= abbr_tag('oconus') %> (Overseas) Move</h1>
+  <h1><%= raw(@page_title) %></h1>
 
   <aside class="sidenav">
     <div class="sidenav-jump-to">
