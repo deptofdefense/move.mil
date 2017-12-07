@@ -30,8 +30,23 @@ Once DTOD has sent you all of the results, concatenate them together and write t
 
 Each year's 400NG file from SDDC can be found on their [Personal Property->Household Goods page](https://www.sddc.army.mil/pp/Pages/houseGoods.aspx), under the "Special Requirements and Rates Team -> Domestic" tab. The file contains several tabs that need to be unpacked and processed into separate CSV files so that the data can be imported into the database.
 
+Rates for each year (to take effect on May 15 of that year) are published in December of the previous year.
+
 As the maximum entitlement is 20500 lbs (O-10 w/ progear), there is currently no logic for calculating costs at 24000 lbs and beyond, and the "each addl CWT" columns from the original spreadsheet are all ignored.
 
-## Linehaul.xlsm
+## Preparing a new 400NG Baseline Rates for inclusion
 
-SDDC publishes the 400NG tables in an Excel file, so to process them into CSVs that we can digest, you need to run some Visual Basic for Applications (VBA) code.
+SDDC publishes the 400NG tables in an Excel file, but it's not very clean. Cleaning it up reduces the time it takes to import from roughly 30 seconds to under a second, with dramatically lower RAM usage as well.
+
+To clean it up:
+
+1. Open the file in Excel. Ignore links to other documents.
+1. In each sheet, select the first empty column to the right of all content.
+1. Select all columns from there to the end. On Macs, this is done by pressing "Shift + Command + (right arrow)."
+1. Edit->Delete
+1. Select the first empty row below all content.
+1. Select all rows from there to the end. On Macs, this is done by pressing "Shift + Command + (down arrow)."
+1. Edit->Delete
+1. Once you have removed the extraneous garbage from each sheet, save the file and drop it in `db/seeds`. It should have dropped in size from over 6 MiB to less than than 200 KiB.
+
+Now you can add the new year's baseline rates to `seeds.rb`.
