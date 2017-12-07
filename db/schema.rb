@@ -216,6 +216,7 @@ ActiveRecord::Schema.define(version: 20171215164151) do
     t.decimal "discount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["tdl"], name: "index_top_tsp_by_channel_linehaul_discounts_on_tdl"
   end
 
   create_table "tutorial_steps", force: :cascade do |t|
