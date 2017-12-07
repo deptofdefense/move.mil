@@ -26,7 +26,7 @@ class PpmEstimator
 
   def total_incentive_range
     @total_cost ||= linehaul_charges + non_linehaul_charges
-    @total_incentive_range ||= self.class.range_rounded_to_multiples_of_100(@total_cost * discount_range.min, @total_cost * discount_range.max)
+    @total_incentive_range ||= range_rounded_to_multiples_of_100(@total_cost * discount_range.min, @total_cost * discount_range.max)
   end
 
   def advance_range
@@ -62,24 +62,16 @@ class PpmEstimator
     estimator_params[:dependents] == 'yes' ? entitlement.total_weight_self_plus_dependents : entitlement.total_weight_self
   end
 
-  def entitlement_progear
-    entitlement.pro_gear_weight || 0
-  end
-
-  def entitlement_progear_spouse
-    entitlement.pro_gear_weight_spouse || 0
-  end
-
   def weight_self_limited
     [estimator_params[:weight].to_i, entitlement_self].min
   end
 
   def weight_progear_limited
-    [estimator_params[:weight_progear].to_i, entitlement_progear].min
+    [estimator_params[:weight_progear].to_i, entitlement.pro_gear_weight || 0].min
   end
 
   def weight_progear_spouse_limited
-    [estimator_params[:weight_progear_spouse].to_i, entitlement_progear_spouse].min
+    [estimator_params[:weight_progear_spouse].to_i, entitlement.pro_gear_weight_spouse || 0].min
   end
 
   def orig_svc_area
@@ -166,24 +158,22 @@ class PpmEstimator
     @discount_range ||= ([inv_linehaul_discount - 0.02, 0].max * 0.95)..([inv_linehaul_discount + 0.02, 1].min * 0.95)
   end
 
-  class << self
-    # returns the nearest integer multiple of 100 less than or equal to the input
-    def floor_hundred(num)
-      (num - num % 100).to_i
-    end
+  # returns the nearest integer multiple of 100 less than or equal to the input
+  def floor_hundred(num)
+    (num - num % 100).to_i
+  end
 
-    # returns the nearest integer multiple of 100 greater than or equal to the input
-    def ceil_hundred(num)
-      remainder = num % 100
-      return num.to_i if remainder.zero?
-      (num + (100 - remainder)).to_i
-    end
+  # returns the nearest integer multiple of 100 greater than or equal to the input
+  def ceil_hundred(num)
+    remainder = num % 100
+    return num.to_i if remainder.zero?
+    (num + (100 - remainder)).to_i
+  end
 
-    # returns a Range of the supplied low and high values, where the bounds of
-    # the Range have been rounded outward to the nearest multiples of 100
-    def range_rounded_to_multiples_of_100(low, high)
-      floor_hundred(low)..ceil_hundred(high)
-    end
+  # returns a Range of the supplied low and high values, where the bounds of
+  # the Range have been rounded outward to the nearest multiples of 100
+  def range_rounded_to_multiples_of_100(low, high)
+    floor_hundred(low)..ceil_hundred(high)
   end
 end
 # rubocop:enable Metrics/ClassLength
