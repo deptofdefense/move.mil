@@ -26,10 +26,9 @@
         <p><span class="quotation-mark">“</span>On our first <%= abbr_tag('pcs') %>, my wife and I were moving from North Carolina to Pearl Harbor. The packing company in North Carolina disassembled all of our furniture, including a sectional sofa and our bed, to fit it on the truck more compactly. After 1 month, when our furniture finally arrived, the movers in Pearl Harbor couldn’t find the box of bolts that the previous movers had packed. <span class="color-primary">Yep, that’s right, the single box with every single screw, nut and bolt for our furniture was lost.</span> Because we couldn’t prove the movers disassembled everything, we were left with a houseful of unassembled furniture. My wife and I ended up throwing everything away and buying new stuff.</p>
         <p>Every move since then, I make sure the inventory says whether or not the movers took something apart and where those bolts are stored!<span class="quotation-mark">”</span></p>
       </div>
-      <div class="usa-media_block pro-tip">
-        <%= image_tag 'icons/pro-tip.svg', alt: 'lightbulb icon', class: 'usa-media_block-img' %>
-        <div class="usa-media_block-body"><strong>Pro-Tip:</strong> Bring the parts box with you. As the packers disassemble your furniture, place all the parts in baggies labelled with the name of the piece of furniture it came from. Then, take the parts box with you to your new location.</div>
-      </div>
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tip:</strong> Bring the parts box with you. As the packers disassemble your furniture, place all the parts in baggies labelled with the name of the piece of furniture it came from. Then, take the parts box with you to your new location.
+      <% end %>
     </div>
 
     <div class="what-to-expect-section" id="dented-drywall">
