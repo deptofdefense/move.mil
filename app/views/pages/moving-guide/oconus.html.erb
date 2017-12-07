@@ -21,12 +21,12 @@
     <li><%= link_to 'New Host Country', '#new-country' %></li>
   <% end %>
 
-  <div class="sidenav-body what-to-expect-body">
-    <div id="introduction" class="what-to-expect-intro">
+  <div class="sidenav-body">
+    <div id="introduction" class="article-intro">
       Moving outside the continental U.S. (OCONUS) can be intimidating, especially to those who may be experiencing this for the first time. You have resources at your <%= link_to 'local personal property office', offices_path %>, 24/7 at  <%= link_to 'Military OneSource', 'https://www.militaryonesource.mil/web/mos/moving-housing' %>, and in this list of <%= link_to 'moving tips', page_path('moving-guide/tips') %> or <%= link_to 'FAQ', faqs_path %>. Let's check out what a typical <%= abbr_tag('oconus') %> move could look like.
     </div>
 
-    <div id="assignment" class="what-to-expect-section">
+    <div id="assignment" class="article-section">
       <h4>Assignment Notification</h4>
 
       <p>Your move process begins with assignment notification, through email, a phone call, or notification from a supervisor. It's important to understand that an assignment notification does not mean that you have "orders" just yet.</p>
@@ -34,7 +34,7 @@
       <p>Your new location's <%= link_to 'Housing Office', offices_path %> is the best resource for up-to-date weight allowance restrictions and housing options.</p>
     </div>
 
-    <div id="orders" class="what-to-expect-section">
+    <div id="orders" class="article-section">
       <h4>Orders</h4>
 
       <p><strong><em>Accuracy Matters</em></strong> When you receive your orders, make sure all the details are accurate. In addition to the administrative details (your name, social security number, etc.), make sure it has the correct duty station, dependent information, and reporting dates. Let the administration section know that there is an error so it can be corrected as soon as possible.</p>
@@ -70,7 +70,7 @@
       <p>Once you have your orders, you can now login to the <%= link_to 'Defense Personal Property System', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %> to schedule your move.</p>
     </div>
 
-    <div id="scheduling" class="what-to-expect-section">
+    <div id="scheduling" class="article-section">
       <h4>Schedule Your Move</h4>
 
       <p>1.) Use the <%= link_to 'Defense Personal Property System', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %> to upload your orders and create a shipment (or two). Check out these <%= link_to 'tutorials', tutorials_path %> for help using <%= abbr_tag('dps') %>.</p>
@@ -102,7 +102,7 @@
       </div>
     </div>
 
-    <div id="before-packing" class="what-to-expect-section">
+    <div id="before-packing" class="article-section">
       <h4>Before the Packers Arrive</h4>
 
       <p>Your moving company will complete a <strong>Pre-Move Survey</strong> at your home. They'll do a weight estimate and identify any special items that you entered in the Defense Personal Property System (DPS), so that on moving day, they have all the necessary packing materials. Call your moving company if you're within a week of moving day, and a Pre-Move Survey has not been completed on your home. Your <%= link_to 'local personal property office', offices_path %> can also help.</p>
@@ -132,7 +132,7 @@
         </div>
       </div>
 
-      <div class="usa-grid-full what-to-expect-subsection">
+      <div class="usa-grid-full article-subsection">
         <div class="usa-width-two-thirds">
           <p>Now that you've taken a mental picture of what you'd like to bring, separate it into three groups:</p>
 
@@ -149,7 +149,7 @@
         </div>
       </div>
 
-      <div class="usa-grid-full what-to-expect-subsection">
+      <div class="usa-grid-full article-subsection">
         <div class="usa-width-one-half">
           <%= render layout: 'shared/pro_tip' do %>
             <strong>Pro-Tip:</strong> Pack important documents in an accordion folder and keep it in your carry-on bag. You should have several copies of each:
@@ -171,7 +171,7 @@
       <p>Financially speaking, a good understanding of your host country's housing allowances will help you determine what to pack as well. Confirm your new location's Housing Allowance through the Defense Travel Management Office, as these rates can change every year!</p>
     </div>
 
-    <div id="pack-day" class="what-to-expect-section">
+    <div id="pack-day" class="article-section">
       <h4>Packing Day</h4>
 
       <p>Your packing day and moving dates are not the same thing. On packing day, the moving company sends a team of packers to your home and puts all your items into boxes, usually as fast as possible. The day your boxed are loaded onto the truck for Moving Day could be several days later.</p>
@@ -199,7 +199,7 @@
       <p>Bottom line, if at any point something doesn't feel right, you should call your local personal property office and ask for the assistance from an inspector/quality assurance personnel.</p>
     </div>
 
-    <div id="moving-day" class="what-to-expect-section">
+    <div id="moving-day" class="article-section">
       <h4>Loading/Moving Day</h4>
 
       <p>On moving day, the driver of the truck is usually in charge of the show.  They are responsible for ensuring there is a crew and that everything is properly loaded onto the truck before departing. If you run into any issues during this phase, talk with the driver first and if they are unable to resolve the issue don’t hesitate to call your <%= link_to 'local personal property office', offices_path %> for help.</p>
@@ -215,7 +215,7 @@
       <% end %>
     </div>
 
-    <div id="getting-there" class="what-to-expect-section">
+    <div id="getting-there" class="article-section">
       <h4>Getting There</h4>
       <p>All your bags are packed, and you’re ready to go? Even if you’re taking a military flight, make sure everyone in your family has a valid passport, unless you’re headed to Hawaii or Alaska. Family members not listed on the Orders may need visas. Don’t forget to pack your important files in your carry-on, along with things like a change of clothes, and medications. The long haul flight will be more comfortable with personal items like books or electronics, snacks, and water to keep hydrated. In your checked bags, pack items for immediate use, like clothes, shoes, and toiletries.</p>
 
@@ -224,7 +224,7 @@
       <p>During your travel keep any receipts of your out of pocket expenses,  things like hotel receipts, rental car, gasoline, tolls, etc. that may be needed when you file your voucher at the end.</p>
     </div>
 
-    <div id="pets" class="what-to-expect-section">
+    <div id="pets" class="article-section">
       <h4>Traveling with Pets</h4>
 
       <p>First, research your new destination’s rules and regulations about bringing pets. Start by contacting your <%= link_to 'local transportation office', offices_path %> to see if there are any breed restrictions, quarantine requirements, and timeline for vaccinations. Check the <%= link_to 'Defense Travel’s Pet site', 'http://www.defensetravel.dod.mil/site/faqpet.cfm' %> for more information.</p>
@@ -242,7 +242,7 @@
       </p>
     </div>
 
-    <div id="arrival" class="what-to-expect-section">
+    <div id="arrival" class="article-section">
       <h4>Arrival</h4>
 
       <p>Coordinate with your Sponsor, or new teammate to meet you at the airport.  A friendly smile from someone who understands what you just went through goes a long way. If your sponsor or organization is not available, reach out to the <%= link_to 'Transportation Office', offices_path %> and they can help coordinate for someone to meet you at the airport to ensure you know where to get settled.</p>
@@ -265,7 +265,7 @@
       </div>
     </div>
 
-    <div id="delivery" class="what-to-expect-section">
+    <div id="delivery" class="article-section">
       <h4>Delivery</h4>
 
       <p>When the truck arrives, you will do a walk-through with the driver and the delivery crew. Identify any pre-existing damage to the residence and let them see the layout of the home to determine the best way to deliver your household goods.</p>
@@ -297,7 +297,7 @@
       </ul>
     </div>
 
-    <div id="clean-up" class="what-to-expect-section">
+    <div id="clean-up" class="article-section">
       <h4>Clean Up, Claims &amp; Customer Survey</h4>
 
       <p>
@@ -322,7 +322,7 @@
     </div>
 
 
-    <div id="new-country" class="what-to-expect-section">
+    <div id="new-country" class="article-section">
       <h4>Get to know your new host country</h4>
       <p>Finally, enjoy the transition to life in your new host country:</p>
 

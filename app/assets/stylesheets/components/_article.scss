@@ -9,6 +9,10 @@
   }
 }
 
+.article-header {
+  color: $color-primary-darkest;
+}
+
 .article-section {
   @include padding(2rem 0);
 
