@@ -149,8 +149,16 @@ class PpmEstimator
     Shorthaul.rate(effective_400ng_date, cwt, distance)
   end
 
+  def full_pack_rate
+    FullPack.rate(effective_400ng_date, orig_svc_area.services_schedule, full_weight)
+  end
+
+  def full_unpack_rate
+    FullUnpack.rate(effective_400ng_date, dest_svc_area.services_schedule)
+  end
+
   def non_linehaul_charges
-    cwt * (orig_svc_area.orig_dest_service_charge + dest_svc_area.orig_dest_service_charge + FullPack.rate(effective_400ng_date, orig_svc_area.services_schedule, full_weight) + FullUnpack.rate(effective_400ng_date, dest_svc_area.services_schedule))
+    cwt * (orig_svc_area.orig_dest_service_charge + dest_svc_area.orig_dest_service_charge + full_pack_rate + full_unpack_rate)
   end
 
   def discount_range
