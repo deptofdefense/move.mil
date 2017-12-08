@@ -13,9 +13,7 @@ class SitemapController < ApplicationController
   end
 
   def route_urls
-    routes = Rails.application.routes.routes
-    paths = routes.map { |route| route.path.spec.to_s[%r{^\/([^\(:*]+)}, 1] }.compact
-    paths.map { |path| page_url(path.chomp('/')) unless path.match?(/^(rails|assets|sitemap|homepage|\d)/) }.compact
+    %w(entitlements customer-service faqs resources/locator-maps resources/weight-estimator).map { |page | page_url(page) }
   end
 
   def service_specific_information_urls
