@@ -28,9 +28,7 @@ Once DTOD has sent you all of the results, concatenate them together and write t
 
 # Data from 400NG Baseline Rates
 
-Each year's 400NG file from SDDC can be found on their [Personal Property->Household Goods page](https://www.sddc.army.mil/pp/Pages/houseGoods.aspx), under the "Special Requirements and Rates Team -> Domestic" tab. The file contains several tabs that need to be unpacked and processed into separate CSV files so that the data can be imported into the database.
-
-Rates for each year (to take effect on May 15 of that year) are published in December of the previous year.
+Each year's 400NG file from SDDC can be found on their [Personal Property->Household Goods page](https://www.sddc.army.mil/pp/Pages/houseGoods.aspx), under the "Special Requirements and Rates Team -> Domestic" tab. Rates for each year (to take effect on May 15 of that year) are published in December of the previous year.
 
 As the maximum entitlement is 20500 lbs (O-10 w/ progear), there is currently no logic for calculating costs at 24000 lbs and beyond, and the "each addl CWT" columns from the original spreadsheet are all ignored.
 
