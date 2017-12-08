@@ -1,11 +1,331 @@
-<%- @page_title = 'What to expect… Civilians' -%>
+<%- @page_title = "What to Expect with a DOD Civilian Move" -%>
 
 <%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: []} %>
 
 <div class="usa-section main-section">
-  <h1><%= @page_title %></h1>
+  <h1>What to Expect with a <%= abbr_tag('dod') %> Civilian Move</h1>
 
-  <%# TODO Add page content %>
+  <%= render layout: 'shared/sidenav' do %>
+    <li><%= link_to 'Assignment Notification', '#assignment' %></li>
+    <li><%= link_to 'Orders', '#orders' %></li>
+    <li><%= link_to 'Schedule Your Move', '#scheduling' %></li>
+    <li><%= link_to 'Before the Packers Arrive', '#before-packing' %></li>
+    <li><%= link_to 'Packing Day', '#pack-day' %></li>
+    <li><%= link_to 'Loading/Moving Day', '#moving-day' %></li>
+    <li><%= link_to 'Getting There', '#getting-there' %></li>
+    <li><%= link_to 'Traveling with Pets', '#pets' %></li>
+    <li><%= link_to 'Arrival', '#arrival' %></li>
+    <li><%= link_to 'Delivery', '#delivery' %></li>
+    <li><%= link_to 'Clean Up, Claims, & Customer Survey', '#clean-up' %></li>
+    <li><%= link_to 'New City', '#new-city' %></li>
+  <% end %>
 
-  <p>Coming soon!</p>
+  <div class="sidenav-body">
+    <div class="article-intro">
+      When moving to a new base, or even overseas, the task might be met with a mix of excitement and apprehension. A new city to explore, new team to work with, and a whole household to move. While each experience will be different, below we discuss what a typical move could look like. If at any time you have questions or need help with your move, reach out to your <%= link_to 'local personal property office', offices_path %> at your current, or new location.
+    </div>
+
+    <div id="assignment" class="article-section">
+      <h4>Assignment Notification</h4>
+
+      <p>Your move process begins with assignment notification, through email, a phone call, or notification from a supervisor. It’s important to understand that an assignment notification does not mean that you have “orders” just yet.</p>
+
+      <p>
+        <strong><em>Where am I going to live?</em></strong><br>
+        At this stage, you should start looking into places to live near or on your new post and getting organized for the pending move. Don’t make any permanent decisions (i.e. home purchase) until there are orders in hand.
+      </p>
+
+      <p>Your new location's <%= link_to 'Housing Office', offices_path %> is the best resource for up-to-date weight allowance restrictions and housing options.</p>
+
+      <p>Sometimes, your command may authorize a House Hunting Trip (HHT). This discretionary allowance will reimburse you for meals and lodging for up to 10 days, while you look for a new place to live in your new city. Check out the <%= link_to 'Reimbursements & Vouchers', page_path('reimbursements') %> page for details.</p>
+    </div>
+
+    <div id="orders" class="article-section">
+      <h4>Orders</h4>
+
+      <p>
+        <strong><em>Accuracy Matters</em></strong><br>
+        When you receive your orders, make sure all the details are accurate. In addition to the administrative details (your name, social security number, etc.), make sure it has the correct duty station, dependent information, and reporting dates. Let the administration section know that there is an error so it can be corrected as soon as possible.
+      </p>
+
+      <p>Your agency will let you know which relocation allowances will be paid (reimbursed) at the time of the advertisement or notification. You’ll be required to sign and comply with the terms of a service agreement to obtain the authorized allowances.</p>
+
+      <p>
+        <strong><em>Weight Allowance</em></strong><br>
+        As a civilian, you’re entitled to move <strong>18,000 lbs</strong> of household goods, regardless of your grade or band. Any amount over that limit will come out of pocket. You can choose to move it all at once in a Household Goods shipment, or choose to store it for up to 90 days.
+      </p>
+
+      <p>
+        <strong><em>Moving with family?</em></strong><br>
+        Check to see if dependents are specifically listed in your orders. If not, you’ll need to get Command Sponsorship, also known as “Accompanied Orders”. You can submit a formal request for “Accompanied Orders” through your chain of command, but be aware that getting your command’s approval isn’t guaranteed.
+      </p>
+
+      <div class="usa-grid-full">
+        <div class="usa-width-one-half">
+          <p>Command Sponsorship Benefits:</p>
+          <ul>
+            <li>Reimbursed for dependent travel and housing expenses, so keep detailed records!</li>
+            <li>More housing allowance</li>
+            <li>Higher weight entitlement to move your household goods</li>
+            <li>Your dependents will have access to medical and legal services</li>
+            <li>The right to stay in your host country without a visa, etc.</li>
+        </div>
+        <div class="usa-width-one-half">
+          <p>Without Sponsorship:</p>
+          <ul>
+            <li>Dependent expenses are out of pocket</li>
+            <li>Your BAH (Basic Allowance for Housing) is affected</li>
+            <li>Your family won't automatically have the right to live with you in your new location</li>
+            <li>They might need visas</li>
+            <li>Status of Forces Agreement, or SOFA, associated with the country where you will be living. Failure to do so could result in large fines.</li>
+          </ul>
+        </div>
+      </div>
+
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tip:</strong> Get a General Power of Attorney for your spouse. This allows them to take necessary action on moving and financial decisions while you're at work.
+      <% end %>
+
+      <p>Once you have your orders, you can log in to the <%= link_to 'Defense Personal Property System', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %> to schedule your move.</p>
+    </div>
+
+    <div id="scheduling" class="article-section">
+      <h4>Schedule Your Move</h4>
+
+      <p>1.) Use the <%= link_to 'Defense Personal Property System', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %> to upload your orders and create a shipment (or two). Check out these <%= link_to 'tutorials', tutorials_path %> for help using <%= abbr_tag('dps') %>.</p>
+      <p>2.) Next, take the DD forms generated by <%= abbr_tag('dps') %> to your local <%= link_to 'Transportation Office', offices_path %>. At that time, you'll get matched with a moving company (also known as a Transportation Service Provider, or Carrier), and your packing and moving dates will be confirmed.</p>
+
+      <div class="usa-grid-full">
+        <div class="usa-width-one-third">
+          Have this info ready for <%= abbr_tag('dps') %>:
+          <ul>
+            <li>Your contact information</li>
+            <li><%= link_to 'Estimated weight', weight_estimator_path %></li>
+            <li>Pick up &amp; delivery locations</li>
+            <li>Pick up & delivery dates</li>
+            <li>Special items (boat, guns, RV, large electronics)</li>
+          </ul>
+        </div>
+        <div class="usa-width-two-thirds">
+          <%= render layout: 'shared/pro_tip' do %>
+            <strong>Pro-Tips:</strong>
+            <ul>
+              <li>It's also good to include an emergency contact in case the driver cannot get ahold of you during the move.</li>
+              <li>You don't need to know your exact delivery address to schedule your move. You can just specify your new city and state and update it later.</li>
+              <li>The pick up date is the day your items are placed on the truck. Your pack dates will be the days leading up to your pick up date. Those fluctuate depending on your estimated weight.</li>
+              <li><%= link_to 'View more tips', page_path('moving-guide/tips') %></li>
+            </ul>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div id="before-packing" class="article-section">
+      <h4>Before the Packers Arrive</h4>
+
+      <p>Your moving company will complete a <strong>Pre-Move Survey</strong> at your home. They'll do a weight estimate and identify any special items that you entered in the Defense Personal Property System (DPS), so that on moving day they have all the necessary packing materials. Call your moving company if you're within a week of moving day, and a Pre-Move Survey has not been completed on your home. Your <%= link_to 'local personal property office', offices_path %> can also help.</p>
+
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tip:</strong> Make your own inventory! Include the make and serial number of any high value and electronics items. Take a video of things like your TV working, to show that it's in good working condition.  Insist that information makes it onto the moving company's inventory BEFORE the truck leaves your house.
+      <% end %>
+
+      <p>
+        <strong><em>What should I bring?</em></strong><br>
+        Now is the time to take a look at your belongings and decide what to take with you, what you might leave behind in storage, and what items you could sell or donate. When making this decision, consider whether or not your next duty station will provide furnished housing, or if you’re moving with dependents.
+      </p>
+
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong><%= abbr_tag('oconus') %> Pro-Tips:</strong>
+        <ul>
+          <li>If you're moving overseas, research your host country's electrical outlets! You may need a converter, or choose to buy new appliances and electronics when you get there. Most bases have a thrift shop where you can pick up items when you arrive!</li>
+          <li>Choose wisely. A household goods shipment won't arrive at your new location for several weeks.</li>
+          <li>When you pack for an overseas move, keep an accordian folder in your carry on bag containing copies of important documents you might need when going through customs in your new host country.</li>
+        </ul>
+      <% end %>
+    </div>
+
+    <div id="pack-day" class="article-section">
+      <h4>Packing Day</h4>
+
+      <p>Your packing day and moving dates are not the same thing. On packing day, the moving company sends a team of packers to your home and puts all your items into boxes, usually as fast as possible. The day your boxed are loaded onto the truck for moving day could be several days later.</p>
+
+      <p>The packers are supposed to call ahead of time to inform you they will be coming out on certain dates and within a specified time period. It's critical that you are available during this time and if for some reason they fail to show during the window, notify your <%= link_to 'local personal property office', offices_path %> quickly.</p>
+
+      <div class="usa-grid-full">
+        <div class="usa-width-one-third">
+          <p>A team of packers will load just about anything and everything that they can fit into boxes, which means there's a risk that important items may get packed up unintentionally.</p>
+          <p><strong><em>How should I pack?</em></strong><br>
+          Pack your belongings with unpacking in mind. Where do you want these boxes to go in your new place? The master bedroom, living room, or kitchen? When you move <%= abbr_tag('oconus') %>, there can be a language barrier between you and your movers in the new host country.</p>
+        </div>
+        <div class="usa-width-two-thirds">
+          <%= render layout: 'shared/pro_tip' do %>
+            <strong>Pro-Tips:</strong>
+            <ul>
+              <li><strong>Physically separate</strong> anything you plan to take/keep with you from the rest of your belongings into a closet or your vehicle before the packers arrive. Clearly mark this area with a "Do Not Pack" sign.</li>
+              <li><strong>Invite friends and family</strong> to keep an eye on things during packing day. It can be really helpful if you can have someone shadowing the packers, making sure your inventory is accurate, potentially even taking photos of the inside of boxes as they are packed.</li>
+              <li><strong>Label your boxes</strong> with a small piece of duct tape, each room with its own color. Others have found it helpful to number each room when you arrive in your host country, so that your movers know that the master bedroom is 1, the kitchen 2, and the living room 3.</li>
+              <li><%= link_to 'View more tips', page_path('moving-guide/tips') %></li>
+            </ul>
+          <% end %>
+        </div>
+      </div>
+      <p>Bottom line, if at any point something doesn't feel right, you should call your local personal property office and ask for the assistance from an inspector/quality assurance personnel.</p>
+    </div>
+
+    <div id="moving-day" class="article-section">
+      <h4>Loading/Moving Day</h4>
+
+      <p>On moving day, the driver of the truck is usually in charge of the show.  They are responsible for ensuring there is a crew and that everything is properly loaded onto the truck before departing. If you run into any issues during this phase, talk with the driver first and if they are unable to resolve the issue don’t hesitate to call your <%= link_to 'local personal property office', offices_path %> for help.</p>
+      <p>The moving company will be creating an inventory of all your household items and will put stickers on all the boxes and larger items (couches, large appliances, etc.). On these inventory sheets, they will also be indicating whether or not there was any pre-existing damage to your household goods. If you disagree with their assessment, make sure you annotate that on the inventory sheet!</p>
+
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>Do a walkthrough with the driver to make sure everything is out of your residence and loaded up. This will ensure that nothing gets left behind and if you see any damage to the residence you can annotate that on the forms provided.</li>
+          <li>Ask the driver for their phone number so you can reach them if needed.</li>
+          <li>If you don’t agree with something on that inventory form make sure you annotate that BEFORE signing in the remarks section!</li>
+        </ul>
+      <% end %>
+    </div>
+
+    <div id="getting-there" class="article-section">
+      <h4>Getting There</h4>
+      <p>When traveling <%= abbr_tag('conus') %> to your new location, you’re authorized travel by one primary vehicle, but two if you’re relocating with dependents. You may be required to do a Privately Owned Vehicle (POV) Risk Assessment before you start your en route travel. Currently, the mileage rate for <%= abbr_tag('pov') %> reimbursement is 17 cents per mile, and tolls and any parking fees are also reimbursable. During your travel you'll be given <%= link_to 'per diem', '#TODO' %>. Contact your command for the number of days you're authorized for travel. </p>
+
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tip:</strong> If you're traveling with pets, you can check out pet-friendly hotels on the Web at <%= link_to 'www.petswelcome.com', 'https://www.petswelcome.com/' %>.
+      <% end %>
+
+      <p>If you’re moving <%= abbr_tag('oconus') %>, make sure everyone in your family has a valid passport unless you’re headed to Hawaii or Alaska. Family members not listed on the Orders may need visas. When you arrive, expect a few in-processing steps. Depending on your host country, this could include briefings at different offices, and trips to different bases, immediately upon arrival. <%= link_to 'Transportation Office Locator', offices_path %>
+
+      <p>During your travel keep any receipts of your out of pocket expenses,  things like hotel receipts, rental car, gasoline, tolls, etc. that may be needed when you file your voucher at the end. Visit the <%= link_to 'Reimbursements & Vouchers', page_path('reimbursements') %> page for details.</p>
+
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tip:</strong> Set up a system to organize your receipts during your move, like an accordion file with a folder for each type.
+      <% end %>
+
+      <p>When moving, most, but not all of your entitlements, are subject to taxation. The <%= link_to 'Relocation Income Tax Allowance (RITA)', '#TODO' %> will reimburse you for most of those taxes. But you will not be reimbursed for <%= abbr_tag('fica') %> tax. Your Transportation Office can help navigate those reimbursements.</p>
+
+      <p>
+        <strong><em>How will your stuff get there?</em></strong><br>
+        Keep the lines of communication open and available for the driver, for <%= abbr_tag('conus') %> moves. If your driver has any updates, they may try to contact you as they make their way to your next destination and it’s important you are available to answer any questions that they may have.
+      </p>
+
+      <p>If you’re doing a door-to-door, it’s important that you arrive before the driver. If the driver arrives at your new residence before you do, they may have to put your items in storage, depending on their schedule. For those whose items are going into storage, you have more flexibility with your timing.</p>
+    </div>
+
+    <div id="pets" class="article-section">
+      <h4>Traveling with Pets</h4>
+
+      <p>First, research your new destination’s rules and regulations about bringing pets. Start by contacting your <%= link_to 'local transportation office', offices_path %> to see if there are any breed restrictions, quarantine requirements, and timeline for vaccinations. Check the <%= link_to 'Defense Travel’s Pet site', 'http://www.defensetravel.dod.mil/site/faqpet.cfm' %> for more information.</p>
+
+      <p>
+        <strong><em>Will my pet's expenses be reimbursed?</em></strong><br>
+        For civilian employees, pet quarantine fees and transportation charges are included in the <%= link_to 'Miscellaneous Expense Allowance (MEA)', '#TODO' %> you receive. This applies to dogs, cats, and other house pets. Other animals like horses, fish, birds, and rodents are excluded becuase of their size, exotic nature, and shipping restrictions.
+      </p>
+
+      <p>
+        <strong><em>How are my pets going to get there?</em></strong><br>
+        During the summer months, most airlines won’t ship pets due to the heat, therefore it may be wise to let them stay with friends or family. You could send them home in advance or bring them to your new location after the temperatures have cooled down. Plus, you may be eligible to ship your pets via the <%= link_to 'Patriot Express Air Mobility Command Flight', 'http://www.amc.af.mil/Portals/12/Users/032/88/288/pet_brochure_may_2017[1].pdf?ver=2017-05-02-152244-670' %>.
+      </p>
+    </div>
+
+    <div id="arrival" class="article-section">
+      <h4>Arrival</h4>
+
+      <p>If you’re traveling <%= abbr_tag('oconus') %>, coordinate with your Sponsor, or new teammate to meet you at the airport. A friendly smile from someone who understands what you just went through goes a long way. If your sponsor or organization is not available, reach out to the <%= link_to 'Transportation Office', offices_path %> and they can help coordinate for someone to meet you at the airport to ensure you know where to get settled.</p>
+
+      <p>Have your important documents in a file ready to go when you land and go through customs.</p>
+
+      <div class="usa-grid-full">
+        <div class="usa-width-one-half">
+          <ul>
+            <li>Passports and Visas (where applicable)</li>
+            <li>Orders</li>
+            <li>A sheet of paper with your new base address, shuttles, rental car information (since you may not have cell service right away)</li>
+          </ul>
+        </div>
+        <div class="usa-width-one-half">
+          <%= render layout: 'shared/pro_tip' do %>
+            <strong>Pro-Tip:</strong> Don’t be surprised if your bags are searched in customs! Your new host country may have restricted items.
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div id="delivery" class="article-section">
+      <h4>Delivery</h4>
+
+      <p>When the truck arrives, you will do a walk-through with the driver and the delivery crew. Identify any pre-existing damage to the residence and let them see the layout of the home to determine the best way to deliver your household goods.</p>
+
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tip:</strong> Number your rooms, so that if there is a language barrier in your new host country, everyone will know where the boxes should go.
+      <% end %>
+
+      <p>The delivery crew should put down some type of material (plastic, fabric, etc.) to protect some of your flooring and expect them to put some form of protection on any tight corners that may be in the residence as well.</p>
+
+      <p>Get an <strong>inventory sheet</strong> from the driver so you can check off the numbers and ensure that everything is delivered. Doing this yourself is in your best interest. As the boxes come off the truck, you should expect to direct them to a room in the residence where that item should be placed.</p>
+
+      <div class="usa-grid-full">
+        <div class="usa-width-two-thirds">
+          <p>Once the truck is empty, verify on the inventory sheet that everything has been delivered. If not, those items need to be annotated on the inventory sheet before you sign off. Additionally, if you see any items come in damaged you can annotate that as well, but you’ll still have time to file a claim in case you missed it. This goes for any damage that may have occurred to the residence.</p>
+        </div>
+        <div class="usa-width-one-third">
+          <%= render layout: 'shared/pro_tip' do %>
+            <strong>Pro-Tip:</strong> Enlist your family or your Sponsor for help during this during this phase.
+          <% end %>
+        </div>
+      </div>
+
+      <p>Finally, you have a couple of options during the delivery phase about what items you want the delivery crew to unpack.</p>
+
+      <ul>
+	      <li>A full unpack: Movers empty the boxes of all their contents into the specified rooms.</li>
+	      <li>A partial unpack: Movers only open boxes in select areas.</li>
+        <li>Movers reassemble furniture that they took apart at the origin (beds, couches, etc.)</li>
+      </ul>
+    </div>
+
+    <div id="clean-up" class="article-section">
+      <h4>Clean Up, Claims &amp; Customer Survey</h4>
+
+      <p>
+        <strong><em>Clean-Up</em></strong><br>
+        Once you have emptied out all your household goods from the boxes, call the local moving company and set up a time for them to come back out and remove any old boxes, packing material, etc. They are responsible for removing it from the residence one time after delivery.
+      </p>
+
+      <%= render layout: 'shared/pro_tip' do %>
+        <strong>Pro-Tip:</strong> Save time by piling up all the boxes and moving supplies in one location!
+      <% end %>
+
+      <p>
+        <strong><em>Claims</em></strong><br>
+        While we hope all of your items arrived in one piece, the reality is that isn’t always the case. Sign in to <%= link_to 'Defense Personal Property System', 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %> and complete this part of the process. When you log in to the system, you can expect to see two paths - Lost/Damage Report and Claims Submission.
+      </p>
+
+      <p>A Loss/Damage Report is your way to notify the moving company that some of your items are missing or were damaged during the delivery process. This must be done within 75 days of your delivery date. If the items cannot be found or they cannot fix the damage, you must file a claim to be reimbursed! Remember... a Loss/Damage Report is NOT a claim!</p>
+
+      <p>If you did not submit a Loss/Damage Report, you will need to file your claim within 75 days of delivery. If you submitted a Loss/Damage Report within the 75 day window, you will have up to 9 months to file a claim for the Full Replacement Value of the item you are claiming. If the claim is filed more than 9 months from the delivery date, you will only be eligible for depreciated value up to two years from delivery.</p>
+
+      <p>
+        <strong><em>Customer Satisfaction Survey</em></strong><br>
+        The survey asks some questions about your experience is read by actual humans! Be upfront and honest in your feedback, because if there is a negative trend on a moving company they can be suspended temporarily or indefinitely if they are providing poor service. On the flip side, if you find a moving company that did an excellent job, please put that in the survey as well to help out your colleagues!
+      </p>
+    </div>
+
+
+    <div id="new-city" class="article-section">
+      <h4>Get to know your new city</h4>
+      <p>Finally, enjoy the transition to life in your new city:</p>
+
+      <ul>
+        <li><strong><em>Take free language courses</em></strong> online and download translator apps. Simple phrases like hello, good-bye, yes, no, and thank you, go a long way to making you feel comfortable in this new place.</li>
+        <li><strong><em>Research different neighborhoods</em></strong> around your new base. Aside from thinking about housing options, there are likely a number of local markets, festivals, historical monuments, and areas of interest nearby.</li>
+        <li><strong><em>Join social groups</em></strong> for folks at your new base. Participating in a community will help you transition to your new normal. There are groups, blogs, and forums for everything from online yard sales, local food recommendations, to religious organizations, and family support groups.</li>
+      </ul>
+
+      <p>The Relocation Assistance Program is set up through your new location’s Military and Family Support Center to help you make the most of your new city.</p>
+    </div>
+
+  </div>
 </div>
