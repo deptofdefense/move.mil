@@ -123,3 +123,44 @@ IntraAlaskaBaseLinehaul.import [:dist_mi, :weight_lbs, :rate, :effective], rates
 puts 'Loading ZIP3 to ZIP3 distances from DTOD...'
 distances = CSV.read(Rails.root.join('db', 'seeds', 'zip3_dtod_output.csv'), { headers: false, col_sep: ' ' })
 DtodZip3Distance.import [:orig_zip3, :dest_zip3, :dist_mi], distances, { batch_size: 500, validate: false }
+
+puts 'Loading discounts from top TSP (by BVS) per channel...'
+if ENV['SEEDS_ENC_IV'].nil? || ENV['SEEDS_ENC_KEY'].nil?
+  STDERR.puts 'Cannot load encrypted discounts file; ensure that both SEEDS_ENC_IV and SEEDS_ENC_KEY are set in your environment (check .env file)'
+else
+  cipher = OpenSSL::Cipher::AES256.new :CBC
+  cipher.decrypt
+  cipher.iv = [ENV['SEEDS_ENC_IV']].pack('H*')
+  cipher.key = [ENV['SEEDS_ENC_KEY']].pack('H*')
+
+  discount_files = [
+    [Rails.root.join('db', 'seeds', 'No 1 BVS Dom Discounts - Eff 1Oct2017.csv.enc'), 2017, 2]
+  ]
+
+  discount_files.each do |path, year, tdl|
+    discounts_csv = cipher.update(File.read(path))
+    discounts_csv << cipher.final
+
+    # after each discounts file, reset the cipher to read more files
+    cipher.reset
+
+    # date ranges for when the BVS scores from specific performance periods take effect
+    dates_by_tdl = [
+      (Date.new(year, 5, 15)..Date.new(year, 7, 31)),
+      (Date.new(year, 8, 1)..Date.new(year, 9, 30)),
+      (Date.new(year, 10, 1)..Date.new(year, 12, 31)),
+      (Date.new(year + 1, 1, 1)..Date.new(year + 1, 3, 6)),
+      (Date.new(year + 1, 3, 7)..Date.new(year + 1, 5, 14))
+    ]
+
+    tdl_daterange = dates_by_tdl[tdl]
+
+    discounts = CSV.parse(discounts_csv, headers: true)
+    discounts.each do |row|
+      TopTspByChannelLinehaulDiscount.where(orig: row['ORIGIN'], dest: row['DESTINATION'], tdl: tdl_daterange).first_or_initialize.tap do |d|
+        d.discount = row['LH_RATE']
+        d.save
+      end
+    end
+  end
+end

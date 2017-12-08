@@ -50,3 +50,15 @@ To clean it up:
 1. Once you have removed the extraneous garbage from each sheet, save the file and drop it in `db/seeds`. It should have dropped in size from over 6 MiB to less than than 200 KiB.
 
 Now you can add the new year's baseline rates to `seeds.rb`.
+
+# Discounts from top TSP (by BVS) by channel
+
+The list of discounts by channel, corresponding to the top TSP's discount filed during the previous rate-filing cycle, is used to generate PPM estimates. These discounts are trade secrets, so this data needs to be encrypted so that it is not stored in the clear on GitHub.
+
+## Encrypting discounts file for a new TDL
+
+Each discount list only applies to a single TDL (tonnage distribution list), so in practice, only for a few months. As new lists are generated, they need to be encrypted, put in the `db/seeds/` folder, and loaded in `seeds.rb`.
+
+The encryption command is:
+
+`openssl enc -aes-256-cbc -iv $SEEDS_ENC_IV -K $SEEDS_ENC_KEY -in (input) -out (output.enc)`

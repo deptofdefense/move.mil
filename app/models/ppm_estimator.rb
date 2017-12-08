@@ -124,10 +124,10 @@ class PpmEstimator
   def inv_linehaul_discount
     @inv_linehaul_discount ||= TopTspByChannelLinehaulDiscount.inv_discount(
       # the origin is a rate area
-      rate_area(start_zip3, estimator_params[:start].to_i),
+      "US#{rate_area(start_zip3, estimator_params[:start].to_i)}",
       # For CONUS moves, destination is the region.
       # If the orig and dest are in the same state, the region is 15!
-      start_zip3.state == end_zip3.state ? 15 : end_zip3.region,
+      "REGION #{start_zip3.state == end_zip3.state ? 15 : end_zip3.region}",
       effective_tdl_date
     )
   end

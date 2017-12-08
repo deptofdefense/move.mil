@@ -31,6 +31,8 @@ chdir APP_ROOT do
   puts "\n== Creating development environment configuration variables =="
   unless File.exist?('.env')
     system! 'echo "export SECRET_KEY_BASE=$(bin/rails secret)" >> .env'
+    system! 'echo "export SEEDS_ENC_IV=1848E8B20939E8E446A57C9C6745B9E2" >> .env'
+    system! 'echo "export SEEDS_ENC_KEY=" >> .env'
   end
 
   puts "\n== Preparing database =="
