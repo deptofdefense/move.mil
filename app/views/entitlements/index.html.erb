@@ -14,7 +14,7 @@
   <div class="sidenav-body">
     <p>Below you will find basic information and instructions regarding what you can ship.</p>
 
-    <div class="what-to-expect-section">
+    <div class="article-section">
       <h4 id="can-bring">What am I allowed to bring?</h4>
 
       <p>Moving allowances, also known as entitlements, are largely based on the service member or civilians rank and dependency status. However, special circumstances like moving overseas (<%= abbr_tag('oconus') %>), a retirement move, or a separation move may have extra entitlements and/or limitations than the standard Permanent Change of Station (PCS) move within the continental United States.</p>
@@ -23,7 +23,7 @@
     </div>
 
     <%- if @entitlements.any? -%>
-      <div class="what-to-expect-section">
+      <div class="article-section">
         <h4 id="moving-allowance">Your Moving Allowance</h4>
 
         <div id="entitlements-search" hidden>
@@ -64,7 +64,7 @@
       </div>
     <%- end -%>
 
-    <div class="what-to-expect-section">
+    <div class="article-section">
       <%= render 'special_item_information' %>
     </div>
   </div>
