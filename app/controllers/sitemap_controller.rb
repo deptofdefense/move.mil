@@ -13,7 +13,7 @@ class SitemapController < ApplicationController
   end
 
   def route_urls
-    %w(entitlements customer-service faqs resources/locator-maps resources/weight-estimator).map { |page | page_url(page) }
+    %w[entitlements customer-service faqs resources/locator-maps resources/weight-estimator].map { |page| page_url(page) }
   end
 
   def service_specific_information_urls
