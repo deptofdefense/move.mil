@@ -85,12 +85,16 @@
       $progearAllowanceText.css('visibility', 'visible');
       onWeightProgearInput(null);
 
-      // The visibility of the spouse progear field is controlled elsewhere, so it is safe to make this label visible regardless
       var proGearWeightSpouse = getEntitlementProgearSpouse(entitlement);
       $('#entitlement_progear_spouse').text(proGearWeightSpouse.toString());
       $progearSpouseAllowanceText.css('visibility', 'visible');
       onWeightProgearSpouseInput(null);
     }
+
+    if ($('#dependents_yes')[0].checked)
+      $('#progear-spouse-section').removeAttr('hidden');
+    else
+      $('#progear-spouse-section').attr('hidden', true);
   };
 
   var validateEntitlementField = function($input, getEntitlementFn) {

@@ -99,7 +99,7 @@
           Your ProGear allowance is up to <strong><span id="entitlement_progear"></span> lbs</strong>.
         </p>
       </div>
-      <div id="progear-spouse-section">
+      <div id="progear-spouse-section" hidden>
         <%= form.label :weight_progear_spouse, "Estimated Spouse's ProGear Weight (lbs)" %>
         <%= form.number_field :weight_progear_spouse, { id: :weight_progear_spouse, inputmode: 'numeric', required: false } %>
         <p id="progear-spouse-allowance-text">
