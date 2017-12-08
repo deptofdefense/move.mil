@@ -4,12 +4,14 @@ This project uses a number of open source components whose licenses are noted be
 
 | Project | Copyright | License |
 |---------|-----------|---------|
-| [active_link_to](https://github.com/comfy/active_link_to) | © 2009–2017 [Oleg Khabarov](https://github.com/GBH) | [MIT License](https://github.com/comfy/active_link_to/blob/master/LICENSE) |
+| [activerecord-import](https://github.com/zdennis/activerecord-import) | © [Zach Dennis](https://github.com/zdennis) | [Ruby License](https://github.com/zdennis/activerecord-import/blob/master/LICENSE) |
 | [Brakeman](https://github.com/presidentbeef/brakeman) | © 2012 Twitter, Inc. | [MIT License](https://github.com/presidentbeef/brakeman/blob/master/MIT-LICENSE) |
 | [Byebug](https://github.com/deivid-rodriguez/byebug) | © [David Rodríguez](https://github.com/deivid-rodriguez) | [BSD 2-Clause License](https://github.com/deivid-rodriguez/byebug/blob/master/LICENSE) |
+| [dotenv](https://github.com/bkeepers/dotenv) | © 2012 [Brandon Keepers](https://github.com/bkeepers) | [MIT License](https://github.com/bkeepers/dotenv/blob/master/LICENSE) |
 | [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails) | © 2008–2013 [Joe Ferris](https://github.com/jferris) and [thoughtbot, inc.](https://thoughtbot.com) | [MIT License](https://github.com/thoughtbot/factory_bot_rails/blob/master/LICENSE) |
 | [FriendlyId](https://github.com/norman/friendly_id) | © 2008–2016 [Norman Clarke](https://github.com/norman) and contributors | [MIT License](https://github.com/norman/friendly_id/blob/master/MIT-LICENSE) |
 | [Geokit Rails](https://github.com/geokit/geokit-rails) | © 2013 [Michael Noack](https://github.com/mnoack), [James Cox](https://github.com/imajes), [Bill Eisenhauer](https://github.com/billeisenhauer), and [Andre Lewis](https://github.com/andre) | [MIT License](https://github.com/geokit/geokit-rails/blob/master/MIT-LICENSE) |
+| [health_check](https://github.com/ianheggie/health_check) | © 2010—2013 [Ian Heggie](https://github.com/ianheggie) | [MIT License](https://github.com/ianheggie/health_check/blob/master/MIT-LICENSE) |
 | [High Voltage](https://github.com/thoughtbot/high_voltage) | © 2010–2015 [thoughtbot, inc.](https://thoughtbot.com) | [MIT License](https://github.com/thoughtbot/high_voltage/blob/master/MIT-LICENSE) |
 | [html5shiv](https://github.com/afarkas/html5shiv) | © 2014 [Alexander Farkas](https://github.com/aFarkas) | [MIT License](https://github.com/aFarkas/html5shiv/blob/master/MIT%20and%20GPL2%20licenses.md)
 | [jQuery](http://jquery.com) | © [JS Foundation](https://js.foundation) and other contributors | [MIT License](https://github.com/jquery/jquery/blob/master/LICENSE.txt) |
@@ -28,6 +30,7 @@ This project uses a number of open source components whose licenses are noted be
 | [Uglifier](https://github.com/lautis/uglifier) | © 2011 [Ville Lautanala](https://github.com/lautis) | [MIT License](https://github.com/lautis/uglifier/blob/master/LICENSE.txt) |
 | [uswds-rails](https://github.com/jgarber623/uswds-rails) | © 2017 [Jason Garber](https://github.com/jgarber623) | [MIT License](https://github.com/jgarber623/uswds-rails/blob/master/LICENSE.md) |
 | [Web Console](https://github.com/rails/web-console) | © 2014–2016 [Charlie Somerville](https://github.com/charliesome), [Genadi Samokovarov](https://github.com/gsamokovarov), [Guillermo Iguaran](https://github.com/guilleiguaran), and [Ryan Dao](https://github.com/ryandao) | [MIT License](https://github.com/rails/web-console/blob/master/MIT-LICENSE) |
+| [will_paginate](https://github.com/mislav/will_paginate) | © 2009 [Mislav Marohnić](https://github.com/mislav) | [MIT License](https://github.com/mislav/will_paginate/blob/master/LICENSE) |
 
 Works created by U.S. Federal employees as part of their jobs typically are not eligible for copyright in the United States. In places where the contributions of U.S. Federal employees are not eligible for copyright, this work is in the public domain. In places where it is eligible for copyright, such as some foreign jurisdictions, the remainder of this work is licensed under [the MIT License](https://opensource.org/licenses/MIT), the full text of which is included below.
 
