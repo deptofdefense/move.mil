@@ -15,6 +15,9 @@ RSpec.describe PpmEstimatorController, type: :request do
 
       it 'populates the rank select input' do
       end
+
+      it 'populates the branch select input' do
+      end
     end
 
     context 'when calculating a PPM estimate' do
@@ -50,9 +53,6 @@ RSpec.describe PpmEstimatorController, type: :request do
       context 'when leaving out required dependents param' do
       end
 
-      context 'when leaving out required married param' do
-      end
-
       context 'when leaving out required start ZIP code param' do
       end
 
@@ -63,9 +63,6 @@ RSpec.describe PpmEstimatorController, type: :request do
       end
 
       context 'when leaving out required weight param' do
-      end
-
-      context 'when leaving out required selfpack param' do
       end
 
       context 'when entering an invalid start ZIP code' do
