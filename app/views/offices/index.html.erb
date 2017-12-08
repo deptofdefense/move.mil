@@ -37,14 +37,14 @@
   <%- if @transportation_offices -%>
     <div class="location-search-types">
       <div class="usa-media_block">
-        <%= image_tag 'locator/texticon_pppo.svg', alt: 'A blue icon of a Transportation Office', class: 'usa-media_block-img' %>
+        <%= image_tag 'locator/icon-pppo.svg', alt: 'A blue icon of a Transportation Office', class: 'usa-media_block-img' %>
         <div class="usa-media_block-body">
           <p><b>Transportation Offices</b> are your customer service “store front” of the moving process. In addition to providing information sessions about the moving process, they can also help with scheduling, changing delivery dates, and answering any other questions that come up during your move.</p>
         </div>
       </div>
 
       <div class="usa-media_block">
-        <%= image_tag 'locator/texticon_scales.svg', alt: 'An orange icon of a truck on a weight scale', class: 'usa-media_block-img' %>
+        <%= image_tag 'locator/icon-weight-scales.svg', alt: 'An orange icon of a truck on a weight scale', class: 'usa-media_block-img' %>
         <div class="usa-media_block-body">
           <p><b>Truck Weight Scales</b> are privately owned locations where you can take your vehicles to be weighed to receive required <%= abbr_tag('ppm') %> “Do-It-Yourself” move weight tickets.</p>
         </div>
@@ -55,8 +55,8 @@
           data: {
             latitude: @search.result[:latitude],
             longitude: @search.result[:longitude],
-            'marker-icon-path': asset_path('locator/map_pppo.svg'),
-            'marker-icon-2x-path': asset_path('locator/map_pppo.svg'),
+            'marker-icon-path': asset_path('locator/marker-pppo.svg'),
+            'marker-icon-2x-path': asset_path('locator/marker-pppo.svg'),
             'marker-shadow-path': asset_path('leaflet/dist/images/marker-shadow.png')
           }
     %>

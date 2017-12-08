@@ -1,15 +1,15 @@
 .faq-accordion-button,
 .moving-guide-accordion-button,
 .moving-tips-accordion-button {
-  background-image: asset-url('minus-blue.png');
-  background-image: asset-url('minus-blue.svg');
+  background-image: asset-url('uswds/minus-blue.png');
+  background-image: asset-url('uswds/minus-blue.svg');
 }
 
 .faq-accordion-button[aria-expanded=false],
 .moving-guide-accordion-button[aria-expanded=false],
 .moving-tips-accordion-button[aria-expanded=false] {
-  background-image: asset-url('plus-blue.png');
-  background-image: asset-url('plus-blue.svg');
+  background-image: asset-url('uswds/plus-blue.png');
+  background-image: asset-url('uswds/plus-blue.svg');
 }
 
 .moving-guide-accordion-button,

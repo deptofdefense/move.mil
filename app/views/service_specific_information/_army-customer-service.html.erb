@@ -35,7 +35,7 @@
           <%- if contact.claims_email -%>
             <tr>
               <th scope="row">Email:</th>
-              <td><a href="mailto:<%= contact.claims_email %>"><%= contact.claims_email %></a></td>
+              <td><%= mail_to contact.claims_email %></td>
             </tr>
           <%- end -%>
           <%- if contact.claims_fax_dsn -%>
@@ -65,7 +65,7 @@
       <table>
         <tr>
           <th scope="row">Email:</th>
-          <td><a href="mailto:usarmy.yongsan.8-army.mbx.osja-client-legal-services@mail.mil">usarmy.yongsan.8-army.mbx.osja-client-legal-services@mail.mil</a></td>
+          <td><%= mail_to 'usarmy.yongsan.8-army.mbx.osja-client-legal-services@mail.mil' %></td>
         </tr>
         <tr>
           <th scope="row">Address:</th>
@@ -80,7 +80,7 @@
       <table>
         <tr>
           <th scope="row">Email:</th>
-          <td><a href="mailto:usarmy.wiesbaden.usareur.mbx.oja-personnel-claims-and-recovery@mail.mil">usarmy.wiesbaden.usareur.mbx.oja-personnel-claims-and-recovery@mail.mil</a></td>
+          <td><%= mail_to 'usarmy.wiesbaden.usareur.mbx.oja-personnel-claims-and-recovery@mail.mil' %></td>
         </tr>
         <tr>
           <th scope="row">Address:</th>

@@ -20,13 +20,13 @@
           <%- if contact.custsvc_email -%>
             <tr>
               <th scope="row">Email:</th>
-              <td><a href="mailto:<%= contact.custsvc_email%>"><%= contact.custsvc_email %></a></td>
+              <td><%= mail_to contact.custsvc_email %></td>
             </tr>
           <%- end -%>
         </tbody>
       </table>
       <%- if contact.custsvc_facebook_url -%>
-        <a class="usa-external_link" href="<%= contact.custsvc_facebook_url %>"><%= image_tag("find-us-on-facebook-512.png", :alt => "Find Us On Facebook", :width => "98") %></a>
+        <%= link_to image_tag('find-us-on-facebook.png', alt: 'Find Us On Facebook', width: 98), contact.custsvc_facebook_url, class: 'usa-external_link' %>
       <%- end -%>
     </section>
   </div>
@@ -58,7 +58,7 @@
           <%- if contact.claims_email -%>
             <tr>
               <th scope="row">Email:</th>
-              <td><a href="mailto:<%= contact.claims_email %>"><%= contact.claims_email %></a></td>
+              <td><%= mail_to contact.claims_email %></td>
             </tr>
           <%- end -%>
           <%- if contact.claims_fax_dsn -%>
@@ -99,7 +99,7 @@
           <%- if contact.retiree_email -%>
             <tr>
               <th scope="row">Email:</th>
-              <td><a href="mailto:<%= contact.retiree_email %>"><%= contact.retiree_email %></a></td>
+              <td><%= mail_to contact.retiree_email %></td>
             </tr>
           <%- end -%>
           <%- if contact.retiree_fax_dsn -%>
@@ -152,7 +152,7 @@
     <section>
       <ul class="usa-unstyled-list">
         <%- policies.each do |policy| -%>
-          <li><a class="usa-external_link" href="<%= policy[:url] %>"><%= policy[:name] %></a></li>
+          <li><%= link_to policy[:name], policy[:url], class: 'usa-external_link' %></li>
         <%- end -%>
       </ul>
     </section>

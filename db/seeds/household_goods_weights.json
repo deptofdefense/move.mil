@@ -533,7 +533,7 @@
   },
   {
     "name": "Dining Room",
-    "icon": "icons/dining_room.svg",
+    "icon": "icons/dining-room.svg",
     "household_goods": [
       {
         "name": "Cabinet (Corner)",
@@ -591,7 +591,7 @@
   },
   {
     "name": "Living/Family Rooms",
-    "icon": "icons/living_room.svg",
+    "icon": "icons/living-room.svg",
     "household_goods": [
       {
         "name": "Bird Cage/Stand",
