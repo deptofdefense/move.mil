@@ -1,19 +1,16 @@
-class SitemapController < ApplicationController
-  def index
-    all_urls = [high_voltage_urls, route_urls, service_specific_information_urls, tutorial_urls]
-
-    @url_set = Set.new
-    all_urls.each do |urls|
-      @url_set.merge(urls)
-    end
+class MetaController < ApplicationController
+  def sitemap
+    @urls = [root_url, high_voltage_urls, route_urls, service_specific_information_urls, tutorial_urls].flatten.uniq.sort
   end
 
+  private
+
   def high_voltage_urls
-    HighVoltage.page_ids.map { |page| page_url(page) if page != 'homepage' }.compact
+    HighVoltage.page_ids.reject { |page| page == 'homepage' }.map { |page| page_url(page) }
   end
 
   def route_urls
-    %w[entitlements customer-service faqs resources/locator-maps resources/weight-estimator].map { |page| page_url(page) }
+    %w[customer_service entitlements faqs offices weight_estimator].map { |route| send("#{route}_url") }
   end
 
   def service_specific_information_urls

@@ -12,15 +12,11 @@
   <meta name="theme-color" content="#d6d7d9">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- iOS homescreen icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <!-- PNG versions of favicon.ico -->
-  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-  <!-- Android Chrome icons -->
+  <link rel="apple-touch-icon" href="<%= asset_path('meta/apple-touch-icon.png') %>">
   <link rel="manifest" href="/manifest.json">
-  <!-- Pinned tab / Mac touch bar icon -->
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#004b8c">
+  <link rel="mask-icon" color="#004b8c" href="<%= asset_path('meta/safari-pinned-tab.svg') %>">
+  <link rel="shortcut icon" href="<%= asset_path('meta/favicon-16x16.png') %>" sizes="16x16">
+  <link rel="shortcut icon" href="<%= asset_path('meta/favicon-32x32.png') %>" sizes="32x32">
 
   <%= tag.link href: asset_path('application.css'), rel: 'stylesheet' %>
 
