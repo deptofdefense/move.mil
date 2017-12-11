@@ -23,11 +23,11 @@
       <div class="usa-grid-full grid-form-width">
         <div class="usa-width-one-half">
           <%= form.label :rank, 'Rank' %>
-          <%= form.select :rank, options_from_collection_for_select(@entitlements, :slug, :rank), { include_blank: true }, { id: :rank, required: true } %>
+          <%= form.select :rank, options_from_collection_for_select(@entitlements, :slug, :rank), { prompt: '- Select -' }, { id: :rank, required: true } %>
         </div>
         <div class="usa-width-one-half">
           <%= form.label :branch, 'Branch of Service' %>
-          <%= form.select :branch, options_from_collection_for_select(@branches, :slug, :name), { include_blank: true }, { id: :branch, required: true } %>
+          <%= form.select :branch, options_from_collection_for_select(@branches, :slug, :name), { prompt: '- Select -' }, { id: :branch, required: true } %>
         </div>
       </div>
     </fieldset>
