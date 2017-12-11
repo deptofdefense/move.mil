@@ -1,8 +1,7 @@
 (function(window, $) {
   'use strict';
 
-  var disabledButtonClassName = 'usa-button-disabled',
-      errorMessageHTML = '<div class="usa-alert usa-alert-error" role="alert"><div class="usa-alert-body"><p class="usa-alert-text">There was a problem determining your location. Please reload the page and try again.</p></div></div>';
+  var errorMessageHTML = '<div class="usa-alert usa-alert-error" role="alert"><div class="usa-alert-body"><p class="usa-alert-text">There was a problem determining your location. Please reload the page and try again.</p></div></div>';
 
   var CoordinatesSearch = function(options) {
     this.$container = options.$container;
@@ -18,7 +17,7 @@
       click: function(event) {
         event.preventDefault();
 
-        this.$button.attr('disabled', true).addClass(disabledButtonClassName);
+        this.$button.attr('disabled', true);
 
         navigator.geolocation.getCurrentPosition(this.events.success.bind(this), this.events.error.bind(this), {
           enableHighAccuracy: true,
