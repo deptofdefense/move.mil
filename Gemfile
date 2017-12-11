@@ -20,13 +20,14 @@ gem 'rails', '~> 5.1', '>= 5.1.4'
 gem 'sass', '~> 3.5', '>= 3.5.3'
 gem 'sass-rails', '~> 5.0', '>= 5.0.6'
 gem 'uglifier', '~> 3.2'
-gem 'uswds-rails', '~> 1.3.1'
+gem 'uswds-rails', '~> 1.4.3'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-html5shiv', '3.7.3'
   gem 'rails-assets-jquery', '3.2.1'
   gem 'rails-assets-leaflet', '1.2.0'
+  gem 'rails-assets-normalize-css', '3.0.3'
   gem 'rails-assets-owl-carousel2', '2.2.1'
 end
 
