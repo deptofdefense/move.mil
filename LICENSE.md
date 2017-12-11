@@ -14,6 +14,7 @@ This project uses a number of open source components whose licenses are noted be
 | [health_check](https://github.com/ianheggie/health_check) | © 2010—2013 [Ian Heggie](https://github.com/ianheggie) | [MIT License](https://github.com/ianheggie/health_check/blob/master/MIT-LICENSE) |
 | [High Voltage](https://github.com/thoughtbot/high_voltage) | © 2010–2015 [thoughtbot, inc.](https://thoughtbot.com) | [MIT License](https://github.com/thoughtbot/high_voltage/blob/master/MIT-LICENSE) |
 | [html5shiv](https://github.com/afarkas/html5shiv) | © 2014 [Alexander Farkas](https://github.com/aFarkas) | [MIT License](https://github.com/aFarkas/html5shiv/blob/master/MIT%20and%20GPL2%20licenses.md)
+| [Jbuilder](https://github.com/rails/jbuilder) | © 2011—2017 [David Heinemeier Hansson](https://github.com/dhh) and [37signals](http://37signals.com) | [MIT License](https://github.com/rails/jbuilder/blob/master/MIT-LICENSE) |
 | [jQuery](http://jquery.com) | © [JS Foundation](https://js.foundation) and other contributors | [MIT License](https://github.com/jquery/jquery/blob/master/LICENSE.txt) |
 | [Leaflet](https://github.com/Leaflet/Leaflet) | © 2010–2011 [CloudMade](https://cloudmade.com) and 2010–2017 [Vladimir Agafonkin](https://github.com/mourner) | [BSD 2-Clause License](https://github.com/Leaflet/Leaflet/blob/master/LICENSE) |
 | [Lograge](https://github.com/roidrage/lograge) | © 2016 [Mathias Meyer](https://github.com/roidrage) | [MIT License](https://github.com/roidrage/lograge/blob/master/LICENSE.txt) |
