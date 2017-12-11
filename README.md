@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/deptofdefense/move.mil.svg?branch=master)](https://travis-ci.org/deptofdefense/move.mil)
 [![Known Vulnerabilities](https://snyk.io/test/github/deptofdefense/move.mil/badge.svg)](https://snyk.io/test/github/deptofdefense/move.mil)
 
-This repository contains the source code for the beta version of the [move.mil](http://www.move.mil/) website, the official portal to the Defense Personal Property System (DPS). DPS is an online system managed by the U.S. [Department of Defense](https://www.defense.gov/) (DoD) [Transportation Command](http://www.ustranscom.mil/) (USTRANSCOM) and is used by service members and their families to manage household goods moves.
+This repository contains the source code for the [move.mil](https://www.move.mil/) website, the official portal to the Defense Personal Property System (DPS). DPS is an online system managed by the U.S. [Department of Defense](https://www.defense.gov/) (DoD) [Transportation Command](http://www.ustranscom.mil/) (USTRANSCOM) and is used by service members and their families to manage household goods moves.
 
 This version of move.mil was built by a [Defense Digital Service](https://www.dds.mil/) team in support of USTRANSCOM's mission. This website's source code is made available to the open source community with the hope that community contributions will improve functionality, add features, and mature this work.
 
