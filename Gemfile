@@ -20,7 +20,7 @@ gem 'rails', '~> 5.1', '>= 5.1.4'
 gem 'sass', '~> 3.5', '>= 3.5.3'
 gem 'sass-rails', '~> 5.0', '>= 5.0.6'
 gem 'uglifier', '~> 3.2'
-gem 'uswds-rails', '~> 1.3.1'
+gem 'uswds-rails', '~> 1.4.3'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
 source 'https://rails-assets.org' do

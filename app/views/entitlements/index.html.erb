@@ -33,13 +33,13 @@
 
           <%= form_with url: entitlements_path, class: 'usa-form', method: 'get', skip_enforcing_utf8: true do |form| %>
             <%= form.label :rank, raw('1. Select your current <b>military pay grade</b>.') %>
-            <%= form.select :rank, options_from_collection_for_select(@entitlements, :rank, :rank), { include_blank: true }, { id: :rank, required: true } %>
+            <%= form.select :rank, options_from_collection_for_select(@entitlements, :rank, :rank), { prompt: '- Select -' }, { id: :rank, required: true } %>
 
             <%= form.label :dependency_status, raw('2. Select your <b>dependency status</b>.') %>
-            <%= form.select :dependency_status, [['Yes, I have dependents', true], ['No, I do not have dependents', false]], { include_blank: true }, { id: :dependency_status, required: true } %>
+            <%= form.select :dependency_status, [['Yes, I have dependents', true], ['No, I do not have dependents', false]], { prompt: '- Select -' }, { id: :dependency_status, required: true } %>
 
             <%= form.label :move_type, raw('3. Specify your <b>move type</b>.') %>
-            <%= form.select :move_type, [['Within the Continental United States (CONUS)', 'conus'], ['Outside of the Continental United States (OCONUS)', 'oconus']], { include_blank: true }, { id: :move_type, required: true } %>
+            <%= form.select :move_type, [['Within the Continental United States (CONUS)', 'conus'], ['Outside of the Continental United States (OCONUS)', 'oconus']], { prompt: '- Select -' }, { id: :move_type, required: true } %>
 
             <button>View Results</button>
           <% end %>
