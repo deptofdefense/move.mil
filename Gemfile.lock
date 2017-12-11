@@ -245,7 +245,6 @@ DEPENDENCIES
   rails-assets-html5shiv (= 3.7.3)!
   rails-assets-jquery (= 3.2.1)!
   rails-assets-leaflet (= 1.2.0)!
-  rails-assets-normalize-css (= 3.0.3)!
   rails-assets-owl-carousel2 (= 2.2.1)!
   rails-controller-testing (~> 1.0, >= 1.0.2)
   rspec-rails (~> 3.7, >= 3.7.1)
