@@ -1,7 +1,9 @@
-<span class="ppm-estimate-detail-total">Your PPM Incentive Estimate:</span>
-<span class="ppm-estimate-amount-total">$<%= @ppm_estimator.total_incentive_range.min %>–$<%= @ppm_estimator.total_incentive_range.max %></span>
-Maximum Advance Payment
-<span class="ppm-estimate-amount">$<%= @ppm_estimator.advance_range.min %>–$<%= @ppm_estimator.advance_range.max %> (<%= @ppm_estimator.advance_percentage %>%)</span>
+<div class="ppm-estimate-table">
+  <span class="ppm-estimate-detail-total">Your PPM Incentive Estimate:</span>
+  <span class="ppm-estimate-amount-total">$<%= @ppm_estimator.total_incentive_range.min %>–$<%= @ppm_estimator.total_incentive_range.max %></span>
+  Maximum Advance Payment
+  <span class="ppm-estimate-amount">$<%= @ppm_estimator.advance_range.min %>–$<%= @ppm_estimator.advance_range.max %> (<%= @ppm_estimator.advance_percentage %>%)</span>
+</div>
 
 <div class="usa-alert usa-alert-info" id="alert-packing-incentive">
   <div class="usa-alert-body">

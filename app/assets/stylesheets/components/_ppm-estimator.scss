@@ -55,41 +55,26 @@
 
 .ppm-footer {
   border-top: 0.125rem solid #4a4a4a;
-  margin-top: 3.4rem;
+  margin-top: 2rem;
   padding-top: 1.7rem;
 }
 
-.ppm-estimate-table-title {
-  font-size: 2.4rem;
-  font-weight: $font-bold;
-  margin-bottom: 1.1rem;
-
-  a {
-      float: right;
-      font-size: $base-font-size;
-  }
+.ppm-estimate-results {
+  border-top: 0.125rem solid #4a4a4a;
+  margin-top: 1.7rem;
+  padding-top: 2rem;
 }
 
 .ppm-estimate-table {
   background: $color-gray-lightest;
   border: 0.125rem solid #4a4a4a;
-  padding: 1.6rem 0.9rem 1.6rem 1.4rem;
-}
-
-.ppm-estimate-detail {
-  font-size: 2rem;
-  font-weight: $font-bold;
+  padding: 1rem;
 }
 
 .ppm-estimate-amount {
   float: right;
   font-size: 2rem;
   font-weight: $font-bold;
-}
-
-.ppm-estimate-table-total {
-  border: 0.125rem solid #4a4a4a;
-  padding: 1.6rem 0.9rem 1.6rem 1.2rem;
 }
 
 .ppm-estimate-detail-total {
