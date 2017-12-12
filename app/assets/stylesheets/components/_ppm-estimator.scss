@@ -68,27 +68,16 @@
 .ppm-estimate-table {
   background: $color-gray-lightest;
   border: 0.125rem solid #4a4a4a;
-  padding: 1rem;
-}
-
-.ppm-estimate-amount {
-  float: right;
-  font-size: 2rem;
-  font-weight: $font-bold;
+  padding: 1.5rem 1.5rem 0 1.5rem;
 }
 
 .ppm-estimate-detail-total {
-  display: inline-block;
-  font-size: $lead-font-size;
-  text-align: left;
-  width: 59%;
+  margin-top: 1.5rem;
 }
 
 .ppm-estimate-amount-total {
-  display: inline-block;
-  font-size: 3.6rem;
+  display: block;
+  font-size: 3.4rem;
   font-weight: $font-bold;
-  margin-bottom: 0.5rem;
-  text-align: right;
-  width: 40%;
+  padding-bottom: 1.5rem;
 }
