@@ -1,5 +1,13 @@
 .carousel {
   position: relative;
+
+  figure {
+    margin-top: 1rem;
+  }
+
+  figcaption {
+    margin-top: 1rem;
+  }
 }
 
 .carousel-item-single-page {
@@ -29,65 +37,44 @@
     font-size: $h5-font-size;
     margin: 1rem 0;
   }
-
-  figcaption {
-    @include margin(0 10rem);
-  }
 }
 
 .owl-next,
 .owl-prev {
-  font-size: 0;
   position: absolute;
-  top: 73%;
+  font-size: $small-font-size;
+  top: -2rem;
+}
+
+.owl-next {
+  right: 4rem;
 
   &:after {
-    background-position: 50% 50%;
+    background-image: asset-url('symbols/arrow-right.png');
+    background-image: asset-url('symbols/arrow-right.svg');
     background-repeat: no-repeat;
     background-size: contain;
     content: "";
     display: inline-block;
-    height: 1.5rem;
-    width: 1.5rem;
-
-    @include media($nav-width) {
-      height: 3rem;
-      width: 3rem;
-    }
-  }
-}
-
-.owl-next {
-  right: 0;
-
-  &:after {
-    background-image: asset-url('uswds/angle-arrow-right-primary.png');
-    background-image: asset-url('uswds/angle-arrow-right-primary.svg');
-  }
-
-  &:focus,
-  &:hover {
-    &:after {
-      background-image: asset-url('uswds/angle-arrow-right-primary-hover.png');
-      background-image: asset-url('uswds/angle-arrow-right-primary-hover.svg');
-    }
+    height: 1.7rem;
+    width: 1.7rem;
+    vertical-align: bottom;
   }
 }
 
 .owl-prev {
-  left: 0;
+  right: 10rem;
 
-  &:after {
-    background-image: asset-url('uswds/angle-arrow-left-primary.png');
-    background-image: asset-url('uswds/angle-arrow-left-primary.svg');
-  }
-
-  &:focus,
-  &:hover {
-    &:after {
-      background-image: asset-url('uswds/angle-arrow-left-primary-hover.png');
-      background-image: asset-url('uswds/angle-arrow-left-primary-hover.svg');
-    }
+  &:before {
+    background-image: asset-url('symbols/arrow-left.png');
+    background-image: asset-url('symbols/arrow-left.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: inline-block;
+    height: 1.7rem;
+    width: 1.7rem;
+    vertical-align: bottom;
   }
 }
 

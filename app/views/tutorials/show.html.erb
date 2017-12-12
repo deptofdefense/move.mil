@@ -11,20 +11,22 @@
     <%- end -%>
   <% end %>
 
-  <div class="sidenav-body single-page-tutorial">
+  <div class="sidenav-body tutorial">
     <div class="article-intro">
       Helping you through your move, one step at a time.
       <br><br>
       If you need help today, visit your <%= link_to 'local transportation office', offices_path %> or call the 24-hour Help Desk at 1 (800) 462-2176.
     </div>
 
-    <h4>Tutorial: <%= @tutorial.title %></h4>
+    <h6>TUTORIAL</h6>
+    <div><%= @tutorial.title %></div>
     <div class="carousel owl-carousel">
       <%- @tutorial.tutorial_steps.each do |step| -%>
         <div class="carousel-item">
           <figure class="carousel-item-content">
             <%= image_tag step.image_path, alt: 'screenshot' if step.image_path? %>
             <figcaption>
+              <h6>INSTRUCTIONS</h6>
               <%= raw step.content %>
             </figcaption>
           </figure>
