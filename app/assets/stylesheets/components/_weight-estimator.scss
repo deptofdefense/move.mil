@@ -1,5 +1,10 @@
 .hhg-category-list {
   margin-top: 2rem;
+
+  input {
+    height: 3.5rem;
+    padding: 0.5rem 1rem;
+  }
 }
 
 .hhg-category-header {
@@ -31,6 +36,8 @@
   }
 
   table {
+    width: 100%;
+
     td {
       border: none;
       padding: 1rem 1.5rem 0 1.5rem;
@@ -48,13 +55,11 @@
 .hhg-weight-input,
 .category-estimate-input {
   float: right;
-  height: 3.5rem;
   width: 5rem;
 }
 
 .category-estimate-input {
   float: right;
-  height: 3.5rem;
   width: 8rem;
 }
 
@@ -69,10 +74,6 @@
 
   .category-estimate-table {
     margin-top: 0;
-  }
-
-  .hhg-misc-input {
-    height: 3.5rem;
   }
 
   margin-top: 2rem;
