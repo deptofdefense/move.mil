@@ -48,13 +48,23 @@
         </div>
 
         <div class="usa-banner-content usa-grid usa-accordion-content" id="gov-banner">
-          <div class="usa-banner-guidance-gov">
+          <div class="usa-banner-guidance-gov usa-width-one-half">
             <%= image_tag 'uswds/icon-dot-gov.svg', alt: 'Dot gov', class: 'usa-banner-icon usa-media_block-img' %>
             <div class="usa-media_block-body">
               <p>
-                <strong>The .mil means it’s official.</strong>
+                <b>The .gov means it’s official.</b>
                 <br>
-                Federal government websites always use a .gov or .mil domain. Before sharing sensitive information online, make sure you’re on a .gov or .mil site by inspecting your browser’s address (or “location”) bar.
+                Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re on a federal government site.
+              </p>
+            </div>
+          </div>
+          <div class="usa-banner-guidance-ssl usa-width-one-half">
+            <%= image_tag 'uswds/icon-https.svg', alt: 'SSL', class: 'usa-banner-icon usa-media_block-img' %>
+            <div class="usa-media_block-body">
+              <p>
+                <b>The site is secure.</b>
+                <br>
+                The <b>https://</b> ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.
               </p>
             </div>
           </div>
