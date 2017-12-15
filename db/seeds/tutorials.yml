@@ -2,34 +2,52 @@
   tutorial_steps:
     - image_path: tutorials/new-user-registration-1.jpg
       content: >
-        <p>Go to <a href="https://eta.sddc.army.mil/ETASSOPortal/default.aspx">Electronic Transportation Acquisition (ETA)</a> and click "New User Registration."</p>
+        Go to <a href="https://eta.sddc.army.mil/ETASSOPortal/default.aspx">Electronic Transportation Acquisition (ETA)</a> and click "New User Registration."
       pro_tip: >
-        <strong>Pro Tip:</strong> Turn off your pop-up blocker, otherwise the DPS window and New User Registration window won't be able to open.
+        <strong>Pro-Tip:</strong> Turn off your pop-up blocker, otherwise the DPS window and New User Registration window won't be able to open.
     - image_path: tutorials/new-user-registration-2.jpg
       content: >
-        <p>Next, select “DPS” from the list of available applications. Find it in the alphabetical list, and click (plus circle icon) to add it to the Selected Applications list. Then click NEXT.</p>
-        <p><b>Note:</b> DPS stands for Defense Personal Property System. It’s just one of many sites housed within the ETA system (Electronic Transportation Acquisition), which is why you have to go through ETA to access it.</p>
+        Select "DPS" from the list of available applications. Find it in the alphabetical list, and to add it to the "Selected Applications" list by clicking on the plus icon to the right. Then click NEXT at the bottom of the page.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> DPS stands for Defense Personal Property System. It's just one of many sites housed within the ETA (Electronic Transportation Acquisition) system, which is why you have to go through ETA to access it.
     - image_path: tutorials/new-user-registration-3.jpg
       content: >
-        <p>Choose the Application Role that best describes your situation. For example, if you’re active duty, you probably fall into the category: “DOD Customer/Service Member.”</p>
-        <p><b>Note:</b> There are a lot of roles in this list! That’s because it takes the coordination of a lot of people to get the moves done!</p>
+        Choose the Application Role from the dropdown menu that best describes your situation. For example, if you're on active duty, you probably fall into the category: "DOD Customer/Service Member".
+      pro_tip: >
+        <strong>Pro-Tip:</strong> There are a lot of roles in this list! That's because it takes the coordination of a lot of people to get the moves done!
     - image_path: tutorials/new-user-registration-4.jpg
       content: >
-        <p>Fill out the Customer Registration fields and choose your security questions. Then you’ll get an email with your username.</p>
-        <p><b>Pro Tip:</b> For the Emergency Contact fields, choose someone who will be traveling or moving with you. That way, they can be a point of contact for the trip, and access important information.</p>
-        <p>Also, attaching a Certificate is optional, but doing so allows you to login with your Common Access Card (CAC).</p>
+        Fill out the Customer Registration fields and choose your security questions. Then you'll get an email with your username.
+      pro_tip: >
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>Enter an email address you can check anywhere.</li>
+          <li>For the Emergency Contact fields, choose someone who will be traveling or moving with you. That way, they can be a point of contact for the trip, and access important information.</li>
+          <li>Attaching a Certificate is optional, but doing so allows you to login with your Common Access Card (CAC).</li>
+        </ul>
     - image_path: tutorials/new-user-registration-5.jpg
       content: >
-        <p>In the email, click the ETA link to verify your username and security questions. When you do, you’ll get an email with your 6 digit access key.</p>
+        In the email, click the ETA link to verify your username and security questions. When you do, you'll get an email with your 6 digit access key (validation code).
+      pro_tip: >
+        <strong>Pro-Tip:</strong> To save time, leave these windows open while you wait for emails.
     - image_path: tutorials/new-user-registration-6.jpg
       content: >
-        <p>On the ETA site where you verified your username, enter your validation code to set your password.</p>
+        Here, verify your username and security questions. Wait for an email from ETA Administrator to get your 6 digit access key (validation code).
     - image_path: tutorials/new-user-registration-7.jpg
       content: >
-        <p>Now you can choose your password. Make sure it’s one that you can remember, but is not a password you use for other websites or accounts.</p>
+        On the ETA site where you verified your username, enter the validation code to set your password.
     - image_path: tutorials/new-user-registration-8.jpg
       content: >
-        <p>With your username and password, you can access DPS! On the ETA homepage, log in and then click “My Approved Applications” to find the DPS link.</p>
+        Now you can choose your password. Make sure it's one that you can remember, but is not a password you use for other websites or accounts.
+    - image_path: tutorials/new-user-registration-9.jpg
+      content: >
+        With your username and password, you can access DPS! On the ETA homepage, login and then click "My Approved Applications" to find the DPS link.<br><br>
+        Use DPS to schedule your move by "self counseling". You will create a profile, upload your orders, and create a shipment.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Your moving dates aren't confirmed until you've spoken to your local Transportation Office and Moving Company - even if you registered for DPS and created a shipment for your orders.
+    - image_path: tutorials/new-user-registration-10.jpg
+      content: Log in to DPS
+
 
 - title: Log In to DPS (Returning User)
   tutorial_steps:
