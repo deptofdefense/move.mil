@@ -46,7 +46,8 @@
       pro_tip: >
         <strong>Pro-Tip:</strong> Your moving dates aren't confirmed until you've spoken to your local Transportation Office and Moving Company - even if you registered for DPS and created a shipment for your orders.
     - image_path: tutorials/new-user-registration-10.jpg
-      content: Log in to DPS
+      content: >
+        Log in to DPS
 
 
 - title: Returning User Login
@@ -87,7 +88,7 @@
   tutorial_steps:
     - image_path: tutorials/create-a-shipment-1.jpg
       content: >
-        Scheduling your move is called “Self Counseling” in DPS. First, log into ETA.
+        Scheduling your move is called “Self Counseling” in DPS. First, log in to ETA.
       pro_tip: >
         <strong>Pro-Tip:</strong> Turn off your pop-up blocker, otherwise the DPS window won’t be able to open.
     - image_path: tutorials/create-a-shipment-2.jpg
@@ -170,6 +171,7 @@
         <ul>
           <li>A POV is your Personally Owned Vehicle, and in this context, a Mobile Home is an RV.</li>
           <li>Not all locations, in particular OCONUS, allow you to ship a motorcycle and a POV. Check out the Consignment Instruction Guide for motorcycle shipping information on each location.</li>
+        </ul>
     - image_path: tutorials/create-a-shipment-15.jpg
       content: >
         The Entitlement Summary allows you to review and certify the information you entered is accurate.
@@ -178,6 +180,7 @@
         <ul>
           <li>Your weight allowance is listed here in the second paragraph!</li>
           <li>Print this summary as a handy way to understand your shipment.</li>
+        </ul>
     - image_path: tutorials/create-a-shipment-16.jpg
       content: >
         Now that you've entered your Orders information, you must "Create New Shipment" specific for those orders. Select the type of shipment you want to create, like "HHG", and specify whether or not it will be a Personally Procured Move (PPM).
@@ -296,33 +299,45 @@
 
 - title: File a Claim
   tutorial_steps:
-    - image_path: tutorials/file-a-claim-01.png
+    - image_path: tutorials/file-a-claim-1.jpg
       content: >
-        <p>To file a claim, go to the Claims tab on the DPS homepage. You’ll need to file a Loss/Damage Report with your TSP (Transportation Company), as well a File a Claim through DPS.</p>
-        <p>Click "Start my Loss and Damage Report."</p>
-        <p><b>Pro Tip:</b> To the best of your ability, notify your TSP of the loss or damage within 75 days. Extensions are granted on a case by case basis.</p>
-    - image_path: tutorials/file-a-claim-02.png
+        First, log in to <a href="https://eta.sddc.army.mil/ETASSOPortal/default.aspx">ETA</a> and choose DPS from the list of approved applications.
+      pro_tip: >
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>Need help logging in? Check out the <a href="/tutorials/returning-user-login">Returning User Login</a> for guidance.</li>
+          <li>Turn off your popup blocker, otherwise DPS won’t be able to open.</li>
+        </ul>
+    - image_path: tutorials/file-a-claim-2.jpg
       content: >
-        <p>Here, there’s a lot of information to enter. Each piece helps the TSP understand what happened, and how to help you.</p>
-        <p><b>Pro Tip:</b> Be as detailed as possible, including item descriptions, photographs of damage, purchase history, etc.</p>
-    - image_path: tutorials/file-a-claim-03.png
+        From the DPS homepage, expand the details of the recent move for which you’d like to file a claim.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Check out the Move.mil information on <a href="/moving-guide/claims">filing a claim</a> for a lot more detail.
+    - image_path: tutorials/file-a-claim-3.jpg
       content: >
-        <p>Next, you’ll need to File a Claim with DPS. This helps keep a record of your experience with DPS, and not just with your Transportation Provider.</p>
-        <p>Enter your contact information, and the claim details again.</p>
-        <p>Upload a copy of any reports, or documents you might have received from the Transportation Company.</p>
-    - image_path: tutorials/file-a-claim-04.png
+        Click on the “File a Claim” button.<br><br>
+        You'll need to file a Loss/Damage Report with your Moving Company also known as a TSP (Transportation Company), as well a File a Claim through DPS.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> To the best of your ability, notify your Moving Company of the loss or damage within 75 days. Extensions are granted on a case by case basis.
+    - image_path: tutorials/file-a-claim-4.jpg
       content: >
-        <p>You can view your current and past Claims Reports here.</p>
-    - image_path: tutorials/file-a-claim-05.png
+        Check out the Claims Instructions for details, deadlines, and tips!<br><br>
+        Click File a Loss/Damage Report.
+    - image_path: tutorials/file-a-claim-5.jpg
       content: >
-        <p>There is also a Shipments Summary, which includes any claims and reports filed.</p>
-
-- title: Rate your Transporter (CSS Survey)
-  tutorial_steps:
-    - image_path: tutorials/rate-your-transporter-01.png
+        Here, there's a lot of information to enter. But, each piece helps the Moving Company understand what happened, and how to help you.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Be as detailed as possible, including item descriptions, photographs of damage, purchase history, etc.
+    - image_path: tutorials/file-a-claim-6.jpg
       content: >
-        <p>In DPS, you can write a review of your moving company (transporter) for each shipment.</p>
-        <p>Click on the shipment you’d like to rate.</p>
-    - image_path: tutorials/rate-your-transporter-02.png
+        You have to include details about each item you want to claim.
+    - image_path: tutorials/file-a-claim-7.jpg
       content: >
-        <p>The DPS Customer Satisfaction Survey allows you to rate your experience on topics ranging from packing, to delivery.</p>
+        Next, you'll need to File a Claim with DPS. This helps keep a record of your experience with DPS, and not just with your Transportation Provider.<br><br>
+        Click "Start My Claim"
+    - image_path: tutorials/file-a-claim-8.jpg
+      content: >
+        Upload a copy of any reports, or documents you might have received from the Transportation Company.
+    - image_path: tutorials/file-a-claim-9.jpg
+      content: >
+        Include specifics about each item you want put on your claim report, then hit save!
