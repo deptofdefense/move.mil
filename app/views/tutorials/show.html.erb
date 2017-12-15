@@ -20,11 +20,13 @@
     <h6>TUTORIAL</h6>
     <div><%= @tutorial.title %></div>
     <div class="carousel owl-carousel">
-      <%- @tutorial.tutorial_steps.each do |step| -%>
+      <%- total = @tutorial.tutorial_steps.count -%>
+      <%- @tutorial.tutorial_steps.each_with_index do |step, index| -%>
         <div class="carousel-item">
           <figure class="carousel-item-content">
             <%= image_tag step.image_path, alt: 'screenshot', class: 'screenshot' if step.image_path? %>
             <figcaption>
+              <span class="step-count"><%= index + 1 %> of <%= total %></span>
               <h6>INSTRUCTIONS</h6>
               <%= raw step.content %>
               <%- if step.pro_tip -%>

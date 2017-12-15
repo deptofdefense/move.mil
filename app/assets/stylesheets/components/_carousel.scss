@@ -43,6 +43,11 @@
   }
 }
 
+.step-count {
+  float: right;
+  font-size: $base-font-size;
+}
+
 .owl-next,
 .owl-prev {
   position: absolute;
