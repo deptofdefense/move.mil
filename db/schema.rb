@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171130143839) do
+ActiveRecord::Schema.define(version: 20171215164151) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -153,6 +153,7 @@ ActiveRecord::Schema.define(version: 20171130143839) do
     t.text "image_path"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "pro_tip"
     t.index ["tutorial_id"], name: "index_tutorial_steps_on_tutorial_id"
   end
 
