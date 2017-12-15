@@ -2,8 +2,7 @@
   'use strict';
 
   $('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
+    loop: false,
     nav: true,
     navText: ['Prev', 'Next'],
     responsive: {
@@ -11,6 +10,6 @@
         items: 1
       }
     },
-    autoHeight: true
+    dots: false
   });
 })(window, jQuery);
