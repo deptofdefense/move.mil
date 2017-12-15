@@ -83,83 +83,147 @@
       pro_tip:
         <strong>Pro-Tip:</strong> The validation code will automatically be sent to the email address you used to register for ETA. <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/ContactCustomerSupport.aspx">Contact your system administrator</a> if it’s changed.
 
-- title: Schedule a Move
+- title: Create a Shipment
   tutorial_steps:
-    - image_path: tutorials/schedule-a-move-01.png
+    - image_path: tutorials/create-a-shipment-1.jpg
       content: >
-        <p>Scheduling your move is called “Self Counseling” in DPS. First, log into ETA, and choose DPS from your list of approved applications.</p>
-        <p><b>Pro Tip:</b> Turn off your pop-up blocker, otherwise the DPS window won’t be able to open.</p>
-    - image_path: tutorials/schedule-a-move-02.png
+        Scheduling your move is called “Self Counseling” in DPS. First, log into ETA.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Turn off your pop-up blocker, otherwise the DPS window won’t be able to open.
+    - image_path: tutorials/create-a-shipment-2.jpg
       content: >
-        <p>On the DPS homepage, select “Self Counsel” to begin your application. <b>Pro Tip:</b> You should have a copy of your Orders, pick-up and delivery information, as well as information about your dependents and Power of Attorney if you need one.</p>
-    - image_path: tutorials/schedule-a-move-03.png
+        On the ETA homepage choose DPS from your list of approved applications.
+    - image_path: tutorials/create-a-shipment-3.jpg
       content: >
-        <p>Scroll down to find the Customer Information page. During this process, if you find a blank screen, don’t worry - just scroll down to find the information you’re looking for.</p>
-    - image_path: tutorials/schedule-a-move-04.png
+        If you haven't logged in in a while you'll be prompted to review your profile. Take this opportunity to confirm that everything is up to date.
+      pro_tip: >
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>Save time by making sure you have a copy of your Orders. If you don't, ask your command for a Letter in Lieu, which can be used until your official orders are cut. Make sure you send your Transportation Office a copy of your Orders so that they can update the system.</li>
+          <li>You'll also be asked detailed information about special items you might ship, like the make and model of your Motorcycle, and even the calibre and serial number of each of your firearms. Get this information organized now to save time later.</li>
+          <li>You don't have to have an exact address at your new location to start the move process. Don't wait to schedule your move, peak season can mean your prefered move dates are taken, and lines are long at your local Transportation Office.</li>
+        </ul>
+    - image_path: tutorials/create-a-shipment-4.jpg
       content: >
-        <p>You’ll find an overview of the Counseling Process, but to get to the first step, you’ll need to click on the Customer Information button in the Counseling Menu on the left side of the page. <b>Pro Tip:</b> If you’ve moved before, DPS will save your information so that it’s pre-poulated here, and you won’t have to fill it out again.</p>
-    - image_path: tutorials/schedule-a-move-05.png
+        Otherwise you’ll be brought to the DPS Homepage. Here you’ll find a snapshot of your current or past moves.<br><br>
+        Click "Start a New Move" to begin your application.
+    - image_path: tutorials/create-a-shipment-5.jpg
       content: >
-        <p>Fill out your Customer Information and Permanent Contact Address. The “Permanent Contact Address” is the place where you’re living right now. This information is saved in DPS so you don’t have to fill it out each time you schedule a move.</p>
-        <p><b>Pro Tip:</b> You can check your progress in the Counseling Menu on the left side of the page.</p>
-        <p>CONUS stands for Continental United States</p>
-        <p>OCONUS stands for Outside Continental United States</p>
-    - image_path: tutorials/schedule-a-move-06.png
+        Click on the Customer Information button in the Counseling Menu on the left side of the page.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> If you've moved before, DPS will save your information so that it's pre-populated here, and you won't have to fill it out again.
+    - image_path: tutorials/create-a-shipment-6.jpg
       content: >
-        <p>Enter an Emergency Contact who will be traveling or moving with you. This person will have access to shipment status, and information. <b>Pro Tip:</b> A Letter of Authorization allows you to give another person permission to act on your behalf. Only the service member who has official orders can write this letter of authorization.</p>
-    - image_path: tutorials/schedule-a-move-07.png
+        Fill out your Customer Information Permanent Contact Address.<br>
+        The "Permanent Contact Address" is an address that's not part of this move. It needs to be a place where the Transportation Office could get in touch with you in case of emergency. This could be a friend or relative.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> You can check your progress in the Counseling Menu on the left side of the page.
+    - image_path: tutorials/create-a-shipment-7.jpg
       content: >
-        <p>Here, indicate your rank, and whether or not you’re allowed PBP&E. This information allows DPS to calculate your shipment weight allowance, if it wasn’t part of your orders.</p>
-        <p><b>Pro Tip:</b> PBP&E is the “pro gear” or professional equipment you might need to ship - there’s an extra separate allowance for you, and your spouse.</p>
-        <p>A “Hard Copy” of your orders means that you received orders your can upload into DPS as a PDF, Word Doc, Text File, etc.</p>
-    - image_path: tutorials/schedule-a-move-08.png
+        Enter an Emergency Contact who can act on your behalf during the move, if you're unavailable. This person will have access to shipment status, and information.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> A Letter of Authorization is a letter you write to give another person permission to act on your behalf during your move. Only the service member who has official orders can write this letter of authorization.
+    - image_path: tutorials/create-a-shipment-8.jpg
       content: >
-        <p>Next, enter the address you are leaving, and your new address.</p>
-    - image_path: tutorials/schedule-a-move-09.png
+        Now you’re ready to enter your Orders information, which begins the move process.<br>
+        Here, indicate your rank, and whether or not you're allowed PBP&E.
+      pro_tip: >
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>PBP&E is the "pro gear" or professional equipment you might need to ship. Service Members get 2,000 lbs, which doesn't count towards your weight limit. There's a separate allowance for your spouse. Make sure you state what's Pro Gear on your inventory list so it doesn't count towards your weight limit.</li>
+          <li>A "Hard Copy" of your orders refers to the physical piece of paper that you received, and that your orders have officially been cut. You'll need to scan and upload a PDF of your orders.</li>
+          <li>You may have special orders if you're deploying. Contact your <a href="/resources/locator-maps">local transportation office</a> to confirm you have all the correct information to create a shipment.</li>
+          <li>If you don't have official orders cut yet, you can upload a Letter in Lieu from your command. This memo is unique to each branch, and should only be used as a temporary stand in for official orders. You must contact your Transportation Office and give them your official orders once you get them.</li>
+        </ul>
+    - image_path: tutorials/create-a-shipment-9.jpg
       content: >
-        <p>Specify your authorized Order Type, and upload a copy of your Order document. Create your shipment based on your orders by first selecting the type. <b>Pro Tip:</b> Can’t find your type? Check out the category "Various" to see miscellaneous move types.</p>
-    - image_path: tutorials/schedule-a-move-10.png
+        Next, enter your Orders Number and Date.
+      pro_tip: >
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>The location of your Orders Number on the orders, varies by branch. Typically, the Army and Navy list the number in the upper left of the document, while the Marines list a Standard Document Number (SDN) on the bottom right. For the Airforce, look in box 27 of your Orders form.</li>
+          <li>Your Orders date is the date the orders were cut or issued.</li>
+        </ul>
+    - image_path: tutorials/create-a-shipment-10.jpg
       content: >
-        <p>Next, enter your new Duty Station and indicate whether or not you’re moving with dependents (including a spouse).</p>
-    - image_path: tutorials/schedule-a-move-11.png
+        Enter address of your Current Duty Station (the one you're leaving), and your New Duty Station (the one you're going to). Click the orange box, then enter only the first 4 letters of the city to locate the address.
+    - image_path: tutorials/create-a-shipment-11.jpg
       content: >
-        <p>Finally, in the Additional Information section, you’ll specify if you need to ship a POV, motorcycle, etc.</p>
-        <p><b>Pro Tip:</b> A POV is your Personally Owned Vehicle, and in this context, a Mobile Home is an RV.</p>
-    - image_path: tutorials/schedule-a-move-12.png
+        Specify your authorized Order Type, and indicate what type of shipment you’d like to create. Next, upload a copy of your Orders document.
+      pro_tip: >
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>Can't find your type? Check out the category "Various" to see miscellaneous move types.</li>
+          <li>Even though you've uploaded your orders in DPS, it's a good idea to reach out to your Transportation Office after you submit your application, to make sure they have everything they need to book your shipment.</li>
+        </ul>
+    - image_path: tutorials/create-a-shipment-12.jpg
       content: >
-        <p>The Order Summary allows you to review and certify the information you entered is accurate.</p>
-        <p><b>Pro Tip:</b> Your weight allowance is listed here in the second paragraph.</p>
-    - image_path: tutorials/schedule-a-move-13.png
+        To upload your orders, click Browse to find the document on your computer. Then you must click upload to save the document to the DPS system. You’ll receive a message in green that your Orders were successfully uploaded.
+    - image_path: tutorials/create-a-shipment-13.jpg
       content: >
-        <p>Now that you’ve entered your Orders information, you must “Create New Shipment” specific for those orders. Select the type of shipment you want to create, like “HHG,” and specify whether or not it will be a Personally Procured Move (PPM).</p>
-        <p><b>Pro Tip:</b> You can create more than one type of shipment per Order. For example, you can schedule an HHG shipment for the majority of your belongings, and an additional PPM shipment for the ones you’ll move yourself in your car.</p>
-    - image_path: tutorials/schedule-a-move-14.png
+        Next, enter your new Duty Station city and state, and report date. Also indicate whether or not you're moving with dependents (including a spouse).
+    - image_path: tutorials/create-a-shipment-14.jpg
       content: >
-        <p>Then you’ll get some helpful information about a Household Goods (HHG) move. Later on, there will be PPM specific information.</p>
-    - image_path: tutorials/schedule-a-move-15.png
+        Finally, in the Additional Information section, you'll specify if you need to ship a motorcycle, or need to remove any items from Non Temporary Storage, left over from a previous move.
+      pro_tip: >
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>A POV is your Personally Owned Vehicle, and in this context, a Mobile Home is an RV.</li>
+          <li>Not all locations, in particular OCONUS, allow you to ship a motorcycle and a POV. Check out the Consignment Instruction Guide for motorcycle shipping information on each location.</li>
+    - image_path: tutorials/create-a-shipment-15.jpg
       content: >
-        <p>Set your desired moving dates and enter the pick-up and drop off addresses.</p>
-    - image_path: tutorials/schedule-a-move-16.png
+        The Entitlement Summary allows you to review and certify the information you entered is accurate.
+      pro_tip: >
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>Your weight allowance is listed here in the second paragraph!</li>
+          <li>Print this summary as a handy way to understand your shipment.</li>
+    - image_path: tutorials/create-a-shipment-16.jpg
       content: >
-        <p>Next, define shipment weight, and let us know if you have special items like a jacuzzi or piano. There’s also a separate section for firearms on the next page.</p>
-    - image_path: tutorials/schedule-a-move-17.png
+        Now that you've entered your Orders information, you must "Create New Shipment" specific for those orders. Select the type of shipment you want to create, like "HHG", and specify whether or not it will be a Personally Procured Move (PPM).
+      pro_tip: >
+        <strong>Pro-Tip:</strong> You can create more than one type of shipment per Orders. For example, you can schedule an HHG shipment for the majority of your belongings, and an additional PPM shipment for the ones you'll move yourself in your car. You just have to repeat this “Create New Shipment” process for each shipment.
+    - image_path: tutorials/create-a-shipment-17.jpg
       content: >
-        <p>Here, indicate if you are shipping any firearms.</p>
-    - image_path: tutorials/schedule-a-move-18.png
+        Then you'll get some helpful information about a Household Goods (HHG) move. Later on, there will be PPM specific information, if you choose this to be a PPM shipment.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Print this information and keep it handy. You may not always have access to DPS throughout your move.
+    - image_path: tutorials/create-a-shipment-18.jpg
       content: >
-        <p>If you have a preference, here’s where you can let us know your favorite (or least favorite) Transportation Service Provider (TSP).</p>
-    - image_path: tutorials/schedule-a-move-19.png
+        Set your desired moving dates. No matter what dates you enter, your moving dates are not confirmed until you speak with the Moving Company. During peak season there may be black out dates, or other circumstances that prevent your desired dates from being scheduled.<br><br>
+        Next, enter the pick-up and drop-off addresses. You can enter additional pickups near your old or new duty stations.<br><br>
+        Add a Releasing Agent from your list of Points of Contact, someone who can sign for your pick-up or delivery, if you're unavailable.
+    - image_path: tutorials/create-a-shipment-19.jpg
       content: >
-        <p>Now it’s time to go over moving day responsibilities for you and your TSP.</p>
-    - image_path: tutorials/schedule-a-move-20.png
+        Next, define shipment weight. Use the <a href="/resources/weight-estimator">Weight Estimator Tool</a> on move.mil to get an idea of what your belongings weigh.<br><br>
+        Identify if you have special items like a jacuzzi or piano. There's also a separate section for firearms on the next page. You'll need to enter the make and model, serial number, and calibre for each firearm. Save yourself the headache later, by entering this info before you hit Submit!
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Your Pro Gear, up to 2,000 lbs, doesn't count towards your estimated weight.
+    - image_path: tutorials/create-a-shipment-20.jpg
       content: >
-        <p>A summary of your shipment is then provided.</p>
-    - image_path: tutorials/schedule-a-move-21.png
+        Here, indicate if you are shipping any firearms. You must provide detailed information about each firearm you’d like to ship.
+    - image_path: tutorials/create-a-shipment-21.jpg
       content: >
-        <p>Here you’ll choose a Personal Property Office for counseling, who you’ll be in contact with after submitting your shipment through DPS. They’ll need the forms generated on the next page.</p>
-    - image_path: tutorials/schedule-a-move-22.png
+        Now, let’s decide on the scheduling of your shipment. You’ll get an estimated number of days for packing and shipping, so you can plan your travel accordingly. Everything is an estimate until confirmed by your local transportation office and the moving company.<br><br>
+        If you have a preference, here's where you can let us know your favorite (or least favorite) Transportation Service Provider (TSP) also know as a Carrier or Moving Company.
+    - image_path: tutorials/create-a-shipment-22.jpg
       content: >
-        <p>On this Submit Page, review and print your forms DD1299 and DD1797, then press submit!</p>
+        It's time to go over moving day responsibilities for you and your TSP.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Print this page! It details all the information you need for moving day. You may not have access to DPS at all times during your move.
+    - image_path: tutorials/create-a-shipment-23.jpg
+      content: >
+        A summary of your shipment is then provided. You have to certify that you've read and agree that everything is accurate, so double check important items like your email address, and type of shipment.
+    - image_path: tutorials/create-a-shipment-24.jpg
+      content: >
+        Here you'll choose a Personal Property Office for counseling. They will be your main point of contact during your move. You’ll need to contact them after submitting your shipment on DPS.  They'll need the signed forms generated on the next page.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Use the <a href="/resources/locator-maps">Office Locator</a> tool if you need help choosing a counseling office.
+    - image_path: tutorials/create-a-shipment-25.jpg
+      content: >
+        On the Submit Page, review and sign your forms (DD 1299 and DD 1797, etc.), then upload them, and press submit.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> After you hit submit, email the Transportation Office you selected for counseling and let them know that you've created a shipment in DPS. They may need additional information from you before your shipment is approved.
 
 - title: File a Claim
   tutorial_steps:
