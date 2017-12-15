@@ -51,7 +51,7 @@
 }
 
 .owl-next {
-  right: 4rem;
+  right: 0;
 
   &:after {
     background-image: asset-url('symbols/arrow-right.png');
@@ -67,7 +67,7 @@
 }
 
 .owl-prev {
-  right: 10rem;
+  right: 6rem;
 
   &:before {
     background-image: asset-url('symbols/arrow-left.png');
