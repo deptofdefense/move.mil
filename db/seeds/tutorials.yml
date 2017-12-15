@@ -49,25 +49,39 @@
       content: Log in to DPS
 
 
-- title: Log In to DPS (Returning User)
+- title: Returning User Login
   tutorial_steps:
-    - image_path: tutorials/returning-user-login-01.png
+    - image_path: tutorials/returning-user-login-1.jpg
       content: >
-        <p>On <a href="https://eta.sddc.army.mil/ETASSOPortal/default.aspx">ETA</a>, select “Login,” then enter your username and password.</p>
-        <p><b>Note:</b> You have to access DPS through the Electronic Transportation Acquisition (ETA) site, because DPS is just one of many sites housed in ETA.</p>
-    - image_path: tutorials/returning-user-login-02.png
+        On <a href="https://eta.sddc.army.mil/ETASSOPortal/default.aspx">ETA</a>, select "Login", then enter your username and password.
+      pro_tip: >
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>Turn off your pop-up blocker, otherwise the DPS window won't be able to open.</li>
+          <li>You have to access DPS through the Electronic Transportation Acquisition (ETA) site, because DPS is just one of many sites housed in ETA.</li>
+        </ul>
+    - image_path: tutorials/returning-user-login-2.jpg
       content: >
-        <p>If you need help logging in to ETA, there are several options. Use any of these links: <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/CustomerForgotID.aspx">Forgot Username?</a> <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/SecurityQuestionPasswordChange.aspx">Forgot Password?</a> <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/AccountAccessHelp.aspx">Can’t access your account?</a></p>
-        <p><b>Tip:</b> If your email address has changed, <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/ContactCustomerSupport.aspx">contact your administrator</a> first! ETA will automatically send emails to the address on file.</p>
-    - image_path: tutorials/returning-user-login-03.png
+        If you need help logging in to ETA, there are several options. Use any of these links: <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/CustomerForgotID.aspx">Forgot Username?</a> <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/SecurityQuestionPasswordChange.aspx">Forgot Password?</a> <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/AccountAccessHelp.aspx">Can’t access your account?</a>
+      pro_tip: >
+        <strong>Pro-Tip:</strong> If your email address has changed, <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/ContactCustomerSupport.aspx">contact your administrator</a> first. ETA will automatically send emails to the address on file.
+    - image_path: tutorials/returning-user-login-3.jpg
       content: >
-        <p>If you <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/CustomerForgotID.aspx">forgot your username</a>, ETA can send it to you in an email! Enter your email address here and an email will be sent to you automatically.</p>
-        <p><b>Tip:</b> If your email address has changed since you created your account, <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/ContactCustomerSupport.aspx">contact your system administrator</a> first!</p>
-    - image_path: tutorials/returning-user-login-04.png
+        If you <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/CustomerForgotID.aspx">forgot your user ID</a>, ETA can send it to you in an email.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> If your email address has changed since you created your account, <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/ContactCustomerSupport.aspx">contact your system administrator</a> first.
+    - image_path: tutorials/returning-user-login-4.jpg
       content: >
-        <p>To <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/SecurityQuestionPasswordChange.aspx">reset your password</a>, follow the prompts to enter your username, and answer two of your security questions.</p>
-        <p>Then the system will email you a validation code which you’ll enter next.</p>
-        <p><b>Tip:</b> The validation code will automatically be sent to the email address you used to register for ETA. <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/ContactCustomerSupport.aspx">Contact your system administrator</a> if it’s changed.</p>
+        You must enter the email address that you used to originally register for ETA. The system will confirm it’s a match, and send you an email with your user ID.
+    - image_path: tutorials/returning-user-login-5.jpg
+      content: >
+        To <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/SecurityQuestionPasswordChange.aspx">reset your password</a>, choose the “Forgot your password?” link, then follow the prompts to enter your user ID, and answer two of your security questions.
+    - image_path: tutorials/returning-user-login-6.jpg
+      content: >
+        Enter your user ID, and answer two of your security questions.<br><br>
+        Then the system will email you a validation code which you'll enter next, and be able to reset your password from there.
+      pro_tip:
+        <strong>Pro-Tip:</strong> The validation code will automatically be sent to the email address you used to register for ETA. <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/ContactCustomerSupport.aspx">Contact your system administrator</a> if it’s changed.
 
 - title: Schedule a Move
   tutorial_steps:
