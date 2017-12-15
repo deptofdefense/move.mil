@@ -20,7 +20,7 @@ gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.1', '>= 5.1.4'
 gem 'sass', '~> 3.5', '>= 3.5.3'
 gem 'sass-rails', '~> 5.0', '>= 5.0.6'
-gem 'uglifier', '~> 3.2'
+gem 'uglifier', '~> 4.0', '>= 4.0.2'
 gem 'uswds-rails', '~> 1.4.3'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
@@ -32,16 +32,12 @@ source 'https://rails-assets.org' do
 end
 
 group :development, :test do
-  gem 'brakeman', '~> 4.0', '>= 4.0.1', require: false
+  gem 'brakeman', '~> 4.1', require: false
   gem 'byebug', '~> 9.1'
   gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
   gem 'rspec-rails', '~> 3.7', '>= 3.7.1'
-  gem 'rubocop', '~> 0.51.0', require: false
-end
-
-group :development do
-  gem 'web-console', '~> 3.5', '>= 3.5.1'
+  gem 'rubocop', '~> 0.52.0', require: false
 end
 
 group :test do
