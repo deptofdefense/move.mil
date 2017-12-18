@@ -36,7 +36,7 @@ RSpec.describe TutorialsController, type: :request do
     end
 
     it 'displays the tutorial' do
-      assert_select '.main-section h3', text: 'Test Tutorial Title'
+      assert_select '.main-section h3', /.+Test Tutorial Title/
 
       assert_select 'figure', length: 2
     end
