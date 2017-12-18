@@ -19,7 +19,7 @@
 
     <h3><span>Tutorial</span> <%= @tutorial.title %></h3>
     <div class="carousel owl-carousel">
-      <%- total = @tutorial.tutorial_steps.count -%>
+      <%- total = @tutorial.tutorial_steps.length -%>
       <%- @tutorial.tutorial_steps.each_with_index do |step, index| -%>
         <div class="carousel-item">
           <figure class="carousel-item-content">
