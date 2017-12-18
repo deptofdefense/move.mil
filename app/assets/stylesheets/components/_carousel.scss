@@ -7,21 +7,6 @@
   }
 }
 
-.carousel-item-single-page {
-  margin-bottom: 1.5rem;
-  text-align: right;
-
-  a {
-    font-size: $h5-font-size;
-    text-decoration: none;
-
-    &:focus,
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
 .carousel-item-content {
   font-size: $h5-font-size;
   margin: 0;
@@ -81,38 +66,5 @@
     height: 1.7rem;
     width: 1.7rem;
     vertical-align: bottom;
-  }
-}
-
-.owl-dots {
-  counter-reset: dots;
-  font-size: $h5-font-size;
-  margin-top: $site-margins-mobile;
-
-  &:before {
-    content: "Jump to Step:";
-    display: inline-block;
-  }
-}
-
-.owl-dot {
-  color: $color-primary;
-  counter-increment: dot;
-  display: inline-block;
-  font-weight: $font-bold;
-  margin-left: 1.5rem;
-
-  &:focus,
-  &:hover {
-    color: $color-primary-darker;
-  }
-
-  &:before {
-    content: counter(dot);
-    display: inline-block;
-  }
-
-  &.active:before {
-    text-decoration: underline;
   }
 }
