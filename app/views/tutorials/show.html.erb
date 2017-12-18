@@ -7,7 +7,7 @@
 
   <%= render layout: 'shared/sidenav' do %>
     <%- @tutorials.each do |tutorial| -%>
-      <li><%= link_to tutorial.title, tutorials_path(tutorial), class: tutorial == @tutorial ? 'usa-current' : nil %></li>
+      <li><%= link_to tutorial.title, tutorial_path(tutorial), class: tutorial == @tutorial ? 'usa-current' : nil %></li>
     <%- end -%>
   <% end %>
 
@@ -17,8 +17,7 @@
       Need more? Visit your <%= link_to 'local transportation office', offices_path %> or call 1 (800) 462-2176 for 24/7 support.
     </div>
 
-    <h6>TUTORIAL</h6>
-    <h3><%= @tutorial.title %></h3>
+    <h3><span>Tutorial</span> <%= @tutorial.title %></h3>
     <div class="carousel owl-carousel">
       <%- total = @tutorial.tutorial_steps.count -%>
       <%- @tutorial.tutorial_steps.each_with_index do |step, index| -%>
@@ -27,7 +26,7 @@
             <%= image_tag step.image_path, alt: 'screenshot', class: 'screenshot' if step.image_path? %>
             <figcaption>
               <span class="step-count"><%= index + 1 %> of <%= total %></span>
-              <h6>INSTRUCTIONS</h6>
+              <h3><span>Instructions</span></h3>
               <%= raw step.content %>
               <%- if step.pro_tip -%>
                 <%= render layout: 'shared/pro_tip' do %>
