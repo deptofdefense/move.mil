@@ -297,6 +297,29 @@
       content: >
         After you hit submit, email the Transportation Office you selected for counseling and let them know that you've created a PPM shipment in DPS. They may need additional information from you before your shipment is approved.
 
+- title: Customer Satisfaction Survey
+  tutorial_steps:
+    - image_path: tutorials/customer-satisfaction-survey-1.jpg
+      content: >
+        In DPS, you can write a review of your moving company (transporter/carrier) after each shipment.<br><br>
+        First, log in to ETA, and choose DPS.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Real humans will read your responses, and make sure that the Moving Company’s score is either raised or lowered accordingly. Your responses are important.
+    - image_path: tutorials/customer-satisfaction-survey-2.jpg
+      content: >
+        In the Shipment Details on the DPS homepage, click on "Complete Survey".
+    - image_path: tutorials/customer-satisfaction-survey-3.jpg
+      content: >
+        Here, rate everything from your moving company's timeliness to professionalism in packing, pickup, and delivery.
+    - image_path: tutorials/customer-satisfaction-survey-4.jpg
+      content: >
+        Next, you can choose to allow your moving company, or local Transportation Office to contact you about your responses.
+    - image_path: tutorials/customer-satisfaction-survey-5.jpg
+      content: >
+        You can choose to leave a personal message here. When you’re done, don’t forget to save and submit your survey. Thank you!
+    - image_path: tutorials/customer-satisfaction-survey-6.jpg
+      content: >
+
 - title: File a Claim
   tutorial_steps:
     - image_path: tutorials/file-a-claim-1.jpg
