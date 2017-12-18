@@ -317,8 +317,6 @@
     - image_path: tutorials/customer-satisfaction-survey-5.jpg
       content: >
         You can choose to leave a personal message here. When you’re done, don’t forget to save and submit your survey. Thank you!
-    - image_path: tutorials/customer-satisfaction-survey-6.jpg
-      content: >
 
 - title: File a Claim
   tutorial_steps:
