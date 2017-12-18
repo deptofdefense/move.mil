@@ -133,8 +133,11 @@ else
   cipher.iv = [ENV['SEEDS_ENC_IV']].pack('H*')
   cipher.key = [ENV['SEEDS_ENC_KEY']].pack('H*')
 
+  # path, year, and tdl. Remember that rates take effect May 15, so the two
+  # TDLs before that date belong to the previous year
   discount_files = [
-    [Rails.root.join('db', 'seeds', 'No 1 BVS Dom Discounts - Eff 1Oct2017.csv.enc'), 2017, 2]
+    [Rails.root.join('db', 'seeds', 'No 1 BVS Dom Discounts - Eff 1Oct2017.csv.enc'), 2017, 2],
+    [Rails.root.join('db', 'seeds', 'No 1 BVS Dom Discounts - Eff 1Jan2018.csv.enc'), 2017, 3]
   ]
 
   discount_files.each do |path, year, tdl|
