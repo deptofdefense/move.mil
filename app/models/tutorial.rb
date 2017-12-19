@@ -3,7 +3,9 @@ class Tutorial < ApplicationRecord
 
   friendly_id :title
 
-  has_many :tutorial_steps, dependent: :destroy
+  has_many :tutorial_steps, -> { order(:id) }, dependent: :destroy
 
   validates :title, presence: true
+
+  default_scope { order(id: :asc) }
 end
