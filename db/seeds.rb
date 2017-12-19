@@ -73,6 +73,13 @@ transportation_offices.each do |office|
   TransportationOffice.create(office.except('shipping_office_name').merge(shipping_office_id: shipping_office_id))
 end
 
+puts 'Loading weight scales...'
+weight_scales = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'weight_scales.json')))
+
+weight_scales.each do |weight_scale|
+  WeightScale.create(weight_scale)
+end
+
 puts 'Loading installations...'
 installations = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'installations.json')))
 

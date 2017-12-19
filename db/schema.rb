@@ -237,6 +237,27 @@ ActiveRecord::Schema.define(version: 20171221152756) do
     t.integer "display_order"
   end
 
+  create_table "weight_scales", force: :cascade do |t|
+    t.text "name", null: false
+    t.text "street_address"
+    t.text "extended_address"
+    t.text "locality"
+    t.text "region"
+    t.text "region_code"
+    t.text "postal_code"
+    t.text "country_name"
+    t.text "country_code"
+    t.float "latitude"
+    t.float "longitude"
+    t.json "email_addresses", default: []
+    t.json "phone_numbers", default: []
+    t.json "urls", default: []
+    t.text "hours"
+    t.text "note"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "zip3s", force: :cascade do |t|
     t.integer "zip3"
     t.text "basepoint_city"
