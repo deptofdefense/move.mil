@@ -21,17 +21,22 @@ RSpec.describe PpmEstimatorController, type: :request do
     end
 
     context 'when calculating a PPM estimate' do
+      context 'and a required parameter is missing' do
+        [:rank, :branch, :dependents, :start, :end, :date, :weight].each do |param|
+          let (:required_params) { { rank: 'e-1', branch: 'army', dependents: 'yes', start: '90210', end: '20001', date: '2017-12-31', weight: '1000' } }
+          before do
+            missing_a_param = required_params.deep_dup
+            missing_a_param.delete(param)
+            get '/resources/ppm-estimator', params: :missing_a_param, xhr: true
+          end
+
+          it 'returns HTTP redirect status code' do
+            expect(response).to have_http_status(:not_found)
+          end
+        end
+      end
+
       context 'when sending valid params' do
-      end
-
-      context 'when electing self pack' do
-        it 'includes a packing incentive' do
-        end
-      end
-
-      context 'when not electing self pack' do
-        it 'does not include a packing incentive' do
-        end
       end
 
       context 'when sending a date earlier than the earliest filed performance period' do
@@ -42,27 +47,6 @@ RSpec.describe PpmEstimatorController, type: :request do
       context 'when sending a date later than the last filed performance period' do
         it 'matches the results of the same calculation with a date within the latest performance period' do
         end
-      end
-
-      context 'when leaving out required rank param' do
-      end
-
-      context 'when leaving out required branch param' do
-      end
-
-      context 'when leaving out required dependents param' do
-      end
-
-      context 'when leaving out required start ZIP code param' do
-      end
-
-      context 'when leaving out required end ZIP code param' do
-      end
-
-      context 'when leaving out required date param' do
-      end
-
-      context 'when leaving out required weight param' do
       end
 
       context 'when entering an invalid start ZIP code' do
