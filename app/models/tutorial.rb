@@ -3,7 +3,7 @@ class Tutorial < ApplicationRecord
 
   friendly_id :title
 
-  has_many :tutorial_steps, -> { order(:id) }, dependent: :destroy
+  has_many :tutorial_steps, -> { order(:id) }, dependent: :destroy, inverse_of: :tutorial
 
   validates :title, presence: true
 
