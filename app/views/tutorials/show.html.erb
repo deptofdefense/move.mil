@@ -19,7 +19,7 @@
 
     <div class="tutorial-header">
       <h3><span>Tutorial</span> <%= @tutorial.title %></h3>
-      <a href="#" class="show-all" id="show-all"><%= image_tag 'symbols/list.svg', alt: 'show all steps icon' %></a>
+      <button class="show-all" id="show-all"><%= image_tag 'symbols/list.svg', alt: 'show all steps icon' %></button>
     </div>
     <div class="carousel owl-carousel">
       <%- total = @tutorial.tutorial_steps.length -%>
