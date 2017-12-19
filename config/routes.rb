@@ -3,12 +3,13 @@ Rails.application.routes.draw do
 
   get '/customer-service', to: 'customer_service#index', as: 'customer_service'
   get '/faqs', to: 'faqs#index', as: 'faqs'
-  get '/resources/locator-maps(/:latitude,:longitude)', to: 'offices#index', as: 'offices', constraints: {
+
+  get '/resources/locator-maps(/:latitude,:longitude)', to: 'locations#index', as: 'locations', constraints: {
     latitude: /[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?)/,
     longitude: /[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)/
   }
 
-  post '/resources/locator-maps', to: 'offices#index'
+  post '/resources/locator-maps', to: 'locations#index'
   get '/resources/ppm-estimator', to: 'ppm_estimator#index', as: 'ppm_estimator'
   get '/resources/weight-estimator', to: 'weight_estimator#index', as: 'weight_estimator'
   get '/service-specific-information(/:id)', to: 'service_specific_information#show', as: 'service_specific_information'

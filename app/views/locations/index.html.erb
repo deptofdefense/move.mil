@@ -22,7 +22,7 @@
   </div>
 
   <div class="search-forms-container">
-    <%= form_with url: offices_path, class: 'usa-form zip-code-search-form', id: 'search-code-zip-form' do |form| %>
+    <%= form_with url: locations_path, class: 'usa-form zip-code-search-form', id: 'search-code-zip-form' do |form| %>
       <%= form.label :query, 'Search by ZIP Code or Installation', class: 'usa-sr-only' %>
       <%= form.text_field :query, aria: { required: true }, id: 'query', placeholder: 'e.g. 62225, Fort Belvoir', required: true %>
 
@@ -30,7 +30,7 @@
     <% end %>
 
     <div class="coordinates-search" id="coordinates-search" hidden>
-      <button data-action="<%= offices_path %>" type="button">Search by Your Location</button>
+      <button data-action="<%= locations_path %>" type="button">Search by Your Location</button>
     </div>
   </div>
 

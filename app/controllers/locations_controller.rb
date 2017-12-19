@@ -1,4 +1,4 @@
-class OfficesController < ApplicationController
+class LocationsController < ApplicationController
   def index
     # return on direct requests to the page
     return unless search
@@ -10,7 +10,7 @@ class OfficesController < ApplicationController
     return transportation_offices unless request.post?
 
     # redirect on valid search (POST)
-    redirect_to offices_path(search.result)
+    redirect_to locations_path(search.result)
   end
 
   private

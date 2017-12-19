@@ -56,7 +56,7 @@
           <li>Research your new base on <%= link_to 'militaryinstallations.dod.mil', 'http://www.militaryinstallations.dod.mil/MOS/f?p=MI:ENTRY:0' %></li>
           <li><%= link_to 'Learn what options there are for transporting your household goods', page_path('moving-guide') %></li>
           <li>Visit <%= link_to 'Military One Source', 'https://www.militaryonesource.mil/web/mos/moving-housing' %> to learn more about coping with relocation and housing issues</li>
-          <li>Attend an info session (briefing) at your <%= link_to 'local personal property office', offices_path %></li>
+          <li>Attend an info session (briefing) at your <%= link_to 'local personal property office', locations_path %></li>
         </ul>
       </div>
 
@@ -70,7 +70,7 @@
         </div>
         <ul>
           <li><%= link_to raw("Sign In to #{abbr_tag('dps')}"), 'https://eta.sddc.army.mil/ETASSOPortal/default.aspx' %>  to schedule your move online</li>
-          <li>Visit your <%= link_to 'local personal property office', offices_path %> to get help scheduling your move</li>
+          <li>Visit your <%= link_to 'local personal property office', locations_path %> to get help scheduling your move</li>
           <li><%= link_to 'Follow online tutorials for help logging in or using DPS', page_path('tutorials') %></li>
         </ul>
       </div>
@@ -84,7 +84,7 @@
         </div>
         <ul>
           <li><%= link_to 'Create your own high-value inventory', page_path('resources/inventory-form') %></li>
-          <li>Contact your <%= link_to 'local personal property office', offices_path %> if anything goes wrong with your transportation provider the day of your move</li>
+          <li>Contact your <%= link_to 'local personal property office', locations_path %> if anything goes wrong with your transportation provider the day of your move</li>
           <li>Review <%= link_to 'Moving Tips', page_path('moving-guide/tips') %> so that you have a successful move</li>
         </ul>
       </div>

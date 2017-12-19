@@ -10,7 +10,7 @@ class MetaController < ApplicationController
   end
 
   def route_urls
-    %w[customer_service entitlements faqs offices weight_estimator].map { |route| send("#{route}_url") }
+    %w[customer_service entitlements faqs locations weight_estimator].map { |route| send("#{route}_url") }
   end
 
   def service_specific_information_urls

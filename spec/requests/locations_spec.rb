@@ -1,4 +1,4 @@
-RSpec.describe OfficesController, type: :request do
+RSpec.describe LocationsController, type: :request do
   describe 'GET #index' do
     context 'when navigating to the page' do
       before do
