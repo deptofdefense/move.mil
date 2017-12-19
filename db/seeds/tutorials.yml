@@ -297,6 +297,23 @@
       content: >
         After you hit submit, email the Transportation Office you selected for counseling and let them know that you've created a PPM shipment in DPS. They may need additional information from you before your shipment is approved.
 
+- title: Cancel a Shipment
+  tutorial_steps:
+    - image_path: tutorials/cancel-a-shipment-1.jpg
+      content: >
+        Log in to <a href="https://eta.sddc.army.mil/ETASSOPortal/default.aspx">ETA</a> and open the DPS homepage. Select "Edit My Shipment Info" to locate the shipment you want to cancel. Shipments are listed by Orders number.<br><br>
+        You must also contact your <a href="/resources/locator-maps">local Transportation office</a>, and request a cancellation in writing, since you may have already been assigned a Moving Company.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Since you can have more than one shipment per Order, it's important to carefully select only the shipment you want to cancel.<br>
+        Need help getting to this page? Check out the <a href="/tutorials/returning-user-login">Returning User Login</a> tutorial.
+    - image_path: tutorials/cancel-a-shipment-2.jpg
+      content: >
+        Click on the Shipment item from the menu on the left, and click the Cancel icon.
+    - image_path: tutorials/cancel-a-shipment-3.jpg
+      content: >
+        Confirm this is the shipment you want to cancel, and click "OK".<br><br>
+        You must also contact your <a href="/resources/locator-maps">local Transportation office</a>, and request a cancellation in writing, since you may have already been assigned a Moving Company.
+
 - title: Customer Satisfaction Survey
   tutorial_steps:
     - image_path: tutorials/customer-satisfaction-survey-1.jpg
