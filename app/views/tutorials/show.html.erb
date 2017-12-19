@@ -17,7 +17,10 @@
       Need more? Visit your <%= link_to 'local transportation office', offices_path %> or call 1 (800) 462-2176 for 24/7 support.
     </div>
 
-    <h3><span>Tutorial</span> <%= @tutorial.title %></h3>
+    <div class="tutorial-header">
+      <h3><span>Tutorial</span> <%= @tutorial.title %></h3>
+      <a href="#" class="show-all"><%= image_tag 'symbols/list.svg', alt: 'show all steps icon' %></a>
+    </div>
     <div class="carousel owl-carousel">
       <%- total = @tutorial.tutorial_steps.length -%>
       <%- @tutorial.tutorial_steps.each_with_index do |step, index| -%>
