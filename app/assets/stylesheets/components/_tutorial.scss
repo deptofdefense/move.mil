@@ -1,0 +1,15 @@
+.tutorial {
+  h3 {
+    clear: none;
+    font-weight: $font-normal;
+    margin: 0;
+    padding-top: 1rem;
+
+    span {
+      display: block;
+      font-size: $small-font-size;
+      font-weight: $font-bold;
+      text-transform: uppercase;
+    }
+  }
+}

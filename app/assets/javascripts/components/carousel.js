@@ -2,13 +2,14 @@
   'use strict';
 
   $('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
+    loop: false,
     nav: true,
+    navText: ['Prev', 'Next'],
     responsive: {
       0: {
         items: 1
       }
-    }
+    },
+    dots: false
   });
 })(window, jQuery);

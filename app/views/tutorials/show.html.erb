@@ -1,16 +1,42 @@
-<%- @page_title = "#{@tutorial.title} — Tutorials" -%>
+<%- @page_title = 'Tutorials' -%>
+
+<%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: []} %>
 
 <div class="usa-section main-section">
-  <h1><%= @tutorial.title %></h1>
+  <h1><%= @page_title %></h1>
 
-  <div class="single-page-tutorial">
-    <%- @tutorial.tutorial_steps.each do |step| -%>
-      <figure>
-        <%= image_tag step.image_path, alt: '' if step.image_path? %>
-        <figcaption>
-          <%= raw step.content %>
-        </figcaption>
-      </figure>
+  <%= render layout: 'shared/sidenav' do %>
+    <%- @tutorials.each do |tutorial| -%>
+      <li><%= link_to tutorial.title, tutorial_path(tutorial), class: tutorial == @tutorial ? 'usa-current' : nil %></li>
     <%- end -%>
+  <% end %>
+
+  <div class="sidenav-body tutorial">
+    <div class="article-intro">
+      Get an overview of the online moving process with pro tips from experienced customers and counselors.<br>
+      Need more? Visit your <%= link_to 'local transportation office', offices_path %> or call 1 (800) 462-2176 for 24/7 support.
+    </div>
+
+    <h3><span>Tutorial</span> <%= @tutorial.title %></h3>
+    <div class="carousel owl-carousel">
+      <%- total = @tutorial.tutorial_steps.length -%>
+      <%- @tutorial.tutorial_steps.each_with_index do |step, index| -%>
+        <div class="carousel-item">
+          <figure class="carousel-item-content">
+            <%= image_tag step.image_path, alt: 'screenshot', class: 'screenshot' if step.image_path? %>
+            <figcaption>
+              <span class="step-count"><%= index + 1 %> of <%= total %></span>
+              <h3><span>Instructions</span></h3>
+              <%= raw step.content %>
+              <%- if step.pro_tip -%>
+                <%= render layout: 'shared/pro_tip' do %>
+                  <%= raw step.pro_tip %>
+                <% end %>
+              <%- end -%>
+            </figcaption>
+          </figure>
+        </div>
+      <%- end -%>
+    </div>
   </div>
 </div>
