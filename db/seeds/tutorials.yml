@@ -170,7 +170,7 @@
         <strong>Pro-Tips:</strong>
         <ul>
           <li>A POV is your Personally Owned Vehicle, and in this context, a Mobile Home is an RV.</li>
-          <li>Not all locations, in particular OCONUS, allow you to ship a motorcycle and a POV. Check out the Consignment Instruction Guide for motorcycle shipping information on each location.</li>
+          <li>Not all locations, in particular OCONUS, allow you to ship a motorcycle and a POV. Check out the <a href="https://tops.ppcigweb.sddc.army.mil/ppcig/menu/query/country.do">Consignment Instruction Guide</a> for motorcycle shipping information on each location.</li>
         </ul>
     - image_path: tutorials/create-a-shipment-15.jpg
       content: >
@@ -296,6 +296,150 @@
     - image_path: tutorials/create-a-ppm-shipment-13.jpg
       content: >
         After you hit submit, email the Transportation Office you selected for counseling and let them know that you've created a PPM shipment in DPS. They may need additional information from you before your shipment is approved.
+
+- title: Dual Military (Mil-to-Mil) Move
+  tutorial_steps:
+    - image_path: tutorials/dual-military-move-1.jpg
+      content: >
+        A Dual Move, also known as Mil-to-Mil, is when your spouse or significant other is also a service member or government civilian and you both have Orders to PCS.<br><br>
+        Check out the <a href="/faqs">FAQ</a> for details about weight allowances, and examples of Mil-to-Mil move scenarios. Usually, the higher ranking member fills out DPS.<br><br>
+        First, log into <a href="https://eta.sddc.army.mil/ETASSOPortal/default.aspx">ETA</a>, and choose DPS from your list of approved applications.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Turn off your pop-up blocker, otherwise the DPS window won't be able to open.
+    - image_path: tutorials/dual-military-move-2.jpg
+      content: >
+        If you haven’t logged in in a while you’ll be prompted to review your profile. Take this opportunity to confirm that everything is up to date.
+      pro_tip: >
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>Save time by making sure you have a copy of your Orders. If you don't, ask your command for a Letter in Lieu, which can be used until your official orders are cut. Make sure you send your Transportation Office a copy of your Orders so that they can update the system.</li>
+          <li>You'll also be asked detailed information about special items you might ship, like the make and model of your Motorcycle, and even the calibre and serial number of each of your firearms. Get this information organized now to save time later.</li>
+          <li>You don't have to have an exact address at your new location to start the move process. Don't wait to schedule your move, peak season can mean your prefered move dates are taken, and lines are long at your local Transportation Office.</li>
+        </ul>
+    - image_path: tutorials/dual-military-move-3.jpg
+      content: >
+        Otherwise you’ll be brought to the DPS Homepage. Here you’ll find a snapshot of your current or past moves.<br><br>
+        Click "Start a New Move" to begin your application.<br><br>
+    - image_path: tutorials/dual-military-move-4.jpg
+      content: >
+        Fill out your Customer Information and Permanent Contact Address. The "Permanent Contact Address" is an address that's not part of this move. It needs to be a place where the Transportation Office could get in touch with you in case of emergency. This could be a friend or relative.<br>
+        Addresses are saved in DPS so you don't have to fill it out each time you schedule a move.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> You can check your progress in the Counseling Menu on the left side of the page.
+    - image_path: tutorials/dual-military-move-5.jpg
+      content: >
+        Enter an Emergency Contact who can act on your behalf during the move, if you're unavailable. This person will have access to shipment status, and information.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> A Letter of Authorization allows you to give another person permission to act on your behalf. Only the service member who has official orders can write this letter of authorization.
+    - image_path: tutorials/dual-military-move-6.jpg
+      content: >
+        Now you’re ready to enter your Orders information, which begins the move process.<br>
+        Here, indicate your rank, and whether or not you're allowed PBP&E. This information allows DPS to calculate your shipment weight allowance, if it wasn't part of your orders.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> PBP&E is the "pro gear" or professional equipment you might need to ship - there's an extra separate allowance for you, and your spouse. It doesn’t count towards your weight allowance - just make sure you itemize it!<br><br>
+        A "Hard Copy" of your orders refers to the physical piece of paper that you received, and that your orders have officially been cut. You'll need to scan and upload a PDF of your orders.
+    - image_path: tutorials/dual-military-move-7.jpg
+      content: >
+        Next, enter your Orders Number and Date.
+      pro_tip: >
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>The location of your Orders Number on the orders, varies by branch. Typically, the Army and Navy list the number in the upper left of the document, while the Marines list a Standard Document Number (SDN) on the bottom right. For the Airforce, look in box 27 of your Orders form.</li>
+          <li>Your Orders date is the date the orders were cut or issued.</li>
+        </ul>
+    - image_path: tutorials/dual-military-move-8.jpg
+      content: >
+        Enter address of your Current Duty Station (the one you're leaving), and your New Duty Station (the one you're going to). Click the orange box, then enter only the first 4 letters of the city to locate the address.
+    - image_path: tutorials/dual-military-move-9.jpg
+      content: >
+        Specify your authorized Order Type, and indicate what type of shipment you’d like to create. Next, upload a copy of your Orders document.<br><br>
+        Upload both sets of Orders for you and your spouse.
+      pro_tip: >
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>Can't find your type? Check out the category "Various" to see miscellaneous move types.</li>
+          <li>Even though you've uploaded your orders in DPS, it's a good idea to reach out to your Transportation Office after you submit your application, to make sure they have everything they need to book your shipment.</li>
+        </ul>
+    - image_path: tutorials/dual-military-move-10.jpg
+      content: >
+        To upload your orders, click Browse to find the document on your computer. Then you must click upload to save the document to the DPS system. You’ll receive a message in green that your Orders were successfully uploaded.
+    - image_path: tutorials/dual-military-move-11.jpg
+      content: >
+        Next, enter your new Duty Station and indicate whether or not you're moving with dependents (including a spouse).
+    - image_path: tutorials/dual-military-move-12.jpg
+      content: >
+        Finally, in the Additional Information section, you'll specify if you need to ship a motorcycle, or need to remove any items from Non Temporary Storage, left over from a previous move.
+      pro_tip: >
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>A POV is your Personally Owned Vehicle, and in this context, a Mobile Home is an RV.</li>
+          <li>Not all locations, in particular OCONUS, allow you to ship a motorcycle and a POV. Check out the <a href="https://tops.ppcigweb.sddc.army.mil/ppcig/menu/query/country.do">Consignment Instruction Guide</a> for motorcycle shipping information on each location.</li>
+        </ul>
+    - image_path: tutorials/dual-military-move-13.jpg
+      content: >
+        The Entitlement Summary allows you to review and certify the information you entered is accurate.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Your weight allowance is listed here in the second paragraph.
+    - image_path: tutorials/dual-military-move-14.jpg
+      content: >
+        Now that you've entered your Orders information, you must "Create New Shipment" specific for those orders. Select the type of shipment you want to create, like "HHG", and specify whether or not it will be a Personally Procured Move (PPM).
+      pro_tip: >
+        <strong>Pro-Tip:</strong> You can create more than one type of shipment per Orders. For example, you can schedule an HHG shipment for the majority of your belongings, and an additional PPM shipment for the ones you'll move yourself in your car. You just have to repeat this “Create New Shipment” process for each shipment.
+    - image_path: tutorials/dual-military-move-15.jpg
+      content: >
+        Then you'll get some helpful information about a Household Goods (HHG) move. Later on, there will be PPM specific information, if you choose this to be a PPM shipment.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Print this information and keep it handy. You may not always have access to DPS throughout your move.
+    - image_path: tutorials/dual-military-move-16.jpg
+      content: >
+        Set your desired moving dates. No matter what dates you enter, your moving dates are not confirmed until you speak with the Moving Company. During peak season there may be black out dates, or other circumstances that prevent your desired dates from being scheduled.<br><br>
+        Next, enter the pick-up and drop-off addresses. You can enter additional pickups near your old or new duty stations.<br><br>
+        Add a Releasing Agent from your list of Points of Contact, someone who can sign for your pick-up or delivery, if you're unavailable.
+    - image_path: tutorials/dual-military-move-17.jpg
+      content: >
+        Next, define shipment weight. Use the <a href="/resources/weight-estimator">Weight Estimator Tool</a> on Move.mil to get an idea of what your belongings weigh.<br><br>
+        Identify if you have special items like a jacuzzi or piano.<br><br>
+        Enter your spouse's information here in the "Additional Information" section.<br>
+        <ul>
+          <li>Name of Spouse or Significant Other</li>
+          <li>Rank</li>
+          <li>Branch of Service</li>
+          <li>Orders Number</li>
+          <li>Total Estimate Weight of the Shipment</li>
+        </ul>
+      pro_tip: >
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>Your Pro Gear, up to 2,000 lbs, doesn't count towards your estimated weight.</li>
+          <li>There's also a separate section for firearms on the next page. You'll need to enter the make and model, serial number, and calibre for each firearm. Save yourself the headache later, by entering this info before you hit Submit!</li>
+        </ul>
+    - image_path: tutorials/dual-military-move-18.jpg
+      content: >
+        Here, indicate if you are shipping any firearms. You must provide detailed information about each firearm you’d like to ship.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Here, indicate if you are shipping any firearms. You must provide detailed information about each firearm you’d like to ship.
+    - image_path: tutorials/dual-military-move-19.jpg
+      content: >
+        Now, let’s decide on the scheduling of your shipment. You’ll get an estimated number of days for packing and shipping, so you can plan your travel accordingly. Everything is an estimate until confirmed by your local transportation office and the moving company.<br><br>
+        If you have a preference, here's where you can let us know your favorite (or least favorite) Transportation Service Provider (TSP) also know as a Carrier or Moving Company.
+    - image_path: tutorials/dual-military-move-20.jpg
+      content: >
+        It's time to go over moving day responsibilities for you and your TSP.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Print this page! It details all the information you need for moving day. You may not have access to DPS at all times during your move.
+    - image_path: tutorials/dual-military-move-21.jpg
+      content: >
+        A summary of your shipment is then provided. You have to certify that you've read and agree that everything is accurate, so double check important items like your email address, and type of shipment.
+    - image_path: tutorials/dual-military-move-22.jpg
+      content: >
+        Here you'll choose a Personal Property Office for counseling. They will be your main point of contact during your move. You’ll need to contact them after submitting your shipment on DPS.  They'll need the signed forms generated on the next page.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Use the <a href="/resources/locator-maps">Office Locator</a> tool if you need help choosing a counseling office.
+    - image_path: tutorials/dual-military-move-23.jpg
+      content: >
+        On the Submit Page, review and sign your forms (DD 1299 and DD 1797, etc.), then upload them, and press submit.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> After you hit submit, email the Transportation Office you selected for counseling and let them know that you've created a shipment in DPS. They may need additional information from you before your shipment is approved.
 
 - title: Cancel a Shipment
   tutorial_steps:
