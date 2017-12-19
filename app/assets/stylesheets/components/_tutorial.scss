@@ -13,3 +13,32 @@
     }
   }
 }
+
+.tutorial-header {
+  position: relative;
+}
+
+.show-all {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+
+  img {
+    display: block;
+    width: 2rem;
+  }
+}
+
+.single-page-tutorial {
+  .carousel-item {
+    margin-bottom: 6rem;
+  }
+
+  .owl-stage {
+    width: auto !important;
+  }
+
+  .owl-nav {
+    display: none;
+  }
+}

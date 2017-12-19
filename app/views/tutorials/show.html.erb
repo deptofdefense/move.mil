@@ -11,7 +11,7 @@
     <%- end -%>
   <% end %>
 
-  <div class="sidenav-body tutorial">
+  <div class="sidenav-body tutorial" id="tutorial">
     <div class="article-intro">
       Get an overview of the online moving process with pro tips from experienced customers and counselors.<br>
       Need more? Visit your <%= link_to 'local transportation office', offices_path %> or call 1 (800) 462-2176 for 24/7 support.
@@ -19,7 +19,7 @@
 
     <div class="tutorial-header">
       <h3><span>Tutorial</span> <%= @tutorial.title %></h3>
-      <a href="#" class="show-all"><%= image_tag 'symbols/list.svg', alt: 'show all steps icon' %></a>
+      <a href="#" class="show-all" id="show-all"><%= image_tag 'symbols/list.svg', alt: 'show all steps icon' %></a>
     </div>
     <div class="carousel owl-carousel">
       <%- total = @tutorial.tutorial_steps.length -%>
