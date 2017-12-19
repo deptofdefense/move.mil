@@ -11,6 +11,8 @@ $sidenav-screen-width: 800px;
   }
 
   .usa-sidenav-list {
+    border: none;
+
     // undo sidenav styling
     @media screen and (max-width: $sidenav-screen-width - 1) {
       li {
