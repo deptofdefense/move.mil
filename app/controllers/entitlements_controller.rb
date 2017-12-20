@@ -1,5 +1,6 @@
 class EntitlementsController < ApplicationController
   def index
+    raise "error"
     return entitlements unless request.xhr?
     return render plain: '', status: :not_found unless entitlement_search.valid? && entitlement_search.result
 
