@@ -13,8 +13,8 @@ class InstallationSearch
 
   def result
     {
-      latitude: installation.latitude,
-      longitude: installation.longitude
+      latitude: installation.location.latitude,
+      longitude: installation.location.longitude
     }
   end
 
