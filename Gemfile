@@ -22,7 +22,7 @@ gem 'roo', '~> 2.7.1', require: false
 gem 'sass', '~> 3.5', '>= 3.5.4'
 gem 'sass-rails', '~> 5.0', '>= 5.0.6'
 gem 'uglifier', '~> 4.0', '>= 4.0.2'
-gem 'uswds-rails', '~> 1.4.4'
+gem 'uswds-rails', '~> 1.4.4.1'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
 source 'https://rails-assets.org' do
