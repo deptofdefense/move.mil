@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :transportation_office do
     sequence(:name) { |n| "Transportation Office #{n}" }
-    latitude 38.8718568
-    # rubocop:disable Lint/AmbiguousOperator
-    longitude -77.0584556
-    # rubocop:enable Lint/AmbiguousOperator
+
+    after(:create) do |transportation_office|
+      transportation_office.location = create(:location, locatable: transportation_office)
+    end
   end
 end

@@ -16,6 +16,7 @@ RSpec.describe LocationsController, type: :request do
 
     context 'when navigating to the page with coordinates' do
       let!(:transportation_offices) { create_list(:transportation_office, 20) }
+      let!(:weight_scales) { create_list(:weight_scale, 20) }
 
       before do
         get '/resources/locator-maps/38.933366,-77.0303119999999'
@@ -26,7 +27,7 @@ RSpec.describe LocationsController, type: :request do
       end
 
       it 'displays a paginated list of transportation offices' do
-        assert_select '.transportation-office', count: 10
+        assert_select '.transportation-office, .weight-scale', count: 10
         assert_select '.pagination'
       end
     end
@@ -66,7 +67,7 @@ RSpec.describe LocationsController, type: :request do
         it 'redirects to a search results page' do
           post '/resources/locator-maps', params: { query: 'installation' }
 
-          expect(response).to redirect_to('/resources/locator-maps/38.6921631,-77.1374000999999')
+          expect(response).to redirect_to('/resources/locator-maps/38.8718568,-77.0584556')
         end
       end
     end
