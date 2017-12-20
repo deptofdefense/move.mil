@@ -27,5 +27,8 @@ module MoveMil
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Custom error pages
+    config.exceptions_app = routes
   end
 end
