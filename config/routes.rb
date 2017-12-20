@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get '/sitemap.xml', to: 'meta#sitemap', format: :xml
 
   get '/404', to: 'errors#not_found'
+  get '/500', to: 'errors#internal_server_error'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

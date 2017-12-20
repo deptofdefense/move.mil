@@ -3,8 +3,11 @@ class ErrorsController < ApplicationController
   before_action :set_format
 
   def not_found
-    puts request.format
     render status: 404
+  end
+
+  def internal_server_error
+    render file: Rails.public_path.join('500.html'), layout: false
   end
 
   private
