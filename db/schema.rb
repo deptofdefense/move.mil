@@ -129,21 +129,13 @@ ActiveRecord::Schema.define(version: 20171221152756) do
 
   create_table "installations", force: :cascade do |t|
     t.text "name", null: false
-    t.text "street_address"
-    t.text "extended_address"
-    t.text "locality"
-    t.text "region"
-    t.text "region_code"
-    t.text "postal_code"
-    t.text "country_name"
-    t.text "country_code"
-    t.float "latitude"
-    t.float "longitude"
     t.json "email_addresses", default: []
     t.json "phone_numbers", default: []
     t.json "urls", default: []
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "branch_of_service_id"
+    t.index ["branch_of_service_id"], name: "index_installations_on_branch_of_service_id"
   end
 
   create_table "intra_alaska_base_linehauls", force: :cascade do |t|
@@ -155,10 +147,9 @@ ActiveRecord::Schema.define(version: 20171221152756) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "offices", force: :cascade do |t|
-    t.text "type"
-    t.bigint "shipping_office_id"
-    t.text "name", null: false
+  create_table "locations", force: :cascade do |t|
+    t.string "locatable_type"
+    t.bigint "locatable_id"
     t.text "street_address"
     t.text "extended_address"
     t.text "locality"
@@ -167,17 +158,11 @@ ActiveRecord::Schema.define(version: 20171221152756) do
     t.text "postal_code"
     t.text "country_name"
     t.text "country_code"
-    t.float "latitude"
-    t.float "longitude"
-    t.json "email_addresses", default: []
-    t.json "phone_numbers", default: []
-    t.json "urls", default: []
-    t.text "services", default: [], array: true
+    t.float "latitude", null: false
+    t.float "longitude", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "hours"
-    t.text "note"
-    t.index ["shipping_office_id"], name: "index_offices_on_shipping_office_id"
+    t.index ["locatable_type", "locatable_id"], name: "index_locations_on_locatable_type_and_locatable_id"
   end
 
   create_table "service_areas", force: :cascade do |t|
@@ -205,6 +190,18 @@ ActiveRecord::Schema.define(version: 20171221152756) do
     t.int4range "cwt_mi"
     t.decimal "rate", precision: 7, scale: 2
     t.daterange "effective"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shipping_offices", force: :cascade do |t|
+    t.text "name", null: false
+    t.json "email_addresses", default: []
+    t.json "phone_numbers", default: []
+    t.json "urls", default: []
+    t.text "services", default: [], array: true
+    t.text "hours"
+    t.text "note"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -239,16 +236,6 @@ ActiveRecord::Schema.define(version: 20171221152756) do
 
   create_table "weight_scales", force: :cascade do |t|
     t.text "name", null: false
-    t.text "street_address"
-    t.text "extended_address"
-    t.text "locality"
-    t.text "region"
-    t.text "region_code"
-    t.text "postal_code"
-    t.text "country_name"
-    t.text "country_code"
-    t.float "latitude"
-    t.float "longitude"
     t.json "email_addresses", default: []
     t.json "phone_numbers", default: []
     t.json "urls", default: []
@@ -284,6 +271,8 @@ ActiveRecord::Schema.define(version: 20171221152756) do
 
   add_foreign_key "branch_of_service_contacts", "branch_of_services"
   add_foreign_key "household_goods", "household_good_categories"
+  add_foreign_key "installations", "branch_of_services"
   add_foreign_key "service_specific_posts", "branch_of_services"
+  add_foreign_key "transportation_offices", "shipping_offices"
   add_foreign_key "tutorial_steps", "tutorials"
 end
