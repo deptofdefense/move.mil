@@ -2,8 +2,11 @@
   @include clearfix;
   @include unstyled-list;
   align-items: baseline;
+  -ms-flex-align: baseline;
   display: flex;
+  display: -ms-flexbox;
   flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   margin-top: $site-margins-mobile;
 
   li {
