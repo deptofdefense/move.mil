@@ -34,7 +34,7 @@
     </div>
   </div>
 
-  <%- if @transportation_offices -%>
+  <%- if @locations -%>
     <div class="location-search-types">
       <div class="usa-media_block">
         <%= image_tag 'locator/icon-pppo.svg', alt: 'A blue icon of a Transportation Office', class: 'usa-media_block-img' %>
@@ -61,12 +61,14 @@
           }
     %>
 
-    <p>Displaying results near <b><%= @search.query %></b><%= " (page #{@transportation_offices.current_page} of #{@transportation_offices.total_pages})" if @transportation_offices.total_pages.positive? %>.</p>
+    <p>Displaying results near <b><%= @search.query %></b><%= " (page #{@locations.current_page} of #{@locations.total_pages})" if @locations.total_pages.positive? %>.</p>
 
     <div id="search-results">
-      <%= render partial: 'transportation_office', collection: @transportation_offices %>
+      <%- @locations.each do |location| -%>
+        <%= render partial: location.locatable_type.underscore, object: location.locatable %>
+      <%- end -%>
     </div>
 
-    <%= will_paginate @transportation_offices %>
+    <%= will_paginate @locations %>
   <%- end -%>
 </div>

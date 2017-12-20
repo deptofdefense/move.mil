@@ -1,18 +1,18 @@
-<div class="transportation-office" data-latitude="<%= transportation_office.latitude %>" data-longitude="<%=transportation_office.longitude %>" data-name="<%= transportation_office.name %>" id="office-<%= transportation_office.id %>">
-  <div class="transportation-office-header">
+<div class="location-search-result transportation-office" data-latitude="<%= transportation_office.location.latitude %>" data-longitude="<%= transportation_office.location.longitude %>" data-name="<%= transportation_office.name %>" id="office-<%= transportation_office.id %>">
+  <div class="location-search-result-header">
     <b><%= transportation_office.name %></b>
   </div>
 
-  <div class="transportation-office-body">
+  <div class="location-search-result-body">
     <div class="usa-grid-full">
       <div class="usa-width-one-third">
         <b>Location:</b><br>
-        <%= transportation_office.street_address %><br>
-        <%- if transportation_office.extended_address? -%>
-          <%= transportation_office.extended_address %><br>
+        <%= transportation_office.location.street_address %><br>
+        <%- if transportation_office.location.extended_address? -%>
+          <%= transportation_office.location.extended_address %><br>
         <%- end -%>
-        <%= transportation_office.locality %>, <%= transportation_office.region %> <%= transportation_office.postal_code %><br>
-        <%= transportation_office.country_name %><br><br>
+        <%= transportation_office.location.locality %>, <%= transportation_office.location.region %> <%= transportation_office.location.postal_code %><br>
+        <%= transportation_office.location.country_name %><br><br>
 
         <%- if transportation_office.phone_numbers.any? -%>
           <%= render partial: 'phone_numbers', object: transportation_office.phone_numbers %>
@@ -43,7 +43,7 @@
         <%- if transportation_office.services.any? -%>
           <b>Services:</b><br>
 
-          <ul class="transportation-office-services">
+          <ul class="location-search-result-services">
             <%- transportation_office.services.each do |service| -%>
               <li><%= service %></li>
             <%- end -%>

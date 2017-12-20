@@ -7,7 +7,7 @@ class LocationsController < ApplicationController
     return error_message unless search.valid?
 
     # return search results on valid search (GET)
-    return transportation_offices unless request.post?
+    return locations unless request.post?
 
     # redirect on valid search (POST)
     redirect_to locations_path(search.result)
@@ -27,12 +27,12 @@ class LocationsController < ApplicationController
     InstallationSearch.new(params) if params[:query].present?
   end
 
-  def search
-    @search ||= coordinates_search || zip_code_search || installation_search || nil
+  def locations
+    @locations ||= Location.transportation_offices_and_weight_scales_by_distance(search.result).paginate(page: params[:page])
   end
 
-  def transportation_offices
-    @transportation_offices ||= TransportationOffice.by_distance_with_shipping_office(search.result).paginate(page: params[:page])
+  def search
+    @search ||= coordinates_search || zip_code_search || installation_search || nil
   end
 
   def zip_code_search

@@ -1,0 +1,45 @@
+<div class="location-search-result weight-scale" data-latitude="<%= weight_scale.location.latitude %>" data-longitude="<%= weight_scale.location.longitude %>" data-name="<%= weight_scale.name %>" id="weight-scale-<%= weight_scale.id %>">
+  <div class="location-search-result-header">
+    <b><%= weight_scale.name %></b>
+  </div>
+
+  <div class="location-search-result-body">
+    <div class="usa-grid-full">
+      <div class="usa-width-one-third">
+        <b>Location:</b><br>
+        <%= weight_scale.location.street_address %><br>
+        <%- if weight_scale.location.extended_address? -%>
+          <%= weight_scale.location.extended_address %><br>
+        <%- end -%>
+        <%= weight_scale.location.locality %>, <%= weight_scale.location.region %> <%= weight_scale.location.postal_code %><br>
+        <%= weight_scale.location.country_name %><br><br>
+
+        <%- if weight_scale.phone_numbers.any? -%>
+          <%= render partial: 'phone_numbers', object: weight_scale.phone_numbers %>
+        <%- end -%>
+      </div>
+
+      <div class="usa-width-one-third">
+        <%- if weight_scale.email_addresses.any? -%>
+          <%= render partial: 'email_addresses', object: weight_scale.email_addresses %>
+        <%- end -%>
+
+        <%- if weight_scale.urls.any? -%>
+          <%= render partial: 'urls', object: weight_scale.urls %>
+        <%- end -%>
+      </div>
+
+      <div class="usa-width-one-third">
+        <%- if weight_scale.hours? -%>
+          <b>Hours:</b><br>
+          <%= weight_scale.hours %><br><br>
+        <%- end -%>
+
+        <%- if weight_scale.note? -%>
+          <b>Notes:</b><br>
+          <%= weight_scale.note %><br><br>
+        <%- end -%>
+      </div>
+    </div>
+  </div>
+</div>
