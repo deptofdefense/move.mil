@@ -1,20 +1,33 @@
-.transportation-office {
+.location-search-result {
   border: 1px solid $color-gray-light;
   box-shadow: 0 0.25rem 0.25rem 0 rgba($color-gray, 0.25);
   margin-top: $site-margins;
+
+  .shipping-office {
+    background: $color-cool-blue-lightest;
+    margin-top: 2.5rem;
+    padding: $site-margins-mobile;
+  }
 }
 
-.transportation-office-header {
-  background-color: $color-cool-blue-lightest;
+.location-search-result-header {
   padding: $site-margins-mobile;
+
+  .transportation-office & {
+    background-color: $color-cool-blue-lightest;
+  }
+
+  .weight-scale & {
+    background-color: $color-gold-lightest;
+  }
 }
 
-.transportation-office-body {
+.location-search-result-body {
   font-size: $h5-font-size;
   padding: $site-margins-mobile;
 }
 
-.transportation-office-services {
+.location-search-result-services {
   @include unstyled-list;
 
   li {
