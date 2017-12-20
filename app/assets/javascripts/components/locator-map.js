@@ -27,7 +27,26 @@
 
   var LocatorMap = function(options) {
     this.$container = options.$container;
-    this.$offices = options.$offices;
+    this.$locations = options.$locations;
+
+    var iconDefaults = {
+      iconAnchor: [17, 48],
+      popupAnchor: [0, -48],
+      shadowUrl: this.$container.data('markerShadowPath'),
+      shadowAnchor: [13, 41]
+    };
+
+    this.icons = {
+      'transportation-office': L.icon($.extend({}, iconDefaults, {
+        iconUrl: this.$container.data('markerTransportationOfficeIconPath'),
+        iconRetinaUrl: this.$container.data('markerTransportationOfficeIcon2xPath')
+      })),
+
+      'weight-scale': L.icon($.extend({}, iconDefaults, {
+        iconUrl: this.$container.data('markerWeightScaleIconPath'),
+        iconRetinaUrl: this.$container.data('markerWeightScaleIcon2xPath')
+      }))
+    };
 
     this.map = L.map(this.$container.attr('id'), {
       maxZoom: 18,
@@ -35,15 +54,6 @@
     });
 
     this.markers = [];
-
-    this.markerIcon = L.icon({
-      iconUrl: this.$container.data('markerIconPath'),
-      iconRetinaUrl: this.$container.data('markerIcon2xPath'),
-      iconAnchor: [17, 48],
-      popupAnchor: [0, -48],
-      shadowUrl: this.$container.data('markerShadowPath'),
-      shadowAnchor: [13, 41]
-    });
 
     this.setup();
     this.addMarkers();
@@ -89,27 +99,25 @@
         attribution: 'Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Map imagery © <a href="https://www.mapbox.com">Mapbox</a>.'
       }).addTo(this.map);
 
-      this.$offices.each(function(index, element) {
-        var $office = $(element);
+      this.$locations.each(function(index, element) {
+        var $location = $(element);
 
         this.markers.push(new LocatorMapMarker({
-          $container: $office,
-          icon: this.markerIcon,
-          id: $office.attr('id'),
-          name: $office.data('name'),
-          latitude: $office.data('latitude'),
-          longitude: $office.data('longitude')
+          $container: $location,
+          icon: this.icons[$location.data('type')],
+          id: $location.attr('id'),
+          name: $location.data('name'),
+          latitude: $location.data('latitude'),
+          longitude: $location.data('longitude')
         }));
       }.bind(this));
 
-      if (location.search.indexOf('coordinates=') !== -1) {
-        L.marker([latitude, longitude], {
-          alt: 'Your current location',
-          icon: L.divIcon({
-            className: 'map-marker-pulse'
-          })
-        }).addTo(this.map);
-      }
+      L.marker([latitude, longitude], {
+        alt: '',
+        icon: L.divIcon({
+          className: 'map-marker-pulse'
+        })
+      }).addTo(this.map);
     }
   };
 
@@ -118,7 +126,7 @@
   if ($container.length) {
     new LocatorMap({
       $container: $container,
-      $offices: $('#search-results .transportation-office')
+      $locations: $('#search-results .location-search-result')
     });
   }
 })(window, jQuery);
