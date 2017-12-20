@@ -10,7 +10,16 @@
     this.$form = options.$form;
     this.$results = options.$results;
 
-    this.$form.on('submit', this.events.submit.bind(this));
+    this.$rank = $('#rank');
+    this.$weightAllowanceText = $('#weight-allowance-text');
+    this.$progearAllowanceText = $('#progear-allowance-text');
+    this.$progearSpouseAllowanceText = $('#progear-spouse-allowance-text');
+    this.$weightAllowanceText.css('visibility', 'hidden');
+    this.$progearAllowanceText.css('visibility', 'hidden');
+    this.$progearSpouseAllowanceText.css('visibility', 'hidden');
+    this.entitlementsJson = $('#entitlements-json').data('entitlementsJson');
+
+    this.setup();
   };
 
   PpmEstimator.prototype = {
@@ -36,6 +45,101 @@
     handleAjaxSuccess: function(markup) {
       this.$alert.attr('hidden', true);
       this.$results.html(markup).removeAttr('hidden');
+    },
+
+    getEntitlementWeightSelf: function(entitlement) {
+      return $('#dependents_yes').prop('checked') ? entitlement.total_weight_self_plus_dependents : entitlement.total_weight_self;
+    },
+
+    getEntitlementProgear: function(entitlement) {
+      return entitlement.pro_gear_weight > 0 ? entitlement.pro_gear_weight : 0;
+    },
+
+    getEntitlementProgearSpouse: function(entitlement) {
+      return entitlement.pro_gear_weight_spouse > 0 ? entitlement.pro_gear_weight_spouse : 0;
+    },
+
+    onPersonalInfoChanged: function() {
+      if (!this.$rank.val() || $('input[name="dependents"]:checked').length == 0) {
+        this.$weightAllowanceText.css('visibility', 'hidden');
+        this.$progearAllowanceText.css('visibility', 'hidden');
+        this.$progearSpouseAllowanceText.css('visibility', 'hidden');
+      }
+      else {
+        var entitlement = this.entitlementsJson[this.$rank.val()];
+
+        var totalWeightSelf = this.getEntitlementWeightSelf(entitlement);
+        $('#entitlement_weight').text(totalWeightSelf.toString());
+        this.$weightAllowanceText.css('visibility', 'visible');
+        this.onWeightInput(null);
+
+        var proGearWeight = this.getEntitlementProgear(entitlement);
+        $('#entitlement_progear').text(proGearWeight.toString());
+        this.$progearAllowanceText.css('visibility', 'visible');
+        this.onWeightProgearInput(null);
+
+        var proGearWeightSpouse = this.getEntitlementProgearSpouse(entitlement);
+        $('#entitlement_progear_spouse').text(proGearWeightSpouse.toString());
+        this.$progearSpouseAllowanceText.css('visibility', 'visible');
+        this.onWeightProgearSpouseInput(null);
+      }
+
+      if ($('#dependents_yes')[0].checked)
+        $('#progear-spouse-section').removeAttr('hidden');
+      else
+        $('#progear-spouse-section').attr('hidden', true);
+    },
+
+    validateEntitlementField: function($input, getEntitlementFn) {
+      // an empty field is never an error
+      if ($input.val() == '')
+        return true;
+
+      // Some kinds of input validation can happen whether or not we know what the entitlement is
+      var weightLbs = parseInt($input.val());
+      if (weightLbs == NaN || weightLbs < 0)
+        return false;
+
+      // If the rank has not been chosen yet, then the entitlement cannot be loaded. Whatever the number is, it's fine for now
+      if (!this.$rank.val())
+        return true;
+
+      var entitlement = this.entitlementsJson[this.$rank.val()];
+      var entitlementWeight = getEntitlementFn(entitlement);
+      return weightLbs <= entitlementWeight;
+    },
+
+    onWeightInput: function(e) {
+      if (this.validateEntitlementField($('#weight'), this.getEntitlementWeightSelf))
+        $('#weight-section').removeClass('usa-input-error');
+      else
+        $('#weight-section').addClass('usa-input-error');
+    },
+
+    onWeightProgearInput: function(e) {
+      if (this.validateEntitlementField($('#weight_progear'), this.getEntitlementProgear))
+        $('#progear-section').removeClass('usa-input-error');
+      else
+        $('#progear-section').addClass('usa-input-error');
+    },
+
+    onWeightProgearSpouseInput: function(e) {
+      if (this.validateEntitlementField($('#weight_progear_spouse'), this.getEntitlementProgearSpouse))
+        $('#progear-spouse-section').removeClass('usa-input-error');
+      else
+        $('#progear-spouse-section').addClass('usa-input-error');
+    },
+
+    setup: function() {
+      this.$form.on('submit', this.events.submit.bind(this));
+
+      this.$rank.on('change', this.onPersonalInfoChanged.bind(this));
+      $('#dependents_yes').change(this.onPersonalInfoChanged.bind(this));
+      $('#dependents_no').change(this.onPersonalInfoChanged.bind(this));
+
+      $('#weight').on('input', this.onWeightInput.bind(this));
+      $('#weight_progear').on('input', this.onWeightProgearInput.bind(this));
+      $('#weight_progear_spouse').on('input', this.onWeightProgearSpouseInput.bind(this));
     }
   };
 
@@ -44,114 +148,5 @@
     $form: $ppmEstimateForm,
     $results: $('#ppm-estimate-results')
   });
-
-  var $rank = $('#rank');
-  var $weightAllowanceText = $('#weight-allowance-text');
-  var $progearAllowanceText = $('#progear-allowance-text');
-  var $progearSpouseAllowanceText = $('#progear-spouse-allowance-text');
-  $weightAllowanceText.css('visibility', 'hidden');
-  $progearAllowanceText.css('visibility', 'hidden');
-  $progearSpouseAllowanceText.css('visibility', 'hidden');
-  var entitlementsJson = $('#entitlements-json').data('entitlementsJson');
-
-  var getEntitlementWeightSelf = function(entitlement) {
-    return $('#dependents_yes').prop('checked') ? entitlement.total_weight_self_plus_dependents : entitlement.total_weight_self;
-  };
-
-  var getEntitlementProgear = function(entitlement) {
-    return entitlement.pro_gear_weight > 0 ? entitlement.pro_gear_weight : 0;
-  };
-
-  var getEntitlementProgearSpouse = function(entitlement) {
-    return entitlement.pro_gear_weight_spouse > 0 ? entitlement.pro_gear_weight_spouse : 0;
-  };
-
-  var onPersonalInfoChanged = function () {
-    if (!$rank.val() || $('input[name="dependents"]:checked').length == 0) {
-      $weightAllowanceText.css('visibility', 'hidden');
-      $progearAllowanceText.css('visibility', 'hidden');
-      $progearSpouseAllowanceText.css('visibility', 'hidden');
-    }
-    else {
-      var entitlement = entitlementsJson.find(function(data) { return data.slug == $rank.val(); });
-
-      var totalWeightSelf = getEntitlementWeightSelf(entitlement);
-      $('#entitlement_weight').text(totalWeightSelf.toString());
-      $weightAllowanceText.css('visibility', 'visible');
-      onWeightInput(null);
-
-      var proGearWeight = getEntitlementProgear(entitlement);
-      $('#entitlement_progear').text(proGearWeight.toString());
-      $progearAllowanceText.css('visibility', 'visible');
-      onWeightProgearInput(null);
-
-      var proGearWeightSpouse = getEntitlementProgearSpouse(entitlement);
-      $('#entitlement_progear_spouse').text(proGearWeightSpouse.toString());
-      $progearSpouseAllowanceText.css('visibility', 'visible');
-      onWeightProgearSpouseInput(null);
-    }
-
-    if ($('#dependents_yes')[0].checked)
-      $('#progear-spouse-section').removeAttr('hidden');
-    else
-      $('#progear-spouse-section').attr('hidden', true);
-  };
-
-  var validateEntitlementField = function($input, getEntitlementFn) {
-    // an empty field is never an error
-    if ($input.val() == '')
-      return true;
-
-    // Some kinds of input validation can happen whether or not we know what the entitlement is
-    var weightLbs = parseInt($input.val());
-    if (weightLbs == NaN || weightLbs < 0)
-      return false;
-
-    // If the rank has not been chosen yet, then the entitlement cannot be loaded. Whatever the number is, it's fine for now
-    if (!$rank.val())
-      return true;
-
-    var entitlement = entitlementsJson.find(function(data) { return data.slug == $rank.val(); });
-    var entitlementWeight = getEntitlementFn(entitlement);
-    return weightLbs <= entitlementWeight;
-  };
-
-  var onWeightInput = function(e) {
-    if (validateEntitlementField($('#weight'), getEntitlementWeightSelf))
-      $('#weight-section').removeClass('usa-input-error');
-    else
-      $('#weight-section').addClass('usa-input-error');
-  };
-
-  var onWeightProgearInput = function(e) {
-    if (validateEntitlementField($('#weight_progear'), getEntitlementProgear))
-      $('#progear-section').removeClass('usa-input-error');
-    else
-      $('#progear-section').addClass('usa-input-error');
-  };
-
-  var onWeightProgearSpouseInput = function(e) {
-    if (validateEntitlementField($('#weight_progear_spouse'), getEntitlementProgearSpouse))
-      $('#progear-spouse-section').removeClass('usa-input-error');
-    else
-      $('#progear-spouse-section').addClass('usa-input-error');
-  };
-
-  $rank.on('change', onPersonalInfoChanged);
-  $('#dependents_yes').change(onPersonalInfoChanged);
-  $('#dependents_no').change(onPersonalInfoChanged);
-
-  $('#weight').on('input', onWeightInput);
-  $('#weight_progear').on('input', onWeightProgearInput);
-  $('#weight_progear_spouse').on('input', onWeightProgearSpouseInput);
-
-  var onZipCodeKey = function(evt) {
-    var charCode = (evt.which) ? evt.which : event.keyCode
-    // charCode 8 is backspace, required for Firefox to allow backspace when there are already 5 numbers in the box
-    return evt.target.value.length < 5 || charCode == 8;
-  };
-
-  $('#start').keypress(onZipCodeKey);
-  $('#end').keypress(onZipCodeKey);
 
 })(window, jQuery);

@@ -59,11 +59,11 @@
       <div class="usa-grid-full grid-form-width">
         <div class="usa-width-one-half">
           <%= form.label :start, 'Origin ZIP Code' %>
-          <%= form.number_field :start, { id: :start, minlength: 5, maxlength: 5, inputmode: 'numeric', required: true } %>
+          <%= form.text_field :start, { id: :start, minlength: 5, maxlength: 5, inputmode: 'numeric', pattern: '\d{5}', required: true } %>
         </div>
         <div class="usa-width-one-half">
           <%= form.label :end, 'Destination ZIP Code' %>
-          <%= form.number_field :end, { id: :end, minlength: 5, maxlength: 5, inputmode: 'numeric', required: true } %>
+          <%= form.text_field :end, { id: :end, minlength: 5, maxlength: 5, inputmode: 'numeric', pattern: '\d{5}', required: true } %>
         </div>
       </div>
     </fieldset>
@@ -74,7 +74,7 @@
       <%= form.date_field :date, { id: :date, pattern: '\d\d\d\d-\d\d?-\d\d?', placeholder: 'yyyy-mm-dd', required: true } %>
     </fieldset>
 
-    <%= tag.div id: 'entitlements-json', data: { entitlements_json: @entitlements.to_json } %>
+    <%= tag.div id: 'entitlements-json', data: { entitlements_json: Hash[@entitlements.collect { |e| [e.slug, e] }].to_json } %>
 
     <fieldset>
       <legend>How much, in pounds, do you expect to move without the government's help?</legend>
@@ -93,17 +93,17 @@
         </p>
       </div>
       <div id="progear-section">
-        <%= form.label :weight_progear, 'Estimated ProGear Weight (lbs)' %>
+        <%= form.label :weight_progear, 'Estimated Pro-Gear Weight (lbs)' %>
         <%= form.number_field :weight_progear, { id: :weight_progear, inputmode: 'numeric', required: false } %>
         <p id="progear-allowance-text">
-          Your ProGear allowance is up to <strong><span id="entitlement_progear"></span> lbs</strong>.
+          Your Pro-Gear allowance is up to <strong><span id="entitlement_progear"></span> lbs</strong>.
         </p>
       </div>
       <div id="progear-spouse-section" hidden>
-        <%= form.label :weight_progear_spouse, "Estimated Spouse's ProGear Weight (lbs)" %>
+        <%= form.label :weight_progear_spouse, "Estimated Spouse's Pro-Gear Weight (lbs)" %>
         <%= form.number_field :weight_progear_spouse, { id: :weight_progear_spouse, inputmode: 'numeric', required: false } %>
         <p id="progear-spouse-allowance-text">
-          Your spouse's ProGear allowance is up to <strong><span id="entitlement_progear_spouse"></span> lbs</strong>.
+          Your spouse's Pro-Gear allowance is up to <strong><span id="entitlement_progear_spouse"></span> lbs</strong>.
         </p>
       </div>
     </fieldset>
