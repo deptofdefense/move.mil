@@ -2,16 +2,18 @@
   {
     "name": "Fort Bliss PPPO",
     "shipping_office_name": null,
-    "street_address": "504A Holbrook Rd",
-    "extended_address": null,
-    "locality": "Fort Bliss",
-    "region": "Texas",
-    "region_code": "TX",
-    "postal_code": "79916",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 31.8068821,
-    "longitude": 106.4303306,
+    "location": {
+      "street_address": "504A Holbrook Rd",
+      "extended_address": null,
+      "locality": "Fort Bliss",
+      "region": "Texas",
+      "region_code": "TX",
+      "postal_code": "79916",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 31.8068821,
+      "longitude": 106.4303306
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.bliss.imcom-central.list.dol-transportation@mail.mil",
@@ -42,16 +44,18 @@
   {
     "name": "Fort Stewart - Transportation Office",
     "shipping_office_name": null,
-    "street_address": "55 Pony Soldier Ave",
-    "extended_address": "Bldg. 253, Suite 2003A",
-    "locality": "Fort Stewart",
-    "region": "Georgia",
-    "region_code": "GA",
-    "postal_code": "31314",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 34.865987,
-    "longitude": -111.792003,
+    "location": {
+      "street_address": "55 Pony Soldier Ave",
+      "extended_address": "Bldg. 253, Suite 2003A",
+      "locality": "Fort Stewart",
+      "region": "Georgia",
+      "region_code": "GA",
+      "postal_code": "31314",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 34.865987,
+      "longitude": -111.792003
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.stewart.usag.list.ima-sero@mail.mil",
@@ -81,16 +85,18 @@
   {
     "name": "Personal Property Office",
     "shipping_office_name": null,
-    "street_address": "Coast Guard Island",
-    "extended_address": "Building 3",
-    "locality": "Alameda",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "94501",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 37.779762,
-    "longitude": -122.24776,
+    "location": {
+      "street_address": "Coast Guard Island",
+      "extended_address": "Building 3",
+      "locality": "Alameda",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "94501",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 37.779762,
+      "longitude": -122.24776
+    },
     "email_addresses": [
       {
         "email_address": "d11-dg-m-baseala-ppso@uscg.mil",
@@ -121,16 +127,18 @@
   {
     "name": "Hunter Army Airfield - Transportation Office",
     "shipping_office_name": null,
-    "street_address": "171 Haley Ave",
-    "extended_address": "Bldg 1286 Suite 229",
-    "locality": "Hunter Army Airfield",
-    "region": "Georgia",
-    "region_code": "GA",
-    "postal_code": "31406",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.024131,
-    "longitude": -81.126743,
+    "location": {
+      "street_address": "171 Haley Ave",
+      "extended_address": "Bldg 1286 Suite 229",
+      "locality": "Hunter Army Airfield",
+      "region": "Georgia",
+      "region_code": "GA",
+      "postal_code": "31406",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.024131,
+      "longitude": -81.126743
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.stewart.usag.list.ima-sero@mail.mil",
@@ -160,16 +168,18 @@
   {
     "name": "CPPSO - Carlisle Barracks",
     "shipping_office_name": null,
-    "street_address": "46 Ashburn Dr",
-    "extended_address": "2nd Floor",
-    "locality": "Carlisle",
-    "region": "Pennsylvania",
-    "region_code": "PA",
-    "postal_code": "17013",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 40.203486,
-    "longitude": -77.163067,
+    "location": {
+      "street_address": "46 Ashburn Dr",
+      "extended_address": "2nd Floor",
+      "locality": "Carlisle",
+      "region": "Pennsylvania",
+      "region_code": "PA",
+      "postal_code": "17013",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 40.203486,
+      "longitude": -77.163067
+    },
     "email_addresses": [
       {
         "email_address": "Usarmy.carlisle.imcom-atlantic.mbx.imne-clb-pwt@mail.mil",
@@ -198,16 +208,18 @@
   {
     "name": "Personal Property Petaluma",
     "shipping_office_name": null,
-    "street_address": "599 Tomales Rd",
-    "extended_address": null,
-    "locality": "Petaluma",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "94952",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.256808,
-    "longitude": -122.8000391,
+    "location": {
+      "street_address": "599 Tomales Rd",
+      "extended_address": null,
+      "locality": "Petaluma",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "94952",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.256808,
+      "longitude": -122.8000391
+    },
     "email_addresses": [
       {
         "email_address": "Marilyn.r.reed@uscg.mil",
@@ -236,16 +248,18 @@
   {
     "name": "Customer Service Management Division",
     "shipping_office_name": "JPPSO-MA",
-    "street_address": "Gunston Rd",
-    "extended_address": "Building 1466N",
-    "locality": "Fort Belvoir",
-    "region": "Virginia",
-    "region_code": "VA",
-    "postal_code": "22060",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.689035,
-    "longitude": -77.147046,
+    "location": {
+      "street_address": "Gunston Rd",
+      "extended_address": "Building 1466N",
+      "locality": "Fort Belvoir",
+      "region": "Virginia",
+      "region_code": "VA",
+      "postal_code": "22060",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.689035,
+      "longitude": -77.147046
+    },
     "email_addresses": [
       {
         "email_address": "Usarmy.belvoir.imcom.mbx.jppsowa-ibdelivery@mail.mil",
@@ -280,16 +294,18 @@
   {
     "name": "West Point Military Academy ITO",
     "shipping_office_name": "JPPSO-MA",
-    "street_address": "626 Swift Rd",
-    "extended_address": null,
-    "locality": "West Point",
-    "region": "New York",
-    "region_code": "NY",
-    "postal_code": "10996",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 41.3786743,
-    "longitude": -73.9658356,
+    "location": {
+      "street_address": "626 Swift Rd",
+      "extended_address": null,
+      "locality": "West Point",
+      "region": "New York",
+      "region_code": "NY",
+      "postal_code": "10996",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 41.3786743,
+      "longitude": -73.9658356
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.belvoir.imcom.mbx.jppsowa@mail.mil",
@@ -318,16 +334,18 @@
   {
     "name": "Fort Riley Transportation (KOAT)",
     "shipping_office_name": null,
-    "street_address": "Custer Ave",
-    "extended_address": "Bldg. 215 Rm 133",
-    "locality": "Fort Riley",
-    "region": "Kansas",
-    "region_code": "KS",
-    "postal_code": "66442",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 39.062424,
-    "longitude": -96.783211,
+    "location": {
+      "street_address": "Custer Ave",
+      "extended_address": "Bldg. 215 Rm 133",
+      "locality": "Fort Riley",
+      "region": "Kansas",
+      "region_code": "KS",
+      "postal_code": "66442",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 39.062424,
+      "longitude": -96.783211
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.riley.imcom.mbx.dol@mail.mil",
@@ -354,16 +372,18 @@
   {
     "name": "FORT RUCKER COUNSELING OFFICE",
     "shipping_office_name": null,
-    "street_address": "453 Novosel Street",
-    "extended_address": "Bldg. 5700 Room 270",
-    "locality": "Fort Rucker",
-    "region": "Alabama",
-    "region_code": "AL",
-    "postal_code": "36362",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 31.325556,
-    "longitude": -85.71412,
+    "location": {
+      "street_address": "453 Novosel Street",
+      "extended_address": "Bldg. 5700 Room 270",
+      "locality": "Fort Rucker",
+      "region": "Alabama",
+      "region_code": "AL",
+      "postal_code": "36362",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 31.325556,
+      "longitude": -85.71412
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.rucker.avncoe.mbx.imse-rck-lgt@mail.mil",
@@ -390,16 +410,18 @@
   {
     "name": "PPPO Hood",
     "shipping_office_name": null,
-    "street_address": "18010 TJ Mills",
-    "extended_address": "RM A104",
-    "locality": "Fort Hood",
-    "region": "Texas",
-    "region_code": "TX",
-    "postal_code": "76544",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 31.141976,
-    "longitude": -97.765986,
+    "location": {
+      "street_address": "18010 TJ Mills",
+      "extended_address": "RM A104",
+      "locality": "Fort Hood",
+      "region": "Texas",
+      "region_code": "TX",
+      "postal_code": "76544",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 31.141976,
+      "longitude": -97.765986
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.hood.usag.mbx.dol-ppopns@mail.mil",
@@ -437,16 +459,18 @@
   {
     "name": "PPPO Fort Leavenworth",
     "shipping_office_name": "Joint Personal Property Shipping Office Northwest",
-    "street_address": "450 Pope Ave",
-    "extended_address": "Bldg 168",
-    "locality": "Fort Leavenworth",
-    "region": "Kansas",
-    "region_code": "KS",
-    "postal_code": "66027",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 39.35276,
-    "longitude": -94.922007,
+    "location": {
+      "street_address": "450 Pope Ave",
+      "extended_address": "Bldg 168",
+      "locality": "Fort Leavenworth",
+      "region": "Kansas",
+      "region_code": "KS",
+      "postal_code": "66027",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 39.35276,
+      "longitude": -94.922007
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.leavenworth.imcom-central.mbx.ppso@mail.mil",
@@ -476,16 +500,18 @@
   {
     "name": "Fort Leonard Wood, Personal Property Processing Office",
     "shipping_office_name": "Joint Personal Property Shipping Office Northwest",
-    "street_address": "13486 Replacement Ave",
-    "extended_address": "Building 470, Suite 1222",
-    "locality": "Fort Leonard Wood",
-    "region": "Missouri",
-    "region_code": "MO",
-    "postal_code": "65473",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 37.761398,
-    "longitude": -92.11958,
+    "location": {
+      "street_address": "13486 Replacement Ave",
+      "extended_address": "Building 470, Suite 1222",
+      "locality": "Fort Leonard Wood",
+      "region": "Missouri",
+      "region_code": "MO",
+      "postal_code": "65473",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 37.761398,
+      "longitude": -92.11958
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.leonardwood.usag.mbx.dolhhg@mail.mil",
@@ -515,16 +541,18 @@
   {
     "name": "DMO MCAS Yuma AZ",
     "shipping_office_name": "JPPSO SW",
-    "street_address": "Spears St",
-    "extended_address": "Bldg 328 2nd Floor",
-    "locality": "Yuma",
-    "region": "Arizona",
-    "region_code": "AZ",
-    "postal_code": "85369",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.6616,
-    "longitude": -114.5832,
+    "location": {
+      "street_address": "Spears St",
+      "extended_address": "Bldg 328 2nd Floor",
+      "locality": "Yuma",
+      "region": "Arizona",
+      "region_code": "AZ",
+      "postal_code": "85369",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.6616,
+      "longitude": -114.5832
+    },
     "email_addresses": [
       {
         "email_address": "DMO_Yuma@usmc.mil",
@@ -553,16 +581,18 @@
   {
     "name": "CG BASE KETCHIKAN",
     "shipping_office_name": null,
-    "street_address": "1300 Stedman St",
-    "extended_address": null,
-    "locality": "Ketchikan",
-    "region": "Alaska",
-    "region_code": "AK",
-    "postal_code": "99901",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 55.332775,
-    "longitude": -131.624268,
+    "location": {
+      "street_address": "1300 Stedman St",
+      "extended_address": null,
+      "locality": "Ketchikan",
+      "region": "Alaska",
+      "region_code": "AK",
+      "postal_code": "99901",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 55.332775,
+      "longitude": -131.624268
+    },
     "email_addresses": [
       {
         "email_address": "d17-smb-trans@uscg.mil",
@@ -587,16 +617,18 @@
   {
     "name": "CG BSU, KODIAK, AK",
     "shipping_office_name": null,
-    "street_address": "Cape Sarachief Dr",
-    "extended_address": "Bldg N-38",
-    "locality": "Kodiak",
-    "region": "Alaska",
-    "region_code": "AK",
-    "postal_code": "99619",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 57.789967,
-    "longitude": -152.407539,
+    "location": {
+      "street_address": "Cape Sarachief Dr",
+      "extended_address": "Bldg N-38",
+      "locality": "Kodiak",
+      "region": "Alaska",
+      "region_code": "AK",
+      "postal_code": "99619",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 57.789967,
+      "longitude": -152.407539
+    },
     "email_addresses": [
       {
         "email_address": "d-17-pf-kodiaktransportation@uscg.mil",
@@ -621,16 +653,18 @@
   {
     "name": "PPPO Fort Hamilton",
     "shipping_office_name": "JPPSO-MA",
-    "street_address": "114 White Ave",
-    "extended_address": "Room 114",
-    "locality": "Fort Hamilton",
-    "region": "New York",
-    "region_code": "NY",
-    "postal_code": "11252",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 40.612179,
-    "longitude": -74.02745,
+    "location": {
+      "street_address": "114 White Ave",
+      "extended_address": "Room 114",
+      "locality": "Fort Hamilton",
+      "region": "New York",
+      "region_code": "NY",
+      "postal_code": "11252",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 40.612179,
+      "longitude": -74.02745
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.hamilton.usag.mbx.ppso-org-box@mailmil",
@@ -666,16 +700,18 @@
   {
     "name": "LRC, Installation Transportation Office",
     "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
-    "street_address": "3433 Snooper Rd",
-    "extended_address": null,
-    "locality": "Redstone Arsenal",
-    "region": "Alabama",
-    "region_code": "AL",
-    "postal_code": "35898",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 34.6831973,
-    "longitude": 86.6352498,
+    "location": {
+      "street_address": "3433 Snooper Rd",
+      "extended_address": null,
+      "locality": "Redstone Arsenal",
+      "region": "Alabama",
+      "region_code": "AL",
+      "postal_code": "35898",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 34.6831973,
+      "longitude": 86.6352498
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.redstone.asc.mbx.ppcig@mail.mil",
@@ -706,16 +742,18 @@
   {
     "name": "Base Cape Cod",
     "shipping_office_name": "JPPSO-NE (DET 2)",
-    "street_address": "3159 Herbert Rd",
-    "extended_address": null,
-    "locality": "Buzzards Bay",
-    "region": "Massachusetts",
-    "region_code": "MA",
-    "postal_code": "02542",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 41.668142,
-    "longitude": -70.534162,
+    "location": {
+      "street_address": "3159 Herbert Rd",
+      "extended_address": null,
+      "locality": "Buzzards Bay",
+      "region": "Massachusetts",
+      "region_code": "MA",
+      "postal_code": "02542",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 41.668142,
+      "longitude": -70.534162
+    },
     "email_addresses": [
       {
         "email_address": "DO1-DG-BaseCapeCod-AdminDept@uscg.mil",
@@ -740,16 +778,18 @@
   {
     "name": "Presidio of Monterey",
     "shipping_office_name": "JPPSO SW",
-    "street_address": "1712 Private Bolio Rd",
-    "extended_address": "Building 517",
-    "locality": "Monterey",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "93944",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 36.607088,
-    "longitude": 121.911078,
+    "location": {
+      "street_address": "1712 Private Bolio Rd",
+      "extended_address": "Building 517",
+      "locality": "Monterey",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "93944",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 36.607088,
+      "longitude": 121.911078
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.pom.106-sig-bde.list.pres-msgto@mail.mil",
@@ -785,16 +825,18 @@
   {
     "name": "Army Sustainment Command DTA Warren MI",
     "shipping_office_name": null,
-    "street_address": "6501 E. 11 Mile Rd",
-    "extended_address": "Mailstop 180",
-    "locality": "Warren",
-    "region": "Michigan",
-    "region_code": "MI",
-    "postal_code": "48397",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 42.49175,
-    "longitude": -83.038526,
+    "location": {
+      "street_address": "6501 E. 11 Mile Rd",
+      "extended_address": "Mailstop 180",
+      "locality": "Warren",
+      "region": "Michigan",
+      "region_code": "MI",
+      "postal_code": "48397",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 42.49175,
+      "longitude": -83.038526
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.detroit.asc.mbx.log-readiness-ctr-personal-property-svcs@mail.mil",
@@ -828,16 +870,18 @@
   {
     "name": "Joint Base Charleston",
     "shipping_office_name": "JPPSO-NE (DET 2)",
-    "street_address": "1000 Quality Cir",
-    "extended_address": "Bldg 36",
-    "locality": "Goose Creek",
-    "region": "South Carolina",
-    "region_code": "SC",
-    "postal_code": "29445",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.953477,
-    "longitude": -79.9378,
+    "location": {
+      "street_address": "1000 Quality Cir",
+      "extended_address": "Bldg 36",
+      "locality": "Goose Creek",
+      "region": "South Carolina",
+      "region_code": "SC",
+      "postal_code": "29445",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.953477,
+      "longitude": -79.9378
+    },
     "email_addresses": [
       {
         "email_address": "437aps.trot.nwspersonalpropert@us.af.mil",
@@ -867,16 +911,18 @@
   {
     "name": "PPPO, Fort Benning, GA",
     "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
-    "street_address": "6650 Meloy Dr",
-    "extended_address": "Building 6 Room 105",
-    "locality": "Fort Benning",
-    "region": "Georgia",
-    "region_code": "GA",
-    "postal_code": "31905",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.353212,
-    "longitude": -84.969571,
+    "location": {
+      "street_address": "6650 Meloy Dr",
+      "extended_address": "Building 6 Room 105",
+      "locality": "Fort Benning",
+      "region": "Georgia",
+      "region_code": "GA",
+      "postal_code": "31905",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.353212,
+      "longitude": -84.969571
+    },
     "email_addresses": [
       {
         "email_address": "Curtis.austin3.ctr@mail.mil",
@@ -903,16 +949,18 @@
   {
     "name": "Seymour Johnson AFB, NC",
     "shipping_office_name": "JPPSO-NE (DET 2)",
-    "street_address": "1280 Humphreys St",
-    "extended_address": null,
-    "locality": "Seymour Johnson AFB",
-    "region": "North Carolina",
-    "region_code": "NC",
-    "postal_code": "27531",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 35.349454,
-    "longitude": -77.968143,
+    "location": {
+      "street_address": "1280 Humphreys St",
+      "extended_address": null,
+      "locality": "Seymour Johnson AFB",
+      "region": "North Carolina",
+      "region_code": "NC",
+      "postal_code": "27531",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.349454,
+      "longitude": -77.968143
+    },
     "email_addresses": [
       {
         "email_address": "4LRS.TMO@us.af.mil",
@@ -943,16 +991,18 @@
   {
     "name": "Beale AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "17852 16th St",
-    "extended_address": "Bld 25216",
-    "locality": "Beale Air Force Base",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "95903",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 34.392738,
-    "longitude": -103.323707,
+    "location": {
+      "street_address": "17852 16th St",
+      "extended_address": "Bld 25216",
+      "locality": "Beale Air Force Base",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "95903",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 34.392738,
+      "longitude": -103.323707
+    },
     "email_addresses": [
       {
         "email_address": "personalproperty@us.af.mil",
@@ -983,16 +1033,18 @@
   {
     "name": "Cannon AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "125 E. Cochran Ave",
-    "extended_address": null,
-    "locality": "Cannon Air Force Base",
-    "region": "New Mexico",
-    "region_code": "NM",
-    "postal_code": "88103",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 34.392738,
-    "longitude": -103.323707,
+    "location": {
+      "street_address": "125 E. Cochran Ave",
+      "extended_address": null,
+      "locality": "Cannon Air Force Base",
+      "region": "New Mexico",
+      "region_code": "NM",
+      "postal_code": "88103",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 34.392738,
+      "longitude": -103.323707
+    },
     "email_addresses": [
       {
         "email_address": "27solrs.lgrtp@afsoc.af.mil",
@@ -1023,16 +1075,18 @@
   {
     "name": "Fort Gordon Transportation Office",
     "shipping_office_name": null,
-    "street_address": "337 Chamberlain Ave",
-    "extended_address": "Bldg 33720 Room 111A",
-    "locality": "Fort Gordon",
-    "region": "Georgia",
-    "region_code": "GA",
-    "postal_code": "30905",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 33.425376,
-    "longitude": -82.145028,
+    "location": {
+      "street_address": "337 Chamberlain Ave",
+      "extended_address": "Bldg 33720 Room 111A",
+      "locality": "Fort Gordon",
+      "region": "Georgia",
+      "region_code": "GA",
+      "postal_code": "30905",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 33.425376,
+      "longitude": -82.145028
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.gordon.imcom.mbx.akima-transportation@mail.mil",
@@ -1062,16 +1116,18 @@
   {
     "name": "Davis Monthan AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "3515 S Fifth St",
-    "extended_address": null,
-    "locality": "Davis-Monthan AFB",
-    "region": "Arizona",
-    "region_code": "AZ",
-    "postal_code": "85707",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.18136,
-    "longitude": -110.880004,
+    "location": {
+      "street_address": "3515 S Fifth St",
+      "extended_address": null,
+      "locality": "Davis-Monthan AFB",
+      "region": "Arizona",
+      "region_code": "AZ",
+      "postal_code": "85707",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.18136,
+      "longitude": -110.880004
+    },
     "email_addresses": [
       {
         "email_address": "tmo.hhgs@us.af.mil",
@@ -1101,16 +1157,18 @@
   {
     "name": "Fairchild AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "400 South Gate 35",
-    "extended_address": "Bldg 2045, Rm 133",
-    "locality": "nFairchild AFB",
-    "region": "Washington",
-    "region_code": "WA",
-    "postal_code": "99011",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 47.618263,
-    "longitude": -117.643855,
+    "location": {
+      "street_address": "400 South Gate 35",
+      "extended_address": "Bldg 2045, Rm 133",
+      "locality": "nFairchild AFB",
+      "region": "Washington",
+      "region_code": "WA",
+      "postal_code": "99011",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 47.618263,
+      "longitude": -117.643855
+    },
     "email_addresses": [
       {
         "email_address": "92lrs.lgrdf@us.af.mil",
@@ -1141,16 +1199,18 @@
   {
     "name": "Personal Property Shipping Office Fort Sill",
     "shipping_office_name": "Joint Personal Property Shipping Office Northwest",
-    "street_address": "4700 Mow Way Rd",
-    "extended_address": "Room 110",
-    "locality": "Fort Sill",
-    "region": "Oklahoma",
-    "region_code": "OK",
-    "postal_code": "73503",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 34.647966,
-    "longitude": -98.412305,
+    "location": {
+      "street_address": "4700 Mow Way Rd",
+      "extended_address": "Room 110",
+      "locality": "Fort Sill",
+      "region": "Oklahoma",
+      "region_code": "OK",
+      "postal_code": "73503",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 34.647966,
+      "longitude": -98.412305
+    },
     "email_addresses": [
       {
         "email_address": "nicole.l.wood6.ctr@mail.mil",
@@ -1181,16 +1241,18 @@
   {
     "name": "Grand Forks",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "226 Steen Blvd",
-    "extended_address": null,
-    "locality": "Grand Forks Air Force Base",
-    "region": "North Dakota",
-    "region_code": "ND",
-    "postal_code": "58205",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 47.948319,
-    "longitude": -97.373269,
+    "location": {
+      "street_address": "226 Steen Blvd",
+      "extended_address": null,
+      "locality": "Grand Forks Air Force Base",
+      "region": "North Dakota",
+      "region_code": "ND",
+      "postal_code": "58205",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 47.948319,
+      "longitude": -97.373269
+    },
     "email_addresses": [
       {
         "email_address": "319LRS.LGRTTMO@us.af.mil",
@@ -1221,16 +1283,18 @@
   {
     "name": "Personal Property Processing Office Fort Leavenworth",
     "shipping_office_name": "Joint Personal Property Shipping Office Northwest",
-    "street_address": "450 Pope Ave",
-    "extended_address": null,
-    "locality": "Fort Leavenworth",
-    "region": "Kansas",
-    "region_code": "KS",
-    "postal_code": "66027",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 39.352917,
-    "longitude": -94.924572,
+    "location": {
+      "street_address": "450 Pope Ave",
+      "extended_address": null,
+      "locality": "Fort Leavenworth",
+      "region": "Kansas",
+      "region_code": "KS",
+      "postal_code": "66027",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 39.352917,
+      "longitude": -94.924572
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.leavenworth.imcom-central.mbx.ppso@mail.mil",
@@ -1264,16 +1328,18 @@
   {
     "name": "McConnell AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "53155 Kansas St",
-    "extended_address": "Suite 103",
-    "locality": "McConnell Air Force Base",
-    "region": "Kansas",
-    "region_code": "KS",
-    "postal_code": "67221",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 37.632733,
-    "longitude": -97.251,
+    "location": {
+      "street_address": "53155 Kansas St",
+      "extended_address": "Suite 103",
+      "locality": "McConnell Air Force Base",
+      "region": "Kansas",
+      "region_code": "KS",
+      "postal_code": "67221",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 37.632733,
+      "longitude": -97.251
+    },
     "email_addresses": [
       {
         "email_address": "22.lrs.lgrt@us.af.mil",
@@ -1303,16 +1369,18 @@
   {
     "name": "Personal Property Processing Office Fort Leonard Wood",
     "shipping_office_name": "Joint Personal Property Shipping Office Northwest",
-    "street_address": "140 Replacement Ave",
-    "extended_address": "STE 1222",
-    "locality": "Fort Leonard Wood",
-    "region": "Missouri",
-    "region_code": "MO",
-    "postal_code": "65473",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 37.761398,
-    "longitude": -92.11958,
+    "location": {
+      "street_address": "140 Replacement Ave",
+      "extended_address": "STE 1222",
+      "locality": "Fort Leonard Wood",
+      "region": "Missouri",
+      "region_code": "MO",
+      "postal_code": "65473",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 37.761398,
+      "longitude": -92.11958
+    },
     "email_addresses": [
       {
         "email_address": "USARMY.LEONARDWOOD.USAG.MBX.DOLHHG@MAIL.MIL",
@@ -1342,16 +1410,18 @@
   {
     "name": "Base Ketchikan",
     "shipping_office_name": null,
-    "street_address": "1300 Stedman",
-    "extended_address": null,
-    "locality": "Ketchikan",
-    "region": "Alaska",
-    "region_code": "AK",
-    "postal_code": "99901",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 55.332775,
-    "longitude": -131.624268,
+    "location": {
+      "street_address": "1300 Stedman",
+      "extended_address": null,
+      "locality": "Ketchikan",
+      "region": "Alaska",
+      "region_code": "AK",
+      "postal_code": "99901",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 55.332775,
+      "longitude": -131.624268
+    },
     "email_addresses": [
       {
         "email_address": "D17-SMB-TRANS@USCG.MIL",
@@ -1382,16 +1452,18 @@
   {
     "name": "Personal Property Processing Office McChord Field, WA",
     "shipping_office_name": "Joint Personal Property Shipping Office Northwest",
-    "street_address": "100 Col Joe Jackson Blvd",
-    "extended_address": null,
-    "locality": "Joint Base Lewis-McChord",
-    "region": "Washington",
-    "region_code": "WA",
-    "postal_code": "98438",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 47.133562,
-    "longitude": -122.485854,
+    "location": {
+      "street_address": "100 Col Joe Jackson Blvd",
+      "extended_address": null,
+      "locality": "Joint Base Lewis-McChord",
+      "region": "Washington",
+      "region_code": "WA",
+      "postal_code": "98438",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 47.133562,
+      "longitude": -122.485854
+    },
     "email_addresses": [
       {
         "email_address": "627lrs.tmo@us.af.mil",
@@ -1429,16 +1501,18 @@
   {
     "name": "Personal Property Processing Office Lewis-Main",
     "shipping_office_name": "Joint Personal Property Shipping Office Northwest",
-    "street_address": "2150 Liggett Ave",
-    "extended_address": null,
-    "locality": "Joint Base Lewis-McChord",
-    "region": "Washington",
-    "region_code": "WA",
-    "postal_code": "98433",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 47.08802,
-    "longitude": -122.593356,
+    "location": {
+      "street_address": "2150 Liggett Ave",
+      "extended_address": null,
+      "locality": "Joint Base Lewis-McChord",
+      "region": "Washington",
+      "region_code": "WA",
+      "postal_code": "98433",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 47.08802,
+      "longitude": -122.593356
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.jblm.404-afsb-lrc.mbx.pppo-lewis@mail.mil",
@@ -1468,16 +1542,18 @@
   {
     "name": "Fort Gordon Transportation Office",
     "shipping_office_name": null,
-    "street_address": "307 Chamberlain Ave",
-    "extended_address": "Building 33720, Room 111A",
-    "locality": "Fort Gordon",
-    "region": "Georgia",
-    "region_code": "GA",
-    "postal_code": "30905",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 33.425376,
-    "longitude": -82.145028,
+    "location": {
+      "street_address": "307 Chamberlain Ave",
+      "extended_address": "Building 33720, Room 111A",
+      "locality": "Fort Gordon",
+      "region": "Georgia",
+      "region_code": "GA",
+      "postal_code": "30905",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 33.425376,
+      "longitude": -82.145028
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.gordon.imcom.mbx.akima-transportation@mail.mil",
@@ -1507,16 +1583,18 @@
   {
     "name": "Personal Property Processing Office Fort Wainwright, AK",
     "shipping_office_name": "Joint Personal Property Shipping Office Northwest",
-    "street_address": "1060 Gaffney Blvd",
-    "extended_address": "#7000",
-    "locality": "Fort Wainwright",
-    "region": "Alaska",
-    "region_code": "AK",
-    "postal_code": "99703",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 64.841588,
-    "longitude": -147.61007,
+    "location": {
+      "street_address": "1060 Gaffney Blvd",
+      "extended_address": "#7000",
+      "locality": "Fort Wainwright",
+      "region": "Alaska",
+      "region_code": "AK",
+      "postal_code": "99703",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 64.841588,
+      "longitude": -147.61007
+    },
     "email_addresses": [
       {
         "email_address": "Jeffery.a.johnson88.civ@mail.mil",
@@ -1547,16 +1625,18 @@
   {
     "name": "Transportation Personal Property",
     "shipping_office_name": "Joint Personal Property Shipping Office Northwest",
-    "street_address": "110 Mo-way Road",
-    "extended_address": "Building 4700 Room",
-    "locality": "Fort Sill",
-    "region": "Oklahoma",
-    "region_code": "OK",
-    "postal_code": "73503",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 34.647991,
-    "longitude": -98.412426,
+    "location": {
+      "street_address": "110 Mo-way Road",
+      "extended_address": "Building 4700 Room",
+      "locality": "Fort Sill",
+      "region": "Oklahoma",
+      "region_code": "OK",
+      "postal_code": "73503",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 34.647991,
+      "longitude": -98.412426
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.jblm.usamc.mbx.jppsonw-cs@mail.mil",
@@ -1585,16 +1665,18 @@
   {
     "name": "USCG",
     "shipping_office_name": null,
-    "street_address": "215 Drum Rd",
-    "extended_address": null,
-    "locality": "Staten Island",
-    "region": "New York",
-    "region_code": "NY",
-    "postal_code": "10305",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 40.604283,
-    "longitude": -74.059913,
+    "location": {
+      "street_address": "215 Drum Rd",
+      "extended_address": null,
+      "locality": "Staten Island",
+      "region": "New York",
+      "region_code": "NY",
+      "postal_code": "10305",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 40.604283,
+      "longitude": -74.059913
+    },
     "email_addresses": [
       {
         "email_address": "d01-SG-SecNY-Housing@uscg.mil",
@@ -1619,16 +1701,18 @@
   {
     "name": "Personal Property Processing Office Fort Greely, AK",
     "shipping_office_name": "Joint Personal Property Shipping Office Northwest",
-    "street_address": "First Ave",
-    "extended_address": "Building 601",
-    "locality": "Fort Greely",
-    "region": "Alaska",
-    "region_code": "AK",
-    "postal_code": "99731",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 63.952598,
-    "longitude": -145.747393,
+    "location": {
+      "street_address": "First Ave",
+      "extended_address": "Building 601",
+      "locality": "Fort Greely",
+      "region": "Alaska",
+      "region_code": "AK",
+      "postal_code": "99731",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 63.952598,
+      "longitude": -145.747393
+    },
     "email_addresses": [
       {
         "email_address": "dana.t.dillon3.civ@mail.mil",
@@ -1656,16 +1740,18 @@
   {
     "name": "PPPO FORT BENNING, GA",
     "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
-    "street_address": "6650 Meloy Hall",
-    "extended_address": "Building 6, Room 105",
-    "locality": "Fort Benning",
-    "region": "Georgia",
-    "region_code": "GA",
-    "postal_code": "31905",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.353212,
-    "longitude": -84.969571,
+    "location": {
+      "street_address": "6650 Meloy Hall",
+      "extended_address": "Building 6, Room 105",
+      "locality": "Fort Benning",
+      "region": "Georgia",
+      "region_code": "GA",
+      "postal_code": "31905",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.353212,
+      "longitude": -84.969571
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.benning.imcom.mbx.dol-trans@mail.mil",
@@ -1697,16 +1783,18 @@
   {
     "name": "Fort Drum Personal Property Shipping Office",
     "shipping_office_name": null,
-    "street_address": "10720 Belvedere Blvd",
-    "extended_address": "Rm #A2-42",
-    "locality": "Fort Drum",
-    "region": "New York",
-    "region_code": "NY",
-    "postal_code": "13602",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 44.045676,
-    "longitude": 75.803918,
+    "location": {
+      "street_address": "10720 Belvedere Blvd",
+      "extended_address": "Rm #A2-42",
+      "locality": "Fort Drum",
+      "region": "New York",
+      "region_code": "NY",
+      "postal_code": "13602",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 44.045676,
+      "longitude": 75.803918
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.drum.406-afsb-lrc.mbx.dol-hhg-qc@mail.mil\nusarmy.drum.406-afsb-lrc.mbx.dol-ppso@mail.mil\nusarmy.drum.406-afsb-lrc.mbx.ppso-cso@mail.mil",
@@ -1737,16 +1825,18 @@
   {
     "name": "LRC Fort Knox",
     "shipping_office_name": null,
-    "street_address": "25 W. Chaffee Ave",
-    "extended_address": "Bldg. 1384, 2nd Floor",
-    "locality": "Fort Knox",
-    "region": "Kentucky",
-    "region_code": "KY",
-    "postal_code": "40121",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 37.894878,
-    "longitude": -85.95762,
+    "location": {
+      "street_address": "25 W. Chaffee Ave",
+      "extended_address": "Bldg. 1384, 2nd Floor",
+      "locality": "Fort Knox",
+      "region": "Kentucky",
+      "region_code": "KY",
+      "postal_code": "40121",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 37.894878,
+      "longitude": -85.95762
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.knox.407-afsb.mbx.lrc-hhg@mail.mil",
@@ -1777,16 +1867,18 @@
   {
     "name": "CPPSO - Carlilse Barracks, PA",
     "shipping_office_name": null,
-    "street_address": "46 Ashburn Dr",
-    "extended_address": "2nd Floor",
-    "locality": "Carlisle",
-    "region": "Pennsylvania",
-    "region_code": "PA",
-    "postal_code": "17013",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 40.12,
-    "longitude": 77.1,
+    "location": {
+      "street_address": "46 Ashburn Dr",
+      "extended_address": "2nd Floor",
+      "locality": "Carlisle",
+      "region": "Pennsylvania",
+      "region_code": "PA",
+      "postal_code": "17013",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 40.12,
+      "longitude": 77.1
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.carlisle.imcom-atlantic.mbx.imne-clb-pwt@mail.mil",
@@ -1815,16 +1907,18 @@
   {
     "name": "PPO Seal Beach NWS, CA",
     "shipping_office_name": "JPPSO SW",
-    "street_address": "800 Seal Beach Blvd",
-    "extended_address": "Bldg 239",
-    "locality": "Seal Beach",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "90740",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 33.743288,
-    "longitude": 118.090738,
+    "location": {
+      "street_address": "800 Seal Beach Blvd",
+      "extended_address": "Bldg 239",
+      "locality": "Seal Beach",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "90740",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 33.743288,
+      "longitude": 118.090738
+    },
     "email_addresses": [
       {
         "email_address": "flcsd.nwssb.ppso@navy.mil",
@@ -1852,16 +1946,18 @@
   {
     "name": "Fort Bragg",
     "shipping_office_name": null,
-    "street_address": "2843 Normandy Dr",
-    "extended_address": "Bldg 4",
-    "locality": "Fort Bragg",
-    "region": "North Carolina",
-    "region_code": "NC",
-    "postal_code": "28310",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 35.1387,
-    "longitude": -79.0008,
+    "location": {
+      "street_address": "2843 Normandy Dr",
+      "extended_address": "Bldg 4",
+      "locality": "Fort Bragg",
+      "region": "North Carolina",
+      "region_code": "NC",
+      "postal_code": "28310",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.1387,
+      "longitude": -79.0008
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.bragg.asfb-406.list.lrc-ppso@mail.mil",
@@ -1899,16 +1995,18 @@
   {
     "name": "Dover AFB",
     "shipping_office_name": "JPPSO-NE (DET 2)",
-    "street_address": "550 Atlantic St",
-    "extended_address": null,
-    "locality": "Dover AFB",
-    "region": "Delaware",
-    "region_code": "DE",
-    "postal_code": "19902",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 39.12773,
-    "longitude": -75.468435,
+    "location": {
+      "street_address": "550 Atlantic St",
+      "extended_address": null,
+      "locality": "Dover AFB",
+      "region": "Delaware",
+      "region_code": "DE",
+      "postal_code": "19902",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 39.12773,
+      "longitude": -75.468435
+    },
     "email_addresses": [
       {
         "email_address": "kenneth.seronick@us.af.mil",
@@ -1938,16 +2036,18 @@
   {
     "name": "Joint Base Charleston (Naval Weapon Station)",
     "shipping_office_name": "JPPSO-NE (DET 2)",
-    "street_address": "1000 Quality Cir",
-    "extended_address": "Bldg 36",
-    "locality": "Goose Creek",
-    "region": "South Carolina",
-    "region_code": "SC",
-    "postal_code": "29445",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.953477,
-    "longitude": -79.9378,
+    "location": {
+      "street_address": "1000 Quality Cir",
+      "extended_address": "Bldg 36",
+      "locality": "Goose Creek",
+      "region": "South Carolina",
+      "region_code": "SC",
+      "postal_code": "29445",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.953477,
+      "longitude": -79.9378
+    },
     "email_addresses": [
       {
         "email_address": "437aps.trot.nwspersonalpropert@us.af.mil",
@@ -1977,16 +2077,18 @@
   {
     "name": "Scott AFB",
     "shipping_office_name": "JPPSO-NE (DET 2)",
-    "street_address": "215 Heritage Dr",
-    "extended_address": "Room D-100",
-    "locality": "Scott Air Force Base",
-    "region": "Illinois",
-    "region_code": "IL",
-    "postal_code": "62225",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.541591,
-    "longitude": -89.85501,
+    "location": {
+      "street_address": "215 Heritage Dr",
+      "extended_address": "Room D-100",
+      "locality": "Scott Air Force Base",
+      "region": "Illinois",
+      "region_code": "IL",
+      "postal_code": "62225",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.541591,
+      "longitude": -89.85501
+    },
     "email_addresses": [
       {
         "email_address": "scott.tmo.outbound-02@us.af.mil",
@@ -2022,16 +2124,18 @@
   {
     "name": "Cannon AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "125 E. Cochran Ave",
-    "extended_address": null,
-    "locality": "Cannon AFB",
-    "region": "New Mexico",
-    "region_code": "NM",
-    "postal_code": "88103",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 34.392738,
-    "longitude": -103.323707,
+    "location": {
+      "street_address": "125 E. Cochran Ave",
+      "extended_address": null,
+      "locality": "Cannon AFB",
+      "region": "New Mexico",
+      "region_code": "NM",
+      "postal_code": "88103",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 34.392738,
+      "longitude": -103.323707
+    },
     "email_addresses": [
       {
         "email_address": "27solrs.lgrtp@afsoc.af.mil",
@@ -2062,16 +2166,18 @@
   {
     "name": "Davis Monthan AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "3515 S Fifth St",
-    "extended_address": null,
-    "locality": "Davis-Monthan AFB",
-    "region": "Arizona",
-    "region_code": "AZ",
-    "postal_code": "85707",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.18136,
-    "longitude": -110.880004,
+    "location": {
+      "street_address": "3515 S Fifth St",
+      "extended_address": null,
+      "locality": "Davis-Monthan AFB",
+      "region": "Arizona",
+      "region_code": "AZ",
+      "postal_code": "85707",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.18136,
+      "longitude": -110.880004
+    },
     "email_addresses": [
       {
         "email_address": "tmo.hhgs@us.af.mil",
@@ -2101,16 +2207,18 @@
   {
     "name": "Ellsworth AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "1924 Lemay Blvd",
-    "extended_address": null,
-    "locality": "Ellsworth AFB",
-    "region": "South Dakota",
-    "region_code": "SD",
-    "postal_code": "57706",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 44.148476,
-    "longitude": -103.092295,
+    "location": {
+      "street_address": "1924 Lemay Blvd",
+      "extended_address": null,
+      "locality": "Ellsworth AFB",
+      "region": "South Dakota",
+      "region_code": "SD",
+      "postal_code": "57706",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 44.148476,
+      "longitude": -103.092295
+    },
     "email_addresses": [
       {
         "email_address": "28LRS.TMOPersonalPro@us.af.mil",
@@ -2140,16 +2248,18 @@
   {
     "name": "Kirkland AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "20245 4th St",
-    "extended_address": null,
-    "locality": "Albuquerque",
-    "region": "New Mexico",
-    "region_code": "NM",
-    "postal_code": "87117",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 35.054319,
-    "longitude": -106.552153,
+    "location": {
+      "street_address": "20245 4th St",
+      "extended_address": null,
+      "locality": "Albuquerque",
+      "region": "New Mexico",
+      "region_code": "NM",
+      "postal_code": "87117",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.054319,
+      "longitude": -106.552153
+    },
     "email_addresses": [
       {
         "email_address": "377lrs.tmo-02@us.af.mil",
@@ -2180,16 +2290,18 @@
   {
     "name": "McConnell AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "53155 Kansas St",
-    "extended_address": "Suite 103",
-    "locality": "McConnell Air Force Base",
-    "region": "Kansas",
-    "region_code": "KS",
-    "postal_code": "67221",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 37.632733,
-    "longitude": -97.251,
+    "location": {
+      "street_address": "53155 Kansas St",
+      "extended_address": "Suite 103",
+      "locality": "McConnell Air Force Base",
+      "region": "Kansas",
+      "region_code": "KS",
+      "postal_code": "67221",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 37.632733,
+      "longitude": -97.251
+    },
     "email_addresses": [
       {
         "email_address": "22.lrs.lgrt@us.af.mil",
@@ -2220,16 +2332,18 @@
   {
     "name": "PPSO Puget Sound Household Goods",
     "shipping_office_name": null,
-    "street_address": "2720 Ohio St",
-    "extended_address": "Bangor Plaza Housing Office",
-    "locality": "Silverdale",
-    "region": "Washington",
-    "region_code": "WA",
-    "postal_code": "98315",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 47.689794,
-    "longitude": -122.70968,
+    "location": {
+      "street_address": "2720 Ohio St",
+      "extended_address": "Bangor Plaza Housing Office",
+      "locality": "Silverdale",
+      "region": "Washington",
+      "region_code": "WA",
+      "postal_code": "98315",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 47.689794,
+      "longitude": -122.70968
+    },
     "email_addresses": [
       {
         "email_address": "hhg_ps_counseling@navy.mil",
@@ -2254,16 +2368,18 @@
   {
     "name": "PPSO Key West",
     "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
-    "street_address": "811 Sigsbee Rd",
-    "extended_address": "Bldg V-4059 room 1",
-    "locality": "Key West",
-    "region": "Florida",
-    "region_code": "FL",
-    "postal_code": "33040",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 24.578382,
-    "longitude": 81.775788,
+    "location": {
+      "street_address": "811 Sigsbee Rd",
+      "extended_address": "Bldg V-4059 room 1",
+      "locality": "Key West",
+      "region": "Florida",
+      "region_code": "FL",
+      "postal_code": "33040",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 24.578382,
+      "longitude": 81.775788
+    },
     "email_addresses": [
       {
         "email_address": "dawn.kissel@navy.mil",
@@ -2295,16 +2411,18 @@
   {
     "name": "Rock Island Arsenal Transportation Office",
     "shipping_office_name": "JPPSO-NE (DET 2)",
-    "street_address": "1 Rock Island Arsenal",
-    "extended_address": "ASPA-LRI Bldg. 102 1st Fl. NE Wing",
-    "locality": "Rock Island",
-    "region": "Illinois",
-    "region_code": "IL",
-    "postal_code": "61299",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 41.517267,
-    "longitude": 90.546465,
+    "location": {
+      "street_address": "1 Rock Island Arsenal",
+      "extended_address": "ASPA-LRI Bldg. 102 1st Fl. NE Wing",
+      "locality": "Rock Island",
+      "region": "Illinois",
+      "region_code": "IL",
+      "postal_code": "61299",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 41.517267,
+      "longitude": 90.546465
+    },
     "email_addresses": [
       {
         "email_address": "deshonda.g.davislocke.civ@mail.mil",
@@ -2341,16 +2459,18 @@
   {
     "name": "NAS Pensacola PPO",
     "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
-    "street_address": "121 Cuddahy St",
-    "extended_address": "Bldg 680 Suite C",
-    "locality": "NAS Pensacola",
-    "region": "Florida",
-    "region_code": "FL",
-    "postal_code": "32508",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 30.34932423,
-    "longitude": -87.27300024,
+    "location": {
+      "street_address": "121 Cuddahy St",
+      "extended_address": "Bldg 680 Suite C",
+      "locality": "NAS Pensacola",
+      "region": "Florida",
+      "region_code": "FL",
+      "postal_code": "32508",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 30.34932423,
+      "longitude": -87.27300024
+    },
     "email_addresses": [
       {
         "email_address": "hhg_pensacola@navy.mil",
@@ -2379,16 +2499,18 @@
   {
     "name": "Personal Property Office",
     "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
-    "street_address": "Fleet Logistic Center Jacksonville",
-    "extended_address": "Bldg 110 RM 103",
-    "locality": "Jacksonville",
-    "region": "Florida",
-    "region_code": "FL",
-    "postal_code": "32212",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 30.224349,
-    "longitude": -81.67783,
+    "location": {
+      "street_address": "Fleet Logistic Center Jacksonville",
+      "extended_address": "Bldg 110 RM 103",
+      "locality": "Jacksonville",
+      "region": "Florida",
+      "region_code": "FL",
+      "postal_code": "32212",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 30.224349,
+      "longitude": -81.67783
+    },
     "email_addresses": [
       {
         "email_address": "hhg_Jacksonville@navy.mil",
@@ -2417,16 +2539,18 @@
   {
     "name": "PPPO Corpus Christi",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "9035 Ocean Dr",
-    "extended_address": "3rd Floor",
-    "locality": "Corpus Christi",
-    "region": "Texas",
-    "region_code": "TX",
-    "postal_code": "78419",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 27.699502,
-    "longitude": -97.277538,
+    "location": {
+      "street_address": "9035 Ocean Dr",
+      "extended_address": "3rd Floor",
+      "locality": "Corpus Christi",
+      "region": "Texas",
+      "region_code": "TX",
+      "postal_code": "78419",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 27.699502,
+      "longitude": -97.277538
+    },
     "email_addresses": [
       {
         "email_address": "hhg_corpuschristi@navy.mil",
@@ -2457,16 +2581,18 @@
   {
     "name": "NSA Mid-South Personal Property Office",
     "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
-    "street_address": "766 Intrepid St",
-    "extended_address": "Community Services Bldg. 456, 1st Floor Left Wing",
-    "locality": "nMillington",
-    "region": "Tennessee",
-    "region_code": "TN",
-    "postal_code": "38054",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 35.335582,
-    "longitude": -89.869946,
+    "location": {
+      "street_address": "766 Intrepid St",
+      "extended_address": "Community Services Bldg. 456, 1st Floor Left Wing",
+      "locality": "nMillington",
+      "region": "Tennessee",
+      "region_code": "TN",
+      "postal_code": "38054",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.335582,
+      "longitude": -89.869946
+    },
     "email_addresses": [
       {
         "email_address": "hhg_millington@navy.mil",
@@ -2496,16 +2622,18 @@
   {
     "name": "NCBC GULFPORT",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "3502 East 8th St",
-    "extended_address": "Bldg 452, Room 125/126",
-    "locality": "Gulfport",
-    "region": "Mississippi",
-    "region_code": "MS",
-    "postal_code": "39501",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 30.380769,
-    "longitude": -89.102784,
+    "location": {
+      "street_address": "3502 East 8th St",
+      "extended_address": "Bldg 452, Room 125/126",
+      "locality": "Gulfport",
+      "region": "Mississippi",
+      "region_code": "MS",
+      "postal_code": "39501",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 30.380769,
+      "longitude": -89.102784
+    },
     "email_addresses": [
       {
         "email_address": "HHG_GULFPORT@NAVY.MIL",
@@ -2535,16 +2663,18 @@
   {
     "name": "FLCJ DET New Orleans",
     "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
-    "street_address": "400 Russell Ave",
-    "extended_address": "Bldg. 31",
-    "locality": "New Orleans",
-    "region": "Louisiana",
-    "region_code": "LA",
-    "postal_code": "70143",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 29.828525,
-    "longitude": -90.016754,
+    "location": {
+      "street_address": "400 Russell Ave",
+      "extended_address": "Bldg. 31",
+      "locality": "New Orleans",
+      "region": "Louisiana",
+      "region_code": "LA",
+      "postal_code": "70143",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 29.828525,
+      "longitude": -90.016754
+    },
     "email_addresses": [
       {
         "email_address": "hhg_neworleans@navy.mil",
@@ -2580,16 +2710,18 @@
   {
     "name": "NAS Fallon HHG Office",
     "shipping_office_name": "JPPSO SW",
-    "street_address": "4755 Pasture Rd",
-    "extended_address": "Bldg. 66",
-    "locality": "Fallon",
-    "region": "Nevada",
-    "region_code": "NV",
-    "postal_code": "89496",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 39.426028,
-    "longitude": -118.716845,
+    "location": {
+      "street_address": "4755 Pasture Rd",
+      "extended_address": "Bldg. 66",
+      "locality": "Fallon",
+      "region": "Nevada",
+      "region_code": "NV",
+      "postal_code": "89496",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 39.426028,
+      "longitude": -118.716845
+    },
     "email_addresses": [
       {
         "email_address": "FLCSD_FALN_PPSO@navy.mil",
@@ -2617,16 +2749,18 @@
   {
     "name": "Household Goods/Transportation Office",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "1330 Military Parkway",
-    "extended_address": null,
-    "locality": "NAS JRB Fort Worth",
-    "region": "Texas",
-    "region_code": "TX",
-    "postal_code": "76127",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.7737749,
-    "longitude": -97.42163,
+    "location": {
+      "street_address": "1330 Military Parkway",
+      "extended_address": null,
+      "locality": "NAS JRB Fort Worth",
+      "region": "Texas",
+      "region_code": "TX",
+      "postal_code": "76127",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.7737749,
+      "longitude": -97.42163
+    },
     "email_addresses": [
       {
         "email_address": "hhg_fortworth@navy.mil",
@@ -2656,16 +2790,18 @@
   {
     "name": "Consolidated Personal Property Shipping Office",
     "shipping_office_name": null,
-    "street_address": "7920 14th St",
-    "extended_address": "Bldg SDA-336",
-    "locality": "Norfolk",
-    "region": "Virginia",
-    "region_code": "VA",
-    "postal_code": "23505",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 36.919369,
-    "longitude": -76.312722,
+    "location": {
+      "street_address": "7920 14th St",
+      "extended_address": "Bldg SDA-336",
+      "locality": "Norfolk",
+      "region": "Virginia",
+      "region_code": "VA",
+      "postal_code": "23505",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 36.919369,
+      "longitude": -76.312722
+    },
     "email_addresses": [
       {
         "email_address": "hhg_ma_counseling@navy.mil",
@@ -2697,16 +2833,18 @@
   {
     "name": "Personal Property Office - Outbound",
     "shipping_office_name": null,
-    "street_address": "47253 Whalen Rd",
-    "extended_address": "Bldg 588, Room 109",
-    "locality": "NAS Patuxent River",
-    "region": "Maryland",
-    "region_code": "MD",
-    "postal_code": "20670",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.28961,
-    "longitude": -76.441747,
+    "location": {
+      "street_address": "47253 Whalen Rd",
+      "extended_address": "Bldg 588, Room 109",
+      "locality": "NAS Patuxent River",
+      "region": "Maryland",
+      "region_code": "MD",
+      "postal_code": "20670",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.28961,
+      "longitude": -76.441747
+    },
     "email_addresses": [
       {
         "email_address": "paxriverhhg_mailbox.fct@navy.mil",
@@ -2737,16 +2875,18 @@
   {
     "name": "PPPO Fort Irwin",
     "shipping_office_name": "JPPSO SW",
-    "street_address": "Langford Lake Rd",
-    "extended_address": "Building 105",
-    "locality": "Fort Irwin",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "92310",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 35.26327,
-    "longitude": -116.691017,
+    "location": {
+      "street_address": "Langford Lake Rd",
+      "extended_address": "Building 105",
+      "locality": "Fort Irwin",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "92310",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.26327,
+      "longitude": -116.691017
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.irwin.imcom.mbx.dol-transportation-division@mail.mil",
@@ -2777,16 +2917,18 @@
   {
     "name": "NAVSUP FLCN Annapolis",
     "shipping_office_name": null,
-    "street_address": "181 Wainwright Rd",
-    "extended_address": null,
-    "locality": "Annapolis",
-    "region": "Maryland",
-    "region_code": "MD",
-    "postal_code": "21402",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.985247,
-    "longitude": -76.519012,
+    "location": {
+      "street_address": "181 Wainwright Rd",
+      "extended_address": null,
+      "locality": "Annapolis",
+      "region": "Maryland",
+      "region_code": "MD",
+      "postal_code": "21402",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.985247,
+      "longitude": -76.519012
+    },
     "email_addresses": [
       {
         "email_address": "personalproperty@usna.edu",
@@ -2817,16 +2959,18 @@
   {
     "name": "PPPO COUNSELING OFFICE NAVSUP BETHESDA",
     "shipping_office_name": "JPPSO-MA",
-    "street_address": "8901 Wisconsin Ave",
-    "extended_address": "Bldg 17 Room 3D",
-    "locality": "Bethesda",
-    "region": "Maryland",
-    "region_code": "MD",
-    "postal_code": "20889",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.99863,
-    "longitude": -77.097448,
+    "location": {
+      "street_address": "8901 Wisconsin Ave",
+      "extended_address": "Bldg 17 Room 3D",
+      "locality": "Bethesda",
+      "region": "Maryland",
+      "region_code": "MD",
+      "postal_code": "20889",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.99863,
+      "longitude": -77.097448
+    },
     "email_addresses": [
       {
         "email_address": "USN.Bethesda.nsabethesdamd.mbx.nnmc-householdgoods@mail.mil",
@@ -2851,16 +2995,18 @@
   {
     "name": "PPPO / BASE PORTSMOUTH VA",
     "shipping_office_name": null,
-    "street_address": "4000 Coast Guard Blvd",
-    "extended_address": null,
-    "locality": "Portsmouth",
-    "region": "Virginia",
-    "region_code": "VA",
-    "postal_code": "23703",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 36.881688,
-    "longitude": -76.359691,
+    "location": {
+      "street_address": "4000 Coast Guard Blvd",
+      "extended_address": null,
+      "locality": "Portsmouth",
+      "region": "Virginia",
+      "region_code": "VA",
+      "postal_code": "23703",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 36.881688,
+      "longitude": -76.359691
+    },
     "email_addresses": [
       {
         "email_address": "BasePortsmouthPSDHHG@uscg.mil",
@@ -2886,16 +3032,18 @@
   {
     "name": "PPO USCG SUPPORT CENTER Elizabeth City",
     "shipping_office_name": null,
-    "street_address": "USCG Support Center",
-    "extended_address": null,
-    "locality": "Elizabeth City",
-    "region": "North Carolina",
-    "region_code": "NC",
-    "postal_code": "27909",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 36.266441,
-    "longitude": -76.186288,
+    "location": {
+      "street_address": "USCG Support Center",
+      "extended_address": null,
+      "locality": "Elizabeth City",
+      "region": "North Carolina",
+      "region_code": "NC",
+      "postal_code": "27909",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 36.266441,
+      "longitude": -76.186288
+    },
     "email_addresses": [
       {
         "email_address": "BasePortsmouthPSDHHG@uscg.mil",
@@ -2921,16 +3069,18 @@
   {
     "name": "Personal Property Office, Ventura County Site",
     "shipping_office_name": "JPPSO SW",
-    "street_address": "3600 Dodson St",
-    "extended_address": "Room 1200",
-    "locality": "Port Hueneme",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "93043",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 34.1477829,
-    "longitude": -119.208763,
+    "location": {
+      "street_address": "3600 Dodson St",
+      "extended_address": "Room 1200",
+      "locality": "Port Hueneme",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "93043",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 34.1477829,
+      "longitude": -119.208763
+    },
     "email_addresses": [
       {
         "email_address": "Joel.D.Pinckard@navy.mil",
@@ -2964,16 +3114,18 @@
   {
     "name": "NAVSUP FLC PPSO CHINA LAKE",
     "shipping_office_name": "JPPSO SW",
-    "street_address": "1 Administration Cir",
-    "extended_address": "Bldg 1023",
-    "locality": "China Lake",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "93555",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 35.689,
-    "longitude": 117.6833,
+    "location": {
+      "street_address": "1 Administration Cir",
+      "extended_address": "Bldg 1023",
+      "locality": "China Lake",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "93555",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.689,
+      "longitude": 117.6833
+    },
     "email_addresses": [
       {
         "email_address": "jppso_sw_shipment@navy.mil",
@@ -3001,16 +3153,18 @@
   {
     "name": "PPSO Ft. Huachuca",
     "shipping_office_name": null,
-    "street_address": "2317 Smith Ave",
-    "extended_address": "Bldg 52065",
-    "locality": "Fort Huachuca",
-    "region": "Arizona",
-    "region_code": "AZ",
-    "postal_code": "85613",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 31.555092,
-    "longitude": -110.353497,
+    "location": {
+      "street_address": "2317 Smith Ave",
+      "extended_address": "Bldg 52065",
+      "locality": "Fort Huachuca",
+      "region": "Arizona",
+      "region_code": "AZ",
+      "postal_code": "85613",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 31.555092,
+      "longitude": -110.353497
+    },
     "email_addresses": [
       {
         "email_address": "imcomamc.dol-ppso.520533-8511@mail.mil",
@@ -3040,16 +3194,18 @@
   {
     "name": "PPPO Marine Corps Base Camp Pendleton",
     "shipping_office_name": "JPPSO SW",
-    "street_address": "Vandergrift Blvd",
-    "extended_address": "Bldg 2263",
-    "locality": "Camp Pendleton",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "92055",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 33.295427,
-    "longitude": -117.354106,
+    "location": {
+      "street_address": "Vandergrift Blvd",
+      "extended_address": "Bldg 2263",
+      "locality": "Camp Pendleton",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "92055",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 33.295427,
+      "longitude": -117.354106
+    },
     "email_addresses": [
       {
         "email_address": "mcb.campen.tmo@usmc.mil",
@@ -3085,16 +3241,18 @@
   {
     "name": "FLCJ MERIDIAN DET",
     "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
-    "street_address": "224 Allen Rd",
-    "extended_address": "NAS Meridian Building",
-    "locality": "Meridian",
-    "region": "Mississippi",
-    "region_code": "MS",
-    "postal_code": "39302",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.546615,
-    "longitude": -88.606499,
+    "location": {
+      "street_address": "224 Allen Rd",
+      "extended_address": "NAS Meridian Building",
+      "locality": "Meridian",
+      "region": "Mississippi",
+      "region_code": "MS",
+      "postal_code": "39302",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.546615,
+      "longitude": -88.606499
+    },
     "email_addresses": [
       {
         "email_address": "HHG_Meridian",
@@ -3122,16 +3280,18 @@
   {
     "name": "Personal Property Office",
     "shipping_office_name": "JPPSO SW",
-    "street_address": "730 Enterprise Ave",
-    "extended_address": "Wing 2, Room 5",
-    "locality": "NAS Lemoore",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "93246",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 36.260194,
-    "longitude": 119.905519,
+    "location": {
+      "street_address": "730 Enterprise Ave",
+      "extended_address": "Wing 2, Room 5",
+      "locality": "NAS Lemoore",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "93246",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 36.260194,
+      "longitude": 119.905519
+    },
     "email_addresses": [
 
     ],
@@ -3160,16 +3320,18 @@
   {
     "name": "PERSONAL PROPERTY OFFICE",
     "shipping_office_name": "JPPSO SW",
-    "street_address": "730 Enterprise Ave",
-    "extended_address": "Wing 2 Rm 5",
-    "locality": "NAS Lemoore",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "93246",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 36.260194,
-    "longitude": -119.905519,
+    "location": {
+      "street_address": "730 Enterprise Ave",
+      "extended_address": "Wing 2 Rm 5",
+      "locality": "NAS Lemoore",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "93246",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 36.260194,
+      "longitude": -119.905519
+    },
     "email_addresses": [
 
     ],
@@ -3198,16 +3360,18 @@
   {
     "name": "Fort McCoy PPPO",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "200 E. G St",
-    "extended_address": null,
-    "locality": "Fort McCoy",
-    "region": "Wisconsin",
-    "region_code": "WI",
-    "postal_code": "54656",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 44.031379,
-    "longitude": -90.686109,
+    "location": {
+      "street_address": "200 E. G St",
+      "extended_address": null,
+      "locality": "Fort McCoy",
+      "region": "Wisconsin",
+      "region_code": "WI",
+      "postal_code": "54656",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 44.031379,
+      "longitude": -90.686109
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.mccoy.asc.mbx.lrc-pppo@mail.mil",
@@ -3243,16 +3407,18 @@
   {
     "name": "PPPO Fort Polk",
     "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
-    "street_address": "7585 Virginia Ave",
-    "extended_address": "Suite 102 - Bldg 4374",
-    "locality": "Fort Polk South",
-    "region": "Louisiana",
-    "region_code": "LA",
-    "postal_code": "71459",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 31.045201,
-    "longitude": -93.197307,
+    "location": {
+      "street_address": "7585 Virginia Ave",
+      "extended_address": "Suite 102 - Bldg 4374",
+      "locality": "Fort Polk South",
+      "region": "Louisiana",
+      "region_code": "LA",
+      "postal_code": "71459",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 31.045201,
+      "longitude": -93.197307
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.polk.usamc.mbx.dol-trans@mail.mil",
@@ -3285,16 +3451,18 @@
   {
     "name": "Transportation Office Fort Jackson",
     "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
-    "street_address": "5450 Strom Thurmond Blvd",
-    "extended_address": "Room 102",
-    "locality": "Fort Jackson",
-    "region": "South Carolina",
-    "region_code": "SC",
-    "postal_code": "29207",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 34.0163,
-    "longitude": -80.9376,
+    "location": {
+      "street_address": "5450 Strom Thurmond Blvd",
+      "extended_address": "Room 102",
+      "locality": "Fort Jackson",
+      "region": "South Carolina",
+      "region_code": "SC",
+      "postal_code": "29207",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 34.0163,
+      "longitude": -80.9376
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.jackson.406-afsb.mbx.406th-afsbn-ppb@mail.mil",
@@ -3323,16 +3491,18 @@
   {
     "name": "LRC, Dugway Proving Ground, Transportation Div",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "Doolitte Ave",
-    "extended_address": "Bldg. 5464",
-    "locality": "Dugway",
-    "region": "Utah",
-    "region_code": "UT",
-    "postal_code": "84022",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 40.218554,
-    "longitude": -112.749625,
+    "location": {
+      "street_address": "Doolitte Ave",
+      "extended_address": "Bldg. 5464",
+      "locality": "Dugway",
+      "region": "Utah",
+      "region_code": "UT",
+      "postal_code": "84022",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 40.218554,
+      "longitude": -112.749625
+    },
     "email_addresses": [
       {
         "email_address": "Deanna.i.olson.civ@mail.mil",
@@ -3360,16 +3530,18 @@
   {
     "name": "NAVSUP FLC PS PPPO EVERETT",
     "shipping_office_name": null,
-    "street_address": "2000 West Marine View Dr",
-    "extended_address": "Bldg 2200",
-    "locality": "Everett",
-    "region": "Washington",
-    "region_code": "WA",
-    "postal_code": "98207",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 47.99,
-    "longitude": 122.2185,
+    "location": {
+      "street_address": "2000 West Marine View Dr",
+      "extended_address": "Bldg 2200",
+      "locality": "Everett",
+      "region": "Washington",
+      "region_code": "WA",
+      "postal_code": "98207",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 47.99,
+      "longitude": 122.2185
+    },
     "email_addresses": [
       {
         "email_address": "hhg_PS_shipment@navy.mil",
@@ -3401,16 +3573,18 @@
   {
     "name": "NAVSUP FLC PUGET SOUND",
     "shipping_office_name": null,
-    "street_address": "2720 Ohio St",
-    "extended_address": null,
-    "locality": "Silverdale",
-    "region": "Washington",
-    "region_code": "WA",
-    "postal_code": "98315",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 47.690266,
-    "longitude": 122.710202,
+    "location": {
+      "street_address": "2720 Ohio St",
+      "extended_address": null,
+      "locality": "Silverdale",
+      "region": "Washington",
+      "region_code": "WA",
+      "postal_code": "98315",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 47.690266,
+      "longitude": 122.710202
+    },
     "email_addresses": [
       {
         "email_address": "HHG_PS_COUNSELING@NAVY.MIL",
@@ -3439,16 +3613,18 @@
   {
     "name": "McAlester Personal Property Office",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "1 C Tree Rd",
-    "extended_address": null,
-    "locality": "McAlester",
-    "region": "Oklahoma",
-    "region_code": "OK",
-    "postal_code": "74501",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 34.839774,
-    "longitude": -95.843016,
+    "location": {
+      "street_address": "1 C Tree Rd",
+      "extended_address": null,
+      "locality": "McAlester",
+      "region": "Oklahoma",
+      "region_code": "OK",
+      "postal_code": "74501",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 34.839774,
+      "longitude": -95.843016
+    },
     "email_addresses": [
       {
         "email_address": "michael.e.green1.civ@mail.mil",
@@ -3478,16 +3654,18 @@
   {
     "name": "NAVSUP FLC Puget Sound Whidbey",
     "shipping_office_name": null,
-    "street_address": "3675 W Lexington Dr",
-    "extended_address": null,
-    "locality": "Oak Harbor",
-    "region": "Washington",
-    "region_code": "WA",
-    "postal_code": "98278",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 48.343531,
-    "longitude": 122.681039,
+    "location": {
+      "street_address": "3675 W Lexington Dr",
+      "extended_address": null,
+      "locality": "Oak Harbor",
+      "region": "Washington",
+      "region_code": "WA",
+      "postal_code": "98278",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 48.343531,
+      "longitude": 122.681039
+    },
     "email_addresses": [
       {
         "email_address": "hhg_ps_counseling@navy.mil",
@@ -3517,16 +3695,18 @@
   {
     "name": "PPSO NAVSUP FLC CHINA LAKE",
     "shipping_office_name": "JPPSO SW",
-    "street_address": "1 Administration Cir",
-    "extended_address": "Bldg 1023",
-    "locality": "China Lake",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "93555",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 35.6508,
-    "longitude": 117.6617,
+    "location": {
+      "street_address": "1 Administration Cir",
+      "extended_address": "Bldg 1023",
+      "locality": "China Lake",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "93555",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.6508,
+      "longitude": 117.6617
+    },
     "email_addresses": [
       {
         "email_address": "jppso_sw_counseling@navy.mil",
@@ -3555,16 +3735,18 @@
   {
     "name": "NSA MidSouth Personal Property Office",
     "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
-    "street_address": "766 Intrepid St",
-    "extended_address": "Community Service Building Bldg. 456, 1st Floor Left Wing",
-    "locality": "Millington",
-    "region": "Tennessee",
-    "region_code": "TN",
-    "postal_code": "38054",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 35.335586,
-    "longitude": -89.869855,
+    "location": {
+      "street_address": "766 Intrepid St",
+      "extended_address": "Community Service Building Bldg. 456, 1st Floor Left Wing",
+      "locality": "Millington",
+      "region": "Tennessee",
+      "region_code": "TN",
+      "postal_code": "38054",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.335586,
+      "longitude": -89.869855
+    },
     "email_addresses": [
       {
         "email_address": "hhg_millington@navy.mil",
@@ -3594,16 +3776,18 @@
   {
     "name": "Dugway Proving Ground",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "Bldg 5464",
-    "extended_address": null,
-    "locality": "Dugway",
-    "region": "Utah",
-    "region_code": "UT",
-    "postal_code": "84022",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 40.213585,
-    "longitude": -112.75678,
+    "location": {
+      "street_address": "Bldg 5464",
+      "extended_address": null,
+      "locality": "Dugway",
+      "region": "Utah",
+      "region_code": "UT",
+      "postal_code": "84022",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 40.213585,
+      "longitude": -112.75678
+    },
     "email_addresses": [
       {
         "email_address": "deanna.i.olson.civ@mail.mil",
@@ -3629,16 +3813,18 @@
   {
     "name": "Charleston Naval Weapon Station",
     "shipping_office_name": "JPPSO-NE (DET 2)",
-    "street_address": "1000 Quality Cir",
-    "extended_address": "Bldg 36",
-    "locality": "Goose Creek",
-    "region": "South Carolina",
-    "region_code": "SC",
-    "postal_code": "29445",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.953477,
-    "longitude": -79.9378,
+    "location": {
+      "street_address": "1000 Quality Cir",
+      "extended_address": "Bldg 36",
+      "locality": "Goose Creek",
+      "region": "South Carolina",
+      "region_code": "SC",
+      "postal_code": "29445",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.953477,
+      "longitude": -79.9378
+    },
     "email_addresses": [
       {
         "email_address": "437aps.trot.nwspersonalpropert@us.af.mil",
@@ -3669,16 +3855,18 @@
   {
     "name": "Ft. Eustis",
     "shipping_office_name": "JPPSO-NE (DET 2)",
-    "street_address": "650 Monroe Ave",
-    "extended_address": null,
-    "locality": "Fort Eustis",
-    "region": "Virginia",
-    "region_code": "VA",
-    "postal_code": "23604",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 37.161411,
-    "longitude": -76.588,
+    "location": {
+      "street_address": "650 Monroe Ave",
+      "extended_address": null,
+      "locality": "Fort Eustis",
+      "region": "Virginia",
+      "region_code": "VA",
+      "postal_code": "23604",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 37.161411,
+      "longitude": -76.588
+    },
     "email_addresses": [
       {
         "email_address": "TMO.HOUSEGOODS@US.AF.MIL",
@@ -3709,16 +3897,18 @@
   {
     "name": "JB Eustis-Langley",
     "shipping_office_name": "JPPSO-NE (DET 2)",
-    "street_address": "45 Nealy Ave",
-    "extended_address": "Suite 209",
-    "locality": "Hampton",
-    "region": "Virginia",
-    "region_code": "VA",
-    "postal_code": "23665",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 37.068857,
-    "longitude": -76.364275,
+    "location": {
+      "street_address": "45 Nealy Ave",
+      "extended_address": "Suite 209",
+      "locality": "Hampton",
+      "region": "Virginia",
+      "region_code": "VA",
+      "postal_code": "23665",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 37.068857,
+      "longitude": -76.364275
+    },
     "email_addresses": [
       {
         "email_address": "TMO.HOUSEGOODS@US.AF.MIL",
@@ -3749,16 +3939,18 @@
   {
     "name": "Rome NY",
     "shipping_office_name": "JPPSO-NE (DET 2)",
-    "street_address": "26 Electronic Parkway",
-    "extended_address": "Building 2 room C-250",
-    "locality": "Rome",
-    "region": "New York",
-    "region_code": "NY",
-    "postal_code": "13441",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 43.220702,
-    "longitude": -75.41138,
+    "location": {
+      "street_address": "26 Electronic Parkway",
+      "extended_address": "Building 2 room C-250",
+      "locality": "Rome",
+      "region": "New York",
+      "region_code": "NY",
+      "postal_code": "13441",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 43.220702,
+      "longitude": -75.41138
+    },
     "email_addresses": [
       {
         "email_address": "AFRL.riol.TMO_Rome@us.af.mil",
@@ -3788,16 +3980,18 @@
   {
     "name": "Los Angeles AFB",
     "shipping_office_name": "JPPSO SW",
-    "street_address": "483 N. Aviation Blvd",
-    "extended_address": null,
-    "locality": "El Segundo",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "90245",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 33.917255,
-    "longitude": -118.382077,
+    "location": {
+      "street_address": "483 N. Aviation Blvd",
+      "extended_address": null,
+      "locality": "El Segundo",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "90245",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 33.917255,
+      "longitude": -118.382077
+    },
     "email_addresses": [
       {
         "email_address": "61CELSTMO@US.AF.MIL",
@@ -3827,16 +4021,18 @@
   {
     "name": "Shaw AFB, SC",
     "shipping_office_name": "JPPSO-NE (DET 2)",
-    "street_address": "524 Shaw Dr",
-    "extended_address": null,
-    "locality": "Shaw Air Force Base",
-    "region": "South Carolina",
-    "region_code": "SC",
-    "postal_code": "29152",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 33.977012,
-    "longitude": -80.47636,
+    "location": {
+      "street_address": "524 Shaw Dr",
+      "extended_address": null,
+      "locality": "Shaw Air Force Base",
+      "region": "South Carolina",
+      "region_code": "SC",
+      "postal_code": "29152",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 33.977012,
+      "longitude": -80.47636
+    },
     "email_addresses": [
       {
         "email_address": "20LRSTMOCOUNSELO@us.af.mil",
@@ -3867,16 +4063,18 @@
   {
     "name": "Wright-Patterson AFB",
     "shipping_office_name": "JPPSO-NE (DET 2)",
-    "street_address": "1940 Allbrook Dr",
-    "extended_address": null,
-    "locality": "Wright-Patterson Air Force Base",
-    "region": "Ohio",
-    "region_code": "OH",
-    "postal_code": "45433",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 39.81373,
-    "longitude": -84.053745,
+    "location": {
+      "street_address": "1940 Allbrook Dr",
+      "extended_address": null,
+      "locality": "Wright-Patterson Air Force Base",
+      "region": "Ohio",
+      "region_code": "OH",
+      "postal_code": "45433",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 39.81373,
+      "longitude": -84.053745
+    },
     "email_addresses": [
       {
         "email_address": "wpafbtmo@us.af.mil",
@@ -3907,16 +4105,18 @@
   {
     "name": "Navy Submarine Base New London",
     "shipping_office_name": "JPPSO-NE (DET 2)",
-    "street_address": "Grayling Ave",
-    "extended_address": "Bldg 84 Room 206",
-    "locality": "Groton",
-    "region": "Connecticut",
-    "region_code": "CT",
-    "postal_code": "06349",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 41.39416,
-    "longitude": -72.088841,
+    "location": {
+      "street_address": "Grayling Ave",
+      "extended_address": "Bldg 84 Room 206",
+      "locality": "Groton",
+      "region": "Connecticut",
+      "region_code": "CT",
+      "postal_code": "06349",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 41.39416,
+      "longitude": -72.088841
+    },
     "email_addresses": [
       {
         "email_address": "personalproperty.newlondon@navy.mil",
@@ -3946,16 +4146,18 @@
   {
     "name": "NSA Saratoga Springs",
     "shipping_office_name": "JPPSO-NE (DET 2)",
-    "street_address": "19 J. F. King Dr",
-    "extended_address": "Bldg 102",
-    "locality": "Saratoga Springs",
-    "region": "New York",
-    "region_code": "NY",
-    "postal_code": "12866",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 43.079156,
-    "longitude": -73.820097,
+    "location": {
+      "street_address": "19 J. F. King Dr",
+      "extended_address": "Bldg 102",
+      "locality": "Saratoga Springs",
+      "region": "New York",
+      "region_code": "NY",
+      "postal_code": "12866",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 43.079156,
+      "longitude": -73.820097
+    },
     "email_addresses": [
       {
         "email_address": "navsuppu_ppso@nmci-isf.com",
@@ -3981,16 +4183,18 @@
   {
     "name": "Portsmouth Navy Shipyard",
     "shipping_office_name": "JPPSO-NE (DET 2)",
-    "street_address": "PPPO Portsmouth Navy Ship Yard",
-    "extended_address": "Bldg H10, Room 6",
-    "locality": "Kittery",
-    "region": "Maine",
-    "region_code": "ME",
-    "postal_code": "03904",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 43.07957,
-    "longitude": -70.730653,
+    "location": {
+      "street_address": "PPPO Portsmouth Navy Ship Yard",
+      "extended_address": "Bldg H10, Room 6",
+      "locality": "Kittery",
+      "region": "Maine",
+      "region_code": "ME",
+      "postal_code": "03904",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 43.07957,
+      "longitude": -70.730653
+    },
     "email_addresses": [
       {
         "email_address": "PHILLIP.W.HART@NAVY.MIL",
@@ -4020,16 +4224,18 @@
   {
     "name": "Naval Station Newport",
     "shipping_office_name": "JPPSO-NE (DET 2)",
-    "street_address": "690 Peary St",
-    "extended_address": null,
-    "locality": "Naval Station Newport",
-    "region": "Rhode Island",
-    "region_code": "RI",
-    "postal_code": "02841",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 41.516878,
-    "longitude": -71.319678,
+    "location": {
+      "street_address": "690 Peary St",
+      "extended_address": null,
+      "locality": "Naval Station Newport",
+      "region": "Rhode Island",
+      "region_code": "RI",
+      "postal_code": "02841",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 41.516878,
+      "longitude": -71.319678
+    },
     "email_addresses": [
       {
         "email_address": "navsta_move@navy.mil",
@@ -4060,16 +4266,18 @@
   {
     "name": "Buckley AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "18401 E. A Basin Ave",
-    "extended_address": "Bldg 606",
-    "locality": "Buckley AFB",
-    "region": "Colorado",
-    "region_code": "CO",
-    "postal_code": "80011",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 39.7041,
-    "longitude": -104.75363,
+    "location": {
+      "street_address": "18401 E. A Basin Ave",
+      "extended_address": "Bldg 606",
+      "locality": "Buckley AFB",
+      "region": "Colorado",
+      "region_code": "CO",
+      "postal_code": "80011",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 39.7041,
+      "longitude": -104.75363
+    },
     "email_addresses": [
       {
         "email_address": "buckley.TMO@us.af.mil",
@@ -4099,16 +4307,18 @@
   {
     "name": "Creech AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "1012 Perimeter Rd",
-    "extended_address": "Bldg 1012",
-    "locality": "Creech AFB (Indian Springs)",
-    "region": "Nevada",
-    "region_code": "NV",
-    "postal_code": "89018",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 36.586713,
-    "longitude": -115.673973,
+    "location": {
+      "street_address": "1012 Perimeter Rd",
+      "extended_address": "Bldg 1012",
+      "locality": "Creech AFB (Indian Springs)",
+      "region": "Nevada",
+      "region_code": "NV",
+      "postal_code": "89018",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 36.586713,
+      "longitude": -115.673973
+    },
     "email_addresses": [
       {
         "email_address": "99lrscreechtmo@us.af.mil",
@@ -4137,16 +4347,18 @@
   {
     "name": "Edwards AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "5 Steller Ave",
-    "extended_address": "Bldg 3000",
-    "locality": "Edwards AFB",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "93524",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 34.923547,
-    "longitude": -117.896151,
+    "location": {
+      "street_address": "5 Steller Ave",
+      "extended_address": "Bldg 3000",
+      "locality": "Edwards AFB",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "93524",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 34.923547,
+      "longitude": -117.896151
+    },
     "email_addresses": [
       {
         "email_address": "s5329c2@us.af.mil",
@@ -4176,16 +4388,18 @@
   {
     "name": "MCAS Cherry Point, NC. DMO",
     "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
-    "street_address": "E Street",
-    "extended_address": "Bldg. 298",
-    "locality": "Cherry Point",
-    "region": "North Carolina",
-    "region_code": "NC",
-    "postal_code": "28533",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 34.90409199,
-    "longitude": -76.90185027,
+    "location": {
+      "street_address": "E Street",
+      "extended_address": "Bldg. 298",
+      "locality": "Cherry Point",
+      "region": "North Carolina",
+      "region_code": "NC",
+      "postal_code": "28533",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 34.90409199,
+      "longitude": -76.90185027
+    },
     "email_addresses": [
       {
         "email_address": "CHPTSUPPLY_DMOOMB@USMC.MIL",
@@ -4221,16 +4435,18 @@
   {
     "name": "Ellsworth AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "1924 Lemay Blvd",
-    "extended_address": null,
-    "locality": "Ellsworth AFB",
-    "region": "South Dakota",
-    "region_code": "SD",
-    "postal_code": "57706",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 44.148476,
-    "longitude": -103.092295,
+    "location": {
+      "street_address": "1924 Lemay Blvd",
+      "extended_address": null,
+      "locality": "Ellsworth AFB",
+      "region": "South Dakota",
+      "region_code": "SD",
+      "postal_code": "57706",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 44.148476,
+      "longitude": -103.092295
+    },
     "email_addresses": [
       {
         "email_address": "28LRS.TMOPersonalPro@us.af.mil",
@@ -4261,16 +4477,18 @@
   {
     "name": "F.E. Warren AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "7100 Saber Rd",
-    "extended_address": "Bldg 1284",
-    "locality": "Warren Air Force Base",
-    "region": "Wyoming",
-    "region_code": "WY",
-    "postal_code": "82001",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 41.145151,
-    "longitude": -104.871477,
+    "location": {
+      "street_address": "7100 Saber Rd",
+      "extended_address": "Bldg 1284",
+      "locality": "Warren Air Force Base",
+      "region": "Wyoming",
+      "region_code": "WY",
+      "postal_code": "82001",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 41.145151,
+      "longitude": -104.871477
+    },
     "email_addresses": [
       {
         "email_address": "90lrslgrdf@us.af.mil",
@@ -4300,16 +4518,18 @@
   {
     "name": "Ft Carson",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "1661 O'Connell",
-    "extended_address": "Bldg 1012",
-    "locality": "Fort Carson",
-    "region": "Colorado",
-    "region_code": "CO",
-    "postal_code": "80913",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.749705,
-    "longitude": -104.796626,
+    "location": {
+      "street_address": "1661 O'Connell",
+      "extended_address": "Bldg 1012",
+      "locality": "Fort Carson",
+      "region": "Colorado",
+      "region_code": "CO",
+      "postal_code": "80913",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.749705,
+      "longitude": -104.796626
+    },
     "email_addresses": [
       {
         "email_address": "JPPSO-NC.pppo-ftcarson@us.af.mil",
@@ -4340,16 +4560,18 @@
   {
     "name": "Hill AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "7437 6th St",
-    "extended_address": "Bldg 430 North",
-    "locality": "Hill Air Force Base",
-    "region": "Utah",
-    "region_code": "UT",
-    "postal_code": "84056",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 41.109222,
-    "longitude": -111.983766,
+    "location": {
+      "street_address": "7437 6th St",
+      "extended_address": "Bldg 430 North",
+      "locality": "Hill Air Force Base",
+      "region": "Utah",
+      "region_code": "UT",
+      "postal_code": "84056",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 41.109222,
+      "longitude": -111.983766
+    },
     "email_addresses": [
       {
         "email_address": "75lrs.outboundtmo@us.af.mil",
@@ -4380,16 +4602,18 @@
   {
     "name": "Holloman AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "681 2nd St",
-    "extended_address": null,
-    "locality": "Holloman Air Force Base",
-    "region": "New Mexico",
-    "region_code": "NM",
-    "postal_code": "88330",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.84404,
-    "longitude": -106.099291,
+    "location": {
+      "street_address": "681 2nd St",
+      "extended_address": null,
+      "locality": "Holloman Air Force Base",
+      "region": "New Mexico",
+      "region_code": "NM",
+      "postal_code": "88330",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.84404,
+      "longitude": -106.099291
+    },
     "email_addresses": [
       {
         "email_address": "49lrs.lgrdf.hhg@us.af.mil",
@@ -4420,16 +4644,18 @@
   {
     "name": "Luke AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "7383 N Litchfield Rd",
-    "extended_address": "Rm 1122",
-    "locality": "nLuke AFB",
-    "region": "Arizona",
-    "region_code": "AZ",
-    "postal_code": "85309",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 33.542938,
-    "longitude": -112.357757,
+    "location": {
+      "street_address": "7383 N Litchfield Rd",
+      "extended_address": "Rm 1122",
+      "locality": "nLuke AFB",
+      "region": "Arizona",
+      "region_code": "AZ",
+      "postal_code": "85309",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 33.542938,
+      "longitude": -112.357757
+    },
     "email_addresses": [
       {
         "email_address": "tmoluke@us.af.mil",
@@ -4465,16 +4691,18 @@
   {
     "name": "Malmstrom AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "7383 N Litchfield Rd",
-    "extended_address": "Rm 1122",
-    "locality": "Luke AFB",
-    "region": "Arizona",
-    "region_code": "AZ",
-    "postal_code": "85309",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 47.519099,
-    "longitude": -111.177113,
+    "location": {
+      "street_address": "7383 N Litchfield Rd",
+      "extended_address": "Rm 1122",
+      "locality": "Luke AFB",
+      "region": "Arizona",
+      "region_code": "AZ",
+      "postal_code": "85309",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 47.519099,
+      "longitude": -111.177113
+    },
     "email_addresses": [
       {
         "email_address": "341lrs.lgrt@us.af.mil",
@@ -4505,16 +4733,18 @@
   {
     "name": "Minot AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "341 Bomber Blvd",
-    "extended_address": "Bldg. 527",
-    "locality": "Minot Air Force Base",
-    "region": "North Dakota",
-    "region_code": "ND",
-    "postal_code": "58703",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 48.415705,
-    "longitude": -101.33462,
+    "location": {
+      "street_address": "341 Bomber Blvd",
+      "extended_address": "Bldg. 527",
+      "locality": "Minot Air Force Base",
+      "region": "North Dakota",
+      "region_code": "ND",
+      "postal_code": "58703",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 48.415705,
+      "longitude": -101.33462
+    },
     "email_addresses": [
       {
         "email_address": "personal.property2@us.af.mil",
@@ -4545,16 +4775,18 @@
   {
     "name": "Mountain Home AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "366 Gunfighter Ave",
-    "extended_address": "Ste 268",
-    "locality": "Mountain Home Air Force Base",
-    "region": "Idaho",
-    "region_code": "ID",
-    "postal_code": "83648",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 43.049246,
-    "longitude": -115.861453,
+    "location": {
+      "street_address": "366 Gunfighter Ave",
+      "extended_address": "Ste 268",
+      "locality": "Mountain Home Air Force Base",
+      "region": "Idaho",
+      "region_code": "ID",
+      "postal_code": "83648",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 43.049246,
+      "longitude": -115.861453
+    },
     "email_addresses": [
       {
         "email_address": "366LRS.per.property@us.af.mil",
@@ -4584,16 +4816,18 @@
   {
     "name": "Nellis AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "4420 Grissom Ave",
-    "extended_address": "Ste #203",
-    "locality": "Nellis Air Force Base",
-    "region": "Nevada",
-    "region_code": "NV",
-    "postal_code": "89191",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 36.239797,
-    "longitude": -115.040377,
+    "location": {
+      "street_address": "4420 Grissom Ave",
+      "extended_address": "Ste #203",
+      "locality": "Nellis Air Force Base",
+      "region": "Nevada",
+      "region_code": "NV",
+      "postal_code": "89191",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 36.239797,
+      "longitude": -115.040377
+    },
     "email_addresses": [
       {
         "email_address": "99LRS.LGRDF.PersonalProperty@us.af.mil",
@@ -4623,16 +4857,18 @@
   {
     "name": "Offutt AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "106 Peacekeeper Dr",
-    "extended_address": "Suite 2N3",
-    "locality": "Offutt AFB",
-    "region": "Nebraska",
-    "region_code": "NE",
-    "postal_code": "68113",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 41.130601,
-    "longitude": -95.919509,
+    "location": {
+      "street_address": "106 Peacekeeper Dr",
+      "extended_address": "Suite 2N3",
+      "locality": "Offutt AFB",
+      "region": "Nebraska",
+      "region_code": "NE",
+      "postal_code": "68113",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 41.130601,
+      "longitude": -95.919509
+    },
     "email_addresses": [
       {
         "email_address": "55msg.lddth@us.af.mil",
@@ -4662,16 +4898,18 @@
   {
     "name": "Peterson AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "135 Dover St",
-    "extended_address": "Bldg 350",
-    "locality": "Peterson AFB",
-    "region": "Colorado",
-    "region_code": "CO",
-    "postal_code": "80914",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.82066,
-    "longitude": -104.705125,
+    "location": {
+      "street_address": "135 Dover St",
+      "extended_address": "Bldg 350",
+      "locality": "Peterson AFB",
+      "region": "Colorado",
+      "region_code": "CO",
+      "postal_code": "80914",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.82066,
+      "longitude": -104.705125
+    },
     "email_addresses": [
       {
         "email_address": "JPPSO-NC.pppo-peterson@us.af.mil",
@@ -4701,16 +4939,18 @@
   {
     "name": "Peterson AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "135 Dover St",
-    "extended_address": "Bldg 350",
-    "locality": "Peterson AFB",
-    "region": "Colorado",
-    "region_code": "CO",
-    "postal_code": "80914",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.82066,
-    "longitude": -104.705125,
+    "location": {
+      "street_address": "135 Dover St",
+      "extended_address": "Bldg 350",
+      "locality": "Peterson AFB",
+      "region": "Colorado",
+      "region_code": "CO",
+      "postal_code": "80914",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.82066,
+      "longitude": -104.705125
+    },
     "email_addresses": [
       {
         "email_address": "JPPSO-NC.pppo-peterson@us.af.mil",
@@ -4740,16 +4980,18 @@
   {
     "name": "Travis AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "540 Airlift Dr",
-    "extended_address": null,
-    "locality": "Travis AFB",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "94535",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.273621,
-    "longitude": -121.929345,
+    "location": {
+      "street_address": "540 Airlift Dr",
+      "extended_address": null,
+      "locality": "Travis AFB",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "94535",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.273621,
+      "longitude": -121.929345
+    },
     "email_addresses": [
       {
         "email_address": "personal.property-02@us.af.mil",
@@ -4779,16 +5021,18 @@
   {
     "name": "USAF Academy",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "5136 Eagle Dr",
-    "extended_address": null,
-    "locality": "U.S. Air Force Academy",
-    "region": "Colorado",
-    "region_code": "CO",
-    "postal_code": "80840",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.978262,
-    "longitude": -104.864182,
+    "location": {
+      "street_address": "5136 Eagle Dr",
+      "extended_address": null,
+      "locality": "U.S. Air Force Academy",
+      "region": "Colorado",
+      "region_code": "CO",
+      "postal_code": "80840",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.978262,
+      "longitude": -104.864182
+    },
     "email_addresses": [
       {
         "email_address": "JPPSO-NC.pppo-afacademy@us.af.mil",
@@ -4815,16 +5059,18 @@
   {
     "name": "Vandenberg AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "1221 California Blvd",
-    "extended_address": "Bldg 11777",
-    "locality": "Vandenberg Air Force Base",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "93437",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 34.724352,
-    "longitude": -120.545079,
+    "location": {
+      "street_address": "1221 California Blvd",
+      "extended_address": "Bldg 11777",
+      "locality": "Vandenberg Air Force Base",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "93437",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 34.724352,
+      "longitude": -120.545079
+    },
     "email_addresses": [
       {
         "email_address": "30LRSPAX.HHG@US.AF.MIL",
@@ -4855,16 +5101,18 @@
   {
     "name": "White Sands Missile Range",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "143 Crozier St",
-    "extended_address": null,
-    "locality": "White Sands Missile Range",
-    "region": "New Mexico",
-    "region_code": "NM",
-    "postal_code": "88002",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.379316,
-    "longitude": -106.481932,
+    "location": {
+      "street_address": "143 Crozier St",
+      "extended_address": null,
+      "locality": "White Sands Missile Range",
+      "region": "New Mexico",
+      "region_code": "NM",
+      "postal_code": "88002",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.379316,
+      "longitude": -106.481932
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.wsmr.asc-lrc.list.lgtp@mail.mil",
@@ -4894,16 +5142,18 @@
   {
     "name": "Altus AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "308 N. 1st St",
-    "extended_address": "97 LRS/LGRDF, Bldg 52",
-    "locality": "Altus AFB",
-    "region": "Oklahoma",
-    "region_code": "OK",
-    "postal_code": "73523",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 34.654406,
-    "longitude": -99.288054,
+    "location": {
+      "street_address": "308 N. 1st St",
+      "extended_address": "97 LRS/LGRDF, Bldg 52",
+      "locality": "Altus AFB",
+      "region": "Oklahoma",
+      "region_code": "OK",
+      "postal_code": "73523",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 34.654406,
+      "longitude": -99.288054
+    },
     "email_addresses": [
       {
         "email_address": "97LRS.LGRD.PersPropMvmt@us.af.mil",
@@ -4933,16 +5183,18 @@
   {
     "name": "Barksdale AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "801 Kenny Ave",
-    "extended_address": null,
-    "locality": "Barksdale Air Force Base",
-    "region": "Louisiana",
-    "region_code": "LA",
-    "postal_code": "71110",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.494344,
-    "longitude": -93.678015,
+    "location": {
+      "street_address": "801 Kenny Ave",
+      "extended_address": null,
+      "locality": "Barksdale Air Force Base",
+      "region": "Louisiana",
+      "region_code": "LA",
+      "postal_code": "71110",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.494344,
+      "longitude": -93.678015
+    },
     "email_addresses": [
       {
         "email_address": "tmo.mail@us.af.mil",
@@ -4978,16 +5230,18 @@
   {
     "name": "Columbus AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "495 Harpe Blvd",
-    "extended_address": "Suite 120",
-    "locality": "Columbus AFB",
-    "region": "Mississippi",
-    "region_code": "MS",
-    "postal_code": "39710",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 33.631007,
-    "longitude": -88.44617,
+    "location": {
+      "street_address": "495 Harpe Blvd",
+      "extended_address": "Suite 120",
+      "locality": "Columbus AFB",
+      "region": "Mississippi",
+      "region_code": "MS",
+      "postal_code": "39710",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 33.631007,
+      "longitude": -88.44617
+    },
     "email_addresses": [
       {
         "email_address": "tmo@columbus.af.mil",
@@ -5017,16 +5271,18 @@
   {
     "name": "Dyess AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "417 3rd St",
-    "extended_address": "Bldg 7233/Rm 221",
-    "locality": "Dyess AFB",
-    "region": "Texas",
-    "region_code": "TX",
-    "postal_code": "79607",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.4311785,
-    "longitude": -99.8438887,
+    "location": {
+      "street_address": "417 3rd St",
+      "extended_address": "Bldg 7233/Rm 221",
+      "locality": "Dyess AFB",
+      "region": "Texas",
+      "region_code": "TX",
+      "postal_code": "79607",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.4311785,
+      "longitude": -99.8438887
+    },
     "email_addresses": [
       {
         "email_address": "7lrslgrt@dyess.af.mil",
@@ -5057,16 +5313,18 @@
   {
     "name": "Eglin AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "310 Van Matre Blvd",
-    "extended_address": "Bldg 210",
-    "locality": "Eglin Air Force Base",
-    "region": "Florida",
-    "region_code": "FL",
-    "postal_code": "32542",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 30.482639,
-    "longitude": -86.505618,
+    "location": {
+      "street_address": "310 Van Matre Blvd",
+      "extended_address": "Bldg 210",
+      "locality": "Eglin Air Force Base",
+      "region": "Florida",
+      "region_code": "FL",
+      "postal_code": "32542",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 30.482639,
+      "longitude": -86.505618
+    },
     "email_addresses": [
       {
         "email_address": "96lrs.lgrt.customerservice@us.af.mil",
@@ -5097,16 +5355,18 @@
   {
     "name": "Ellington Field ANGB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "14657 Sneider St",
-    "extended_address": "Ste 144, Bldg 1057, Rm 151",
-    "locality": "Houston",
-    "region": "Texas",
-    "region_code": "TX",
-    "postal_code": "77034",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 29.837692,
-    "longitude": -95351038.0,
+    "location": {
+      "street_address": "14657 Sneider St",
+      "extended_address": "Ste 144, Bldg 1057, Rm 151",
+      "locality": "Houston",
+      "region": "Texas",
+      "region_code": "TX",
+      "postal_code": "77034",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 29.837692,
+      "longitude": -95351038.0
+    },
     "email_addresses": [
       {
         "email_address": "usaf.tx.147-rw.mbx.JPPSO@mail.mil",
@@ -5136,16 +5396,18 @@
   {
     "name": "Fort Sam Houston",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "2484 Stanley Rd",
-    "extended_address": null,
-    "locality": "San Antonio",
-    "region": "Texas",
-    "region_code": "TX",
-    "postal_code": "78234",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 29.4499,
-    "longitude": -98.45454,
+    "location": {
+      "street_address": "2484 Stanley Rd",
+      "extended_address": null,
+      "locality": "San Antonio",
+      "region": "Texas",
+      "region_code": "TX",
+      "postal_code": "78234",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 29.4499,
+      "longitude": -98.45454
+    },
     "email_addresses": [
       {
         "email_address": "502LRS.LGRDF.PersonalProperty@us.af.mil",
@@ -5175,16 +5437,18 @@
   {
     "name": "Hurlburt AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "212 Lukasik Ave",
-    "extended_address": "Ste 157",
-    "locality": "Hurlburt Field",
-    "region": "Florida",
-    "region_code": "FL",
-    "postal_code": "32544",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 30.419269,
-    "longitude": -86.698863,
+    "location": {
+      "street_address": "212 Lukasik Ave",
+      "extended_address": "Ste 157",
+      "locality": "Hurlburt Field",
+      "region": "Florida",
+      "region_code": "FL",
+      "postal_code": "32544",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 30.419269,
+      "longitude": -86.698863
+    },
     "email_addresses": [
       {
         "email_address": "1solrs.tm@us.af.mil",
@@ -5214,16 +5478,18 @@
   {
     "name": "Keesler AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "500 Fisher St",
-    "extended_address": "81 LRS/LGRDF, Room 114",
-    "locality": "Keesler AFB",
-    "region": "Mississippi",
-    "region_code": "MS",
-    "postal_code": "39534",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 30.411043,
-    "longitude": -88.914231,
+    "location": {
+      "street_address": "500 Fisher St",
+      "extended_address": "81 LRS/LGRDF, Room 114",
+      "locality": "Keesler AFB",
+      "region": "Mississippi",
+      "region_code": "MS",
+      "postal_code": "39534",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 30.411043,
+      "longitude": -88.914231
+    },
     "email_addresses": [
       {
         "email_address": "81lrs.tmf@us.af.mil",
@@ -5254,16 +5520,18 @@
   {
     "name": "Laughlin AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "427 Liberty Dr",
-    "extended_address": "Bldg 77/246, Room 110",
-    "locality": "Laughlin Air Force Base",
-    "region": "Texas",
-    "region_code": "TX",
-    "postal_code": "78843",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 29.365581,
-    "longitude": -100.798238,
+    "location": {
+      "street_address": "427 Liberty Dr",
+      "extended_address": "Bldg 77/246, Room 110",
+      "locality": "Laughlin Air Force Base",
+      "region": "Texas",
+      "region_code": "TX",
+      "postal_code": "78843",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 29.365581,
+      "longitude": -100.798238
+    },
     "email_addresses": [
       {
         "email_address": "udg_Akima/TMO_PersonalProperty@us.af.mil",
@@ -5294,16 +5562,18 @@
   {
     "name": "Little Rock AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "Vandenberg Blvd",
-    "extended_address": "Bldg 1255, Ste 104",
-    "locality": "Little Rock AFB",
-    "region": "Arkansas",
-    "region_code": "AR",
-    "postal_code": "72023",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 34.887978,
-    "longitude": -92.109956,
+    "location": {
+      "street_address": "Vandenberg Blvd",
+      "extended_address": "Bldg 1255, Ste 104",
+      "locality": "Little Rock AFB",
+      "region": "Arkansas",
+      "region_code": "AR",
+      "postal_code": "72023",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 34.887978,
+      "longitude": -92.109956
+    },
     "email_addresses": [
       {
         "email_address": "19LRS.LGRDF.HHG@us.af.mil",
@@ -5333,16 +5603,18 @@
   {
     "name": "MacDill AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "8307 Cypress Stand Dr",
-    "extended_address": null,
-    "locality": "Tampa",
-    "region": "Florida",
-    "region_code": "FL",
-    "postal_code": "33621",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 27.846583,
-    "longitude": -82.48592,
+    "location": {
+      "street_address": "8307 Cypress Stand Dr",
+      "extended_address": null,
+      "locality": "Tampa",
+      "region": "Florida",
+      "region_code": "FL",
+      "postal_code": "33621",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 27.846583,
+      "longitude": -82.48592
+    },
     "email_addresses": [
       {
         "email_address": "tmo1@us.af.mil",
@@ -5373,16 +5645,18 @@
   {
     "name": "Maxwell AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "50 LeMay Plaza S.",
-    "extended_address": "Bldg 804",
-    "locality": "Maxwell AFB",
-    "region": "Alabama",
-    "region_code": "AL",
-    "postal_code": "36112",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.378399,
-    "longitude": -86.352457,
+    "location": {
+      "street_address": "50 LeMay Plaza S.",
+      "extended_address": "Bldg 804",
+      "locality": "Maxwell AFB",
+      "region": "Alabama",
+      "region_code": "AL",
+      "postal_code": "36112",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.378399,
+      "longitude": -86.352457
+    },
     "email_addresses": [
       {
         "email_address": "42LRSPersonalProperty@us.af.mil",
@@ -5417,16 +5691,18 @@
   {
     "name": "Moody AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "105 Flying Tiger Way",
-    "extended_address": "Suite 179",
-    "locality": "Moody Air Force Base",
-    "region": "Georgia",
-    "region_code": "GA",
-    "postal_code": "31699",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 30.967764,
-    "longitude": -83.192822,
+    "location": {
+      "street_address": "105 Flying Tiger Way",
+      "extended_address": "Suite 179",
+      "locality": "Moody Air Force Base",
+      "region": "Georgia",
+      "region_code": "GA",
+      "postal_code": "31699",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 30.967764,
+      "longitude": -83.192822
+    },
     "email_addresses": [
       {
         "email_address": "23LRS.LGRDF.PersonalProperty@us.af.mil",
@@ -5456,16 +5732,18 @@
   {
     "name": "Patrick AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "972 South Patrick Dr",
-    "extended_address": "Bldg 821",
-    "locality": "Patrick AFB",
-    "region": "Florida",
-    "region_code": "FL",
-    "postal_code": "32925",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 28.187251,
-    "longitude": -80.606179,
+    "location": {
+      "street_address": "972 South Patrick Dr",
+      "extended_address": "Bldg 821",
+      "locality": "Patrick AFB",
+      "region": "Florida",
+      "region_code": "FL",
+      "postal_code": "32925",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 28.187251,
+      "longitude": -80.606179
+    },
     "email_addresses": [
       {
         "email_address": "45LRS.LGRDF.TMOPPTY@US.AF.MIL",
@@ -5496,16 +5774,18 @@
   {
     "name": "Randolph AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "555 D St East",
-    "extended_address": "502 LRS/LGRDF",
-    "locality": "Universal City",
-    "region": "Texas",
-    "region_code": "TX",
-    "postal_code": "78148",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 29.130567,
-    "longitude": -98.159155,
+    "location": {
+      "street_address": "555 D St East",
+      "extended_address": "502 LRS/LGRDF",
+      "locality": "Universal City",
+      "region": "Texas",
+      "region_code": "TX",
+      "postal_code": "78148",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 29.130567,
+      "longitude": -98.159155
+    },
     "email_addresses": [
       {
         "email_address": "502LRS.LGRDF.PersonalProperty@us.af.mil",
@@ -5534,16 +5814,18 @@
   {
     "name": "Robins AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "650 9th St",
-    "extended_address": null,
-    "locality": "Robins Air Force Base",
-    "region": "Georgia",
-    "region_code": "GA",
-    "postal_code": "31098",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.610627,
-    "longitude": -83.582187,
+    "location": {
+      "street_address": "650 9th St",
+      "extended_address": null,
+      "locality": "Robins Air Force Base",
+      "region": "Georgia",
+      "region_code": "GA",
+      "postal_code": "31098",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.610627,
+      "longitude": -83.582187
+    },
     "email_addresses": [
       {
         "email_address": "78LRS.lgrdf@us.af.mil",
@@ -5579,16 +5861,18 @@
   {
     "name": "Sheppard AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "426 5th Ave",
-    "extended_address": "Ste 10",
-    "locality": "Sheppard Air Force Base",
-    "region": "Texas",
-    "region_code": "TX",
-    "postal_code": "76311",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 33.972091,
-    "longitude": -98.50836,
+    "location": {
+      "street_address": "426 5th Ave",
+      "extended_address": "Ste 10",
+      "locality": "Sheppard Air Force Base",
+      "region": "Texas",
+      "region_code": "TX",
+      "postal_code": "76311",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 33.972091,
+      "longitude": -98.50836
+    },
     "email_addresses": [
       {
         "email_address": "TMO402DS@us.af.mil",
@@ -5619,16 +5903,18 @@
   {
     "name": "Tinker AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "469 Century Blvd",
-    "extended_address": "Building #469",
-    "locality": "Tinker AFB",
-    "region": "Oklahoma",
-    "region_code": "OK",
-    "postal_code": "73145",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 35.429034,
-    "longitude": -97.399555,
+    "location": {
+      "street_address": "469 Century Blvd",
+      "extended_address": "Building #469",
+      "locality": "Tinker AFB",
+      "region": "Oklahoma",
+      "region_code": "OK",
+      "postal_code": "73145",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.429034,
+      "longitude": -97.399555
+    },
     "email_addresses": [
       {
         "email_address": "tinkertmo@us.af.mil",
@@ -5663,16 +5949,18 @@
   {
     "name": "Tyndall AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "445 Suwanne Rd",
-    "extended_address": "Bldg 662 Suite 152",
-    "locality": "Tyndall Air Force Base",
-    "region": "Florida",
-    "region_code": "FL",
-    "postal_code": "32403",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 30.065561,
-    "longitude": -85.586502,
+    "location": {
+      "street_address": "445 Suwanne Rd",
+      "extended_address": "Bldg 662 Suite 152",
+      "locality": "Tyndall Air Force Base",
+      "region": "Florida",
+      "region_code": "FL",
+      "postal_code": "32403",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 30.065561,
+      "longitude": -85.586502
+    },
     "email_addresses": [
       {
         "email_address": "cpfl-tmo@us.af.mil",
@@ -5702,16 +5990,18 @@
   {
     "name": "Vance AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "400 Young Rd",
-    "extended_address": "Bldg. 200, Suite 202",
-    "locality": "Vance AFB",
-    "region": "Oklahoma",
-    "region_code": "OK",
-    "postal_code": "73705",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 36.3393,
-    "longitude": -97.913061,
+    "location": {
+      "street_address": "400 Young Rd",
+      "extended_address": "Bldg. 200, Suite 202",
+      "locality": "Vance AFB",
+      "region": "Oklahoma",
+      "region_code": "OK",
+      "postal_code": "73705",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 36.3393,
+      "longitude": -97.913061
+    },
     "email_addresses": [
       {
         "email_address": "71iss.lgr@us.af.mil",
@@ -5742,16 +6032,18 @@
   {
     "name": "McChord AFB",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "100 Colonel Joe Jackson Blvd",
-    "extended_address": null,
-    "locality": "Joint Base Lewis-McChord",
-    "region": "Washington",
-    "region_code": "WA",
-    "postal_code": "98438",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 47.133562,
-    "longitude": -122.485584,
+    "location": {
+      "street_address": "100 Colonel Joe Jackson Blvd",
+      "extended_address": null,
+      "locality": "Joint Base Lewis-McChord",
+      "region": "Washington",
+      "region_code": "WA",
+      "postal_code": "98438",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 47.133562,
+      "longitude": -122.485584
+    },
     "email_addresses": [
       {
         "email_address": "627LRS.TMO@us.af.mil",
@@ -5782,16 +6074,18 @@
   {
     "name": "JBER Travel Center-Elmendorf",
     "shipping_office_name": null,
-    "street_address": "8517 20th St",
-    "extended_address": "773 LRS/LGRNP, Ste 247",
-    "locality": "JBER",
-    "region": "Alaska",
-    "region_code": "AK",
-    "postal_code": "99506",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 61.2416,
-    "longitude": -149.801798,
+    "location": {
+      "street_address": "8517 20th St",
+      "extended_address": "773 LRS/LGRNP, Ste 247",
+      "locality": "JBER",
+      "region": "Alaska",
+      "region_code": "AK",
+      "postal_code": "99506",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 61.2416,
+      "longitude": -149.801798
+    },
     "email_addresses": [
       {
         "email_address": "EDFTravel@us.af.mil",
@@ -5821,16 +6115,18 @@
   {
     "name": "JBER Travel Center-Richardson",
     "shipping_office_name": null,
-    "street_address": "600 Richardson Dr",
-    "extended_address": "773 LRS/LGRNP, Rm B145",
-    "locality": "JBER",
-    "region": "Alaska",
-    "region_code": "AK",
-    "postal_code": "99505",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 61.253557,
-    "longitude": -149.700437,
+    "location": {
+      "street_address": "600 Richardson Dr",
+      "extended_address": "773 LRS/LGRNP, Rm B145",
+      "locality": "JBER",
+      "region": "Alaska",
+      "region_code": "AK",
+      "postal_code": "99505",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 61.253557,
+      "longitude": -149.700437
+    },
     "email_addresses": [
       {
         "email_address": "EDFTravel@us.af.mil",
@@ -5860,16 +6156,18 @@
   {
     "name": "Eielson AFB",
     "shipping_office_name": null,
-    "street_address": "2811 Industrial Ave",
-    "extended_address": "345 LRS/LGRDF",
-    "locality": "Eielson AFB",
-    "region": "Alaska",
-    "region_code": "AK",
-    "postal_code": "99702",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 64.664486,
-    "longitude": -147.074407,
+    "location": {
+      "street_address": "2811 Industrial Ave",
+      "extended_address": "345 LRS/LGRDF",
+      "locality": "Eielson AFB",
+      "region": "Alaska",
+      "region_code": "AK",
+      "postal_code": "99702",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 64.664486,
+      "longitude": -147.074407
+    },
     "email_addresses": [
       {
         "email_address": "354lrs.personalpropertyoffice@us.af.mil",
@@ -5899,16 +6197,18 @@
   {
     "name": "Naval Postgraduate School",
     "shipping_office_name": "JPPSO SW",
-    "street_address": "1281 B Leahy Rd",
-    "extended_address": null,
-    "locality": "Monterey",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "93940",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 36.58193,
-    "longitude": -121.880776,
+    "location": {
+      "street_address": "1281 B Leahy Rd",
+      "extended_address": null,
+      "locality": "Monterey",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "93940",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 36.58193,
+      "longitude": -121.880776
+    },
     "email_addresses": [
       {
         "email_address": "persprop@nps.edu",
@@ -5938,16 +6238,18 @@
   {
     "name": "Dugway Proving Ground",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "Bldg 5464",
-    "extended_address": null,
-    "locality": "Dugway",
-    "region": "Utah",
-    "region_code": "UT",
-    "postal_code": "84022",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 40.216501,
-    "longitude": -112.753042,
+    "location": {
+      "street_address": "Bldg 5464",
+      "extended_address": null,
+      "locality": "Dugway",
+      "region": "Utah",
+      "region_code": "UT",
+      "postal_code": "84022",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 40.216501,
+      "longitude": -112.753042
+    },
     "email_addresses": [
       {
         "email_address": "deanna.i.olson.civ@mail.mil",
@@ -5976,16 +6278,18 @@
   {
     "name": "DMO MCAS Beaufort",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "Drayton St",
-    "extended_address": "Bldg 612",
-    "locality": "MCAS Beaufort",
-    "region": "South Carolina",
-    "region_code": "SC",
-    "postal_code": "29904",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.460625,
-    "longitude": -80.725401,
+    "location": {
+      "street_address": "Drayton St",
+      "extended_address": "Bldg 612",
+      "locality": "MCAS Beaufort",
+      "region": "South Carolina",
+      "region_code": "SC",
+      "postal_code": "29904",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.460625,
+      "longitude": -80.725401
+    },
     "email_addresses": [
       {
         "email_address": "mcas.Beaufort.tmo.usmc.mil",
@@ -6015,16 +6319,18 @@
   {
     "name": "DMO Camp Lejeune",
     "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
-    "street_address": "Ash St",
-    "extended_address": "Bldg 1011",
-    "locality": "Camp Lejeune",
-    "region": "North Carolina",
-    "region_code": "NC",
-    "postal_code": "28547",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 34.667999,
-    "longitude": -77.327863,
+    "location": {
+      "street_address": "Ash St",
+      "extended_address": "Bldg 1011",
+      "locality": "Camp Lejeune",
+      "region": "North Carolina",
+      "region_code": "NC",
+      "postal_code": "28547",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 34.667999,
+      "longitude": -77.327863
+    },
     "email_addresses": [
       {
         "email_address": "ppcig@usmc.mil",
@@ -6061,16 +6367,18 @@
   {
     "name": "Personal Property Shipping Office Miami Beach",
     "shipping_office_name": null,
-    "street_address": "15610 SW 117 Ave",
-    "extended_address": null,
-    "locality": "Miami",
-    "region": "Florida",
-    "region_code": "FL",
-    "postal_code": "33177",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 25.623806,
-    "longitude": -80.382386,
+    "location": {
+      "street_address": "15610 SW 117 Ave",
+      "extended_address": null,
+      "locality": "Miami",
+      "region": "Florida",
+      "region_code": "FL",
+      "postal_code": "33177",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 25.623806,
+      "longitude": -80.382386
+    },
     "email_addresses": [
       {
         "email_address": "d07-smb-basemiamibeach-ppso@uscg.mil",
@@ -6095,16 +6403,18 @@
   {
     "name": "Mountain Warfare Training Center",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "HC 83",
-    "extended_address": "Bldg 7047",
-    "locality": "Bridgeport",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "93517",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.356402,
-    "longitude": -119.518047,
+    "location": {
+      "street_address": "HC 83",
+      "extended_address": "Bldg 7047",
+      "locality": "Bridgeport",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "93517",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.356402,
+      "longitude": -119.518047
+    },
     "email_addresses": [
       {
         "email_address": "junior.destinoble@usmc.mil",
@@ -6128,16 +6438,18 @@
   {
     "name": "Personal Property Dept, Joint Base Pearl Harbor Hickam (JBPHH)",
     "shipping_office_name": null,
-    "street_address": "4825 Bougainville Dr",
-    "extended_address": null,
-    "locality": "Honolulu",
-    "region": "Hawaii",
-    "region_code": "HI",
-    "postal_code": "96818",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 21.344963,
-    "longitude": -157.930268,
+    "location": {
+      "street_address": "4825 Bougainville Dr",
+      "extended_address": null,
+      "locality": "Honolulu",
+      "region": "Hawaii",
+      "region_code": "HI",
+      "postal_code": "96818",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 21.344963,
+      "longitude": -157.930268
+    },
     "email_addresses": [
       {
         "email_address": "jppso_ph_counseling@navy.mil",
@@ -6167,16 +6479,18 @@
   {
     "name": "USMC San Diego Personal Property Office",
     "shipping_office_name": "JPPSO SW",
-    "street_address": "4100 Hochmuth Ave",
-    "extended_address": null,
-    "locality": "San Diego",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "92140",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.744329,
-    "longitude": -117.195234,
+    "location": {
+      "street_address": "4100 Hochmuth Ave",
+      "extended_address": null,
+      "locality": "San Diego",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "92140",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.744329,
+      "longitude": -117.195234
+    },
     "email_addresses": [
       {
         "email_address": "selena.espinoza@usmc.mil",
@@ -6200,16 +6514,18 @@
   {
     "name": "USCG Mobile Personal Property Office",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "8501 Tanner Williams Rd",
-    "extended_address": null,
-    "locality": "Mobile",
-    "region": "Alabama",
-    "region_code": "AL",
-    "postal_code": "36608",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 30.698491,
-    "longitude": -88.239228,
+    "location": {
+      "street_address": "8501 Tanner Williams Rd",
+      "extended_address": null,
+      "locality": "Mobile",
+      "region": "Alabama",
+      "region_code": "AL",
+      "postal_code": "36608",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 30.698491,
+      "longitude": -88.239228
+    },
     "email_addresses": [
       {
         "email_address": "d08-pf-xatmo-tmo@uscg.mil",
@@ -6233,16 +6549,18 @@
   {
     "name": "USMC Miramar Personal Property Office",
     "shipping_office_name": "JPPSO SW",
-    "street_address": "2258 Delta Rd",
-    "extended_address": null,
-    "locality": "Miramar",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "92145",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.890502,
-    "longitude": -117.131852,
+    "location": {
+      "street_address": "2258 Delta Rd",
+      "extended_address": null,
+      "locality": "Miramar",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "92145",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.890502,
+      "longitude": -117.131852
+    },
     "email_addresses": [
       {
         "email_address": "smbmiramarmcas.s4dmo@usmc.mil",
@@ -6269,16 +6587,18 @@
   {
     "name": "Pine Bluff Arsenal Transportation Office",
     "shipping_office_name": "Lackland AFB",
-    "street_address": "10020 Kabrich Cir",
-    "extended_address": "Bldg. 11-080",
-    "locality": "nPine Bluff",
-    "region": "Arkansas",
-    "region_code": "AR",
-    "postal_code": "71602",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 34.318094,
-    "longitude": -92.105669,
+    "location": {
+      "street_address": "10020 Kabrich Cir",
+      "extended_address": "Bldg. 11-080",
+      "locality": "nPine Bluff",
+      "region": "Arkansas",
+      "region_code": "AR",
+      "postal_code": "71602",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 34.318094,
+      "longitude": -92.105669
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.pinebluff.usamc.mbx.transportation-office@mail.mil",
@@ -6307,16 +6627,18 @@
   {
     "name": "Kaneohe Marine Corps Air Station Persona Property Office",
     "shipping_office_name": null,
-    "street_address": "C St",
-    "extended_address": "Bldg 209",
-    "locality": "Kaneohe",
-    "region": "Hawaii",
-    "region_code": "HI",
-    "postal_code": "96863",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 21.445013,
-    "longitude": -157.761927,
+    "location": {
+      "street_address": "C St",
+      "extended_address": "Bldg 209",
+      "locality": "Kaneohe",
+      "region": "Hawaii",
+      "region_code": "HI",
+      "postal_code": "96863",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 21.445013,
+      "longitude": -157.761927
+    },
     "email_addresses": [
       {
         "email_address": "usmcpersonalproperty@usmc.mil",
@@ -6346,16 +6668,18 @@
   {
     "name": "USCG Base Honolulu Transportation",
     "shipping_office_name": null,
-    "street_address": "400 Sand Island Pkwy",
-    "extended_address": null,
-    "locality": "Honolulu",
-    "region": "Hawaii",
-    "region_code": "HI",
-    "postal_code": "96819",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 21.306274,
-    "longitude": -157.873826,
+    "location": {
+      "street_address": "400 Sand Island Pkwy",
+      "extended_address": null,
+      "locality": "Honolulu",
+      "region": "Hawaii",
+      "region_code": "HI",
+      "postal_code": "96819",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 21.306274,
+      "longitude": -157.873826
+    },
     "email_addresses": [
       {
         "email_address": "d14-cmb-basehono-transportation@uscg.mil",
@@ -6379,16 +6703,18 @@
   {
     "name": "Camp Smith Personal Property Office",
     "shipping_office_name": null,
-    "street_address": "Elrod Rd",
-    "extended_address": "Bldg 3AA",
-    "locality": "Camp H M Smith",
-    "region": "Hawaii",
-    "region_code": "HI",
-    "postal_code": "96861",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 21.386987,
-    "longitude": -157.907917,
+    "location": {
+      "street_address": "Elrod Rd",
+      "extended_address": "Bldg 3AA",
+      "locality": "Camp H M Smith",
+      "region": "Hawaii",
+      "region_code": "HI",
+      "postal_code": "96861",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 21.386987,
+      "longitude": -157.907917
+    },
     "email_addresses": [
       {
         "email_address": "kbaz.mcbh.dmo.ppso.fmb@usmc.mil",
@@ -6417,16 +6743,18 @@
   {
     "name": "Logistics Readiness Center Household Goods Counseling Office",
     "shipping_office_name": "JPPSO-MA",
-    "street_address": "9910 Tracy Loop",
-    "extended_address": "Building 766",
-    "locality": "Fort Belvoir",
-    "region": "Virginia",
-    "region_code": "VA",
-    "postal_code": "22060",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.6884832,
-    "longitude": 77.1492344,
+    "location": {
+      "street_address": "9910 Tracy Loop",
+      "extended_address": "Building 766",
+      "locality": "Fort Belvoir",
+      "region": "Virginia",
+      "region_code": "VA",
+      "postal_code": "22060",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.6884832,
+      "longitude": 77.1492344
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.belvoir.usamc.mbx.outboundpcsing@mail.mil",
@@ -6455,16 +6783,18 @@
   {
     "name": "Schofield Barracks  / Fort Shafter Transportation office",
     "shipping_office_name": null,
-    "street_address": "Bldg 750 Ayers Rd",
-    "extended_address": "Rm 140",
-    "locality": "Schofield Barracks",
-    "region": "Hawaii",
-    "region_code": "HI",
-    "postal_code": "96857",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 21.498249,
-    "longitude": -158.058475,
+    "location": {
+      "street_address": "Bldg 750 Ayers Rd",
+      "extended_address": "Rm 140",
+      "locality": "Schofield Barracks",
+      "region": "Hawaii",
+      "region_code": "HI",
+      "postal_code": "96857",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 21.498249,
+      "longitude": -158.058475
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.schofield.402-afsb.list.lrchi-trans-pppo@mail.mil",
@@ -6491,16 +6821,18 @@
   {
     "name": "PACIFIC MISSILE RANGE FACILITY (KAUAI) - NAVY",
     "shipping_office_name": null,
-    "street_address": "Bldg 269 Nohili Rd",
-    "extended_address": null,
-    "locality": "Kauai",
-    "region": "Hawaii",
-    "region_code": "HI",
-    "postal_code": "96752",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 22.029833,
-    "longitude": -159.780985,
+    "location": {
+      "street_address": "Bldg 269 Nohili Rd",
+      "extended_address": null,
+      "locality": "Kauai",
+      "region": "Hawaii",
+      "region_code": "HI",
+      "postal_code": "96752",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 22.029833,
+      "longitude": -159.780985
+    },
     "email_addresses": [
       {
         "email_address": "tammy.perreria@navy.mil",
@@ -6525,16 +6857,18 @@
   {
     "name": "USCG Base Seattle",
     "shipping_office_name": "Joint Personal Property Shipping Office Northwest",
-    "street_address": "1519 Alaskan Way South",
-    "extended_address": null,
-    "locality": "Seattle",
-    "region": "Washington",
-    "region_code": "WA",
-    "postal_code": "98734",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 47.589561,
-    "longitude": -122.339908,
+    "location": {
+      "street_address": "1519 Alaskan Way South",
+      "extended_address": null,
+      "locality": "Seattle",
+      "region": "Washington",
+      "region_code": "WA",
+      "postal_code": "98734",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 47.589561,
+      "longitude": -122.339908
+    },
     "email_addresses": [
       {
         "email_address": "d13-pf-baseseaadmintask@uscg.mil",
@@ -6564,16 +6898,18 @@
   {
     "name": "PPPO Counseling Office JB Andrews AFB, MD",
     "shipping_office_name": "JPPSO-MA",
-    "street_address": "1500 West Perimeter Rd",
-    "extended_address": "Suite 2700",
-    "locality": "JB Andrews",
-    "region": "Maryland",
-    "region_code": "MD",
-    "postal_code": "20762",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.815013,
-    "longitude": -76.891089,
+    "location": {
+      "street_address": "1500 West Perimeter Rd",
+      "extended_address": "Suite 2700",
+      "locality": "JB Andrews",
+      "region": "Maryland",
+      "region_code": "MD",
+      "postal_code": "20762",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.815013,
+      "longitude": -76.891089
+    },
     "email_addresses": [
       {
         "email_address": "usaf.jbanafw.afdw-staff.mbx.11-tmocustomer-service@mail.mil",
@@ -6596,16 +6932,18 @@
   {
     "name": "PPPO Fort Detrick MD",
     "shipping_office_name": "JPPSO-MA",
-    "street_address": "1520 Freedman Dr",
-    "extended_address": "Suite 400 Room 203",
-    "locality": "Fort Detrick",
-    "region": "Maryland",
-    "region_code": "MD",
-    "postal_code": "21702",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 39.419713,
-    "longitude": -77.422799,
+    "location": {
+      "street_address": "1520 Freedman Dr",
+      "extended_address": "Suite 400 Room 203",
+      "locality": "Fort Detrick",
+      "region": "Maryland",
+      "region_code": "MD",
+      "postal_code": "21702",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 39.419713,
+      "longitude": -77.422799
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.detrick.asc.mbx.persproptravel@mail.mil",
@@ -6632,16 +6970,18 @@
   {
     "name": "PPPO Counseling Office, USCG Baltimore",
     "shipping_office_name": "JPPSO-MA",
-    "street_address": "2401 Hawkins Point Rd",
-    "extended_address": "Commanding Officer, Surface Forces Logistic Center, Transportation Office",
-    "locality": "Curtis Bay",
-    "region": "Maryland",
-    "region_code": "MD",
-    "postal_code": "21226",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 39.199291,
-    "longitude": -76.5688407,
+    "location": {
+      "street_address": "2401 Hawkins Point Rd",
+      "extended_address": "Commanding Officer, Surface Forces Logistic Center, Transportation Office",
+      "locality": "Curtis Bay",
+      "region": "Maryland",
+      "region_code": "MD",
+      "postal_code": "21226",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 39.199291,
+      "longitude": -76.5688407
+    },
     "email_addresses": [
       {
         "email_address": "Ronald.r.baker@uscg.mil",
@@ -6663,16 +7003,18 @@
   {
     "name": "PPPO COUNSELING OFFICE ABERDEEN PROVING GROUND",
     "shipping_office_name": "JPPSO-MA",
-    "street_address": "4305 Susquehanna Ave",
-    "extended_address": "Rm 307",
-    "locality": "Aberdeen Proving Ground",
-    "region": "Maryland",
-    "region_code": "MD",
-    "postal_code": "21005",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 39.482125,
-    "longitude": 76.138442,
+    "location": {
+      "street_address": "4305 Susquehanna Ave",
+      "extended_address": "Rm 307",
+      "locality": "Aberdeen Proving Ground",
+      "region": "Maryland",
+      "region_code": "MD",
+      "postal_code": "21005",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 39.482125,
+      "longitude": 76.138442
+    },
     "email_addresses": [
       {
         "email_address": "none available",
@@ -6702,16 +7044,18 @@
   {
     "name": "PPPO COUNSELING OFFICE ABERDEEN PROVING GROUND",
     "shipping_office_name": "JPPSO-MA",
-    "street_address": "4305 Susquehanna Ave",
-    "extended_address": null,
-    "locality": "Aberdeen Proving Ground",
-    "region": "Maryland",
-    "region_code": "MD",
-    "postal_code": "21005",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 39.482125,
-    "longitude": 76.138442,
+    "location": {
+      "street_address": "4305 Susquehanna Ave",
+      "extended_address": null,
+      "locality": "Aberdeen Proving Ground",
+      "region": "Maryland",
+      "region_code": "MD",
+      "postal_code": "21005",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 39.482125,
+      "longitude": 76.138442
+    },
     "email_addresses": [
       {
         "email_address": "none availalbe",
@@ -6741,16 +7085,18 @@
   {
     "name": "JBAB PPPO",
     "shipping_office_name": "JPPSO-MA",
-    "street_address": "Brookley Ave SW",
-    "extended_address": "JBAB PPPO Bldg 520, Suite 101",
-    "locality": "Washington",
-    "region": "District of Columbia",
-    "region_code": "DC",
-    "postal_code": "20032",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.838553,
-    "longitude": -77.014085,
+    "location": {
+      "street_address": "Brookley Ave SW",
+      "extended_address": "JBAB PPPO Bldg 520, Suite 101",
+      "locality": "Washington",
+      "region": "District of Columbia",
+      "region_code": "DC",
+      "postal_code": "20032",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.838553,
+      "longitude": -77.014085
+    },
     "email_addresses": [
       {
         "email_address": "flcn.tmo.jbab.fct@navy.mil",
@@ -6779,16 +7125,18 @@
   {
     "name": "PPPO Counseling Office, DMO JB Myer-Henderson Hall",
     "shipping_office_name": "JPPSO-MA",
-    "street_address": "1555 Southgate Rd",
-    "extended_address": "Henderson Hall, Bldg. 29, Rm 302",
-    "locality": "Arlington",
-    "region": "Virginia",
-    "region_code": "VA",
-    "postal_code": "22214",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.869373,
-    "longitude": -77.071767,
+    "location": {
+      "street_address": "1555 Southgate Rd",
+      "extended_address": "Henderson Hall, Bldg. 29, Rm 302",
+      "locality": "Arlington",
+      "region": "Virginia",
+      "region_code": "VA",
+      "postal_code": "22214",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.869373,
+      "longitude": -77.071767
+    },
     "email_addresses": [
       {
         "email_address": "m_hnhl_hqbn_dmo@usmc.mil",
@@ -6820,16 +7168,18 @@
   {
     "name": "PPPO-USCG Counseling Office, Washington DC",
     "shipping_office_name": "JPPSO-MA",
-    "street_address": "2703 Martin Luther King Ave SE",
-    "extended_address": "Stop 7118",
-    "locality": "Washington",
-    "region": "District of Columbia",
-    "region_code": "DC",
-    "postal_code": "20593",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.855448,
-    "longitude": -76.996236,
+    "location": {
+      "street_address": "2703 Martin Luther King Ave SE",
+      "extended_address": "Stop 7118",
+      "locality": "Washington",
+      "region": "District of Columbia",
+      "region_code": "DC",
+      "postal_code": "20593",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.855448,
+      "longitude": -76.996236
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.belvoir.imcom.mbx.jppsowa@mail.mil",
@@ -6851,16 +7201,18 @@
   {
     "name": "PPPO-USCG Counseling Office, Washington DC",
     "shipping_office_name": "JPPSO-MA",
-    "street_address": "2703 Martin Luther King Ave SE",
-    "extended_address": "Stop 7118",
-    "locality": "Washington",
-    "region": "District of Columbia",
-    "region_code": "DC",
-    "postal_code": "20593",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.855448,
-    "longitude": -76.9966236,
+    "location": {
+      "street_address": "2703 Martin Luther King Ave SE",
+      "extended_address": "Stop 7118",
+      "locality": "Washington",
+      "region": "District of Columbia",
+      "region_code": "DC",
+      "postal_code": "20593",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.855448,
+      "longitude": -76.9966236
+    },
     "email_addresses": [
       {
         "email_address": "Deanna.C.Morris@uscg.mil",
@@ -6884,16 +7236,18 @@
   {
     "name": "Fort Meade Transportation Office",
     "shipping_office_name": "JPPSO-MA",
-    "street_address": "2234 Huber Rd",
-    "extended_address": "Room 116",
-    "locality": "Fort Meade",
-    "region": "Maryland",
-    "region_code": "MD",
-    "postal_code": "20755",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 39.093,
-    "longitude": -76.7255,
+    "location": {
+      "street_address": "2234 Huber Rd",
+      "extended_address": "Room 116",
+      "locality": "Fort Meade",
+      "region": "Maryland",
+      "region_code": "MD",
+      "postal_code": "20755",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 39.093,
+      "longitude": -76.7255
+    },
     "email_addresses": [
       {
         "email_address": "allan.a.grant.civ@mail.mil",
@@ -6924,16 +7278,18 @@
   {
     "name": "LRC ITD PPPO",
     "shipping_office_name": "JPPSO-MA",
-    "street_address": "7162 Hedgerow Rd",
-    "extended_address": null,
-    "locality": "Fort Campbell",
-    "region": "Kentucky",
-    "region_code": "KY",
-    "postal_code": "42223",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 36.667614,
-    "longitude": -87.477524,
+    "location": {
+      "street_address": "7162 Hedgerow Rd",
+      "extended_address": null,
+      "locality": "Fort Campbell",
+      "region": "Kentucky",
+      "region_code": "KY",
+      "postal_code": "42223",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 36.667614,
+      "longitude": -87.477524
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.campbell.asc.mbx.lrc-obpersprop@mail.mil",
@@ -6964,16 +7320,18 @@
   {
     "name": "PPPO Counseling Office DMO Quantico",
     "shipping_office_name": "JPPSO-MA",
-    "street_address": "2009 Zeilin Rd",
-    "extended_address": "PPPO Counseling Office DMO Quantico, Bldg. 2009",
-    "locality": "MCB Quantico",
-    "region": "Virginia",
-    "region_code": "VA",
-    "postal_code": "22134",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.515568,
-    "longitude": -77.304933,
+    "location": {
+      "street_address": "2009 Zeilin Rd",
+      "extended_address": "PPPO Counseling Office DMO Quantico, Bldg. 2009",
+      "locality": "MCB Quantico",
+      "region": "Virginia",
+      "region_code": "VA",
+      "postal_code": "22134",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.515568,
+      "longitude": -77.304933
+    },
     "email_addresses": [
       {
         "email_address": "QUANTICO_DMO_HHG@USMC.MIL",
@@ -7002,16 +7360,18 @@
   {
     "name": "Department of the Army Transportation Office PPPO Fort Lee, VA",
     "shipping_office_name": "JPPSO-MA",
-    "street_address": "1401 B Ave",
-    "extended_address": "Bldg 3400 Rm 119",
-    "locality": "Fort Lee",
-    "region": "Virginia",
-    "region_code": "VA",
-    "postal_code": "23801",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 37.24333,
-    "longitude": 77.337792,
+    "location": {
+      "street_address": "1401 B Ave",
+      "extended_address": "Bldg 3400 Rm 119",
+      "locality": "Fort Lee",
+      "region": "Virginia",
+      "region_code": "VA",
+      "postal_code": "23801",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 37.24333,
+      "longitude": 77.337792
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.lee.imcom.mbx.leee-pptydel@mail.mil",
@@ -7040,16 +7400,18 @@
   {
     "name": "Hanscom AFB",
     "shipping_office_name": "JPPSO-NE (DET 2)",
-    "street_address": "10 Kirtland St",
-    "extended_address": "Bldg 1240 Rm 200",
-    "locality": "Hanscom AFB",
-    "region": "Massachusetts",
-    "region_code": "MA",
-    "postal_code": "01731",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 42.462762,
-    "longitude": -71.271575,
+    "location": {
+      "street_address": "10 Kirtland St",
+      "extended_address": "Bldg 1240 Rm 200",
+      "locality": "Hanscom AFB",
+      "region": "Massachusetts",
+      "region_code": "MA",
+      "postal_code": "01731",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 42.462762,
+      "longitude": -71.271575
+    },
     "email_addresses": [
       {
         "email_address": "jppso.hafb@us.af.mil",

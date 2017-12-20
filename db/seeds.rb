@@ -61,30 +61,32 @@ puts 'Loading shipping offices...'
 shipping_offices = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'shipping_offices.json')))
 
 shipping_offices.each do |office|
-  ShippingOffice.create(office)
+  ShippingOffice.create(office.except('location').merge(location_attributes: office['location']))
 end
 
 puts 'Loading transportation offices...'
 transportation_offices = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'transportation_offices.json')))
 
 transportation_offices.each do |office|
-  shipping_office_id = ShippingOffice.where(name: office['shipping_office_name']).first.id if office['shipping_office_name']
+  shipping_office_id = ShippingOffice.where(name: office['shipping_office_name']).try(:first).try(:id)
 
-  TransportationOffice.create(office.except('shipping_office_name').merge(shipping_office_id: shipping_office_id))
+  TransportationOffice.create(office.except('location', 'shipping_office_name').merge(location_attributes: office['location'], shipping_office_id: shipping_office_id))
 end
 
 puts 'Loading weight scales...'
 weight_scales = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'weight_scales.json')))
 
 weight_scales.each do |weight_scale|
-  WeightScale.create(weight_scale)
+  WeightScale.create(weight_scale.except('location').merge(location_attributes: weight_scale['location']))
 end
 
 puts 'Loading installations...'
 installations = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'installations.json')))
 
 installations.each do |installation|
-  Installation.create(installation.reject { |key| ['service_name', 'service_code'].include?(key) })
+  branch_of_service_id = BranchOfService.where(slug: installation['branch_of_service_slug']).try(:first).try(:id)
+
+  Installation.create(installation.except('branch_of_service_slug', 'location').merge(branch_of_service_id: branch_of_service_id, location_attributes: installation['location']))
 end
 
 puts 'Loading household goods weights...'

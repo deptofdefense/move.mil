@@ -1,16 +1,18 @@
 [
   {
     "name": "Joint Personal Property Shipping Office Northwest",
-    "street_address": "2150 Liggett Ave",
-    "extended_address": "Building 2150, Box 339500, Mail Stop 53",
-    "locality": "Joint Base Lewis McChord",
-    "region": "Washington",
-    "region_code": "WA",
-    "postal_code": "98433",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 47.8802,
-    "longitude": -122.593356,
+    "location": {
+      "street_address": "2150 Liggett Ave",
+      "extended_address": "Building 2150, Box 339500, Mail Stop 53",
+      "locality": "Joint Base Lewis McChord",
+      "region": "Washington",
+      "region_code": "WA",
+      "postal_code": "98433",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 47.8802,
+      "longitude": -122.593356
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.jblm.usamc.mbx.jppsonw-cs@mail.mil ",
@@ -43,16 +45,18 @@
   },
   {
     "name": "JPPSO-NC / JPPSO-COS",
-    "street_address": "5136 Eagle Dr",
-    "extended_address": null,
-    "locality": "U.S. Air Force Academy",
-    "region": "Colorado",
-    "region_code": "CO",
-    "postal_code": "80840",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.978249,
-    "longitude": -104.864165,
+    "location": {
+      "street_address": "5136 Eagle Dr",
+      "extended_address": null,
+      "locality": "U.S. Air Force Academy",
+      "region": "Colorado",
+      "region_code": "CO",
+      "postal_code": "80840",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.978249,
+      "longitude": -104.864165
+    },
     "email_addresses": [
       {
         "email_address": "jppso-nc.pppo-afacademy@us.af.mil",
@@ -81,16 +85,18 @@
   },
   {
     "name": "JPPSO SW",
-    "street_address": "32nd St",
-    "extended_address": "Bldg 3376",
-    "locality": "San Diego",
-    "region": "California",
-    "region_code": "CA",
-    "postal_code": "92136",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 32.6924637,
-    "longitude": -117.1302941,
+    "location": {
+      "street_address": "32nd St",
+      "extended_address": "Bldg 3376",
+      "locality": "San Diego",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "92136",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 32.6924637,
+      "longitude": -117.1302941
+    },
     "email_addresses": [
       {
         "email_address": "jppso_sw_qa@navy.mil",
@@ -116,16 +122,18 @@
   },
   {
     "name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
-    "street_address": "101 Vernon Ave",
-    "extended_address": "Bldg 461 RM 106/107",
-    "locality": "Panama City Beach",
-    "region": "Florida",
-    "region_code": "FL",
-    "postal_code": "32407",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 30.176416,
-    "longitude": -85.758076,
+    "location": {
+      "street_address": "101 Vernon Ave",
+      "extended_address": "Bldg 461 RM 106/107",
+      "locality": "Panama City Beach",
+      "region": "Florida",
+      "region_code": "FL",
+      "postal_code": "32407",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 30.176416,
+      "longitude": -85.758076
+    },
     "email_addresses": [
       {
         "email_address": "HHG_Panamacity@navy.mil",
@@ -154,16 +162,18 @@
   },
   {
     "name": "JPPSO-MA",
-    "street_address": "9325 Gunston Rd",
-    "extended_address": "Ste N110 Bldg. 1466",
-    "locality": "Fort Belvoir",
-    "region": "Virginia",
-    "region_code": "VA",
-    "postal_code": "22060",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 38.704505,
-    "longitude": -77.148212,
+    "location": {
+      "street_address": "9325 Gunston Rd",
+      "extended_address": "Ste N110 Bldg. 1466",
+      "locality": "Fort Belvoir",
+      "region": "Virginia",
+      "region_code": "VA",
+      "postal_code": "22060",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.704505,
+      "longitude": -77.148212
+    },
     "email_addresses": [
       {
         "email_address": "usarmy.belvoir.imcom.mbx.jppsowa@mail.mil",
@@ -196,16 +206,18 @@
   },
   {
     "name": "JPPSO-NE (DET 2)",
-    "street_address": "25 Chennault St.",
-    "extended_address": "Building 1723",
-    "locality": "Bedford",
-    "region": "Massachusetts",
-    "region_code": "MA",
-    "postal_code": "01731",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 42.4638084,
-    "longitude": -71.2842004,
+    "location": {
+      "street_address": "25 Chennault St.",
+      "extended_address": "Building 1723",
+      "locality": "Bedford",
+      "region": "Massachusetts",
+      "region_code": "MA",
+      "postal_code": "01731",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 42.4638084,
+      "longitude": -71.2842004
+    },
     "email_addresses": [
       {
         "email_address": "jppsone.cs@us.af.mil"
@@ -221,16 +233,18 @@
   },
   {
     "name": "Lackland AFB",
-    "street_address": "1561 Stewart St",
-    "extended_address": null,
-    "locality": "San Antonio",
-    "region": "Texas",
-    "region_code": "TX",
-    "postal_code": "78236",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 29.38191,
-    "longitude": -98.625776,
+    "location": {
+      "street_address": "1561 Stewart St",
+      "extended_address": null,
+      "locality": "San Antonio",
+      "region": "Texas",
+      "region_code": "TX",
+      "postal_code": "78236",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 29.38191,
+      "longitude": -98.625776
+    },
     "email_addresses": [
       {
         "email_address": "502LRS.LGRDF.PersonalProperty@us.af.mil",
@@ -259,16 +273,18 @@
   },
   {
     "name": "JPPSO Anchorage",
-    "street_address": "8517 20th St",
-    "extended_address": "Ste 239",
-    "locality": "JBER",
-    "region": "Alaska",
-    "region_code": "AK",
-    "postal_code": "99506",
-    "country_name": "United States",
-    "country_code": "US",
-    "latitude": 61.2416,
-    "longitude": -149.801798,
+    "location": {
+      "street_address": "8517 20th St",
+      "extended_address": "Ste 239",
+      "locality": "JBER",
+      "region": "Alaska",
+      "region_code": "AK",
+      "postal_code": "99506",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 61.2416,
+      "longitude": -149.801798
+    },
     "email_addresses": [
       {
         "email_address": "jppso-anc@us.af.mil",
