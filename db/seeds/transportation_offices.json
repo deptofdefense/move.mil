@@ -7178,39 +7178,6 @@
       "country_name": "United States",
       "country_code": "US",
       "latitude": 38.855448,
-      "longitude": -76.996236
-    },
-    "email_addresses": [
-      {
-        "email_address": "usarmy.belvoir.imcom.mbx.jppsowa@mail.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "202-372-4033",
-        "phone_type": "voice",
-        "dsn": false
-      }
-    ],
-    "hours": "Mon - Fri; 0800 - 1600",
-    "services": [
-      "Walk-In Help"
-    ]
-  },
-  {
-    "name": "PPPO-USCG Counseling Office, Washington DC",
-    "shipping_office_name": "JPPSO-MA",
-    "location": {
-      "street_address": "2703 Martin Luther King Ave SE",
-      "extended_address": "Stop 7118",
-      "locality": "Washington",
-      "region": "District of Columbia",
-      "region_code": "DC",
-      "postal_code": "20593",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 38.855448,
       "longitude": -76.9966236
     },
     "email_addresses": [
