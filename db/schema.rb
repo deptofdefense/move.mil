@@ -186,14 +186,6 @@ ActiveRecord::Schema.define(version: 20171221152756) do
     t.index ["branch_of_service_id"], name: "index_service_specific_posts_on_branch_of_service_id"
   end
 
-  create_table "shorthauls", force: :cascade do |t|
-    t.int4range "cwt_mi"
-    t.decimal "rate", precision: 7, scale: 2
-    t.daterange "effective"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "shipping_offices", force: :cascade do |t|
     t.text "name", null: false
     t.json "email_addresses", default: []
@@ -206,6 +198,14 @@ ActiveRecord::Schema.define(version: 20171221152756) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "shorthauls", force: :cascade do |t|
+    t.int4range "cwt_mi"
+    t.decimal "rate", precision: 7, scale: 2
+    t.daterange "effective"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "top_tsp_by_channel_linehaul_discounts", force: :cascade do |t|
     t.text "orig"
     t.text "dest"
@@ -214,6 +214,20 @@ ActiveRecord::Schema.define(version: 20171221152756) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["tdl"], name: "index_top_tsp_by_channel_linehaul_discounts_on_tdl"
+  end
+
+  create_table "transportation_offices", force: :cascade do |t|
+    t.bigint "shipping_office_id"
+    t.text "name", null: false
+    t.json "email_addresses", default: []
+    t.json "phone_numbers", default: []
+    t.json "urls", default: []
+    t.text "services", default: [], array: true
+    t.text "hours"
+    t.text "note"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shipping_office_id"], name: "index_transportation_offices_on_shipping_office_id"
   end
 
   create_table "tutorial_steps", force: :cascade do |t|
