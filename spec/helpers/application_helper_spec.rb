@@ -3,7 +3,7 @@ RSpec.describe ApplicationHelper, type: :helper do
   let(:site_tagline) { 'Official DOD Moving Portal' }
 
   describe '#abbr_tag' do
-    context 'withoout HTML options' do
+    context 'without HTML options' do
       it 'returns a string' do
         expect(helper.abbr_tag('dod')).to eq('<abbr title="Department of Defense">DOD</abbr>')
       end
