@@ -133,7 +133,7 @@ class PpmEstimator
   end
 
   def linehaul_charges
-    BaseLinehaul.rate(effective_400ng_date, distance, full_weight) + (orig_svc_area.linehaul_factor + dest_svc_area.linehaul_factor) * cwt + shorthaul
+    ConusLinehaul.rate(effective_400ng_date, distance, full_weight) + (orig_svc_area.linehaul_factor + dest_svc_area.linehaul_factor) * cwt + shorthaul
   end
 
   def shorthaul

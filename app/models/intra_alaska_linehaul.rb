@@ -1,0 +1,2 @@
+class IntraAlaskaLinehaul < BaseLinehaul
+end

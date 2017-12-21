@@ -115,8 +115,8 @@ ServiceArea.import [:service_area, :name, :services_schedule, :linehaul_factor, 
 FullPack.import [:schedule, :weight_lbs, :rate, :effective], rates.full_packs
 FullUnpack.import [:schedule, :rate, :effective], rates.full_unpacks
 Shorthaul.import [:cwt_mi, :rate, :effective], rates.shorthauls
-BaseLinehaul.import [:dist_mi, :weight_lbs, :rate, :effective], rates.conus_linehauls, batch_size: 500
-IntraAlaskaBaseLinehaul.import [:dist_mi, :weight_lbs, :rate, :effective], rates.intra_ak_linehauls, batch_size: 500
+ConusLinehaul.import [:dist_mi, :weight_lbs, :rate, :effective], rates.conus_linehauls, batch_size: 500
+IntraAlaskaLinehaul.import [:dist_mi, :weight_lbs, :rate, :effective], rates.intra_ak_linehauls, batch_size: 500
 
 puts 'Loading 400NG Baseline Rates for 2018...'
 daterange = (Date.parse('2018-05-15')..Date.parse('2019-05-14'))
@@ -126,8 +126,8 @@ ServiceArea.import [:service_area, :name, :services_schedule, :linehaul_factor, 
 FullPack.import [:schedule, :weight_lbs, :rate, :effective], rates.full_packs
 FullUnpack.import [:schedule, :rate, :effective], rates.full_unpacks
 Shorthaul.import [:cwt_mi, :rate, :effective], rates.shorthauls
-BaseLinehaul.import [:dist_mi, :weight_lbs, :rate, :effective], rates.conus_linehauls, batch_size: 500
-IntraAlaskaBaseLinehaul.import [:dist_mi, :weight_lbs, :rate, :effective], rates.intra_ak_linehauls, batch_size: 500
+ConusLinehaul.import [:dist_mi, :weight_lbs, :rate, :effective], rates.conus_linehauls, batch_size: 500
+IntraAlaskaLinehaul.import [:dist_mi, :weight_lbs, :rate, :effective], rates.intra_ak_linehauls, batch_size: 500
 
 puts 'Loading ZIP3 to ZIP3 distances from DTOD...'
 distances = CSV.read(Rails.root.join('db', 'seeds', 'zip3_dtod_output.csv'), { headers: false, col_sep: ' ' })

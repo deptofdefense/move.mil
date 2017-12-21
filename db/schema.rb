@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20171221152756) do
     t.daterange "effective"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "type"
   end
 
   create_table "branch_of_service_contacts", force: :cascade do |t|

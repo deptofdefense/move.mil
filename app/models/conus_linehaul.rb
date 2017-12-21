@@ -1,0 +1,2 @@
+class ConusLinehaul < BaseLinehaul
+end
