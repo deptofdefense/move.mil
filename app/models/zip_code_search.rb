@@ -8,7 +8,7 @@ class ZipCodeSearch
   end
 
   def query
-    search_params[:query].rjust(5, '0')
+    search_params[:query]
   end
 
   def result
