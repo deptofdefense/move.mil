@@ -18,7 +18,7 @@ puts 'Loading tutorials...'
 tutorials = YAML::load_file(Rails.root.join('db', 'seeds', 'tutorials.yml'))
 
 tutorials.each do |tutorial|
-  record = Tutorial.where(title: tutorial['title']).first_or_create
+  record = Tutorial.where(title: tutorial['title']).first_or_create(title: tutorial['title'], display_order: tutorial['display_order'])
 
   tutorial['tutorial_steps'].each do |step|
     record.tutorial_steps.where(content: step['content']).first_or_create(step)

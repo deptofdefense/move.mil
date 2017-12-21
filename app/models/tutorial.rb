@@ -5,7 +5,7 @@ class Tutorial < ApplicationRecord
 
   has_many :tutorial_steps, -> { order(:image_path) }, dependent: :destroy, inverse_of: :tutorial
 
-  validates :title, presence: true
+  validates :title, :display_order, presence: true
 
-  default_scope { order(id: :asc) }
+  default_scope { order(display_order: :asc) }
 end

@@ -1,4 +1,5 @@
 - title: New User Registration
+  display_order: 1
   tutorial_steps:
     - image_path: tutorials/new-user-registration-01.jpg
       content: >
@@ -51,6 +52,7 @@
 
 
 - title: Returning User Login
+  display_order: 2
   tutorial_steps:
     - image_path: tutorials/returning-user-login-01.jpg
       content: >
@@ -85,6 +87,7 @@
         <strong>Pro-Tip:</strong> The validation code will automatically be sent to the email address you used to register for ETA. <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/ContactCustomerSupport.aspx">Contact your system administrator</a> if it’s changed.
 
 - title: Create a Shipment
+  display_order: 3
   tutorial_steps:
     - image_path: tutorials/create-a-shipment-01.jpg
       content: >
@@ -229,6 +232,7 @@
         <strong>Pro-Tip:</strong> After you hit submit, email the Transportation Office you selected for counseling and let them know that you've created a shipment in DPS. They may need additional information from you before your shipment is approved.
 
 - title: Create a PPM Shipment
+  display_order: 4
   tutorial_steps:
     - image_path: tutorials/create-a-ppm-shipment-01.jpg
       content: >
@@ -298,6 +302,7 @@
         After you hit submit, email the Transportation Office you selected for counseling and let them know that you've created a PPM shipment in DPS. They may need additional information from you before your shipment is approved.
 
 - title: Dual Military (Mil-to-Mil) Move
+  display_order: 5
   tutorial_steps:
     - image_path: tutorials/dual-military-move-01.jpg
       content: >
@@ -442,6 +447,7 @@
         <strong>Pro-Tip:</strong> After you hit submit, email the Transportation Office you selected for counseling and let them know that you've created a shipment in DPS. They may need additional information from you before your shipment is approved.
 
 - title: Cancel a Shipment
+  display_order: 6
   tutorial_steps:
     - image_path: tutorials/cancel-a-shipment-01.jpg
       content: >
@@ -459,6 +465,7 @@
         You must also contact your <a href="/resources/locator-maps">local Transportation office</a>, and request a cancellation in writing, since you may have already been assigned a Moving Company.
 
 - title: Customer Satisfaction Survey
+  display_order: 7
   tutorial_steps:
     - image_path: tutorials/customer-satisfaction-survey-01.jpg
       content: >
@@ -480,6 +487,7 @@
         You can choose to leave a personal message here. When you’re done, don’t forget to save and submit your survey. Thank you!
 
 - title: File a Claim
+  display_order: 8
   tutorial_steps:
     - image_path: tutorials/file-a-claim-01.jpg
       content: >
