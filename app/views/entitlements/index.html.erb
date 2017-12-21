@@ -31,15 +31,40 @@
 
           <p>Enter your rank, dependency status, and move type to determine your moving allowance.</p>
 
-          <%= form_with url: entitlements_path, class: 'usa-form', method: 'get', skip_enforcing_utf8: true do |form| %>
-            <%= form.label :rank, raw('1. Select your current <b>military pay grade</b>.') %>
-            <%= form.select :rank, options_from_collection_for_select(@entitlements, :rank, :rank), { prompt: '- Select -' }, { id: :rank, required: true } %>
+          <%= form_with url: entitlements_path, class: 'entitlements-form', method: 'get', skip_enforcing_utf8: true do |form| %>
+            <fieldset class="grid-form-width">
+              <legend>What is your rank?</legend>
+              <%= form.label :rank, 'Rank' %>
+              <%= form.select :rank, options_from_collection_for_select(@entitlements, :rank, :rank), { prompt: '- Select -' }, { id: :rank, required: true } %>
+            </fieldset>
 
-            <%= form.label :dependency_status, raw('2. Select your <b>dependency status</b>.') %>
-            <%= form.select :dependency_status, [['Yes, I have dependents', true], ['No, I do not have dependents', false]], { prompt: '- Select -' }, { id: :dependency_status, required: true } %>
+            <fieldset>
+              <legend>Do you have dependents?</legend>
+              <div class="usa-grid-full grid-form-width">
+                <div class="usa-width-one-half">
+                  <%= form.radio_button :dependency_status, 'true', { id: :dependency_status_true, required: true } %>
+                  <%= form.label :dependency_status, value: 'true' do %>
+                    <strong>Yes</strong>, I have dependents
+                  <% end %>
+                </div>
+                <div class="usa-width-one-half">
+                  <%= form.radio_button :dependency_status, 'false', { id: :dependency_status_false, required: true } %>
+                  <%= form.label :dependency_status, value: 'false' do %>
+                    <strong>No</strong>, I do not have dependents
+                  <% end %>
+                </div>
+              </div>
+            </fieldset>
 
-            <%= form.label :move_type, raw('3. Specify your <b>move type</b>.') %>
-            <%= form.select :move_type, [['Within the Continental United States (CONUS)', 'conus'], ['Outside of the Continental United States (OCONUS)', 'oconus']], { prompt: '- Select -' }, { id: :move_type, required: true } %>
+            <fieldset>
+              <legend>Is your move completely within the Continental United States (<%= abbr_tag('conus') %>)?</legend>
+              <div class="image-selector">
+                <%= form.radio_button :move_type, 'conus', id: :move_type_conus, required: true, checked: true %>
+                <%= form.label :move_type, 'CONUS', :value => 'conus', class: 'image-selector-label conus-image' %>
+                <%= form.radio_button :move_type, 'oconus', id: :move_type_oconus, required: true %>
+                <%= form.label :move_type, 'OCONUS', :value => 'oconus', class: 'image-selector-label oconus-image' %>
+              </div>
+            </fieldset>
 
             <button>View Results</button>
           <% end %>

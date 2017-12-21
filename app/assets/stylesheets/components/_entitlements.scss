@@ -1,0 +1,49 @@
+.entitlements-form {
+  counter-reset: level;
+  padding-left: 3.5rem;
+
+  fieldset {
+    counter-increment: level;
+    margin-top: 2.8rem;
+    position: relative;
+  }
+
+  legend {
+    font-size: $base-font-size;
+    margin-bottom: 1rem;
+
+    &::after {
+      color: $color-primary-darker;
+      content: counter(level);
+      font-size: 3rem;
+      left: -3.5rem;
+      position: absolute;
+      top: -0.6rem;
+    }
+  }
+
+  label {
+    display: inline-block;
+    font-size: $small-font-size;
+    margin-right: 2rem;
+    margin-top: 0;
+  }
+
+  input, select {
+    font-size: $small-font-size;
+    height: unset;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  .usa-alert {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  button {
+    margin-top: 3rem;
+  }
+}

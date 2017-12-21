@@ -1,0 +1,52 @@
+.image-selector input{
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+}
+
+.image-selector input:active +.image-selector-label {
+  opacity: .9;
+}
+
+.image-selector input:checked +.image-selector-label {
+  background-color: #5e96bc;
+  filter: none;
+  -webkit-filter: none;
+}
+
+.conus-image {
+  background-image: asset_url(image_path('conus.svg'));
+  border-radius: 100%;
+}
+
+.oconus-image {
+  background-image: asset_url(image_path('oconus.svg'));
+  border-radius: 100%;
+}
+
+.image-selector-label {
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+  filter: brightness(1.8) grayscale(1) opacity(.7);
+  height: 8rem;
+  margin-right: 0;
+  margin-top: 0;
+  padding-top: 8rem;
+  text-align: center;
+  transition: all 100ms ease-in;
+  width: 8rem;
+  -webkit-transition: all 100ms ease-in;
+  -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+
+  :hover {
+    filter: brightness(1.2) grayscale(.5) opacity(.9);
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+  }
+}
+
+[type=radio] + .image-selector-label::before {
+  content: unset;
+}
