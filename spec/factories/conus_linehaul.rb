@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :base_linehaul do
+  factory :conus_linehaul do
     dist_mi Range.new(2501, 2600)
     weight_lbs Range.new(1000, 1099)
     rate 3118

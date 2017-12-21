@@ -1,5 +1,5 @@
 class BaseLinehaul < ApplicationRecord
-  validates :effective, :dist_mi, :weight_lbs, :rate, presence: true
+  validates :effective, :dist_mi, :weight_lbs, :rate, :type, presence: true
 
   def self.rate(date, distance, weight)
     return rate_lookup(date, distance, weight) unless weight < 1000
