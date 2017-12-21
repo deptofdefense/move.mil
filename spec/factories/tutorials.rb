@@ -1,8 +1,7 @@
 FactoryBot.define do
-  sequence(:title) { |n| "Test Tutorial Title #{n}" }
-
   factory :tutorial do
-    title
+    sequence(:title) { |n| "Test Tutorial Title #{n}" }
+    sequence(:display_order) { |n| n }
 
     transient do
       tutorial_step_count 2
