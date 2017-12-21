@@ -24,7 +24,6 @@ RSpec.describe LocationsController, type: :controller do
           expect(assigns(:search).query).to eq('20010')
         end
       end
-
     end
   end
 end
