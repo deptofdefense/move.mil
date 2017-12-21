@@ -6,6 +6,20 @@
   .sidebar-accordion {
     margin: 0 0-$site-margins-mobile 2rem 0-$site-margins-mobile;
   }
+
+  .video_wrapper {
+    padding-top: 56.25%;
+    position: relative;
+
+    iframe {
+      height: 100%;
+      left: 0;
+      margin-top: 1.5rem;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
 }
 
 .svc-spec-banner {
