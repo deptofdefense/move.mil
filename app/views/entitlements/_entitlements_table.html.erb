@@ -64,7 +64,7 @@
         </td>
       </tr>
     <%- end -%>
-    <%- if entitlement.pro_gear_weight_spouse? -%>
+    <%- if entitlement.pro_gear_weight_spouse? && @entitlement_search.dependency_status == 'true' -%>
       <tr>
         <td>
           <h3>Spouse Pro-Gear (Work-related equipment &amp; gear)</h3>
