@@ -2911,7 +2911,7 @@
       "Computer Lab",
       "Appointments",
       "QA Inspections",
-      "one-on-one counseling"
+      "One-on-One Counseling"
     ]
   },
   {
@@ -7404,5 +7404,53 @@
       "Appointments",
       "QA Inspections"
     ]
+  },
+  {
+    "name": "DMO MCAGCC 29 PALMS CA",
+    "shipping_office_name": "JPPSO SW",
+    "location": {
+      "street_address": "DMO Personal Property Office",
+      "extended_address": "Bldg 1102, Door 22, Marine Corps Base",
+      "locality": "29 Palms",
+      "region": "California",
+      "region_code": "CA",
+      "postal_code": "92278",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 34.135559,
+      "longitude": -116.054169
+    },
+    "email_addresses": [
+      {
+        "email_address": "smbplmstmohhg@usmc.mil"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "(760) 830-6119",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "230-6119",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ],
+    "urls": [
+      {
+        "url": "http://www.29palms.marines.mil/Staff/G4-Installations-and-Logistics/Distribution-Management-Office/"
+      }
+    ],
+    "hours": "Mon-Fri 0730-1600, Sat/Sun/Federal Holidays CLOSED",
+    "services": [
+      "Walk-in",
+      "Briefings",
+      "Computer Lab",
+      "Appointments",
+      "QA Inspections",
+      "Weight Scale on Base"
+    ],
+    "note": "Services do not occur on regular times during the week."
   }
 ]
