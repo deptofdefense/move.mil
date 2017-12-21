@@ -1,21 +1,22 @@
 - title: New User Registration
+  display_order: 1
   tutorial_steps:
-    - image_path: tutorials/new-user-registration-1.jpg
+    - image_path: tutorials/new-user-registration-01.jpg
       content: >
         Go to <a href="https://eta.sddc.army.mil/ETASSOPortal/default.aspx">Electronic Transportation Acquisition (ETA)</a> and click "New User Registration."
       pro_tip: >
         <strong>Pro-Tip:</strong> Turn off your pop-up blocker, otherwise the DPS window and New User Registration window won't be able to open.
-    - image_path: tutorials/new-user-registration-2.jpg
+    - image_path: tutorials/new-user-registration-02.jpg
       content: >
         Select "DPS" from the list of available applications. Find it in the alphabetical list, and to add it to the "Selected Applications" list by clicking on the plus icon to the right. Then click NEXT at the bottom of the page.
       pro_tip: >
         <strong>Pro-Tip:</strong> DPS stands for Defense Personal Property System. It's just one of many sites housed within the ETA (Electronic Transportation Acquisition) system, which is why you have to go through ETA to access it.
-    - image_path: tutorials/new-user-registration-3.jpg
+    - image_path: tutorials/new-user-registration-03.jpg
       content: >
         Choose the Application Role from the dropdown menu that best describes your situation. For example, if you're on active duty, you probably fall into the category: "DOD Customer/Service Member".
       pro_tip: >
         <strong>Pro-Tip:</strong> There are a lot of roles in this list! That's because it takes the coordination of a lot of people to get the moves done!
-    - image_path: tutorials/new-user-registration-4.jpg
+    - image_path: tutorials/new-user-registration-04.jpg
       content: >
         Fill out the Customer Registration fields and choose your security questions. Then you'll get an email with your username.
       pro_tip: >
@@ -25,21 +26,21 @@
           <li>For the Emergency Contact fields, choose someone who will be traveling or moving with you. That way, they can be a point of contact for the trip, and access important information.</li>
           <li>Attaching a Certificate is optional, but doing so allows you to login with your Common Access Card (CAC).</li>
         </ul>
-    - image_path: tutorials/new-user-registration-5.jpg
+    - image_path: tutorials/new-user-registration-05.jpg
       content: >
         In the email, click the ETA link to verify your username and security questions. When you do, you'll get an email with your 6 digit access key (validation code).
       pro_tip: >
         <strong>Pro-Tip:</strong> To save time, leave these windows open while you wait for emails.
-    - image_path: tutorials/new-user-registration-6.jpg
+    - image_path: tutorials/new-user-registration-06.jpg
       content: >
         Here, verify your username and security questions. Wait for an email from ETA Administrator to get your 6 digit access key (validation code).
-    - image_path: tutorials/new-user-registration-7.jpg
+    - image_path: tutorials/new-user-registration-07.jpg
       content: >
         On the ETA site where you verified your username, enter the validation code to set your password.
-    - image_path: tutorials/new-user-registration-8.jpg
+    - image_path: tutorials/new-user-registration-08.jpg
       content: >
         Now you can choose your password. Make sure it's one that you can remember, but is not a password you use for other websites or accounts.
-    - image_path: tutorials/new-user-registration-9.jpg
+    - image_path: tutorials/new-user-registration-09.jpg
       content: >
         With your username and password, you can access DPS! On the ETA homepage, login and then click "My Approved Applications" to find the DPS link.<br><br>
         Use DPS to schedule your move by "self counseling". You will create a profile, upload your orders, and create a shipment.
@@ -51,8 +52,9 @@
 
 
 - title: Returning User Login
+  display_order: 2
   tutorial_steps:
-    - image_path: tutorials/returning-user-login-1.jpg
+    - image_path: tutorials/returning-user-login-01.jpg
       content: >
         On <a href="https://eta.sddc.army.mil/ETASSOPortal/default.aspx">ETA</a>, select "Login", then enter your username and password.
       pro_tip: >
@@ -61,23 +63,23 @@
           <li>Turn off your pop-up blocker, otherwise the DPS window won't be able to open.</li>
           <li>You have to access DPS through the Electronic Transportation Acquisition (ETA) site, because DPS is just one of many sites housed in ETA.</li>
         </ul>
-    - image_path: tutorials/returning-user-login-2.jpg
+    - image_path: tutorials/returning-user-login-02.jpg
       content: >
         If you need help logging in to ETA, there are several options. Use any of these links: <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/CustomerForgotID.aspx">Forgot Username?</a> <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/SecurityQuestionPasswordChange.aspx">Forgot Password?</a> <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/AccountAccessHelp.aspx">Can’t access your account?</a>
       pro_tip: >
         <strong>Pro-Tip:</strong> If your email address has changed, <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/ContactCustomerSupport.aspx">contact your administrator</a> first. ETA will automatically send emails to the address on file.
-    - image_path: tutorials/returning-user-login-3.jpg
+    - image_path: tutorials/returning-user-login-03.jpg
       content: >
         If you <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/CustomerForgotID.aspx">forgot your user ID</a>, ETA can send it to you in an email.
       pro_tip: >
         <strong>Pro-Tip:</strong> If your email address has changed since you created your account, <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/ContactCustomerSupport.aspx">contact your system administrator</a> first.
-    - image_path: tutorials/returning-user-login-4.jpg
+    - image_path: tutorials/returning-user-login-04.jpg
       content: >
         You must enter the email address that you used to originally register for ETA. The system will confirm it’s a match, and send you an email with your user ID.
-    - image_path: tutorials/returning-user-login-5.jpg
+    - image_path: tutorials/returning-user-login-05.jpg
       content: >
         To <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/SecurityQuestionPasswordChange.aspx">reset your password</a>, choose the “Forgot your password?” link, then follow the prompts to enter your user ID, and answer two of your security questions.
-    - image_path: tutorials/returning-user-login-6.jpg
+    - image_path: tutorials/returning-user-login-06.jpg
       content: >
         Enter your user ID, and answer two of your security questions.<br><br>
         Then the system will email you a validation code which you'll enter next, and be able to reset your password from there.
@@ -85,16 +87,17 @@
         <strong>Pro-Tip:</strong> The validation code will automatically be sent to the email address you used to register for ETA. <a href="https://eta.sddc.army.mil/ETASSOPortal/CustomerAssistance/ContactCustomerSupport.aspx">Contact your system administrator</a> if it’s changed.
 
 - title: Create a Shipment
+  display_order: 3
   tutorial_steps:
-    - image_path: tutorials/create-a-shipment-1.jpg
+    - image_path: tutorials/create-a-shipment-01.jpg
       content: >
         Scheduling your move is called “Self Counseling” in DPS. First, log in to ETA.
       pro_tip: >
         <strong>Pro-Tip:</strong> Turn off your pop-up blocker, otherwise the DPS window won’t be able to open.
-    - image_path: tutorials/create-a-shipment-2.jpg
+    - image_path: tutorials/create-a-shipment-02.jpg
       content: >
         On the ETA homepage choose DPS from your list of approved applications.
-    - image_path: tutorials/create-a-shipment-3.jpg
+    - image_path: tutorials/create-a-shipment-03.jpg
       content: >
         If you haven't logged in in a while you'll be prompted to review your profile. Take this opportunity to confirm that everything is up to date.
       pro_tip: >
@@ -102,29 +105,29 @@
         <ul>
           <li>Save time by making sure you have a copy of your Orders. If you don't, ask your command for a Letter in Lieu, which can be used until your official orders are cut. Make sure you send your Transportation Office a copy of your Orders so that they can update the system.</li>
           <li>You'll also be asked detailed information about special items you might ship, like the make and model of your Motorcycle, and even the calibre and serial number of each of your firearms. Get this information organized now to save time later.</li>
-          <li>You don't have to have an exact address at your new location to start the move process. Don't wait to schedule your move, peak season can mean your prefered move dates are taken, and lines are long at your local Transportation Office.</li>
+          <li>You don't have to have an exact address at your new location to start the move process. Don't wait to schedule your move! The longer you wait, the more likely that your preferred move date will be unavailable, especially if it's during Peak Season. Lines can also get long at your local Transportation Office.</li>
         </ul>
-    - image_path: tutorials/create-a-shipment-4.jpg
+    - image_path: tutorials/create-a-shipment-04.jpg
       content: >
         Otherwise you’ll be brought to the DPS Homepage. Here you’ll find a snapshot of your current or past moves.<br><br>
         Click "Start a New Move" to begin your application.
-    - image_path: tutorials/create-a-shipment-5.jpg
+    - image_path: tutorials/create-a-shipment-05.jpg
       content: >
         Click on the Customer Information button in the Counseling Menu on the left side of the page.
       pro_tip: >
         <strong>Pro-Tip:</strong> If you've moved before, DPS will save your information so that it's pre-populated here, and you won't have to fill it out again.
-    - image_path: tutorials/create-a-shipment-6.jpg
+    - image_path: tutorials/create-a-shipment-06.jpg
       content: >
         Fill out your Customer Information Permanent Contact Address.<br>
         The "Permanent Contact Address" is an address that's not part of this move. It needs to be a place where the Transportation Office could get in touch with you in case of emergency. This could be a friend or relative.
       pro_tip: >
         <strong>Pro-Tip:</strong> You can check your progress in the Counseling Menu on the left side of the page.
-    - image_path: tutorials/create-a-shipment-7.jpg
+    - image_path: tutorials/create-a-shipment-07.jpg
       content: >
         Enter an Emergency Contact who can act on your behalf during the move, if you're unavailable. This person will have access to shipment status, and information.
       pro_tip: >
         <strong>Pro-Tip:</strong> A Letter of Authorization is a letter you write to give another person permission to act on your behalf during your move. Only the service member who has official orders can write this letter of authorization.
-    - image_path: tutorials/create-a-shipment-8.jpg
+    - image_path: tutorials/create-a-shipment-08.jpg
       content: >
         Now you’re ready to enter your Orders information, which begins the move process.<br>
         Here, indicate your rank, and whether or not you're allowed PBP&E.
@@ -136,7 +139,7 @@
           <li>You may have special orders if you're deploying. Contact your <a href="/resources/locator-maps">local transportation office</a> to confirm you have all the correct information to create a shipment.</li>
           <li>If you don't have official orders cut yet, you can upload a Letter in Lieu from your command. This memo is unique to each branch, and should only be used as a temporary stand in for official orders. You must contact your Transportation Office and give them your official orders once you get them.</li>
         </ul>
-    - image_path: tutorials/create-a-shipment-9.jpg
+    - image_path: tutorials/create-a-shipment-09.jpg
       content: >
         Next, enter your Orders Number and Date.
       pro_tip: >
@@ -170,7 +173,7 @@
         <strong>Pro-Tips:</strong>
         <ul>
           <li>A POV is your Personally Owned Vehicle, and in this context, a Mobile Home is an RV.</li>
-          <li>Not all locations, in particular OCONUS, allow you to ship a motorcycle and a POV. Check out the Consignment Instruction Guide for motorcycle shipping information on each location.</li>
+          <li>Not all locations, in particular OCONUS, allow you to ship a motorcycle and a POV.</li>
         </ul>
     - image_path: tutorials/create-a-shipment-15.jpg
       content: >
@@ -229,18 +232,19 @@
         <strong>Pro-Tip:</strong> After you hit submit, email the Transportation Office you selected for counseling and let them know that you've created a shipment in DPS. They may need additional information from you before your shipment is approved.
 
 - title: Create a PPM Shipment
+  display_order: 4
   tutorial_steps:
-    - image_path: tutorials/create-a-ppm-shipment-1.jpg
+    - image_path: tutorials/create-a-ppm-shipment-01.jpg
       content: >
         A Personally Procured Move (PPM or DITY) allows you to get paid to pack and move your belongings yourself, instead of having the government do it for you.<br><br>
         Scheduling your move online is called “Self Counseling” in DPS.<br>
         First, log in to ETA.
       pro_tip: >
         <strong>Pro-Tip:</strong> Turn off your pop-up blocker, otherwise the DPS window won't be able to open.
-    - image_path: tutorials/create-a-ppm-shipment-2.jpg
+    - image_path: tutorials/create-a-ppm-shipment-02.jpg
       content: >
         On the ETA homepage choose DPS from your list of approved applications.
-    - image_path: tutorials/create-a-ppm-shipment-3.jpg
+    - image_path: tutorials/create-a-ppm-shipment-03.jpg
       content: >
         If you haven’t logged in in a while you’ll be prompted to review your profile. Take this opportunity to confirm that everything is up to date.
       pro_tip: >
@@ -248,36 +252,36 @@
         <ul>
           <li>Save time by making sure you have a copy of your Orders. If you don't, ask your command for a Letter in Lieu, which can be used until your official orders are cut. Make sure you send your Transportation Office a copy of your Orders so that they can update the system.</li>
           <li>You'll also be asked detailed information about special items you might ship, like the make and model of your Motorcycle, and even the calibre and serial number of each of your firearms. Get this information organized now to save time later.</li>
-          <li>You don't have to have an exact address at your new location to start the move process. Don't wait to schedule your move, peak season can mean your prefered move dates are taken, and lines are long at your local Transportation Office.</li>
+          <li>You don't have to have an exact address at your new location to start the move process. Don't wait to schedule your move! The longer you wait, the more likely that your preferred move date will be unavailable, especially if it's during Peak Season. Lines can also get long at your local Transportation Office.</li>
         </ul>
-    - image_path: tutorials/create-a-ppm-shipment-4.jpg
+    - image_path: tutorials/create-a-ppm-shipment-04.jpg
       content: >
         Otherwise you’ll be brought to the DPS Homepage. Here you’ll find a snapshot of your current or past moves. To add a PPM move to your Orders, click “Add Another Shipment” under the current shipment.<br><br>
         Take this time to confirm that your Profile and Orders information hasn’t changed.
-    - image_path: tutorials/create-a-ppm-shipment-5.jpg
+    - image_path: tutorials/create-a-ppm-shipment-05.jpg
       content: >
         Now that you've entered your Orders information, you must "Create New Shipment" specific for a PPM (DITY). Select the type of goods you want to move, like "HHG", and specify that it will be a Personally Procured Move (PPM).
       pro_tip: >
         <strong>Pro-Tip:</strong> You can create more than one type of shipment per Orders. For example, you can schedule an HHG shipment that the government will take care of for the majority of your belongings, and an additional PPM shipment for the household goods you'll move yourself in your car.
-    - image_path: tutorials/create-a-ppm-shipment-6.jpg
+    - image_path: tutorials/create-a-ppm-shipment-06.jpg
       content: >
         Then you'll get some helpful information about moving Household Goods (HHG). Later on, there will be PPM specific information.
       pro_tip: >
         <strong>Pro-Tip:</strong> Print this information and keep it handy. You may not always have access to DPS throughout your move.
-    - image_path: tutorials/create-a-ppm-shipment-7.jpg
+    - image_path: tutorials/create-a-ppm-shipment-07.jpg
       content: >
         Set your desired moving dates.<br><br>
         Next, enter the pick-up and drop-off addresses. You can enter additional pickups near your old or new duty stations.<br><br>
         Add a Releasing Agent from your list of Points of Contact, someone who can sign for your pick-up or delivery, if you're unavailable.
       pro_tip: >
         <strong>Pro-Tip:</strong> At the bottom is the address where you want your reimbursement check mailed. Most service members will have direct deposit setup, but this is particularly important for Retirees.
-    - image_path: tutorials/create-a-ppm-shipment-8.jpg
+    - image_path: tutorials/create-a-ppm-shipment-08.jpg
       content: >
         Next, define shipment weight. Use the <a href="/resources/weight-estimator">Weight Estimator Tool</a> on move.mil to get an idea of what your belongings weigh.<br><br>
         Make sure that you select that packing is required, because you will be doing the packing!
       pro_tip: >
         <strong>Pro-Tip:</strong> Your Pro Gear, up to 2,000 lbs, doesn't count towards your estimated weight. Make sure you declare all your Pro Gear.
-    - image_path: tutorials/create-a-ppm-shipment-9.jpg
+    - image_path: tutorials/create-a-ppm-shipment-09.jpg
       content: >
         Here’s an estimate of the cost of your PPM Shipment! Most service members can request a portion of this amount as an advance to help offset the cost of the move. Check out the PPM estimator for more information.<br><br>
         It’s an indication of what you'll be paid for this shipment, but is only an estimate based on the information provided.<br><br>
@@ -297,30 +301,195 @@
       content: >
         After you hit submit, email the Transportation Office you selected for counseling and let them know that you've created a PPM shipment in DPS. They may need additional information from you before your shipment is approved.
 
-- title: Customer Satisfaction Survey
+- title: Dual Military (Mil-to-Mil) Move
+  display_order: 5
   tutorial_steps:
-    - image_path: tutorials/customer-satisfaction-survey-1.jpg
+    - image_path: tutorials/dual-military-move-01.jpg
+      content: >
+        A Dual Move, also known as Mil-to-Mil, is when your spouse or significant other is also a service member or government civilian and you both have Orders to PCS.<br><br>
+        Check out the <a href="/faqs">FAQ</a> for details about weight allowances, and examples of Mil-to-Mil move scenarios. Usually, the higher ranking member fills out DPS.<br><br>
+        First, log into <a href="https://eta.sddc.army.mil/ETASSOPortal/default.aspx">ETA</a>, and choose DPS from your list of approved applications.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Turn off your pop-up blocker, otherwise the DPS window won't be able to open.
+    - image_path: tutorials/dual-military-move-02.jpg
+      content: >
+        If you haven’t logged in in a while you’ll be prompted to review your profile. Take this opportunity to confirm that everything is up to date.
+      pro_tip: >
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>Save time by making sure you have a copy of your Orders. If you don't, ask your command for a Letter in Lieu, which can be used until your official orders are cut. Make sure you send your Transportation Office a copy of your Orders so that they can update the system.</li>
+          <li>You'll also be asked detailed information about special items you might ship, like the make and model of your Motorcycle, and even the calibre and serial number of each of your firearms. Get this information organized now to save time later.</li>
+          <li>You don't have to have an exact address at your new location to start the move process. Don't wait to schedule your move! The longer you wait, the more likely that your preferred move date will be unavailable, especially if it's during Peak Season. Lines can also get long at your local Transportation Office.</li>
+        </ul>
+    - image_path: tutorials/dual-military-move-03.jpg
+      content: >
+        Otherwise you’ll be brought to the DPS Homepage. Here you’ll find a snapshot of your current or past moves.<br><br>
+        Click "Start a New Move" to begin your application.<br><br>
+    - image_path: tutorials/dual-military-move-04.jpg
+      content: >
+        Fill out your Customer Information and Permanent Contact Address. The "Permanent Contact Address" is an address that's not part of this move. It needs to be a place where the Transportation Office could get in touch with you in case of emergency. This could be a friend or relative.<br>
+        Addresses are saved in DPS so you don't have to fill it out each time you schedule a move.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> You can check your progress in the Counseling Menu on the left side of the page.
+    - image_path: tutorials/dual-military-move-05.jpg
+      content: >
+        Enter an Emergency Contact who can act on your behalf during the move, if you're unavailable. This person will have access to shipment status, and information.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> A Letter of Authorization allows you to give another person permission to act on your behalf. Only the service member who has official orders can write this letter of authorization.
+    - image_path: tutorials/dual-military-move-06.jpg
+      content: >
+        Now you’re ready to enter your Orders information, which begins the move process.<br>
+        Here, indicate your rank, and whether or not you're allowed PBP&E. This information allows DPS to calculate your shipment weight allowance, if it wasn't part of your orders.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> PBP&E is the "pro gear" or professional equipment you might need to ship. There are additional allowances for you and your spouse. It doesn’t count towards your weight allowance - just make sure you itemize it!<br><br>
+        A "Hard Copy" of your orders refers to the physical piece of paper that you received, and that your orders have officially been cut. You'll need to scan and upload a PDF of your orders.
+    - image_path: tutorials/dual-military-move-07.jpg
+      content: >
+        Next, enter your Orders Number and Date.
+      pro_tip: >
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>The location of your Orders Number on the orders, varies by branch. Typically, the Army and Navy list the number in the upper left of the document, while the Marines list a Standard Document Number (SDN) on the bottom right. For the Airforce, look in box 27 of your Orders form.</li>
+          <li>Your Orders date is the date the orders were cut or issued.</li>
+        </ul>
+    - image_path: tutorials/dual-military-move-08.jpg
+      content: >
+        Enter address of your Current Duty Station (the one you're leaving), and your New Duty Station (the one you're going to). Click the orange box, then enter only the first 4 letters of the city to locate the address.
+    - image_path: tutorials/dual-military-move-09.jpg
+      content: >
+        Specify your authorized Order Type, and indicate what type of shipment you’d like to create. Next, upload a copy of your Orders document.<br><br>
+        Upload both sets of Orders for you and your spouse.
+      pro_tip: >
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>Can't find your type? Check out the category "Various" to see miscellaneous move types.</li>
+          <li>Even though you've uploaded your orders in DPS, it's a good idea to reach out to your Transportation Office after you submit your application, to make sure they have everything they need to book your shipment.</li>
+        </ul>
+    - image_path: tutorials/dual-military-move-10.jpg
+      content: >
+        To upload your orders, click Browse to find the document on your computer. Then you must click upload to save the document to the DPS system. You’ll receive a message in green that your Orders were successfully uploaded.
+    - image_path: tutorials/dual-military-move-11.jpg
+      content: >
+        Next, enter your new Duty Station and indicate whether or not you're moving with dependents (including a spouse).
+    - image_path: tutorials/dual-military-move-12.jpg
+      content: >
+        Finally, in the Additional Information section, you'll specify if you need to ship a motorcycle, or need to remove any items from Non Temporary Storage, left over from a previous move.
+      pro_tip: >
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>A POV is your Personally Owned Vehicle, and in this context, a Mobile Home is an RV.</li>
+          <li>Not all locations, in particular OCONUS, allow you to ship a motorcycle and a POV.</li>
+        </ul>
+    - image_path: tutorials/dual-military-move-13.jpg
+      content: >
+        The Entitlement Summary allows you to review and certify the information you entered is accurate.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Your weight allowance is listed here in the second paragraph.
+    - image_path: tutorials/dual-military-move-14.jpg
+      content: >
+        Now that you've entered your Orders information, you must "Create New Shipment" specific for those orders. Select the type of shipment you want to create, like "HHG", and specify whether or not it will be a Personally Procured Move (PPM).
+      pro_tip: >
+        <strong>Pro-Tip:</strong> You can create more than one type of shipment per Orders. For example, you can schedule an HHG shipment for the majority of your belongings, and an additional PPM shipment for the ones you'll move yourself in your car. You just have to repeat this “Create New Shipment” process for each shipment.
+    - image_path: tutorials/dual-military-move-15.jpg
+      content: >
+        Then you'll get some helpful information about a Household Goods (HHG) move. Later on, there will be PPM specific information, if you choose this to be a PPM shipment.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Print this information and keep it handy. You may not always have access to DPS throughout your move.
+    - image_path: tutorials/dual-military-move-16.jpg
+      content: >
+        Set your desired moving dates. No matter what dates you enter, your moving dates are not confirmed until you speak with the Moving Company. During peak season there may be black out dates, or other circumstances that prevent your desired dates from being scheduled.<br><br>
+        Next, enter the pick-up and drop-off addresses. You can enter additional pickups near your old or new duty stations.<br><br>
+        Add a Releasing Agent from your list of Points of Contact, someone who can sign for your pick-up or delivery, if you're unavailable.
+    - image_path: tutorials/dual-military-move-17.jpg
+      content: >
+        Next, define shipment weight. Use the <a href="/resources/weight-estimator">Weight Estimator Tool</a> on Move.mil to get an idea of what your belongings weigh.<br><br>
+        Identify if you have special items like a jacuzzi or piano.<br><br>
+        Enter your spouse's information here in the "Additional Information" section.<br>
+        <ul>
+          <li>Name of Spouse or Significant Other</li>
+          <li>Rank</li>
+          <li>Branch of Service</li>
+          <li>Orders Number</li>
+          <li>Total Estimate Weight of the Shipment</li>
+        </ul>
+      pro_tip: >
+        <strong>Pro-Tips:</strong>
+        <ul>
+          <li>Your Pro Gear, up to 2,000 lbs, doesn't count towards your estimated weight.</li>
+          <li>There's also a separate section for firearms on the next page. You'll need to enter the make and model, serial number, and calibre for each firearm. Save yourself the headache later, by entering this info before you hit Submit!</li>
+        </ul>
+    - image_path: tutorials/dual-military-move-18.jpg
+      content: >
+        Here, indicate if you are shipping any firearms. You must provide detailed information about each firearm you’d like to ship.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Here, indicate if you are shipping any firearms. You must provide detailed information about each firearm you’d like to ship.
+    - image_path: tutorials/dual-military-move-19.jpg
+      content: >
+        Now, let’s decide on the scheduling of your shipment. You’ll get an estimated number of days for packing and shipping, so you can plan your travel accordingly. Everything is an estimate until confirmed by your local transportation office and the moving company.<br><br>
+        If you have a preference, here's where you can let us know your favorite (or least favorite) Transportation Service Provider (TSP) also know as a Carrier or Moving Company.
+    - image_path: tutorials/dual-military-move-20.jpg
+      content: >
+        It's time to go over moving day responsibilities for you and your TSP.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Print this page! It details all the information you need for moving day. You may not have access to DPS at all times during your move.
+    - image_path: tutorials/dual-military-move-21.jpg
+      content: >
+        A summary of your shipment is then provided. You have to certify that you've read and agree that everything is accurate, so double check important items like your email address, and type of shipment.
+    - image_path: tutorials/dual-military-move-22.jpg
+      content: >
+        Here you'll choose a Personal Property Office for counseling. They will be your main point of contact during your move. You’ll need to contact them after submitting your shipment on DPS.  They'll need the signed forms generated on the next page.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Use the <a href="/resources/locator-maps">Office Locator</a> tool if you need help choosing a counseling office.
+    - image_path: tutorials/dual-military-move-23.jpg
+      content: >
+        On the Submit Page, review and sign your forms (DD 1299 and DD 1797, etc.), then upload them, and press submit.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> After you hit submit, email the Transportation Office you selected for counseling and let them know that you've created a shipment in DPS. They may need additional information from you before your shipment is approved.
+
+- title: Cancel a Shipment
+  display_order: 6
+  tutorial_steps:
+    - image_path: tutorials/cancel-a-shipment-01.jpg
+      content: >
+        Log in to <a href="https://eta.sddc.army.mil/ETASSOPortal/default.aspx">ETA</a> and open the DPS homepage. Select "Edit My Shipment Info" to locate the shipment you want to cancel. Shipments are listed by Orders number.<br><br>
+        You must also contact your <a href="/resources/locator-maps">local Transportation office</a>, and request a cancellation in writing, since you may have already been assigned a Moving Company.
+      pro_tip: >
+        <strong>Pro-Tip:</strong> Since you can have more than one shipment per Order, it's important to carefully select only the shipment you want to cancel.<br>
+        Need help getting to this page? Check out the <a href="/tutorials/returning-user-login">Returning User Login</a> tutorial.
+    - image_path: tutorials/cancel-a-shipment-02.jpg
+      content: >
+        Click on the Shipment item from the menu on the left, and click the Cancel icon.
+    - image_path: tutorials/cancel-a-shipment-03.jpg
+      content: >
+        Confirm this is the shipment you want to cancel, and click "OK".<br><br>
+        You must also contact your <a href="/resources/locator-maps">local Transportation office</a>, and request a cancellation in writing, since you may have already been assigned a Moving Company.
+
+- title: Customer Satisfaction Survey
+  display_order: 7
+  tutorial_steps:
+    - image_path: tutorials/customer-satisfaction-survey-01.jpg
       content: >
         In DPS, you can write a review of your moving company (transporter/carrier) after each shipment.<br><br>
         First, log in to ETA, and choose DPS.
       pro_tip: >
         <strong>Pro-Tip:</strong> Real humans will read your responses, and make sure that the Moving Company’s score is either raised or lowered accordingly. Your responses are important.
-    - image_path: tutorials/customer-satisfaction-survey-2.jpg
+    - image_path: tutorials/customer-satisfaction-survey-02.jpg
       content: >
         In the Shipment Details on the DPS homepage, click on "Complete Survey".
-    - image_path: tutorials/customer-satisfaction-survey-3.jpg
+    - image_path: tutorials/customer-satisfaction-survey-03.jpg
       content: >
         Here, rate everything from your moving company's timeliness to professionalism in packing, pickup, and delivery.
-    - image_path: tutorials/customer-satisfaction-survey-4.jpg
+    - image_path: tutorials/customer-satisfaction-survey-04.jpg
       content: >
         Next, you can choose to allow your moving company, or local Transportation Office to contact you about your responses.
-    - image_path: tutorials/customer-satisfaction-survey-5.jpg
+    - image_path: tutorials/customer-satisfaction-survey-05.jpg
       content: >
         You can choose to leave a personal message here. When you’re done, don’t forget to save and submit your survey. Thank you!
 
 - title: File a Claim
+  display_order: 8
   tutorial_steps:
-    - image_path: tutorials/file-a-claim-1.jpg
+    - image_path: tutorials/file-a-claim-01.jpg
       content: >
         First, log in to <a href="https://eta.sddc.army.mil/ETASSOPortal/default.aspx">ETA</a> and choose DPS from the list of approved applications.
       pro_tip: >
@@ -329,36 +498,36 @@
           <li>Need help logging in? Check out the <a href="/tutorials/returning-user-login">Returning User Login</a> for guidance.</li>
           <li>Turn off your popup blocker, otherwise DPS won’t be able to open.</li>
         </ul>
-    - image_path: tutorials/file-a-claim-2.jpg
+    - image_path: tutorials/file-a-claim-02.jpg
       content: >
         From the DPS homepage, expand the details of the recent move for which you’d like to file a claim.
       pro_tip: >
         <strong>Pro-Tip:</strong> Check out the Move.mil information on <a href="/moving-guide/claims">filing a claim</a> for a lot more detail.
-    - image_path: tutorials/file-a-claim-3.jpg
+    - image_path: tutorials/file-a-claim-03.jpg
       content: >
         Click on the “File a Claim” button.<br><br>
         You'll need to file a Loss/Damage Report with your Moving Company also known as a TSP (Transportation Company), as well a File a Claim through DPS.
       pro_tip: >
         <strong>Pro-Tip:</strong> To the best of your ability, notify your Moving Company of the loss or damage within 75 days. Extensions are granted on a case by case basis.
-    - image_path: tutorials/file-a-claim-4.jpg
+    - image_path: tutorials/file-a-claim-04.jpg
       content: >
         Check out the Claims Instructions for details, deadlines, and tips!<br><br>
         Click File a Loss/Damage Report.
-    - image_path: tutorials/file-a-claim-5.jpg
+    - image_path: tutorials/file-a-claim-05.jpg
       content: >
         Here, there's a lot of information to enter. But, each piece helps the Moving Company understand what happened, and how to help you.
       pro_tip: >
         <strong>Pro-Tip:</strong> Be as detailed as possible, including item descriptions, photographs of damage, purchase history, etc.
-    - image_path: tutorials/file-a-claim-6.jpg
+    - image_path: tutorials/file-a-claim-06.jpg
       content: >
         You have to include details about each item you want to claim.
-    - image_path: tutorials/file-a-claim-7.jpg
+    - image_path: tutorials/file-a-claim-07.jpg
       content: >
         Next, you'll need to File a Claim with DPS. This helps keep a record of your experience with DPS, and not just with your Transportation Provider.<br><br>
         Click "Start My Claim"
-    - image_path: tutorials/file-a-claim-8.jpg
+    - image_path: tutorials/file-a-claim-08.jpg
       content: >
         Upload a copy of any reports, or documents you might have received from the Transportation Company.
-    - image_path: tutorials/file-a-claim-9.jpg
+    - image_path: tutorials/file-a-claim-09.jpg
       content: >
         Include specifics about each item you want put on your claim report, then hit save!

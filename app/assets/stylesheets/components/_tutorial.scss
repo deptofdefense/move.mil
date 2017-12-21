@@ -13,3 +13,41 @@
     }
   }
 }
+
+.tutorial-header {
+  position: relative;
+}
+
+.show-all {
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  width: auto;
+
+  img {
+    display: block;
+    width: 2rem;
+  }
+}
+
+.show-all,
+.show-all:hover {
+  background-color: transparent;
+}
+
+.single-page-tutorial {
+  .carousel-item {
+    margin-bottom: 6rem;
+  }
+
+  .owl-stage {
+    transform: translate3d(0px, 0px, 0px) !important;
+    width: auto !important;
+  }
+
+  .owl-nav {
+    display: none;
+  }
+}
