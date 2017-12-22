@@ -1,4 +1,4 @@
-class BaseLinehaul < ApplicationRecord
+class Linehaul < ApplicationRecord
   validates :effective, :dist_mi, :weight_lbs, :rate, :type, presence: true
 
   def self.rate(date, distance, weight)

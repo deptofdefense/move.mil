@@ -12,7 +12,7 @@ require 'csv'
 require 'json'
 require 'yaml'
 
-require_relative 'seeds/baseline_rates/baseline_rates'
+require_relative 'seeds/baseline_rates/domestic_400ng'
 
 puts 'Loading tutorials...'
 tutorials = YAML::load_file(Rails.root.join('db', 'seeds', 'tutorials.yml'))
@@ -109,7 +109,7 @@ Zip5RateArea.import [:zip5, :rate_area], zip5s
 
 puts 'Loading 400NG Baseline Rates for 2017...'
 daterange = (Date.parse('2017-05-15')..Date.parse('2018-05-14'))
-rates = BaselineRates.new(Rails.root.join('db', 'seeds', '2017 400NG Baseline Rates.xlsx').to_s, daterange)
+rates = Seeds::BaselineRates::Domestic400NG.new(Rails.root.join('db', 'seeds', '2017 400NG Baseline Rates.xlsx').to_s, daterange)
 
 ServiceArea.import [:service_area, :name, :services_schedule, :linehaul_factor, :orig_dest_service_charge, :effective], rates.schedules
 FullPack.import [:schedule, :weight_lbs, :rate, :effective], rates.full_packs
@@ -120,7 +120,7 @@ IntraAlaskaLinehaul.import [:dist_mi, :weight_lbs, :rate, :effective], rates.int
 
 puts 'Loading 400NG Baseline Rates for 2018...'
 daterange = (Date.parse('2018-05-15')..Date.parse('2019-05-14'))
-rates = BaselineRates.new(Rails.root.join('db', 'seeds', '2018 400NG Baseline Rates.xlsx').to_s, daterange)
+rates = Seeds::BaselineRates::Domestic400NG.new(Rails.root.join('db', 'seeds', '2018 400NG Baseline Rates.xlsx').to_s, daterange)
 
 ServiceArea.import [:service_area, :name, :services_schedule, :linehaul_factor, :orig_dest_service_charge, :effective], rates.schedules
 FullPack.import [:schedule, :weight_lbs, :rate, :effective], rates.full_packs

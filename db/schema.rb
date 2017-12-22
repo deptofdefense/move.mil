@@ -10,20 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171221152756) do
+ActiveRecord::Schema.define(version: 20171222173843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "base_linehauls", force: :cascade do |t|
-    t.int4range "dist_mi"
-    t.int4range "weight_lbs"
-    t.integer "rate"
-    t.daterange "effective"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "type"
-  end
 
   create_table "branch_of_service_contacts", force: :cascade do |t|
     t.text "custsvc_org"
@@ -139,13 +129,14 @@ ActiveRecord::Schema.define(version: 20171221152756) do
     t.index ["branch_of_service_id"], name: "index_installations_on_branch_of_service_id"
   end
 
-  create_table "intra_alaska_base_linehauls", force: :cascade do |t|
+  create_table "linehauls", force: :cascade do |t|
     t.int4range "dist_mi"
     t.int4range "weight_lbs"
     t.integer "rate"
     t.daterange "effective"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "type"
   end
 
   create_table "locations", force: :cascade do |t|

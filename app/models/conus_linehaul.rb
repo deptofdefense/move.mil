@@ -1,2 +1,2 @@
-class ConusLinehaul < BaseLinehaul
+class ConusLinehaul < Linehaul
 end
