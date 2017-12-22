@@ -16,7 +16,7 @@ class LocationsController < ApplicationController
   private
 
   def coordinates_search
-    CoordinatesSearch.new(params) if params[:latitude].present? && params[:longitude].present?
+    LocationsSearch::CoordinatesSearch.new(params) if params[:latitude].present? && params[:longitude].present?
   end
 
   def error_message
@@ -24,7 +24,7 @@ class LocationsController < ApplicationController
   end
 
   def installation_search
-    InstallationSearch.new(params) if params[:query].present?
+    LocationsSearch::InstallationSearch.new(params) if params[:query].present?
   end
 
   def locations
@@ -36,6 +36,6 @@ class LocationsController < ApplicationController
   end
 
   def zip_code_search
-    ZipCodeSearch.new(params) if params[:query].present? && /^\d{5}$/.match?(params[:query])
+    LocationsSearch::ZipCodeSearch.new(params) if params[:query].present? && /^\d{5}$/.match?(params[:query])
   end
 end
