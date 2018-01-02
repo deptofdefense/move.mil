@@ -1,18 +1,10 @@
 RSpec.describe LocationsController, type: :controller do
   describe 'POST #index' do
-    context 'when performing an installation search' do
+    context 'when performing a text search' do
       it 'assigns @search' do
-        post :index, params: { query: 'installation' }
+        post :index, params: { query: 'Fort Belvoir' }
 
-        expect(assigns(:search).query).to eq('installation')
-      end
-    end
-
-    context 'when performing a ZIP code search' do
-      it 'assigns @search' do
-        post :index, params: { query: '20010' }
-
-        expect(assigns(:search).query).to eq('20010')
+        expect(assigns(:search).query).to eq('Fort Belvoir')
       end
     end
   end

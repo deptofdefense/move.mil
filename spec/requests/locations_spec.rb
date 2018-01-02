@@ -34,6 +34,11 @@ RSpec.describe LocationsController, type: :request do
   end
 
   describe 'POST #index' do
+    let(:latitude) { '38.933366' }
+    let(:longitude) { '-77.0303119999999' }
+
+    let(:geoloc) { double(Geokit::GeoLoc) }
+
     context 'when performing a coordinates search' do
       context 'when sending invalid params' do
         it 'displays an error message' do
@@ -45,44 +50,34 @@ RSpec.describe LocationsController, type: :request do
 
       context 'when sending valid params' do
         it 'redirects to a search results page' do
-          post '/resources/locator-maps', params: { latitude: '38.933366', longitude: '-77.0303119999999' }
+          post '/resources/locator-maps', params: { latitude: latitude, longitude: longitude }
 
           expect(response).to redirect_to('/resources/locator-maps/38.933366,-77.0303119999999')
         end
       end
     end
 
-    context 'when performing an installation search' do
-      context 'when no search results found' do
+    context 'when performing a text search' do
+      context 'when sending invalid params' do
+        before do
+          allow(Geokit::Geocoders::GoogleGeocoder).to receive(:geocode).and_return(geoloc)
+          allow(geoloc).to receive(:success).and_return(false)
+        end
+
         it 'displays an error message' do
-          post '/resources/locator-maps', params: { query: 'foo' }
+          post '/resources/locator-maps', params: { query: '%' }
 
-          assert_select '.usa-alert-error .usa-alert-text', text: 'There was a problem locating that installation. Mind trying your search again?'
+          assert_select '.usa-alert-error .usa-alert-text', text: 'There was a problem performing that search. Mind trying again?'
         end
       end
 
-      context 'when search results found' do
-        let!(:installation) { create(:installation) }
-
-        it 'redirects to a search results page' do
-          post '/resources/locator-maps', params: { query: 'installation' }
-
-          expect(response).to redirect_to('/resources/locator-maps/38.8718568,-77.0584556')
+      context 'when sending valid params' do
+        before do
+          allow(Geokit::Geocoders::GoogleGeocoder).to receive(:geocode).and_return(geoloc)
+          allow(geoloc).to receive(:success).and_return(true)
+          allow(geoloc).to receive(:latitude).and_return(latitude)
+          allow(geoloc).to receive(:longitude).and_return(longitude)
         end
-      end
-    end
-
-    context 'when performing a ZIP code search' do
-      context 'when no search results found' do
-        it 'displays an error message' do
-          post '/resources/locator-maps', params: { query: '00000' }
-
-          assert_select '.usa-alert-error .usa-alert-text', text: 'There was a problem locating that ZIP Code. Mind trying your search again?'
-        end
-      end
-
-      context 'when search results found' do
-        let!(:zip_code_tabulation_area) { create(:zip_code_tabulation_area) }
 
         it 'redirects to a search results page' do
           post '/resources/locator-maps', params: { query: '20010' }

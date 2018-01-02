@@ -23,19 +23,15 @@ class LocationsController < ApplicationController
     @error_message ||= search.error_message
   end
 
-  def installation_search
-    LocationsSearch::InstallationSearch.new(params) if params[:query].present?
-  end
-
   def locations
     @locations ||= Location.transportation_offices_and_weight_scales_by_distance(search.result).paginate(page: params[:page])
   end
 
   def search
-    @search ||= coordinates_search || zip_code_search || installation_search || nil
+    @search ||= coordinates_search || text_search || nil
   end
 
-  def zip_code_search
-    LocationsSearch::ZipCodeSearch.new(params) if params[:query].present? && /^\d{5}$/.match?(params[:query])
+  def text_search
+    LocationsSearch::TextSearch.new(params) if params[:query].present?
   end
 end
