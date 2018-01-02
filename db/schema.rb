@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171222173843) do
+ActiveRecord::Schema.define(version: 20180102205545) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -118,18 +118,7 @@ ActiveRecord::Schema.define(version: 20171222173843) do
     t.index ["household_good_category_id"], name: "index_household_goods_on_household_good_category_id"
   end
 
-  create_table "installations", force: :cascade do |t|
-    t.text "name", null: false
-    t.json "email_addresses", default: []
-    t.json "phone_numbers", default: []
-    t.json "urls", default: []
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "branch_of_service_id"
-    t.index ["branch_of_service_id"], name: "index_installations_on_branch_of_service_id"
-  end
-
-  create_table "linehauls", force: :cascade do |t|
+  create_table "intra_alaska_base_linehauls", force: :cascade do |t|
     t.int4range "dist_mi"
     t.int4range "weight_lbs"
     t.integer "rate"
@@ -277,7 +266,6 @@ ActiveRecord::Schema.define(version: 20171222173843) do
 
   add_foreign_key "branch_of_service_contacts", "branch_of_services"
   add_foreign_key "household_goods", "household_good_categories"
-  add_foreign_key "installations", "branch_of_services"
   add_foreign_key "service_specific_posts", "branch_of_services"
   add_foreign_key "transportation_offices", "shipping_offices"
   add_foreign_key "tutorial_steps", "tutorials"

@@ -80,15 +80,6 @@ weight_scales.each do |weight_scale|
   WeightScale.create(weight_scale.except('location').merge(location_attributes: weight_scale['location']))
 end
 
-puts 'Loading installations...'
-installations = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'installations.json')))
-
-installations.each do |installation|
-  branch_of_service_id = BranchOfService.where(slug: installation['branch_of_service_slug']).try(:first).try(:id)
-
-  Installation.create(installation.except('branch_of_service_slug', 'location').merge(branch_of_service_id: branch_of_service_id, location_attributes: installation['location']))
-end
-
 puts 'Loading household goods weights...'
 hhg_weights = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'household_goods_weights.json')))
 
