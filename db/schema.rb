@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180102205545) do
+ActiveRecord::Schema.define(version: 20180102210000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -256,12 +256,6 @@ ActiveRecord::Schema.define(version: 20180102205545) do
     t.text "rate_area"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "zip_code_tabulation_areas", force: :cascade do |t|
-    t.text "zip_code", null: false
-    t.float "latitude", null: false
-    t.float "longitude", null: false
   end
 
   add_foreign_key "branch_of_service_contacts", "branch_of_services"

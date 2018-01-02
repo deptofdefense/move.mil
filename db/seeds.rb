@@ -52,11 +52,6 @@ entitlements.each do |entitlement|
   Entitlement.where(rank: entitlement['rank']).first_or_create(entitlement)
 end
 
-puts 'Loading ZIP code centroids...'
-areas = CSV.read(Rails.root.join('db', 'seeds', 'zip_code_tabulation_areas.csv'))
-columns = [:zip_code, :latitude, :longitude]
-ZipCodeTabulationArea.import columns, areas, batch_size: 500
-
 puts 'Loading shipping offices...'
 shipping_offices = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'shipping_offices.json')))
 
