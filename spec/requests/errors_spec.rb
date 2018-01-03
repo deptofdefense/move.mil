@@ -1,21 +1,7 @@
-RSpec.describe ErrorsController, type: :request do
-  def rails_respond_without_detailed_exceptions
-    env_config = Rails.application.env_config
-    original_show_exceptions = env_config['action_dispatch.show_exceptions']
-    original_show_detailed_exceptions = env_config['action_dispatch.show_detailed_exceptions']
-    env_config['action_dispatch.show_exceptions'] = true
-    env_config['action_dispatch.show_detailed_exceptions'] = false
-    yield
-  ensure
-    env_config['action_dispatch.show_exceptions'] = original_show_exceptions
-    env_config['action_dispatch.show_detailed_exceptions'] = original_show_detailed_exceptions
-  end
-
+RSpec.describe ErrorsController, type: :request, realistic_error_responses: true do
   describe 'GET #not_found' do
     before do
-      rails_respond_without_detailed_exceptions do
-        get '/page_that_doesnt_exist.pdf'
-      end
+      get '/page_that_doesnt_exist.pdf'
     end
 
     it 'returns HTTP 404 status code' do
@@ -31,9 +17,7 @@ RSpec.describe ErrorsController, type: :request do
   describe 'GET #internal_server_error' do
     before do
       expect(Entitlement).to receive(:all).and_raise('kaboom!')
-      rails_respond_without_detailed_exceptions do
-        get '/entitlements'
-      end
+      get '/entitlements'
     end
 
     it 'returns HTTP 500 status code' do
