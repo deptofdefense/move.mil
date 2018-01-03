@@ -120,7 +120,7 @@ distances = CSV.read(Rails.root.join('db', 'seeds', 'zip3_dtod_output.csv'), { h
 DtodZip3Distance.import [:orig_zip3, :dest_zip3, :dist_mi], distances, { batch_size: 500, validate: false }
 
 puts 'Loading discounts from top TSP (by BVS) per channel...'
-if ENV['SEEDS_ENC_IV'].nil? || ENV['SEEDS_ENC_KEY'].nil?
+if ENV['SEEDS_ENC_IV'].blank? || ENV['SEEDS_ENC_KEY'].blank?
   STDERR.puts 'Cannot load encrypted discounts file; ensure that both SEEDS_ENC_IV and SEEDS_ENC_KEY are set in your environment (check .env file)'
 else
   cipher = OpenSSL::Cipher::AES256.new :CBC
