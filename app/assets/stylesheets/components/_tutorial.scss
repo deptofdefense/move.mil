@@ -19,12 +19,16 @@
 }
 
 .show-all {
-  bottom: 0;
+  bottom: -3rem;
   margin: 0;
   padding: 0;
   position: absolute;
   right: 0;
   width: auto;
+
+  @include media($small-screen) {
+    bottom: 0;
+  }
 
   img {
     display: block;

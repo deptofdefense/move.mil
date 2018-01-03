@@ -1,5 +1,10 @@
 .carousel {
+  margin-top: 3rem;
   position: relative;
+
+  @include media($small-screen) {
+    margin-top: 0;
+  }
 
   figure,
   figcaption {
