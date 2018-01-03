@@ -118,7 +118,7 @@ ActiveRecord::Schema.define(version: 20180102210000) do
     t.index ["household_good_category_id"], name: "index_household_goods_on_household_good_category_id"
   end
 
-  create_table "intra_alaska_base_linehauls", force: :cascade do |t|
+  create_table "linehauls", force: :cascade do |t|
     t.int4range "dist_mi"
     t.int4range "weight_lbs"
     t.integer "rate"
