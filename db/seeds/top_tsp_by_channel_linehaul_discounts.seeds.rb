@@ -16,6 +16,15 @@ module Seeds
         # after each discounts file, reset the cipher to read more files
         cipher.reset
 
+        # date ranges for when the BVS scores from specific performance periods take effect
+        dates_by_tdl = [
+          Range.new(Date.new(year, 5, 15), Date.new(year, 7, 31)),
+          Range.new(Date.new(year, 8, 1), Date.new(year, 9, 30)),
+          Range.new(Date.new(year, 10, 1), Date.new(year, 12, 31)),
+          Range.new(Date.new(year + 1, 1, 1), Date.new(year + 1, 3, 6)),
+          Range.new(Date.new(year + 1, 3, 7), Date.new(year + 1, 5, 14))
+        ]
+
         discounts = CSV.parse(discounts_csv, headers: true)
 
         discounts.each do |row|
@@ -35,17 +44,6 @@ module Seeds
 
     def cipher
       @cipher ||= OpenSSL::Cipher::AES256.new(:CBC)
-    end
-
-    # date ranges for when the BVS scores from specific performance periods take effect
-    def dates_by_tdl
-      @dates_by_tdl ||= [
-        Range.new(Date.new(year, 5, 15), Date.new(year, 7, 31)),
-        Range.new(Date.new(year, 8, 1), Date.new(year, 9, 30)),
-        Range.new(Date.new(year, 10, 1), Date.new(year, 12, 31)),
-        Range.new(Date.new(year + 1, 1, 1), Date.new(year + 1, 3, 6)),
-        Range.new(Date.new(year + 1, 3, 7), Date.new(year + 1, 5, 14))
-      ]
     end
 
     # path, year, and tdl. Remember that rates take effect May 15, so the two
