@@ -18,10 +18,10 @@ puts 'Loading tutorials...'
 tutorials = YAML::load_file(Rails.root.join('db', 'seeds', 'tutorials.yml'))
 
 tutorials.each do |tutorial|
-  record = Tutorial.where(title: tutorial['title']).first_or_create(title: tutorial['title'], display_order: tutorial['display_order'])
+  record = Tutorial.where(title: tutorial['title']).first_or_create!(title: tutorial['title'], display_order: tutorial['display_order'])
 
   tutorial['tutorial_steps'].each do |step|
-    record.tutorial_steps.where(content: step['content']).first_or_create(step)
+    record.tutorial_steps.where(content: step['content']).first_or_create!(step)
   end
 end
 
@@ -29,34 +29,34 @@ puts 'Loading FAQs...'
 faqs = YAML::load_file(Rails.root.join('db', 'seeds', 'faqs.yml'))
 
 faqs.each do |faq|
-  Faq.where(question: faq['question']).first_or_create(faq)
+  Faq.where(question: faq['question']).first_or_create!(faq)
 end
 
 puts 'Loading branches of service...'
 branches_of_service = YAML::load_file(Rails.root.join('db', 'seeds', 'branches_of_service.yml'))
 
 branches_of_service.each do |branch_of_service|
-  branch = BranchOfService.where(name: branch_of_service['name']).first_or_create(name: branch_of_service['name'], display_order: branch_of_service['display_order'])
+  branch = BranchOfService.where(name: branch_of_service['name']).first_or_create!(name: branch_of_service['name'], display_order: branch_of_service['display_order'])
 
   branch_of_service['posts'].each do |post|
-    branch.service_specific_posts.where(title: post['title']).first_or_create(post)
+    branch.service_specific_posts.where(title: post['title']).first_or_create!(post)
   end
 
-  branch.branch_of_service_contact = BranchOfServiceContact.create(branch_of_service['contact'])
+  branch.create_branch_of_service_contact!(branch_of_service['contact'])
 end
 
 puts 'Loading entitlements...'
 entitlements = YAML::load_file(Rails.root.join('db', 'seeds', 'entitlements.yml'))
 
 entitlements.each do |entitlement|
-  Entitlement.where(rank: entitlement['rank']).first_or_create(entitlement)
+  Entitlement.where(rank: entitlement['rank']).first_or_create!(entitlement)
 end
 
 puts 'Loading shipping offices...'
 shipping_offices = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'shipping_offices.json')))
 
 shipping_offices.each do |office|
-  ShippingOffice.create(office.except('location').merge(location_attributes: office['location']))
+  ShippingOffice.create!(office.except('location').merge(location_attributes: office['location']))
 end
 
 puts 'Loading transportation offices...'
@@ -65,24 +65,24 @@ transportation_offices = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'tr
 transportation_offices.each do |office|
   shipping_office_id = ShippingOffice.where(name: office['shipping_office_name']).try(:first).try(:id)
 
-  TransportationOffice.create(office.except('location', 'shipping_office_name').merge(location_attributes: office['location'], shipping_office_id: shipping_office_id))
+  TransportationOffice.create!(office.except('location', 'shipping_office_name').merge(location_attributes: office['location'], shipping_office_id: shipping_office_id))
 end
 
 puts 'Loading weight scales...'
 weight_scales = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'weight_scales.json')))
 
 weight_scales.each do |weight_scale|
-  WeightScale.create(weight_scale.except('location').merge(location_attributes: weight_scale['location']))
+  WeightScale.create!(weight_scale.except('location').merge(location_attributes: weight_scale['location']))
 end
 
 puts 'Loading household goods weights...'
 hhg_weights = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'household_goods_weights.json')))
 
 hhg_weights.each do |category|
-  hhg_category = HouseholdGoodCategory.where(name: category['name']).first_or_create(name: category['name'], icon: category['icon'])
+  hhg_category = HouseholdGoodCategory.where(name: category['name']).first_or_create!(name: category['name'], icon: category['icon'])
 
   category['household_goods'].each do |hhg|
-    hhg_category.household_goods.where(name: hhg['name']).first_or_create(name: hhg['name'], weight: hhg['weight'])
+    hhg_category.household_goods.where(name: hhg['name']).first_or_create!(name: hhg['name'], weight: hhg['weight'])
   end
 end
 
