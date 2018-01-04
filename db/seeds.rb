@@ -6,175 +6,54 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require 'activerecord-import/base'
-require 'activerecord-import/active_record/adapters/postgresql_adapter'
-require 'csv'
-require 'json'
-require 'yaml'
+Dir[Rails.root.join('db', 'seeds', '*.seeds.rb')].each { |f| require f }
 
-require_relative 'seeds/baseline_rates/domestic_400ng'
+puts '', '== Seeding database =='
 
-puts 'Loading tutorials...'
-tutorials = YAML::load_file(Rails.root.join('db', 'seeds', 'tutorials.yml'))
+puts '-- Seeding branches of service and service-specific posts...'
+Seeds::BranchesOfService.new.seed!
 
-tutorials.each do |tutorial|
-  record = Tutorial.where(title: tutorial['title']).first_or_create!(title: tutorial['title'], display_order: tutorial['display_order'])
+puts '-- Seeding entitlements...'
+Seeds::Entitlements.new.seed!
 
-  tutorial['tutorial_steps'].each do |step|
-    record.tutorial_steps.where(content: step['content']).first_or_create!(step)
-  end
-end
+puts '-- Seeding FAQs...'
+Seeds::Faqs.new.seed!
 
-puts 'Loading FAQs...'
-faqs = YAML::load_file(Rails.root.join('db', 'seeds', 'faqs.yml'))
+puts '-- Seeding household goods categories and weights...'
+Seeds::HouseholdGoodsCategories.new.seed!
 
-faqs.each do |faq|
-  Faq.where(question: faq['question']).first_or_create!(faq)
-end
+puts '-- Seeding tutorials...'
+Seeds::Tutorials.new.seed!
 
-puts 'Loading branches of service...'
-branches_of_service = YAML::load_file(Rails.root.join('db', 'seeds', 'branches_of_service.yml'))
+puts '-- Seeding shipping offices...'
+Seeds::ShippingOffices.new.seed!
 
-branches_of_service.each do |branch_of_service|
-  branch = BranchOfService.where(name: branch_of_service['name']).first_or_create!(name: branch_of_service['name'], display_order: branch_of_service['display_order'])
+puts '-- Seeding transportation offices...'
+Seeds::TransportationOffices.new.seed!
 
-  branch_of_service['posts'].each do |post|
-    branch.service_specific_posts.where(title: post['title']).first_or_create!(post)
-  end
+puts '-- Seeding weight scales...'
+Seeds::WeightScales.new.seed!
 
-  branch.create_branch_of_service_contact!(branch_of_service['contact'])
-end
+puts '-- Seeding ZIP3s...'
+Seeds::Zip3s.new.seed!
 
-puts 'Loading entitlements...'
-entitlements = YAML::load_file(Rails.root.join('db', 'seeds', 'entitlements.yml'))
+puts '-- Seeding ZIP5 rate areas...'
+Seeds::Zip5RateAreas.new.seed!
 
-entitlements.each do |entitlement|
-  Entitlement.where(rank: entitlement['rank']).first_or_create!(entitlement)
-end
+puts '-- Seeding DTOD ZIP3 to ZIP3 distances...'
+Seeds::DtodZip3Distances.new.seed!
 
-puts 'Loading shipping offices...'
-shipping_offices = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'shipping_offices.json')))
+puts '-- Seeding 2017 400NG baseline rates...'
+Seeds::BaselineRates.new(
+  date_range: Range.new(Date.parse('2017-05-15'), Date.parse('2018-05-14')),
+  file_path: Rails.root.join('lib', 'data', '2017 400NG Baseline Rates.xlsx')
+).seed!
 
-shipping_offices.each do |office|
-  ShippingOffice.create!(office.except('location').merge(location_attributes: office['location']))
-end
+puts '-- Seeding 2018 400NG baseline rates...'
+Seeds::BaselineRates.new(
+  date_range: Range.new(Date.parse('2018-05-15'), Date.parse('2019-05-14')),
+  file_path: Rails.root.join('lib', 'data', '2018 400NG Baseline Rates.xlsx')
+).seed!
 
-puts 'Loading transportation offices...'
-transportation_offices = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'transportation_offices.json')))
-
-transportation_offices.each do |office|
-  shipping_office_id = ShippingOffice.where(name: office['shipping_office_name']).try(:first).try(:id)
-
-  TransportationOffice.create!(office.except('location', 'shipping_office_name').merge(location_attributes: office['location'], shipping_office_id: shipping_office_id))
-end
-
-puts 'Loading weight scales...'
-weight_scales = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'weight_scales.json')))
-
-weight_scales.each do |weight_scale|
-  WeightScale.create!(weight_scale.except('location').merge(location_attributes: weight_scale['location']))
-end
-
-puts 'Loading household goods weights...'
-hhg_weights = JSON.parse(File.read(Rails.root.join('db', 'seeds', 'household_goods_weights.json')))
-
-hhg_weights.each do |category|
-  hhg_category = HouseholdGoodCategory.where(name: category['name']).first_or_create!(name: category['name'], icon: category['icon'])
-
-  category['household_goods'].each do |hhg|
-    hhg_category.household_goods.where(name: hhg['name']).first_or_create!(name: hhg['name'], weight: hhg['weight'])
-  end
-end
-
-puts 'Loading ZIP code rate areas, service areas, regions, and basepoint cities...'
-zip3s = CSV.read(Rails.root.join('db', 'seeds', 'zip3.csv'))
-Zip3.import [:zip3, :basepoint_city, :state, :service_area, :rate_area, :region], zip3s
-
-zip5s = CSV.read(Rails.root.join('db', 'seeds', 'zip5_rate_areas.csv'))
-Zip5RateArea.import [:zip5, :rate_area], zip5s
-
-puts 'Loading 400NG Baseline Rates for 2017...'
-daterange = (Date.parse('2017-05-15')..Date.parse('2018-05-14'))
-rates = Seeds::BaselineRates::Domestic400NG.new(Rails.root.join('db', 'seeds', '2017 400NG Baseline Rates.xlsx').to_s, daterange)
-
-ServiceArea.import [:service_area, :name, :services_schedule, :linehaul_factor, :orig_dest_service_charge, :effective], rates.schedules
-FullPack.import [:schedule, :weight_lbs, :rate, :effective], rates.full_packs
-FullUnpack.import [:schedule, :rate, :effective], rates.full_unpacks
-Shorthaul.import [:cwt_mi, :rate, :effective], rates.shorthauls
-ConusLinehaul.import [:dist_mi, :weight_lbs, :rate, :effective], rates.conus_linehauls, batch_size: 500
-IntraAlaskaLinehaul.import [:dist_mi, :weight_lbs, :rate, :effective], rates.intra_ak_linehauls, batch_size: 500
-
-puts 'Loading 400NG Baseline Rates for 2018...'
-daterange = (Date.parse('2018-05-15')..Date.parse('2019-05-14'))
-rates = Seeds::BaselineRates::Domestic400NG.new(Rails.root.join('db', 'seeds', '2018 400NG Baseline Rates.xlsx').to_s, daterange)
-
-ServiceArea.import [:service_area, :name, :services_schedule, :linehaul_factor, :orig_dest_service_charge, :effective], rates.schedules
-FullPack.import [:schedule, :weight_lbs, :rate, :effective], rates.full_packs
-FullUnpack.import [:schedule, :rate, :effective], rates.full_unpacks
-Shorthaul.import [:cwt_mi, :rate, :effective], rates.shorthauls
-ConusLinehaul.import [:dist_mi, :weight_lbs, :rate, :effective], rates.conus_linehauls, batch_size: 500
-IntraAlaskaLinehaul.import [:dist_mi, :weight_lbs, :rate, :effective], rates.intra_ak_linehauls, batch_size: 500
-
-puts 'Loading ZIP3 to ZIP3 distances from DTOD...'
-distances = CSV.read(Rails.root.join('db', 'seeds', 'zip3_dtod_output.csv'), { headers: false, col_sep: ' ' })
-DtodZip3Distance.import [:orig_zip3, :dest_zip3, :dist_mi], distances, { batch_size: 500, validate: false }
-
-puts 'Loading discounts from top TSP (by BVS) per channel...'
-if ENV['SEEDS_ENC_IV'].blank? || ENV['SEEDS_ENC_KEY'].blank?
-  STDERR.puts 'Cannot load encrypted discounts file; ensure that both SEEDS_ENC_IV and SEEDS_ENC_KEY are set in your environment (check .env file)'
-else
-  cipher = OpenSSL::Cipher::AES256.new :CBC
-  cipher.decrypt
-  cipher.iv = [ENV['SEEDS_ENC_IV']].pack('H*')
-  cipher.key = [ENV['SEEDS_ENC_KEY']].pack('H*')
-
-  # path, year, and tdl. Remember that rates take effect May 15, so the two
-  # TDLs before that date belong to the previous year
-  discount_files = [
-    [Rails.root.join('db', 'seeds', 'No 1 BVS Dom Discounts - Eff 1Oct2017.csv.enc'), 2017, 2],
-    [Rails.root.join('db', 'seeds', 'No 1 BVS Dom Discounts - Eff 1Jan2018.csv.enc'), 2017, 3]
-  ]
-
-  discount_files.each do |path, year, tdl|
-    discounts_csv = cipher.update(File.read(path))
-    discounts_csv << cipher.final
-
-    # after each discounts file, reset the cipher to read more files
-    cipher.reset
-
-    # date ranges for when the BVS scores from specific performance periods take effect
-    dates_by_tdl = [
-      (Date.new(year, 5, 15)..Date.new(year, 7, 31)),
-      (Date.new(year, 8, 1)..Date.new(year, 9, 30)),
-      (Date.new(year, 10, 1)..Date.new(year, 12, 31)),
-      (Date.new(year + 1, 1, 1)..Date.new(year + 1, 3, 6)),
-      (Date.new(year + 1, 3, 7)..Date.new(year + 1, 5, 14))
-    ]
-
-    tdl_daterange = dates_by_tdl[tdl]
-
-    discounts = CSV.parse(discounts_csv, headers: true)
-    discounts.each do |row|
-      TopTspByChannelLinehaulDiscount.where(orig: row['ORIGIN'], dest: row['DESTINATION'], tdl: tdl_daterange).first_or_initialize.tap do |d|
-        d.discount = row['LH_RATE']
-        d.save
-      end
-    end
-  end
-end
-
-puts 'Loading ZIP code metadata...'
-puts ">>> Seed states table..."
-# From https://github.com/midwire/free_zipcode_data/raw/master/all_us_states.csv
-states = CSV.read(Rails.root.join('db', 'seeds', 'all_us_states.csv'), :return_headers => false)
-State.import states[0], states.slice(1, states.length - 1)
-
-state_ids_by_abbr = State.pluck(:abbr, :id).to_h
-
-puts ">>> Seed zipcodes table..."
-# From https://github.com/midwire/free_zipcode_data/raw/master/all_us_zipcodes.csv
-unmapped_zipcodes = CSV.read(Rails.root.join('db', 'seeds', 'all_us_zipcodes.csv'), :return_headers => false)
-zipcodes = unmapped_zipcodes.slice(1, unmapped_zipcodes.length - 1).map {
-  |z| [z[0], z[1].titleize, state_ids_by_abbr[z[2]], z[5], z[6]]
-}
-Zipcode.import [:code, :city, :state_id, :lat, :lon], zipcodes
+puts '-- Seeding top TSP by channel linehaul discounts...'
+Seeds::TopTspByChannelLinehaulDiscounts.new.seed!
