@@ -43,13 +43,13 @@
     handleAjaxError: function() {
       this.$results.empty().attr('hidden', true);
       this.$alert.removeAttr('hidden');
-      $('#ppm-estimate-alert')[0].scrollIntoViewIfNeeded(false);
+      $('#ppm-estimate-alert')[0].scrollIntoView(false);
     },
 
     handleAjaxSuccess: function(markup) {
       this.$alert.attr('hidden', true);
       this.$results.html(markup).removeAttr('hidden');
-      $('#ppm-footer')[0].scrollIntoViewIfNeeded(false);
+      $('#ppm-footer')[0].scrollIntoView(false);
     },
 
     getEntitlementWeightSelf: function(entitlement) {
@@ -118,7 +118,7 @@
         return true;
       } else {
         $('#date-section').addClass('usa-input-error');
-        $('#date-section')[0].scrollIntoViewIfNeeded(false);
+        $('#date-section')[0].scrollIntoView();
         return false;
       }
     },
