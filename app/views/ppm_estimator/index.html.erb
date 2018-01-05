@@ -70,7 +70,7 @@
 
     <fieldset>
       <legend>When do you want to move?</legend>
-      <span class="usa-form-hint" id="dateHint">For example: <%= (Date.today + 14).strftime('%-m %-d %Y') %></span>
+      <span class="usa-form-hint" id="dateHint">For example: <%= (Date.today + 14).strftime('%B %-d, %Y') %> should be entered as <%= (Date.today + 14).strftime('%-m %-d %Y') %>.</span>
       <div class="usa-date-of-birth" id="date-section">
         <div class="ppm-form-group-month">
           <%= form.label :date_month, 'Month' %>
