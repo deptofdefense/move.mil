@@ -17,7 +17,7 @@
     difference!
   </p>
 
-  <%= form_with url: ppm_estimator_path, class: 'ppm-form', id: 'ppm-estimate-form', method: 'get' do |form| %>
+  <%= form_with url: ppm_estimator_path, class: 'ppm-form', id: 'ppm-estimate-form', method: 'get', skip_enforcing_utf8: true do |form| %>
     <fieldset>
       <legend>What is your rank and branch of service?</legend>
       <div class="usa-grid-full grid-form-width">
@@ -70,8 +70,21 @@
 
     <fieldset>
       <legend>When do you want to move?</legend>
-      <%= form.label :date, 'Moving Date' %>
-      <%= form.date_field :date, { id: :date, pattern: '\d\d\d\d-\d\d?-\d\d?', placeholder: 'yyyy-mm-dd', required: true } %>
+      <span class="usa-form-hint" id="dateHint">For example: <%= (Date.today + 14).strftime('%-m %-d %Y') %></span>
+      <div class="usa-date-of-birth" id="date-section">
+        <div class="ppm-form-group-month">
+          <%= form.label :date_month, 'Month' %>
+          <%= form.number_field :date_month, { id: :date_month, class: 'usa-input-inline', 'aria-describedby' => 'dateHint', min: 1, max: 12, required: true } %>
+        </div>
+        <div class="ppm-form-group-day">
+          <%= form.label :date_day, 'Day' %>
+          <%= form.number_field :date_day, { id: :date_day, class: 'usa-input-inline', 'aria-describedby' => 'dateHint', min: 1, max: 31, required: true } %>
+        </div>
+        <div class="ppm-form-group-year">
+          <%= form.label :date_year, 'Year' %>
+          <%= form.number_field :date_year, { id: :date_year, class: 'usa-input-inline', 'aria-describedby' => 'dateHint', min: Date.today.year, required: true } %>
+        </div>
+      </div>
     </fieldset>
 
     <%= tag.div id: 'entitlements-json', data: { entitlements_json: Hash[@entitlements.collect { |e| [e.slug, e] }].to_json } %>
@@ -123,7 +136,7 @@
     </div>
   </div>
 
-  <div class="ppm-footer">
+  <div class="ppm-footer" id="ppm-footer">
     <strong>Note:</strong> This tool only provides an estimate of what you
     might receive if you decide to do a personally procured move.
     <strong>Your actual incentive will be calculated based off the

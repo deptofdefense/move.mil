@@ -47,7 +47,7 @@ RSpec.describe PpmEstimatorController, type: :request do
 
       context 'and sending valid params' do
         before do
-          get '/resources/ppm-estimator', params: { rank: 'e-1', branch: 'army', dependents: 'yes', start: '90210', end: '20001', date: '2017-12-31', weight: '1000' }, xhr: true
+          get '/resources/ppm-estimator', params: { rank: 'e-1', branch: 'army', dependents: 'yes', start: '90210', end: '20001', date_year: '2018', date_month: '1', date_day: '31', weight: '1000' }, xhr: true
         end
 
         it 'shows a PPM estimate' do
@@ -64,7 +64,7 @@ RSpec.describe PpmEstimatorController, type: :request do
         let!(:la_lv_top_discount) { create(:top_tsp_by_channel_linehaul_discount, orig: 'US88', dest: 'REGION 2', tdl: Range.new(Date.parse('2017-10-01'), Date.parse('2017-12-31')), discount: 67.0) }
 
         before do
-          get '/resources/ppm-estimator', params: { rank: 'e-1', branch: 'army', dependents: 'yes', start: '90210', end: '88901', date: '2017-12-31', weight: '1000' }, xhr: true
+          get '/resources/ppm-estimator', params: { rank: 'e-1', branch: 'army', dependents: 'yes', start: '90210', end: '88901', date_year: '2018', date_month: '1', date_day: '31', weight: '1000' }, xhr: true
         end
 
         it 'shows a PPM estimate' do
@@ -82,7 +82,7 @@ RSpec.describe PpmEstimatorController, type: :request do
         let!(:ocala_dc_top_discount) { create(:top_tsp_by_channel_linehaul_discount, orig: 'US49', dest: 'REGION 10', tdl: Range.new(Date.parse('2017-10-01'), Date.parse('2017-12-31')), discount: 67.0) }
 
         before do
-          get '/resources/ppm-estimator', params: { rank: 'e-1', branch: 'army', dependents: 'yes', start: '34470', end: '20001', date: '2017-12-31', weight: '1000' }, xhr: true
+          get '/resources/ppm-estimator', params: { rank: 'e-1', branch: 'army', dependents: 'yes', start: '34470', end: '20001', date_year: '2018', date_month: '1', date_day: '31', weight: '1000' }, xhr: true
         end
 
         it 'shows a PPM estimate' do

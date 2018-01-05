@@ -81,3 +81,15 @@
   font-weight: $font-bold;
   padding-bottom: 1.5rem;
 }
+
+.ppm-form-group-day,
+.ppm-form-group-month {
+  display: inline-block;
+  margin-right: 1.5rem;
+  width: 5rem;
+}
+
+.ppm-form-group-year {
+  display: inline-block;
+  width: 7rem;
+}

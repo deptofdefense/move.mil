@@ -9,7 +9,7 @@ class PpmEstimator
   end
 
   def date
-    @date ||= Date.parse(estimator_params[:date])
+    @date ||= Date.new(estimator_params[:date_year].to_i, estimator_params[:date_month].to_i, estimator_params[:date_day].to_i)
   end
 
   def full_weight
@@ -35,7 +35,7 @@ class PpmEstimator
 
   def valid?
     # weight_progear and weight_progear_spouse can be empty, will be regarded as 0
-    required_params = %w[rank branch dependents start end date weight]
+    required_params = %w[rank branch dependents start end date_year date_month date_day weight]
 
     estimator_params.permitted? &&
       (required_params - estimator_params.keys).empty? &&
@@ -46,7 +46,7 @@ class PpmEstimator
   private
 
   def estimator_params
-    @estimator_params ||= @params.permit(:rank, :branch, :dependents, :start, :end, :date, :weight, :weight_progear, :weight_progear_spouse)
+    @estimator_params ||= @params.permit(:rank, :branch, :dependents, :start, :end, :date_year, :date_month, :date_day, :weight, :weight_progear, :weight_progear_spouse)
   end
 
   # returns the full_weight divided by 100, AKA the hundredweight (centiweight?)

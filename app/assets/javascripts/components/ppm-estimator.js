@@ -27,6 +27,9 @@
       submit: function(event) {
         event.preventDefault();
 
+        if (!this.validateDate())
+          return;
+
         $.ajax({
           data: this.$form.serialize(),
           error: this.handleAjaxError.bind(this),
@@ -40,11 +43,13 @@
     handleAjaxError: function() {
       this.$results.empty().attr('hidden', true);
       this.$alert.removeAttr('hidden');
+      $('#ppm-estimate-alert')[0].scrollIntoViewIfNeeded(false);
     },
 
     handleAjaxSuccess: function(markup) {
       this.$alert.attr('hidden', true);
       this.$results.html(markup).removeAttr('hidden');
+      $('#ppm-footer')[0].scrollIntoViewIfNeeded(false);
     },
 
     getEntitlementWeightSelf: function(entitlement) {
@@ -88,6 +93,34 @@
         $('#progear-spouse-section').removeAttr('hidden');
       else
         $('#progear-spouse-section').attr('hidden', true);
+    },
+
+    isLeapYear: function(year) {
+      return (year % 4 == 0) && ((year % 400 == 0) || (year % 100 != 0));
+    },
+
+    isValidDate: function(year, month, day) {
+      if (month < 1 || month > 12)
+        return false;
+      var daysPerMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      var maxDay = daysPerMonth[month - 1];
+      if (month == 2 && this.isLeapYear(year))
+         maxDay = 29;
+      return (day >= 1 && day <= maxDay);
+    },
+
+    validateDate: function() {
+      var year = $('#date_year').val();
+      var month = $('#date_month').val();
+      var day = $('#date_day').val();
+      if (this.isValidDate(year, month, day)) {
+        $('#date-section').removeClass('usa-input-error');
+        return true;
+      } else {
+        $('#date-section').addClass('usa-input-error');
+        $('#date-section')[0].scrollIntoViewIfNeeded(false);
+        return false;
+      }
     },
 
     validateEntitlementField: function($input, getEntitlementFn) {
