@@ -1348,7 +1348,7 @@
     ],
     "phone_numbers": [
       {
-        "phone_number": "(316) 759-5914                         \"",
+        "phone_number": "(316) 759-5914",
         "phone_type": "voice",
         "dsn": false
       },
@@ -1358,7 +1358,7 @@
         "dsn": true
       }
     ],
-    "hours": " 0830 to 1430 M-F",
+    "hours": "0830 to 1430 M-F",
     "services": [
       "Walk-In Help",
       "Briefings",
@@ -2286,48 +2286,6 @@
       "QA Inspections"
     ],
     "note": "Plan My Move Briefing w/ A&FRC - Once a month"
-  },
-  {
-    "name": "McConnell AFB",
-    "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "location": {
-      "street_address": "53155 Kansas St",
-      "extended_address": "Suite 103",
-      "locality": "McConnell Air Force Base",
-      "region": "Kansas",
-      "region_code": "KS",
-      "postal_code": "67221",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 37.632733,
-      "longitude": -97.251
-    },
-    "email_addresses": [
-      {
-        "email_address": "22.lrs.lgrt@us.af.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "(316) 759-5914",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "743-5914",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ],
-    "hours": "M - F 0830 to 1430",
-    "services": [
-      "Walk-In Help",
-      "Briefings",
-      "Appointments",
-      "QA Inspections"
-    ],
-    "note": ""
   },
   {
     "name": "PPSO Puget Sound Household Goods",
