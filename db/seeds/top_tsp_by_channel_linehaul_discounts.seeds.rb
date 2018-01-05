@@ -49,7 +49,7 @@ module Seeds
     # path, year, and tdl. Remember that rates take effect May 15, so the two
     # TDLs before that date belong to the previous year
     def discount_files
-      @discount_files ||= [
+      [
         [Rails.root.join('lib', 'data', 'No 1 BVS Dom Discounts - Eff 1Oct2017.csv.enc'), 2017, 2],
         [Rails.root.join('lib', 'data', 'No 1 BVS Dom Discounts - Eff 1Jan2018.csv.enc'), 2017, 3]
       ]
