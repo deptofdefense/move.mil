@@ -10,10 +10,6 @@ module LocationsSearch
       'There was a problem performing that search. Mind trying again?'
     end
 
-    def query
-      search_params[:query]
-    end
-
     def result
       {
         latitude: location.latitude,
