@@ -19,9 +19,9 @@ gem 'pg', '~> 0.21.0'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.1', '>= 5.1.4'
 gem 'roo', '~> 2.7.1', require: false
-gem 'sass', '~> 3.5', '>= 3.5.4'
-gem 'sass-rails', '~> 5.0', '>= 5.0.6'
-gem 'uglifier', '~> 4.0', '>= 4.0.2'
+gem 'sass', '~> 3.5', '>= 3.5.5'
+gem 'sass-rails', '~> 5.0', '>= 5.0.7'
+gem 'uglifier', '~> 4.1', '>= 4.1.2'
 gem 'uswds-rails', '~> 1.4.4.1'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
@@ -37,8 +37,8 @@ group :development, :test do
   gem 'byebug', '~> 9.1'
   gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
-  gem 'rspec-rails', '~> 3.7', '>= 3.7.1'
-  gem 'rubocop', '~> 0.52.0', require: false
+  gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
+  gem 'rubocop', '~> 0.52.1', require: false
 end
 
 group :test do
