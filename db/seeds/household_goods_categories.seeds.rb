@@ -11,7 +11,7 @@ module Seeds
     private
 
     def household_goods_categories
-      JSON.load(Rails.root.join('lib', 'data', 'household_goods_weights.json'))
+      JSON.parse(File.read(Rails.root.join('lib', 'data', 'household_goods_weights.json')))
     end
   end
 end

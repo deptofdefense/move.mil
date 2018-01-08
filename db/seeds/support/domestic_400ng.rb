@@ -5,10 +5,10 @@ module Seeds
     class Domestic400NG
       attr_reader :schedules, :full_packs, :full_unpacks, :shorthauls, :conus_linehauls, :intra_ak_linehauls
 
-      def initialize(path, daterange)
-        rates = Roo::Spreadsheet.open(path)
+      def initialize(file_path:, date_range:)
+        rates = Roo::Spreadsheet.open(file_path)
 
-        @daterange = daterange
+        @date_range = date_range
         @schedules = parse_geographic_schedules(rates.sheet('Geographical Schedule'))
         @full_packs, @full_unpacks, @shorthauls = parse_addl_rates(rates.sheet('Additional Rates'))
         @conus_linehauls, @intra_ak_linehauls = parse_linehauls(rates.sheet('Linehaul'))
@@ -16,38 +16,41 @@ module Seeds
 
       private
 
-      def flatten_linehaul_rates(sheet, firstRow, lastRow, firstColumn, lastColumn, maxDistance)
+      # rubocop:disable Metrics/ParameterLists
+      def flatten_linehaul_rates(sheet:, first_row:, last_row:, first_column:, last_column:, max_distance:)
         output = []
 
-        Range.new(firstRow, lastRow).each do |r|
-          Range.new(firstColumn, lastColumn).each do |c|
+        Range.new(first_row, last_row).each do |r|
+          Range.new(first_column, last_column).each do |c|
             output << [
               Range.new(sheet.cell(r, 2), sheet.cell(r, 3)),
               Range.new(sheet.cell(2, c), sheet.cell(3, c)),
               sheet.cell(r, c),
-              @daterange
+              @date_range
             ]
           end
         end
 
-        # Increment rates for each addl 100 miles using numbers after lastRow, up to maxDistance
-        numWeightClasses = (lastColumn - firstColumn) + 1
-        d = sheet.cell(lastRow, 3) + 100
+        # Increment rates for each addl 100 miles using numbers after last_row, up to max_distance
+        num_weight_classes = (last_column - first_column) + 1
+        d = sheet.cell(last_row, 3) + 100
 
-        while d <= maxDistance do
-          Range.new(firstColumn, lastColumn).each do |c|
+        while d <= max_distance
+          Range.new(first_column, last_column).each do |c|
             output << [
               Range.new(d - 99, d),
               Range.new(sheet.cell(2, c), sheet.cell(3, c)),
-              output[-numWeightClasses][2] + sheet.cell(lastRow + 1, c),
-              @daterange
+              output[-num_weight_classes][2] + sheet.cell(last_row + 1, c),
+              @date_range
             ]
           end
+
           d += 100
         end
 
         output
       end
+      # rubocop:enable Metrics/ParameterLists
 
       def parse_addl_rates(sheet)
         shorthauls = []
@@ -58,16 +61,16 @@ module Seeds
           # Shorthaul rates
           if sheet.cell(i, 1) == 999
             cwtm_min, cwtm_max = parse_shorthaul(sheet.cell(i, 4))
-            shorthauls << [Range.new(cwtm_min, cwtm_max), BigDecimal.new(sheet.cell(i, 5), 8), @daterange]
+            shorthauls << [Range.new(cwtm_min, cwtm_max), BigDecimal.new(sheet.cell(i, 5), 8), @date_range]
           end
 
           next if sheet.cell(i, 2) != '105A'
 
-          wt_min, wt_max = parse_full_pack(sheet.cell(i,4))
-          full_packs << [sheet.cell(i, 3).to_i, Range.new(wt_min.to_i, wt_max.to_i), BigDecimal.new(sheet.cell(i,5), 10), @daterange]
+          wt_min, wt_max = parse_full_pack(sheet.cell(i, 4))
+          full_packs << [sheet.cell(i, 3).to_i, Range.new(wt_min.to_i, wt_max.to_i), BigDecimal.new(sheet.cell(i, 5), 10), @date_range]
 
-          unpack = parse_full_unpack(sheet.cell(i,6))
-          full_unpacks << [sheet.cell(i, 3).to_i, BigDecimal.new(unpack, 10), @daterange] unless unpack.nil?
+          unpack = parse_full_unpack(sheet.cell(i, 6))
+          full_unpacks << [sheet.cell(i, 3).to_i, BigDecimal.new(unpack, 10), @date_range] unless unpack.nil?
         end
 
         [full_packs, full_unpacks, shorthauls]
@@ -78,7 +81,7 @@ module Seeds
 
         # skip the two header rows
         Range.new(3, sheet.last_row).each do |i|
-          schedules << [sheet.cell(i, 1).to_i, sheet.cell(i, 2), sheet.cell(i, 3), sheet.cell(i, 4), sheet.cell(i, 5), @daterange]
+          schedules << [sheet.cell(i, 1).to_i, sheet.cell(i, 2), sheet.cell(i, 3), sheet.cell(i, 4), sheet.cell(i, 5), @date_range]
         end
 
         schedules
@@ -106,8 +109,8 @@ module Seeds
       end
 
       def parse_linehauls(sheet)
-        conus_rates = flatten_linehaul_rates(sheet, 4, 57, 5, 98, 6000)
-        intra_ak_rates = flatten_linehaul_rates(sheet, 63, 88, 5, 98, 2000)
+        conus_rates = flatten_linehaul_rates(sheet: sheet, first_row: 4, last_row: 57, first_column: 5, last_column: 98, max_distance: 6000)
+        intra_ak_rates = flatten_linehaul_rates(sheet: sheet, first_row: 63, last_row: 88, first_column: 5, last_column: 98, max_distance: 2000)
 
         [conus_rates, intra_ak_rates]
       end

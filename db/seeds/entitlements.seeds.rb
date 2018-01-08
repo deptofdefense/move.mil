@@ -9,7 +9,7 @@ module Seeds
     private
 
     def entitlements
-      YAML::load_file(Rails.root.join('lib', 'data', 'entitlements.yml'))
+      YAML.load_file(Rails.root.join('lib', 'data', 'entitlements.yml'))
     end
   end
 end

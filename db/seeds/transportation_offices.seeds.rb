@@ -13,7 +13,7 @@ module Seeds
     private
 
     def transportation_offices
-      JSON.load(Rails.root.join('lib', 'data', 'transportation_offices.json'))
+      JSON.parse(File.read(Rails.root.join('lib', 'data', 'transportation_offices.json')))
     end
   end
 end

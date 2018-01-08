@@ -22,7 +22,7 @@ module Seeds
     private
 
     def rates
-      @rates ||= Seeds::Support::Domestic400NG.new(@file_path, @date_range)
+      @rates ||= Seeds::Support::Domestic400NG.new(file_path: @file_path, date_range: @date_range)
     end
   end
 end

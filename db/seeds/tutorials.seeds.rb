@@ -11,7 +11,7 @@ module Seeds
     private
 
     def tutorials
-      YAML::load_file(Rails.root.join('lib', 'data', 'tutorials.yml'))
+      YAML.load_file(Rails.root.join('lib', 'data', 'tutorials.yml'))
     end
   end
 end

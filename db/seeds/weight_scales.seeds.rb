@@ -11,7 +11,7 @@ module Seeds
     private
 
     def weight_scales
-      JSON.load(Rails.root.join('lib', 'data', 'weight_scales.json'))
+      JSON.parse(File.read(Rails.root.join('lib', 'data', 'weight_scales.json')))
     end
   end
 end

@@ -11,7 +11,7 @@ module Seeds
     private
 
     def shipping_offices
-      JSON.load(Rails.root.join('lib', 'data', 'shipping_offices.json'))
+      JSON.parse(File.read(Rails.root.join('lib', 'data', 'shipping_offices.json')))
     end
   end
 end

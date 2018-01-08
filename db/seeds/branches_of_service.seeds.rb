@@ -11,7 +11,7 @@ module Seeds
     private
 
     def branches_of_service
-      YAML::load_file(Rails.root.join('lib', 'data', 'branches_of_service.yml'))
+      YAML.load_file(Rails.root.join('lib', 'data', 'branches_of_service.yml'))
     end
   end
 end
