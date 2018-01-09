@@ -21,6 +21,7 @@ gem 'rails', '~> 5.1', '>= 5.1.5'
 gem 'roo', '~> 2.7.1', require: false
 gem 'sass', '~> 3.5', '>= 3.5.5'
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'
+gem 'secure_headers', '~> 5.0', '>= 5.0.5'
 gem 'uglifier', '~> 4.1', '>= 4.1.6'
 gem 'uswds-rails', '1.4.6'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
