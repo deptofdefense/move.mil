@@ -74,7 +74,7 @@ To work with encrypted seed data, set the `SEEDS_ENC_KEY` variable in the `.env`
 1. Create a feature branch for the code changes you're looking to make: `git checkout -b your-descriptive-branch-name origin/master`.
 1. _Write some code!_
 1. Run the application and verify that your changes function as intended: `bin/rails server`.
-1. If your changes would benefit from testing, add the necessary tests and verify everything passes by running `bin/rails spec`.
+1. If your changes would benefit from testing, add the necessary tests and verify everything passes by running `bin/rspec`.
 1. Commit your changes: `git commit -am 'Add some new feature or fix some issue'`. _(See [this excellent article](https://chris.beams.io/posts/git-commit/) for tips on writing useful Git commit messages.)_
 1. Push the branch to your fork: `git push -u origin your-descriptive-branch-name`.
 1. Create a new pull request and we'll review your changes.
@@ -83,7 +83,7 @@ To work with encrypted seed data, set the `SEEDS_ENC_KEY` variable in the `.env`
 
 We use a number of tools to evaluate the quality and security of this project's code:
 
-- The test suite uses [RSpec](http://rspec.info) (`bin/rails spec`).
+- The test suite uses [RSpec](http://rspec.info) (`bin/rspec`).
 - Static code analysis uses [RuboCop](https://github.com/bbatsov/rubocop) (`bin/rubocop`).
 - Static vulnerability scans use [Brakeman](http://brakemanscanner.org) (`bin/brakeman`).
 
