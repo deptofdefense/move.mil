@@ -36,13 +36,16 @@ group :development, :test do
   gem 'brakeman', '~> 4.1', require: false
   gem 'byebug', '~> 9.1'
   gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
+  gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
   gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
   gem 'rubocop', '~> 0.52.1', require: false
 end
 
 group :test do
-  gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
+  gem 'capybara', '~> 2.17'
+  gem 'chromedriver-helper', '~> 1.1'
+  gem 'selenium-webdriver', '~> 3.8'
   gem 'simplecov', '~> 0.15.1', require: false
   gem 'simplecov-console', '~> 0.4.2', require: false
 end

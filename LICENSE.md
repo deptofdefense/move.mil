@@ -7,6 +7,8 @@ This project uses a number of open source components whose licenses are noted be
 | [activerecord-import](https://github.com/zdennis/activerecord-import) | © [Zach Dennis](https://github.com/zdennis) | [Ruby License](https://github.com/zdennis/activerecord-import/blob/master/LICENSE) |
 | [Brakeman](https://github.com/presidentbeef/brakeman) | © 2012 Twitter, Inc. | [MIT License](https://github.com/presidentbeef/brakeman/blob/master/MIT-LICENSE) |
 | [Byebug](https://github.com/deivid-rodriguez/byebug) | © [David Rodríguez](https://github.com/deivid-rodriguez) | [BSD 2-Clause License](https://github.com/deivid-rodriguez/byebug/blob/master/LICENSE) |
+| [Capybara](https://github.com/teamcapybara/capybara) | © 2009–2016 [Jonas Nicklas](https://github.com/jnicklas) | [MIT License](https://github.com/teamcapybara/capybara/blob/master/License.txt) |
+| [chromedriver-helper](https://github.com/flavorjones/chromedriver-helper) | © 2011–2015: [Mike Dalessio](https://github.com/flavorjones) | [MIT License](https://github.com/flavorjones/chromedriver-helper/blob/master/LICENSE.txt) |
 | [dotenv](https://github.com/bkeepers/dotenv) | © 2012 [Brandon Keepers](https://github.com/bkeepers) | [MIT License](https://github.com/bkeepers/dotenv/blob/master/LICENSE) |
 | [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails) | © 2008–2013 [Joe Ferris](https://github.com/jferris) and [thoughtbot, inc.](https://thoughtbot.com) | [MIT License](https://github.com/thoughtbot/factory_bot_rails/blob/master/LICENSE) |
 | [FriendlyId](https://github.com/norman/friendly_id) | © 2008–2016 [Norman Clarke](https://github.com/norman) and contributors | [MIT License](https://github.com/norman/friendly_id/blob/master/MIT-LICENSE) |
@@ -27,6 +29,7 @@ This project uses a number of open source components whose licenses are noted be
 | [Ruby on Rails](https://github.com/rails/rails) | © 2005–2017 [David Heinemeier Hansson](https://github.com/dhh) | [MIT License](https://github.com/rails/rails/blob/master/MIT-LICENSE) |
 | [Sass](https://github.com/sass/sass) | © 2006–2016 [Hampton Catlin](http://www.hamptoncatlin.com), [Natalie Weizenbaum](https://github.com/nex3), and [Chris Eppstein](http://chriseppstein.github.io) | [MIT License](https://github.com/sass/sass/blob/stable/MIT-LICENSE) |
 | [sass-rails](https://github.com/rails/sass-rails) | © 2011–2016 [Christopher Eppstein](http://chriseppstein.github.io) | [MIT License](https://github.com/rails/sass-rails/blob/master/MIT-LICENSE) |
+| [selenium-webdriver](https://github.com/SeleniumHQ/selenium/tree/master/rb) | © 2009—2017 Software Freedom Conservancy | [Apache License, Version 2.0](https://github.com/SeleniumHQ/selenium/blob/master/LICENSE) |
 | [SimpleCov](https://github.com/colszowka/simplecov) | © 2010–2017 [Christoph Olszowka](https://github.com/colszowka) | [MIT License](https://github.com/colszowka/simplecov/blob/master/MIT-LICENSE) |
 | [simplecov-console](https://github.com/chetan/simplecov-console) | © 2012 [Chetan Sarva](http://www.chetanislazy.com/blog/) | [MIT License](https://github.com/chetan/simplecov-console/blob/master/LICENSE.txt) |
 | [Uglifier](https://github.com/lautis/uglifier) | © 2011 [Ville Lautanala](https://github.com/lautis) | [MIT License](https://github.com/lautis/uglifier/blob/master/LICENSE.txt) |
