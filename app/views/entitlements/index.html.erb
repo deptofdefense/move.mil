@@ -53,14 +53,14 @@
                 <p class="usa-alert-text">Your moving allowances will appear here after providing your rank, dependency status, and move type in <%= link_to 'the form above', '#moving-allowances-form' %>.</p>
               </div>
             </div>
-
-            <ul id="entitlements-rank-list">
-              <%- @entitlements.each do |entitlement| -%>
-                <li><%= link_to entitlement.rank, entitlement_path(entitlement) %></li>
-              <%- end -%>
-            </ul>
           </div>
         </div>
+
+        <ul id="entitlements-rank-list">
+          <%- @entitlements.each do |entitlement| -%>
+            <li><%= link_to entitlement.rank, entitlement_path(entitlement) %></li>
+          <%- end -%>
+        </ul>
       </div>
     <%- end -%>
 
