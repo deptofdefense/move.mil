@@ -35,26 +35,6 @@ RSpec.describe EntitlementsController, type: :request do
             expect(response).to have_http_status(:not_found)
           end
         end
-
-        context 'and results found' do
-          let!(:entitlement) { create(:entitlement) }
-
-          before do
-            get '/entitlements', params: { dependency_status: true, move_type: 'conus', rank: entitlement.rank }, xhr: true
-          end
-
-          it 'renders the entitlements table partial' do
-            assert_template partial: '_entitlements_table'
-          end
-
-          it 'displays a summary of the requested search params' do
-            assert_select '.usa-unstyled-list' do
-              assert_select 'li:first-child b', text: entitlement.rank
-              assert_select 'li:nth-child(2) b', text: 'Yes, I have dependents (spouse/children) that are authorized to move'
-              assert_select 'li:last-child b', text: 'CONUS'
-            end
-          end
-        end
       end
     end
   end
