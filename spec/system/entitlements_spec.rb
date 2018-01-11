@@ -16,19 +16,39 @@ RSpec.describe EntitlementsController, type: :system do
       expect(page).not_to have_selector('#entitlements-rank-list')
     end
 
-    it 'displays entitlements based on user input', js: true do
-      select 'E-1', from: :rank
-      select 'Yes, I have dependents', from: :dependency_status
-      select 'Within the Continental United States (CONUS)', from: :move_type
+    context 'when performing a search with dependents', js: true do
+      it 'displays entitlements' do
+        select 'E-1', from: :rank
+        select 'Yes, I have dependents', from: :dependency_status
+        select 'Within the Continental United States (CONUS)', from: :move_type
 
-      click_button 'View Results'
+        click_button 'View Results'
 
-      expect(page).to have_selector('#entitlements-search-results') do |content|
-        expect(content).to have_text('Military Pay Grade: E-1')
-        expect(content).to have_text('Dependency Status: Yes, I have dependents (spouse/children) that are authorized to move')
-        expect(content).to have_text('Move Type: CONUS')
+        expect(page).to have_selector('#entitlements-search-results') do |content|
+          expect(content).to have_text('Military Pay Grade: E-1')
+          expect(content).to have_text('Dependency Status: Yes, I have dependents (spouse/children) that are authorized to move')
+          expect(content).to have_text('Move Type: CONUS')
 
-        expect(content).to have_selector('.entitlements-table tbody tr:first-child td + td', text: '8,000 lbs.')
+          expect(content).to have_selector('.entitlements-table tbody tr:first-child td + td', text: '8,000 lbs.')
+        end
+      end
+    end
+
+    context 'when performing a search without dependents', js: true do
+      it 'displays entitlements' do
+        select 'E-1', from: :rank
+        select 'No, I do not have dependents', from: :dependency_status
+        select 'Within the Continental United States (CONUS)', from: :move_type
+
+        click_button 'View Results'
+
+        expect(page).to have_selector('#entitlements-search-results') do |content|
+          expect(content).to have_text('Military Pay Grade: E-1')
+          expect(content).to have_text('Dependency Status: No, I do not have dependents')
+          expect(content).to have_text('Move Type: CONUS')
+
+          expect(content).to have_selector('.entitlements-table tbody tr:first-child td + td', text: '5,000 lbs.')
+        end
       end
     end
   end
