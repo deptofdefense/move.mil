@@ -13,7 +13,7 @@ SecureHeaders::Configuration.default do |config|
     style_src: %w['self' 'unsafe-inline']
   }
 
-  config.hsts = 'max-age=15768000'
+  config.hsts = "max-age=#{1.year.to_i}"
   config.referrer_policy = %w[origin-when-cross-origin strict-origin-when-cross-origin]
   config.x_content_type_options = 'nosniff'
   config.x_download_options = 'noopen'
