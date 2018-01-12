@@ -232,44 +232,37 @@
     ]
   },
   {
-    "name": "Lackland AFB",
+    "name": "Joint Personal Property Shipping Office South Central, San Antonio TX - JPPSO-SC (DET 3)",
     "location": {
-      "street_address": "1561 Stewart St",
+      "street_address": "2261 Hughes Ave.",
       "extended_address": null,
-      "locality": "San Antonio",
+      "locality": "Lackland AFB",
       "region": "Texas",
       "region_code": "TX",
       "postal_code": "78236",
       "country_name": "United States",
       "country_code": "US",
-      "latitude": 29.38191,
-      "longitude": -98.625776
+      "latitude": 29.378272,
+      "longitude": -98.6239922
     },
     "email_addresses": [
       {
-        "email_address": "502LRS.LGRDF.PersonalProperty@us.af.mil",
+        "email_address": "jppso-sc.cs-ms@us.af.mil",
         "note": "Customer Service"
       }
     ],
     "phone_numbers": [
       {
-        "phone_number": "(210) 671-2821 / (210) 671-2823 ",
+        "phone_number": "1-800-599-7709",
         "phone_type": "voice",
         "dsn": false
       },
       {
-        "phone_number": "473-2821  / 473-2823 ",
+        "phone_number": "(210) 321-4200",
         "phone_type": "voice",
-        "dsn": true
+        "dsn": false
       }
-    ],
-    "hours": "Mon-Tues-Thurs-Fri0700-1600\nClosed Wed 1400 for AETC mandatory training and Weekends, Holidays, & AETC Family Days",
-    "services": [
-      "Walk-In Help",
-      "Briefings",
-      "Appointments"
-    ],
-    "note": "PPM Mass Briefings during peak season (June-Aug) by appt. only Tues & Thurs @ 0730 / Student Mass Briefings by appt. only Mon-Wed-Fri @ 1000"
+    ]
   },
   {
     "name": "JPPSO Anchorage",
