@@ -1,6 +1,14 @@
 class TutorialsController < ApplicationController
   def show
-    @tutorials = Tutorial.includes(:tutorial_steps).all.to_a
-    @tutorial = params[:id] ? @tutorials.find { |tutorial| tutorial.slug == params[:id] } : @tutorials.first
+    return @tutorial = tutorials.first unless params[:id]
+
+    @tutorial = tutorials.find { |tutorial| tutorial.slug == params[:id] }
+
+    # Redirect on invalid / outdated tutorial ID
+    redirect_to tutorial_path if @tutorial.nil?
+  end
+
+  def tutorials
+    @tutorials ||= Tutorial.includes(:tutorial_steps).all
   end
 end
