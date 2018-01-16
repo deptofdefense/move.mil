@@ -246,50 +246,41 @@
     ]
   },
   {
-    "name": "Customer Service Management Division",
+    "name": "Fort Belvoir Logistics Readiness Center",
     "shipping_office_name": "JPPSO-MA",
     "location": {
-      "street_address": "Gunston Rd",
-      "extended_address": "Building 1466N",
+      "street_address": "9910 Tracy Loop",
+      "extended_address": "Bldg 766",
       "locality": "Fort Belvoir",
       "region": "Virginia",
       "region_code": "VA",
       "postal_code": "22060",
       "country_name": "United States",
       "country_code": "US",
-      "latitude": 38.689035,
-      "longitude": -77.147046
+      "latitude": 38.6891689,
+      "longitude": -77.1472925
     },
-    "email_addresses": [
-      {
-        "email_address": "Usarmy.belvoir.imcom.mbx.jppsowa-ibdelivery@mail.mil",
-        "note": "Customer Service"
-      }
-    ],
     "phone_numbers": [
       {
-        "phone_number": "(703) 806-0800",
+        "phone_number": "703-805-5674",
         "phone_type": "voice",
         "dsn": false
       },
       {
-        "phone_number": "656-0800",
+        "phone_number": "655-5674",
         "phone_type": "voice",
         "dsn": true
-      }
-    ],
-    "urls": [
+      },
       {
-        "url": "www.belvoir.army.mil/jppsoma"
+        "phone_number": "703-805-2138",
+        "phone_type": "fax",
+        "dsn": false
       }
     ],
-    "hours": "0800-1630 Monday - Friday; Sat/Sun/Holidays Closed",
     "services": [
-      "Walk-In Help",
-      "Call Center",
-      "Appointments",
-      "QA Inspections"
-    ]
+      "Appointments"
+    ],
+    "note": "Appointment only. Online counseling."
   },
   {
     "name": "West Point Military Academy ITO",
