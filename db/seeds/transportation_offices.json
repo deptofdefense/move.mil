@@ -246,7 +246,7 @@
     ]
   },
   {
-    "name": "Fort Belvoir Logistics Readiness Center",
+    "name": "Fort Belvoir PPPO: Logistics Readiness Center",
     "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "9910 Tracy Loop",
@@ -284,7 +284,7 @@
   },
 
   {
-    "name": "JPPSO-MA: Regional Processing Office",
+    "name": "JPPSO-MA: Regional Customer Service Office",
     "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "9325 Gunston Rd",
