@@ -247,7 +247,7 @@
   },
   {
     "name": "Fort Belvoir Logistics Readiness Center",
-    "shipping_office_name": "JPPSO-MA",
+    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "9910 Tracy Loop",
       "extended_address": "Bldg 766",
@@ -282,9 +282,55 @@
     ],
     "note": "Appointment only. Online counseling."
   },
+
+  {
+    "name": "JPPSO-MA: Regional Processing Office",
+    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
+    "location": {
+      "street_address": "9325 Gunston Rd",
+      "extended_address": "Ste N110 Bldg. 1466",
+      "locality": "Fort Belvoir",
+      "region": "Virginia",
+      "region_code": "VA",
+      "postal_code": "22060",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.704505,
+      "longitude": -77.148212
+    },
+    "email_addresses": [
+      {
+        "email_address": "usarmy.belvoir.imcom.mbx.jppsowa@mail.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "(703) 806-4900",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "312-656-4900",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ],
+    "urls": [
+      {
+        "url": "http://www.belvoir.army.mil/jppsoma/"
+      }
+    ],
+    "hours": "0800-1600",
+    "services": [
+      "Walk-In Help",
+      "Call Center",
+      "QA Inspections"
+    ]
+  },
   {
     "name": "West Point Military Academy ITO",
-    "shipping_office_name": "JPPSO-MA",
+    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "626 Swift Rd",
       "extended_address": null,
@@ -643,7 +689,7 @@
   },
   {
     "name": "PPPO Fort Hamilton",
-    "shipping_office_name": "JPPSO-MA",
+    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "114 White Ave",
       "extended_address": "Room 114",
@@ -2907,7 +2953,7 @@
   },
   {
     "name": "PPPO COUNSELING OFFICE NAVSUP BETHESDA",
-    "shipping_office_name": "JPPSO-MA",
+    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "8901 Wisconsin Ave",
       "extended_address": "Bldg 17 Room 3D",
@@ -6691,7 +6737,7 @@
   },
   {
     "name": "Logistics Readiness Center Household Goods Counseling Office",
-    "shipping_office_name": "JPPSO-MA",
+    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "9910 Tracy Loop",
       "extended_address": "Building 766",
@@ -6846,7 +6892,7 @@
   },
   {
     "name": "PPPO Counseling Office JB Andrews AFB, MD",
-    "shipping_office_name": "JPPSO-MA",
+    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "1500 West Perimeter Rd",
       "extended_address": "Suite 2700",
@@ -6880,7 +6926,7 @@
   },
   {
     "name": "PPPO Fort Detrick MD",
-    "shipping_office_name": "JPPSO-MA",
+    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "1520 Freedman Dr",
       "extended_address": "Suite 400 Room 203",
@@ -6918,7 +6964,7 @@
   },
   {
     "name": "PPPO Counseling Office, USCG Baltimore",
-    "shipping_office_name": "JPPSO-MA",
+    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "2401 Hawkins Point Rd",
       "extended_address": "Commanding Officer, Surface Forces Logistic Center, Transportation Office",
@@ -6951,7 +6997,7 @@
   },
   {
     "name": "PPPO COUNSELING OFFICE ABERDEEN PROVING GROUND",
-    "shipping_office_name": "JPPSO-MA",
+    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "4305 Susquehanna Ave",
       "extended_address": "Rm 307",
@@ -6992,7 +7038,7 @@
   },
   {
     "name": "PPPO COUNSELING OFFICE ABERDEEN PROVING GROUND",
-    "shipping_office_name": "JPPSO-MA",
+    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "4305 Susquehanna Ave",
       "extended_address": null,
@@ -7033,7 +7079,7 @@
   },
   {
     "name": "JBAB PPPO",
-    "shipping_office_name": "JPPSO-MA",
+    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "Brookley Ave SW",
       "extended_address": "JBAB PPPO Bldg 520, Suite 101",
@@ -7073,7 +7119,7 @@
   },
   {
     "name": "PPPO Counseling Office, DMO JB Myer-Henderson Hall",
-    "shipping_office_name": "JPPSO-MA",
+    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "1555 Southgate Rd",
       "extended_address": "Henderson Hall, Bldg. 29, Rm 302",
@@ -7116,7 +7162,7 @@
   },
   {
     "name": "PPPO-USCG Counseling Office, Washington DC",
-    "shipping_office_name": "JPPSO-MA",
+    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "2703 Martin Luther King Ave SE",
       "extended_address": "Stop 7118",
@@ -7151,7 +7197,7 @@
   },
   {
     "name": "Fort Meade Transportation Office",
-    "shipping_office_name": "JPPSO-MA",
+    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "2234 Huber Rd",
       "extended_address": "Room 116",
@@ -7193,7 +7239,7 @@
   },
   {
     "name": "LRC ITD PPPO",
-    "shipping_office_name": "JPPSO-MA",
+    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "7162 Hedgerow Rd",
       "extended_address": null,
@@ -7235,7 +7281,7 @@
   },
   {
     "name": "PPPO Counseling Office DMO Quantico",
-    "shipping_office_name": "JPPSO-MA",
+    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "2009 Zeilin Rd",
       "extended_address": "PPPO Counseling Office DMO Quantico, Bldg. 2009",
@@ -7275,7 +7321,7 @@
   },
   {
     "name": "Department of the Army Transportation Office PPPO Fort Lee, VA",
-    "shipping_office_name": "JPPSO-MA",
+    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "1401 B Ave",
       "extended_address": "Bldg 3400 Rm 119",
