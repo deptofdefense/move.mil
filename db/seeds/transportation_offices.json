@@ -4,7 +4,7 @@
     "shipping_office_name": null,
     "location": {
       "street_address": "504A Holbrook Rd",
-      "extended_address": null,
+      "extended_address": "1st Floor Room 2",
       "locality": "Fort Bliss",
       "region": "Texas",
       "region_code": "TX",
@@ -12,23 +12,56 @@
       "country_name": "United States",
       "country_code": "US",
       "latitude": 31.8068821,
-      "longitude": 106.4303306
+      "longitude": -106.4303306
     },
     "email_addresses": [
       {
         "email_address": "usarmy.bliss.imcom-central.list.dol-transportation@mail.mil",
         "note": "Customer Service"
+      },
+      {
+        "email_address": "usarmy.hood.usag.mbx.dol-ppopns@mail.mil"
       }
     ],
     "phone_numbers": [
       {
-        "phone_number": "915 568-3455",
+        "phone_number": "(915) 568-6124",
         "phone_type": "voice",
         "dsn": false
       },
       {
-        "phone_number": "978-3455",
+        "phone)number": "(254) 287-2200",
         "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "978-6124",
+        "phone_type": "voice",
+        "dsn": true
+      },
+      {
+        "phone_number": "737-2200",
+        "phone_type": "voice",
+        "dsn": true
+      },
+      {
+        "phone_number": "(254) 287-5608",
+        "phone_type": "fax",
+        "dsn": false
+      },
+      {
+        "phone_number": "(915) 568-1947",
+        "phone_type": "fax",
+        "dsn": false
+      },
+      {
+        "phone_number": "737-5608",
+        "phone_type": "fax",
+        "dsn": true
+      },
+      {
+        "phone_number": "978-1947",
+        "phone_type": "fax",
         "dsn": true
       }
     ],
@@ -747,7 +780,7 @@
       "country_name": "United States",
       "country_code": "US",
       "latitude": 34.6831973,
-      "longitude": 86.6352498
+      "longitude": -86.6352498
     },
     "email_addresses": [
       {
@@ -825,7 +858,7 @@
       "country_name": "United States",
       "country_code": "US",
       "latitude": 36.607088,
-      "longitude": 121.911078
+      "longitude": -121.911078
     },
     "email_addresses": [
       {
@@ -1914,7 +1947,7 @@
       "country_name": "United States",
       "country_code": "US",
       "latitude": 40.12,
-      "longitude": 77.1
+      "longitude": -77.1
     },
     "email_addresses": [
       {
@@ -1954,7 +1987,7 @@
       "country_name": "United States",
       "country_code": "US",
       "latitude": 33.743288,
-      "longitude": 118.090738
+      "longitude": -118.090738
     },
     "email_addresses": [
       {
@@ -2373,7 +2406,7 @@
       "country_name": "United States",
       "country_code": "US",
       "latitude": 24.578382,
-      "longitude": 81.775788
+      "longitude": -81.775788
     },
     "email_addresses": [
       {
@@ -2416,7 +2449,7 @@
       "country_name": "United States",
       "country_code": "US",
       "latitude": 41.517267,
-      "longitude": 90.546465
+      "longitude": -90.546465
     },
     "email_addresses": [
       {
@@ -3119,7 +3152,7 @@
       "country_name": "United States",
       "country_code": "US",
       "latitude": 35.689,
-      "longitude": 117.6833
+      "longitude": -117.6833
     },
     "email_addresses": [
       {
@@ -3285,7 +3318,7 @@
       "country_name": "United States",
       "country_code": "US",
       "latitude": 36.260194,
-      "longitude": 119.905519
+      "longitude": -119.905519
     },
     "email_addresses": [
 
@@ -3535,7 +3568,7 @@
       "country_name": "United States",
       "country_code": "US",
       "latitude": 47.99,
-      "longitude": 122.2185
+      "longitude": -122.2185
     },
     "email_addresses": [
       {
@@ -3578,7 +3611,7 @@
       "country_name": "United States",
       "country_code": "US",
       "latitude": 47.690266,
-      "longitude": 122.710202
+      "longitude": -122.710202
     },
     "email_addresses": [
       {
@@ -3659,7 +3692,7 @@
       "country_name": "United States",
       "country_code": "US",
       "latitude": 48.343531,
-      "longitude": 122.681039
+      "longitude": -122.681039
     },
     "email_addresses": [
       {
@@ -3700,7 +3733,7 @@
       "country_name": "United States",
       "country_code": "US",
       "latitude": 35.6508,
-      "longitude": 117.6617
+      "longitude": -117.6617
     },
     "email_addresses": [
       {
@@ -6620,7 +6653,7 @@
     ]
   },
   {
-    "name": "Kaneohe Marine Corps Air Station Persona Property Office",
+    "name": "Kaneohe Marine Corps Air Station Personal Property Office",
     "shipping_office_name": null,
     "location": {
       "street_address": "C St",
@@ -6636,7 +6669,7 @@
     },
     "email_addresses": [
       {
-        "email_address": "usmcpersonalproperty@usmc.mil",
+        "email_address": "KBAZ.MCBH.DMO.PPSO.FMB@usmc.mil",
         "note": "Customer Service"
       }
     ],
@@ -6710,12 +6743,6 @@
       "latitude": 21.386987,
       "longitude": -157.907917
     },
-    "email_addresses": [
-      {
-        "email_address": "kbaz.mcbh.dmo.ppso.fmb@usmc.mil",
-        "note": "Customer Service"
-      }
-    ],
     "phone_numbers": [
       {
         "phone_number": "(808) 477-8840 (808) 477-8747",
@@ -6731,7 +6758,6 @@
     "hours": "Monday - Friday 0730 -1600\nThursday 0730 -1400",
     "services": [
       "Walk-In Help",
-      "Briefings",
       "Appointments"
     ]
   },
@@ -6748,7 +6774,7 @@
       "country_name": "United States",
       "country_code": "US",
       "latitude": 38.6884832,
-      "longitude": 77.1492344
+      "longitude": -77.1492344
     },
     "email_addresses": [
       {
@@ -7008,7 +7034,7 @@
       "country_name": "United States",
       "country_code": "US",
       "latitude": 39.482125,
-      "longitude": 76.138442
+      "longitude": -76.138442
     },
     "email_addresses": [
       {
@@ -7049,7 +7075,7 @@
       "country_name": "United States",
       "country_code": "US",
       "latitude": 39.482125,
-      "longitude": 76.138442
+      "longitude": -76.138442
     },
     "email_addresses": [
       {
@@ -7332,7 +7358,7 @@
       "country_name": "United States",
       "country_code": "US",
       "latitude": 37.24333,
-      "longitude": 77.337792
+      "longitude": -77.337792
     },
     "email_addresses": [
       {
