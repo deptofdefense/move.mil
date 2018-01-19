@@ -3532,5 +3532,328 @@
     ],
     "hours": "Monday - Friday 0730 - 1600",
     "note": "Cost: Free to Military"
+  },
+  {
+    "name": "301 Truck Stop",
+    "location": {
+      "street_address": "301 North Eastern Blvd",
+      "extended_address": null,
+      "locality": "Fayetteville",
+      "region": "North Carolina",
+      "region_code": "NC",
+      "postal_code": "28301",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.0500562,
+      "longitude": -78.86422929999999
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "(910) 483-0105",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "(910) 312-1142",
+        "phone_type": "voice",
+        "dsn": false
+      }
+    ],
+    "hours": "0600-2200 M-F\n0730-1700 Sa\nClosed Su",
+    "note": "$10.00"
+  },
+  {
+    "name": "Weathers Brothers Transfer Co",
+    "location": {
+      "street_address": "3700 Murchison Road",
+      "extended_address": null,
+      "locality": "Fayetteville",
+      "region": "North Carolina",
+      "region_code": "NC",
+      "postal_code": "28311",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.100715,
+      "longitude": -78.9171077
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "(910) 480-2200",
+        "phone_type": "voice",
+        "dsn": false
+      }
+    ],
+    "urls": [
+      {
+        "url": "http://weathersmoving.com"
+      }
+    ],
+    "hours": "0730-1700 M-F",
+    "note": "$10.00"
+  },
+  {
+    "name": "Patterson Storage Warehouse",
+    "location": {
+      "street_address": "472 Robeson St",
+      "extended_address": null,
+      "locality": "Fayetteville",
+      "region": "North Carolina",
+      "region_code": "NC",
+      "postal_code": "28301",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.0472066,
+      "longitude": -78.89195579999999
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "(910) 485-3156",
+        "phone_type": "voice",
+        "dsn": false
+      }
+    ],
+    "urls": [
+      {
+        "url": "http://mayflower.com"
+      }
+    ],
+    "hours": "0800-1700 M-F",
+    "note": "$10.00"
+  },
+  {
+    "name": "Fayetteville Moving & Storage",
+    "location": {
+      "street_address": "3715 Ramsey St",
+      "extended_address": null,
+      "locality": "Fayetteville",
+      "region": "North Carolina",
+      "region_code": "NC",
+      "postal_code": "28311",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.110345,
+      "longitude": -78.879829
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "(910) 488-3101",
+        "phone_type": "voice",
+        "dsn": false
+      }
+    ],
+    "note": "$6.00"
+  },
+  {
+    "name": "A+ Moving and Storage",
+    "location": {
+      "street_address": "240 West Mountain Dr",
+      "extended_address": null,
+      "locality": "Fayetteville",
+      "region": "North Carolina",
+      "region_code": "NC",
+      "postal_code": "28306",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.014411,
+      "longitude": -78.902078
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "(910) 437-5100",
+        "phone_type": "voice",
+        "dsn": false
+      }
+    ],
+    "urls": [
+      {
+        "url": "http://localmovinginc.com"
+      }
+    ],
+    "hours": "0800-1700 M-F",
+    "note": "$6.00"
+  },
+  {
+    "name": "Modern Moving & Storage",
+    "location": {
+      "street_address": "537 South Eastern Blvd",
+      "extended_address": null,
+      "locality": "Fayetteville",
+      "region": "North Carolina",
+      "region_code": "NC",
+      "postal_code": "28301",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.0365141,
+      "longitude": -78.86751439999999
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "(910) 483-0114",
+        "phone_type": "voice",
+        "dsn": false
+      }
+    ],
+    "urls": [
+      {
+        "url": "http://fidelitymovingandstorage.com"
+      }
+    ],
+    "hours": "0800-1700 M-F",
+    "note": "$10.00"
+  },
+  {
+    "name": "Spring Lake Auto & Salvage",
+    "location": {
+      "street_address": "1209 Lillington Highway",
+      "extended_address": null,
+      "locality": "Spring Lake",
+      "region": "North Carolina",
+      "region_code": "NC",
+      "postal_code": "28390",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.1852127,
+      "longitude": -78.9634487
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "(910) 436-3820",
+        "phone_type": "voice",
+        "dsn": false
+      }
+    ],
+    "urls": [
+      {
+        "url": "http://youngsautocenter.com"
+      }
+    ],
+    "hours": "0800-1700 M-F",
+    "note": "$10.00 / $5.00 Additional Weigh, Cash Only"
+  },
+  {
+    "name": "Parks Moving & Storage",
+    "location": {
+      "street_address": "3285 Natal St",
+      "extended_address": null,
+      "locality": "Fayetteville",
+      "region": "North Carolina",
+      "region_code": "NC",
+      "postal_code": "28306",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.0097017,
+      "longitude": -78.9180773
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "(910) 425-1116",
+        "phone_type": "voice",
+        "dsn": false
+      }
+    ],
+    "urls": [
+      {
+        "url": "http://parksmovingandstorageinc.com"
+      }
+    ],
+    "hours": "0700-1700 M-F",
+    "note": "$8.00"
+  },
+  {
+    "name": "Penske Truck Rentals",
+    "location": {
+      "street_address": "5741 Bragg Blvd",
+      "extended_address": null,
+      "locality": "Fayetteville",
+      "region": "North Carolina",
+      "region_code": "NC",
+      "postal_code": "28303",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.1041745,
+      "longitude": -78.9598319
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "(910) 487-9368",
+        "phone_type": "voice",
+        "dsn": false
+      }
+    ],
+    "urls": [
+      {
+        "url": "http://pensketruckrental.com"
+      }
+    ],
+    "hours": "0800-1700 M-F\n0800-1300 Sa",
+    "note": "$10.00"
+  },
+  {
+    "name": "International Moving & Storage",
+    "location": {
+      "street_address": "803 Eastern Blvd",
+      "extended_address": null,
+      "locality": "Fayetteville",
+      "region": "North Carolina",
+      "region_code": "NC",
+      "postal_code": "28301",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.0337133,
+      "longitude": -78.87356079999999
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "(910) 483-4195",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "(910) 485-2428",
+        "phone_type": "voice",
+        "dsn": false
+      }
+    ],
+    "urls": [
+      {
+        "url": "http://intlselfstorage.com"
+      }
+    ],
+    "hours": "0800-1700 M-F\n0800-1200 Sa",
+    "note": "$6.00"
+  },
+  {
+    "name": "Moore County Landfill",
+    "location": {
+      "street_address": "456 Turning Leaf Way",
+      "extended_address": null,
+      "locality": "Aberdeen",
+      "region": "North Carolina",
+      "region_code": "NC",
+      "postal_code": "28315",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 35.147562,
+      "longitude": -79.4813015
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "(910) 638-5125",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "(910) 295-4202",
+        "phone_type": "voice",
+        "dsn": false
+      }
+    ],
+    "urls": [
+      {
+        "url": "http://moorecountync.gov"
+      }
+    ],
+    "hours": "0800-1600 M-F\n0700-1200 Sa",
+    "note": "$10.00"
   }
 ]
