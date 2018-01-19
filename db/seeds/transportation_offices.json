@@ -279,11 +279,11 @@
     ]
   },
   {
-    "name": "Fort Belvoir PPPO: Logistics Readiness Center",
+    "name": "PPPO Fort Belvoir / Logistics Readiness Center (LRC)",
     "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
     "location": {
       "street_address": "9910 Tracy Loop",
-      "extended_address": "Bldg 766",
+      "extended_address": "Bldg 766, 406th Army Field Support Battalion (AFSB) Army Sustainment Command (ASC)",
       "locality": "Fort Belvoir",
       "region": "Virginia",
       "region_code": "VA",
@@ -293,27 +293,20 @@
       "latitude": 38.6891689,
       "longitude": -77.1472925
     },
+    "email_addresses": [
+      {
+        "email_address": "usarmy.belvoir.mbx.outboundpcsing@mail.mil",
+        "note": "Customer Service"
+      }
+    ],
     "phone_numbers": [
       {
-        "phone_number": "703-805-5674",
+        "phone_number": "(703) 805-5674",
         "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "655-5674",
-        "phone_type": "voice",
-        "dsn": true
-      },
-      {
-        "phone_number": "703-805-2138",
-        "phone_type": "fax",
         "dsn": false
       }
     ],
-    "services": [
-      "Appointments"
-    ],
-    "note": "Appointment only. Online counseling."
+    "hours": "0800 - 1130 hrs\n1230 - 1500 hrs\nClosed for lunch 1200-1230 hrs.\nClosed Friday Afternoon"
   },
 
   {
@@ -6760,46 +6753,6 @@
       "Walk-In Help",
       "Appointments"
     ]
-  },
-  {
-    "name": "Logistics Readiness Center Household Goods Counseling Office",
-    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
-    "location": {
-      "street_address": "9910 Tracy Loop",
-      "extended_address": "Building 766",
-      "locality": "Fort Belvoir",
-      "region": "Virginia",
-      "region_code": "VA",
-      "postal_code": "22060",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 38.6884832,
-      "longitude": -77.1492344
-    },
-    "email_addresses": [
-      {
-        "email_address": "usarmy.belvoir.usamc.mbx.outboundpcsing@mail.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "703-805-5674",
-        "phone_type": "voice",
-        "dsn": false
-      }
-    ],
-    "urls": [
-      {
-        "url": "http://www.belvoir.army.mil/dol/"
-      }
-    ],
-    "hours": "Monday _ Thursday 0800 - 1500, Friday 0800 - 1200, Sat/Sun Closed",
-    "services": [
-      "Appointments",
-      "Walk-Ins on a Case by Case Basis"
-    ],
-    "note": "Levy Briefing Second and Last Thursday of Every Month; Retirement Brief 1st Wednesday of every other month held at Barton Education Center Fort Belvoir, VA."
   },
   {
     "name": "Schofield Barracks  / Fort Shafter Transportation office",
