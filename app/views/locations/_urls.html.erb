@@ -1,6 +1,6 @@
 <b>Website:</b><br>
 <%- urls.each do |url| -%>
   <%= "#{url['note']}: " if url['note'] %>
-  <%= link_to url['url'], url['url'] %><br>
+  <%= link_to url['url'].gsub(/^https?:\/\//, '').truncate(24, ommission: '…'), url['url'] %><br>
 <%- end -%>
 <br>
