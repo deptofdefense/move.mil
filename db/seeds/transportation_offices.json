@@ -7485,5 +7485,45 @@
         "dsn": true
       }
     ]
+  },
+  {
+    "name": "Goodfellow AFB, Texas",
+    "shipping_office_name": "Joint Personal Property Shipping Office South Central, San Antonio TX - JPPSO-SC (DET 3)",
+    "location": {
+      "street_address": "Bldg 423",
+      "extended_address": null,
+      "locality": "Goodfellow AFB",
+      "region": "Texas",
+      "region_code": "TX",
+      "postal_code": "76908",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 31.435914,
+      "longitude": -100.401092
+    },
+    "email_addresses": [
+      {
+        "email_address": "17LRS.tmo.hhg@us.af.mil",
+        "note": "Personal Property/Passenger Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "(325) 654-3707",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "477-3707",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ],
+    "hours": "Mon, Wed-Friday 0730-1600\nTues 0730-1700",
+    "services": [
+      "Walk-in Help",
+      "Briefings",
+      "QA Inspections"
+    ]
   }
 ]
