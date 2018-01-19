@@ -2160,14 +2160,40 @@
     ],
     "phone_numbers": [
       {
-        "phone_number": "(618) 256-1202  /  (618) 256-1201",
+        "phone_number": "(618) 256-1201",
         "phone_type": "voice",
-        "dsn": false
+        "dsn": false,
+        "note": "Customer Service"
       },
       {
-        "phone_number": "576-1202 / 576-1201",
+        "phone_number": "576-1201",
         "phone_type": "voice",
-        "dsn": true
+        "dsn": true,
+        "note": "Customer Service"
+      },
+      {
+        "phone_number": "(618) 256-1202",
+        "phone_type": "voice",
+        "dsn": false,
+        "note": "Quality Control"
+      },
+      {
+        "phone_number": "576-1202",
+        "phone_type": "voice",
+        "dsn": true,
+        "note": "Quality Control"
+      },
+      {
+        "phone_number": "(618) 256-3558",
+        "phone_type": "voice",
+        "dsn": false,
+        "note": "Personally Procured Move (PPM)"
+      },
+      {
+        "phone_number": "576-3558",
+        "phone_type": "voice",
+        "dsn": true,
+        "note": "Personally Procured Move (PPM)"
       }
     ],
     "urls": [
