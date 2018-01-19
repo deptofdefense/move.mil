@@ -19,4 +19,20 @@ class EntitlementsController < ApplicationController
   def entitlements
     @entitlements ||= Entitlement.all
   end
+
+  # Returns whether the dependency_status XHR parameter matches "status". It's
+  # "safe" because it also returns true if no XHR has been made. (It returns
+  # true instead of false so that the _entitlements_table always shows content.)
+  def safe_dependency_status_check(status)
+    @entitlement_search.nil? || @entitlement_search.dependency_status == status
+  end
+  helper_method :safe_dependency_status_check
+
+  # Returns whether the move_type XHR parameter matches "move_type". It's
+  # "safe" because it also returns true if no XHR has been made. (It returns
+  # true instead of false so that the _entitlements_table always shows content.)
+  def safe_move_type_check(move_type)
+    @entitlement_search.nil? || @entitlement_search.move_type == move_type
+  end
+  helper_method :safe_move_type_check
 end
