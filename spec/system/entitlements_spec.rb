@@ -19,8 +19,9 @@ RSpec.describe EntitlementsController, type: :system do
     context 'when performing a search with dependents', js: true do
       it 'displays entitlements' do
         select 'E-1', from: :rank
-        select 'Yes, I have dependents', from: :dependency_status
-        select 'Within the Continental United States (CONUS)', from: :move_type
+        # USWDS hides the original radio button, which also hides it from capybara. Click the label instead.
+        find('label[for=dependency_status_true]').click
+        find('label[for=move_type_conus]').click
 
         click_button 'View Results'
 
@@ -37,8 +38,9 @@ RSpec.describe EntitlementsController, type: :system do
     context 'when performing a search without dependents', js: true do
       it 'displays entitlements' do
         select 'E-1', from: :rank
-        select 'No, I do not have dependents', from: :dependency_status
-        select 'Within the Continental United States (CONUS)', from: :move_type
+        # USWDS hides the original radio button, which also hides it from capybara. Click the label instead.
+        find('label[for=dependency_status_false]').click
+        find('label[for=move_type_conus]').click
 
         click_button 'View Results'
 
