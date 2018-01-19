@@ -121,43 +121,37 @@
     "note": "PPM  Briefing occurs W @0900"
   },
   {
-    "name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
+    "name": "Joint Personal Property Shipping Office South East (JPPSO-SE), Jacksonville, FL",
     "location": {
-      "street_address": "101 Vernon Ave",
-      "extended_address": "Bldg 461 RM 106/107",
-      "locality": "Panama City Beach",
+      "street_address": "Yorktown Ave.",
+      "extended_address": "Bldg. 110",
+      "locality": "Jacksonville",
       "region": "Florida",
       "region_code": "FL",
-      "postal_code": "32407",
+      "postal_code": "32244",
       "country_name": "United States",
       "country_code": "US",
-      "latitude": 30.176416,
-      "longitude": -85.758076
+      "latitude": 30.2259167,
+      "longitude": -81.6772551
     },
     "email_addresses": [
       {
-        "email_address": "HHG_Panamacity@navy.mil",
+        "email_address": "jppso_se_counseling@navy.mil",
         "note": "Customer Service"
       }
     ],
     "phone_numbers": [
       {
-        "phone_number": "850-234-4317",
+        "phone_number": "(904) 546-6130",
         "phone_type": "voice",
-        "dsn": false
+        "dsn": false,
+        "note": "Customer Service"
       },
       {
-        "phone_number": "436-4317",
+        "phone_number": "546-6120/6130",
         "phone_type": "voice",
         "dsn": true
       }
-    ],
-    "hours": "0730-1530 Sat/Sun Closed Holidays Closed ",
-    "services": [
-      "Walk-In Help",
-      "Briefings",
-      "Appointments",
-      "QA Inspections"
     ]
   },
   {

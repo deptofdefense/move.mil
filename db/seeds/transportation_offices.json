@@ -762,7 +762,7 @@
   },
   {
     "name": "LRC, Installation Transportation Office",
-    "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
+    "shipping_office_name": "Joint Personal Property Shipping Office South East (JPPSO-SE), Jacksonville, FL",
     "location": {
       "street_address": "3433 Snooper Rd",
       "extended_address": null,
@@ -973,7 +973,7 @@
   },
   {
     "name": "PPPO, Fort Benning, GA",
-    "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
+    "shipping_office_name": "Joint Personal Property Shipping Office South East (JPPSO-SE), Jacksonville, FL",
     "location": {
       "street_address": "6650 Meloy Dr",
       "extended_address": "Building 6 Room 105",
@@ -1802,7 +1802,7 @@
   },
   {
     "name": "PPPO FORT BENNING, GA",
-    "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
+    "shipping_office_name": "Joint Personal Property Shipping Office South East (JPPSO-SE), Jacksonville, FL",
     "location": {
       "street_address": "6650 Meloy Hall",
       "extended_address": "Building 6, Room 105",
@@ -2414,7 +2414,7 @@
   },
   {
     "name": "PPSO Key West",
-    "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
+    "shipping_office_name": "Joint Personal Property Shipping Office South East (JPPSO-SE), Jacksonville, FL",
     "location": {
       "street_address": "811 Sigsbee Rd",
       "extended_address": "Bldg V-4059 room 1",
@@ -2505,7 +2505,7 @@
   },
   {
     "name": "NAS Pensacola PPO",
-    "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
+    "shipping_office_name": "Joint Personal Property Shipping Office South East (JPPSO-SE), Jacksonville, FL",
     "location": {
       "street_address": "121 Cuddahy St",
       "extended_address": "Bldg 680 Suite C",
@@ -2545,7 +2545,7 @@
   },
   {
     "name": "Personal Property Office",
-    "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
+    "shipping_office_name": "Joint Personal Property Shipping Office South East (JPPSO-SE), Jacksonville, FL",
     "location": {
       "street_address": "Fleet Logistic Center Jacksonville",
       "extended_address": "Bldg 110 RM 103",
@@ -2580,7 +2580,7 @@
     "services": [
       "Walk-In Help",
       "QA Inspections",
-      "2 Kiosk"
+      "2 Kiosks"
     ]
   },
   {
@@ -2627,7 +2627,7 @@
   },
   {
     "name": "NSA Mid-South Personal Property Office",
-    "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
+    "shipping_office_name": "Joint Personal Property Shipping Office South East (JPPSO-SE), Jacksonville, FL",
     "location": {
       "street_address": "766 Intrepid St",
       "extended_address": "Community Services Bldg. 456, 1st Floor Left Wing",
@@ -2709,7 +2709,7 @@
   },
   {
     "name": "FLCJ DET New Orleans",
-    "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
+    "shipping_office_name": "Joint Personal Property Shipping Office South East (JPPSO-SE), Jacksonville, FL",
     "location": {
       "street_address": "400 Russell Ave",
       "extended_address": "Bldg. 31",
@@ -3287,7 +3287,7 @@
   },
   {
     "name": "FLCJ MERIDIAN DET",
-    "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
+    "shipping_office_name": "Joint Personal Property Shipping Office South East (JPPSO-SE), Jacksonville, FL",
     "location": {
       "street_address": "224 Allen Rd",
       "extended_address": "NAS Meridian Building",
@@ -3453,7 +3453,7 @@
   },
   {
     "name": "PPPO Fort Polk",
-    "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
+    "shipping_office_name": "Joint Personal Property Shipping Office South East (JPPSO-SE), Jacksonville, FL",
     "location": {
       "street_address": "7585 Virginia Ave",
       "extended_address": "Suite 102 - Bldg 4374",
@@ -3497,7 +3497,7 @@
   },
   {
     "name": "Transportation Office Fort Jackson",
-    "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
+    "shipping_office_name": "Joint Personal Property Shipping Office South East (JPPSO-SE), Jacksonville, FL",
     "location": {
       "street_address": "5450 Strom Thurmond Blvd",
       "extended_address": "Room 102",
@@ -3781,7 +3781,7 @@
   },
   {
     "name": "NSA MidSouth Personal Property Office",
-    "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
+    "shipping_office_name": "Joint Personal Property Shipping Office South East (JPPSO-SE), Jacksonville, FL",
     "location": {
       "street_address": "766 Intrepid St",
       "extended_address": "Community Service Building Bldg. 456, 1st Floor Left Wing",
@@ -4434,7 +4434,7 @@
   },
   {
     "name": "MCAS Cherry Point, NC. DMO",
-    "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
+    "shipping_office_name": "Joint Personal Property Shipping Office South East (JPPSO-SE), Jacksonville, FL",
     "location": {
       "street_address": "E Street",
       "extended_address": "Bldg. 298",
@@ -6365,7 +6365,7 @@
   },
   {
     "name": "DMO Camp Lejeune",
-    "shipping_office_name": "NAVSUP FISC JACKSONVILLE (JAX) PANAMA CITY",
+    "shipping_office_name": "Joint Personal Property Shipping Office South East (JPPSO-SE), Jacksonville, FL",
     "location": {
       "street_address": "Ash St",
       "extended_address": "Bldg 1011",
