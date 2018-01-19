@@ -40,6 +40,7 @@ en:
     gps: Global Positioning System
     hhg: Household Goods
     jtr: Joint Travel Regulations
+    mco: Military Claims Office
     nte: Not to Exceed
     nts: Non-Temporary Storage
     oconus: Outside the Continental United States
@@ -51,6 +52,7 @@ en:
     pov: Privately-Owned Vehicle
     sit: Storage in Transit
     src: System Response Center
+    tsp: Transportation Service Provider
     tdy: Temporary Duty
   site:
     name: Move.mil
