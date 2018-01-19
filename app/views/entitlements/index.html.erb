@@ -58,11 +58,15 @@
 
             <fieldset>
               <legend>Is your move completely within the Continental United States (<%= abbr_tag('conus') %>)?</legend>
-              <div class="image-selector">
-                <%= form.radio_button :move_type, 'conus', id: :move_type_conus, required: true, checked: true %>
-                <%= form.label :move_type, 'CONUS', :value => 'conus', class: 'image-selector-label conus-image' %>
-                <%= form.radio_button :move_type, 'oconus', id: :move_type_oconus, required: true %>
-                <%= form.label :move_type, 'OCONUS', :value => 'oconus', class: 'image-selector-label oconus-image' %>
+              <div class="usa-grid-full grid-form-width">
+                <div class="usa-width-one-half">
+                  <%= form.radio_button :move_type, 'conus', id: :move_type_conus, required: true %>
+                  <%= form.label :move_type, 'CONUS', :value => 'conus' %>
+                </div>
+                <div class="usa-width-one-half">
+                  <%= form.radio_button :move_type, 'oconus', id: :move_type_oconus, required: true %>
+                  <%= form.label :move_type, 'OCONUS', :value => 'oconus' %>
+                </div>
               </div>
             </fieldset>
 
