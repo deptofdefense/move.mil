@@ -2061,30 +2061,6 @@
     "note": "Cost: $11.00 per ticket"
   },
   {
-    "name": "Lackland AFB Scale",
-    "location": {
-      "street_address": null,
-      "extended_address": null,
-      "locality": "San Antonio",
-      "region": "Texas",
-      "region_code": "TX",
-      "postal_code": "78236",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 29.38588249999999,
-      "longitude": -98.62452479999999
-    },
-    "phone_numbers": [
-      {
-        "phone_number": "830-298-5388",
-        "phone_type": "voice",
-        "dsn": false
-      }
-    ],
-    "hours": "Monday - Friday 0730 - 1630",
-    "note": "Cost: Free, Operated by the Lackland Personal Property Office (PPPO) - call when ready to weigh"
-  },
-  {
     "name": "Little Rock AFB Scale",
     "location": {
       "street_address": "1572 Lachmund Dr",
