@@ -8,7 +8,7 @@ end
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
-gem 'activerecord-import', '~> 0.21.0', require: false
+gem 'activerecord-import', '~> 0.22.0', require: false
 gem 'friendly_id', '~> 5.2', '>= 5.2.3'
 gem 'geokit-rails', '~> 2.3'
 gem 'health_check', '~> 2.7'
@@ -16,12 +16,12 @@ gem 'high_voltage', '~> 3.0'
 gem 'jbuilder', '~> 2.7'
 gem 'lograge', '~> 0.9.0'
 gem 'pg', '~> 0.21.0'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.11', '>= 3.11.2'
 gem 'rails', '~> 5.1', '>= 5.1.4'
 gem 'roo', '~> 2.7.1', require: false
 gem 'sass', '~> 3.5', '>= 3.5.5'
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'
-gem 'uglifier', '~> 4.1', '>= 4.1.3'
+gem 'uglifier', '~> 4.1', '>= 4.1.4'
 gem 'uswds-rails', '~> 1.4.4.1'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
