@@ -22,13 +22,13 @@ gem 'roo', '~> 2.7.1', require: false
 gem 'sass', '~> 3.5', '>= 3.5.5'
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 gem 'uglifier', '~> 4.1', '>= 4.1.4'
-gem 'uswds-rails', '~> 1.4.4.1'
+gem 'uswds-rails', '~> 1.4', '>= 1.4.5'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-html5shiv', '3.7.3'
-  gem 'rails-assets-jquery', '3.2.1'
-  gem 'rails-assets-leaflet', '1.2.0'
+  gem 'rails-assets-jquery', '3.3.1'
+  gem 'rails-assets-leaflet', '1.3.1'
   gem 'rails-assets-owl-carousel2', '2.2.1'
 end
 
