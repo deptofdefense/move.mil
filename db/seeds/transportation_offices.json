@@ -5830,8 +5830,8 @@
       "postal_code": "78148",
       "country_name": "United States",
       "country_code": "US",
-      "latitude": 29.130567,
-      "longitude": -98.159155
+      "latitude": 29.5355288,
+      "longitude": -98.2775175
     },
     "email_addresses": [
       {
@@ -7484,7 +7484,8 @@
         "phone_type": "voice",
         "dsn": true
       }
-    ]
+    ],
+    "hours": "Mon-Tues and Thurs-Fri 0730-1515 / Closed Wed 1400 (for AETC mandatory training), Weekends, Holidays, & AETC Family Days"
   },
   {
     "name": "Goodfellow AFB, Texas",
