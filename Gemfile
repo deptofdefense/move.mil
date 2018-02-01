@@ -21,7 +21,7 @@ gem 'rails', '~> 5.1', '>= 5.1.4'
 gem 'roo', '~> 2.7.1', require: false
 gem 'sass', '~> 3.5', '>= 3.5.5'
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'
-gem 'uglifier', '~> 4.1', '>= 4.1.4'
+gem 'uglifier', '~> 4.1', '>= 4.1.5'
 gem 'uswds-rails', '~> 1.4', '>= 1.4.5'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
@@ -34,7 +34,7 @@ end
 
 group :development, :test do
   gem 'brakeman', '~> 4.1', require: false
-  gem 'byebug', '~> 9.1'
+  gem 'byebug', '~> 10.0'
   gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
   gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
