@@ -65,7 +65,7 @@ export GOOGLE_MAPS_API_KEY=<your api key here>
 ```
 Enable the Google Maps Geocoding API by going [here](https://console.developers.google.com/apis/api/geocoding_backend).
 
-To work with encrypted seed data, set the `SEEDS_ENC_KEY` variable in the `.env` file (originally generated during the `bin/setup` process). Once set, run `bin/rails db:setup` to load the encrypted data.
+To work with encrypted seed data, you need to know the secret `SEEDS_ENC_KEY` variable and set it in the `.env` file. This was originally generated once during the `bin/setup` process. Once set, run `bin/rails db:setup` to load the encrypted data.
 
 ## Making Changes
 
