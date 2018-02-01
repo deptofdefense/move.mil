@@ -1,0 +1,23 @@
+<%- @page_title = 'Moving Guidance During the Government Shutdown' -%>
+
+<%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: []} %>
+
+<div class="usa-section main-section">
+  <h1><%= @page_title %></h1>
+
+  <p>This page compiles U.S. Army, Air Force, Navy, Marine Corps, and Coast Guard personal property shipping office (PPSO) operating status at worldwide locations, contains Fiscal Year 14 (FY14) funding guidance for personal property shipments by branch of service, and lists military service headquarters points of contact for responsible service-funded personal property shipments. Specific questions should be addressed to the appropriate point(s) of contact listed herein.</p>
+  <p>In general personal property offices are open for business, however, we do expect some reduced capability and potential customer delays. As additional information is obtained we will update this advisory.</p>
+  <p><b>U.S. Army guidance as of 22 Jan 2018:</b> No specific additional army guidance is provided.</p>
+  <p><b>U.S. Air Force guidance as of 22 Jan 2018:</b> Air Force operated JPPSOs/CPPSOs/PPSOs, and pppos are open at reduced staffing levels. We anticipate reduced capability and potential customer delays. Efforts will focus on short-fuse shipments with Blue Bark shipments (deceased members)/retirees and separatees. please address all questions relative to Air Force PCS orders and personal property shipping office hours of operation to PPA HQ–Personal Property Operations via email to <%= mail_to 'ppahq.ppo.operations@us.af.mil' %></p>
+  <p><b>U.S. Navy guidance as of 22 Jan 2018:</b> All Navy personal property offices are open and under normal business hours. Address questions regarding Navy funded PCS/TCS orders to: <%= mail_to 'householdgoods@navy.mil' %>, or telephone the Navy household goods customer contact center at (855) HHG-MOVE.</p>
+  <p><b>U.S. Marine Corps guidance as of 22 Jan 2018:</b> Marine Corps distribution management offices (DMO)/personal property offices have military personnel manning their telephones. However, in the event Marine Corps-sponsored personnel requiring emergent personal property services cannot establish communications with their nearest Personal Property Office, please contact (703) 695-7762 or (703) 695-6099 for assistance.</p>
+  <p><b>U.S. Coast Guard guidance as of 22 Jan 2018:</b> No additional Coast Guard guidance is provided. Please address all questions regarding Coast Guard funded PCS orders to USCG (OMP COMDT) at (202) 475-5402.</p>
+  <p>USTRANSCOM Personal Property will remain open unless further notice is provided. Email questions related to this message to <%= mail_to 'usarmy.scott.sddc.mbx.pp-ops@mail.mil' %>.</p>
+  <p>The Defense Personal Propety System (DPS) Response Center remains open. Report DPS technical issues to the Systems Response Center (SRC):</p>
+
+  <ul>
+    <li><b>Email:</b> <%= mail_to 'usarmy.scott.sddc.mbx.g6-src-dps-hd@mail.mil' %></li>
+    <li><b>Telephone:</b> Toll Free (800) 462-2176; Commercial (618) 589-9445, option 5</li>
+    <li><b>Internet:</b> <%= link_to 'src.service-now.com/src', 'https://src.service-now.com/src' %></li>
+  </ul>
+</div>

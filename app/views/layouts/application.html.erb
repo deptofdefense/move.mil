@@ -74,6 +74,8 @@
       </div>
     </div>
 
+    <%= render 'shared/shutdown_banner' if current_page?(root_path) %>
+
     <div class="usa-navbar">
       <%= raw('<button class="usa-menu-btn">Menu</button>') %>
 

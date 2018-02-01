@@ -5,3 +5,5 @@
 <div class="back-to-top">
   <%= link_to 'Back to top', '#top' %>
 </div>
+
+<%= render 'shared/shutdown_banner' unless current_page?(page_path('shutdown')) %>
