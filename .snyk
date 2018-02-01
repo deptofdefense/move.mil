@@ -1,0 +1,13 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.10.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-RUBY-ACTIONCABLE-20338:
+    - '* > rails@5.1.4':
+        reason: None given
+        expires: '2018-03-03T20:27:30.218Z'
+  SNYK-RUBY-NOKOGIRI-20299:
+    - '* > chromedriver-helper@1.1.0':
+        reason: None given
+        expires: '2018-03-03T20:27:30.218Z'
+patch: {}
