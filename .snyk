@@ -4,10 +4,10 @@ version: v1.10.1
 ignore:
   SNYK-RUBY-ACTIONCABLE-20338:
     - '* > rails@5.1.4':
-        reason: None given
-        expires: '2018-03-03T20:27:30.218Z'
+        reason: 'ActionCable not used by application.'
+        expires: '2018-06-01T12:00:00.000Z'
   SNYK-RUBY-NOKOGIRI-20299:
     - '* > chromedriver-helper@1.1.0':
-        reason: None given
-        expires: '2018-03-03T20:27:30.218Z'
+        reason: 'Application does not opt in to DTDLOAD nor opt out of NONET'
+        expires: '2018-06-01T12:00:00.000Z'
 patch: {}
