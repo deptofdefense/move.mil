@@ -1,4 +1,4 @@
-# Contributing to move.mil
+# Contributing to Move.mil
 
 Anyone is welcome to contribute code changes and additions to this project. If you'd like your changes merged into the master branch, please read the following document before opening a [pull request][pulls].
 
@@ -17,7 +17,7 @@ There are several ways in which you can help improve this project:
 
 ## Getting Started
 
-move.mil is a [Ruby on Rails](http://rubyonrails.org) (version 5.1.x) application with a [PostgreSQL](https://www.postgresql.org) database (version 9.6.x). Development dependencies are managed using the [Bundler](http://bundler.io) gem.
+Move.mil is a [Ruby on Rails](http://rubyonrails.org) (version 5.1.x) application with a [PostgreSQL](https://www.postgresql.org) database (version 9.6.x). Development dependencies are managed using the [Bundler](http://bundler.io) gem.
 
 If you're using macOS, you can use [Postgres.app](https://postgresapp.com) to quickly get PostgreSQL installed and running. You may also install PostgreSQL using [Homebrew](https://brew.sh):
 
@@ -75,7 +75,7 @@ To work with encrypted seed data, you need to know the secret `SEEDS_ENC_KEY` va
 1. _Write some code!_
 1. Run the application and verify that your changes function as intended: `bin/rails server`.
 1. If your changes would benefit from testing, add the necessary tests and verify everything passes by running `bin/rspec`.
-1. Commit your changes: `git commit -am 'Add some new feature or fix some issue'`. _(See [this excellent article](https://chris.beams.io/posts/git-commit/) for tips on writing useful Git commit messages.)_
+1. Commit your changes: `git commit -am 'Add some new feature or fix some issue'`. _(See [this excellent article](https://chris.beams.io/posts/git-commit) for tips on writing useful Git commit messages.)_
 1. Push the branch to your fork: `git push -u origin your-descriptive-branch-name`.
 1. Create a new pull request and we'll review your changes.
 
