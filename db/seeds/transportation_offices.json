@@ -5445,7 +5445,7 @@
     "shipping_office_name": "Joint Personal Property Shipping Office South Central, San Antonio TX - JPPSO-SC (DET 3)",
     "location": {
       "street_address": "2484 Stanley Rd",
-      "extended_address": null,
+      "extended_address": "Bldg. 2263",
       "locality": "San Antonio",
       "region": "Texas",
       "region_code": "TX",
@@ -5823,7 +5823,7 @@
     "shipping_office_name": "Joint Personal Property Shipping Office South Central, San Antonio TX - JPPSO-SC (DET 3)",
     "location": {
       "street_address": "555 D St East",
-      "extended_address": "502 LRS/LGRDF",
+      "extended_address": "Bldg. 399",
       "locality": "Universal City",
       "region": "Texas",
       "region_code": "TX",
@@ -7457,16 +7457,16 @@
     "name": "Lackland AFB",
     "shipping_office_name": "Joint Personal Property Shipping Office South Central, San Antonio TX - JPPSO-SC (DET 3)",
     "location": {
-      "street_address": "1865 Selfridge Ave.",
-      "extended_address": "Bldg. 5160",
+      "street_address": "1561 Stewart St.",
+      "extended_address": "Bldg. 1516",
       "locality": "JBSA Lackland",
       "region": "Texas",
       "region_code": "TX",
       "postal_code": "78236",
       "country_name": "United States",
       "country_code": "US",
-      "latitude": 29.3806316,
-      "longitude": -98.6147025
+      "latitude": 29.3829726,
+      "longitude": -98.6275944
     },
     "email_addresses": [
       {
@@ -7485,7 +7485,13 @@
         "dsn": true
       }
     ],
-    "hours": "Mon-Tues and Thurs-Fri 0730-1515 / Closed Wed 1400 (for AETC mandatory training), Weekends, Holidays, & AETC Family Days"
+    "hours": "Mon-Tues-Thurs-Fri 0700-1600; Closed Wed 1400 for AETC mandatory training, Weekends, Holidays, & AETC Family Days",
+    "services": [
+      "Walk-In Help",
+      "Briefings",
+      "Appointments"
+    ],
+    "note": "PPM Mass Briefings during peak season (June-Aug) by appt. only -Mon-Wed-Fri @ 1000 Student Mass Briefings"
   },
   {
     "name": "Goodfellow AFB, Texas",
