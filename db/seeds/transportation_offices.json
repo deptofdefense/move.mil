@@ -306,7 +306,12 @@
         "dsn": false
       }
     ],
-    "hours": "0800 - 1130 hrs\n1230 - 1500 hrs\nClosed for lunch 1200-1230 hrs.\nClosed Friday Afternoon"
+    "hours": "0800 - 1130 hrs\n1230 - 1500 hrs\nClosed for lunch 1200-1230 hrs.\nClosed Friday Afternoon",
+    "services": [
+      "Walk-In Help",
+      "Appointments"
+    ],
+    "note": "Walk-in help is available on a case-by-case basis."
   },
 
   {
