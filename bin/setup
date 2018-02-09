@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 require 'pathname'
 require 'fileutils'
-require 'dotenv/load'
 # rubocop:disable Style/MixinUsage
 include FileUtils
 # rubocop:enable Style/MixinUsage
@@ -28,6 +27,8 @@ chdir APP_ROOT do
   # unless File.exist?('config/database.yml')
   #   cp 'config/database.yml.sample', 'config/database.yml'
   # end
+
+  require 'dotenv/load'
 
   puts "\n== Creating development environment configuration variables =="
   system! 'echo "export GOOGLE_MAPS_API_KEY=" >> .env' if ENV['GOOGLE_MAPS_API_KEY'].nil?
