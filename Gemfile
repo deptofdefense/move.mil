@@ -21,7 +21,7 @@ gem 'rails', '~> 5.1', '>= 5.1.4'
 gem 'roo', '~> 2.7.1', require: false
 gem 'sass', '~> 3.5', '>= 3.5.5'
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'
-gem 'uglifier', '~> 4.1', '>= 4.1.5'
+gem 'uglifier', '~> 4.1', '>= 4.1.6'
 gem 'uswds-rails', '~> 1.4', '>= 1.4.6'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
@@ -43,7 +43,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara', '~> 2.17'
+  gem 'capybara', '~> 2.18'
   gem 'chromedriver-helper', '~> 1.2'
   gem 'selenium-webdriver', '~> 3.9'
   gem 'simplecov', '~> 0.15.1', require: false
