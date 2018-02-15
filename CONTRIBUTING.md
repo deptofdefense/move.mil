@@ -11,7 +11,10 @@ There are several ways in which you can help improve this project:
 ## Table of Contents
 
 - [Getting Started](#getting-started)
+    - [Sending and Receiving Email](#sending-and-receiving-email)
+    - [Environment Variables](#environment-variables)
 - [Making Changes](#making-changes)
+    - [Verifying Changes](#verifying-changes)
 - [Code Style](#code-style)
 - [Legalese](#legalese)
 
@@ -54,16 +57,32 @@ This script will install the dependencies specified in the project's [Gemfile][g
 
 Lastly, start the application by running `bin/rails server` and opening [http://localhost:3000](http://localhost:3000) in your Web browser of choice.
 
+### Sending and Receiving Email
+
+Certain features in the application take advantage of [Action Mailer](http://guides.rubyonrails.org/action_mailer_basics.html). To work with these features, we recommend using [MailHog](https://github.com/mailhog/MailHog). Install and run MailHog using Homebrew:
+
+```sh
+brew install mailhog
+brew services run mailhog
+```
+
+Running MailHog with default options will create an SMTP server on port `1025` and an HTTP server on port `8025`. Open [http://localhost:8025](http://localhost:8025) in your Web browser of choice to work with email received through MailHog.
+
 ### Environment Variables
 
 The `bin/setup` script will generate (or update) a `.env` file in the root of the project and create several default environment variables.
+
+#### Google Maps API
 
 To obtain a Google Maps API key, visit [Google's API Console](https://console.developers.google.com) and select "Credentials" in the left-hand navigation. Click "Create Credentials" and choose "API Key" from the list of options. Copy the generated API key and update the `.env` file, replacing `<your api key here>` with the generated API key:
 
 ```
 export GOOGLE_MAPS_API_KEY=<your api key here>
 ```
+
 Enable the Google Maps Geocoding API by going [here](https://console.developers.google.com/apis/api/geocoding_backend).
+
+#### Encrypted Seed Data
 
 To work with encrypted seed data, you need to know the secret `SEEDS_ENC_KEY` variable and set it in the `.env` file. This was originally generated once during the `bin/setup` process. Once set, run `bin/rails db:setup` to load the encrypted data.
 

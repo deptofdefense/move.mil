@@ -31,6 +31,8 @@ chdir APP_ROOT do
   require 'dotenv/load'
 
   puts "\n== Creating development environment configuration variables =="
+  system! 'echo "export FEEDBACK_EMAIL_RECIPIENT=them@example.com" >> .env' if ENV['FEEDBACK_EMAIL_RECIPIENT'].nil?
+  system! 'echo "export FEEDBACK_EMAIL_SENDER=you@example.com" >> .env' if ENV['FEEDBACK_EMAIL_SENDER'].nil?
   system! 'echo "export GOOGLE_MAPS_API_KEY=" >> .env' if ENV['GOOGLE_MAPS_API_KEY'].nil?
   system! 'echo "export SECRET_KEY_BASE=$(bin/rails secret)" >> .env' if ENV['SECRET_KEY_BASE'].nil?
   system! 'echo "export SEEDS_ENC_IV=1848E8B20939E8E446A57C9C6745B9E2" >> .env' if ENV['SEEDS_ENC_IV'].nil?
