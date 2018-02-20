@@ -19,10 +19,15 @@
     <div class="usa-width-one-half">
       <%= form_with scope: :feedback, url: feedback_path, class: 'usa-form', id: 'feedback-form' do |form| %>
         <%= form.label :topic, 'Which category best describes your feedback?' %>
-        <%= form.select :topic, options_for_select(@topics, selected: params[:topic]), { prompt: '- Select -' }, { id: :feedback_topic, required: true } %>
+        <%= form.select :topic, options_for_select(@topics, selected: params[:topic]), { prompt: '- Select -' }, { id: :feedback_topic, required: false } %>
 
         <%= form.label :message, 'Feedback' %>
-        <%= form.text_area :message, id: :feedback_message, required: true, value: params[:message] %>
+        <%= form.text_area :message, id: :feedback_message, required: false, value: params[:message] %>
+
+        <div aria-hidden="true" class="honeybucket-container" hidden>
+          <%= form.label :honeybucket, 'What kind of robot are you?' %>
+          <%= form.text_field :honeybucket, id: :feedback_honeybucket %>
+        </div>
 
         <button>Submit Feedback</button>
       <% end %>
