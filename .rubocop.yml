@@ -11,6 +11,7 @@ Metrics/AbcSize:
 Metrics/BlockLength:
   Exclude:
     - '**/Gemfile'
+    - 'config/environments/**/*.rb'
     - 'lib/**/*.rake'
     - 'spec/**/*.rb'
 
