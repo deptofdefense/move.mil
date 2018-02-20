@@ -1,0 +1,14 @@
+<%- @page_title = 'Feedback' -%>
+
+<%= render partial: 'shared/contextual_header', locals: { page_title: @page_title, parent_pages: [] } %>
+
+<div class="usa-section main-section">
+  <h1><%= @page_title %></h1>
+
+  <div class="feedback-thanks-container">
+    <%= image_tag 'icons/feedback.svg', alt: '', role: 'presentation' %>
+
+    <p><b>Thanks for your feedback!</b></p>
+    <p>Your feedback has been sent to USTRANSCOM so that we can continue to improve the military relocation experience.</p>
+  </div>
+</div>

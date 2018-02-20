@@ -1,0 +1,38 @@
+<%- @page_title = 'Feedback' -%>
+
+<%= render partial: 'shared/contextual_header', locals: { page_title: @page_title, parent_pages: [] } %>
+
+<div class="usa-section main-section">
+  <h1><%= @page_title %></h1>
+
+  <p>Submit feeback on Move.mil and help USTRANSCOM better serve our military service members and their families.</p>
+
+  <%- if @error_message -%>
+    <div class="usa-alert usa-alert-error" role="alert">
+      <div class="usa-alert-body">
+        <p class="usa-alert-text"><%= @error_message %></p>
+      </div>
+    </div>
+  <%- end -%>
+
+  <div class="usa-grid-full feedback-form-container">
+    <div class="usa-width-one-half">
+      <%= form_with scope: :feedback, url: feedback_path, class: 'usa-form', id: 'feedback-form' do |form| %>
+        <%= form.label :topic, 'Which category best describes your feedback?' %>
+        <%= form.select :topic, options_for_select(@topics, selected: params[:topic]), { prompt: '- Select -' }, { id: :feedback_topic, required: true } %>
+
+        <%= form.label :message, 'Feedback' %>
+        <%= form.text_area :message, id: :feedback_message, required: true, value: params[:message] %>
+
+        <button>Submit Feedback</button>
+      <% end %>
+    </div>
+    <div class="usa-width-one-half">
+      <div class="usa-alert usa-alert-info">
+        <div class="usa-alert-body">
+          <p class="usa-alert-text"><b>Important:</b> This form is not intended to be customer service for individual problems related to your current or upcoming move. Personal questions should be submitted to your <%= link_to 'local Personal Property Office (PPPO)', locations_path %> or to one of the other <%= link_to 'Customer Service', customer_service_path %> resources.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

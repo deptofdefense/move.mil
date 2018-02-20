@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   get '/customer-service', to: 'customer_service#index', as: 'customer_service'
   get '/faqs', to: 'faqs#index', as: 'faqs'
 
+  get '/feedback', to: 'feedback#index', as: 'feedback'
+  post '/feedback', to: 'feedback#create'
+  get '/feedback/thanks', to: 'feedback#thanks', as: 'feedback_thanks'
+
   get '/resources/locator-maps(/:latitude,:longitude)', to: 'locations#index', as: 'locations', constraints: {
     latitude: /[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?)/,
     longitude: /[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)/
