@@ -1,0 +1,23 @@
+.feedback-form-container {
+  margin-top: $site-margins;
+
+  label:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.feedback-thanks-container {
+  background-color: $color-cool-blue-lightest;
+  padding: $site-margins;
+  text-align: center;
+
+  b {
+    color: $color-primary;
+    font-size: $h3-font-size;
+    font-weight: bold;
+
+    @include media($medium-screen) {
+      font-size: $h2-font-size;
+    }
+  }
+}

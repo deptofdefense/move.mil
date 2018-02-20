@@ -1,3 +1,7 @@
 # See http://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
 
 Sitemap: https://www.move.mil/sitemap.xml
+
+User-agent: *
+Disallow: /assets/
+Disallow: /feedback/thanks
