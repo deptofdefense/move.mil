@@ -4,7 +4,7 @@ class FeedbackController < ApplicationController
   end
 
   def create
-    if submission_valid?
+    if valid_submission?
       FeedbackMailer.feedback_email(
         message: feedback_params[:message],
         topic: feedback_params[:topic]
@@ -21,14 +21,14 @@ class FeedbackController < ApplicationController
   private
 
   def feedback_params
-    @feedback_params ||= params.require(:feedback).permit(:message, :topic)
+    @feedback_params ||= params.require(:feedback).permit(:honeybucket, :message, :topic)
   end
 
-  def submission_valid?
-    request.post? &&
-      feedback_params.permitted? &&
+  def valid_submission?
+    feedback_params.permitted? &&
       topics.include?(feedback_params[:topic]) &&
-      feedback_params[:message].present?
+      feedback_params[:message].present? &&
+      feedback_params[:honeybucket].blank?
   end
 
   def topics

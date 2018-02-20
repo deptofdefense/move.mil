@@ -16,9 +16,33 @@ RSpec.describe FeedbackController, type: :request do
   end
 
   describe 'POST #index' do
-    context 'when submitting invalid params' do
+    context 'when submitting incomplete params' do
       before do
-        post '/feedback', params: { feedback: { topic: '', message: '' } }
+        post '/feedback', params: { feedback: { message: '' } }
+      end
+
+      it 'renders the index template' do
+        assert_template 'index'
+      end
+
+      it 'displays an error message' do
+        assert_select '.usa-alert-error .usa-alert-text', text: 'There was a problem submitting your feedback. Mind trying again?'
+      end
+    end
+
+    context 'when submitting invalid params' do
+      let :params do
+        {
+          feedback: {
+            honeybucket: 'I am a happy robot.',
+            message: 'Test feedback message.',
+            topic: 'Suggest a New Idea, Feature or Page'
+          }
+        }
+      end
+
+      before do
+        post '/feedback', params: params
       end
 
       it 'renders the index template' do
