@@ -1,12 +1,3 @@
-.usa-footer .usa-footer-primary-link {
-  color: $color-primary;
-  display: inline-block;
-
-  &:hover {
-    color: $color-primary-darker;
-  }
-}
-
 .usa-footer-logo > a {
   display: inline-block;
   text-decoration: none;
@@ -20,6 +11,34 @@
   font-family: $font-sans;
   font-size: $h5-font-size;
   font-weight: $font-normal;
+}
+
+.footer-meta-links {
+  @include media($medium-screen) {
+    padding-top: $spacing-medium;
+    text-align: right;
+  }
+
+  ul:last-child {
+    border-bottom: none;
+  }
+
+  ul li:not(.usa-footer-primary-link) {
+    margin-bottom: $spacing-medium;
+    padding: 0;
+  }
+
+  a {
+    color: $color-primary;
+    display: inline-block;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+
+    &:hover {
+      color: $color-primary-darker;
+    }
+  }
 }
 
 .usa-footer-contact-links {

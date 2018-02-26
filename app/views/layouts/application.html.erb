@@ -107,7 +107,7 @@
   <footer class="usa-footer usa-footer-big" role="contentinfo">
     <div class="usa-footer-secondary_section">
       <div class="usa-grid">
-        <div class="usa-footer-logo usa-width-one-half">
+        <div class="usa-footer-logo usa-width-one-third">
           <%= link_to 'https://www.ustranscom.mil' do %>
             <%= image_tag 'emblems/ustranscom.svg', alt: 'United States Transportation Command emblem', class: 'usa-footer-big-logo-img' %>
             <h3 class="usa-footer-big-logo-heading">
@@ -118,22 +118,36 @@
           <% end %>
         </div>
 
-        <div class="usa-footer-contact-links usa-width-one-half">
-          <h3 class="usa-footer-contact-heading">Technical Help Desk</h3>
-          <p class="usa-text-small">For help using Move.mil or <%= abbr_tag('eta') %>.</p>
+        <div class="usa-width-two-thirds">
+          <div class="usa-grid-full">
+            <div class="footer-meta-links usa-width-one-half">
+              <ul class="usa-unstyled-list">
+                <li>
+                  <%= link_to 'Feedback/Report a Problem', feedback_path %>
+                </li>
+                <li>
+                  <%= link_to 'Customer Service', customer_service_path %>
+                </li>
+              </ul>
+            </div>
+            <div class="usa-footer-contact-links usa-width-one-half">
+              <h3 class="usa-footer-contact-heading">Technical Help Desk</h3>
+              <p class="usa-text-small">For help using Move.mil or <%= abbr_tag('eta') %>.</p>
 
-          <dl>
-            <dt>Phone</dt>
-            <dd class="usa-text-small">Toll-Free: <%= link_to '(800) 462-2176', 'tel:+18004622176' %></dd>
-            <dd class="usa-text-small">Commercial: <%= link_to '(618) 589-9445', 'tel:+16185899445' %></dd>
+              <dl>
+                <dt>Phone</dt>
+                <dd class="usa-text-small">Toll-Free: <%= link_to '(800) 462-2176', 'tel:+18004622176' %></dd>
+                <dd class="usa-text-small">Commercial: <%= link_to '(618) 589-9445', 'tel:+16185899445' %></dd>
 
-            <dt>Email</dt>
-            <dd class="usa-text-small"><%= mail_to 'usarmy.scott.sddc.mbx.g6-SRC-DPS-HD@mail.mil' %></dd>
+                <dt>Email</dt>
+                <dd class="usa-text-small"><%= mail_to 'usarmy.scott.sddc.mbx.g6-SRC-DPS-HD@mail.mil' %></dd>
 
-            <dt><b>Submit a ticket online</b></dt>
-            <dd class="usa-text-small"><%= link_to 'https://src.service-now.com/src/', 'https://src.service-now.com/src/' %></dd>
-          </dl>
-        </div>
+                <dt><b>Submit a ticket online</b></dt>
+                <dd class="usa-text-small"><%= link_to 'https://src.service-now.com/src/', 'https://src.service-now.com/src/' %></dd>
+              </dl>
+            </div>
+            </div>
+          </div>
       </div>
     </div>
   </footer>
