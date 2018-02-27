@@ -70,7 +70,16 @@ Running MailHog with default options will create an SMTP server on port `1025` a
 
 ### Environment Variables
 
-The `bin/setup` script will generate (or update) a `.env` file in the root of the project and create several default environment variables.
+The `bin/setup` script will generate (or update) a `.env` file in the root of the project and create several default environment variables. Default values may be found in the `bin/setup` script.
+
+| Name                       | Description |
+|----------------------------|-------------|
+| `FEEDBACK_EMAIL_RECIPIENT` | Feedback Form recipient email address _(optional)_ |
+| `FEEDBACK_EMAIL_SENDER`    | Feedback Form sender email address _(optional)_ |
+| `GOOGLE_MAPS_API_KEY`      | API key for use with Locator Maps _(optional)_ |
+| `SECRET_KEY_BASE`          | Default Rails secret key _(required)_ |
+| `SEEDS_ENC_IV`             | Used with encrypted seed data _(optional)_ |
+| `SEEDS_ENC_KEY`            | Used with encrypted seed data _(optional)_ |
 
 #### Google Maps API
 
