@@ -17,7 +17,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'lograge', '~> 0.9.0'
 gem 'pg', '~> 0.21.0'
 gem 'puma', '~> 3.11', '>= 3.11.2'
-gem 'rails', '~> 5.1', '>= 5.1.4'
+gem 'rails', '~> 5.1', '>= 5.1.5'
 gem 'roo', '~> 2.7.1', require: false
 gem 'sass', '~> 3.5', '>= 3.5.5'
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'
@@ -33,7 +33,7 @@ source 'https://rails-assets.org' do
 end
 
 group :development, :test do
-  gem 'brakeman', '~> 4.1', require: false
+  gem 'brakeman', '~> 4.2', require: false
   gem 'byebug', '~> 10.0'
   gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
   gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
