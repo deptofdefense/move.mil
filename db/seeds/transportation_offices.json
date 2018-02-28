@@ -313,7 +313,6 @@
     ],
     "note": "Walk-in help is available on a case-by-case basis."
   },
-
   {
     "name": "JPPSO-MA: Regional Customer Service Office",
     "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
@@ -7536,6 +7535,1863 @@
       "Walk-in Help",
       "Briefings",
       "QA Inspections"
+    ]
+  },
+  {
+    "name": "FLCSI Site, Sigonella Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Naval Air Station Sigonella, NAS II, SP 69 / II, 95040 Catania",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Italy",
+      "country_code": "IT",
+      "latitude": 37.410794,
+      "longitude": 14.913201
+    },
+    "email_addresses": [
+      {
+        "email_address": "ppso-sigonella@eu.navy.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "+39-095-86-9441/9270/9440/9941",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-624-9441/9270/9440/9941",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ],
+    "hours": "0730-1600, M-T T-F / Wednesday 7:30 14:00, closed for training at 14:00",
+    "services": [
+      "Walk-In Help",
+      "Briefings",
+      "Computer Lab",
+      "Appointments",
+      "QA Inspections"
+    ]
+  },
+  {
+    "name": "Lajes AB TMO Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "TMO, Passenger Travel & Personal Property, Bldg. T-608, Rm 94, Lajes AB, PT 09720",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Portugal",
+      "country_code": "PT",
+      "latitude": 38.755114,
+      "longitude": -27.076808
+    },
+    "email_addresses": [
+      {
+        "email_address": "65LRS.TMO.TMOPassengerTravel@us.af.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "+351 295-57-5168",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-535-5168",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ],
+    "hours": "Monday to Thursday: 0800-1400 / Friday: 0900-1400",
+    "services": [
+      "Walk-In Help",
+      "Briefings",
+      "Computer Lab",
+      "Appointments",
+      "QA Inspections",
+      "SCBCA Customs Inspections"
+    ]
+  },
+  {
+    "name": "Naples’ Italy Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "U.S. Naval Support Activity, CONTRADA BOSCARIELLO, GRICIGNANO DI AVERSA (CE) 81030",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Italy",
+      "country_code": "IT",
+      "latitude": 40.9971315,
+      "longitude": 14.2071761
+    },
+    "email_addresses": [
+      {
+        "email_address": "PPSO-NAPLES@EU.NAVY.MIL",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "011-39-081-811-6819/6778",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-629-6819/6778",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ],
+    "hours": "Monday-Friday 0800-1545; Thursday 0800-1400 (Training) ",
+    "services": [
+      "Walk-In Help",
+      "Briefings",
+      "Appointments",
+      "QA Inspections"
+    ],
+    "note": "Briefings occur Bi-Weekly as scheduled by FFSC and Area Orientation "
+  },
+  {
+    "name": "Sasebo Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "CFAS Sasebo Base, Building 132, Sasebo, Japan",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Japan",
+      "country_code": "JP",
+      "latitude": 33.167108,
+      "longitude": 129.714002
+    },
+    "email_addresses": [
+      {
+        "email_address": "M-SA-FISC-ppty@fe.navy.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "+81 (0) 956-50-3418",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "315-252-3418",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ],
+    "hours": "Mon, Tues, Thurs, Friday (0800-1600), Wednesday (Closed at 1200).  Each Day Closed for Lunc - 1200-1300",
+    "services": [
+      "Walk-In Help",
+      "Briefings",
+      "Appointments",
+      "QA Inspections",
+      "Kiosks are available for DOD service members/civilians filing a claim in DPS."
+    ],
+    "note": "PCS to CONUS briefings are Mondays & Fridays from 0900-1100, PCS to OCONUS briefing occurs Wednesday from 0900-1100."
+  },
+  {
+    "name": "Yokota Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "374 LRS/LGRDF, Building 920, Room 117, APO, AP 96326",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Japan",
+      "country_code": "JP",
+      "latitude": 35.7347795,
+      "longitude": 139.3444078
+    },
+    "email_addresses": [
+      {
+        "email_address": "374lrs.lgrdf@us.af.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "1181311759724",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "225-9725",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ],
+    "hours": "Mon, Tues, Thursday, Friday - 0730-1530; Weds 0730 - 1430; Sat/Sun Closed",
+    "services": [
+      "Walk-In Help",
+      "Briefings",
+      "Computer Lab",
+      "Appointments",
+      "QA Inspections"
+    ],
+    "note": "PCS/PPM/Local Move briefings occurs daily. Schedules are blocked in 30 minute intervals from open to close."
+  },
+  {
+    "name": "Ankara, Turkey Traffic Management Office/Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Turkocagi Cad\nEDOK ici\nABD Destek Tesisleri\nGumruk Lrtibat Ofisi\nBalgat/Ankara, Turkey",
+      "extended_address": null,
+      "locality": "Ankara",
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Turkey",
+      "country_code": "TR",
+      "latitude": 39.901441,
+      "longitude": 32.823686
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "90-312-422-6926/6929",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "672-6926/6929",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ],
+    "hours": "Monday thru Friday 0730-1630",
+    "services": [
+      "Walk-In Help",
+      "Briefings",
+      "Computer Lab",
+      "Appointments",
+      "QA Inspections",
+      "Specialized Briefings - US Customers",
+      "Turkish Customers",
+      "POV Support"
+    ]
+  },
+  {
+    "name": "FLCSI Souda Bay, Crete, Greece Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Naval Support Activity (NSA) Souda Bay\nBuilding 5, rm. 14, Mouzouras,\nAkrotiri, Chania, Crete",
+      "extended_address": null,
+      "locality": "Crete",
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Greece",
+      "country_code": "GR",
+      "latitude": 35.531123,
+      "longitude": 24.164314
+    },
+    "email_addresses": [
+      {
+        "email_address": "ppso-souda@eu.navy.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "011-30- 28210-21521",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-266-1521",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ],
+    "hours": "MON-TUE- THU- FRI 0830-1500 and WED 0830-1430",
+    "services": [
+      "Walk-In Help",
+      "Briefings",
+      "Appointments",
+      "QA Inspections",
+      "Inbound/Customs",
+      "Claims",
+      "Quality of Life Vehicle Processing Center (incoming and outgoing POV shipments)"
+    ]
+  },
+  {
+    "name": "Andros Island, Naval Undersea Warfare Center, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Bahamas",
+      "country_code": "BS",
+      "latitude": 24.705953,
+      "longitude": -77.7690
+    }
+  },
+  {
+    "name": "Al Udeid Air Base TMO, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Al Udeid AB / Building 6721 Room 15",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Qatar",
+      "country_code": "QA",
+      "latitude": 25.123726,
+      "longitude": 51.322386
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "318-436-0840",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Camp As Sayliyah Installation Transportation Office, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Camp As Sayliyah / Building 110 Room 1 ITO/DOL",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Qatar",
+      "country_code": "QA",
+      "latitude": 25.188399,
+      "longitude": 51.413527
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "(318) 432-2195/ 432-2216 / 432-2213",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Palmerola AB (Soto Cano), Honduras, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Panamericana Street CA-5 Air Terminal, Bldg R-21",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Honduras",
+      "country_code": "HN",
+      "latitude": 14.382945,
+      "longitude": -87.61434
+    }
+  },
+  {
+    "name": "NAVSUP FLC Yokosuka Site Marianas (Guam), Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Building 3191, Sumay Drive, Naval Station Guam",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Guam",
+      "country_code": "GU",
+      "latitude": 13.424608,
+      "longitude": 144.659819
+    },
+    "email_addresses": [
+      {
+        "email_address": "guampersonalproperty@fe.navy.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "671-333-2045",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "(315) 339-6087",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "NAVSUP FLC Yokosuka Site Marianas (Anderson), Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "ARC LIGHT BLVD BLDG 180002, ANDERSON AIR FORCE BASE 96929",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": null,
+      "country_code": null,
+      "latitude": 13.575147,
+      "longitude": 144.930575
+    },
+    "email_addresses": [
+      {
+        "email_address": "guampersonalproperty@fe.navy.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "671-366-4846",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": null,
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Kwajalein Range, Personal Propery Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Marshall Islands",
+      "country_code": "MH",
+      "latitude": 8.723071,
+      "longitude": 167.734272
+    },
+    "email_addresses": [
+      {
+        "email_address": "usarmy.bucholz.311-sig-cmd.list.shipping-receiving@mail.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "805-355-2180",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": null,
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Misawa AB, Japan, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Building 656, Room 1100, Misawa AB, Japan",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Japan",
+      "country_code": "JP",
+      "latitude": 40.713183,
+      "longitude": 141.376314
+    },
+    "email_addresses": [
+      {
+        "email_address": "35lrs.lgrdf.personalproperty@us.af.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "81-176-77-3525",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "315-226-3525",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Yokosuka Naval Base, Japan, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Japan",
+      "country_code": "JP",
+      "latitude": 35.292227,
+      "longitude": 139.672829
+    },
+    "email_addresses": [
+      {
+        "email_address": "M-YO-FISC-Personal-Property-Yokosuka@fe.navy.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "011-81-46-816-6311",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "315-243-6311",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "COMPLEACT Yokosuka, Japan, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Building 5013, Yokosuka Naval Base",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Japan",
+      "country_code": "JP",
+      "latitude": 35.292227,
+      "longitude": 139.672829
+    },
+    "email_addresses": [
+      {
+        "email_address": "jppso_PH_counseling@navy.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "011-81-46-816-6318/6317",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "315-243-6318",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Camp Zama, Japan, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Building 102, Room E 100, Camp Zama, Japan",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Japan",
+      "country_code": "JP",
+      "latitude": 35.492061,
+      "longitude": 139.397159
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "011-81-46-407-4955",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "315-263-4955",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "ITO, LRC-Okinawa, Japan, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Japan",
+      "country_code": "JP",
+      "latitude": 26.370518,
+      "longitude": 127.735528
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "011-81-611-744-4955",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "315-644-4955",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "MCAS Iwakuni, Japan, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Japan",
+      "country_code": "JP",
+      "latitude": 34.143807,
+      "longitude": 132.229584
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "011-81-827-79-6793",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "315-253-6793",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "MCB Camp Butler, Japan, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Japan",
+      "country_code": "JP",
+      "latitude": 26.29736,
+      "longitude": 127.782983
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "011-81-98-970-2266",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "315-645-2266",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Naval Air Facility, Atsugi, Japan, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Japan",
+      "country_code": "JP",
+      "latitude": 35.458317,
+      "longitude": 139.443401
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "011-81-467-63-3131",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "315-264-3131",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Kadena AB, Japan, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Building 756, Douglas Blvd, Kadena AB",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Japan",
+      "country_code": "JP",
+      "latitude": 26.348219,
+      "longitude": 127.769094
+    },
+    "email_addresses": [
+      {
+        "email_address": "18lrs.pptyoutbound@us.af.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "81-98-938-1111 Ext 634-5964",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "315-634-5964",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Kunsan AB, Japan, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Building 814, Wolfpack Way, Kunsan AB ",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Japan",
+      "country_code": "JP",
+      "latitude": 35.913876,
+      "longitude": 126.621232
+    },
+    "email_addresses": [
+      {
+        "email_address": "8LRS.LGTT@us.af.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "(+82)-63-470-8381",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "315-782-8381",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Osan AB, Japan, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Building 635, Osan AB",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Japan",
+      "country_code": "JP",
+      "latitude": 37.086728,
+      "longitude": 127.035387
+    },
+    "email_addresses": [
+      {
+        "email_address": "51lrs.outboundhhg@us.af.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "011-82-505-784-6019",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "784-6019",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Camp Casey, South Korea, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Building 2440, LRC-RC, 403d AFSB, Area I, Camp Casey",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Republic of Korea",
+      "country_code": "KR",
+      "latitude": 37.919955,
+      "longitude": 127.083601
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "82-503-330-3349",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "315-730-3349",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Camp Henry, South Korea, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Republic of Korea",
+      "country_code": "KR",
+      "latitude": 35.85117,
+      "longitude": 128.59996
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "82-53-470-7589",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "315-768-7589",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Camp Humphreys, South Korea, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Republic of Korea",
+      "country_code": "KR",
+      "latitude": 36.952805,
+      "longitude": 127.022116
+    },
+    "email_addresses": [
+      {
+        "email_address": "usarmy.humphreys.403-afsb-lrc.list.pppo@mail.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "82-31-690-6634",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "315-753-6634",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Yongsan, South Korea, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Republic of Korea",
+      "country_code": "KR",
+      "latitude": 37.529756,
+      "longitude": 126.983429
+    },
+    "email_addresses": [
+      {
+        "email_address": "usarmy.yongsan.imcom-pacific.list.usag-yongsan-ppso@mail.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "82-050-3322-5476",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "315-722-5476",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Alice Springs, Austrailia, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Australia",
+      "country_code": "AU",
+      "latitude": -35.307165,
+      "longitude": 149.117981
+    },
+    "email_addresses": [
+      {
+        "email_address": "tmo@jdfpg.net.au",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "+61 (08) 8951 2047",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": null,
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "337 ASUF, Canberra, Austrailia, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Australia",
+      "country_code": "AU",
+      "latitude": -35.306685,
+      "longitude": 149.116098
+    },
+    "email_addresses": [
+      {
+        "email_address": "337asuf.lgt@us.af.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "011 61 2 6214 5610/5879",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "315-366-5681",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "NAVSUP FLCY, Site Singapore, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "PSA Sembawang Terminal, DEPTFORD Road, Building 7-4, Singapore",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Singapore",
+      "country_code": "SG",
+      "latitude": 1.46076,
+      "longitude": 103.831037
+    },
+    "email_addresses": [
+      {
+        "email_address": "Ykmail.hhg.singapore@oconus.navy.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "(65) 6750-2523 ext: 2523",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "(315) 421-2523",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Diego Garcia, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "British Indian Ocean Territory",
+      "country_code": "IO",
+      "latitude": -7.296205,
+      "longitude": 72.39197
+    }
+  },
+  {
+    "name": "NAVSUP FISCSI, Bahrain, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Building 36, (Same Bldg as CAC ID Lab), Bahrain",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Bahrain",
+      "country_code": "BH",
+      "latitude": 26.20734,
+      "longitude": 50.609819
+    },
+    "email_addresses": [
+      {
+        "email_address": "M-BA-NSA-PERSONALPROPERTYBAHRAIN@me.navy.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "00 973 1785 4265",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "318 439 4265",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "ASG-Kuwait, Camp Arifjan, Kuwait, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Kuwait",
+      "country_code": "KW",
+      "latitude": 28.871014,
+      "longitude": 48.1627
+    }
+  },
+  {
+    "name": "386 ELRS, Ali Al Salem AB, Kuwait, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Kuwait",
+      "country_code": "KW",
+      "latitude": 29.347155,
+      "longitude": 47.53623
+    }
+  },
+  {
+    "name": "Al Dahfra AB, United Arab Emirates, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "United Arab Emirates",
+      "country_code": "AE",
+      "latitude": 24.255854,
+      "longitude": 54.55181
+    }
+  },
+  {
+    "name": "Aviano AB, Italy, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Italy",
+      "country_code": "IT",
+      "latitude": 46.035903,
+      "longitude": 12.61371
+    }
+  },
+  {
+    "name": "USNSE, Libson, Portugal, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": "Lisbon",
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Portugal",
+      "country_code": "PT",
+      "latitude": 38.665724,
+      "longitude": -9.14663
+    }
+  },
+  {
+    "name": "Moron AB, Spain, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Spain",
+      "country_code": "ES",
+      "latitude": 37.166262,
+      "longitude": -5.60166
+    }
+  },
+  {
+    "name": "NAVSUP FLCSI Rota, Spain, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Spain",
+      "country_code": "ES",
+      "latitude": 36.637852,
+      "longitude": -6.33412
+    }
+  },
+  {
+    "name": "Incirlik AB, Turkey, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Building 833, Incirlik AB",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Turkey",
+      "country_code": "TR",
+      "latitude": 36.998332,
+      "longitude": 35.438515
+    },
+    "email_addresses": [
+      {
+        "email_address": "39lrs.ppo@us.af.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "90-322-316-6030",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-676-6030",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "425 ABS/Izmir, Turkey, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Turkey",
+      "country_code": "TR",
+      "latitude": 38.517526,
+      "longitude": 27.014722
+    },
+    "email_addresses": [
+      {
+        "email_address": "jonathon.leonard.ctr@us.af.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "90-232-455-6725",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-675-6725",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "European Theatre, Personal Property Shipping Office (PPSO) / CPPSO",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": null,
+      "country_code": null,
+      "latitude": 49.442306,
+      "longitude": 7.804159
+    },
+    "email_addresses": [
+      {
+        "email_address": "john.r.host.civ@mailmil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "49-631-411-8197",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-483-7885",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Brussels, Belgium, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": "Brussels",
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Belgium",
+      "country_code": "BE",
+      "latitude": 50.869276,
+      "longitude": 4.433368
+    },
+    "email_addresses": [
+      {
+        "email_address": "leon.e.lee5.ln@mail.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "32-2-717-9785",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-368-9785",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Shape, Belgium, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "NATO Headquarters",
+      "extended_address": "Building 220",
+      "locality": "Shape",
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Belgium",
+      "country_code": "BE",
+      "latitude": 50.4994,
+      "longitude": 3.979221
+    },
+    "email_addresses": [
+      {
+        "email_address": "Anthony.a.atkins4.civ@mail.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "0032-65-326413",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-366-6413",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Graffenwoehr, Germany, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Germany",
+      "country_code": "DE",
+      "latitude": 49.646569,
+      "longitude": 11.7902
+    },
+    "email_addresses": [
+      {
+        "email_address": "karl.bielmeier2.ln@mail.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "49-09641-83-8411",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-475-8411",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Baumholder, Germany, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Germany",
+      "country_code": "DE",
+      "latitude": 49.615637,
+      "longitude": 7.33073
+    },
+    "email_addresses": [
+      {
+        "email_address": "iris.h.nickel.ln@mail.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "49-611-143-531-7070",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314.531.7070",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Wiesbaden, Germany, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Building 1023W, Room 203, Wiesbaden",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Germany",
+      "country_code": "DE",
+      "latitude": 50.040611,
+      "longitude": 8.326651
+    },
+    "email_addresses": [
+      {
+        "email_address": "usarmy.wiesbaden.405-afsb.list.dol-pppo@mai.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "(49)-611-143-546-6080/6082",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-546-6080/6082",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Hohenfels, Germany, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Building 10, Room 115, Hohenfels",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Germany",
+      "country_code": "DE",
+      "latitude": 49.224555,
+      "longitude": 11.830403
+    },
+    "email_addresses": [
+      {
+        "email_address": "usarmy.bavaria.405-afsb-lrc.list.pppo-hohenfels@mail.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "(+49) 9472-83-2860",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-466-2860",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Ansback, Germany, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Katterbach Heliport, Building 5818, 2nd Floor Ansback",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Germany",
+      "country_code": "DE",
+      "latitude": 49.286201,
+      "longitude": 10.565793
+    },
+    "email_addresses": [
+      {
+        "email_address": "usarmy.ansbach.imcom-europe.list.dol-pppo@mail.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "0049-(0)9802-83-3704 or -3889",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-467-3704 or 3889",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Garmisch-Partenkirchen, Germany, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Germany",
+      "country_code": "DE",
+      "latitude": 47.483735,
+      "longitude": 11.061886
+    },
+    "email_addresses": [
+      {
+        "email_address": "jean.chan1.ln@mail.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "49-(0) 8821-7503488",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-440-3488",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Stuttgartt, Germany, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Building 2913, Room 301, Stuttgart",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Germany",
+      "country_code": "DE",
+      "latitude": 48.734698,
+      "longitude": 9.080377
+    },
+    "email_addresses": [
+      {
+        "email_address": "usarmy.stuttgart.405-afsb-lrc.list.pppo@mail.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "49.703115-3338",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-431-3338",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Vicenza, Italy, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Italy",
+      "country_code": "IT",
+      "latitude": 45.548783,
+      "longitude": 11.577114
+    },
+    "email_addresses": [
+      {
+        "email_address": "bobby.l.hardaway.civ@mail.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "39-0444-617637",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-637-7637",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Livorno, Italy, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Italy",
+      "country_code": "IT",
+      "latitude": 43.644106,
+      "longitude": 10.352122
+    },
+    "email_addresses": [
+      {
+        "email_address": "rossella.dendi3.ln@mail.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "39-050 548145",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-633- 8145",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Schinnen, Netherlands, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Netherlands",
+      "country_code": "NL",
+      "latitude": 50.942255,
+      "longitude": 5.86378
+    },
+    "email_addresses": [
+      {
+        "email_address": "robece.meens.ln@mail.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "31 (0) 46-443-7575",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-360-7575",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Ramstein AB, Germany, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Building 2106, Room 212, Ramstein",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Germany",
+      "country_code": "DE",
+      "latitude": 49.447748,
+      "longitude": 7.601945
+    },
+    "email_addresses": [
+      {
+        "email_address": "86lrs.lgrdppo@us.af.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "0049-6371-47-2163",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-480-2163",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Kleber Kaserne, Germany, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Building 3245, Room 117, Kleber Kaserne",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Germany",
+      "country_code": "DE",
+      "latitude": 49.439673,
+      "longitude": 7.807331
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "0049-06371-47-2163",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-483-8884",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "Spangdahlen AFB, Germany, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Building 103, Room 18, Spangdahlen",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "Germany",
+      "country_code": "DE",
+      "latitude": 49.97828,
+      "longitude": 6.691797
+    },
+    "email_addresses": [
+      {
+        "email_address": "52LRS.PersonalProperty@us.af.mil",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "0049-0656-56068",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "314-452-6068",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "RAF Mildenhall, England, Personal Property Shipping Office (PPSO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "England",
+      "country_code": "GB",
+      "latitude": 52.353994,
+      "longitude": 0.48330
+    }
+  },
+  {
+    "name": "RAF Alconbury, England, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Building 561, RAF Alconbury",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "England",
+      "country_code": "GB",
+      "latitude": 52.363734,
+      "longitude": -0.22292
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "01480 843723",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "268-3723",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "RAF Croughton, England, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": null,
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "England",
+      "country_code": "GB",
+      "latitude": 51.994762,
+      "longitude": -1.189247
+    },
+    "email_addresses": [
+      {
+        "email_address": "422ABS.LGT@US.AF.MIL",
+        "note": "Customer Service"
+      }
+    ],
+    "phone_numbers": [
+      {
+        "phone_number": "01280 702844",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "236-8244",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ]
+  },
+  {
+    "name": "RAF Menwith Hill, England, Personal Property Processing Office (PPPO)",
+    "shipping_office_name": null,
+    "location": {
+      "street_address": "Building 31, RAF Menwith",
+      "extended_address": null,
+      "locality": null,
+      "region_code": null,
+      "postal_code": null,
+      "country_name": "England",
+      "country_code": "GB",
+      "latitude": 54.007984,
+      "longitude": -1.691697
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "01423 777278",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "262-7278",
+        "phone_type": "voice",
+        "dsn": true
+      }
     ]
   }
 ]
