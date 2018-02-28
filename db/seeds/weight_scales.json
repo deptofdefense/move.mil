@@ -3831,5 +3831,77 @@
     ],
     "hours": "0800-1600 M-F\n0700-1200 Sa",
     "note": "$10.00"
+  },
+  {
+    "name": "Okaloosa County Transfer",
+    "location": {
+      "street_address": "630 Transit Way",
+      "extended_address": null,
+      "locality": "Ft. Walton Beach",
+      "region": "Florida",
+      "region_code": "FL",
+      "postal_code": "32547",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 30.4349021,
+      "longitude": -86.6736095
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "850-244-7642",
+        "phone_type": "voice",
+        "dsn": false
+      }
+    ],
+    "hours": "Monday – Friday 0600 - 1700 / Saturday 0600 – 1200",
+    "note": "No cost to the soldier/spouse if they have a copy of their current PCS orders on them when weighing."
+  },
+  {
+    "name": "Wright Compost",
+    "location": {
+      "street_address": "1671 N. Beal Extension",
+      "extended_address": null,
+      "locality": "Ft. Walton Beach",
+      "region": "Florida",
+      "region_code": "FL",
+      "postal_code": "32549",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 30.4717058,
+      "longitude": -86.6403852
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "850-651-7399",
+        "phone_type": "voice",
+        "dsn": false
+      }
+    ],
+    "hours": "Monday – Friday 0700 - 1530 / Saturday 0700 – 1200",
+    "note": "No cost to the soldier/spouse if they have a copy of their current PCS orders on them when weighing."
+  },
+  {
+    "name": "Baker Transfer",
+    "location": {
+      "street_address": "1412 Charlie Day Rd.",
+      "extended_address": null,
+      "locality": "Baker",
+      "region": "Florida",
+      "region_code": "FL",
+      "postal_code": "32531",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 30.7702749,
+      "longitude": -86.6933076
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "850-573-3536",
+        "phone_type": "voice",
+        "dsn": false
+      }
+    ],
+    "hours": "Monday - Friday 0700 - 1530 / Saturday 0700– 1200",
+    "note": "No cost to the soldier/spouse if they have a copy of their current PCS orders on them when weighing."
   }
 ]
