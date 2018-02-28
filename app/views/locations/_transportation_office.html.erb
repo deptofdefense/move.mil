@@ -7,12 +7,18 @@
     <div class="usa-grid-full">
       <div class="usa-width-one-third">
         <b>Location:</b><br>
-        <%= transportation_office.location.street_address %><br>
-        <%- if transportation_office.location.extended_address? -%>
-          <%= transportation_office.location.extended_address %><br>
+
+        <%- location = transportation_office.location -%>
+        <%= raw("#{location.street_address}<br>") if location.street_address? %>
+        <%= raw("#{location.extended_address}<br>") if location.extended_address? %>
+        <%- if location.locality? || location.region? || location.postal_code? -%>
+          <%- if location.locality? -%>
+            <%= location.locality %><%= ', ' if location.region? || location.postal_code? %>
+          <%- end -%>
+          <%= location.region %>
+          <%= location.postal_code %><br>
         <%- end -%>
-        <%= transportation_office.location.locality %>, <%= transportation_office.location.region %> <%= transportation_office.location.postal_code %><br>
-        <%= transportation_office.location.country_name %><br><br>
+        <%= location.country_name %><br><br>
 
         <%- if transportation_office.phone_numbers.any? -%>
           <%= render partial: 'phone_numbers', object: transportation_office.phone_numbers %>
