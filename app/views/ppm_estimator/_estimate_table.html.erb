@@ -2,16 +2,16 @@
 <a href="javascript:window.print()" class="ppm-estimate-print">Print</a>
 <div class="ppm-estimate-table">
   <div class="ppm-estimate-locations">
-    From <%= inputs[:start] %> to <%= inputs[:end] %><br>
+    From <%= @ppm_estimator.start_zipcode_info.city %>, <%= @ppm_estimator.start_zipcode_info.state.abbr %> <%= inputs[:start] %> to <%= @ppm_estimator.end_zipcode_info.city %>, <%= @ppm_estimator.end_zipcode_info.state.abbr %> <%= inputs[:end] %><br>
     <%= tag.div class: 'ppm-estimator-map', id: 'ppm-estimator-map',
       data: {
         'icon-url': asset_path('leaflet/dist/images/marker-icon.png'),
         'icon-retina-url': asset_path('leaflet/dist/images/marker-icon-2x.png'),
         'shadow-url': asset_path('leaflet/dist/images/marker-shadow.png'),
-        'start-latitude': 40.712,
-        'start-longitude': -74.227,
-        'end-latitude': 40.774,
-        'end-longitude': -74.125
+        'start-latitude': @ppm_estimator.start_zipcode_info.lat.to_s,
+        'start-longitude': @ppm_estimator.start_zipcode_info.lon.to_s,
+        'end-latitude': @ppm_estimator.end_zipcode_info.lat.to_s,
+        'end-longitude': @ppm_estimator.end_zipcode_info.lon.to_s
       }
     %>
   </div>

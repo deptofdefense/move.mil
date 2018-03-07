@@ -56,6 +56,14 @@ class PpmEstimator
     @end_zip3 ||= Zip3.find_by(zip3: estimator_params[:end][0, 3].to_i)
   end
 
+  def start_zipcode_info
+    @start_zipcode ||= Zipcode.find_by_code estimator_params[:start]
+  end
+
+  def end_zipcode_info
+    @end_zipcode ||= Zipcode.find_by_code estimator_params[:end]
+  end
+
   def total_incentive_range
     @total_cost ||= linehaul_charges + non_linehaul_charges
     @total_incentive_range ||= range_rounded_to_multiples_of_100(@total_cost * discount_range.min, @total_cost * discount_range.max)
