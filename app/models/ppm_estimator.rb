@@ -12,6 +12,38 @@ class PpmEstimator
     @date ||= Date.new(estimator_params[:date_year].to_i, estimator_params[:date_month].to_i, estimator_params[:date_day].to_i)
   end
 
+  def has_dependents?
+    estimator_params[:dependents] == 'yes'
+  end
+
+  def rank_name
+    Entitlement.select(:rank).find_by(slug: estimator_params[:rank]).rank
+  end
+
+  def weight_self
+    estimator_params[:weight].to_i
+  end
+
+  def weight_self_limited
+    [weight_self, entitlement_self].min
+  end
+
+  def weight_progear
+    estimator_params[:weight_progear].to_i
+  end
+
+  def weight_progear_limited
+    [weight_progear, entitlement.pro_gear_weight || 0].min
+  end
+
+  def weight_progear_spouse
+    estimator_params[:weight_progear_spouse].to_i
+  end
+
+  def weight_progear_spouse_limited
+    [weight_progear_spouse, entitlement.pro_gear_weight_spouse || 0].min
+  end
+
   def full_weight
     @full_weight ||= weight_self_limited + weight_progear_limited + weight_progear_spouse_limited
   end
@@ -59,19 +91,7 @@ class PpmEstimator
   end
 
   def entitlement_self
-    estimator_params[:dependents] == 'yes' ? entitlement.total_weight_self_plus_dependents : entitlement.total_weight_self
-  end
-
-  def weight_self_limited
-    [estimator_params[:weight].to_i, entitlement_self].min
-  end
-
-  def weight_progear_limited
-    [estimator_params[:weight_progear].to_i, entitlement.pro_gear_weight || 0].min
-  end
-
-  def weight_progear_spouse_limited
-    [estimator_params[:weight_progear_spouse].to_i, entitlement.pro_gear_weight_spouse || 0].min
+    has_dependents? ? entitlement.total_weight_self_plus_dependents : entitlement.total_weight_self
   end
 
   def orig_svc_area

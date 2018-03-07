@@ -3,7 +3,7 @@ class PpmEstimatorController < ApplicationController
     return lookups unless request.xhr?
     return render plain: '', status: :not_found unless ppm_estimator.valid?
 
-    render partial: 'ppm_estimator/estimate_table'
+    render partial: 'ppm_estimator/estimate_table', locals: { inputs: params }
   end
 
   private

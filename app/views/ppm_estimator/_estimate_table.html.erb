@@ -1,11 +1,90 @@
-<div class="ppm-estimate-table usa-grid-full">
-  <div class="usa-width-one-half">
-    <span class="ppm-estimate-detail-total">Your PPM Incentive Estimate:</span>
-    <span id="incentive-range" class="ppm-estimate-amount-total">$<%= @ppm_estimator.total_incentive_range.min %>–$<%= @ppm_estimator.total_incentive_range.max %></span>
+<span class="ppm-estimate-header">Your PPM Incentive Estimate:</span>
+<a href="javascript:window.print()" class="ppm-estimate-print">Print</a>
+<div class="ppm-estimate-table">
+  <div class="ppm-estimate-locations">
+    From <%= inputs[:start] %> to <%= inputs[:end] %><br>
+    <%= tag.div class: 'ppm-estimator-map', id: 'ppm-estimator-map',
+      data: {
+        'icon-url': asset_path('leaflet/dist/images/marker-icon.png'),
+        'icon-retina-url': asset_path('leaflet/dist/images/marker-icon-2x.png'),
+        'shadow-url': asset_path('leaflet/dist/images/marker-shadow.png'),
+        'start-latitude': 40.712,
+        'start-longitude': -74.227,
+        'end-latitude': 40.774,
+        'end-longitude': -74.125
+      }
+    %>
   </div>
-  <div class="usa-width-one-half">
-    <span class="ppm-estimate-detail-total">Maximum Advance Payment:</span>
-    <span id="advance-range" class="ppm-estimate-amount-total">$<%= @ppm_estimator.advance_range.min %>–$<%= @ppm_estimator.advance_range.max %> (<%= @ppm_estimator.advance_percentage %>%)</span>
+
+  <div class="ppm-estimate-inputs">
+    <div class="ppm-estimate-table-cell">
+      <%- case inputs[:branch] %>
+        <%- when 'army' %>
+          <%= image_tag 'service-specific-information/army-logo.svg', class: 'ppm-estimate-branch-logo', alt: 'U S Army logo' %>
+        <%- when 'marine-corps' %>
+          <%= image_tag 'emblems/marines.svg', class: 'ppm-estimate-branch-logo', alt: 'U S Marine Corps logo' %>
+        <%- when 'navy' %>
+          <%= image_tag 'service-specific-information/navy-logo.png', class: 'ppm-estimate-branch-logo', alt: 'U S Navy logo' %>
+        <%- when 'air-force' %>
+          <%= image_tag 'service-specific-information/air-force-logo.svg', class: 'ppm-estimate-branch-logo', alt: 'U S Air Force logo' %>
+        <%- when 'coast-guard' %>
+          <%= image_tag 'service-specific-information/coast-guard-logo.svg', class: 'ppm-estimate-branch-logo', alt: 'U S Coast Guard logo' %>
+      <%- end %>
+      <span class="ppm-estimate-member">
+        <%= @ppm_estimator.rank_name %>
+        <%- if @ppm_estimator.has_dependents? %>
+          w/
+        <%- else %>
+          w/o
+        <%- end %>
+        dependents
+      </span>
+    </div>
+    <div class="ppm-estimate-table-cell ppm-estimate-date">
+      Moving Day:<br>
+      <span class="ppm-estimate-dayoftheweek"><%= @ppm_estimator.date.strftime('%A,') %><br></span>
+      <span class="ppm-estimate-monthday"><%= @ppm_estimator.date.strftime('%b %-d,') %><br></span>
+      <span class="ppm-estimate-year"><%= @ppm_estimator.date.strftime('%Y') %></span>
+    </div>
+    <div class="ppm-estimate-table-cell">
+      Weights:
+      <table class="ppm-estimate-weights-table">
+        <tbody>
+          <tr>
+            <th>HHG:</th>
+            <td/>
+            <td><%= @ppm_estimator.weight_self %> lbs</td>
+          </tr>
+            <th>Pro-Gear:</th>
+            <td><%- if !@ppm_estimator.has_dependents? %>+<%- end %></td>
+            <td><%= @ppm_estimator.weight_progear %> lbs</td>
+          </tr>
+          <%- if @ppm_estimator.has_dependents? %>
+            <tr>
+              <th>Spouse Pro-Gear:</th>
+              <td>+</td>
+              <td><%= @ppm_estimator.weight_progear_spouse %> lbs</td>
+            </tr>
+          <%- end %>
+          <tr class="ppm-estimate-weights-total">
+            <th>Total:</th>
+            <td class="overline">=</td>
+            <td class="overline"><%= @ppm_estimator.weight_self + @ppm_estimator.weight_progear + @ppm_estimator.weight_progear_spouse %> lbs</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="ppm-estimate-total">
+    <div class="ppm-estimate-total-table-cell">
+      <span class="ppm-estimate-detail-total">Your PPM Incentive Estimate:</span>
+      <span id="incentive-range" class="ppm-estimate-amount-total">$<%= @ppm_estimator.total_incentive_range.min %>–$<%= @ppm_estimator.total_incentive_range.max %></span>
+    </div>
+    <div class="ppm-estimate-total-table-cell">
+      <span class="ppm-estimate-detail-total">Maximum Advance Payment:</span>
+      <span id="advance-range" class="ppm-estimate-amount-total">$<%= @ppm_estimator.advance_range.min %>–$<%= @ppm_estimator.advance_range.max %> (<%= @ppm_estimator.advance_percentage %>%)</span>
+    </div>
   </div>
 </div>
 

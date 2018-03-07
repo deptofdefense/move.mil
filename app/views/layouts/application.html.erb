@@ -19,10 +19,10 @@
   <link rel="shortcut icon" href="<%= asset_path('meta/favicon-32x32.png') %>" sizes="32x32">
 
   <%= tag.link href: asset_path('application.css'), rel: 'stylesheet' %>
-
   <!--[if lt IE 9]>
 	  <%= javascript_include_tag 'html5shiv' %>
   <![endif]-->
+  <%= yield :head %>
 </head>
 <body>
 

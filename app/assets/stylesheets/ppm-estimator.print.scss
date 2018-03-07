@@ -1,0 +1,11 @@
+@import "application.scss";
+
+header, h1, h4, footer, .breadcrumbs, .login-banner, .back-to-top, .ppm-description, .ppm-form, .ppm-estimate-print {
+  display: none;
+}
+
+.ppm-estimate-results {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}

@@ -1,5 +1,9 @@
 <%- @page_title = 'Personally Procured Move (PPM) Estimator' -%>
 
+<% content_for :head do %>
+  <%= tag.link href: asset_path('ppm-estimator.print.scss'), rel: 'stylesheet', media: 'print' %>
+<% end %>
+
 <%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: [{name: 'Tools & Resources', path: page_path('resources')}]} %>
 
 <div class="usa-section main-section">
@@ -10,7 +14,7 @@
     pay <strong>you</strong> if you choose to "do it yourself."
   </h4>
 
-  <p>
+  <p class="ppm-description">
     You can use this money to cover the cost of hiring packers and movers,
     renting moving trucks, and so on. If you spend less to move than the
     government will incentivize you to move yourself, you get to pocket the
