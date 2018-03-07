@@ -8,10 +8,18 @@ class PpmEstimatorController < ApplicationController
 
   private
 
+  def branches
+    @branches ||= BranchOfService.select(:name, :slug)
+  end
+
+  def entitlements
+    @entitlements ||= Entitlement.all
+  end
+
   # populate some of the drop downs in the form
   def lookups
-    @entitlements ||= Entitlement.all
-    @branches ||= BranchOfService.select(:name, :slug)
+    entitlements
+    branches
   end
 
   def ppm_estimator
