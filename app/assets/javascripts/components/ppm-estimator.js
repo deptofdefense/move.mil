@@ -113,9 +113,7 @@
 
       if ($container.length) {
         new PpmEstimatorMap({
-          $container: $container,
-          $start_loc: $(''),
-          $end_loc: $('')
+          $container: $container
         });
       }
 
