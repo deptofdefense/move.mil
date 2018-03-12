@@ -29,6 +29,7 @@ This project uses a number of open source components whose licenses are noted be
 | [Ruby on Rails](https://github.com/rails/rails) | © 2005–2017 [David Heinemeier Hansson](https://github.com/dhh) | [MIT License](https://github.com/rails/rails/blob/master/MIT-LICENSE) |
 | [Sass](https://github.com/sass/sass) | © 2006–2016 [Hampton Catlin](http://www.hamptoncatlin.com), [Natalie Weizenbaum](https://github.com/nex3), and [Chris Eppstein](http://chriseppstein.github.io) | [MIT License](https://github.com/sass/sass/blob/stable/MIT-LICENSE) |
 | [sass-rails](https://github.com/rails/sass-rails) | © 2011–2016 [Christopher Eppstein](http://chriseppstein.github.io) | [MIT License](https://github.com/rails/sass-rails/blob/master/MIT-LICENSE) |
+| [Secure Headers](https://github.com/twitter/secureheaders) | © 2013–2017 Twitter, Inc. | [MIT License](https://github.com/twitter/secureheaders/blob/master/LICENSE) |
 | [selenium-webdriver](https://github.com/SeleniumHQ/selenium/tree/master/rb) | © 2009—2017 Software Freedom Conservancy | [Apache License, Version 2.0](https://github.com/SeleniumHQ/selenium/blob/master/LICENSE) |
 | [SimpleCov](https://github.com/colszowka/simplecov) | © 2010–2017 [Christoph Olszowka](https://github.com/colszowka) | [MIT License](https://github.com/colszowka/simplecov/blob/master/MIT-LICENSE) |
 | [simplecov-console](https://github.com/chetan/simplecov-console) | © 2012 [Chetan Sarva](http://www.chetanislazy.com/blog) | [MIT License](https://github.com/chetan/simplecov-console/blob/master/LICENSE.txt) |
