@@ -61,16 +61,16 @@ module Seeds
           # Shorthaul rates
           if sheet.cell(i, 1) == 999
             cwtm_min, cwtm_max = parse_shorthaul(sheet.cell(i, 4))
-            shorthauls << [Range.new(cwtm_min, cwtm_max), BigDecimal.new(sheet.cell(i, 5), 8), @date_range]
+            shorthauls << [Range.new(cwtm_min, cwtm_max), BigDecimal(sheet.cell(i, 5), 8), @date_range]
           end
 
           next if sheet.cell(i, 2) != '105A'
 
           wt_min, wt_max = parse_full_pack(sheet.cell(i, 4))
-          full_packs << [sheet.cell(i, 3).to_i, Range.new(wt_min.to_i, wt_max.to_i), BigDecimal.new(sheet.cell(i, 5), 10), @date_range]
+          full_packs << [sheet.cell(i, 3).to_i, Range.new(wt_min.to_i, wt_max.to_i), BigDecimal(sheet.cell(i, 5), 10), @date_range]
 
           unpack = parse_full_unpack(sheet.cell(i, 6))
-          full_unpacks << [sheet.cell(i, 3).to_i, BigDecimal.new(unpack, 10), @date_range] unless unpack.nil?
+          full_unpacks << [sheet.cell(i, 3).to_i, BigDecimal(unpack, 10), @date_range] unless unpack.nil?
         end
 
         [full_packs, full_unpacks, shorthauls]
