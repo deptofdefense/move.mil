@@ -4,7 +4,7 @@
 
 ## Signed-off-by
 
-- Copyright 2017 U.S. Federal Government (in countries where recognized) contact@dds.mil
+- Copyright 2017–2018 U.S. Federal Government (in countries where recognized) contact@dds.mil
 - Copyright 2018 Bixal info@bixal.com
 - _Add the copyright date, your name, and email address here._
 
