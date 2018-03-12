@@ -59,7 +59,7 @@ Lastly, start the application by running `bin/rails server` and opening [http://
 
 ### Sending and Receiving Email
 
-Certain features in the application take advantage of [Action Mailer](http://guides.rubyonrails.org/action_mailer_basics.html). To work with these features, we recommend using [MailHog](https://github.com/mailhog/MailHog). Install and run MailHog using Homebrew:
+Certain features in the application take advantage of [Action Mailer](http://guides.rubyonrails.org/action_mailer_basics.html). To use these features, we recommend using [MailHog](https://github.com/mailhog/MailHog). Install and run MailHog using Homebrew:
 
 ```sh
 brew install mailhog
@@ -93,7 +93,7 @@ Enable the Google Maps Geocoding API by going [here](https://console.developers.
 
 #### Encrypted Seed Data
 
-To work with encrypted seed data, you need to know the secret `SEEDS_ENC_KEY` variable and set it in the `.env` file. This was originally generated once during the `bin/setup` process. Once set, run `bin/rails db:setup` to load the encrypted data.
+To work with encrypted seed data, you need to know the secret `SEEDS_ENC_KEY` and `SEEDS_ENC_IV` variables and set them in the `.env` file. This was originally generated once during the `bin/setup` process. Once set, run `bin/rails db:setup` to load the encrypted data.
 
 ## Making Changes
 
