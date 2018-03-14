@@ -141,11 +141,11 @@
         </ul>
     - image_path: tutorials/create-a-shipment-09.jpg
       content: >
-        Next, enter your Orders Number and Date.
+        Next, enter your Orders Number, Date and the Headquarters Issuing the Orders.
       pro_tip: >
         <strong>Pro-Tips:</strong>
         <ul>
-          <li>The location of your Orders Number on the orders, varies by branch. Typically, the Army and Navy list the number in the upper left of the document, while the Marines list a Standard Document Number (SDN) on the bottom right. For the Airforce, look in box 27 of your Orders form.</li>
+          <li>The location of your Orders Number on the orders, varies by branch. Typically, the Army and Navy list the number in the upper left of the document, while the Marines list a Standard Document Number (SDN) on the bottom right. For the Air Force, look in box 27 of your Orders form.</li>
           <li>Your Orders date is the date the orders were cut or issued.</li>
         </ul>
     - image_path: tutorials/create-a-shipment-10.jpg
