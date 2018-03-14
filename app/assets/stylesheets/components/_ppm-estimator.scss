@@ -36,7 +36,7 @@
 
   input, select {
     font-size: $small-font-size;
-    height: unset;
+    height: auto;
   }
 
   p {
@@ -78,11 +78,13 @@
   background: $color-gray-lightest;
   border: 0.25rem solid #4a4a4a;
   white-space: nowrap;
+  max-width: 7.25in;
 }
 
 .ppm-estimate-locations {
   margin: 0.5rem 1.5rem 1.5rem 1.5rem;
   font-size: $lead-font-size;
+  white-space: normal;
 }
 
 .ppm-estimate-inputs {
@@ -97,40 +99,47 @@
 .ppm-estimate-member {
   display: block;
   text-align: center;
+  white-space: normal;
+  width: 14rem;
 }
 
 .ppm-estimate-table-cell {
   flex: 0 0;
+  max-height: 20rem;
   padding: 1.5rem;
 }
 
 .ppm-estimate-branch-logo {
   display: block;
-  min-width: 15rem;
-  width: 15rem;
+  max-height: 14rem;
+  max-width: 14rem;
+  width: 14rem;
 }
 
 .ppm-estimate-dayoftheweek {
+  display: block;
   font-size: $h2-font-size;
 }
 
 .ppm-estimate-monthday {
+  display: block;
   font-size: $title-font-size;
 }
 
 .ppm-estimate-year {
+  display: block;
   font-size: $h2-font-size;
 }
 
 .ppm-estimate-weights-table {
   th, td {
-    background-color: unset;
-    border: unset;
+    background-color: transparent;
+    border: 0;
     padding: 0.25rem 0.5rem;
-    text-align: end;
+    text-align: right;
   }
 
-  margin: unset;
+  margin: 0;
 }
 
 .overline {

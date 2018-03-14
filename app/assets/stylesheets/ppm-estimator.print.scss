@@ -13,3 +13,9 @@ header, h1, h4, footer, .breadcrumbs, .login-banner, .back-to-top, .ppm-descript
 .usa-section {
   padding: 0;
 }
+
+@media print {
+  @page {
+    margin: 0.5in;
+  }
+}
