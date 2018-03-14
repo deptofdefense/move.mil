@@ -29,8 +29,8 @@
 
   var PpmEstimatorMap = function(options) {
     this.$container = options.$container;
-    this.startCoords = [this.$container.data('startLatitude'), this.$container.data('startLongitude')];
-    this.endCoords = [this.$container.data('endLatitude'), this.$container.data('endLongitude')];
+    this.startCoords = this.$container.data('startLatlon');
+    this.endCoords = this.$container.data('endLatlon');
 
     this.map = L.map(this.$container.attr('id'), {
       maxZoom: 18,

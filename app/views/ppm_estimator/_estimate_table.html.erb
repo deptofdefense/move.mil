@@ -8,10 +8,8 @@
         'icon-url': asset_path('leaflet/dist/images/marker-icon.png'),
         'icon-retina-url': asset_path('leaflet/dist/images/marker-icon-2x.png'),
         'shadow-url': asset_path('leaflet/dist/images/marker-shadow.png'),
-        'start-latitude': @ppm_estimator.start_zipcode_info.lat.to_s,
-        'start-longitude': @ppm_estimator.start_zipcode_info.lon.to_s,
-        'end-latitude': @ppm_estimator.end_zipcode_info.lat.to_s,
-        'end-longitude': @ppm_estimator.end_zipcode_info.lon.to_s
+        'start-latlon': @ppm_estimator.start_zipcode_info.latlon,
+        'end-latlon': @ppm_estimator.end_zipcode_info.latlon
       }
     %>
   </div>
