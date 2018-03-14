@@ -32,7 +32,7 @@
       <%- end %>
       <span class="ppm-estimate-member">
         <%= @ppm_estimator.rank_name %>
-        <%- if @ppm_estimator.has_dependents? %>
+        <%- if @ppm_estimator.dependents? %>
           w/
         <%- else %>
           w/o
@@ -56,10 +56,10 @@
             <td><%= @ppm_estimator.weight_self %> lbs</td>
           </tr>
             <th>Pro-Gear:</th>
-            <td><%- if !@ppm_estimator.has_dependents? %>+<%- end %></td>
+            <td><%- if !@ppm_estimator.dependents? %>+<%- end %></td>
             <td><%= @ppm_estimator.weight_progear %> lbs</td>
           </tr>
-          <%- if @ppm_estimator.has_dependents? %>
+          <%- if @ppm_estimator.dependents? %>
             <tr>
               <th>Spouse Pro-Gear:</th>
               <td>+</td>

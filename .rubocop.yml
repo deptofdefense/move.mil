@@ -2,6 +2,7 @@ AllCops:
   Exclude:
     - 'db/**/*'
     - 'vendor/**/*'
+    - 'lib/tasks/zipcodes.rake'
 
 Metrics/BlockLength:
   Exclude:

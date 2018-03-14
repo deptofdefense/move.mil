@@ -12,7 +12,7 @@ class PpmEstimator
     @date ||= Date.new(estimator_params[:date_year].to_i, estimator_params[:date_month].to_i, estimator_params[:date_day].to_i)
   end
 
-  def has_dependents?
+  def dependents?
     estimator_params[:dependents] == 'yes'
   end
 
@@ -57,11 +57,11 @@ class PpmEstimator
   end
 
   def start_zipcode_info
-    @start_zipcode ||= Zipcode.find_by_code estimator_params[:start]
+    @start_zipcode_info ||= Zipcode.find_by(code: estimator_params[:start])
   end
 
   def end_zipcode_info
-    @end_zipcode ||= Zipcode.find_by_code estimator_params[:end]
+    @end_zipcode_info ||= Zipcode.find_by(code: estimator_params[:end])
   end
 
   def total_incentive_range
@@ -99,7 +99,7 @@ class PpmEstimator
   end
 
   def entitlement_self
-    has_dependents? ? entitlement.total_weight_self_plus_dependents : entitlement.total_weight_self
+    dependents? ? entitlement.total_weight_self_plus_dependents : entitlement.total_weight_self
   end
 
   def orig_svc_area
