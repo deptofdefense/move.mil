@@ -29,13 +29,19 @@
 
   var PpmEstimatorMap = function(options) {
     this.$container = options.$container;
+    this.startCoords = [this.$container.data('startLatitude'), this.$container.data('startLongitude')];
+    this.endCoords = [this.$container.data('endLatitude'), this.$container.data('endLongitude')];
 
     this.map = L.map(this.$container.attr('id'), {
       maxZoom: 18,
-      scrollWheelZoom: false
+      scrollWheelZoom: false,
+      zoomAnimation: false,
+      zoomControl: false
     });
 
     this.setup();
+    this.fitBounds();
+    this.map.on('resize', function(evt) { this.fitBounds(); }.bind(this));
   };
 
   PpmEstimatorMap.prototype = {
@@ -44,22 +50,22 @@
         attribution: 'Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Map imagery © <a href="https://www.mapbox.com">Mapbox</a>.'
       }).addTo(this.map);
 
-      var startCoords = [this.$container.data('startLatitude'), this.$container.data('startLongitude')];
-      var endCoords = [this.$container.data('endLatitude'), this.$container.data('endLongitude')];
-
       var $iconDefaults = $.extend({}, L.Icon.Default.prototype.options, {
         iconUrl: this.$container.data('iconUrl'),
         iconRetinaUrl: this.$container.data('iconRetinaUrl'),
         shadowUrl: this.$container.data('shadowUrl'),
       });
 
-      L.marker(startCoords, { icon: L.icon($iconDefaults) }).addTo(this.map);
-      L.marker(endCoords, { icon: L.icon($iconDefaults) }).addTo(this.map);
+      L.marker(this.startCoords, { icon: L.icon($iconDefaults) }).addTo(this.map);
+      L.marker(this.endCoords, { icon: L.icon($iconDefaults) }).addTo(this.map);
 
-      var polyline = L.polyline([startCoords, endCoords], {color: 'blue'}).addTo(this.map);
+      var polyline = L.polyline([this.startCoords, this.endCoords], {color: 'blue'}).addTo(this.map);
+    },
 
-      this.map.fitBounds([startCoords, endCoords], {
-        padding: [35, 35]
+    fitBounds: function() {
+      this.map.fitBounds([this.startCoords, this.endCoords], {
+        animate: false,
+        padding: [32, 32]
       });
     }
   };
