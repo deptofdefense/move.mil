@@ -223,7 +223,12 @@
   answer: |
     <p>This one can get tricky, so make sure you know the difference between the two and the overall process.</p>
     <p>A <strong>Loss/Damage Report</strong> is your way to notify the household goods carrier (Transportation Service Provider - TSP) that some of your items are missing or were damaged during the delivery process. <strong>This must be done within 75 days of your delivery date.</strong> If the items cannot be found or they cannot fix the damage, you must file a claim to be reimbursed!</p>
-    <p>A Claim is submitted when you are requesting to be reimbursed for the loss or damage to an item.</p>
+    <p>
+      A Claim is made when you request reimbursement for lost or damaged items.
+      To qualify for the full replacement value, you must file your claim in the system (DPS) and click the
+      "Submit" button within nine months after your household goods were delivered to you. If you have questions
+      about claims filing deadlines, contact your <a href="/resources/locator-maps">MCO (Military Claims Office)</a>.
+    </p>
   category: after-the-move
 
 - question: How do I file a Loss/Damage Report?
