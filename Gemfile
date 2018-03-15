@@ -11,7 +11,7 @@ source 'https://rails-assets.org'
 gem 'activerecord-import', '~> 0.22.0', require: false
 gem 'friendly_id', '~> 5.2', '>= 5.2.3'
 gem 'geokit-rails', '~> 2.3'
-gem 'health_check', '~> 2.7'
+gem 'health_check', '~> 3.0'
 gem 'high_voltage', '~> 3.0'
 gem 'jbuilder', '~> 2.7'
 gem 'lograge', '~> 0.9.0'
@@ -21,7 +21,7 @@ gem 'rails', '~> 5.1', '>= 5.1.5'
 gem 'roo', '~> 2.7.1', require: false
 gem 'sass', '~> 3.5', '>= 3.5.5'
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'
-gem 'uglifier', '~> 4.1', '>= 4.1.6'
+gem 'uglifier', '~> 4.1', '>= 4.1.8'
 gem 'uswds-rails', '1.4.6'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
@@ -45,7 +45,7 @@ end
 group :test do
   gem 'capybara', '~> 2.18'
   gem 'chromedriver-helper', '~> 1.2'
-  gem 'selenium-webdriver', '~> 3.10'
-  gem 'simplecov', '~> 0.15.1', require: false
+  gem 'selenium-webdriver', '~> 3.11'
+  gem 'simplecov', '~> 0.16.0', require: false
   gem 'simplecov-console', '~> 0.4.2', require: false
 end
