@@ -3903,5 +3903,49 @@
     ],
     "hours": "Monday - Friday 0700 - 1530 / Saturday 0700– 1200",
     "note": "No cost to the soldier/spouse if they have a copy of their current PCS orders on them when weighing."
+  },
+  {
+    "name": "Quality Transfer and Storage Co., Inc.",
+    "location": {
+      "street_address": "22390 Three Notch Rd.",
+      "extended_address": null,
+      "locality": "Lexington Park",
+      "region": "Maryland",
+      "region_code": "MD",
+      "postal_code": "20653",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.2826533,
+      "longitude": -76.4730861
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "301-862-2331",
+        "phone_type": "voice",
+        "dsn": false
+      }
+    ]
+  },
+  {
+    "name": "AAA Materials",
+    "location": {
+      "street_address": "42707 St. Andrews Church Rd.",
+      "extended_address": null,
+      "locality": "Leonardtown",
+      "region": "Maryland",
+      "region_code": "MD",
+      "postal_code": "20650",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 38.2881481,
+      "longitude": -76.5991054
+    },
+    "phone_numbers": [
+      {
+        "phone_number": "301-475-2939",
+        "phone_type": "voice",
+        "dsn": false
+      }
+    ]
   }
 ]
