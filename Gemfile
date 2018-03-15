@@ -15,7 +15,7 @@ gem 'health_check', '~> 3.0'
 gem 'high_voltage', '~> 3.0'
 gem 'jbuilder', '~> 2.7'
 gem 'lograge', '~> 0.9.0'
-gem 'pg', '~> 0.21.0'
+gem 'pg', '~> 1.0'
 gem 'puma', '~> 3.11', '>= 3.11.3'
 gem 'rails', '~> 5.1', '>= 5.1.5'
 gem 'roo', '~> 2.7.1', require: false
