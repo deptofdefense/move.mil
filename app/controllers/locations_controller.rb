@@ -28,10 +28,14 @@ class LocationsController < ApplicationController
   end
 
   def search
-    @search ||= coordinates_search || text_search || nil
+    @search ||= coordinates_search || zipcode_search || text_search || nil
   end
 
   def text_search
     LocationsSearch::TextSearch.new(params) if params[:query].present?
+  end
+
+  def zipcode_search
+    LocationsSearch::ZipcodeSearch.new(params) if params[:query].present? && /^\d{5}$/ === params[:query]
   end
 end
