@@ -36,6 +36,6 @@ class LocationsController < ApplicationController
   end
 
   def zipcode_search
-    LocationsSearch::ZipcodeSearch.new(params) if params[:query].present? && /^\d{5}$/ === params[:query]
+    LocationsSearch::ZipcodeSearch.new(params) if params[:query].present? && /^\d{5}$/.match?(params[:query])
   end
 end

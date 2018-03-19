@@ -1,6 +1,5 @@
 module LocationsSearch
   class ZipcodeSearch
-
     def initialize(params)
       @params = params
     end
