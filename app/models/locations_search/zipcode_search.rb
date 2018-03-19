@@ -9,12 +9,14 @@ module LocationsSearch
       'There was a problem performing that search. Mind trying again?'
     end
 
+    def query
+      "#{zipcode.city}, #{zipcode.state.abbr} #{zipcode.code}"
+    end
+
     def result
       {
         latitude: zipcode.lat,
-        longitude: zipcode.lon,
-        city: zipcode.city,
-        state: zipcode.state
+        longitude: zipcode.lon
       }
     end
 
