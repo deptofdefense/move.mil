@@ -72,8 +72,9 @@ RSpec.describe LocationsController, type: :request do
       end
 
       context 'when sending valid params' do
+        let!(:washington_dc_zipcode) { create(:zipcode, code: '20010', city: 'Washington', lat: 38.932711, lon: -77.030248) }
+
         before do
-          allow(Geokit::Geocoders::GoogleGeocoder).to receive(:geocode).and_return(geoloc)
           allow(geoloc).to receive(:success).and_return(true)
           allow(geoloc).to receive(:latitude).and_return(latitude)
           allow(geoloc).to receive(:longitude).and_return(longitude)
@@ -82,7 +83,7 @@ RSpec.describe LocationsController, type: :request do
         it 'redirects to a search results page' do
           post '/resources/locator-maps', params: { query: '20010' }
 
-          expect(response).to redirect_to('/resources/locator-maps/38.933366,-77.0303119999999')
+          expect(response).to redirect_to('/resources/locator-maps/38.932711,-77.030248')
         end
       end
     end
