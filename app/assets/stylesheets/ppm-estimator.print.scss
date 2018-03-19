@@ -1,6 +1,13 @@
-@import "application.scss";
-
-header, h1, h4, footer, .breadcrumbs, .login-banner, .back-to-top, .ppm-description, .ppm-form, .ppm-estimate-print {
+header,
+h1,
+h4,
+footer,
+.breadcrumbs,
+.login-banner,
+.back-to-top,
+.ppm-description,
+.ppm-form,
+.ppm-estimate-print {
   display: none;
 }
 
@@ -10,12 +17,20 @@ header, h1, h4, footer, .breadcrumbs, .login-banner, .back-to-top, .ppm-descript
   padding-top: 0;
 }
 
+.ppm-footer {
+  border: 0;
+  margin: 0;
+}
+
 .usa-section {
   padding: 0;
 }
 
-@media print {
-  @page {
-    margin: 0.5in;
-  }
+.usa-alert {
+  padding-bottom: 0.7rem;
+  padding-top: 1rem;
+}
+
+@page {
+  margin: 0.5in;
 }

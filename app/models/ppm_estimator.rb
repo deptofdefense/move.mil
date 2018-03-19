@@ -20,6 +20,10 @@ class PpmEstimator
     Entitlement.select(:rank).find_by(slug: estimator_params[:rank]).rank
   end
 
+  def branch_name
+    BranchOfService.select(:name).find_by(slug: estimator_params[:branch]).name
+  end
+
   def weight_self
     estimator_params[:weight].to_i
   end
