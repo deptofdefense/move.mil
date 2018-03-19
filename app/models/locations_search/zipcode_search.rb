@@ -5,7 +5,7 @@ module LocationsSearch
     end
 
     def error_message
-      'There was a problem performing that search. Mind trying again?'
+      "There was a problem searching for the ZIP code #{search_params[:query]}. Mind trying again?"
     end
 
     def query
