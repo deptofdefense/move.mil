@@ -15,6 +15,7 @@ gem 'health_check', '~> 3.0'
 gem 'high_voltage', '~> 3.0'
 gem 'jbuilder', '~> 2.7'
 gem 'lograge', '~> 0.9.0'
+gem 'my_zipcode_gem', '~> 0.2.2'
 gem 'pg', '~> 1.0'
 gem 'puma', '~> 3.11', '>= 3.11.3'
 gem 'rails', '~> 5.1', '>= 5.1.5'
@@ -49,3 +50,5 @@ group :test do
   gem 'simplecov', '~> 0.16.1', require: false
   gem 'simplecov-console', '~> 0.4.2', require: false
 end
+
+gem 'mocha', group: :test

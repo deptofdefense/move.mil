@@ -20,6 +20,7 @@ This project uses a number of open source components whose licenses are noted be
 | [jQuery](http://jquery.com) | © [JS Foundation](https://js.foundation) and other contributors | [MIT License](https://github.com/jquery/jquery/blob/master/LICENSE.txt) |
 | [Leaflet](https://github.com/Leaflet/Leaflet) | © 2010–2011 [CloudMade](https://cloudmade.com) and 2010–2017 [Vladimir Agafonkin](https://github.com/mourner) | [BSD 2-Clause License](https://github.com/Leaflet/Leaflet/blob/master/LICENSE) |
 | [Lograge](https://github.com/roidrage/lograge) | © 2016 [Mathias Meyer](https://github.com/roidrage) | [MIT License](https://github.com/roidrage/lograge/blob/master/LICENSE.txt) |
+| [My Zipcode Gem](https://github.com/midwire/my_zipcode_gem) | © [Chris McKnight](https://github.com/cmckni3) et. al. | [MIT License](https://github.com/midwire/my_zipcode_gem/blob/master/MIT-LICENSE) |
 | [Owl Carousel 2](http://owlcarousel2.github.io/OwlCarousel2) | © 2014 Owl and 2016 [David Deutsch](https://github.com/daviddeutsch) | [MIT License](https://github.com/OwlCarousel2/OwlCarousel2/blob/develop/LICENSE) |
 | [PostgreSQL](https://github.com/postgres/postgres) | © 1996–2017 [The PostgreSQL Global Development Group](https://www.postgresql.org) | [PostgreSQL License](https://www.postgresql.org/about/licence) |
 | [Puma](https://github.com/puma/puma) | © 2014 [Evan Phoenix](https://github.com/evanphx) and contributors | [BSD 3-Clause License](https://github.com/puma/puma/blob/master/LICENSE) |
