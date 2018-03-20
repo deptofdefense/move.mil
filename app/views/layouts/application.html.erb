@@ -18,6 +18,20 @@
   <link rel="shortcut icon" href="<%= asset_path('meta/favicon-16x16.png') %>" sizes="16x16">
   <link rel="shortcut icon" href="<%= asset_path('meta/favicon-32x32.png') %>" sizes="32x32">
 
+
+  <%- if Rails.env.production? -%>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115877489-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-115877489-1');
+    </script>
+  <%- end -%>
+
+
   <%= tag.link href: asset_path('application.css'), rel: 'stylesheet' %>
 
   <!--[if lt IE 9]>
