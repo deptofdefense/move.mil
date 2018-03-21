@@ -39,7 +39,7 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
   gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
-  gem 'rubocop', '~> 0.53.0', require: false
+  gem 'rubocop', '~> 0.54.0', require: false
 end
 
 group :test do
