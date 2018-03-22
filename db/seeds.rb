@@ -171,30 +171,10 @@ State.import states[0], states.slice(1, states.length - 1)
 
 state_ids_by_abbr = State.pluck(:abbr, :id).to_h
 
-puts ">>> Seed counties table..."
-# From https://github.com/midwire/free_zipcode_data/raw/master/all_us_counties.csv
-unmapped_counties = CSV.read(Rails.root.join('db', 'seeds', 'all_us_counties.csv'), :return_headers => false)
-counties = unmapped_counties.slice(1, unmapped_counties.length - 1).map { |c| [c[0], state_ids_by_abbr[c[1]], c[2]] }
-County.import [:name, :state_id, :county_seat], counties
-
 puts ">>> Seed zipcodes table..."
 # From https://github.com/midwire/free_zipcode_data/raw/master/all_us_zipcodes.csv
-zipcodes = []
-CSV.foreach(Rails.root.join('db', 'seeds', 'all_us_zipcodes.csv'), :headers => true) do |row|
-  state_id = state_ids_by_abbr[row['state']]
-  begin
-    county = County.find_by_name_and_state_id!(row['county'], state_id)
-  rescue Exception => e
-    puts ">>> e: [#{e}]"
-    puts ">>>> No county found for zipcode: [#{row['code']}], '#{row['city']}, #{row['state']}, #{row['county']}... SKIPPING..."
-    next
-  end
-  zipcodes << [row['code'],
-    row['city'].titleize,
-    state_id,
-    county.id,
-    row['lat'],
-    row['lon']
-  ]
-end
-Zipcode.import [:code, :city, :state_id, :county_id, :lat, :lon], zipcodes
+unmapped_zipcodes = CSV.read(Rails.root.join('db', 'seeds', 'all_us_zipcodes.csv'), :return_headers => false)
+zipcodes = unmapped_zipcodes.slice(1, unmapped_zipcodes.length - 1).map {
+  |z| [z[0], z[1].titleize, state_ids_by_abbr[z[2]], z[5], z[6]]
+}
+Zipcode.import [:code, :city, :state_id, :lat, :lon], zipcodes

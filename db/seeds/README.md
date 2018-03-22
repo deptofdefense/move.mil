@@ -61,8 +61,6 @@ The encryption command is:
 
 `openssl enc -aes-256-cbc -iv $SEEDS_ENC_IV -K $SEEDS_ENC_KEY -in (input) -out (output.enc)`
 
-# my_zipcode_gem / free_zipcode_data
+# free_zipcode_data
 
-To lookup the city / state and geographic centroid coordinates of ZIP codes, we use `my_zipcode_gem`, which in turn relies on data collected and published by the [`free_zipcode_data` project on GitHub](https://github.com/midwire/free_zipcode_data/). By default, my_zipcode_gem provides a rake task to download the most recent data from free_zipcode_data's master branch to seed the database. This is unacceptable; it makes builds unreproducible, because free_zipcode_data's master branch could change.
-
-Therefore, the data has been duplicated into our seeds folder, and the work done by `my_zipcode_gem`'s `zipcodes.rake` task handled instead by our seeds code. If you wish to update any of this data, simply go to [`free_zipcode_data`'s project page](https://github.com/midwire/free_zipcode_data/) and replace our copy of their CSV data with the latest version.
+To lookup the city / state and geographic centroid coordinates of ZIP codes, we rely on data collected and published by the [`free_zipcode_data` project on GitHub](https://github.com/midwire/free_zipcode_data/). If you wish to update any of this data, simply go to [`free_zipcode_data`'s project page](https://github.com/midwire/free_zipcode_data/) and replace our copy of their CSV data with the latest version.

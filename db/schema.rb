@@ -57,17 +57,6 @@ ActiveRecord::Schema.define(version: 20180307204203) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "counties", force: :cascade do |t|
-    t.integer "state_id"
-    t.string "abbr"
-    t.string "name"
-    t.string "county_seat"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_counties_on_name"
-    t.index ["state_id"], name: "index_counties_on_state_id"
-  end
-
   create_table "dtod_zip3_distances", force: :cascade do |t|
     t.integer "orig_zip3"
     t.integer "dest_zip3"
@@ -281,14 +270,11 @@ ActiveRecord::Schema.define(version: 20180307204203) do
     t.string "code"
     t.string "city"
     t.integer "state_id"
-    t.integer "county_id"
-    t.string "area_code"
     t.decimal "lat", precision: 15, scale: 10
     t.decimal "lon", precision: 15, scale: 10
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["code"], name: "index_zipcodes_on_code"
-    t.index ["county_id"], name: "index_zipcodes_on_county_id"
     t.index ["lat", "lon"], name: "index_zipcodes_on_lat_and_lon"
     t.index ["state_id"], name: "index_zipcodes_on_state_id"
   end
