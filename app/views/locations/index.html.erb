@@ -63,7 +63,7 @@
           }
     %>
 
-    <p>Displaying results near <b><span id="search-query"><%= @search.query %></span></b><%= " (page #{@locations.current_page} of #{@locations.total_pages})" if @locations.total_pages.positive? %>.</p>
+    <p>Displaying results near <b id="search-query"><%= @search.query %></b><%= " (page #{@locations.current_page} of #{@locations.total_pages})" if @locations.total_pages.positive? %>.</p>
 
     <div id="search-results">
       <%- @locations.each do |location| -%>
