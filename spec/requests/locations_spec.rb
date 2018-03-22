@@ -113,7 +113,7 @@ RSpec.describe LocationsController, type: :request do
         it 'displays an error message' do
           post '/resources/locator-maps', params: { query: '00000' }
 
-          assert_select '.usa-alert-error .usa-alert-text', text: "There was a problem searching for the ZIP code 00000. Mind trying again?"
+          assert_select '.usa-alert-error .usa-alert-text', text: 'There was a problem searching for the ZIP code 00000. Mind trying again?'
         end
       end
 
