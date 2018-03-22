@@ -105,7 +105,7 @@ RSpec.describe LocationsController, type: :request do
         it 'redirects to a search results page' do
           post '/resources/locator-maps', params: { query: 'Ft. Belvoir' }
 
-          expect(response).to redirect_to('/resources/locator-maps/38.932711,-77.030248')
+          expect(response).to redirect_to('/resources/locator-maps/38.933366,-77.0303119999999')
         end
       end
 
