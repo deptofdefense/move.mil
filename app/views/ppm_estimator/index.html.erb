@@ -1,7 +1,7 @@
 <%- @page_title = 'Personally Procured Move (PPM) Estimator' -%>
 
 <% content_for :head do %>
-  <%= tag.link href: asset_path('ppm-estimator.print.scss'), rel: 'stylesheet', media: 'print' %>
+  <%= tag.link href: asset_path('ppm-estimator.print.css'), rel: 'stylesheet', media: 'print' %>
 <% end %>
 
 <%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: [{name: 'Tools & Resources', path: page_path('resources')}]} %>
