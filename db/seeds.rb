@@ -57,3 +57,6 @@ Seeds::BaselineRates.new(
 
 puts '-- Seeding top TSP by channel linehaul discounts...'
 Seeds::TopTspByChannelLinehaulDiscounts.new.seed!
+
+puts '-- Seeding ZIP code metadata...'
+Seeds::Zipcodes.new.seed!
