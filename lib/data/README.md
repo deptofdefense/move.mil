@@ -1,14 +1,20 @@
-# Seeds
+# Seeds Data
+
+This folder contains the static data for the database needed for the site to function. It does not include any dynamic data.
+
+# Ranks and Entitlements
+
+The weight entitlements by rank name are found in `entitlements.yml`. This information comes from the DTR, Part IV, Appendix K-1.
 
 # ZIP3 to ZIP3 distances from DTOD
 
 ## Generating the input
 
-`zip3_dtod.py` is a python script that generates a two-column, space-delimited list of ZIP3 pairs, useful for submitting batches of distance requests to the [Defense Table of Official Distances a.k.a. DTOD](https://dtod.sddc.army.mil).
+`zip3_dtod.rake` is a Rake task that generates a two-column, space-delimited list of ZIP3 pairs, useful for submitting batches of distance requests to the [Defense Table of Official Distances a.k.a. DTOD](https://dtod.sddc.army.mil).
 
 If a new ZIP3 prefix enters or leaves service with the USPS, just alter the zip3 array in zip3_dtod.py accordingly, and regenerate the output by running
 
-`$ ./zip3_dtod.py | split -l 174762 -
+`$ bin/rails admin:zip3_dtod | split -l 174762 -`
 
 This will make several files with filenames starting with `xa`. Why pipe the output to split? As of this writing, DTOD's batch distance processing tool limits uploads to 2 MiB. 174762 lines * 12 bytes per line = 2097144 bytes, just under 2 MiB.
 
@@ -26,9 +32,9 @@ Upload each input file, one per iteration of the form. You do not need to wait f
 
 Once DTOD has sent you all of the results, concatenate them together and write them to `zip3_dtod_output.csv`. Join the files in the same order that they were generated. The database doesn't care, but it will make the git diff shorter.
 
-# Data from 400NG Baseline Rates
+# 400NG Baseline Rates
 
-Each year's 400NG file from SDDC can be found on their [Personal Property->Household Goods page](https://www.sddc.army.mil/pp/Pages/houseGoods.aspx), under the "Special Requirements and Rates Team -> Domestic" tab. Rates for each year (to take effect on May 15 of that year) are published in December of the previous year.
+Each year's domestic Baseline Rates file from SDDC can be found on their [Personal Property->Household Goods page](https://www.sddc.army.mil/pp/Pages/houseGoods.aspx), under the "Special Requirements and Rates Team -> Domestic" tab. Rates for each year (to take effect on May 15 of that year) are published in December of the previous year.
 
 As the maximum entitlement is 20500 lbs (O-10 w/ progear), there is currently no logic for calculating costs at 24000 lbs and beyond, and the "each addl CWT" columns from the original spreadsheet are all ignored.
 
