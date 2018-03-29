@@ -19,7 +19,7 @@ gem 'pg', '~> 1.0'
 gem 'puma', '~> 3.11', '>= 3.11.3'
 gem 'rails', '~> 5.1', '>= 5.1.5'
 gem 'roo', '~> 2.7.1', require: false
-gem 'sass', '~> 3.5', '>= 3.5.5'
+gem 'sass', '~> 3.5', '>= 3.5.6'
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 gem 'uglifier', '~> 4.1', '>= 4.1.8'
 gem 'uswds-rails', '1.4.6'
@@ -33,8 +33,8 @@ source 'https://rails-assets.org' do
 end
 
 group :development, :test do
-  gem 'brakeman', '~> 4.2', require: false
-  gem 'byebug', '~> 10.0'
+  gem 'brakeman', '~> 4.2', '>= 4.2.1', require: false
+  gem 'byebug', '~> 10.0', '>= 10.0.1'
   gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
   gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
