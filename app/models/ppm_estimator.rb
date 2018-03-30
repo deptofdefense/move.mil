@@ -115,7 +115,7 @@ class PpmEstimator
   end
 
   def distance
-    @distance ||= (Google::Maps.route(estimator_params[:start], estimator_params[:end], {key: Google::Maps.api_key}).distance.value / 1609.344).round
+    @distance ||= (Google::Maps.route(estimator_params[:start], estimator_params[:end], key: Google::Maps.api_key).distance.value / 1609.344).round
   end
 
   def effective_400ng_date

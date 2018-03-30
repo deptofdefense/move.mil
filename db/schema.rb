@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180307204203) do
+ActiveRecord::Schema.define(version: 20180330171014) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,14 +53,6 @@ ActiveRecord::Schema.define(version: 20180307204203) do
     t.string "name", null: false
     t.integer "display_order", null: false
     t.string "slug", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "dtod_zip3_distances", force: :cascade do |t|
-    t.integer "orig_zip3"
-    t.integer "dest_zip3"
-    t.float "dist_mi"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

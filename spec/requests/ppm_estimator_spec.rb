@@ -32,7 +32,6 @@ RSpec.describe PpmEstimatorController, type: :request do
 
     context 'when calculating a PPM estimate' do
       let!(:la_dc_1000lbs_linehaul) { create(:conus_linehaul) }
-      let!(:la_dc_distance) { create(:dtod_zip3_distance) }
 
       let!(:la_zip3) { create(:zip3) }
       let!(:dc_zip3) { create(:zip3, zip3: 200, basepoint_city: 'Washington', state: 'DC', service_area: 169, rate_area: '24', region: 10) }
@@ -64,7 +63,6 @@ RSpec.describe PpmEstimatorController, type: :request do
         let!(:shorthaul_1000) { create(:shorthaul) }
         let!(:lv_zip3) { create(:zip3, zip3: 889, basepoint_city: 'Las Vegas', state: 'NV', service_area: 500, rate_area: '86', region: 2) }
         let!(:lv_svc_area) { create(:service_area, service_area: 500, name: 'Las Vegas, NV', services_schedule: 3, linehaul_factor: 0.61, orig_dest_service_charge: 3.63, effective: Range.new(Date.parse('2017-05-15'), Date.parse('2018-05-14'))) }
-        let!(:la_lv_dtod) { create(:dtod_zip3_distance, orig_zip3: 902, dest_zip3: 889, dist_mi: 281.4) }
         let!(:la_lv_1000lbs_linehaul) { create(:conus_linehaul, dist_mi: Range.new(251, 300), weight_lbs: Range.new(1000, 1099), rate: 1722, effective: Range.new(Date.parse('2017-05-15'), Date.parse('2018-05-14'))) }
         let!(:la_lv_top_discount) { create(:top_tsp_by_channel_linehaul_discount, orig: 'US88', dest: 'REGION 2', tdl: Range.new(Date.parse('2017-10-01'), Date.parse('2017-12-31')), discount: 67.0) }
 
@@ -82,7 +80,6 @@ RSpec.describe PpmEstimatorController, type: :request do
         let!(:ocala_zip5_rate_area) { create(:zip5_rate_area) }
         let!(:ocala_service_area) { create(:service_area, service_area: 176, name: 'Jacksonville, FL', services_schedule: 2, linehaul_factor: 0.4, orig_dest_service_charge: 4.13, effective: Range.new(Date.parse('2017-05-15'), Date.parse('2018-05-14'))) }
         let!(:ocala_full_pack) { create(:full_pack, schedule: 2, weight_lbs: Range.new(0, 16_000), rate: 60.05, effective: Range.new(Date.parse('2017-05-15'), Date.parse('2018-05-14'))) }
-        let!(:ocala_dc_dtod) { create(:dtod_zip3_distance, orig_zip3: 344, dest_zip3: 200, dist_mi: 817.8) }
         let!(:ocala_dc_1000lbs_linehaul) { create(:conus_linehaul, dist_mi: Range.new(801, 850), weight_lbs: Range.new(1000, 1099), rate: 2113, effective: Range.new(Date.parse('2017-05-15'), Date.parse('2018-05-14'))) }
         let!(:ocala_dc_top_discount) { create(:top_tsp_by_channel_linehaul_discount, orig: 'US49', dest: 'REGION 10', tdl: Range.new(Date.parse('2017-10-01'), Date.parse('2017-12-31')), discount: 67.0) }
 

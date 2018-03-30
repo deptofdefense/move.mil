@@ -40,9 +40,6 @@ Seeds::Zip3s.new.seed!
 puts '-- Seeding ZIP5 rate areas...'
 Seeds::Zip5RateAreas.new.seed!
 
-puts '-- Seeding DTOD ZIP3 to ZIP3 distances...'
-Seeds::DtodZip3Distances.new.seed!
-
 puts '-- Seeding 2017 400NG baseline rates...'
 Seeds::BaselineRates.new(
   date_range: Range.new(Date.parse('2017-05-15'), Date.parse('2018-05-14')),
