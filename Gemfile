@@ -11,6 +11,7 @@ source 'https://rails-assets.org'
 gem 'activerecord-import', '~> 0.22.0', require: false
 gem 'friendly_id', '~> 5.2', '>= 5.2.3'
 gem 'geokit-rails', '~> 2.3'
+gem 'google-maps', '~> 2.2'
 gem 'health_check', '~> 3.0'
 gem 'high_voltage', '~> 3.0'
 gem 'jbuilder', '~> 2.7'
