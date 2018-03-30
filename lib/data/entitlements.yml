@@ -1,8 +1,8 @@
-- rank: Service Academy Cadets/Midshipmen
+- rank: Service Academy Cadet/Midshipman
   total_weight_self: 350
   total_weight_self_plus_dependents: 350
 
-- rank: Aviation Cadets
+- rank: Aviation Cadet
   total_weight_self: 7000
   total_weight_self_plus_dependents: 8000
   pro_gear_weight: 2000
@@ -62,7 +62,7 @@
   pro_gear_weight: 2000
   pro_gear_weight_spouse: 500
 
-- rank: O-1/W-1/Service Academy Graduates
+- rank: O-1/W-1/Service Academy Graduate
   total_weight_self: 10000
   total_weight_self_plus_dependents: 12000
   pro_gear_weight: 2000
@@ -82,7 +82,7 @@
 
 - rank: O-4/W-4
   total_weight_self: 14000
-  total_weight_self_plus_dependents: 17500
+  total_weight_self_plus_dependents: 17000
   pro_gear_weight: 2000
   pro_gear_weight_spouse: 500
 

@@ -1,3 +1,56 @@
+- question: Can I use the online move scheduling system (DPS) to schedule my move?
+  answer: |
+    <h3>Army</h3>
+    <p>You cannot use <abbr title="Defense Personal Property System">DPS</abbr> if…</p>
+    <ul>
+      <li>This is your first personal property move.</li>
+      <li>This is your last personal property move (you are separating or retiring).</li>
+      <li>You are storing or moving personal property AND you have contingency or deployment orders.</li>
+      <li>You’re storing or moving personal property AND moving your family to an overseas location.</li>
+      <li>You are not the property owner AND you’re using a Power of Attorney.</li>
+      <li>You are moving personal property as “next of kin” or Summary Courts Officer.</li>
+      <li>You’re still not sure or need more help, contact <a href="/resources/locator-maps">your local personal property office</a>!</li>
+    </ul>
+
+    <h3>Marine Corps</h3>
+    <p>You cannot use <abbr title="Defense Personal Property System">DPS</abbr> if…</p>
+    <ul>
+      <li>This is your first personal property move.</li>
+      <li>This is your last personal property move (you are separating or retiring).</li>
+      <li>You are storing or moving personal property AND you have contingency or deployment orders.</li>
+      <li>You’re storing or moving personal property AND moving your family to an overseas location.</li>
+      <li>You are not the property owner AND you’re using a Power of Attorney.</li>
+      <li>You’re still not sure or need more help, contact <a href="/resources/locator-maps">your local personal property office</a>!</li>
+    </ul>
+
+    <h3>Navy</h3>
+    <p>You cannot use <abbr title="Defense Personal Property System">DPS</abbr> if…</p>
+    <ul>
+      <li>You are moving personal property as “next of kin” or Summary Courts Officer.</li>
+      <li>You’re still not sure or need more help, contact <a href="/resources/locator-maps">your local personal property office</a>!</li>
+    </ul>
+
+    <h3>Air Force</h3>
+    <p>You cannot use <abbr title="Defense Personal Property System">DPS</abbr> if…</p>
+    <ul>
+      <li>This is your first personal property move.</li>
+      <li>This is your last personal property move (you are separating or retiring).</li>
+      <li>You are not the property owner AND you’re using a Power of Attorney.</li>
+      <li>You are moving personal property as “next of kin” or Summary Courts Officer.</li>
+      <li>You’re still not sure or need more help, contact <a href="/resources/locator-maps">your local personal property office</a>!</li>
+    </ul>
+
+    <h3>Coast Guard</h3>
+    <p>You cannot use <abbr title="Defense Personal Property System">DPS</abbr> if…</p>
+    <ul>
+      <li>This is your first personal property move.</li>
+      <li>This is your last personal property move (you are separating or retiring).</li>
+      <li>You are not the property owner AND you’re using a Power of Attorney.</li>
+      <li>You are moving personal property as “next of kin” or Summary Courts Officer.</li>
+      <li>You’re still not sure or need more help, contact <a href="/resources/locator-maps">your local personal property office</a>!</li>
+    </ul>
+  category: before-you-move
+
 - question: Why are orders so important?
   answer: |
     <p>There is nothing more constant than change within the military. While you can certainly start some prep work, you will need orders to schedule a move in the system.  Your only other option is a Letter-In-Lieu of Orders, which basically states that you are taking responsibility for the costs of your move if your PCS is cancelled or your destination changes before you receive your official orders.</p>
@@ -223,7 +276,12 @@
   answer: |
     <p>This one can get tricky, so make sure you know the difference between the two and the overall process.</p>
     <p>A <strong>Loss/Damage Report</strong> is your way to notify the household goods carrier (Transportation Service Provider - TSP) that some of your items are missing or were damaged during the delivery process. <strong>This must be done within 75 days of your delivery date.</strong> If the items cannot be found or they cannot fix the damage, you must file a claim to be reimbursed!</p>
-    <p>A Claim is submitted when you are requesting to be reimbursed for the loss or damage to an item.</p>
+    <p>
+      A <strong>Claim</strong> is made when you request reimbursement for lost or damaged items.
+      To qualify for the full replacement value, you <strong>must file your claim in the system (DPS) and click the
+      "Submit" button within nine months after your household goods were delivered to you.</strong> If you have questions
+      about claims filing deadlines, contact your <a href="/customer-service#claims">MCO (Military Claims Office)</a>.
+    </p>
   category: after-the-move
 
 - question: How do I file a Loss/Damage Report?

@@ -5,6 +5,71 @@
   if ($ppmEstimateForm.length == 0)
     return;
 
+  var PpmEstimatorMapMarker = function(options) {
+    this.$container = options.$container;
+    this.id = options.id;
+    this.name = options.name;
+    this.latitude = options.latitude;
+    this.longitude = options.longitude;
+    this.icon = options.icon;
+
+    this.setup();
+  };
+
+  PpmEstimatorMapMarker.prototype = {
+    setup: function() {
+      this.marker = L.marker([this.latitude, this.longitude], {
+        alt: 'Map marker for ' + this.name,
+        icon: this.icon,
+        riseOnHover: true,
+        title: this.name
+      });
+    }
+  };
+
+  var PpmEstimatorMap = function(options) {
+    this.$container = options.$container;
+    this.startCoords = this.$container.data('startLatlon');
+    this.endCoords = this.$container.data('endLatlon');
+
+    this.map = L.map(this.$container.attr('id'), {
+      maxZoom: 18,
+      scrollWheelZoom: false,
+      zoomAnimation: false,
+      zoomControl: false
+    });
+
+    this.setup();
+    this.fitBounds();
+    this.map.on('resize', function(evt) { this.fitBounds(); }.bind(this));
+  };
+
+  PpmEstimatorMap.prototype = {
+    setup: function() {
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Map imagery © <a href="https://www.mapbox.com">Mapbox</a>.'
+      }).addTo(this.map);
+
+      var $iconDefaults = $.extend({}, L.Icon.Default.prototype.options, {
+        iconUrl: this.$container.data('iconUrl'),
+        iconRetinaUrl: this.$container.data('iconRetinaUrl'),
+        shadowUrl: this.$container.data('shadowUrl'),
+      });
+
+      L.marker(this.startCoords, { icon: L.icon($iconDefaults) }).addTo(this.map);
+      L.marker(this.endCoords, { icon: L.icon($iconDefaults) }).addTo(this.map);
+
+      var polyline = L.polyline([this.startCoords, this.endCoords], {color: 'blue'}).addTo(this.map);
+    },
+
+    fitBounds: function() {
+      this.map.fitBounds([this.startCoords, this.endCoords], {
+        animate: false,
+        padding: [32, 32]
+      });
+    }
+  };
+
   var PpmEstimator = function(options) {
     this.$alert = options.$alert;
     this.$form = options.$form;
@@ -49,6 +114,15 @@
     handleAjaxSuccess: function(markup) {
       this.$alert.attr('hidden', true);
       this.$results.html(markup).removeAttr('hidden');
+
+      var $container = $('#ppm-estimator-map');
+
+      if ($container.length) {
+        new PpmEstimatorMap({
+          $container: $container
+        });
+      }
+
       $('#ppm-footer')[0].scrollIntoView(false);
     },
 

@@ -9393,5 +9393,41 @@
         "dsn": true
       }
     ]
+  },
+  {
+    "name": "Naval Training Center PPO",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
+    "location": {
+      "street_address": "1710 B Cavin Dr.",
+      "extended_address": "Bldg. 8100",
+      "locality": "Great Lakes",
+      "region": "Illinois",
+      "region_code": "IL",
+      "postal_code": "60088",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 42.303864,
+      "longitude": -87.862318
+    },
+    "email_addresses": [
+      {
+        "email_address": "HHG_GreatLakes@navy.mil",
+        "note": "Customer Service"
+      }
+    ],
+
+    "phone_numbers": [
+      {
+        "phone_number": "1-800-637-5401",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "792-5371",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ],
+    "hours": "0730-1630 Mon-Fri"
   }
 ]
