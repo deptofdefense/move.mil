@@ -1,0 +1,42 @@
+header,
+h1,
+h4,
+footer,
+.breadcrumbs,
+.login-banner,
+.back-to-top,
+.ppm-description,
+.ppm-form,
+.ppm-estimate-print {
+  display: none;
+}
+
+.ppm-estimate-results {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.ppm-footer {
+  border: 0;
+  margin: 0;
+}
+
+.usa-section {
+  padding: 0;
+}
+
+.usa-alert {
+  padding-bottom: 0.7rem;
+  padding-top: 1rem;
+}
+
+.main-section {
+  // The content is 7.5in wide. To center it, add 1/4 inch to the margins to the page AND to the content
+  // (Safari assumes 0.25in page margins)
+  margin: 0 0.25in;
+}
+
+@page {
+  margin: 0.5in 0.25in;
+}

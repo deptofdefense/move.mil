@@ -1,7 +1,12 @@
 AllCops:
   Exclude:
-    - 'db/**/*'
+    - 'db/migrate/**/*'
+    - 'db/schema.rb'
     - 'vendor/**/*'
+
+Metrics/AbcSize:
+  Exclude:
+    - 'db/**/*'
 
 Metrics/BlockLength:
   Exclude:
@@ -13,7 +18,13 @@ Metrics/LineLength:
   Enabled: false
 
 Metrics/MethodLength:
+  Exclude:
+    - 'db/**/*'
   Max: 15
+
+Rails/Output:
+  Exclude:
+    - 'db/**/*'
 
 Style/Documentation:
   Enabled: false

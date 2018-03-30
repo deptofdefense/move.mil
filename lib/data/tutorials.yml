@@ -141,11 +141,11 @@
         </ul>
     - image_path: tutorials/create-a-shipment-09.jpg
       content: >
-        Next, enter your Orders Number and Date.
+        Next, enter your Orders Number, Date and the Headquarters Issuing the Orders.
       pro_tip: >
         <strong>Pro-Tips:</strong>
         <ul>
-          <li>The location of your Orders Number on the orders, varies by branch. Typically, the Army and Navy list the number in the upper left of the document, while the Marines list a Standard Document Number (SDN) on the bottom right. For the Airforce, look in box 27 of your Orders form.</li>
+          <li>The location of your Orders Number on the orders, varies by branch. Typically, the Army and Navy list the number in the upper left of the document, while the Marines list a Standard Document Number (SDN) on the bottom right. For the Air Force, look in box 27 of your Orders form.</li>
           <li>Your Orders date is the date the orders were cut or issued.</li>
         </ul>
     - image_path: tutorials/create-a-shipment-10.jpg
@@ -172,7 +172,9 @@
       pro_tip: >
         <strong>Pro-Tips:</strong>
         <ul>
-          <li>A POV is your Personally Owned Vehicle, and in this context, a Mobile Home is an RV.</li>
+          <li>A POV is your privately owned vehicle or automobile and in this context, a Mobile Home is an RV or recreational vehicle.
+            Please contact your local Transportation Office if you have questions.
+          </li>
           <li>Not all locations, in particular OCONUS, allow you to ship a motorcycle and a POV.</li>
         </ul>
     - image_path: tutorials/create-a-shipment-15.jpg
@@ -201,7 +203,7 @@
         Add a Releasing Agent from your list of Points of Contact, someone who can sign for your pick-up or delivery, if you’re unavailable.
     - image_path: tutorials/create-a-shipment-19.jpg
       content: >
-        Next, define shipment weight. Use the <a href="/resources/weight-estimator">Weight Estimator Tool</a> on move.mil to get an idea of what your belongings weigh.<br><br>
+        Next, define shipment weight. Use the <a href="/resources/weight-estimator">Weight Estimator Tool</a> on Move.mil to get an idea of what your belongings weigh.<br><br>
         Identify if you have special items like a jacuzzi or piano. There’s also a separate section for firearms on the next page. You’ll need to enter the make and model, serial number, and caliber for each firearm. Save yourself the headache later, by entering this info before you hit Submit!
       pro_tip: >
         <strong>Pro-Tip:</strong> Your Pro Gear, up to 2,000 lbs, doesn’t count towards your estimated weight.
@@ -277,7 +279,7 @@
         <strong>Pro-Tip:</strong> At the bottom is the address where you want your reimbursement check mailed. Most service members will have direct deposit setup, but this is particularly important for Retirees.
     - image_path: tutorials/create-a-ppm-shipment-08.jpg
       content: >
-        Next, define shipment weight. Use the <a href="/resources/weight-estimator">Weight Estimator Tool</a> on move.mil to get an idea of what your belongings weigh.<br><br>
+        Next, define shipment weight. Use the <a href="/resources/weight-estimator">Weight Estimator Tool</a> on Move.mil to get an idea of what your belongings weigh.<br><br>
         Make sure that you select that packing is required, because you will be doing the packing!
       pro_tip: >
         <strong>Pro-Tip:</strong> Your Pro Gear, up to 2,000 lbs, doesn’t count towards your estimated weight. Make sure you declare all your Pro Gear.

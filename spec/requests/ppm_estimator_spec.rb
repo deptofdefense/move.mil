@@ -45,6 +45,11 @@ RSpec.describe PpmEstimatorController, type: :request do
 
       let!(:top_discount_la_dc) { create(:top_tsp_by_channel_linehaul_discount) }
 
+      let!(:beverly_hills_zipcode) { create(:zipcode, code: '90210', city: 'Beverly Hills', lat: 33.786594, lon: -118.298662) }
+      let!(:washington_dc_zipcode) { create(:zipcode, code: '20001', city: 'Washington', lat: 38.911936, lon: -77.016719) }
+      let!(:lakes_zipcode) { create(:zipcode, code: '88901', city: 'The Lakes', lat: 36.322484, lon: -114.819717) }
+      let!(:ocala_zipcode) { create(:zipcode, code: '34470', city: 'Ocala', lat: 29.238672, lon: -82.169401) }
+
       context 'and sending valid params' do
         before do
           get '/resources/ppm-estimator', params: { rank: 'e-1', branch: 'army', dependents: 'yes', start: '90210', end: '20001', date_year: '2018', date_month: '1', date_day: '31', weight: '1000' }, xhr: true
