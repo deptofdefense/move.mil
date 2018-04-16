@@ -3,9 +3,6 @@ RSpec.describe PpmEstimatorController, type: :request do
     let!(:e1) { create(:entitlement, rank: 'E-1', total_weight_self: 5_000, total_weight_self_plus_dependents: 8_000, pro_gear_weight: 2_000, pro_gear_weight_spouse: 500) }
     let!(:o6) { create(:entitlement, rank: 'O-6', total_weight_self: 18_000, total_weight_self_plus_dependents: 18_000, pro_gear_weight: 2_000, pro_gear_weight_spouse: 500) }
 
-    let!(:army) { create(:branch_of_service, name: 'Army') }
-    let!(:marine_corps) { create(:branch_of_service, name: 'Marine Corps') }
-
     context 'when navigating to the page' do
       before do
         get '/resources/ppm-estimator'
@@ -22,11 +19,6 @@ RSpec.describe PpmEstimatorController, type: :request do
       it 'populates the rank select input' do
         # count includes the blank or prompt option
         assert_select '#rank option', count: 3
-      end
-
-      it 'populates the branch select input' do
-        # count includes the blank or prompt option
-        assert_select '#branch option', count: 3
       end
     end
 
@@ -51,7 +43,7 @@ RSpec.describe PpmEstimatorController, type: :request do
 
       context 'and sending valid params' do
         before do
-          get '/resources/ppm-estimator', params: { rank: 'e-1', branch: 'army', dependents: 'yes', start: '90210', end: '20001', date_year: '2018', date_month: '1', date_day: '31', weight: '1000' }, xhr: true
+          get '/resources/ppm-estimator', params: { rank: 'e-1', dependents: 'yes', start: '90210', end: '20001', date_year: '2018', date_month: '1', date_day: '31', weight: '1000' }, xhr: true
         end
 
         it 'shows a PPM estimate' do
@@ -67,7 +59,7 @@ RSpec.describe PpmEstimatorController, type: :request do
         let!(:la_lv_top_discount) { create(:top_tsp_by_channel_linehaul_discount, orig: 'US88', dest: 'REGION 2', tdl: Range.new(Date.parse('2017-10-01'), Date.parse('2017-12-31')), discount: 67.0) }
 
         before do
-          get '/resources/ppm-estimator', params: { rank: 'e-1', branch: 'army', dependents: 'yes', start: '90210', end: '88901', date_year: '2018', date_month: '1', date_day: '31', weight: '1000' }, xhr: true
+          get '/resources/ppm-estimator', params: { rank: 'e-1', dependents: 'yes', start: '90210', end: '88901', date_year: '2018', date_month: '1', date_day: '31', weight: '1000' }, xhr: true
         end
 
         it 'shows a PPM estimate' do
@@ -84,7 +76,7 @@ RSpec.describe PpmEstimatorController, type: :request do
         let!(:ocala_dc_top_discount) { create(:top_tsp_by_channel_linehaul_discount, orig: 'US49', dest: 'REGION 10', tdl: Range.new(Date.parse('2017-10-01'), Date.parse('2017-12-31')), discount: 67.0) }
 
         before do
-          get '/resources/ppm-estimator', params: { rank: 'e-1', branch: 'army', dependents: 'yes', start: '34470', end: '20001', date_year: '2018', date_month: '1', date_day: '31', weight: '1000' }, xhr: true
+          get '/resources/ppm-estimator', params: { rank: 'e-1', dependents: 'yes', start: '34470', end: '20001', date_year: '2018', date_month: '1', date_day: '31', weight: '1000' }, xhr: true
         end
 
         it 'shows a PPM estimate' do
@@ -93,8 +85,8 @@ RSpec.describe PpmEstimatorController, type: :request do
       end
 
       context 'and a required parameter is missing' do
-        [:rank, :branch, :dependents, :start, :end, :date, :weight].each do |param|
-          let(:required_params) { { rank: 'e-1', branch: 'army', dependents: 'yes', start: '90210', end: '20001', date: '2017-12-31', weight: '1000' } }
+        [:rank, :dependents, :start, :end, :date, :weight].each do |param|
+          let(:required_params) { { rank: 'e-1', dependents: 'yes', start: '90210', end: '20001', date: '2017-12-31', weight: '1000' } }
           before do
             missing_a_param = required_params.deep_dup
             missing_a_param.delete(param)
@@ -108,7 +100,7 @@ RSpec.describe PpmEstimatorController, type: :request do
       end
 
       context 'and sending an invalid date' do
-        let(:bad_date_params) { { rank: 'e-1', branch: 'army', dependents: 'yes', start: '90210', end: '20001', date: '2017-02-31', weight: '1000' } }
+        let(:bad_date_params) { { rank: 'e-1', dependents: 'yes', start: '90210', end: '20001', date: '2017-02-31', weight: '1000' } }
 
         before do
           get '/resources/ppm-estimator', params: :bad_date_params, xhr: true

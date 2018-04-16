@@ -23,15 +23,11 @@
 
   <%= form_with url: ppm_estimator_path, class: 'ppm-form', id: 'ppm-estimate-form', method: 'get', skip_enforcing_utf8: true do |form| %>
     <fieldset>
-      <legend>What is your rank and branch of service?</legend>
+      <legend>What is your rank?</legend>
       <div class="usa-grid-full grid-form-width">
         <div class="usa-width-one-half">
           <%= form.label :rank, 'Rank' %>
           <%= form.select :rank, options_from_collection_for_select(@entitlements, :slug, :rank), { prompt: '- Select -' }, { id: :rank, required: true } %>
-        </div>
-        <div class="usa-width-one-half">
-          <%= form.label :branch, 'Branch of Service' %>
-          <%= form.select :branch, options_from_collection_for_select(@branches, :slug, :name), { prompt: '- Select -' }, { id: :branch, required: true } %>
         </div>
       </div>
     </fieldset>
@@ -143,7 +139,7 @@
   <div class="ppm-footer" id="ppm-footer">
     <strong>Note:</strong> This tool only provides an estimate of what you
     might receive if you decide to do a personally procured move.
-    <strong>Your actual incentive will be calculated using the 
+    <strong>Your actual incentive will be calculated using the
     current rates on the day you schedule your move in DPS.</strong> Rates
     vary based on transporter availability, selected move date (Peak vs.
     Non-Peak Season), distance traveled, and the actual weight of the shipment.

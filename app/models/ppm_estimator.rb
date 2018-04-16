@@ -5,7 +5,7 @@ class PpmEstimator
   end
 
   def advance_percentage
-    estimator_params[:branch] == 'marine-corps' ? 50 : 60
+    60
   end
 
   def date
@@ -18,10 +18,6 @@ class PpmEstimator
 
   def rank_name
     Entitlement.select(:rank).find_by(slug: estimator_params[:rank]).rank
-  end
-
-  def branch_name
-    BranchOfService.select(:name).find_by(slug: estimator_params[:branch]).name
   end
 
   def weight_self
@@ -79,7 +75,7 @@ class PpmEstimator
 
   def valid?
     # weight_progear and weight_progear_spouse can be empty, will be regarded as 0
-    required_params = %w[rank branch dependents start end date_year date_month date_day weight]
+    required_params = %w[rank dependents start end date_year date_month date_day weight]
 
     estimator_params.permitted? &&
       (required_params - estimator_params.keys).empty? &&
@@ -90,7 +86,7 @@ class PpmEstimator
   private
 
   def estimator_params
-    @estimator_params ||= @params.permit(:rank, :branch, :dependents, :start, :end, :date_year, :date_month, :date_day, :weight, :weight_progear, :weight_progear_spouse)
+    @estimator_params ||= @params.permit(:rank, :dependents, :start, :end, :date_year, :date_month, :date_day, :weight, :weight_progear, :weight_progear_spouse)
   end
 
   # returns the full_weight divided by 100, AKA the hundredweight (centiweight?)
