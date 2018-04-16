@@ -33,27 +33,37 @@ en:
   abbrs:
     atf: Bureau of Alcohol, Tobacco, Firearms and Explosives
     conus: Continental United States
+    dity: Do It Yourself
+    dla: Dislocation Allowance
     dod: Department of Defense
     dps: Defense Personal Property System
     eta: Electronic Transportation Acquisition
     fica: Federal Insurance Contributions Act
+    ftr: Federal Travel Regulation
+    gbl: Government Bill of Lading
     gps: Global Positioning System
     hhg: Household Goods
     jtr: Joint Travel Regulations
     mco: Military Claims Office
+    mea: Miscellaneous Expense Allowance
     nte: Not to Exceed
     nts: Non-Temporary Storage
     oconus: Outside the Continental United States
     pcs: Permanent Change of Station
     pds: Permanent Duty Station
+    pov: Privately-Owned Vehicle
     ppm: Personally Procured Move
     pppo: Personal Property Processing Office
     ppso: Personal Property Shipping Office
-    pov: Privately-Owned Vehicle
+    rit: Relocation Income Tax
     sit: Storage in Transit
     src: System Response Center
-    tsp: Transportation Service Provider
+    tcs: Temporary Change of Station
     tdy: Temporary Duty
+    tla: Temporary Lodging Allowance
+    tle: Temporary Lodiging Expense
+    tqsa: Temporary Quarters Subsistence Allowance
+    tsp: Transportation Service Provider
   site:
     name: Move.mil
     tagline: Official %{abbr} Moving Portal
