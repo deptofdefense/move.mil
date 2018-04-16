@@ -24,12 +24,8 @@
   <%= form_with url: ppm_estimator_path, class: 'ppm-form', id: 'ppm-estimate-form', method: 'get', skip_enforcing_utf8: true do |form| %>
     <fieldset>
       <legend>What is your rank?</legend>
-      <div class="usa-grid-full grid-form-width">
-        <div class="usa-width-one-half">
-          <%= form.label :rank, 'Rank' %>
-          <%= form.select :rank, options_from_collection_for_select(@entitlements, :slug, :rank), { prompt: '- Select -' }, { id: :rank, required: true } %>
-        </div>
-      </div>
+      <%= form.label :rank, 'Rank' %>
+      <%= form.select :rank, options_from_collection_for_select(@entitlements, :slug, :rank), { prompt: '- Select -' }, { id: :rank, required: true } %>
     </fieldset>
 
     <fieldset>
