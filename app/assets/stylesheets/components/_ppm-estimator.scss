@@ -99,7 +99,7 @@
   align-items: stretch;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 0.76rem;
 }
 
@@ -107,9 +107,12 @@
   white-space: nowrap;
 }
 
+.ppm-estimate-your-details {
+  flex: 0 0;
+}
+
 .ppm-estimate-rank {
   margin-left: 0.8rem;
-  min-width: 28rem;
   text-align: right;
 }
 
