@@ -13,7 +13,7 @@
             <%= label_tag household_good.key, household_good.name %>
           </td>
           <td>
-            <%= text_field_tag household_good.key, nil, class: 'hhg-quantity-input', id: household_good.key, pattern: '\d+' %>
+            <%= number_field_tag household_good.key, nil, class: 'hhg-quantity-input', id: household_good.key, inputmode: 'numeric', pattern: '[0-9]*' %>
             <%= hidden_field_tag household_good.weight_key, household_good.weight, class: 'hhg-weight' %>
           </td>
         </tr>
