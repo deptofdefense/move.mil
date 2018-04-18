@@ -34,7 +34,7 @@
                     <%- 3.times do -%>
                       <tr>
                         <td><%= text_field_tag nil, nil, class: 'hhg-misc-input', placeholder: 'Item Description' %></td>
-                        <td><%= number_field_tag nil, nil, class: 'hhg-weight-input', inputmode: 'numeric', pattern: '[0-9]*', placeholder: 'lbs' %></td>
+                        <td><%= number_field_tag nil, nil, class: 'hhg-weight-input', inputmode: 'numeric', min: 0, pattern: '[0-9]*', placeholder: 'lbs' %></td>
                       </tr>
                     <%- end -%>
                   </tbody>

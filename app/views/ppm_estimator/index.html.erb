@@ -96,21 +96,21 @@
       </p>
       <div id="weight-section">
         <%= form.label :weight, 'Estimated Household Goods Weight (lbs)' %>
-        <%= form.number_field :weight, { id: :weight, inputmode: 'numeric', pattern: '[0-9]*', required: true } %>
+        <%= form.number_field :weight, { id: :weight, inputmode: 'numeric', min: 0, pattern: '[0-9]*', required: true } %>
         <p id="weight-allowance-text">
           Your weight allowance is up to <strong><span id="entitlement_weight"></span> lbs</strong>.
         </p>
       </div>
       <div id="progear-section">
         <%= form.label :weight_progear, 'Estimated Pro-Gear Weight (lbs)' %>
-        <%= form.number_field :weight_progear, { id: :weight_progear, inputmode: 'numeric', pattern: '[0-9]*', required: false } %>
+        <%= form.number_field :weight_progear, { id: :weight_progear, inputmode: 'numeric', min: 0, pattern: '[0-9]*', required: false } %>
         <p id="progear-allowance-text">
           Your Pro-Gear allowance is up to <strong><span id="entitlement_progear"></span> lbs</strong>.
         </p>
       </div>
       <div id="progear-spouse-section" hidden>
         <%= form.label :weight_progear_spouse, "Estimated Spouse's Pro-Gear Weight (lbs)" %>
-        <%= form.number_field :weight_progear_spouse, { id: :weight_progear_spouse, inputmode: 'numeric', pattern: '[0-9]*', required: false } %>
+        <%= form.number_field :weight_progear_spouse, { id: :weight_progear_spouse, inputmode: 'numeric', min: 0, pattern: '[0-9]*', required: false } %>
         <p id="progear-spouse-allowance-text">
           Your spouse's Pro-Gear allowance is up to <strong><span id="entitlement_progear_spouse"></span> lbs</strong>.
         </p>
