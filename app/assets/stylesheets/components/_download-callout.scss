@@ -1,0 +1,26 @@
+.download-callout {
+  background-color: $color-cool-blue-lightest;
+  padding: $site-margins-mobile;
+
+  img {
+    border: 1px solid $color-gray-light;
+  }
+
+  .usa-button {
+    width: 100%;
+  }
+}
+
+.download-callout-details {
+  margin-bottom: $site-margins-mobile;
+
+  .file-type {
+    font-weight: bold;
+    font-size: $h3-font-size;
+  }
+
+  .file-size {
+    color: $color-gray;
+    font-size: $h6-font-size;
+  }
+}

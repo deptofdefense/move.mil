@@ -1,11 +1,27 @@
-<%- @page_title = 'Self-Inventory Form' -%>
+<%- @page_title = 'High Value Inventory Worksheet' -%>
 
 <%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: [{name: 'Tools & Resources', path: page_path('resources')}]} %>
 
 <div class="usa-section main-section">
   <h1><%= @page_title %></h1>
 
-  <%# TODO Add page content %>
+  <div class="usa-grid-full">
+    <div class="usa-width-two-thirds">
+      <p>Use this worksheet to keep track of those possessions that are most important to you. It includes fields for critical information like serial and model numbers, as well as the same codes used by movers to note the condition of items before the move.</p>
+      <p>If you know you’d file a claim for it if something went wrong, write it down on this worksheet.</p>
+    </div>
+    <div class="usa-width-one-third download-callout">
 
-  <p>Coming soon!</p>
+      <div class="download-callout-details">
+        <div class="file-type">PDF File</div>
+        <div class="file-size">136KB</div>
+      </div>
+
+      <%= link_to '/documents/high-value-inventory-worksheet.pdf' do %>
+        <%= image_tag 'resources/high-value-inventory-worksheet.png', alt: '', download: 'High Value Inventory Worksheet.pdf' %>
+      <% end %>
+
+      <%= link_to 'Download', '/documents/high-value-inventory-worksheet.pdf', class: 'usa-button', download: 'High Value Inventory Worksheet.pdf' %>
+    </div>
+  </div>
 </div>
