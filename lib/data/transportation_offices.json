@@ -1098,48 +1098,6 @@
     "note": "Pre Sep Briefings @ AFRC each Wed at 0900.\n Inprocessing Briefings @ MPF mon, Wed, Fri at 0925.\nRetirement briefings monthly @ AFRC.\nSmooth Move Briefings @ AFRC, monthly."
   },
   {
-    "name": "Cannon AFB",
-    "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "location": {
-      "street_address": "125 E. Cochran Ave",
-      "extended_address": null,
-      "locality": "Cannon Air Force Base",
-      "region": "New Mexico",
-      "region_code": "NM",
-      "postal_code": "88103",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 34.392738,
-      "longitude": -103.323707
-    },
-    "email_addresses": [
-      {
-        "email_address": "27solrs.lgrtp@afsoc.af.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "(575) 784-2302",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "DSN 681-2301",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ],
-    "hours": "Mon, Tue, Thur, Fri 0800-1530\nWed 0800-1300\nThur by appointment only 1530-1800",
-    "services": [
-      "Walk-In Help",
-      "Briefings",
-      "Appointments",
-      "QA Inspections"
-    ],
-    "note": "Smooth Move - Monthly"
-  },
-  {
     "name": "Fort Gordon Transportation Office",
     "shipping_office_name": null,
     "location": {
