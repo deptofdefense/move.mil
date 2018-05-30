@@ -3540,45 +3540,6 @@
     ]
   },
   {
-    "name": "LRC, Dugway Proving Ground, Transportation Div",
-    "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "location": {
-      "street_address": "Doolitte Ave",
-      "extended_address": "Bldg. 5464",
-      "locality": "Dugway",
-      "region": "Utah",
-      "region_code": "UT",
-      "postal_code": "84022",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 40.218554,
-      "longitude": -112.749625
-    },
-    "email_addresses": [
-      {
-        "email_address": "Deanna.i.olson.civ@mail.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "435-831-2753",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "789-2753",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ],
-    "hours": "Monday thru Thursday 7:00am to 4:30pm MST",
-    "services": [
-      "Briefings",
-      "Appointments"
-    ]
-  },
-  {
     "name": "NAVSUP FLC PS PPPO EVERETT",
     "shipping_office_name": null,
     "location": {
@@ -3828,16 +3789,16 @@
     "name": "Dugway Proving Ground",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
     "location": {
-      "street_address": "Bldg 5464",
-      "extended_address": null,
+      "street_address": "5300 Valdez Cir.",
+      "extended_address": "Bldg H",
       "locality": "Dugway",
       "region": "Utah",
       "region_code": "UT",
       "postal_code": "84022",
       "country_name": "United States",
       "country_code": "US",
-      "latitude": 40.213585,
-      "longitude": -112.75678
+      "latitude": 40.220593,
+      "longitude": -112.749965
     },
     "email_addresses": [
       {
@@ -3847,19 +3808,23 @@
     ],
     "phone_numbers": [
       {
-        "phone_number": "(435) 831-2753 / 2131",
+        "phone_number": "(435) 831-2753 / (435) 831-2131",
         "phone_type": "voice",
         "dsn": false
+      },
+      {
+        "phone_number": "789-2753 / 789-2131",
+        "phone_type": "voice",
+        "dsn": true
       }
     ],
-    "hours": "Monday thru Thursday 7:00am to 4:30pm",
+    "hours": "Monday - Thursday 07:00 - 1630",
     "services": [
       "Walk-In Help",
       "Briefings",
       "Appointments",
       "QA Inspections"
-    ],
-    "note": "Outbound moves counseling and briefing\nMonday thru Thursday 7:00am to 4:30pm"
+    ]
   },
   {
     "name": "Charleston Naval Weapon Station",
@@ -6283,46 +6248,6 @@
       "Walk-In Help",
       "Briefings",
       "Computer Lab",
-      "Appointments"
-    ]
-  },
-  {
-    "name": "Dugway Proving Ground",
-    "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "location": {
-      "street_address": "Bldg 5464",
-      "extended_address": null,
-      "locality": "Dugway",
-      "region": "Utah",
-      "region_code": "UT",
-      "postal_code": "84022",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 40.216501,
-      "longitude": -112.753042
-    },
-    "email_addresses": [
-      {
-        "email_address": "deanna.i.olson.civ@mail.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "(435) 831-2753 / (435) 831-2131",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "789-2753 / 789-2131",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ],
-    "hours": "Monday - Thursday 07:00 - 1630",
-    "services": [
-      "Walk-In Help",
-      "Briefings",
       "Appointments"
     ]
   },
