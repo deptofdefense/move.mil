@@ -646,7 +646,7 @@
     ]
   },
   {
-    "name": "CG BASE KETCHIKAN",
+    "name": "Coast Guard Base Ketchikan",
     "shipping_office_name": null,
     "location": {
       "street_address": "1300 Stedman St",
@@ -673,13 +673,19 @@
         "dsn": false
       }
     ],
-    "hours": "0730-1530",
+    "urls": [
+      {
+        "url": "http://alaska.coastguard.dodlive.mil/tag/base-ketchikan/"
+      }
+    ],
+    "hours": "Monday - Friday 0730-1600\nClosed Sat/Sun/Holidays",
     "services": [
       "Walk-In Help",
       "Briefings",
       "Appointments",
       "QA Inspections"
-    ]
+    ],
+    "note": "Department Meetings occur @1000-1100 every Tuesday"
   },
   {
     "name": "CG BSU, KODIAK, AK",
@@ -1431,48 +1437,6 @@
       "QA Inspections"
     ],
     "note": "Group briefs are held once a week and once every quarter for retirees 1100-1530"
-  },
-  {
-    "name": "Base Ketchikan",
-    "shipping_office_name": null,
-    "location": {
-      "street_address": "1300 Stedman",
-      "extended_address": null,
-      "locality": "Ketchikan",
-      "region": "Alaska",
-      "region_code": "AK",
-      "postal_code": "99901",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 55.332775,
-      "longitude": -131.624268
-    },
-    "email_addresses": [
-      {
-        "email_address": "D17-SMB-TRANS@USCG.MIL",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "907-228-6433",
-        "phone_type": "voice",
-        "dsn": false
-      }
-    ],
-    "urls": [
-      {
-        "url": "http://alaska.coastguard.dodlive.mil/tag/base-ketchikan/"
-      }
-    ],
-    "hours": "Monday - Friday 0730-1600\nClosed Sat/Sun/Holidays",
-    "services": [
-      "Walk-In Help",
-      "Briefings",
-      "Appointments",
-      "QA Inspections"
-    ],
-    "note": "Department Meetings occur @1000-1100 every Tuesday"
   },
   {
     "name": "Personal Property Processing Office McChord Field, WA",
