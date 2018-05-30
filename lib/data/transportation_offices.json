@@ -1014,7 +1014,7 @@
     "note": "ETS/Retirement: 0830 hrs Monday; All other: 0830 hrs TTF"
   },
   {
-    "name": "Seymour Johnson AFB, NC",
+    "name": "Seymour Johnson AFB",
     "shipping_office_name": "JPPSO-NE (DET 2)",
     "location": {
       "street_address": "1280 Humphreys St",
@@ -1036,7 +1036,7 @@
     ],
     "phone_numbers": [
       {
-        "phone_number": "(919) 722-1074 / (919) 722-545",
+        "phone_number": "(919) 722-1074 / (919) 722-5458",
         "phone_type": "voice",
         "dsn": false
       },
@@ -1046,14 +1046,14 @@
         "dsn": true
       }
     ],
-    "hours": "Monday - Friday  0800 -1600",
+    "hours": "Monday-Friday 0800-1600",
     "services": [
       "Walk-In Help",
       "Briefings",
       "Appointments",
       "QA Inspections"
     ],
-    "note": "HHG Briefings Tuesday/Thursday @1000\nPPM Briefings  Tuesday/Thursday @1400"
+    "note": "HHG Briefings Tuesday/Thursday @1000\nPPM Briefings Tuesday/Thursday @1400"
   },
   {
     "name": "Beale AFB",
