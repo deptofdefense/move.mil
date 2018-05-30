@@ -5059,23 +5059,23 @@
     },
     "email_addresses": [
       {
-        "email_address": "7lrslgrt@dyess.af.mil",
+        "email_address": "7lrs.hhg@us.af.mil",
         "note": "Customer Service"
       }
     ],
     "phone_numbers": [
       {
-        "phone_number": "(325) 696-1020  /  (325) 696-2045",
+        "phone_number": "(325) 696-1020 / (325) 696-2029",
         "phone_type": "voice",
         "dsn": false
       },
       {
-        "phone_number": "461-1020 / 461-2045",
+        "phone_number": "461-1020 / 461-2029",
         "phone_type": "voice",
         "dsn": true
       }
     ],
-    "hours": "Mon-Wed-Thurs 0900-1500\nTues 0800-1500\nFri 0900-1300",
+    "hours": "Mon-Wed 0900-1500\nTues-Thurs 0800-1500\nFri 0900-1300",
     "services": [
       "Walk-In Help",
       "Briefings",
