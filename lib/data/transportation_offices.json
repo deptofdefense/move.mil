@@ -9429,5 +9429,46 @@
       }
     ],
     "hours": "0730-1630 Mon-Fri"
+  },
+  {
+    "name": "Joint Base McGuire-Dix-Lakehurst Household Goods/Transportation Office",
+    "shipping_office_name": "JPPSO-NE (DET 2)",
+    "location": {
+      "street_address": "1706 Vandenberg Ave",
+      "extended_address": null,
+      "locality": "McGuire AFB",
+      "region": "New Jersey",
+      "region_code": "NJ",
+      "postal_code": "08641",
+      "country_name": "United States",
+      "country_code": "US",
+      "latitude": 40.026449,
+      "longitude": -74.585968
+    },
+    "email_addresses": [
+      {
+        "email_address": "305aps.hhg@us.af.mil",
+        "note": "Customer Service"
+      }
+    ],
+
+    "phone_numbers": [
+      {
+        "phone_number": "(609) 754-6911",
+        "phone_type": "voice",
+        "dsn": false
+      },
+      {
+        "phone_number": "650-6911",
+        "phone_type": "voice",
+        "dsn": true
+      }
+    ],
+    "hours": "Mon-Fri 0800-1600",
+    "services": [
+      "Appointments",
+      "Walk-In Help",
+      "Briefings"
+    ]
   }
 ]
