@@ -1231,7 +1231,7 @@
     "name": "Personal Property Shipping Office Fort Sill",
     "shipping_office_name": "Joint Personal Property Shipping Office Northwest",
     "location": {
-      "street_address": "4700 Mow Way Rd",
+      "street_address": "4700 Mow-Way Rd",
       "extended_address": "Room 110",
       "locality": "Fort Sill",
       "region": "Oklahoma",
@@ -1250,7 +1250,7 @@
     ],
     "phone_numbers": [
       {
-        "phone_number": "(580)442-3107)",
+        "phone_number": "(580) 442-3107",
         "phone_type": "voice",
         "dsn": false
       },
@@ -1264,10 +1264,9 @@
     "services": [
       "Walk-In Help",
       "Appointments",
-      "QA Inspections",
-      "Appointments 06 and above"
+      "QA Inspections"
     ],
-    "note": "Walk-In hours 0830-1530  and Special appointments for 06 and above"
+    "note": "Retirement briefings first Tues of each month @0900\nOCONUS Briefings Thurs @0900\nCONUS Briefings Thurs @1300"
   },
   {
     "name": "Grand Forks",
@@ -1610,46 +1609,6 @@
       "QA Inspections"
     ],
     "note": "Group briefings MTTHF @ 0900; W @ 1000"
-  },
-  {
-    "name": "Transportation Personal Property",
-    "shipping_office_name": "Joint Personal Property Shipping Office Northwest",
-    "location": {
-      "street_address": "110 Mo-way Road",
-      "extended_address": "Building 4700 Room",
-      "locality": "Fort Sill",
-      "region": "Oklahoma",
-      "region_code": "OK",
-      "postal_code": "73503",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 34.647991,
-      "longitude": -98.412426
-    },
-    "email_addresses": [
-      {
-        "email_address": "usarmy.jblm.usamc.mbx.jppsonw-cs@mail.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "580-442-3903",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "580-639-3903",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ],
-    "hours": "Monday- Friday 0830- 1530   Sat/Sun Closed",
-    "services": [
-      "Walk-In Help",
-      "Briefings"
-    ],
-    "note": "Retirement briefings First Tuesday of each month @0900  Oconus Briefings each Thursday morning @0900  Conus Briefings each Thursday at 1300"
   },
   {
     "name": "USCG",
