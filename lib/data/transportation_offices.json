@@ -4911,47 +4911,6 @@
     "note": "Appts daily (0800-1000)/(1300-1500)"
   },
   {
-    "name": "Peterson AFB",
-    "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "location": {
-      "street_address": "135 Dover St",
-      "extended_address": "Bldg 350",
-      "locality": "Peterson AFB",
-      "region": "Colorado",
-      "region_code": "CO",
-      "postal_code": "80914",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 38.82066,
-      "longitude": -104.705125
-    },
-    "email_addresses": [
-      {
-        "email_address": "JPPSO-NC.pppo-peterson@us.af.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "(719) 556-4196",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "834-4196",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ],
-    "hours": "Monday - Friday  0800 - 1600\nClosed all holidays ACC Family Days.",
-    "services": [
-      "Walk-In Help",
-      "Briefings",
-      "Computer Lab"
-    ],
-    "note": "Appts daily (0800-1000)/(1300-1500)"
-  },
-  {
     "name": "Travis AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
     "location": {
