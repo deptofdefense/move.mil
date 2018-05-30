@@ -1145,47 +1145,6 @@
     ]
   },
   {
-    "name": "Davis Monthan AFB",
-    "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "location": {
-      "street_address": "3515 S Fifth St",
-      "extended_address": null,
-      "locality": "Davis-Monthan AFB",
-      "region": "Arizona",
-      "region_code": "AZ",
-      "postal_code": "85707",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 32.18136,
-      "longitude": -110.880004
-    },
-    "email_addresses": [
-      {
-        "email_address": "tmo.hhgs@us.af.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": " (520) 228-4818                                 \"",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "228-4818",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ],
-    "hours": "Customer Hours: 9:00a-3:00p Mon-Fri",
-    "services": [
-      "Walk-In Help",
-      "Briefings",
-      "Appointments",
-      "QA Inspections"
-    ]
-  },
-  {
     "name": "Fairchild AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
     "location": {
