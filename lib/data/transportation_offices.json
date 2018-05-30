@@ -2170,13 +2170,14 @@
         "dsn": true
       }
     ],
-    "hours": "M-F 0730-1500",
+    "hours": "Monday - Friday 0730-1500",
     "services": [
       "Walk-In Help",
       "Briefings",
+      "Appointments",
       "QA Inspections"
     ],
-    "note": "M, T, TH, 0900 & 1300,\nF, 0900,"
+    "note": "M, T, TH  0900 & 1300,\nF, W 0900 Walk in"
   },
   {
     "name": "Kirkland AFB",
@@ -4287,48 +4288,6 @@
       "Weight Scales (Appointment only)"
     ],
     "note": "Weight scales by appointment Monday - Friday 1000 and 1500, except Thursday’s only 1000 appointments call (252) 466-2345"
-  },
-  {
-    "name": "Ellsworth AFB",
-    "shipping_office_name": "JPPSO-NC / JPPSO-COS",
-    "location": {
-      "street_address": "1924 Lemay Blvd",
-      "extended_address": null,
-      "locality": "Ellsworth AFB",
-      "region": "South Dakota",
-      "region_code": "SD",
-      "postal_code": "57706",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 44.148476,
-      "longitude": -103.092295
-    },
-    "email_addresses": [
-      {
-        "email_address": "28LRS.TMOPersonalPro@us.af.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "(605) 385-6597",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "675-6597",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ],
-    "hours": "Monday - Friday 0730-1500",
-    "services": [
-      "Walk-In Help",
-      "Briefings",
-      "Appointments",
-      "QA Inspections"
-    ],
-    "note": "M, T, TH  0900 & 1300,\nF, W 0900 Walk in"
   },
   {
     "name": "F.E. Warren AFB",
