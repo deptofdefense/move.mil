@@ -966,7 +966,7 @@
     ],
     "phone_numbers": [
       {
-        "phone_number": " (843) 794-7577  /  (843) 794-7575",
+        "phone_number": "(843) 794-7577 / (843) 794-7575",
         "phone_type": "voice",
         "dsn": false
       },
@@ -1771,47 +1771,6 @@
       "Appointments",
       "QA Inspections"
     ]
-  },
-  {
-    "name": "Joint Base Charleston (Naval Weapon Station)",
-    "shipping_office_name": "JPPSO-NE (DET 2)",
-    "location": {
-      "street_address": "1000 Quality Cir",
-      "extended_address": "Bldg 36",
-      "locality": "Goose Creek",
-      "region": "South Carolina",
-      "region_code": "SC",
-      "postal_code": "29445",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 32.953477,
-      "longitude": -79.9378
-    },
-    "email_addresses": [
-      {
-        "email_address": "437aps.trot.nwspersonalpropert@us.af.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "TMO: COMM (843) 794-7577\nTMO: COMM (843) 794-7575",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "794-7577 / 794-7575",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ],
-    "hours": "0730-1630 Mon-Fri",
-    "services": [
-      "Walk-In Help",
-      "Briefings",
-      "Appointments"
-    ],
-    "note": "Naval Power Training Unit Wed @1130\nNaval Nuclear Power Training Command (varies depending on graduation)"
   },
   {
     "name": "Scott AFB",
@@ -3383,48 +3342,6 @@
       "Appointments",
       "QA Inspections"
     ]
-  },
-  {
-    "name": "Charleston Naval Weapon Station",
-    "shipping_office_name": "JPPSO-NE (DET 2)",
-    "location": {
-      "street_address": "1000 Quality Cir",
-      "extended_address": "Bldg 36",
-      "locality": "Goose Creek",
-      "region": "South Carolina",
-      "region_code": "SC",
-      "postal_code": "29445",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 32.953477,
-      "longitude": -79.9378
-    },
-    "email_addresses": [
-      {
-        "email_address": "437aps.trot.nwspersonalpropert@us.af.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "(843) 794-7577  / (843) 794-7575",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "794-7577 / 794-7575",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ],
-    "hours": "Monday - Friday 0730-1630",
-    "services": [
-      "Call Center",
-      "Briefings",
-      "Appointments",
-      "QA Inspections"
-    ],
-    "note": "PCS preparation briefing at Airman Family & Readiness Center on Tuesdays @ 1400"
   },
   {
     "name": "Ft. Eustis",
