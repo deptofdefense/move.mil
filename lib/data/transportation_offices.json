@@ -2349,47 +2349,6 @@
     ]
   },
   {
-    "name": "NSA Mid-South Personal Property Office",
-    "shipping_office_name": "Joint Personal Property Shipping Office South East (JPPSO-SE), Jacksonville, FL",
-    "location": {
-      "street_address": "766 Intrepid St",
-      "extended_address": "Community Services Bldg. 456, 1st Floor Left Wing",
-      "locality": "nMillington",
-      "region": "Tennessee",
-      "region_code": "TN",
-      "postal_code": "38054",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 35.335582,
-      "longitude": -89.869946
-    },
-    "email_addresses": [
-      {
-        "email_address": "hhg_millington@navy.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "901-874-7771 or  7775",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "882-7771 or  7775",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ],
-    "hours": "M - T - TH - F 0730 - 1530 / Wed - 0900 - 1530, closed Sat/Sun",
-    "services": [
-      "Walk-In Help",
-      "Computer Lab",
-      "QA Inspections"
-    ],
-    "note": "This office services Western TN. Fort Campbell for Northern Middle TN, Redstone Arsenal for Southern Middle TN, Fort Stewart for Eastern TN."
-  },
-  {
     "name": "NCBC GULFPORT",
     "shipping_office_name": "Joint Personal Property Shipping Office South Central, San Antonio TX - JPPSO-SC (DET 3)",
     "location": {
@@ -3426,7 +3385,7 @@
     "note": "PPM Briefing appointment only\nGroup Counseling:  TAP Classes when requested by Government\nQuality of Life meetings - Every 2nd or 3rd Monday\nKIOSK - None available\nOne Person managing office"
   },
   {
-    "name": "NSA MidSouth Personal Property Office",
+    "name": "NSA Mid-South Personal Property Office",
     "shipping_office_name": "Joint Personal Property Shipping Office South East (JPPSO-SE), Jacksonville, FL",
     "location": {
       "street_address": "766 Intrepid St",
