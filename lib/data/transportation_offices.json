@@ -1397,7 +1397,7 @@
     "note": "Group briefs are held once a week and once every quarter for retirees 1100-1530"
   },
   {
-    "name": "Personal Property Processing Office McChord Field, WA",
+    "name": "Traffic Management Office - McChord",
     "shipping_office_name": "Joint Personal Property Shipping Office Northwest",
     "location": {
       "street_address": "100 Col Joe Jackson Blvd",
@@ -1429,12 +1429,7 @@
         "dsn": true
       }
     ],
-    "urls": [
-      {
-        "url": "http://www.pcsing.com/base/fort-lewis/info/base-dmo-tmo#"
-      }
-    ],
-    "hours": "Mon & Wed (0900-1500) Tue & Thur (1000-1500) Fri (1000-1300) Sat/Sun closed",
+    "hours": "Monday - Friday 0730-1530",
     "services": [
       "Walk-In Help",
       "Briefings",
@@ -1446,7 +1441,7 @@
     "note": "Ret/Sep Briefing occurs M @ 0900; PPM Briefing occurs MW @ 1000; OCONUS Briefing occurs T @ 1000; CONUS W @ 0900; Walk-Ins M-F @ 11"
   },
   {
-    "name": "Personal Property Processing Office Lewis-Main",
+    "name": "Personal Property Processing Office Lewis",
     "shipping_office_name": "Joint Personal Property Shipping Office Northwest",
     "location": {
       "street_address": "2150 Liggett Ave",
@@ -1473,13 +1468,14 @@
         "dsn": false
       },
       {
-        "phone_number": "312-5446",
+        "phone_number": "357-5446",
         "phone_type": "voice",
         "dsn": true
       }
     ],
     "hours": "Mon-Fri 0730-1500; Sat/Sun/Federal Holidays Closed",
     "services": [
+      "Appointments",
       "Walk-In Help",
       "Briefings",
       "Computer Lab"
@@ -5802,48 +5798,6 @@
       "QA Inspections"
     ],
     "note": "2nd Mon of Each Month/1030..Installation Newcomer's Brief/ Semi-Annual Mass Spouse Briefings"
-  },
-  {
-    "name": "McChord AFB",
-    "shipping_office_name": "Joint Personal Property Shipping Office South Central, San Antonio TX - JPPSO-SC (DET 3)",
-    "location": {
-      "street_address": "100 Colonel Joe Jackson Blvd",
-      "extended_address": null,
-      "locality": "Joint Base Lewis-McChord",
-      "region": "Washington",
-      "region_code": "WA",
-      "postal_code": "98438",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 47.133562,
-      "longitude": -122.485584
-    },
-    "email_addresses": [
-      {
-        "email_address": "627LRS.TMO@us.af.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "(253) 982-2585",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "312-2585",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ],
-    "hours": "Monday - Friday 0730-1530",
-    "services": [
-      "Walk-In Help",
-      "Briefings",
-      "Appointments",
-      "QA Inspections"
-    ],
-    "note": "Monday:   0900--Retirement/Separation 1000--PPM Only Retirement/Separation\nTuesday:  1000--Oconus (HHG/UB/NTS)\nWednesday:  0900--PCS/Conus (HHG/NTS/PPM)"
   },
   {
     "name": "JBER Travel Center-Elmendorf",
