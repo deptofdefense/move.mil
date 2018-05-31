@@ -6460,10 +6460,6 @@
       "longitude": -76.138442
     },
     "email_addresses": [
-      {
-        "email_address": "none available",
-        "note": "Customer Service"
-      }
     ],
     "phone_numbers": [
       {
@@ -6484,47 +6480,6 @@
       "QA Inspections"
     ],
     "note": "Counseling briefings occurs on Tues @ 1400 and Thurs @1300"
-  },
-  {
-    "name": "PPPO COUNSELING OFFICE ABERDEEN PROVING GROUND",
-    "shipping_office_name": "JPPSO-MA: Customer Service Management Division",
-    "location": {
-      "street_address": "4305 Susquehanna Ave",
-      "extended_address": null,
-      "locality": "Aberdeen Proving Ground",
-      "region": "Maryland",
-      "region_code": "MD",
-      "postal_code": "21005",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 39.482125,
-      "longitude": -76.138442
-    },
-    "email_addresses": [
-      {
-        "email_address": "none availalbe",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "410-306-2056 or 2057",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "458-2056 or 2057",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ],
-    "hours": "Monday- Friday 0730-1500 Closed weekends and Fed Holidays",
-    "services": [
-      "Walk-In Help",
-      "Briefings",
-      "QA Inspections"
-    ],
-    "note": "Counseling Briefings occur every Tues @1400 and Thurs @1300"
   },
   {
     "name": "JBAB PPPO",
