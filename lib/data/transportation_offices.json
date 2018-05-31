@@ -535,8 +535,8 @@
       "postal_code": "66027",
       "country_name": "United States",
       "country_code": "US",
-      "latitude": 39.35276,
-      "longitude": -94.922007
+      "latitude": 39.353094,
+      "longitude": 94.921186
     },
     "email_addresses": [
       {
@@ -546,7 +546,7 @@
     ],
     "phone_numbers": [
       {
-        "phone_number": "(913)684-5656, 5651,5655,5643",
+        "phone_number": "(913)684-5656,5651,5655,5643",
         "phone_type": "voice",
         "dsn": false
       },
@@ -556,13 +556,16 @@
         "dsn": true
       }
     ],
-    "hours": "Mon-Tues-Thurs-Fri (0730 -1600) Wed (1230-1600)",
+    "hours": "Mon-Tues-Thurs-Fri (0730-1600) Wed (1230-1600)",
     "services": [
       "Walk-In Help",
+      "Call Center",
+      "Briefings",
       "Computer Lab",
       "Appointments",
       "QA Inspections"
-    ]
+    ],
+    "note": "Group counseling of 10 or more personnel upon request. Individual counseling appointments for blue bark, VIPs during open hours."
   },
   {
     "name": "Fort Leonard Wood, Personal Property Processing Office",
@@ -1268,51 +1271,6 @@
       "QA Inspections"
     ],
     "note": "Mass briefings conducted every 1st & 3rd Wednesday at 1530 during MPF OP brief"
-  },
-  {
-    "name": "Personal Property Processing Office Fort Leavenworth",
-    "shipping_office_name": "Joint Personal Property Shipping Office Northwest",
-    "location": {
-      "street_address": "450 Pope Ave",
-      "extended_address": null,
-      "locality": "Fort Leavenworth",
-      "region": "Kansas",
-      "region_code": "KS",
-      "postal_code": "66027",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 39.352917,
-      "longitude": -94.924572
-    },
-    "email_addresses": [
-      {
-        "email_address": "usarmy.leavenworth.imcom-central.mbx.ppso@mail.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "(913)684-5656",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "552-5656",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ],
-    "hours": "Mon, Tue, Thur, Fri 0730-1600 / Wed 1230-1600 Sat/Sun/Federal Holidays closed  (Walk-Ins are welcomed during open hours)",
-    "services": [
-      "Walk-In Help",
-      "Call Center",
-      "Briefings",
-      "Computer Lab",
-      "Appointments",
-      "QA Inspections",
-      "See below"
-    ],
-    "note": "Group counseling of 10 or more personnel upon request. Individual counseling appointments for blue bark, VIPs during open hours."
   },
   {
     "name": "McConnell AFB",
