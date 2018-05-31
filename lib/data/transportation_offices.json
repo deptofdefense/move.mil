@@ -2054,16 +2054,16 @@
     "name": "Cannon AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
     "location": {
-      "street_address": "125 E. Cochran Ave",
-      "extended_address": null,
+      "street_address": "110 E. Alison Ave.",
+      "extended_address": "Bldg 600, Room 1153",
       "locality": "Cannon AFB",
       "region": "New Mexico",
       "region_code": "NM",
       "postal_code": "88103",
       "country_name": "United States",
       "country_code": "US",
-      "latitude": 34.392738,
-      "longitude": -103.323707
+      "latitude": 34.391197,
+      "longitude": -103.325245
     },
     "email_addresses": [
       {
@@ -2083,7 +2083,7 @@
         "dsn": true
       }
     ],
-    "hours": "Mon, Tue, Thur, Fri 0800-1530\nWen 0800-1300\nThur by appointment only 1530-1800",
+    "hours": "Mon, Tue, Thur, Fri 0800-1530\nWed 0800-1300\nThur by appointment only 1530-1800",
     "services": [
       "Walk-In Help",
       "Briefings",
