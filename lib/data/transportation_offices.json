@@ -2870,12 +2870,12 @@
         "dsn": false
       },
       {
-        "phone_number": "949 3881",
+        "phone_number": "949-3881",
         "phone_type": "voice",
         "dsn": true
       }
     ],
-    "hours": "M,T,TH 0700-1530 W 0900-1530 F 0730-1200",
+    "hours": "M, T, THUR 0700-1530 - WED 0900-1530 - FRI 0730 - 1200",
     "services": [
       "Walk-In Help",
       "Call Center",
@@ -2883,7 +2883,7 @@
       "Appointments",
       "QA Inspections"
     ],
-    "note": "WALK IN BASIS"
+    "note": "WALK-IN BASIS"
   },
   {
     "name": "Fort McCoy PPPO",
@@ -3370,7 +3370,7 @@
     ],
     "phone_numbers": [
       {
-        "phone_number": "(757) 764-4171 (757) 764-7503",
+        "phone_number": "(757) 764-4171 / (757) 764-7503",
         "phone_type": "voice",
         "dsn": false
       },
