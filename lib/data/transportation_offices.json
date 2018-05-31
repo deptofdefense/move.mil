@@ -1107,7 +1107,7 @@
       "Computer Lab",
       "QA Inspections"
     ],
-    "notes": "Customers are seen within 15 minutes of walk in"
+    "note": "Customers are seen within 15 minutes of walk in"
   },
   {
     "name": "Fairchild AFB",
