@@ -3091,48 +3091,8 @@
     "name": "Personal Property Office",
     "shipping_office_name": "JPPSO SW",
     "location": {
-      "street_address": "730 Enterprise Ave",
-      "extended_address": "Wing 2, Room 5",
-      "locality": "NAS Lemoore",
-      "region": "California",
-      "region_code": "CA",
-      "postal_code": "93246",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 36.260194,
-      "longitude": -119.905519
-    },
-    "email_addresses": [
-
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "559-998-3876",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "949-3876",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ],
-    "hours": "M, T, THUR 0700-1530 - WED 0900-1530 - FRI 0730 - NOON",
-    "services": [
-      "Walk-In Help",
-      "Call Center",
-      "Computer Lab",
-      "Appointments",
-      "QA Inspections"
-    ],
-    "note": "WALK-IN BASIS"
-  },
-  {
-    "name": "PERSONAL PROPERTY OFFICE",
-    "shipping_office_name": "JPPSO SW",
-    "location": {
-      "street_address": "730 Enterprise Ave",
-      "extended_address": "Wing 2 Rm 5",
+      "street_address": "730 Enterprise Blvd",
+      "extended_address": "Training Bldg, Wing 2, Room 5",
       "locality": "NAS Lemoore",
       "region": "California",
       "region_code": "CA",
