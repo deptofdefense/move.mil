@@ -1118,8 +1118,8 @@
       "postal_code": "30905",
       "country_name": "United States",
       "country_code": "US",
-      "latitude": 33.425376,
-      "longitude": -82.145028
+      "latitude": 33.4242151,
+      "longitude": -82.1382597
     },
     "email_addresses": [
       {
@@ -1143,9 +1143,9 @@
     "services": [
       "Walk-In Help",
       "Computer Lab",
-      "QA Inspections",
-      "Customers are seen within 15 minutes of walk in"
-    ]
+      "QA Inspections"
+    ],
+    "notes": "Customers are seen within 15 minutes of walk in"
   },
   {
     "name": "Fairchild AFB",
@@ -1439,47 +1439,6 @@
       "Computer Lab"
     ],
     "note": "Retiree brief as scheduled Thursday @ 1420 (Waller Hall Building)"
-  },
-  {
-    "name": "Fort Gordon Transportation Office",
-    "shipping_office_name": null,
-    "location": {
-      "street_address": "307 Chamberlain Ave",
-      "extended_address": "Building 33720, Room 111A",
-      "locality": "Fort Gordon",
-      "region": "Georgia",
-      "region_code": "GA",
-      "postal_code": "30905",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 33.425376,
-      "longitude": -82.145028
-    },
-    "email_addresses": [
-      {
-        "email_address": "usarmy.gordon.imcom.mbx.akima-transportation@mail.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "706-791-4184",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "780-4184",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ],
-    "hours": "Monday-Friday 0730-1600; Closed for lunch 1230-1300",
-    "services": [
-      "Walk-In Help",
-      "Computer Lab",
-      "QA Inspections",
-      "Customers are seen within 15 minutes of walk in time."
-    ]
   },
   {
     "name": "Personal Property Processing Office Fort Wainwright, AK",
