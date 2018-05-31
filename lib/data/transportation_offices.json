@@ -3096,7 +3096,7 @@
     "services": [
       "Walk-In Help",
       "Call Center",
-      "Briefings"
+      "Briefings",
       "Computer Lab",
       "Appointments"
     ]
@@ -4103,12 +4103,12 @@
     "name": "Malmstrom AFB",
     "shipping_office_name": "JPPSO-NC / JPPSO-COS",
     "location": {
-      "street_address": "7383 N Litchfield Rd",
-      "extended_address": "Rm 1122",
-      "locality": "Luke AFB",
-      "region": "Arizona",
-      "region_code": "AZ",
-      "postal_code": "85309",
+      "street_address": "5 80th St N.",
+      "extended_address": "Bldg 400, Rm 217",
+      "locality": "Malmstrom AFB",
+      "region": "Montana",
+      "region_code": "MT",
+      "postal_code": "59402",
       "country_name": "United States",
       "country_code": "US",
       "latitude": 47.519099,
@@ -4116,7 +4116,7 @@
     },
     "email_addresses": [
       {
-        "email_address": "341lrs.lgrt@us.af.mil",
+        "email_address": "deandrea.singleton@us.af.mil",
         "note": "Customer Service"
       }
     ],
