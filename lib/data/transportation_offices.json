@@ -1115,7 +1115,7 @@
     "location": {
       "street_address": "400 South Gate 35",
       "extended_address": "Bldg 2045, Rm 133",
-      "locality": "nFairchild AFB",
+      "locality": "Fairchild AFB",
       "region": "Washington",
       "region_code": "WA",
       "postal_code": "99011",
@@ -5878,7 +5878,7 @@
     "location": {
       "street_address": "10020 Kabrich Cir",
       "extended_address": "Bldg. 11-080",
-      "locality": "nPine Bluff",
+      "locality": "Pine Bluff",
       "region": "Arkansas",
       "region_code": "AR",
       "postal_code": "71602",
