@@ -571,7 +571,7 @@
     "name": "Fort Leonard Wood, Personal Property Processing Office",
     "shipping_office_name": "Joint Personal Property Shipping Office Northwest",
     "location": {
-      "street_address": "13486 Replacement Ave",
+      "street_address": "140 Replacement Ave",
       "extended_address": "Building 470, Suite 1222",
       "locality": "Fort Leonard Wood",
       "region": "Missouri",
@@ -1312,47 +1312,6 @@
       "Appointments",
       "QA Inspections"
     ]
-  },
-  {
-    "name": "Personal Property Processing Office Fort Leonard Wood",
-    "shipping_office_name": "Joint Personal Property Shipping Office Northwest",
-    "location": {
-      "street_address": "140 Replacement Ave",
-      "extended_address": "STE 1222",
-      "locality": "Fort Leonard Wood",
-      "region": "Missouri",
-      "region_code": "MO",
-      "postal_code": "65473",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 37.761398,
-      "longitude": -92.11958
-    },
-    "email_addresses": [
-      {
-        "email_address": "USARMY.LEONARDWOOD.USAG.MBX.DOLHHG@MAIL.MIL",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "(573)596-0617",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "581-0617",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ],
-    "hours": "Mon-Fri 1100-1530 (includes walk-in customers)",
-    "services": [
-      "Briefings",
-      "Computer Lab",
-      "QA Inspections"
-    ],
-    "note": "Group briefs are held once a week and once every quarter for retirees 1100-1530"
   },
   {
     "name": "Traffic Management Office - McChord",
