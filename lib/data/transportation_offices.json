@@ -4339,7 +4339,7 @@
         "dsn": true
       }
     ],
-    "hours": "Monday - Friday  0800 - 1600\nClosed all holidays ACC Family Days.",
+    "hours": "Monday - Friday 0800 - 1500\nClosed all holidays ACC Family Days.",
     "services": [
       "Walk-In Help",
       "Computer Lab",
@@ -5169,12 +5169,12 @@
         "dsn": false
       },
       {
-        "phone_number": "487-1848 / 487-1848",
+        "phone_number": "487-1848 / 487-1849",
         "phone_type": "voice",
         "dsn": true
       }
     ],
-    "hours": "Mon-Tues-Thurs-Fri 0730-1530\nClosed Wed 1400 for AETC mandatory training and Weekends, Holidays, & AETC Family Days",
+    "hours": "Mon-Fri 0800-1530",
     "services": [
       "Walk-In Help",
       "Briefings",
@@ -5232,8 +5232,8 @@
     "name": "Sheppard AFB",
     "shipping_office_name": "Joint Personal Property Shipping Office South Central, San Antonio TX - JPPSO-SC (DET 3)",
     "location": {
-      "street_address": "426 5th Ave",
-      "extended_address": "Ste 10",
+      "street_address": "426 5th Ave, Ste 10",
+      "extended_address": "Bldg 402, Rm 110",
       "locality": "Sheppard Air Force Base",
       "region": "Texas",
       "region_code": "TX",
@@ -5261,7 +5261,7 @@
         "dsn": true
       }
     ],
-    "hours": "Mon thru Wed Fri 0800-1630\nThurs 1000-1630",
+    "hours": "Mon thru Wed Fri 0800-1600\nThurs 1000-1600",
     "services": [
       "Walk-In Help",
       "Briefings",
