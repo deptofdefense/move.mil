@@ -2691,8 +2691,8 @@
       "postal_code": "93555",
       "country_name": "United States",
       "country_code": "US",
-      "latitude": 35.689,
-      "longitude": -117.6833
+      "latitude": 35.655345,
+      "longitude": -117.657222
     },
     "email_addresses": [
       {
@@ -2702,12 +2702,12 @@
     ],
     "phone_numbers": [
       {
-        "phone_number": "7609393875",
+        "phone_number": "(760) 939-3875",
         "phone_type": "voice",
         "dsn": false
       },
       {
-        "phone_number": "4373875",
+        "phone_number": "437-3875",
         "phone_type": "voice",
         "dsn": true
       }
@@ -2716,7 +2716,8 @@
     "services": [
       "Walk-In Help",
       "Appointments"
-    ]
+    ],
+    "note": "PPM Briefing appointment only\nGroup Counseling:  TAP Classes when requested by Government\nQuality of Life meetings - Every 2nd or 3rd Monday\nKIOSK - None available\nOne Person managing office"
   },
   {
     "name": "PPSO Ft. Huachuca",
@@ -3182,46 +3183,6 @@
       "Computer Lab",
       "QA Inspections"
     ]
-  },
-  {
-    "name": "PPSO NAVSUP FLC CHINA LAKE",
-    "shipping_office_name": "JPPSO SW",
-    "location": {
-      "street_address": "1 Administration Cir",
-      "extended_address": "Bldg 1023",
-      "locality": "China Lake",
-      "region": "California",
-      "region_code": "CA",
-      "postal_code": "93555",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 35.6508,
-      "longitude": -117.6617
-    },
-    "email_addresses": [
-      {
-        "email_address": "jppso_sw_counseling@navy.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "7609393875",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "4373875",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ],
-    "hours": "Non Compressed Working Hours: Monday-Friday 0730-1400 hrs\nCompressed Working Hours: Monday-Thursday 0730-1400 hrs\nClosed Lunch: 1130-1230 hrs\nSat/Sun Closed\nHolidays Closed",
-    "services": [
-      "Walk-In Help",
-      "Appointments"
-    ],
-    "note": "PPM Briefing appointment only\nGroup Counseling:  TAP Classes when requested by Government\nQuality of Life meetings - Every 2nd or 3rd Monday\nKIOSK - None available\nOne Person managing office"
   },
   {
     "name": "NSA Mid-South Personal Property Office",
