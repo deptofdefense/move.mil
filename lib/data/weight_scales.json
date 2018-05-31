@@ -524,28 +524,6 @@
     "hours": "Monday - Friday 0700 - 1630, Saturday 0700 - 1230"
   },
   {
-    "name": "Loves Travel Center",
-    "location": {
-      "street_address": "11332 Cedar Lake Rd",
-      "extended_address": null,
-      "locality": "Biloxi",
-      "region": "Mississippi",
-      "region_code": "MS",
-      "postal_code": "39532",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 30.4521115,
-      "longitude": -88.9332891
-    },
-    "phone_numbers": [
-      {
-        "phone_number": "228-396-5646",
-        "phone_type": "voice",
-        "dsn": false
-      }
-    ]
-  },
-  {
     "name": "Riverside Recycling",
     "location": {
       "street_address": "11266 Hwy 23",
@@ -650,52 +628,6 @@
       }
     ],
     "hours": "Monday - Saturday 0700 - 1600"
-  },
-  {
-    "name": "Armstrong Moving & Storage",
-    "location": {
-      "street_address": "Lockheed Dr",
-      "extended_address": "Ste 130",
-      "locality": "El Paso",
-      "region": "Texas",
-      "region_code": "TX",
-      "postal_code": "79925",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 31.792789,
-      "longitude": -106.379407
-    },
-    "phone_numbers": [
-      {
-        "phone_number": "915-779-3918",
-        "phone_type": "voice",
-        "dsn": false
-      }
-    ]
-  },
-  {
-    "name": "Hanson Aggregates Mid-Pacific, Inc.",
-    "location": {
-      "street_address": "4501 Tidewater Ave",
-      "extended_address": null,
-      "locality": "Oakland",
-      "region": "California",
-      "region_code": "CA",
-      "postal_code": "94601",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 37.7639469,
-      "longitude": -122.2230642
-    },
-    "phone_numbers": [
-      {
-        "phone_number": "510-261-8544",
-        "phone_type": "voice",
-        "dsn": false
-      }
-    ],
-    "hours": "Monday - Friday 0630 - 1400",
-    "note": "Cost: $25.00 per ticket"
   },
   {
     "name": "Jerico Products Inc.",
@@ -1140,28 +1072,6 @@
     "phone_numbers": [
       {
         "phone_number": "804-448-1222",
-        "phone_type": "voice",
-        "dsn": false
-      }
-    ]
-  },
-  {
-    "name": "New Transit Truckstop",
-    "location": {
-      "street_address": "I-97 Exit 10 N, Exit 10A S",
-      "extended_address": null,
-      "locality": "Millersville",
-      "region": "Maryland",
-      "region_code": "MD",
-      "postal_code": "21108",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 39.10224880000001,
-      "longitude": -76.6279476
-    },
-    "phone_numbers": [
-      {
-        "phone_number": "410-729-3346",
         "phone_type": "voice",
         "dsn": false
       }
@@ -1812,30 +1722,6 @@
     "hours": "Monday - Friday 0800 - 1700"
   },
   {
-    "name": "Diamond Shamrock",
-    "location": {
-      "street_address": "1310 Baptist Rd",
-      "extended_address": null,
-      "locality": "Colorado Springs",
-      "region": "Colorado",
-      "region_code": "CO",
-      "postal_code": "80921",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 39.057313,
-      "longitude": -104.8532501
-    },
-    "phone_numbers": [
-      {
-        "phone_number": "719-481-3628",
-        "phone_type": "voice",
-        "dsn": false
-      }
-    ],
-    "hours": "Open 24 Hours",
-    "note": "Cost: $10.00 per ticket"
-  },
-  {
     "name": "Valley Pacific Petroleum Services",
     "location": {
       "street_address": "1155 E. Betteravia Rd",
@@ -2035,7 +1921,7 @@
     "name": "Love's Travel Stop",
     "location": {
       "street_address": "11332 Cedar Lake Rd",
-      "extended_address": "(1-10 Exit 44)",
+      "extended_address": "(I-10 Exit 44)",
       "locality": "Biloxi",
       "region": "Mississippi",
       "region_code": "MS",
