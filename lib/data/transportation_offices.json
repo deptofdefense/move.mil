@@ -2218,42 +2218,6 @@
     "note": "Plan My Move Briefing w/ A&FRC - Once a month"
   },
   {
-    "name": "PPSO Puget Sound Household Goods",
-    "shipping_office_name": null,
-    "location": {
-      "street_address": "2720 Ohio St",
-      "extended_address": "Bangor Plaza Housing Office",
-      "locality": "Silverdale",
-      "region": "Washington",
-      "region_code": "WA",
-      "postal_code": "98315",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 47.689794,
-      "longitude": -122.70968
-    },
-    "email_addresses": [
-      {
-        "email_address": "hhg_ps_counseling@navy.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "360-396-4366",
-        "phone_type": "voice",
-        "dsn": false
-      }
-    ],
-    "hours": "Monday, Tuesday, Thursdays, Friday: 0730-1600; Wednesday 0900-1600",
-    "services": [
-      "Walk-In Help",
-      "Call Center",
-      "Computer Lab",
-      "Appointments"
-    ]
-  },
-  {
     "name": "PPSO Key West",
     "shipping_office_name": "Joint Personal Property Shipping Office South East (JPPSO-SE), Jacksonville, FL",
     "location": {
@@ -3436,7 +3400,7 @@
     },
     "email_addresses": [
       {
-        "email_address": "HHG_PS_COUNSELING@NAVY.MIL",
+        "email_address": "hhg_ps_counseling@navy.mil",
         "note": "Customer Service"
       }
     ],
@@ -3452,11 +3416,13 @@
         "dsn": true
       }
     ],
-    "hours": "0730-1600; Mon/Tues/Thursday/Friday and 0900-1600; Wednesday",
+    "hours": "Monday, Tuesday, Thursdays, Friday: 0730-1600; Wednesday 0900-1600",
     "services": [
       "Walk-In Help",
       "Call Center",
       "Briefings"
+      "Computer Lab",
+      "Appointments"
     ]
   },
   {
