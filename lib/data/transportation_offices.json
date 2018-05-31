@@ -7186,39 +7186,6 @@
     ]
   },
   {
-    "name": "Yokosuka Naval Base, Japan, Personal Property Shipping Office (PPSO)",
-    "shipping_office_name": null,
-    "location": {
-      "street_address": null,
-      "extended_address": null,
-      "locality": null,
-      "region_code": null,
-      "postal_code": null,
-      "country_name": "Japan",
-      "country_code": "JP",
-      "latitude": 35.292227,
-      "longitude": 139.672829
-    },
-    "email_addresses": [
-      {
-        "email_address": "M-YO-FISC-Personal-Property-Yokosuka@fe.navy.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "011-81-46-816-6311",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "315-243-6311",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ]
-  },
-  {
     "name": "COMPLEACT Yokosuka, Japan, Personal Property Processing Office (PPPO)",
     "shipping_office_name": null,
     "location": {
