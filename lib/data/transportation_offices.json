@@ -221,12 +221,12 @@
     ],
     "phone_numbers": [
       {
-        "phone_number": "717-245-4000",
+        "phone_number": "717-245-4968",
         "phone_type": "voice",
         "dsn": false
       },
       {
-        "phone_number": "242-4000",
+        "phone_number": "242-4968",
         "phone_type": "voice",
         "dsn": true
       }
@@ -1724,46 +1724,6 @@
       "QA Inspections"
     ],
     "note": "By Appointment Only: PPM Initial @ 1400 on Tues & Thurs, PPM Turn-In @ 0900 on Mon & Wed, CONUS Brief @ 1300 on Wed, OCONUS Brief @ 0900 on Thurs.  Retirement/Separation HHG Briefing @ 1300 on Mon.  Individual Appointments can be scheduled, as necessary."
-  },
-  {
-    "name": "CPPSO - Carlilse Barracks, PA",
-    "shipping_office_name": null,
-    "location": {
-      "street_address": "46 Ashburn Dr",
-      "extended_address": "2nd Floor",
-      "locality": "Carlisle",
-      "region": "Pennsylvania",
-      "region_code": "PA",
-      "postal_code": "17013",
-      "country_name": "United States",
-      "country_code": "US",
-      "latitude": 40.12,
-      "longitude": -77.1
-    },
-    "email_addresses": [
-      {
-        "email_address": "usarmy.carlisle.imcom-atlantic.mbx.imne-clb-pwt@mail.mil",
-        "note": "Customer Service"
-      }
-    ],
-    "phone_numbers": [
-      {
-        "phone_number": "717-245-4968",
-        "phone_type": "voice",
-        "dsn": false
-      },
-      {
-        "phone_number": "242-4968",
-        "phone_type": "voice",
-        "dsn": true
-      }
-    ],
-    "hours": "Monday - Friday 0730-1600; Sat/Sun/Holidays Closed",
-    "services": [
-      "Walk-In Help",
-      "Appointments",
-      "QA Inspections"
-    ]
   },
   {
     "name": "PPO Seal Beach NWS, CA",
