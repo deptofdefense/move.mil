@@ -11,12 +11,12 @@ module Seeds
     end
 
     def seed!
-      ServiceArea.import [:service_area, :name, :services_schedule, :linehaul_factor, :orig_dest_service_charge, :effective], rates.schedules
-      FullPack.import [:schedule, :weight_lbs, :rate, :effective], rates.full_packs
-      FullUnpack.import [:schedule, :rate, :effective], rates.full_unpacks
-      Shorthaul.import [:cwt_mi, :rate, :effective], rates.shorthauls
-      ConusLinehaul.import [:dist_mi, :weight_lbs, :rate, :effective], rates.conus_linehauls, batch_size: 500
-      IntraAlaskaLinehaul.import [:dist_mi, :weight_lbs, :rate, :effective], rates.intra_ak_linehauls, batch_size: 500
+      ServiceArea.bulk_import [:service_area, :name, :services_schedule, :linehaul_factor, :orig_dest_service_charge, :effective], rates.schedules
+      FullPack.bulk_import [:schedule, :weight_lbs, :rate, :effective], rates.full_packs
+      FullUnpack.bulk_import [:schedule, :rate, :effective], rates.full_unpacks
+      Shorthaul.bulk_import [:cwt_mi, :rate, :effective], rates.shorthauls
+      ConusLinehaul.bulk_import [:dist_mi, :weight_lbs, :rate, :effective], rates.conus_linehauls, batch_size: 500
+      IntraAlaskaLinehaul.bulk_import [:dist_mi, :weight_lbs, :rate, :effective], rates.intra_ak_linehauls, batch_size: 500
     end
 
     private

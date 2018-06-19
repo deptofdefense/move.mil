@@ -5,8 +5,8 @@ require 'csv'
 module Seeds
   class Zipcodes
     def seed!
-      State.import states[0], states.slice(1, states.length - 1)
-      Zipcode.import [:code, :city, :state_id, :lat, :lon], zipcodes
+      State.bulk_import states[0], states.slice(1, states.length - 1)
+      Zipcode.bulk_import [:code, :city, :state_id, :lat, :lon], zipcodes
     end
 
     private

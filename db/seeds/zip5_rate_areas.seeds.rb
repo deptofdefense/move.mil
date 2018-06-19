@@ -5,7 +5,7 @@ require 'csv'
 module Seeds
   class Zip5RateAreas
     def seed!
-      Zip5RateArea.import [:zip5, :rate_area], zip5_rate_areas
+      Zip5RateArea.bulk_import [:zip5, :rate_area], zip5_rate_areas
     end
 
     private

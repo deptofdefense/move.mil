@@ -5,7 +5,7 @@ require 'csv'
 module Seeds
   class Zip3s
     def seed!
-      Zip3.import [:zip3, :basepoint_city, :state, :service_area, :rate_area, :region], zip3s
+      Zip3.bulk_import [:zip3, :basepoint_city, :state, :service_area, :rate_area, :region], zip3s
     end
 
     private
