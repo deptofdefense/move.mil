@@ -8,7 +8,7 @@ end
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
-gem 'activerecord-import', '~> 0.22.0', require: false
+gem 'activerecord-import', '~> 0.24.0', require: false
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 gem 'geokit-rails', '~> 2.3', '>= 2.3.1'
 gem 'google-maps', '~> 2.2'
@@ -34,13 +34,13 @@ source 'https://rails-assets.org' do
 end
 
 group :development, :test do
-  gem 'brakeman', '~> 4.3', require: false
+  gem 'brakeman', '~> 4.3', '>= 4.3.1', require: false
   gem 'byebug', '~> 10.0', '>= 10.0.2'
   gem 'dotenv-rails', '~> 2.4'
   gem 'factory_bot_rails', '~> 4.10'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
   gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
-  gem 'rubocop', '~> 0.57.0', require: false
+  gem 'rubocop', '~> 0.57.2', require: false
 end
 
 group :test do
