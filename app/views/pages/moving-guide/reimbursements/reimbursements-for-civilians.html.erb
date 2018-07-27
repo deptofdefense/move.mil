@@ -1,0 +1,187 @@
+<%- @page_title = 'Reimbursements for Civilians' -%>
+
+<%= render partial: 'shared/contextual_header', locals: {
+      page_title: @page_title, parent_pages: [
+        { name: 'Moving Guide', path: page_path('moving-guide') },
+        { name: 'Reimbursements', path: page_path('moving-guide/reimbursements') }
+      ]
+    } %>
+
+<div class="usa-section main-section">
+  <h1><%= @page_title %></h1>
+
+  <%= render layout: 'shared/sidenav' do %>
+    <li><%= link_to 'Advances', '#advances' %></li>
+    <li><%= link_to 'Personal Financial Management Programs', '#personal-financial-management-programs' %></li>
+    <li><%= link_to 'Relocation Assistance Program Managers', '#relocation-assistance-program-managers' %></li>
+    <li><%= link_to 'House Hunting Trip', '#house-hunting-trip' %></li>
+    <li><%= link_to raw("Per Diem for #{abbr_tag('pcs')} Travel"), '#per-diem-for-pcs-travel' %></li>
+    <li><%= link_to raw("Travel by Privately Owned Conveyance (#{abbr_tag('pcs')})"), '#travel-by-privately-owned-conveyance' %></li>
+    <li><%= link_to 'Foreign Transfer Allowance (FTA(SE)) & Temporary Quarters Subsistence Allowance (TQSA)', '#foreign-transfer-allowance' %></li>
+    <li><%= link_to 'Real Estate Expenses', '#real-estate-expenses' %></li>
+    <li><%= link_to 'Relocation Services', '#relocation-services' %></li>
+    <li><%= link_to 'Property Management Services', '#property-management-services' %></li>
+    <li><%= link_to 'Home Marketing Incentive Program', '#home-marketing-incentive-program' %></li>
+    <li><%= link_to raw("Temporary Change of Station (TCS)/Limited Relocation Allowances For Extended #{abbr_tag('tdy')}"), '#temporary-change-of-station' %></li>
+    <li><%= link_to 'Mobile Home Transportation', '#mobile-home-transportation' %></li>
+    <li><%= link_to 'Relocation Income Tax (RIT)', '#relocation-income-tax' %></li>
+    <li><%= link_to raw("Waive Limitation on #{abbr_tag('pcs')} Relocation Allowances"), '#waive-limitation-on-pcs-relocation-allowances' %></li>
+    <li><%= link_to raw("#{abbr_tag('pcs')} Allowances Time Limitation"), '#pcs-allowances-time-limitation' %></li>
+    <li><%= link_to 'Pets', '#pets' %></li>
+    <li><%= link_to 'Miscellaneous Expense Allowance (MEA)', '#miscellaneous-expense-allowance' %></li>
+  <% end %>
+
+  <div class="sidenav-body">
+    <p>When you travel on orders, the government may pay for many of your out of pocket expenses, either as a reimbursement after the fact, or as an advance. Reimbursable allowances will need to be listed and itemized on your voucher (DD Form 1351-2) and can be submitted by your local finance office. Furthermore, certain offices allow you to submit your voucher online, so it’s best to ask your finance office to see what works best for you.</p>
+    <p><b>Disclaimer:</b> Most dollar limits on civilian entitlements are imposed either by Federal Travel Regulation (FTR)(41 CFR 302) or Joint Travel Regulations (JTR), Volume 2. A notable exception are the Real Estate Expenses limitations. <%= abbr_tag('jtr') %> is DoD’s supplement to <%= abbr_tag('ftr') %>.</p>
+
+    <div id="advances">
+      <h2>Advances</h2>
+
+      <p>Since you have to pay for some things up front, then file a voucher <em>and</em> you anticipate that your finances will be strained during your <%= abbr_tag('pcs') %> move, you can request a monetary “Advance” to help cover your expenses.</p>
+      <p><b>How Much?</b> The amount of the advance will depend on a number of factors, such as distance between the old and new permanent duty stations weight of household goods, member's grade, whether the member is using their government travel card on their <%= abbr_tag('pcs') %>, etc. Members and dependent travelers can get up to 80% of per diem and mileage allowance f the government travel card is not being used, <%= abbr_tag('dla') %> equal to 100% of the anticipated entitlement, and <%= abbr_tag('ppm') %>/<%= abbr_tag('dity') %> moves get an amount calculated by their transportation office. When possible, use your government travel card during your <%= abbr_tag('pcs') %>. You can find out more about the Government Travel Card <%= link_to 'here', 'https://www.citibank.com/tts/sa/dod/2016/q1/index.html', class: 'usa-external_link' %>.</p>
+      <p><b>Head’s Up:</b> You have to pay back your Advance after your move. It will come out of your paychecks over the next year.</p>
+      <p>When you file your final voucher, the Advance you took out will be paid first before you receive the remaining reimbursement.</p>
+    </div>
+
+    <div id="personal-financial-management-programs">
+      <h2>Personal Financial Management Programs</h2>
+
+      <p>Most installations have a Member &amp; Family Support Center that can help develop a financial management plan for you and your family. In addition to helping plan for a <%= abbr_tag('pcs') %> move, they can help with a myriad of other topics.</p>
+    </div>
+
+    <div id="relocation-assistance-program-managers">
+      <h2>Relocation Assistance Program Managers</h2>
+
+      <p>Contact your local Relocation Specialist in the Member &amp; Family Support Center. They are experts who’ve helped thousands of members during moves, and are available to talk with you and/or your family about your particular situation.</p>
+    </div>
+
+    <div id="house-hunting-trip">
+      <h2>House Hunting Trip</h2>
+
+      <p>Transportation expenses and per diem for the employee & spouse may be authorized for up to 10 days. The Standard <%= abbr_tag('conus') %> per diem rate applies when house hunting trips are paid under the ‘Lodgings-Plus’ method.</p>
+      <p>The employee may be paid a single amount (Lump sum) to cover the cost of meals, incidentals and lodging instead of per diem using the ‘Lodgings-Plus’ method. The single amount is:</p>
+      <p>(a) when employee and spouse both travel, the applicable locality rate multiplied by 6.25, or</p>
+      <p>(b) when only one of them travels, the applicable locality rate is multiplied by 5.</p>
+    </div>
+
+    <div id="per-diem-for-pcs-travel">
+      <h2>Per Diem for <%= abbr_tag('pcs') %> Travel</h2>
+
+      <p>An eligible employee on <%= abbr_tag('pcs') %> travel is always authorized a per diem allowance during travel, some of which may be taxable.</p>
+      <p><b>Within <%= abbr_tag('conus') %>:</b> Helps pay for travel by privately owned conveyance (car, motorcycle, or airplane), or by commercial means. Rate is up to the Standard <%= abbr_tag('conus') %> rate set by the General Services Administration. For example, ($142 as of 10/1/2016). 75% of the employee's computed rate for the spouse 75% for each dependent age 12 or older 50% for each dependent under age 12.</p>
+      <p><b>Outside <%= abbr_tag('conus') %>:</b> Per diem locality rates apply with the same fractional amounts for dependents listed above. The per diem allowance consists of an amount for lodging limited to a maximum allowance and a flat rate allowance for Meals and Incidental Expenses (M&amp;IE).</p>
+      <p>Per diem is payable on each day of actual travel not to exceed the authorized travel time. Authorized travel time is found by dividing the official mileage between permanent duty stations by 350 miles per day.</p>
+      <p>The actual per diem payment is computed using the “lodgings plus” method. Under this method, the employee’s per diem is computed using the actual lodging costs incurred during the <%= abbr_tag('pcs') %> move plus the flat rate <abbr title="Meals and Incidental Expenses">M&amp;IE</abbr> allowance for each day of actual travel. The per diem payment cannot exceed the maximum allowable per diem times the number of authorized travel days.</p>
+    </div>
+
+    <div id="travel-by-privately-owned-conveyance">
+      <h2>Travel by Privately Owned Conveyance (<%= abbr_tag('pcs') %>)</h2>
+
+      <p><b><%= abbr_tag('conus') %>:</b> If approved, the employee can be reimbursed for the transportation of up to two Privately Owned Vehicle during a <%= abbr_tag('pcs') %> or when travel to a first duty station when the distance shipped is 600 or more miles and advantageous and cost effective to the Gov’t.</p>
+      <p><b><%= abbr_tag('oconus') %>:</b> Transportation may be authorized for one Privately Owned Vehicle when a <%= abbr_tag('pcs') %> is occurring between <%= abbr_tag('oconus') %> duty stations or upon return to a <%= abbr_tag('conus') %> duty station or non-foerign <%= abbr_tag('oconus') %> area.</p>
+      <p>Additionally, the shipment of a Privately Owned Vehicle may be authorized for a non-emergency replacement (one every 4 years) and an emergency <%= abbr_tag('pov') %>.</p>
+    </div>
+
+    <div id="foreign-transfer-allowance">
+      <h2>Foreign Transfer Allowance (FTA(SE)) & Temporary Quarters Subsistence Allowance (TQSA)</h2>
+
+      <p>Employees are authorized a maximum of 10 days per diem prior to departure from the U.S., Puerto Rico, Northern Mariana Islands, plus (TQSA) for a maximum 90 days expenses after arrival at and 30 days prior to departure from foreign area. Per diem is based on lodging location.</p>
+      <p><%= abbr_tag('tqsa') %> is paid based on the lodging location.</p>
+      <p><b>Note:</b> The 90- and 30-day periods may be extended up to but not more than an additional 60 days in each case if continued occupancy of temporary quarters is required for compelling reasons beyond the employee’s control.</p>
+    </div>
+
+    <div id="real-estate-expenses">
+      <h2>Real Estate Expenses</h2>
+
+      <p>An employee is authorized reimbursement that is limited to a maximum of 10% on sale price and 5% on purchase price.</p>
+      <p>This is only allowed when old and new duty are in U.S. or a non-foreign <%= abbr_tag('oconus') %> area & when return from a foreign duty station is not to same U.S. or non-foreign <%= abbr_tag('oconus') %> duty station.</p>
+    </div>
+
+    <div id="relocation-services">
+      <h2>Relocation Services</h2>
+
+      <p>A contractor may purchase an employee's residence (limited to house value of $750,000 (Eff 6-30-05)), which may be waived) & assists with purchasing residence at new duty station.</p>
+      <p>Applies in cases where real estate allowances would be authorized, except as limited by the Agency/Service.</p>
+    </div>
+
+    <div id="property-management-services">
+      <h2>Property Management Services</h2>
+
+      <p>Property management services may be authorized when an employee:</p>
+      <ol>
+        <li>is transferred from the U.S. or a non-foreign <%= abbr_tag('oconus') %> area to a foreign area, and</li>
+        <li>returns to a different duty station than the one from which transferred to the foreign area, or</li>
+        <li>transfers within the U.S. (including to/from/between non-foreign areas) and property management services are authorized in lieu of real estate allowances, or</li>
+        <li>transfers in the government's interest to a foreign <%= abbr_tag('pds') %> or</li>
+        <li>is authorized a Temporary Change of Station.</li>
+      </ol>
+    </div>
+
+    <div id="home-marketing-incentive-program">
+      <h2>Home Marketing Incentive Program</h2>
+
+      <p>This program allows a home marketing incentive to an employee who uses the home sale program, and independently and aggressively markets and finds a buyer for the residence.</p>
+      <p>The amount of the incentive may not exceed the lesser of 1 to 5% of the residence purchase price, $10,000 or 1/2 of the savings realized from the reduced fee paid to the relocation services company as a result of the employee finding a buyer.</p>
+    </div>
+
+    <div id="temporary-change-of-station">
+      <h2>Temporary Change of Station (TCS)/Limited Relocation Allowances For Extended <%= abbr_tag('tdy') %></h2>
+
+      <p>If your Temporary Duty assignment extends to 6 to 30 months, you’re entitled to Limited Relocation Allowance.</p>
+      <p>When a <%= abbr_tag('tcs') %> is authorized, the employee is authorized travel and transportation (including per diem) of dependents, household goods transportation, shipment of Privately Owned Vehicle, relocation income tax allowance, and miscellaneous expense allowance.</p>
+    </div>
+
+    <div id="mobile-home-transportation">
+      <h2>Mobile Home Transportation</h2>
+
+      <p>Transportation of Mobile Home is in lieu of a Household Goods transportation and is authorized within <%= abbr_tag('conus') %>, within Alaska, and between <%= abbr_tag('conus') %> & Alaska.</p>
+      <p>This allowance applies when the mobile home is moved by a commercial transporter that you arrange, reimbursement includes carrier charges, road fares & tolls, permits & charges for pilot car.</p>
+      <p>If you towed the Mobile Home yourself, reimbursement is $0.11/mile plus the mileage allowance prescribed for driving the pilot car.</p>
+      <p>Mobile home may be transported by <%= abbr_tag('gbl') %>.</p>
+      <p>Reimbursement is limited to what it would have cost the Government to transport the employee's maximum Household Goods weight allowance.</p>
+    </div>
+
+    <div id="relocation-income-tax">
+      <h2>Relocation Income Tax (RIT)</h2>
+
+      <p>Reimbursement for nearly all additional taxes incurred as result of <%= abbr_tag('pcs') %>.</p>
+    </div>
+
+    <div id="waive-limitation-on-pcs-relocation-allowances">
+      <h2>Waive Limitation on <%= abbr_tag('pcs') %> Relocation Allowances</h2>
+
+      <p><b>Household Goods Transportation Outside <%= abbr_tag('conus') %>:</b> An employee is authorized 4,500 pounds (or weight prescribed in <%= abbr_tag('jtr') %>, Appendix W), plus non-available furniture items, unaccompanied baggage and professional gear.</p>
+      <p>The 4,500 pounds or weight restrictions prescribed in the <%= abbr_tag('jtr') %>, Appendix W, may be increased under certain circumstances.</p>
+      <p><b>Non-Temporary Storage Outside <%= abbr_tag('conus') %>:</b> This may be authorized for tour length if household goods cannot be used.</p>
+    </div>
+
+    <div id="pcs-allowances-time-limitation">
+      <h2><%= abbr_tag('pcs') %> Allowances Time Limitation</h2>
+
+      <p>An employee has 1 year (2 years if effective date of transfer before 1 August 2011) in which to complete use of the allowances. This 1-year requirement is in statute and regulations.</p>
+      <p>However, in unusual circumstances the period for sale and purchase of a residence may be extended for an additional 1 year (2 years if effective date of transfer before 1 August 2011) when authorized by the commanding officer of the activity that is bearing the cost; prior to the allowances expiration period.</p>
+      <p>If an extension is authorized it also applies to the other transfer allowances.</p>
+      <p>There is no authority to waive the maximum 2-year limitation for <%= abbr_tag('pcs') %> allowances.</p>
+    </div>
+
+    <div id="pets">
+      <h2>Pets</h2>
+
+      <p>Pet quarantine fees and transportation charges are included in the Miscellaneous Expense Allowance (MEA). If MEA expenses are itemized, reimbursement for those expenses, including pet quarantine fees and transportation charges, is allowed up to the applicable maximum amount authorized (<%= abbr_tag('jtr') %>, par. 5818-D).</p>
+      <p>Only quarantine and transportation costs associated with dogs, cats and other house pets are included.</p>
+      <p>Other animals like horses, fish, birds, and rodents are excluded.</p>
+    </div>
+
+    <div id="miscellaneous-expense-allowance">
+      <h2>Miscellaneous Expense Allowance (MEA)</h2>
+
+      <p>An employee with no dependent(s) receives a $650 flat amount or, if expenses are itemized, an amount up to 1 week's basic compensation.</p>
+      <p>An employee with dependent(s) receives a $1,300  flat amount or, if expenses are itemized, an amount up to 2 week's basic compensation.</p>
+      <p>An employee-married-to-employee couple with no dependent(s) receives MEA under specific situations.</p>
+      <p>The maximum <%= abbr_tag('mea') %> authorized must not exceed the highest basic salary for a GS-13.</p>
+    </div>
+
+    <p>For DoD civilians, check out the <%= link_to 'Voucher Guide', 'https://www.dfas.mil/dam/jcr:c9daedb8-9b65-4046-ab55-891caab39a18/Civilian%20Relocation%20Guide%206.8.17%20modification.pdf', class: 'usa-external_link' %> and <%= link_to 'Voucher Checklist', 'https://www.dfas.mil/dam/jcr:217f1aa6-cdd8-471a-98af-1431f939b3f0/Updated%20FINAL%20Civ%20Relo%20Checklist%20December%202016.pdf', class: 'usa-external_link' %>.</p>
+  </div>
+</div>

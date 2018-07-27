@@ -1,11 +1,122 @@
 <%- @page_title = 'Reimbursements' -%>
 
-<%= render partial: 'shared/contextual_header', locals: {page_title: @page_title, parent_pages: []} %>
+<%= render partial: 'shared/contextual_header', locals: {
+      page_title: @page_title, parent_pages: [
+        { name: 'Moving Guide', path: page_path('moving-guide') }
+      ]
+    } %>
 
 <div class="usa-section main-section">
   <h1><%= @page_title %></h1>
 
-  <%# TODO Add page content %>
+  <%= render layout: 'shared/sidenav' do %>
+    <li><%= link_to 'Advances', '#advances' %></li>
+    <li><%= link_to 'Personal Financial Management Programs', '#personal-financial-management-programs' %></li>
+    <li><%= link_to 'Relocation Assistance Program Managers', '#relocation-assistance-program-managers' %></li>
+    <li><%= link_to 'Dislocation Allowance (DLA)', '#dislocation-allowance' %></li>
+    <li><%= link_to 'House Hunting Trip', '#house-hunting-trip' %></li>
+    <li><%= link_to 'Temporary Lodging Expense', '#temporary-lodging-expense' %></li>
+    <li><%= link_to raw("Temporary Lodging Allowance (TLA) #{abbr_tag('oconus')} Moves"), '#temporary-lodging-allowance-oconus-moves' %></li>
+    <li><%= link_to raw("Per Diem for #{abbr_tag('pcs')} Travel"), '#per-diem-for-pcs-travel' %></li>
+    <li><%= link_to 'Mileage Rates', '#mileage-rates' %></li>
+    <li><%= link_to 'Relocation Income Tax (RIT) Allowance', '#relocation-income-tax-allowance' %></li>
+    <li><%= link_to 'Pets', '#pets' %></li>
+  <% end %>
 
-  <p>Coming soon!</p>
+  <div class="sidenav-body">
+    <p>Moving is expensive and it’s important for to understand what you can expect to be reimbursed and how to obtain reimbursement. If you have any specific questions or unique situations, contact <%= link_to 'your local finance office', 'http://www.militaryinstallations.dod.mil/MOS/f?p=MI:ENTRY:0', class: 'usa-external_link' %> for more information.</p>
+
+    <div class="article-intro">
+      <p><b>Civilians:</b> The information on this page is for service members. See <%= link_to 'Reimbursements for Civilians', page_path('moving-guide/reimbursements/reimbursements-for-civilians') %> for details on civilian moves.</p>
+    </div>
+
+    <p>When you travel on orders, the government will pay for many of your out of pocket expenses, either as a reimbursement after the fact, or as an advance. Reimbursable allowances will need to be listed and itemized on your voucher (DD Form 1351-2) and can be submitted by <%= link_to 'your local finance office', 'http://www.militaryinstallations.dod.mil/MOS/f?p=MI:ENTRY:0', class: 'usa-external_link' %>. Furthermore, certain branches of the military allow you to submit your voucher online, so it’s best to ask your finance office to see what works best for you.</p>
+
+    <div id="advances">
+      <h2>Advances</h2>
+
+      <p>Since you have to pay for some things up front, then file a voucher <em>and</em> you anticipate that your finances will be strained during your <%= abbr_tag('pcs') %> move, you can request a monetary “Advance” to help cover your expenses.</p>
+      <p><b>How Much?</b> The amount of the advance will depend on a number of factors, such as distance between the old and new permanent duty stations weight of household goods, member's rank, whether the member is using their government travel card on their <%= abbr_tag('pcs') %>, etc.  Members and dependent travelers can get up to 80% of per diem and mileage allowance f the government travel card is not being used, DLA equal to 100% of the anticipated entitlement, and <%= abbr_tag('ppm') %>/<%= abbr_tag('dity') %> moves get an amount calculated by their transportation office. When possible, use your government travel card during your <%= abbr_tag('pcs') %>. You can find out more about the Government Travel Card <%= link_to 'here', 'https://www.citibank.com/tts/sa/dod/2016/q1/index.html', class: 'usa-external_link' %>.</p>
+      <p><b>Head’s Up:</b> You have to pay back your Advance after your move. It will come out of your paychecks over the next year.</p>
+      <p>When you file your final voucher, the Advance you took out will be paid first before you receive the remaining reimbursement.</p>
+    </div>
+
+    <div id="personal-financial-management-programs">
+      <h2>Personal Financial Management Programs</h2>
+
+      <p>Most installations have a Member &amp; Family Support Center that can help develop a financial management plan for you and your family. In addition to helping plan for a <%= abbr_tag('pcs') %> move, they can help with a myriad of other topics.</p>
+    </div>
+
+    <div id="relocation-assistance-program-managers">
+      <h2>Relocation Assistance Program Managers</h2>
+
+      <p>Contact your local Relocation Specialist in the Member &amp; Family Support Center. They are experts who’ve helped thousands of members during moves, and are available to talk with you and/or your family about your particular situation.</p>
+    </div>
+
+    <div id="dislocation-allowance">
+      <h2>Dislocation Allowance (DLA)</h2>
+
+      <p>This allowance will help with miscellaneous moving costs and is paid once you arrive at your new duty station. For example, <%= abbr_tag('dla') %> can be used to re-stock items that you were not allowed to ship (cleaning supplies, etc.).</p>
+      <p>For example, as of 01 January 2017, an E-5 with dependents could get up to $2,157.88.</p>
+      <p><%= link_to 'Find Your Dislocation Allowance.', 'http://www.defensetravel.dod.mil/site/otherratesDLA.cfm', class: 'usa-external_link' %></p>
+    </div>
+
+    <div id="house-hunting-trip">
+      <h2>House Hunting Trip</h2>
+
+      <p>When you <%= abbr_tag('pcs') %>, you can make a special trip to go house hunting at your new location, for which you won’t have to use leave. You’re allowed up to 10 days of permissive leave, at any time prior to your <%= abbr_tag('pcs') %> move. Make sure you talk with your supervisor to obtain approval just like you would for any leave request before booking your trip. Additionally, you won’t be given a per diem for this trip.</p>
+    </div>
+
+    <div id="temporary-lodging-expense">
+      <h2>Temporary Lodging Expense</h2>
+
+      <p>Use this allowance towards any temporary lodging and meals while you await housing at your new duty station.  You are allowed to split the time allocated between your current location and new duty station.</p>
+      <ul>
+        <li>When <%= abbr_tag('conus') %>, you get $110 per day per family for up to 10 Days.</li>
+        <li>When <%= abbr_tag('conus') %> to <%= abbr_tag('oconus') %>; $110 per day per family for up to 5 days.</li>
+        <li>When <%= abbr_tag('oconus') %> to <%= abbr_tag('conus') %>; $110 per family per day for up to 10 days.</li>
+      </ul>
+      <p><b>Note:</b> You are not authorized <%= abbr_tag('tle') %> when you are leaving active duty.</p>
+    </div>
+
+    <div id="temporary-lodging-allowance-oconus-moves">
+      <h2>Temporary Lodging Allowance (TLA) <%= abbr_tag('oconus') %> Moves</h2>
+
+      <p>Use this allowance towards temporary lodging and meals while you wait for housing at your new duty station.</p>
+      <p>Since <%= abbr_tag('oconus') %> household shipments take longer to arrive, you can use <%= abbr_tag('tla') %> for a maximum of 60 days upon arrival at your new duty station and 10 days prior to departure.</p>
+      <p>The amount you’ll get reimbursed is calculated based on a percentage of the per diem for lodging in your host country.</p>
+      <p>In addition to lodging and meals, you can also get reimbursed for currency conversion fees.</p>
+      <p>If necessary, you can get a <%= abbr_tag('tla') %> advance payment.</p>
+    </div>
+
+    <div id="per-diem-for-pcs-travel">
+      <h2>Per Diem for <%= abbr_tag('pcs') %> Travel</h2>
+
+      <p>This serves as your reimbursement for meals and lodging while you are on your way to your new duty station.</p>
+      <p><b>Travel by Privately Owned Conveyance:</b> The flat Standard <%= abbr_tag('conus') %> rate, which combines both Lodging and Meals/Incidentals. For example, the rate on 10/1/2017 is $144.</p>
+      <p><b>Travel by Commercial Means:</b> The ‘Lodgings-Plus’ rate for the new PDS or the rate for the delay point if the member stops overnight.</p>
+      <p><b>Dependent:</b> 75% of the member's applicable rate for each dependent age 12 or older, and 50% for each dependent under age 12.</p>
+    </div>
+
+    <div id="mileage-rates">
+      <h2>Mileage Rates</h2>
+
+      <p>Get paid for the miles you put on your personal vehicle when you drive to your new duty station. This includes to motorcycles, and personally owned aircraft as well. Additionally, if you have a <%= abbr_tag('tdy') %> en route to your next duty station and you drive your personal vehicle to that <%= abbr_tag('tdy') %>, you will be paid at the <%= abbr_tag('tdy') %> rate.</p>
+      <p>For example: As of 01 Jan 2017, the per mile rate is $0.17. <%= link_to raw("Find Your Mileage Rate for your #{abbr_tag('pcs')}."), 'https://www.defensetravel.dod.mil/site/otherratesMile.cfm', class: 'usa-external_link' %></p>
+    </div>
+
+    <div id="relocation-income-tax-allowance">
+      <h2>Relocation Income Tax (RIT) Allowance</h2>
+
+      <p>While for most service members this will not apply, if there were expenses incurred as a result of a Permanent Change of Station that you were not reimbursed for, may be able to deduct them from on your income taxes.</p>
+      <p>For more information, visit the Internal Revenue Service (IRS) Website and search for Publication 3, Armed Forces’ Tax Guide.</p>
+    </div>
+
+    <div id="pets">
+      <h2>Pets</h2>
+
+      <p>You can get reimbursed for any mandatory quarantine fees up to $550 per move, for dogs and cats only.</p>
+      <p><b>Heads Up:</b> There is no reimbursement for transportation fees.</p>
+    </div>
+  </div>
 </div>
