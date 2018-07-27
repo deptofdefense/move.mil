@@ -15,27 +15,6 @@ script:
   - bundle exec rake
   - bundle exec rubocop
   - bundle exec brakeman
-deploy:
-  - provider: elasticbeanstalk
-    access_key_id: $AWS_ACCESS_KEY_ID
-    secret_access_key: $AWS_SECRET_ACCESS_KEY
-    region: us-east-1
-    app: move.mil
-    env: move-mil-staging
-    bucket_name: elasticbeanstalk-us-east-1-321940898149
-    bucket_path: move-mil-staging
-    on:
-      branch: master
-  - provider: elasticbeanstalk
-    access_key_id: $AWS_ACCESS_KEY_ID
-    secret_access_key: $AWS_SECRET_ACCESS_KEY
-    region: us-east-1
-    app: move.mil
-    env: move-mil-prod
-    bucket_name: elasticbeanstalk-us-east-1-321940898149
-    bucket_path: move-mil-prod
-    on:
-      branch: production
 notifications:
   email: false
   slack:
