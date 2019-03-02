@@ -12,6 +12,7 @@ rvm:
 before_script:
   - psql -c 'create database move_mil_test;' -U postgres
 script:
+  - export SECRET_KEY_BASE=`bundle exec rake secret`
   - bundle exec rake
   - bundle exec rubocop
   - bundle exec brakeman
